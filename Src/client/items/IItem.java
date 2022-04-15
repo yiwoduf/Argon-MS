@@ -1,0 +1,66 @@
+/*
+ * 테스피아 Project
+ * ==================================
+ * 팬더 spirit_m@nate.com
+ * 백호 softwarewithcreative@nate.com
+ * ==================================
+ * 
+ */
+
+package client.items;
+
+import client.MapleAndroid;
+import client.MaplePet;
+
+public interface IItem extends Comparable<IItem> {
+
+    byte getType();
+
+    short getPosition();
+
+    short getFlag();
+
+    short getQuantity();
+
+    String getOwner();
+
+    String getGMLog();
+
+    int getItemId();
+
+    MaplePet getPet();
+    
+    MapleAndroid getAndroid();
+
+    int getUniqueId();
+
+    IItem copy();
+
+    long getExpiration();
+
+    void setFlag(short flag);
+
+    void setUniqueId(int id);
+
+    void setPosition(short position);
+
+    void setExpiration(long expire);
+
+    void setOwner(String owner);
+
+    void setGMLog(String GameMaster_log);
+
+    void setQuantity(short quantity);
+    
+    void setGiftFrom(String gift);
+   
+    int getInventoryId();
+    
+    void setInventoryId(int id);
+    
+    String getGiftFrom();
+    
+    boolean isCash();
+    
+    void setCash(boolean cash);
+}
