@@ -1,0 +1,25 @@
+/*
+파란돌륜군
+*/
+importPackage(Packages.server.quest);
+
+var status = -1;
+
+function start(mode, type, selection) {
+    if (mode == -1 || mode == 0) {
+        qm.dispose();
+        return;
+    } else {
+        status++;
+        if (status == 0) {
+           qm.sendYesNo("자, 이쯤 되었으면 연료는 충분해. 준비가 되었으면 출발할까?"); 
+        } else if (status == 1) {
+            qm.sendOk("마음에 들어, 친구! 그럼 달려보자고! 옆에 있는 포탈을 이용해줘!");
+            qm.forceStartQuest();
+            qm.dispose();
+        } else if (status == 2) {
+            qm.sendOk("뭐야? 아직 준비않됬어?");
+            qm.dispose();
+        }
+    }
+}
