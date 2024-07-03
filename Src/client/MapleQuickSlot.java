@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -55,7 +55,7 @@ public class MapleQuickSlot {
             con.close();
         } catch (Exception e) {
             if (!ServerConstants.realese) e.printStackTrace();
-            System.err.println("[¿À·ù] Äü½½·ÔÀ» ºÒ·¯¿À´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] í€µìŠ¬ë¡¯ì„ ë¶ˆëŸ¬ì˜¤ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
         }
     }
     
@@ -78,7 +78,7 @@ public class MapleQuickSlot {
             con.close();
         } catch (Exception e) {
             if (!ServerConstants.realese) e.printStackTrace();
-            System.err.println("[¿À·ù] Äü½½·ÔÀ» ÀúÀåÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] í€µìŠ¬ë¡¯ì„ ì €ì¥í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
         }
     }
     

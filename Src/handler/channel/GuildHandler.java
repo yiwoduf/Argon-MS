@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  *
  */
@@ -36,7 +36,7 @@ public class GuildHandler {
 		int guildmax;
 		guildmax = ChannelServer.addGuildMember(c.getPlayer().getMGC(), c);
 		if (guildmax == 0) {
-			c.getPlayer().dropMessage(1, "°¡ÀÔÇÏ·Á´Â ±æµå´Â ÀÌ¹Ì Á¤¿øÀÌ ²Ë Ã¡½À´Ï´Ù.");
+			c.getPlayer().dropMessage(1, "ê°€ì…í•˜ë ¤ëŠ” ê¸¸ë“œëŠ” ì´ë¯¸ ì •ì›ì´ ê½‰ ì°¼ìŠµë‹ˆë‹¤.");
 			c.getPlayer().setGuildId(0);
 			return;
 		}
@@ -97,16 +97,16 @@ public class GuildHandler {
 		switch (rh.readByte()) {
 			case 0x04: // Create guild
 				if (c.getPlayer().getGuildId() > 0) {
-					c.getPlayer().dropMessage(1, "ÀÌ¹Ì ±æµå¿¡ °¡ÀÔµÇ¾î ÀÖ¾î ±æµå¸¦ ¸¸µé ¼ö ¾ø½À´Ï´Ù.");
+					c.getPlayer().dropMessage(1, "ì´ë¯¸ ê¸¸ë“œì— ê°€ì…ë˜ì–´ ìˆì–´ ê¸¸ë“œë¥¼ ë§Œë“¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 					return;
 				} else if (c.getPlayer().getMeso() < 1500000) {
-					c.getPlayer().dropMessage(1, "±æµå Á¦ÀÛ¿¡ ÇÊ¿äÇÑ ¸Ş¼Ò [150¸¸ ¸Ş¼Ò] °¡ ÃæºĞÇÏÁö ¾Ê½À´Ï´Ù.");
+					c.getPlayer().dropMessage(1, "ê¸¸ë“œ ì œì‘ì— í•„ìš”í•œ ë©”ì†Œ [150ë§Œ ë©”ì†Œ] ê°€ ì¶©ë¶„í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 					return;
 				}
 				String guildName = rh.readMapleAsciiString();
 
 				if (!isGuildNameAcceptable(guildName)) {
-					c.getPlayer().dropMessage(1, "ÇØ´ç ±æµå ÀÌ¸§Àº ¸¸µé ¼ö ¾ø½À´Ï´Ù.");
+					c.getPlayer().dropMessage(1, "í•´ë‹¹ ê¸¸ë“œ ì´ë¦„ì€ ë§Œë“¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 					return;
 				}
 				int guildId;
@@ -158,7 +158,7 @@ public class GuildHandler {
 
 						s = ChannelServer.addGuildMember(c.getPlayer().getMGC(), c);
 						if (s == 0) {
-							c.getPlayer().dropMessage(1, "°¡ÀÔÇÏ·Á´Â ±æµå´Â ÀÌ¹Ì Á¤¿øÀÌ ²Ë Ã¡½À´Ï´Ù.");
+							c.getPlayer().dropMessage(1, "ê°€ì…í•˜ë ¤ëŠ” ê¸¸ë“œëŠ” ì´ë¯¸ ì •ì›ì´ ê½‰ ì°¼ìŠµë‹ˆë‹¤.");
 							c.getPlayer().setGuildId(0);
 							return;
 						}
@@ -212,7 +212,7 @@ public class GuildHandler {
 				break;
 			case 0x14: // Guild emblem change
 				if (c.getPlayer().getMeso() < 5000000) {
-					c.getPlayer().dropMessage(1, "±æµå ¸¶Å©¸¦ Ãß°¡/¼öÁ¤ ÇÏ±â À§ÇÑ ¸Ş¼Ò [500¸¸ ¸Ş¼Ò] °¡ ÃæºĞÇÏÁö ¾Ê½À´Ï´Ù.");
+					c.getPlayer().dropMessage(1, "ê¸¸ë“œ ë§ˆí¬ë¥¼ ì¶”ê°€/ìˆ˜ì • í•˜ê¸° ìœ„í•œ ë©”ì†Œ [500ë§Œ ë©”ì†Œ] ê°€ ì¶©ë¶„í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 					return;
 				}
 				short bg = rh.readShort();
@@ -223,7 +223,7 @@ public class GuildHandler {
 				c.getPlayer().gainMeso(-5000000, true, false, true);
 				respawnPlayer(c.getPlayer());
 				break;
-			case 0x23: //±æµå½ºÅ³ ±¸¸Å
+			case 0x23: //ê¸¸ë“œìŠ¤í‚¬ êµ¬ë§¤
 				int skillid = rh.readInt();
 				byte level = rh.readByte();
 				ISkill skilli = SkillFactory.getSkill(skillid);
@@ -241,7 +241,7 @@ public class GuildHandler {
 					c.getPlayer().gainMeso(-skill.getPrice(), true);
 				}
 				break;
-			case 0x24: { //±æµå ½ºÅ³ È°¼ºÈ­
+			case 0x24: { //ê¸¸ë“œ ìŠ¤í‚¬ í™œì„±í™”
 				skilli = SkillFactory.getSkill(rh.readInt());
 				if (c.getPlayer().getGuildId() <= 0 || skilli == null) {
 					return;
@@ -257,7 +257,7 @@ public class GuildHandler {
 				}
 				break;
 			}
-			/*case 0x25: // ±æµå½ºÅ³ ¹ßµ¿
+			/*case 0x25: // ê¸¸ë“œìŠ¤í‚¬ ë°œë™
 				int activeSkillId = rh.readInt();
 				if (ChannelServer.activateSkill(c.getPlayer().getGuildId(), activeSkillId, c.getPlayer().getName())) {
 					if (activeSkillId == 91001016) {
@@ -321,15 +321,15 @@ public class GuildHandler {
 						c.getSession().write(MainPacketCreator.resetActions(c.getPlayer()));
 					}
 				}
-				c.getPlayer().Message("[±æµå ½ºÅ³ÄÚµå : " + activeSkillId + "] [" + rh.toString() + "] ");
+				c.getPlayer().Message("[ê¸¸ë“œ ìŠ¤í‚¬ì½”ë“œ : " + activeSkillId + "] [" + rh.toString() + "] ");
 				break;*/
-			case 0x28: // ±æµåÀå À§ÀÓ
+			case 0x28: // ê¸¸ë“œì¥ ìœ„ì„
 				cid = rh.readInt();
 				if (c.getPlayer().getGuildId() <= 0 || c.getPlayer().getGuildRank() > 1) {
 					return;
 				}
 				ChannelServer.setGuildLeader(c.getPlayer().getGuildId(), cid);
-				c.getPlayer().dropMessage(1, "±æµå¸¶½ºÅÍ°¡ [" + c.getPlayer().getName() + "] ´Ô¿¡¼­ [" + cid + "]´ÔÀ¸·Î º¯°æµÇ¾ú½À´Ï´Ù.");
+				c.getPlayer().dropMessage(1, "ê¸¸ë“œë§ˆìŠ¤í„°ê°€ [" + c.getPlayer().getName() + "] ë‹˜ì—ì„œ [" + cid + "]ë‹˜ìœ¼ë¡œ ë³€ê²½ë˜ì—ˆìŠµë‹ˆë‹¤.");
 				break;
 		}
 	}

@@ -21,7 +21,7 @@ function action(mode, type, selection) {
             }
         }
         if (!pass) {
-            cm.getPlayer().dropMessage(5, "Áö±İÀº Æ÷Å»ÀÌ ÀÛµ¿ÇÏÁö ¾Ê½À´Ï´Ù.");
+            cm.getPlayer().dropMessage(5, "ì§€ê¸ˆì€ í¬íƒˆì´ ì‘ë™í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
             cm.dispose();
         } else {
             checkDate = 4500 - Math.floor((new Date().getTime() - cm.getPlayer().getKeyValue("HTailTime"))  / 1000);

@@ -1,7 +1,7 @@
 /*
 
-	������ ������ ��ȭ ��ũ��Ʈ
-	ġ�쾾 (projectchiu16@nate.com)
+	젬스톤 아이템 강화 스크립트
+	치우씨 (projectchiu16@nate.com)
 
 */
 

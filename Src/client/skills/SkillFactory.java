@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -31,7 +31,7 @@ public class SkillFactory {
 
     public static String getSkillName(final int id, final MapleData stringData) {
         if (id == 0) {
-            return "ÆòÅ¸";
+            return "í‰íƒ€";
         }
         String strId = Integer.toString(id);
         strId = StringUtil.getLeftPaddedStr(strId, '0', 7);

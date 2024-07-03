@@ -1,7 +1,7 @@
 /*
  * Tespia Project
  * ==================================
- * ½º¸¶ÀÌÆ® smite_demolition@nate.com
+ * ìŠ¤ë§ˆì´íŠ¸ smite_demolition@nate.com
  * ==================================
  *
  */
@@ -266,28 +266,28 @@ public class PlayerStats {
         this.hp = thp;
         if (chra != null) {
             if (hp <= 0) {
-                if (chra.isActiveBuffedValue(24111002)) { //·° ¿Àºê ÆÒÅÒ½ÃÇÁ
-                    /* ¾ÆÁ÷ x°ªÀº ¸ğ¸£°ÚÁö¸¸, ºÎÈ°½Ã x°ªÀÇ °ª´ë·Î Ã¼·ÂÀÌ %·Î È¸º¹µÇ´Â°É·Î °¡Á¤ÇÏ°í ±¸Çö. */
+                if (chra.isActiveBuffedValue(24111002)) { //ëŸ­ ì˜¤ë¸Œ íŒ¬í…€ì‹œí”„
+                    /* ì•„ì§ xê°’ì€ ëª¨ë¥´ê² ì§€ë§Œ, ë¶€í™œì‹œ xê°’ì˜ ê°’ëŒ€ë¡œ ì²´ë ¥ì´ %ë¡œ íšŒë³µë˜ëŠ”ê±¸ë¡œ ê°€ì •í•˜ê³  êµ¬í˜„. */
                     int percentage = chra.getBuffedValue(BuffStats.CTS_StackBuff, 24111002).intValue();
                     this.hp = (int) (localmaxhp * (percentage / 100.0D));
                     this.mp = (int) (localmaxmp * (percentage / 100.0D));
                     chra.updateSingleStat(client.stats.PlayerStat.HP, this.hp);
                     chra.updateSingleStat(client.stats.PlayerStat.MP, this.mp);
-                    chra.Message("·° ¿Àºê ÆÒÅÒ½ÃÇÁÀÇ È¿°ú·Î Á×À½ÀÇ ¿î¸íÀ» È¸ÇÇÇß½À´Ï´Ù.");
+                    chra.Message("ëŸ­ ì˜¤ë¸Œ íŒ¬í…€ì‹œí”„ì˜ íš¨ê³¼ë¡œ ì£½ìŒì˜ ìš´ëª…ì„ íšŒí”¼í–ˆìŠµë‹ˆë‹¤.");
                     chra.cancelEffectFromBuffStat(BuffStats.CTS_StackBuff, 24111002);
-                    //TODO: ÀÌÆåÆ®°¡ ÀÖ³ª? ÀÖ´Ù¸é ÀÌÆåÆ® Ãß°¡ ÇÊ¿ä
+                    //TODO: ì´í™íŠ¸ê°€ ìˆë‚˜? ìˆë‹¤ë©´ ì´í™íŠ¸ ì¶”ê°€ í•„ìš”
                     return true;
-                } else if (chra.getBuffedValue(BuffStats.CTS_SoulStone) != null) { //¼Ò¿ï ½ºÅæ
+                } else if (chra.getBuffedValue(BuffStats.CTS_SoulStone) != null) { //ì†Œìš¸ ìŠ¤í†¤
                     int percentage = chra.getBuffedValue(BuffStats.CTS_SoulStone).intValue();
                     this.hp = (int) (localmaxhp * (percentage / 100.0D));
                     this.mp = (int) (localmaxmp * (percentage / 100.0D));
                     chra.updateSingleStat(client.stats.PlayerStat.HP, this.hp);
                     chra.updateSingleStat(client.stats.PlayerStat.MP, this.mp);
-                    chra.Message("¼Ò¿ï ½ºÅæ¿¡ º¸Á¸µÈ ¿µÈ¥À¸·Î Á¦ÀÚ¸®¿¡¼­ ºÎÈ°µË´Ï´Ù.");
+                    chra.Message("ì†Œìš¸ ìŠ¤í†¤ì— ë³´ì¡´ëœ ì˜í˜¼ìœ¼ë¡œ ì œìë¦¬ì—ì„œ ë¶€í™œë©ë‹ˆë‹¤.");
                     chra.cancelEffectFromBuffStat(BuffStats.CTS_SoulStone, -1);
-                    //TODO: ÀÌÆåÆ®°¡ ÀÖ³ª? ÀÖ´Ù¸é ÀÌÆåÆ® Ãß°¡ ÇÊ¿ä
+                    //TODO: ì´í™íŠ¸ê°€ ìˆë‚˜? ìˆë‹¤ë©´ ì´í™íŠ¸ ì¶”ê°€ í•„ìš”
                     return true;
-                } else if (chra.getBuffedValue(BuffStats.CTS_FlareTrick) != null) { //¼Ò¿ï ½ºÅæ
+                } else if (chra.getBuffedValue(BuffStats.CTS_FlareTrick) != null) { //ì†Œìš¸ ìŠ¤í†¤
                     this.hp = localmaxhp;
                     this.mp = localmaxmp;
                     chra.updateSingleStat(client.stats.PlayerStat.HP, this.hp);
@@ -296,7 +296,7 @@ public class PlayerStats {
                     chra.getClient().send(MainPacketCreator.showSkillEffect(-1, chra.getLevel(), 12111029, chra.getSkillLevel(12111023), (byte) 0, 1, null, null));
 
                     chra.cancelEffectFromBuffStat(BuffStats.CTS_FlareTrick, -1);
-                    //TODO: ÀÌÆåÆ®°¡ ÀÖ³ª? ÀÖ´Ù¸é ÀÌÆåÆ® Ãß°¡ ÇÊ¿ä
+                    //TODO: ì´í™íŠ¸ê°€ ìˆë‚˜? ìˆë‹¤ë©´ ì´í™íŠ¸ ì¶”ê°€ í•„ìš”
                     return true;
                 } else if (chra.getBuffedValue(BuffStats.CTS_DarknessAscension) != null) {
                     int percentage = chra.getBuffedValue(BuffStats.CTS_DarknessAscension).intValue();
@@ -304,10 +304,10 @@ public class PlayerStats {
                     this.mp = (int) (localmaxmp * (percentage / 100.0D));
                     chra.updateSingleStat(client.stats.PlayerStat.HP, this.hp);
                     chra.updateSingleStat(client.stats.PlayerStat.MP, this.mp);
-                    chra.Message("´ÙÅ©´Ï½º ¾î¼¾¼ÇÀÇ ÈûÀ¸·Î Á¦ÀÚ¸®¿¡¼­ ºÎÈ°µË´Ï´Ù.");
+                    chra.Message("ë‹¤í¬ë‹ˆìŠ¤ ì–´ì„¼ì…˜ì˜ í˜ìœ¼ë¡œ ì œìë¦¬ì—ì„œ ë¶€í™œë©ë‹ˆë‹¤.");
                     chra.cancelEffectFromBuffStat(BuffStats.CTS_DarknessAscension, -1);
                     chra.getClient().send(MainPacketCreator.showSkillEffect(-1, chra.getLevel(), 14110030, chra.getSkillLevel(14110030), (byte) 0, 1, null, null));
-                    //TODO: ÀÌÆåÆ®°¡ ÀÖ³ª? ÀÖ´Ù¸é ÀÌÆåÆ® Ãß°¡ ÇÊ¿ä
+                    //TODO: ì´í™íŠ¸ê°€ ìˆë‚˜? ìˆë‹¤ë©´ ì´í™íŠ¸ ì¶”ê°€ í•„ìš”
                     return true;
                 } else if (chra.getBuffedValue(BuffStats.CTS_HeavensDoor) != null) {
                     this.hp = chra.getStat().getMaxHp();
@@ -334,7 +334,7 @@ public class PlayerStats {
                 } else {
                     chra.playerDead();
                 }
-            } else if (chra.getBuffedValue(BuffStats.CTS_KinesisPsychicEnergeShield) != null) { // Ä¡¿ì¾¾ :: Å°³×½Ã½º ½¯µå Ãß°¡
+            } else if (chra.getBuffedValue(BuffStats.CTS_KinesisPsychicEnergeShield) != null) { // ì¹˜ìš°ì”¨ :: í‚¤ë„¤ì‹œìŠ¤ ì‰´ë“œ ì¶”ê°€
                 this.hp = oldHp;
                 chra.updateSingleStat(client.stats.PlayerStat.HP, this.hp);
                 chra.givePPoint(SkillFactory.getSkill(142001007).getEffect(chra.getSkillLevel(142001007)));
@@ -503,7 +503,7 @@ public class PlayerStats {
             passive_sharpeye_min_percent = 20;
             passive_sharpeye_percent = 50;
             setHandling.clear();
-            //¼ö³³ÀÇ ´ŞÀÎ
+            //ìˆ˜ë‚©ì˜ ë‹¬ì¸
             if (chra.getKeyValue("Skill_111_Used") == null) {
                 if (chra.getSkillLevel(111) > 0) {
                     byte slot = (byte) SkillFactory.getSkill(112).getEffect(1).getX();
@@ -515,7 +515,7 @@ public class PlayerStats {
                     chra.setKeyValue("Skill_111_Used", "1");
                 }
             }
-            //¼ö³³ÀÇ ´ŞÀÎ2
+            //ìˆ˜ë‚©ì˜ ë‹¬ì¸2
             if (chra.getKeyValue("Skill_112_Used") == null) {
                 if (chra.getSkillLevel(112) > 0) {
                     byte slot = (byte) SkillFactory.getSkill(112).getEffect(1).getX();
@@ -527,14 +527,14 @@ public class PlayerStats {
                     chra.setKeyValue("Skill_112_Used", "1");
                 }
             }
-            //¿ÕÀÇ ÀÚ°İ
+            //ì™•ì˜ ìê²©
             if (chra.getKeyValue("Skill_20020112_Used") == null) {
                 if (chra.getSkillLevel(20020112) > 0) {
                     setCharm(getCharm() + 11040);
                     chra.setKeyValue("Skill_20020112_Used", "1");
                 }
             }
-            //ÇÏÀÌ µ¦½ºÅÍ·¯Æ¼
+            //í•˜ì´ ë±ìŠ¤í„°ëŸ¬í‹°
             if (chra.getKeyValue("Skill_20030206_Used") == null) {
                 if (chra.getSkillLevel(20030206) > 0) {
                     setDiligence(getDiligence() + 4563);
@@ -542,7 +542,7 @@ public class PlayerStats {
                     chra.setKeyValue("Skill_20030206_Used", "1");
                 }
             }
-            //µ¥¸ğ´Ğ ºí·¯µå
+            //ë°ëª¨ë‹‰ ë¸”ëŸ¬ë“œ
             if (chra.getKeyValue("Skill_30010185_Used") == null) {
                 if (chra.getSkillLevel(30010185) > 0) {
                     setAmbition(getAmbition() + 4563);
@@ -597,7 +597,7 @@ public class PlayerStats {
                     }
                 }
 
-                /* ¼¼Æ®¾ÆÀÌÅÛ Âø¿ë°¹¼ö ±¸ÇÏ±â */
+                /* ì„¸íŠ¸ì•„ì´í…œ ì°©ìš©ê°¯ìˆ˜ êµ¬í•˜ê¸° */
                 Integer setItemId = ii.getSetItemId(equip.getItemId());
                 if (setItemId != null && setItemId > 0) {
                     int value = 1;
@@ -636,7 +636,7 @@ public class PlayerStats {
             }
 
             calculateStatAttack(chra);
-            //calcMP, calcHP¸¦ ÀÌ¿ëÇÏ¿© localmaxhp, localmaxhp¿¡ °è»êµÈ ºÎ½ºÅÍ°ª ´õÇÏ±â.
+            //calcMP, calcHPë¥¼ ì´ìš©í•˜ì—¬ localmaxhp, localmaxhpì— ê³„ì‚°ëœ ë¶€ìŠ¤í„°ê°’ ë”í•˜ê¸°.
             Integer buff;
             buff = chra.getBuffedValue(BuffStats.CTS_MHPCutR);
             if (buff != null) {
@@ -966,7 +966,7 @@ public class PlayerStats {
             }
         }
         switch (player.getJob()) { // Apply passive Critical bonus
-            //À¯Àú·Î »ı°¢ÇÏ°í °è»ê, Á÷¾÷ È¥¿ë °è»ê ¾ÈÇÔ
+            //ìœ ì €ë¡œ ìƒê°í•˜ê³  ê³„ì‚°, ì§ì—… í˜¼ìš© ê³„ì‚° ì•ˆí•¨
             case 400:
             case 410:
             case 411:
@@ -1208,7 +1208,7 @@ public class PlayerStats {
             }
             case 230:
             case 231:
-            case 232: { //ºñ¼ó
+            case 232: { //ë¹„ìˆ
                 SkillStatEffect eff;
                 final ISkill id3 = (Skill) SkillFactory.getSkill(2220010);
                 final int level3 = player.getSkillLevel(id3);
@@ -1256,7 +1256,7 @@ public class PlayerStats {
             case 2400:
             case 2410:
             case 2411:
-            case 2412: { //ÆÒÅÒ
+            case 2412: { //íŒ¬í…€
                 final ISkill critSkill = (Skill) SkillFactory.getSkill(24110007);
                 final int critlevel = player.getSkillLevel(critSkill);
                 if (critlevel > 0) {
@@ -1318,7 +1318,7 @@ public class PlayerStats {
         mmastery = 20;
         PlayerJobType jobtype = getJobStatType(chr.getJob());
         if (jobtype == null) {
-            System.err.println("[¿À·ù] ½ºÅÈ °ø°İ·ÂÀ» °è»êÇÏ´ø Áß ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù. - ¾Ë ¼ö ¾ø´Â Á÷¾÷ ÄÚµåÀÔ´Ï´Ù. : " + chr.getJob());
+            System.err.println("[ì˜¤ë¥˜] ìŠ¤íƒ¯ ê³µê²©ë ¥ì„ ê³„ì‚°í•˜ë˜ ì¤‘ ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤. - ì•Œ ìˆ˜ ì—†ëŠ” ì§ì—… ì½”ë“œì…ë‹ˆë‹¤. : " + chr.getJob());
             return;
         }
 
@@ -1330,7 +1330,7 @@ public class PlayerStats {
             }
         }
 
-        if (weapon1 == null) { //¹«±â ¹ÌÀåÂø
+        if (weapon1 == null) { //ë¬´ê¸° ë¯¸ì¥ì°©
             minAttack = 0;
             maxAttack = 0;
             return;
@@ -1430,7 +1430,7 @@ public class PlayerStats {
         return demonCount;
     }
 
-    /* ½ãÄİ ½ºÅÃ */
+    /* ì¬ì½œ ìŠ¤íƒ */
     public int getFreezeStack() {
         return FreezeStack;
     }
@@ -1444,7 +1444,7 @@ public class PlayerStats {
         return FreezeStack;
     }
 
-    /* ºò¹ğ ½ºÅÃ */
+    /* ë¹…ë±… ìŠ¤íƒ */
     public int getBigBangStack() {
         return BigBangStack;
     }
@@ -1540,7 +1540,7 @@ public class PlayerStats {
             case 10110:
             case 10111:
             case 10112:
-            case 13000: // ÇÎÅ©ºó
+            case 13000: // í•‘í¬ë¹ˆ
                 return PlayerJobType.STR;
             case 200:
             case 210:
@@ -2041,7 +2041,7 @@ public class PlayerStats {
                     e.printStackTrace();
                 }
                 if (se.getKey() != null) {
-                    System.err.println("[¿À·ù] ½ºÅÈ °ø°İ·ÂÀ» °è»êÇÏ´ø Áß ¿À·ù ¹ß»ı.  ½ºÅ³ : " + se.getKey().getId());
+                    System.err.println("[ì˜¤ë¥˜] ìŠ¤íƒ¯ ê³µê²©ë ¥ì„ ê³„ì‚°í•˜ë˜ ì¤‘ ì˜¤ë¥˜ ë°œìƒ.  ìŠ¤í‚¬ : " + se.getKey().getId());
                 }
             }
         }

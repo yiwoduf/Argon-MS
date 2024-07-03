@@ -19,7 +19,7 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        cm.sendOk("#fn³ª´®°íµñ Extrabold#¿ì¸®ÀÇ.. ¿À..·Î..¶ó..");
+        cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• Extrabold#ìš°ë¦¬ì˜.. ì˜¤..ë¡œ..ë¼..");
         cm.dispose();
         return;
     }

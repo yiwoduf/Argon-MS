@@ -22,7 +22,7 @@ function action(mode, type, selection) {
             }
         }
         if (!pass) {
-            cm.getPlayer().dropMessage(5, "Áö±İÀº Æ÷Å»ÀÌ ÀÛµ¿ÇÏÁö ¾Ê½À´Ï´Ù.");
+            cm.getPlayer().dropMessage(5, "ì§€ê¸ˆì€ í¬íƒˆì´ ì‘ë™í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
             cm.dispose();
         } else {
             checkDate = 4500 - Math.floor((new Date().getTime() - cm.getPlayer().getKeyValue("HTailTime")) / 1000);
@@ -41,7 +41,7 @@ function action(mode, type, selection) {
                 }
                 cm.getPlayer().getMap().spawnMonsterOnGroundBelow(mob, pos);
                 map.getReactor(2408003).setState(1);
-                cm.mapMessage(6, "µ¿±¼ÀÌ ¿ï¸®¸é¼­ °Å´ëÇÑ »ı¹°Ã¼°¡ ´Ù°¡¿À°í ÀÖ½À´Ï´Ù.")
+                cm.mapMessage(6, "ë™êµ´ì´ ìš¸ë¦¬ë©´ì„œ ê±°ëŒ€í•œ ìƒë¬¼ì²´ê°€ ë‹¤ê°€ì˜¤ê³  ìˆìŠµë‹ˆë‹¤.")
             }
             cm.dispose();
         }

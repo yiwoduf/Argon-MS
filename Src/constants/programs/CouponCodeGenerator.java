@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -25,31 +25,31 @@ public class CouponCodeGenerator {
 
         String temp = "Maple";
         do {
-            System.out.println("ÄíÆù Å¸ÀÔ : 1 - ³Ø½¼ Ä³½¬, 2 - ¸ŞÀÌÇÃ Æ÷ÀÎÆ®, 3 - ¸Ş¼Ò");
-            temp = c.readLine("ÄíÆù Å¸ÀÔ? = ");
+            System.out.println("ì¿ í° íƒ€ì… : 1 - ë„¥ìŠ¨ ìºì‰¬, 2 - ë©”ì´í”Œ í¬ì¸íŠ¸, 3 - ë©”ì†Œ");
+            temp = c.readLine("ì¿ í° íƒ€ì…? = ");
             if (!(temp.equals("1") || temp.equals("2") || temp.equals("3"))) continue;
         } while (hasNumberFormatException(temp));
         final int type = Integer.parseInt(temp);
 
         temp = "Maple";
         do {
-            temp = c.readLine("¾ó¸¶ Áö±Ş? = ");
+            temp = c.readLine("ì–¼ë§ˆ ì§€ê¸‰? = ");
         } while (hasNumberFormatException(temp));
         final int amount = Integer.parseInt(temp);
 
         temp = "Maple";
         do {
-            temp = c.readLine("¸¸µé °¹¼ö? = ");
+            temp = c.readLine("ë§Œë“¤ ê°¯ìˆ˜? = ");
         } while (hasNumberFormatException(temp));
         final int howMany = Integer.parseInt(temp);
 
         temp = "Maple";
         do {
-            temp = c.readLine("Áßº¹ °¡´É È½¼ö = ");
+            temp = c.readLine("ì¤‘ë³µ ê°€ëŠ¥ íšŸìˆ˜ = ");
         } while (hasNumberFormatException(temp));
         final int canValid = Integer.parseInt(temp);
 
-        final String format = String.format("%d¹ø Å¸ÀÔÀÇ Ä³½Ã¸¦ %d¹ø Áö±ŞÇÏ´Â %dÈ¸ Áßº¹ °¡´ÉÇÑ ÄíÆùÀ» %d°³ ¸¸µì´Ï´Ù. ¸Â½À´Ï±î?", type, amount, canValid, howMany);
+        final String format = String.format("%dë²ˆ íƒ€ì…ì˜ ìºì‹œë¥¼ %dë²ˆ ì§€ê¸‰í•˜ëŠ” %díšŒ ì¤‘ë³µ ê°€ëŠ¥í•œ ì¿ í°ì„ %dê°œ ë§Œë“­ë‹ˆë‹¤. ë§ìŠµë‹ˆê¹Œ?", type, amount, canValid, howMany);
         if (!c.readLine(format + " (y/n) = ").equals("n")) {
             int number = howMany;
             PreparedStatement ps = null;
@@ -66,7 +66,7 @@ public class CouponCodeGenerator {
                     number--;
                     System.out.println(code);
                 } catch (SQLException ex) {
-                    System.err.println("[¿¡·¯] " + code + " : " + ex);
+                    System.err.println("[ì—ëŸ¬] " + code + " : " + ex);
                     continue;
                 }
             }
@@ -86,15 +86,15 @@ public class CouponCodeGenerator {
         try {
             StringBuilder sb = new StringBuilder();
             sb.append(code).append(" | ");
-            sb.append(item).append(" ").append(type == 1 ? "³Ø½¼ Ä³½¬" : type == 2 ? "¸ŞÀÌÇÃ Æ÷ÀÎÆ®" : "¸Ş¼Ò").append(" | ");
-            sb.append(valid).append("È¸ »ç¿ë °¡´É");
+            sb.append(item).append(" ").append(type == 1 ? "ë„¥ìŠ¨ ìºì‰¬" : type == 2 ? "ë©”ì´í”Œ í¬ì¸íŠ¸" : "ë©”ì†Œ").append(" | ");
+            sb.append(valid).append("íšŒ ì‚¬ìš© ê°€ëŠ¥");
             sb.append("\r\n");
-            FileOutputStream out = new FileOutputStream("ÄíÆù ÄÚµå.txt", true);
+            FileOutputStream out = new FileOutputStream("ì¿ í° ì½”ë“œ.txt", true);
             out.write(sb.toString().getBytes());
             out.close();
             return sb.toString();
         } catch (Exception ex) {    }
-        return "Á¤º¸°¡ Á¸ÀçÇÏÁö ¾ÊÀ½";
+        return "ì •ë³´ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŒ";
     }
 
     private static boolean hasNumberFormatException(String str) {

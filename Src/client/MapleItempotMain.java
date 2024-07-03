@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -28,7 +28,7 @@ import tools.Timer.MapTimer;
 
 /**
  *
- * @author 4Â÷¿ø
+ * @author 4ì°¨ì›
  */
 public class MapleItempotMain {
     
@@ -90,7 +90,7 @@ public class MapleItempotMain {
             }
             con.close();
         } catch (Exception e){
-            System.err.println("[¿À·ù] ¾ÆÀÌÅÛÆÌ µ¥ÀÌÅÍ ·Îµù¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] ì•„ì´í…œíŒŸ ë°ì´í„° ë¡œë”©ì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.");
             if (!ServerConstants.realese) {
                 e.printStackTrace();
             }
@@ -168,7 +168,7 @@ public class MapleItempotMain {
             con.close();
         }
         catch (Exception e) {
-            System.err.println("[¿À·ù] ¾ÆÀÌÅÛÆÌ ¸ğµç µ¥ÀÌÅÍ ÀúÀå¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] ì•„ì´í…œíŒŸ ëª¨ë“  ë°ì´í„° ì €ì¥ì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.");
             if (!ServerConstants.realese) {
                 e.printStackTrace();
             }
@@ -206,7 +206,7 @@ public class MapleItempotMain {
             con.close();
         }
         catch (Exception e) {
-            System.err.println("[¿À·ù] ¾ÆÀÌÅÛÆÌ µ¥ÀÌÅÍ ÀúÀå¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] ì•„ì´í…œíŒŸ ë°ì´í„° ì €ì¥ì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.");
             if (!ServerConstants.realese) {
                 e.printStackTrace();
             }
@@ -226,10 +226,10 @@ public class MapleItempotMain {
                             continue;
                         }
                         if (real.getLevel() > 0) {
-                            if (real.getStatus() != 3 && real.getStatus() != 5) { // Àá ¶Ç´Â ¼ºÀå Ã¼Å©
+                            if (real.getStatus() != 3 && real.getStatus() != 5) { // ì  ë˜ëŠ” ì„±ì¥ ì²´í¬
                                     runMapleImp(real, false);
                             } else if (real.getStatus() == 5) {
-                            } else { // ±ú¾î³²
+                            } else { // ê¹¨ì–´ë‚¨
                                 if (real.getSleepTime() <= System.currentTimeMillis()) {
                                     real.setStatus(1);
                                     real.setLevel(real.getLevel() + 1);
@@ -259,10 +259,10 @@ public class MapleItempotMain {
     private void runMapleImp(MapleItempot real, boolean awake) {
         int random = Randomizer.nextInt(10);
         if (random == 0 && !awake) {
-            real.setStatus(4); // º´µë
+            real.setStatus(4); // ë³‘ë“¬
             real.setLastFeedTime(System.currentTimeMillis());
         }
-        if (real.getFullness() == 0) { // ¹è°íÇÄ
+        if (real.getFullness() == 0) { // ë°°ê³ í””
             if ((real.getLastFeedTime() + starveTime) < System.currentTimeMillis()) {
                 real.setLevel(real.getLevel() - 1);
                 if (real.getLevel() == 0) {
@@ -273,7 +273,7 @@ public class MapleItempotMain {
                 real.setCloseness(real.getCloseness() - 2);
             }
         } else {
-            if (real.getStatus() == 4) { // ¸¸¾à ¾ÆÀÌÅÛÆÌÀÌ ¾ÆÇÃ¶§
+            if (real.getStatus() == 4) { // ë§Œì•½ ì•„ì´í…œíŒŸì´ ì•„í”Œë•Œ
                 real.setFullness(real.getFullness() - 2);
                 real.setCloseness(real.getCloseness() - 2);
                 if ((real.getLastFeedTime() + diseaseTime) < System.currentTimeMillis()) {
@@ -282,7 +282,7 @@ public class MapleItempotMain {
                        real.setStatus(0);
                     }
                 }
-            } else { // Æò¼Ò
+            } else { // í‰ì†Œ
                 if (System.currentTimeMillis() > real.getLastFeedTime() + (real.getFeedInterval() * 60 * 1000)) {
                     if (real.getIncCloseLeft() <= 1) {
                         real.setIncCloseLeft(real.getIncCloseLeft()+1);

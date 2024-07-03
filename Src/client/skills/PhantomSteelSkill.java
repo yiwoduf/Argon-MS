@@ -16,7 +16,7 @@ import packet.skills.PhantomPacket;
  */
 public class PhantomSteelSkill {
 
-    // * ¸®½ºÆ® ÇÏ³ª·Î Ã³¸®µµ °¡´ÉÇÒ °Í °°Àºµ¥.. Áö±İÀº ÆĞ½º.
+    // * ë¦¬ìŠ¤íŠ¸ í•˜ë‚˜ë¡œ ì²˜ë¦¬ë„ ê°€ëŠ¥í•  ê²ƒ ê°™ì€ë°.. ì§€ê¸ˆì€ íŒ¨ìŠ¤.
     List<SteelSkillEntry> job1Skills = new ArrayList<SteelSkillEntry>();
     List<SteelSkillEntry> job2Skills = new ArrayList<SteelSkillEntry>();
     List<SteelSkillEntry> job3Skills = new ArrayList<SteelSkillEntry>();
@@ -36,7 +36,7 @@ public class PhantomSteelSkill {
         } else if (index == 5) {
             task = jobHyperSkills;
         } else {
-            System.err.println("[¿À·ù] ÀÎµ¦½º°¡ ÇØ´çÇÏÁö ¾Ê´Â ¹øÈ£ÀÔ´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] ì¸ë±ìŠ¤ê°€ í•´ë‹¹í•˜ì§€ ì•ŠëŠ” ë²ˆí˜¸ì…ë‹ˆë‹¤.");
             return -1;
         }
         int lastfree = 1;
@@ -66,7 +66,7 @@ public class PhantomSteelSkill {
             entry.setSlot(getNextFreeSlot(index));
             jobHyperSkills.add(entry);
         } else {
-            System.err.println("[¿À·ù] ÆÒÅÒ ½ºÆ¿ ½ºÅ³ ÀÎµ¦½º »ğÀÔÀÌ Àß¸øµÇ¾ú°Å³ª »çÀÌÁî ÃÊ°ú.");
+            System.err.println("[ì˜¤ë¥˜] íŒ¬í…€ ìŠ¤í‹¸ ìŠ¤í‚¬ ì¸ë±ìŠ¤ ì‚½ì…ì´ ì˜ëª»ë˜ì—ˆê±°ë‚˜ ì‚¬ì´ì¦ˆ ì´ˆê³¼.");
         }
     }
 
@@ -87,7 +87,7 @@ public class PhantomSteelSkill {
             entry.setSlot(slot);
             jobHyperSkills.add(entry);
         } else {
-            System.err.println("[¿À·ù] ÆÒÅÒ ½ºÆ¿ ½ºÅ³ ÀÎµ¦½º »ğÀÔÀÌ Àß¸øµÇ¾ú°Å³ª »çÀÌÁî ÃÊ°ú.");
+            System.err.println("[ì˜¤ë¥˜] íŒ¬í…€ ìŠ¤í‹¸ ìŠ¤í‚¬ ì¸ë±ìŠ¤ ì‚½ì…ì´ ì˜ëª»ë˜ì—ˆê±°ë‚˜ ì‚¬ì´ì¦ˆ ì´ˆê³¼.");
         }
     }
 
@@ -103,7 +103,7 @@ public class PhantomSteelSkill {
         } else if (index == 5) {
             jobHyperSkills.get(slot).setEquipped(equipped);
         } else {
-            System.err.println("[¿À·ù] ½ºÅ³ ÀåÂø¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] ìŠ¤í‚¬ ì¥ì°©ì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.");
         }
     }
 
@@ -121,7 +121,7 @@ public class PhantomSteelSkill {
     public boolean isExistSkill(int skillId) {
         for (int i = 1; i <= 5; ++i) {
             for (SteelSkillEntry sse : getSkillEntrys(i)) {
-                if (sse.getSkillId() == skillId) { //ÀÌ¹Ì ½ºÅ³ÀÌ Á¸ÀçÇÔ
+                if (sse.getSkillId() == skillId) { //ì´ë¯¸ ìŠ¤í‚¬ì´ ì¡´ì¬í•¨
                     return true;
                 }
             }
@@ -176,7 +176,7 @@ public class PhantomSteelSkill {
         } else if (index == 5) {
             task = jobHyperSkills;
         } else {
-            System.err.println("[¿À·ù] ÀÎµ¦½º°¡ ÇØ´çÇÏÁö ¾Ê´Â ¹øÈ£ÀÔ´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] ì¸ë±ìŠ¤ê°€ í•´ë‹¹í•˜ì§€ ì•ŠëŠ” ë²ˆí˜¸ì…ë‹ˆë‹¤.");
             return;
         }
         Comparator<SteelSkillEntry> com = new Comparator<SteelSkillEntry>() {
@@ -264,7 +264,7 @@ public class PhantomSteelSkill {
 
     public void connectData(WritingPacket wh, MapleCharacter hp) {
 
-        /* ÈÉÄ£ ½ºÅ³ ¸ñ·Ï(Steel Skills List) */
+        /* í›”ì¹œ ìŠ¤í‚¬ ëª©ë¡(Steel Skills List) */
         Map<Integer, Integer> equipped = new HashMap<>();
         for (int i = 1; i <= 5; ++i) {
             sortSkillEntrys(i);
@@ -279,7 +279,7 @@ public class PhantomSteelSkill {
             }
         }
 
-        /* ÀåÂøÇÑ ½ºÅ³ ¸ñ·Ï(Equipped Skills List) */
+        /* ì¥ì°©í•œ ìŠ¤í‚¬ ëª©ë¡(Equipped Skills List) */
         for (int i = 1; i <= 5; ++i) {
             if (equipped.get(i) != null) {
                 wh.writeInt(equipped.get(i));

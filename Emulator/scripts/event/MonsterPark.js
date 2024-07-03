@@ -64,9 +64,9 @@ function playerRevive(eim, player) {
 }
 
 function playerDisconnected(eim, player) {
-    /* 0 : ¸ğµÎ ³ª°¥¶§ ±îÁö´Â ÀÎ½ºÅÏ½º À¯Áö
-     * 1 ~ : ÀÏÁ¤ ¼öÁØ ÀÌ»óÀÇ »ç¶÷¸¸ ³²À¸¸é ´©°¡ ³ª°¡´øÁö ÀÎ½ºÅÏ½º À¯Áö
-     * -1 ~ ÀÌÇÏ : ÀÏÁ¤ ¼öÁØ ÀÌ»óÀÇ »ç¶÷¸¸ ³²À¸¸é À¯ÁöÀÌ³ª, ÆÄÆ¼ÀåÀÌ ³ª°¡¸é ÀÎ½ºÅÏ½º »èÁ¦
+    /* 0 : ëª¨ë‘ ë‚˜ê°ˆë•Œ ê¹Œì§€ëŠ” ì¸ìŠ¤í„´ìŠ¤ ìœ ì§€
+     * 1 ~ : ì¼ì • ìˆ˜ì¤€ ì´ìƒì˜ ì‚¬ëŒë§Œ ë‚¨ìœ¼ë©´ ëˆ„ê°€ ë‚˜ê°€ë˜ì§€ ì¸ìŠ¤í„´ìŠ¤ ìœ ì§€
+     * -1 ~ ì´í•˜ : ì¼ì • ìˆ˜ì¤€ ì´ìƒì˜ ì‚¬ëŒë§Œ ë‚¨ìœ¼ë©´ ìœ ì§€ì´ë‚˜, íŒŒí‹°ì¥ì´ ë‚˜ê°€ë©´ ì¸ìŠ¤í„´ìŠ¤ ì‚­ì œ
      */
     if (eim.getProperty("Global_MinPerson") == null) {
         return 0;
@@ -88,9 +88,9 @@ function monsterValue(eim, mobid) {
 
 function monsterKilled(eim, player) {
 //<<<<<<< HEAD
-    eim.getMapFactory().getMap(eim.getProperty("Global_nowMap")).broadcastMessage(UIPacket.enforceMSG("°æÇèÄ¡ º¸»ó "+Comma(eim.getProperty("totalExp"))+" ´©Àû!", 209, 10000000));
+    eim.getMapFactory().getMap(eim.getProperty("Global_nowMap")).broadcastMessage(UIPacket.enforceMSG("ê²½í—˜ì¹˜ ë³´ìƒ "+Comma(eim.getProperty("totalExp"))+" ëˆ„ì !", 209, 10000000));
 //=======
-    eim.getMapFactory().getMap(player.getMap().getId()).broadcastMessage(UIPacket.enforceMSG("°æÇèÄ¡ º¸»ó "+Comma(eim.getProperty("totalExp"))+" ´©Àû!", 209, 10000000));
+    eim.getMapFactory().getMap(player.getMap().getId()).broadcastMessage(UIPacket.enforceMSG("ê²½í—˜ì¹˜ ë³´ìƒ "+Comma(eim.getProperty("totalExp"))+" ëˆ„ì !", 209, 10000000));
 //>>>>>>> 81ff44abca6f5fc1eda403ad9459c7b97f3f12ad
 }
 
@@ -101,7 +101,7 @@ function leftParty(eim, player) {
         while (it.hasNext()) {
             var chr = it.next();
             chr.changeMap(exit, exit.getPortal(0));
-            chr.Message("ÆÄÆ¼¿øÀÌ ÆÄÆ¼¸¦ ±×¸¸µÖ¼­ ´õÀÌ»ó Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ¾ø½À´Ï´Ù.");
+            chr.Message("íŒŒí‹°ì›ì´ íŒŒí‹°ë¥¼ ê·¸ë§Œë‘¬ì„œ ë”ì´ìƒ í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
         }
         eim.unregisterAll();
         if (eim != null) {
@@ -117,7 +117,7 @@ function disbandParty(eim) {
     while (it.hasNext()) {
         var chr = it.next();
         chr.changeMap(exit, exit.getPortal(0));
-        chr.Message("ÆÄÆ¼ÀåÀÌ ÆÄÆ¼¸¦ ±×¸¸µÖ¼­ ´õÀÌ»ó Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ¾ø½À´Ï´Ù.");
+        chr.Message("íŒŒí‹°ì¥ì´ íŒŒí‹°ë¥¼ ê·¸ë§Œë‘¬ì„œ ë”ì´ìƒ í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
     }
     eim.unregisterAll();
     if (eim != null) {
@@ -145,7 +145,7 @@ function playerExit(eim, player) {
     while (it.hasNext()) {
         var chr = it.next();
         chr.changeMap(exit, exit.getPortal(0));
-        chr.Message("ÆÄÆ¼ Äù½ºÆ®¸¦ Æ÷±âÇÏ¿© ´õÀÌ»ó Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ¾ø½À´Ï´Ù.");
+        chr.Message("íŒŒí‹° í€˜ìŠ¤íŠ¸ë¥¼ í¬ê¸°í•˜ì—¬ ë”ì´ìƒ í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
     }
     eim.unregisterAll();
     if (eim != null) {

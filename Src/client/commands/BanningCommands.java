@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹èÁöÈÆ raccoonfox69@gmail.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°°ì§€í›ˆ raccoonfox69@gmail.com
  * ==================================
  * 
  */
@@ -26,7 +26,7 @@ public class BanningCommands implements Command {
     public void execute(MapleClient c, String[] splitted) throws Exception {
 	ChannelServer cserv = c.getChannelServer();
 
-	if (splitted[0].equals("!¹ê")) {
+	if (splitted[0].equals("!ë°´")) {
 	    if (splitted.length < 3) {
 		return;
 	    }
@@ -38,23 +38,23 @@ public class BanningCommands implements Command {
 	    if (target != null) {
 		sb.append(" (IP: ").append(target.getClient().getIp().split(":")[0]).append(")");
 		if (target.ban(sb.toString(), true, false)) {
-		    c.getPlayer().dropMessage(6, "¼º°øÀûÀ¸·Î ¹ê µÇ¾ú½À´Ï´Ù.");
+		    c.getPlayer().dropMessage(6, "ì„±ê³µì ìœ¼ë¡œ ë°´ ë˜ì—ˆìŠµë‹ˆë‹¤.");
                     if (c.getPlayer().getKeyValue("Banned_Today") == null) {
                         c.getPlayer().setKeyValue("Banned_Today", "0");
                     }
                     c.getPlayer().setKeyValue("Banned_Today", (Integer.parseInt(c.getPlayer().getKeyValue("Banned_Today"))+1)+"");
 		} else {
-		    c.getPlayer().dropMessage(6, "¹ê¿¡ ½ÇÆĞÇß½À´Ï´Ù.");
+		    c.getPlayer().dropMessage(6, "ë°´ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
 		}
 	    } else {
 		if (MapleCharacter.ban(splitted[1], sb.toString(), false)) {
-		    c.getPlayer().dropMessage(6, splitted[1] + " ¿ÀÇÁ¶óÀÎ ¹ê ¼º°ø.");
+		    c.getPlayer().dropMessage(6, splitted[1] + " ì˜¤í”„ë¼ì¸ ë°´ ì„±ê³µ.");
 		} else {
-		    c.getPlayer().dropMessage(6, splitted[1] + " ¸¦ ¹ê ÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.");
+		    c.getPlayer().dropMessage(6, splitted[1] + " ë¥¼ ë°´ í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
 		}
 	    }
 
-	} else if (splitted[0].equals("!±â°£¹ê")) {
+	} else if (splitted[0].equals("!ê¸°ê°„ë°´")) {
 	    final MapleCharacter victim = cserv.getPlayerStorage().getCharacterByName(splitted[1]);
 	    final int reason = Integer.parseInt(splitted[2]);
 	    final int numDay = Integer.parseInt(splitted[3]);
@@ -64,27 +64,27 @@ public class BanningCommands implements Command {
 	    final DateFormat df = DateFormat.getInstance();
 
 	    if (victim == null) {
-		c.getPlayer().dropMessage(6, "ÇØ´ç Ä³¸¯ÅÍ¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù.");
+		c.getPlayer().dropMessage(6, "í•´ë‹¹ ìºë¦­í„°ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		return;
 	    }
-	    victim.tempban("±â°£ ¹ê : " + c.getPlayer().getName() + "", cal, reason, true);
-	    c.getPlayer().dropMessage(6, "" + splitted[1] + " Ä³¸¯ÅÍ°¡ " + df.format(cal.getTime()) + " ±îÁö ¼º°øÀûÀ¸·Î ¹ê µÇ¾ú½À´Ï´Ù.");
+	    victim.tempban("ê¸°ê°„ ë°´ : " + c.getPlayer().getName() + "", cal, reason, true);
+	    c.getPlayer().dropMessage(6, "" + splitted[1] + " ìºë¦­í„°ê°€ " + df.format(cal.getTime()) + " ê¹Œì§€ ì„±ê³µì ìœ¼ë¡œ ë°´ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 
-	} else if (splitted[0].equals("!¹êÇ®±â")) {
+	} else if (splitted[0].equals("!ë°´í’€ê¸°")) {
 	    if (splitted.length < 1) {
-		c.getPlayer().dropMessage(6, "!¹êÇ®±â <Ä³¸¯ÅÍÀÌ¸§>");
+		c.getPlayer().dropMessage(6, "!ë°´í’€ê¸° <ìºë¦­í„°ì´ë¦„>");
 	    } else {
 		final byte result = c.unban(splitted[1]);
 		if (result == -1) {
-		    c.getPlayer().dropMessage(6, "ÇØ´ç Ä³¸¯ÅÍ¸¦ ¹ß°ßÇÏÁö ¸øÇß½À´Ï´Ù.");
+		    c.getPlayer().dropMessage(6, "í•´ë‹¹ ìºë¦­í„°ë¥¼ ë°œê²¬í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
 		} else if (result == -2) {
-		    c.getPlayer().dropMessage(6, "Ä³¸¯ÅÍÀÇ ¹êÀ» ÇØÁ¦ÇÏ´Âµ¥ ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+		    c.getPlayer().dropMessage(6, "ìºë¦­í„°ì˜ ë°´ì„ í•´ì œí•˜ëŠ”ë° ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
 		} else {
-		    c.getPlayer().dropMessage(6, "Ä³¸¯ÅÍ°¡ ¼º°øÀûÀ¸·Î ¹êÀÌ ÇØÁ¦µÇ¾ú½À´Ï´Ù.");
+		    c.getPlayer().dropMessage(6, "ìºë¦­í„°ê°€ ì„±ê³µì ìœ¼ë¡œ ë°´ì´ í•´ì œë˜ì—ˆìŠµë‹ˆë‹¤.");
 		}
 	    }
 
-	} else if (splitted[0].equals("!Á¢¼Ó²÷±â")) {
+	} else if (splitted[0].equals("!ì ‘ì†ëŠê¸°")) {
 	    int level = 0;
 	    MapleCharacter victim;
 	    if (splitted[1].charAt(0) == '-') {
@@ -115,10 +115,10 @@ public class BanningCommands implements Command {
     @Override
     public CommandDefinition[] getDefinition() {
 	return new CommandDefinition[]{
-		    new CommandDefinition("¹ê", "<Ä³¸¯ÅÍÀÌ¸§> <ÀÌÀ¯>", "ÇØ´ç ip¿Í macÁÖ¼Ò, °èÁ¤À» ¿µ±¸ÀûÀ¸·Î ¹ê ½ÃÅµ´Ï´Ù.", 3),
-                    new CommandDefinition("¹êÇ®±â", "<Ä³¸¯ÅÍÀÌ¸§>", "¹ê µÈ ip¿Í macÁÖ¼Ò, °èÁ¤ÀÇ ¹êÀ» ÇØÁ¦ÇÕ´Ï´Ù.", 3),
-		    new CommandDefinition("±â°£¹ê", "<Ä³¸¯ÅÍÀÌ¸§> <ÀÌÀ¯> <¹ê µÉ ÀÏ¼ö>", "ÇØ´ç °èÁ¤À» ÇØ´ç ÀÏ ¼ö µ¿¾È ¹ê ½ÃÅµ´Ï´Ù.", 3),
-		    new CommandDefinition("Á¢¼Ó²÷±â", "[-f] <Ä³¸¯ÅÍÀÌ¸§>", "ÇØ´ç Ä³¸¯ÅÍ¸¦ °­Á¦·Î Á¢¼ÓÁ¾·á½ÃÅµ´Ï´Ù. ÇöÁ¢¿¡°É·È´Ù¸é -f ¿É¼ÇÀ» »ç¿ëÇÏ¼¼¿ä.", 3)
+		    new CommandDefinition("ë°´", "<ìºë¦­í„°ì´ë¦„> <ì´ìœ >", "í•´ë‹¹ ipì™€ macì£¼ì†Œ, ê³„ì •ì„ ì˜êµ¬ì ìœ¼ë¡œ ë°´ ì‹œí‚µë‹ˆë‹¤.", 3),
+                    new CommandDefinition("ë°´í’€ê¸°", "<ìºë¦­í„°ì´ë¦„>", "ë°´ ëœ ipì™€ macì£¼ì†Œ, ê³„ì •ì˜ ë°´ì„ í•´ì œí•©ë‹ˆë‹¤.", 3),
+		    new CommandDefinition("ê¸°ê°„ë°´", "<ìºë¦­í„°ì´ë¦„> <ì´ìœ > <ë°´ ë  ì¼ìˆ˜>", "í•´ë‹¹ ê³„ì •ì„ í•´ë‹¹ ì¼ ìˆ˜ ë™ì•ˆ ë°´ ì‹œí‚µë‹ˆë‹¤.", 3),
+		    new CommandDefinition("ì ‘ì†ëŠê¸°", "[-f] <ìºë¦­í„°ì´ë¦„>", "í•´ë‹¹ ìºë¦­í„°ë¥¼ ê°•ì œë¡œ ì ‘ì†ì¢…ë£Œì‹œí‚µë‹ˆë‹¤. í˜„ì ‘ì—ê±¸ë ¸ë‹¤ë©´ -f ì˜µì…˜ì„ ì‚¬ìš©í•˜ì„¸ìš”.", 3)
 	};
     }
 }

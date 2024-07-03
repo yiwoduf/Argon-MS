@@ -3,15 +3,15 @@
 
 /*
 
-	¿Àµò KMS ÆÀ ¼Ò½ºÀÇ ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	ì˜¤ë”˜ KMS íŒ€ ì†ŒìŠ¤ì˜ ìŠ¤í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤.
 
-	¿£ÇÇ½Ã¾ÆÀÌµð : 1012102
+	ì—”í”¼ì‹œì•„ì´ë”” : 1012102
 	
-	¿£ÇÇ½Ã ÀÌ¸§ : ÇÇ¾Æ
+	ì—”í”¼ì‹œ ì´ë¦„ : í”¼ì•„
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : Çì³×½Ã½º
+	ì—”í”¼ì‹œê°€ ìžˆëŠ” ë§µ : í—¤ë„¤ì‹œìŠ¤
 
-	¿£ÇÇ½Ã ¼³¸í : ÁÖ¹®¼­ ±³È¯
+	ì—”í”¼ì‹œ ì„¤ëª… : ì£¼ë¬¸ì„œ êµí™˜
 
 
 */
@@ -91,7 +91,7 @@ var scrollz71 = new Array(new Array(65, 2045301, 1), new Array(65, 2045302, 1), 
 var scrollz72 = new Array(new Array(65, 2048001, 1), new Array(65, 2048002, 1), new Array(65, 2048004, 1), new Array(65, 2048005, 1), new Array(65, 2048010, 1), new Array(65, 2048011, 1), new Array(65, 2048012, 1), new Array(65, 2048013, 1), new Array(65, 2048018, 1), new Array(65, 2048019, 1), new Array(65, 2048026, 1), new Array(65, 2048027, 1), new Array(65, 2048036, 1), new Array(65, 2048037, 1));
 var scrollz73 = new Array(new Array(50, 2049401, 1),new Array(70, 2049400, 1),new Array(100, 2049701, 1));
 
-var scrollCategorys = new Array("Åõ±¸ ¹æ¾î·Â", "Åõ±¸ Ã¼·Â", "Åõ±¸ Áö·Â", "Åõ±¸ ¹ÎÃ¸¼º", "´« Àå½Ä Èû", "´« Àå½Ä ¹ÎÃ¸", "´« Àå½Ä Áö·Â", "´« Àå½Ä Çà¿î", "±Í Àå½Ä Áö·Â", "±Í Àå½Ä ¹ÎÃ¸", "±Í Àå½Ä Çà¿î", "±Í Àå½Ä Ã¼·Â", "»óÀÇ ¹æ¾î·Â", "»óÀÇ Èû", "»óÀÇ Ã¼·Â", "»óÀÇ Çà¿î", "Àü½Å °©¿Ê ¹ÎÃ¸¼º", "Àü½Å °©¿Ê ¹æ¾î·Â", "Àü½Å °©¿Ê Áö·Â", "Àü½Å °©¿Ê Çà¿î", "Àü½Å °©¿Ê Èû", "ÇÏÀÇ ¹æ¾î·Â", "ÇÏÀÇ Á¡ÇÁ", "ÇÏÀÇ Ã¼·Â", "ÇÏÀÇ ¹ÎÃ¸¼º", "½Å¹ß ¹ÎÃ¸¼º", "½Å¹ß Á¡ÇÁ·Â", "½Å¹ß ÀÌµ¿¼Óµµ", "Àå°© ¹ÎÃ¸¼º", "Àå°© °ø°Ý·Â", "Àå°© Ã¼·Â", "¹æÆÐ ¹æ¾î·Â", "¹æÆÐ Çà¿î", "¹æÆÐ Ã¼·Â", "¹æÆÐ Èû", "¸ÁÅä ¸¶¹ý ¹æ¾î·Â", "¸ÁÅä ¹°¸® ¹æ¾î·Â", "¸ÁÅä Ã¼·Â", "¸ÁÅä ¸¶³ª", "¸ÁÅä Èû", "¸ÁÅä Áö·Â", "¸ÁÅä ¹ÎÃ¸¼º", "¸ÁÅä Çà¿î", "¹ÝÁö Èû", "¹ÝÁö Áö·Â", "¹ÝÁö ¹ÎÃ¸¼º", "¹ÝÁö Çà¿î", "º§Æ® Èû", "º§Æ® Áö·Â", "º§Æ® ¹ÎÃ¸¼º", "º§Æ® Çà¿î", "ÇÑ¼Õ°Ë", "ÇÑ¼Õµµ³¢", "ÇÑ¼ÕµÐ±â", "´Ü°Ë", "ºí·¹ÀÌµå", "ÄÉÀÎ", "¿Ïµå", "½ºÅÂÇÁ", "µÎ¼Õ°Ë", "µÎ¼Õµµ³¢", "µÎ¼ÕµÐ±â", "Ã¢", "Æú¾Ï", "È°", "¼®±Ã", "¾Æ´ë", "ÄÉÀÎ", "³ÊÅ¬", "°Ç", "µà¾ó º¸¿ì°Ç", "ÇÚµåÄ³³í", "ÆêÀåºñ", "ÀáÀç ºÎ¿© ÁÖ¹®¼­");
+var scrollCategorys = new Array("íˆ¬êµ¬ ë°©ì–´ë ¥", "íˆ¬êµ¬ ì²´ë ¥", "íˆ¬êµ¬ ì§€ë ¥", "íˆ¬êµ¬ ë¯¼ì²©ì„±", "ëˆˆ ìž¥ì‹ íž˜", "ëˆˆ ìž¥ì‹ ë¯¼ì²©", "ëˆˆ ìž¥ì‹ ì§€ë ¥", "ëˆˆ ìž¥ì‹ í–‰ìš´", "ê·€ ìž¥ì‹ ì§€ë ¥", "ê·€ ìž¥ì‹ ë¯¼ì²©", "ê·€ ìž¥ì‹ í–‰ìš´", "ê·€ ìž¥ì‹ ì²´ë ¥", "ìƒì˜ ë°©ì–´ë ¥", "ìƒì˜ íž˜", "ìƒì˜ ì²´ë ¥", "ìƒì˜ í–‰ìš´", "ì „ì‹  ê°‘ì˜· ë¯¼ì²©ì„±", "ì „ì‹  ê°‘ì˜· ë°©ì–´ë ¥", "ì „ì‹  ê°‘ì˜· ì§€ë ¥", "ì „ì‹  ê°‘ì˜· í–‰ìš´", "ì „ì‹  ê°‘ì˜· íž˜", "í•˜ì˜ ë°©ì–´ë ¥", "í•˜ì˜ ì í”„", "í•˜ì˜ ì²´ë ¥", "í•˜ì˜ ë¯¼ì²©ì„±", "ì‹ ë°œ ë¯¼ì²©ì„±", "ì‹ ë°œ ì í”„ë ¥", "ì‹ ë°œ ì´ë™ì†ë„", "ìž¥ê°‘ ë¯¼ì²©ì„±", "ìž¥ê°‘ ê³µê²©ë ¥", "ìž¥ê°‘ ì²´ë ¥", "ë°©íŒ¨ ë°©ì–´ë ¥", "ë°©íŒ¨ í–‰ìš´", "ë°©íŒ¨ ì²´ë ¥", "ë°©íŒ¨ íž˜", "ë§í†  ë§ˆë²• ë°©ì–´ë ¥", "ë§í†  ë¬¼ë¦¬ ë°©ì–´ë ¥", "ë§í†  ì²´ë ¥", "ë§í†  ë§ˆë‚˜", "ë§í†  íž˜", "ë§í†  ì§€ë ¥", "ë§í†  ë¯¼ì²©ì„±", "ë§í†  í–‰ìš´", "ë°˜ì§€ íž˜", "ë°˜ì§€ ì§€ë ¥", "ë°˜ì§€ ë¯¼ì²©ì„±", "ë°˜ì§€ í–‰ìš´", "ë²¨íŠ¸ íž˜", "ë²¨íŠ¸ ì§€ë ¥", "ë²¨íŠ¸ ë¯¼ì²©ì„±", "ë²¨íŠ¸ í–‰ìš´", "í•œì†ê²€", "í•œì†ë„ë¼", "í•œì†ë‘”ê¸°", "ë‹¨ê²€", "ë¸”ë ˆì´ë“œ", "ì¼€ì¸", "ì™„ë“œ", "ìŠ¤íƒœí”„", "ë‘ì†ê²€", "ë‘ì†ë„ë¼", "ë‘ì†ë‘”ê¸°", "ì°½", "í´ì•”", "í™œ", "ì„ê¶", "ì•„ëŒ€", "ì¼€ì¸", "ë„ˆí´", "ê±´", "ë“€ì–¼ ë³´ìš°ê±´", "í•¸ë“œìºë…¼", "íŽ«ìž¥ë¹„", "ìž ìž¬ ë¶€ì—¬ ì£¼ë¬¸ì„œ");
 
 
 var status = -1;
@@ -114,14 +114,14 @@ function action(mode, type, selection) {
     }
     
     if (status == 0) {
-        var trade = "¾î¶² ÁÖ¹®¼­¸¦ ¿øÇÏ´Âµ¥?\r\n\r\n#b";
+        var trade = "ì–´ë–¤ ì£¼ë¬¸ì„œë¥¼ ì›í•˜ëŠ”ë°?\r\n\r\n#b";
         for (var i = 0; i < scrollCategorys.length; i++) {
             trade += "#L"+i+"#"+scrollCategorys[i]+"#l\r\n";
         }
         cm.sendSimple(trade);
     } else if (status == 1) {
         menuSelect = selection;
-        var trade = "ÀÚ. ¿øÇÏ´Â ÁÖ¹®¼­¸¦ °ñ¶óºÁ.\r\n\r\n#b";
+        var trade = "ìž. ì›í•˜ëŠ” ì£¼ë¬¸ì„œë¥¼ ê³¨ë¼ë´.\r\n\r\n#b";
         var scrollArray = getArray(selection);
         for (var i = 0;i < scrollArray.length; i++) {
             trade += "#L"+i+"##i"+scrollArray[i][1]+"# #z"+scrollArray[i][1]+"##l\r\n";
@@ -130,16 +130,16 @@ function action(mode, type, selection) {
     } else if (status == 2) {
         select = selection;
         var scrollArray = getArray(menuSelect);
-        cm.sendYesNo("´ÜÇ³ÀÙ "+scrollArray[select][0]+"°³¸¦ #b#i"+scrollArray[select][1]+"# #z"+scrollArray[select][1]+"##k ·Î ±³È¯ÇÏ°í ½ÍÀº°Å¾ß? È¯ºÒÀº ¾ÈµÇ´Ï ½ÅÁßÇÏ°Ô °áÁ¤ÇÏ¶ó±¸.");
+        cm.sendYesNo("ë‹¨í’ìžŽ "+scrollArray[select][0]+"ê°œë¥¼ #b#i"+scrollArray[select][1]+"# #z"+scrollArray[select][1]+"##k ë¡œ êµí™˜í•˜ê³  ì‹¶ì€ê±°ì•¼? í™˜ë¶ˆì€ ì•ˆë˜ë‹ˆ ì‹ ì¤‘í•˜ê²Œ ê²°ì •í•˜ë¼êµ¬.");
     } else if (status == 3) {
         var scrollArray = getArray(menuSelect);
         if (cm.haveItem(4001126, scrollArray[select][0]) && cm.canHold(scrollArray[select][1])) {
             cm.gainItem(4001126, -scrollArray[select][0]);
             cm.gainItem(scrollArray[select][1], scrollArray[select][2]);
-            cm.sendOk("±³È¯¿Ï·á! ÀÎº¥Åä¸®¸¦ È®ÀÎÇØºÁ!");
+            cm.sendOk("êµí™˜ì™„ë£Œ! ì¸ë²¤í† ë¦¬ë¥¼ í™•ì¸í•´ë´!");
             cm.dispose();
         } else {
-            cm.sendOk("ÀÎº¥Åä¸® °ø°£ÀÌ ºÎÁ·ÇÑ°Å ¾Æ³Ä? ¾Æ´Ï¸é #b´ÜÇ³ÀÙ "+scrollArray[select][0]+"°³#k ´Â Àß °®°í ÀÖ´Â°Å¾ß? ³­ ¹Ù»Û¸öÀÌ´Ï Á¦´ë·Î È®ÀÎÇÏ°í ¿À¶õ¸»ÀÌ¾ß!");
+            cm.sendOk("ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ë¶€ì¡±í•œê±° ì•„ëƒ? ì•„ë‹ˆë©´ #bë‹¨í’ìžŽ "+scrollArray[select][0]+"ê°œ#k ëŠ” ìž˜ ê°–ê³  ìžˆëŠ”ê±°ì•¼? ë‚œ ë°”ìœëª¸ì´ë‹ˆ ì œëŒ€ë¡œ í™•ì¸í•˜ê³  ì˜¤ëž€ë§ì´ì•¼!");
             cm.dispose();
             return;
         }

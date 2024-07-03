@@ -1,6 +1,6 @@
 /*
- * @Author ¹ÙÀÌ·¯½º(v_ir_us@nate.com)
- * SystemSQL - MYSQL ·Î ¹Ù²Ù½Ã°í, sendHint ¿À·ù³ª¸é cm.sendOk·Î º¯°æÇØÁÖ¼¼¿ä.
+ * @Author ë°”ì´ëŸ¬ìŠ¤(v_ir_us@nate.com)
+ * SystemSQL - MYSQL ë¡œ ë°”ê¾¸ì‹œê³ , sendHint ì˜¤ë¥˜ë‚˜ë©´ cm.sendOkë¡œ ë³€ê²½í•´ì£¼ì„¸ìš”.
  */
 importPackage(Packages.database);
 importPackage(java.sql);
@@ -13,12 +13,12 @@ var month = time.getMonth();
 var date = time.getDate();
 if (month < 10) {    month = "0"+month;}
 if (date < 10) {    date = "0"+date;}
-var today = year+"³â "+month+"¿ù "+date+"ÀÏ";
+var today = year+"ë…„ "+month+"ì›” "+date+"ì¼";
         
 function start() {
     createAccount();
     status = -1;
-    cm.sendSimple("#fn³ª´®°íµñ Extrabold# ÀºÇÏ¼ö ÀºÇàÀÔ´Ï´Ù. ¹«¾ùÀ» ÇÏ½Ã°Ú½À´Ï±î?.\r\nÁõ¹ßÀÇ À§ÇèÀÌ ÀÖÀ¸´Ï ³ÖÀ¸½Ã°í ½Ã°£ º¸ÀÌ°Ô²ûÇØ¼­ Ä¸Ã³ºÎÅ¹µå¸³´Ï´Ù^^\r\n#r(#h #´ÔÀÇ ÅëÀåÀÜ¾× : #d"+getAccount(cm.getPlayer().getName(),1)+"#r ¸Ş¼Ò)\r\n#b#L1#ÀÔ±İ #L2#Ãâ±İ #L3#¼Û±İ #L10#ÀÌÀÚ #e#r#L5#ÃÊ±âÈ­");
+    cm.sendSimple("#fnë‚˜ëˆ”ê³ ë”• Extrabold# ì€í•˜ìˆ˜ ì€í–‰ì…ë‹ˆë‹¤. ë¬´ì—‡ì„ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?.\r\nì¦ë°œì˜ ìœ„í—˜ì´ ìˆìœ¼ë‹ˆ ë„£ìœ¼ì‹œê³  ì‹œê°„ ë³´ì´ê²Œë”í•´ì„œ ìº¡ì²˜ë¶€íƒë“œë¦½ë‹ˆë‹¤^^\r\n#r(#h #ë‹˜ì˜ í†µì¥ì”ì•¡ : #d"+getAccount(cm.getPlayer().getName(),1)+"#r ë©”ì†Œ)\r\n#b#L1#ì…ê¸ˆ #L2#ì¶œê¸ˆ #L3#ì†¡ê¸ˆ #L10#ì´ì #e#r#L5#ì´ˆê¸°í™”");
 }
 
 function action(mode,type,selection) {
@@ -31,33 +31,33 @@ function action(mode,type,selection) {
     }
     if (status == 0) {
         if (selection == 1) {
-            cm.sendGetNumber("#fn³ª´®°íµñ Extrabold# ÀÔ±İÇÒ ¾×¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. (ÇÑ ¹ø ÀÔ±İ ÃÖ´ë ¾×¼ö :: 20¾ï)",1,1,2000000000);
+            cm.sendGetNumber("#fnë‚˜ëˆ”ê³ ë”• Extrabold# ì…ê¸ˆí•  ì•¡ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. (í•œ ë²ˆ ì…ê¸ˆ ìµœëŒ€ ì•¡ìˆ˜ :: 20ì–µ)",1,1,2000000000);
         } else if (selection == 2) {
-            cm.sendGetNumber("#fn³ª´®°íµñ Extrabold# Ãâ±İÇÒ ¾×¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. (ÇÑ ¹ø Ãâ±İ ÃÖ´ë ¾×¼ö :: 20¾ï)",1,1,2000000000);
+            cm.sendGetNumber("#fnë‚˜ëˆ”ê³ ë”• Extrabold# ì¶œê¸ˆí•  ì•¡ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. (í•œ ë²ˆ ì¶œê¸ˆ ìµœëŒ€ ì•¡ìˆ˜ :: 20ì–µ)",1,1,2000000000);
         } else if (selection == 3) {
-            cm.sendGetText("#fn³ª´®°íµñ Extrabold# ´©±¸¿¡°Ô º¸³»½Ã°Ú½À´Ï±î?\r\n#r(ÁÖÀÇ : ÀºÇà¿¡ ÇØ´ç ÀÌ¸§ÀÌ ¾øÀ» ½Ã¿¡´Â ¼Û±İÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù.)");
+            cm.sendGetText("#fnë‚˜ëˆ”ê³ ë”• Extrabold# ëˆ„êµ¬ì—ê²Œ ë³´ë‚´ì‹œê² ìŠµë‹ˆê¹Œ?\r\n#r(ì£¼ì˜ : ì€í–‰ì— í•´ë‹¹ ì´ë¦„ì´ ì—†ì„ ì‹œì—ëŠ” ì†¡ê¸ˆì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤.)");
         } else if (selection == 5) {
-            cm.sendYesNo("#fn³ª´®°íµñ Extrabold# Á¤¸» ÃÊ±âÈ­ÇÏ°Ú½À´Ï±î? °è¼Ó ÁøÇàÇÏ½Ã·Á¸é ¿¹¸¦ ´­·¯ÁÖ¼¼¿ä.");
+            cm.sendYesNo("#fnë‚˜ëˆ”ê³ ë”• Extrabold# ì •ë§ ì´ˆê¸°í™”í•˜ê² ìŠµë‹ˆê¹Œ? ê³„ì† ì§„í–‰í•˜ì‹œë ¤ë©´ ì˜ˆë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš”.");
         } else if (selection == 10) {
             var time = getAccount(cm.getPlayer().getName(),3);
             time = time > 0 ? System.currentTimeMillis() - time : 0;
             time /= 1000;
-            var sec = time % 60; // ÃÊ
-	var total = (time - sec); // ÃÊ·Î È¯»ê ÇÑ »óÅÂ¿¡¼­ ÃÊ °ª¸¸ »­
-	var min = (total / 60) % 60; // ºĞ
-	var hour = Math.floor((total - (sec + min)) / 3600); // ½Ã°£
+            var sec = time % 60; // ì´ˆ
+	var total = (time - sec); // ì´ˆë¡œ í™˜ì‚° í•œ ìƒíƒœì—ì„œ ì´ˆ ê°’ë§Œ ëºŒ
+	var min = (total / 60) % 60; // ë¶„
+	var hour = Math.floor((total - (sec + min)) / 3600); // ì‹œê°„
 	hour = hour % 24;
         hour = hour == -1 ? 0 : hour;
 	var day = Math.floor(time / (60 * 60 * 24));
         sec = Math.floor(sec);
             if (time == 0) {
-                sendHint("ÃÖÃÊ ÀÔ±İ½Ã ½Ã°£ÀÌ ±â·ÏµË´Ï´Ù.",250,20);
+                sendHint("ìµœì´ˆ ì…ê¸ˆì‹œ ì‹œê°„ì´ ê¸°ë¡ë©ë‹ˆë‹¤.",250,20);
                 cm.dispose();
             } else {
-                var text = "#h #´ÔÀÇ ÃÖÃÊ ÀÔ±İ ½Ã°£ : #b"+day+"ÀÏ "+hour+"½Ã°£ "+min+"ºĞ "+sec+"ÃÊ\r\n#k";
-                text += "#fn³ª´®°íµñ Extrabold# ÀÌÀÚ´Â #r5ÀÏ, 7ÀÏ, 11ÀÏ, 15ÀÏ, 30ÀÏ#k °£°İÀ¸·Î ¹ŞÀ¸½Ç ¼ö ÀÖÀ¸¸ç, ±â°£ÀÌ ±æ¼ö·Ï ´Ã¾î³ª´Â ¾çµµ Ä¿Áı´Ï´Ù. ±×·¯³ª, ÇÑ ¹ø ¹ŞÀ¸½Ã¸é ´Ù½Ã ÀÔ±İÀ» ÇÏ¼Å¾ßµÇ´Ï, ÀÌ Á¡ À¯ÀÇÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.\r\n";
-                text += "#b#L99#ÀÌÀÚ¸¦ ¹Ş°í ½Í½À´Ï´Ù.\r\n";
-                text += "#b#L100#Ã¢À» ´İ°Ú½À´Ï´Ù.";
+                var text = "#h #ë‹˜ì˜ ìµœì´ˆ ì…ê¸ˆ ì‹œê°„ : #b"+day+"ì¼ "+hour+"ì‹œê°„ "+min+"ë¶„ "+sec+"ì´ˆ\r\n#k";
+                text += "#fnë‚˜ëˆ”ê³ ë”• Extrabold# ì´ìëŠ” #r5ì¼, 7ì¼, 11ì¼, 15ì¼, 30ì¼#k ê°„ê²©ìœ¼ë¡œ ë°›ìœ¼ì‹¤ ìˆ˜ ìˆìœ¼ë©°, ê¸°ê°„ì´ ê¸¸ìˆ˜ë¡ ëŠ˜ì–´ë‚˜ëŠ” ì–‘ë„ ì»¤ì§‘ë‹ˆë‹¤. ê·¸ëŸ¬ë‚˜, í•œ ë²ˆ ë°›ìœ¼ì‹œë©´ ë‹¤ì‹œ ì…ê¸ˆì„ í•˜ì…”ì•¼ë˜ë‹ˆ, ì´ ì  ìœ ì˜í•´ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.\r\n";
+                text += "#b#L99#ì´ìë¥¼ ë°›ê³  ì‹¶ìŠµë‹ˆë‹¤.\r\n";
+                text += "#b#L100#ì°½ì„ ë‹«ê² ìŠµë‹ˆë‹¤.";
                 cm.sendSimple(text);
             }
             interest = day;
@@ -67,17 +67,17 @@ function action(mode,type,selection) {
         if (selected == 1) {
             money = selection;
             if (cm.getMeso() >= money) {
-                cm.sendYesNo("#fn³ª´®°íµñ Extrabold# Á¤¸» #b"+money+" ¸Ş¼Ò#k¸¦ ÀÔ±İÇÏ½Ã°Ú½À´Ï±î?");
+                cm.sendYesNo("#fnë‚˜ëˆ”ê³ ë”• Extrabold# ì •ë§ #b"+money+" ë©”ì†Œ#kë¥¼ ì…ê¸ˆí•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
             } else {
-                cm.sendOk("#fn³ª´®°íµñ Extrabold# º¸À¯ÇÏ½Å ¸Ş¼Òº¸´Ù ³ôÀº ¾×¼ö¸¦ ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.\r\n´Ù½Ã ÇÑ ¹ø ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+                cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• Extrabold# ë³´ìœ í•˜ì‹  ë©”ì†Œë³´ë‹¤ ë†’ì€ ì•¡ìˆ˜ë¥¼ ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.\r\në‹¤ì‹œ í•œ ë²ˆ ì…ë ¥í•´ì£¼ì„¸ìš”.");
                 cm.dispose();
             }
         } else if (selected == 2) {
             money = selection;
             if (getAccount(cm.getPlayer().getName(),1) >= money) {
-                cm.sendYesNo("#fn³ª´®°íµñ Extrabold# Á¤¸» #b"+money+" ¸Ş¼Ò#k¸¦ Ãâ±İÇÏ½Ã°Ú½À´Ï±î?");
+                cm.sendYesNo("#fnë‚˜ëˆ”ê³ ë”• Extrabold# ì •ë§ #b"+money+" ë©”ì†Œ#kë¥¼ ì¶œê¸ˆí•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
             } else {
-                cm.sendOk("#fn³ª´®°íµñ Extrabold# º¸À¯ÇÏ½Å ÀÜ¾×º¸´Ù ³ôÀº ¾×¼ö¸¦ ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.\r\n´Ù½Ã ÇÑ ¹ø ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+                cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• Extrabold# ë³´ìœ í•˜ì‹  ì”ì•¡ë³´ë‹¤ ë†’ì€ ì•¡ìˆ˜ë¥¼ ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.\r\në‹¤ì‹œ í•œ ë²ˆ ì…ë ¥í•´ì£¼ì„¸ìš”.");
                 cm.dispose();
             }
         } else if (selected == 3) {
@@ -87,14 +87,14 @@ function action(mode,type,selection) {
             var del = MYSQL.getConnection().prepareStatement("DELETE FROM banksystem WHERE name = ?");
             del.setString(1,cm.getPlayer().getName());
             del.executeUpdate();
-            sendHint("#fn³ª´®°íµñ Extrabold# ÀºÇà °èÁ¤ÀÌ »èÁ¦µÇ¾ú½À´Ï´Ù.",275,20);
+            sendHint("#fnë‚˜ëˆ”ê³ ë”• Extrabold# ì€í–‰ ê³„ì •ì´ ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.",275,20);
             cm.dispose();
         } else if (selected == 10) {
             if (selection == 100) {
                 cm.dispose();
             } else if (selection == 99) {
                 if (interest < 5) {
-                    sendHint("ÀÔ±İÀ» ÇÏ½ÅÁö 5ÀÏÀÌ Áö³ªÁö ¾Ê¾Ò½À´Ï´Ù.",250,20);
+                    sendHint("ì…ê¸ˆì„ í•˜ì‹ ì§€ 5ì¼ì´ ì§€ë‚˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.",250,20);
                     cm.dispose();
                 } else {
                      var benefit = interest == 5 && interest == 6 ? 0.05 :
@@ -102,7 +102,7 @@ function action(mode,type,selection) {
                             interest >= 11 && interest < 15 ? 0.15 :
                             interest >= 15 && interest < 30 ? 0.25 :
                             interest >= 30 ? 0.35 : 0; 
-                    cm.sendYesNo("#fn³ª´®°íµñ Extrabold# ÇöÀç #h #´ÔÀÇ ÅëÀå ÀÜ¾×Àº #b"+getAccount(cm.getPlayer().getName(),1)+" ¸Ş¼Ò#kÀÌ¸ç, Ãß°¡ ÀÌÀÚ·Î#r"+getAccount(cm.getPlayer().getName(),1) * benefit+" ("+benefit+"%) ¸Ş¼Ò#k¸¦ ¹Ş°Ô µË´Ï´Ù. ¹ŞÀ¸¸é ½Ã°£ ±â·ÏÀÌ ÃÊ±âÈ­µÇ´Ï ÁÖÀÇÇØÁÖ¼¼¿ä. ÀÌÀÚ¸¦ ¹ŞÀ¸½Ã°Ú½À´Ï±î?");
+                    cm.sendYesNo("#fnë‚˜ëˆ”ê³ ë”• Extrabold# í˜„ì¬ #h #ë‹˜ì˜ í†µì¥ ì”ì•¡ì€ #b"+getAccount(cm.getPlayer().getName(),1)+" ë©”ì†Œ#kì´ë©°, ì¶”ê°€ ì´ìë¡œ#r"+getAccount(cm.getPlayer().getName(),1) * benefit+" ("+benefit+"%) ë©”ì†Œ#kë¥¼ ë°›ê²Œ ë©ë‹ˆë‹¤. ë°›ìœ¼ë©´ ì‹œê°„ ê¸°ë¡ì´ ì´ˆê¸°í™”ë˜ë‹ˆ ì£¼ì˜í•´ì£¼ì„¸ìš”. ì´ìë¥¼ ë°›ìœ¼ì‹œê² ìŠµë‹ˆê¹Œ?");
                 }
                 updateMeso = getAccount(cm.getPlayer().getName(),1) * benefit;
             }
@@ -115,9 +115,9 @@ function action(mode,type,selection) {
         } else if (selected == 3) {
             send = selection;
             if (getAccount(cm.getPlayer().getName(),1) >= send) {
-                cm.sendYesNo("Á¤¸» #d"+name+"#k´Ô¿¡°Ô #b"+send+" ¸Ş¼Ò#k¸¦ º¸³»½Ã°Ú½À´Ï±î?");
+                cm.sendYesNo("ì •ë§ #d"+name+"#kë‹˜ì—ê²Œ #b"+send+" ë©”ì†Œ#kë¥¼ ë³´ë‚´ì‹œê² ìŠµë‹ˆê¹Œ?");
             } else {
-                sendHint("#fn³ª´®°íµñ Extrabold# º¸À¯ÇÏ½Å ÀÜ¾×º¸´Ù ³ôÀº ¾×¼ö¸¦ ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.\r\n´Ù½Ã ÇÑ ¹ø ÀÔ·ÂÇØÁÖ¼¼¿ä.",300,30);
+                sendHint("#fnë‚˜ëˆ”ê³ ë”• Extrabold# ë³´ìœ í•˜ì‹  ì”ì•¡ë³´ë‹¤ ë†’ì€ ì•¡ìˆ˜ë¥¼ ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤.\r\në‹¤ì‹œ í•œ ë²ˆ ì…ë ¥í•´ì£¼ì„¸ìš”.",300,30);
             }
         } else if (selected == 10) {
             updateAccount(cm.getPlayer().getName(),updateMeso,today,0,4);
@@ -137,24 +137,24 @@ function updateAccount(name,money,date,time,mode) {
     var sel = "UPDATE banksystem SET money = ?, date = ?, time = ?, try = ? WHERE name = ?";
     var upd = MYSQL.getConnection().prepareStatement(sel);
     upd.setLong(1,getAccount(name,1) + money);
-    upd.setString(2,rs.getString("date")+"/"+date+":"+money+":(ÀÔ±İ)");
+    upd.setString(2,rs.getString("date")+"/"+date+":"+money+":(ì…ê¸ˆ)");
     upd.setLong(3,time);
     upd.setInt(4,getAccount(name,2) + 1);
     upd.setString(5,name);
     upd.executeUpdate();
     cm.gainMeso(-money);
-    sendHint("#fn³ª´®°íµñ Extrabold# ¼º°øÀûÀ¸·Î ÀÔ±İÇÏ¿´½À´Ï´Ù.",250,20);
+    sendHint("#fnë‚˜ëˆ”ê³ ë”• Extrabold# ì„±ê³µì ìœ¼ë¡œ ì…ê¸ˆí•˜ì˜€ìŠµë‹ˆë‹¤.",250,20);
     cm.dispose();
     } else {
         var sel = "UPDATE banksystem SET money = ?, date = ?, try = ? WHERE name = ?";
     var upd = MYSQL.getConnection().prepareStatement(sel);
     upd.setLong(1,getAccount(name,1) + money);
-    upd.setString(2,rs.getString("date")+"/"+date+":"+money+":(ÀÔ±İ)");
+    upd.setString(2,rs.getString("date")+"/"+date+":"+money+":(ì…ê¸ˆ)");
     upd.setInt(3,getAccount(name,2) + 1);
     upd.setString(4,name);
     upd.executeUpdate();
     cm.gainMeso(-money);
-    sendHint("¼º°øÀûÀ¸·Î ÀÔ±İÇÏ¿´½À´Ï´Ù.",250,20);
+    sendHint("ì„±ê³µì ìœ¼ë¡œ ì…ê¸ˆí•˜ì˜€ìŠµë‹ˆë‹¤.",250,20);
     cm.dispose();
     }
 } else if (mode == 2) {
@@ -164,12 +164,12 @@ function updateAccount(name,money,date,time,mode) {
     rs.next();
     var get = MYSQL.getConnection().prepareStatement("UPDATE banksystem SET money = ?, date = ?, try = ? WHERE name = ?");
     get.setLong(1,getAccount(name,1) - money);
-    get.setString(2,rs.getString("date")+"/"+date+":"+money+":(Ãâ±İ)");
+    get.setString(2,rs.getString("date")+"/"+date+":"+money+":(ì¶œê¸ˆ)");
     get.setInt(3,getAccount(name,2) + 1);
     get.setString(4,name);
     get.executeUpdate();
     cm.gainMeso(money);
-    sendHint("#fn³ª´®°íµñ Extrabold# ¼º°øÀûÀ¸·Î Ãâ±İÇÏ¿´½À´Ï´Ù.",250,20);
+    sendHint("#fnë‚˜ëˆ”ê³ ë”• Extrabold# ì„±ê³µì ìœ¼ë¡œ ì¶œê¸ˆí•˜ì˜€ìŠµë‹ˆë‹¤.",250,20);
     cm.dispose();
 } else if (mode == 3) {
     var ps = MYSQL.getConnection().prepareStatement("SELECT * FROM banksystem WHERE name = ?");
@@ -178,7 +178,7 @@ function updateAccount(name,money,date,time,mode) {
     rs.next();
     var send = MYSQL.getConnection().prepareStatement("UPDATE banksystem SET money = ?, date = ?, try = ? WHERE name = ?");
     send.setLong(1,getAccount(name,1) + money);
-    send.setString(2,rs.getString("date")+"/"+date+":"+money+":(¹ŞÀ½)");
+    send.setString(2,rs.getString("date")+"/"+date+":"+money+":(ë°›ìŒ)");
     send.setInt(3,getAccount(name,2) + 1);
     send.setString(4,name);
     send.executeUpdate();
@@ -189,11 +189,11 @@ function updateAccount(name,money,date,time,mode) {
     rse.next();
     var mine = MYSQL.getConnection().prepareStatement("UPDATE bankSystem SET money = ?, date = ?, try = ? WHERE name = ?");
     mine.setLong(1,getAccount(cm.getPlayer().getName(),1) - money);
-    mine.setString(2,rse.getString("date")+"/"+date+":"+money+":(¼Û±İ)");
+    mine.setString(2,rse.getString("date")+"/"+date+":"+money+":(ì†¡ê¸ˆ)");
     mine.setInt(3,getAccount(cm.getPlayer().getName(),2) + 1);
     mine.setString(4,cm.getPlayer().getName());
     mine.executeUpdate();
-    sendHint("#fn³ª´®°íµñ Extrabold# ¼º°øÀûÀ¸·Î ¼Û±İÇÏ¿´½À´Ï´Ù. (To. "+name+")",275,20);
+    sendHint("#fnë‚˜ëˆ”ê³ ë”• Extrabold# ì„±ê³µì ìœ¼ë¡œ ì†¡ê¸ˆí•˜ì˜€ìŠµë‹ˆë‹¤. (To. "+name+")",275,20);
     cm.dispose();
 } else if (mode == 4) {
     var pse = MYSQL.getConnection().prepareStatement("SELECT * FROM banksystem WHERE name = ?");
@@ -202,12 +202,12 @@ function updateAccount(name,money,date,time,mode) {
     rse.next();
     var mine = MYSQL.getConnection().prepareStatement("UPDATE bankSystem SET money = ?, date = ?, time = ?, try = ? WHERE name = ?");
     mine.setLong(1,getAccount(name,1) + money);
-    mine.setString(2,rse.getString("date")+"/"+date+":"+money+":(ÀÌÀÚ)")
+    mine.setString(2,rse.getString("date")+"/"+date+":"+money+":(ì´ì)")
     mine.setLong(3,time);
     mine.setInt(4,getAccount(name,2) + 1);
     mine.setString(5,name);
     mine.executeUpdate();
-    sendHint("#fn³ª´®°íµñ Extrabold# ¼º°øÀûÀ¸·Î ÀÌÀÚ¸¦ ¹Ş¾Ò½À´Ï´Ù. ("+money+" ¸Ş¼Ò)\r\n½Ã°£ ±â·ÏÀÌ ÃÊ±âÈ­µË´Ï´Ù.",300,30);
+    sendHint("#fnë‚˜ëˆ”ê³ ë”• Extrabold# ì„±ê³µì ìœ¼ë¡œ ì´ìë¥¼ ë°›ì•˜ìŠµë‹ˆë‹¤. ("+money+" ë©”ì†Œ)\r\nì‹œê°„ ê¸°ë¡ì´ ì´ˆê¸°í™”ë©ë‹ˆë‹¤.",300,30);
     cm.dispose();
 }
 }
@@ -251,7 +251,7 @@ function createAccount() {
 
 function checkName(name) {
     if (name == cm.getPlayer().getName()) {
-        sendHint("#fn³ª´®°íµñ Extrabold# ÀÚ½Å¿¡°Ô´Â º¸³¾ ¼ö ¾ø½À´Ï´Ù.",250,20);
+        sendHint("#fnë‚˜ëˆ”ê³ ë”• Extrabold# ìì‹ ì—ê²ŒëŠ” ë³´ë‚¼ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.",250,20);
         cm.dispose();
         return;
     }
@@ -263,9 +263,9 @@ function checkName(name) {
         isExist = true;
     }
     if (isExist) {
-        cm.sendGetNumber("#fn³ª´®°íµñ Extrabold# ¾ó¸¶¸¦ º¸³»½Ã°Ú½À´Ï±î? (ÃÖ´ë 20¾ï ¸Ş¼Ò °¡´É)\r\n#r(ÁÖÀÇ : ¼Û±İÀ» ÇÏ¸é ±×¸¸Å­ ÀÚ½ÅÀÇ ÅëÀåÀÜ°í¿¡¼­ Â÷°¨µË´Ï´Ù.)",1,1,2000000000);
+        cm.sendGetNumber("#fnë‚˜ëˆ”ê³ ë”• Extrabold# ì–¼ë§ˆë¥¼ ë³´ë‚´ì‹œê² ìŠµë‹ˆê¹Œ? (ìµœëŒ€ 20ì–µ ë©”ì†Œ ê°€ëŠ¥)\r\n#r(ì£¼ì˜ : ì†¡ê¸ˆì„ í•˜ë©´ ê·¸ë§Œí¼ ìì‹ ì˜ í†µì¥ì”ê³ ì—ì„œ ì°¨ê°ë©ë‹ˆë‹¤.)",1,1,2000000000);
     } else {
-        sendHint("Ä³¸¯ÅÍ¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù.",250,20);
+        sendHint("ìºë¦­í„°ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.",250,20);
         cm.dispose();
     }
 }
@@ -281,8 +281,8 @@ function getHistory() {
     var string = new StringBuilder();
     rs.next();
     date = rs.getString("date").split("/");
-    string.append("ÅëÀå »ı¼ºÀÏ : #n#r").append(date[0]).append("#k\r\n\r\n");
-    string.append("#e[¹øÈ£]        [³¯Â¥]            [¸Ş¼Ò]        [ÀÔ/Ãâ±İ]#n\r\n")
+    string.append("í†µì¥ ìƒì„±ì¼ : #n#r").append(date[0]).append("#k\r\n\r\n");
+    string.append("#e[ë²ˆí˜¸]        [ë‚ ì§œ]            [ë©”ì†Œ]        [ì…/ì¶œê¸ˆ]#n\r\n")
         for (var i = 1; i < getAccount(cm.getPlayer().getName(),2) + 1; i++) {
             var test = date[i].split(":");
             var money = test[1];
@@ -291,9 +291,9 @@ function getHistory() {
         for (var ze = 0; ze < (11 - len); ze++) {
             zero += "#Cgray#0";
         }
-        if (test[2] == "(¼Û±İ)") {
+        if (test[2] == "(ì†¡ê¸ˆ)") {
             money = zero+"#r"+money+"";
-        } else if (test[2] == "(Ãâ±İ)") {
+        } else if (test[2] == "(ì¶œê¸ˆ)") {
             money = zero+"#d"+money+"";
         } else {
         money = zero+"#b"+money+"";

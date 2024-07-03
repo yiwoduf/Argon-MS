@@ -8,7 +8,7 @@ function start() {
     } else {
         price = 80;
     }
-    cm.sendYesNo("È¤½Ã ºòÅä¸®¾Æ ¾ÆÀÏ·£µå¸¦ ¶°³ª ¿ì¸® ¸¶À»·Î °¥ »ý°¢ÀÌ¾ß? ÀÌ ¹è¸¦ Å¸¸é #b¸®¿£#k±îÁö µ¥·Á´Ù ÁÙ ¼ö ÀÖ±ä ÇÑµ¥... #b¿ä±Ý "+ price +"#k¸Þ¼Ò¸¦ ³»¾ß ÇØ. ¸®¿£À¸·Î °¡°Ú¾î?");
+    cm.sendYesNo("í˜¹ì‹œ ë¹…í† ë¦¬ì•„ ì•„ì¼ëžœë“œë¥¼ ë– ë‚˜ ìš°ë¦¬ ë§ˆì„ë¡œ ê°ˆ ìƒê°ì´ì•¼? ì´ ë°°ë¥¼ íƒ€ë©´ #bë¦¬ì—”#kê¹Œì§€ ë°ë ¤ë‹¤ ì¤„ ìˆ˜ ìžˆê¸´ í•œë°... #bìš”ê¸ˆ "+ price +"#kë©”ì†Œë¥¼ ë‚´ì•¼ í•´. ë¦¬ì—”ìœ¼ë¡œ ê°€ê² ì–´?");
 }
 
 function action(mode, type, selection) {
@@ -16,7 +16,7 @@ function action(mode, type, selection) {
         cm.dispose();
     } else {
         if (mode == 0 && status == 0) {
-            cm.sendNext("Èì... °¥ »ý°¢ÀÌ ¾øÀ¸¸é ¾îÂ¿ ¼ö ¾øÁö. ÀÎ°£¿¡°Ô´Â Á» Ã´¹ÚÇÏÁö¸¸ Æë±Ï¿¡°Ô´Â Âü ÁÁÀº Áö¿ªÀÎµ¥...");
+            cm.sendNext("í ... ê°ˆ ìƒê°ì´ ì—†ìœ¼ë©´ ì–´ì©” ìˆ˜ ì—†ì§€. ì¸ê°„ì—ê²ŒëŠ” ì¢€ ì²™ë°•í•˜ì§€ë§Œ íŽ­ê·„ì—ê²ŒëŠ” ì°¸ ì¢‹ì€ ì§€ì—­ì¸ë°...");
             cm.dispose();
             return;
         }
@@ -31,7 +31,7 @@ function action(mode, type, selection) {
                 cm.TimeMoveMap(200090060, 140020300, 60);
                 cm.dispose();
             } else {
-                cm.sendNext("¾îÀÌ~ µ·µµ¾øÀÌ ¿ì¸® ¹è¸¦ Å¸·Á°í ÇÏ³ª? ¹è¸¦ Å¸·Á¸é µ·À» °®°í ¿À¶ó°í~!");
+                cm.sendNext("ì–´ì´~ ëˆë„ì—†ì´ ìš°ë¦¬ ë°°ë¥¼ íƒ€ë ¤ê³  í•˜ë‚˜? ë°°ë¥¼ íƒ€ë ¤ë©´ ëˆì„ ê°–ê³  ì˜¤ë¼ê³ ~!");
                 cm.dispose();	
             }
         }

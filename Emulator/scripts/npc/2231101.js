@@ -3,19 +3,19 @@
 
 /*
 
-	* ´Ü¹®¿£ÇÇ½Ã ÀÚµ¿Á¦ÀÛ ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¸¸µé¾îÁø ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	* ë‹¨ë¬¸ì—”í”¼ì‹œ ìžë™ì œìž‘ ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ë§Œë“¤ì–´ì§„ ìŠ¤í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤.
 
 	* (Guardian Project Development Source Script)
 
-	dfddf6 ¿¡ ÀÇÇØ ¸¸µé¾î Á³½À´Ï´Ù.
+	dfddf6 ì— ì˜í•´ ë§Œë“¤ì–´ ì¡ŒìŠµë‹ˆë‹¤.
 
-	¿£ÇÇ½Ã¾ÆÀÌµð : 2231101
+	ì—”í”¼ì‹œì•„ì´ë”” : 2231101
 
-	¿£ÇÇ½Ã ÀÌ¸§ : ´ÏÅ¸
+	ì—”í”¼ì‹œ ì´ë¦„ : ë‹ˆíƒ€
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : Å©¸®Æ¼¾Æ½º : ½ÃÀå (241010100)
+	ì—”í”¼ì‹œê°€ ìžˆëŠ” ë§µ : í¬ë¦¬í‹°ì•„ìŠ¤ : ì‹œìž¥ (241010100)
 
-	¿£ÇÇ½Ã ¼³¸í : ¹«±â»óÀÎ
+	ì—”í”¼ì‹œ ì„¤ëª… : ë¬´ê¸°ìƒì¸
 
 
 */
@@ -41,7 +41,7 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        cm.sendOk("¾È³ç ³­ ´ÏÅ¸¶ó°íÇØ");
+        cm.sendOk("ì•ˆë…• ë‚œ ë‹ˆíƒ€ë¼ê³ í•´");
         cm.dispose();
         return;
     }

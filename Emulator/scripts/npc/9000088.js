@@ -1,5 +1,5 @@
 
-/* ¸¶ÀÌ½ºÅÍ ºô */
+/* ë§ˆì´ìŠ¤í„° ë¹Œ */
 
 
 var status = -1;
@@ -20,10 +20,10 @@ function action(mode, type, selection) {
     
     if (status == 0) {
         if (cm.getPlayer().getLevel() < 30) {
-            cm.getPlayer().message(5, "#b<¸¶ÀÌ½ºÅÍ ºô>#kÀº ·¹º§ 30ÀÌ»ó¸¸ ÀÔÀå °¡´ÉÇÕ´Ï´Ù.");
+            cm.getPlayer().message(5, "#b<ë§ˆì´ìŠ¤í„° ë¹Œ>#kì€ ë ˆë²¨ 30ì´ìƒë§Œ ì…ì¥ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
             return false;
         }
-        cm.sendYesNo("Àü¹®±â¼úÀÇ ¸¶À» #b<¸¶ÀÌ½ºÅÍ ºô>#k·Î ÀÌµ¿ÇÏ½Ã°í ½ÍÀ¸¼¼¿ä?");
+        cm.sendYesNo("ì „ë¬¸ê¸°ìˆ ì˜ ë§ˆì„ #b<ë§ˆì´ìŠ¤í„° ë¹Œ>#kë¡œ ì´ë™í•˜ì‹œê³  ì‹¶ìœ¼ì„¸ìš”?");
     } else if (status == 1) {
         cm.saveLocation("PROFESSION");
         cm.warp(910001000, 0);

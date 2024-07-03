@@ -1,16 +1,16 @@
 /*
  Maple Team ProJect
- Á¦ÀÛ ¿ëµµ : ¼­¹ö¿î¿µ¿ë
- ÆÀ¿ø¸ñ·Ï
- * °­µ¿¿ø dongwon1852@nate.com 
- * ±è¼±ÀÏ fileupload@nate.com
- * ±è¼®Çö azxcs3@nate.com
- * ±èÁø¼º m0nday_s@nate.com
- * °øÁØÇù kkong1001@nate.com
- * ±è¹ÎÈ£ rubystory0603@nate.com
- * ÀÌÀç¿Õ ejwj5592@nate.com
- * ÃÖ¿ëÀç virgo_s_t@nate.com
- * ¼­¼º´ö abq1239@nate.com
+ ì œì‘ ìš©ë„ : ì„œë²„ìš´ì˜ìš©
+ íŒ€ì›ëª©ë¡
+ * ê°•ë™ì› dongwon1852@nate.com 
+ * ê¹€ì„ ì¼ fileupload@nate.com
+ * ê¹€ì„í˜„ azxcs3@nate.com
+ * ê¹€ì§„ì„± m0nday_s@nate.com
+ * ê³µì¤€í˜‘ kkong1001@nate.com
+ * ê¹€ë¯¼í˜¸ rubystory0603@nate.com
+ * ì´ì¬ì™• ejwj5592@nate.com
+ * ìµœìš©ì¬ virgo_s_t@nate.com
+ * ì„œì„±ë• abq1239@nate.com
  */
 package server.maps;
 
@@ -85,7 +85,7 @@ public class MapleMapScriptMethods {
                 break;
             }
             case banban_Summon: {
-                c.getPlayer().getMap().startMapEffect("Â÷¿øÀÇ Æ´¿¡¼­ ¹İ¹İÀ» ¼ÒÈ¯ÇÏÀÚ.", 5120025, 5000);
+                c.getPlayer().getMap().startMapEffect("ì°¨ì›ì˜ í‹ˆì—ì„œ ë°˜ë°˜ì„ ì†Œí™˜í•˜ì.", 5120025, 5000);
                 break;
             }
             default: {
@@ -99,7 +99,7 @@ public class MapleMapScriptMethods {
         String data = "";
         switch (onUserEnter.fromString(scriptName)) {
             case mPark_stageEff: {
-                c.getPlayer().send(UIPacket.showInfo("¸ó½ºÅÍ¸¦ ¸ğµÎ Àâ¾Æ¾ß ´ÙÀ½ ½ºÅ×ÀÌÁö·Î ÀÌµ¿ÇÒ ¼ö ÀÖ½À´Ï´Ù."));
+                c.getPlayer().send(UIPacket.showInfo("ëª¬ìŠ¤í„°ë¥¼ ëª¨ë‘ ì¡ì•„ì•¼ ë‹¤ìŒ ìŠ¤í…Œì´ì§€ë¡œ ì´ë™í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤."));
                 switch ((c.getPlayer().getMapId() % 1000) / 100) {
                     case 0:
                     case 1:
@@ -116,7 +116,7 @@ public class MapleMapScriptMethods {
                 break;
             }
             case aswan_stageEff: {
-                c.getPlayer().send(UIPacket.showInfo("ÇÊµå ³»ÀÇ ¸ğµç ¸ó½ºÅÍ¸¦ Á¦°ÅÇØ¾ß ´ÙÀ½ ½ºÅ×ÀÌÁö·Î ÀÌµ¿ÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù."));
+                c.getPlayer().send(UIPacket.showInfo("í•„ë“œ ë‚´ì˜ ëª¨ë“  ëª¬ìŠ¤í„°ë¥¼ ì œê±°í•´ì•¼ ë‹¤ìŒ ìŠ¤í…Œì´ì§€ë¡œ ì´ë™í•˜ì‹¤ ìˆ˜ ìˆìŠµë‹ˆë‹¤."));
                 switch ((c.getPlayer().getMapId() % 1000) / 100) {
                     case 1:
                     case 2:
@@ -136,7 +136,7 @@ public class MapleMapScriptMethods {
                 break;
             }
             case starforce_enter: {
-                c.getPlayer().getMap().startMapEffect(c.getPlayer().getMap().getBarrier() + " ÀÌ»óÀÇ ½ºÅ¸Æ÷½º°¡ ÇÊ¿äÇÑ Áö¿ªÀÔ´Ï´Ù.", 5120024);
+                c.getPlayer().getMap().startMapEffect(c.getPlayer().getMap().getBarrier() + " ì´ìƒì˜ ìŠ¤íƒ€í¬ìŠ¤ê°€ í•„ìš”í•œ ì§€ì—­ì…ë‹ˆë‹¤.", 5120024);
                 break;
             }
             default: {

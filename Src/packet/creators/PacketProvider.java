@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  *
  */
@@ -103,7 +103,7 @@ public class PacketProvider {
         packet.write(chr.getBuffedValue(BuffStats.CTS_CombatOrders) != null ? 1 : 0);
         
         for (int i = 0; i < 3; i++) {
-            packet.writeInt(0); // Æê ¾×Æ¼ºê ½ºÅ³ ÄğÅ¸ÀÓ
+            packet.writeInt(0); // í« ì•¡í‹°ë¸Œ ìŠ¤í‚¬ ì¿¨íƒ€ì„
         }
         
         packet.write(0);
@@ -135,7 +135,7 @@ public class PacketProvider {
         PacketProvider.addPlayerStats(packet, chr, true);
         packet.write(chr.getBuddylist().getCapacity());
 
-        /* Á¤·ÉÀÇ Ãàº¹ */
+        /* ì •ë ¹ì˜ ì¶•ë³µ */
         if (chr.getBlessOfFairyOrigin() != null) {
             packet.write(1);
             packet.writeMapleAsciiString(chr.getBlessOfFairyOrigin());
@@ -143,14 +143,14 @@ public class PacketProvider {
             packet.write(0);
         }
 
-        /* ¿©Á¦ÀÇ Ãàº¹ */
+        /* ì—¬ì œì˜ ì¶•ë³µ */
         if (chr.getBlessOfEmpressOrigin() != null) {
             packet.write(1);
             packet.writeMapleAsciiString(chr.getBlessOfEmpressOrigin());
         } else {
             packet.write(0);
         }
-        packet.write(0); //¿©Á¦ÀÇ °­È­
+        packet.write(0); //ì—¬ì œì˜ ê°•í™”
 
         addMoneyInfo(packet, chr);
         
@@ -347,7 +347,7 @@ public class PacketProvider {
     public static final void addWildHunterInfo(final WritingPacket packet, final MapleCharacter chr) {
         packet.write(GameConstants.getJaguarType(chr)); //SUB_INFO
         for (int i = 0; i < 5; i++) {
-            packet.writeInt(GameConstants.getJaguarType(chr)); //ÃÖ´ë 5¸¶¸® Æ÷È¹ °¡´É.
+            packet.writeInt(GameConstants.getJaguarType(chr)); //ìµœëŒ€ 5ë§ˆë¦¬ í¬íš ê°€ëŠ¥.
         }
     }
     
@@ -472,7 +472,7 @@ public class PacketProvider {
             int time = (int) (cooling.length + cooling.startTime - System.currentTimeMillis()) / 1000;
             w.writeInt(cooling.skillId);
             w.writeInt(time);
-            chr.Message("[Skill CoolTime : " + cooling.skillId + " ] [CoolTime : " + time + "ÃÊ");
+            chr.Message("[Skill CoolTime : " + cooling.skillId + " ] [CoolTime : " + time + "ì´ˆ");
         }        
     }
     
@@ -485,8 +485,8 @@ public class PacketProvider {
         w.writeShort(skills.size());
         for (int i = 0; i < skills.size(); ++i) {
             w.write(i + 1);
-            w.writeInt(skills.get(i).getSkillId()); //½ºÅ³ id
-            w.write(skills.get(i).getSkillLevel()); //¿É¼Ç (x°ª, ÃÖ´ë°ª = maxLevel)
+            w.writeInt(skills.get(i).getSkillId()); //ìŠ¤í‚¬ id
+            w.write(skills.get(i).getSkillLevel()); //ì˜µì…˜ (xê°’, ìµœëŒ€ê°’ = maxLevel)
             w.write(skills.get(i).getRank());
         }
     }
@@ -498,10 +498,10 @@ public class PacketProvider {
         w.write(chr.getInventory(MapleInventoryType.ETC).getSlotLimit()); //etc slots
         w.write(chr.getInventory(MapleInventoryType.CASH).getSlotLimit()); //cash slots
 
-        // Ææ´øÆ® ¸¸·áÀÏ
+        // íœë˜íŠ¸ ë§Œë£Œì¼
         w.write(new byte[]{0, (byte) 0xC0, (byte) 0xEC, (byte) 0x3A, (byte) 0xD2, (byte) 0xB3, (byte) 0xFF, 1});
         
-        w.write(0); // Ä³½Ã¾ÆÀÌÅÛ º¸³»´ÂÁö ¿©ºÎ
+        w.write(0); // ìºì‹œì•„ì´í…œ ë³´ë‚´ëŠ”ì§€ ì—¬ë¶€
         MapleInventory iv = chr.getInventory(MapleInventoryType.EQUIPPED);
         Collection<IItem> equippedC = iv.list();
         List<IItem> equipped = new ArrayList<IItem>(equippedC.size());
@@ -509,60 +509,60 @@ public class PacketProvider {
         for (IItem item : equippedC) {
             equipped.add((IItem) item);
         }
-        /* ÀåÂøÁßÀÎ ¾ÆÀÌÅÛ ½ÃÀÛ */
+        /* ì¥ì°©ì¤‘ì¸ ì•„ì´í…œ ì‹œì‘ */
         Collections.sort(equipped);
         for (IItem item : equipped) {
             if (item.getPosition() < 0 && item.getPosition() > -100) {
                 addItemInfo(w, item, false, false, null);
             }
         }
-        /* ÀåÂøÁßÀÎ ¾ÆÀÌÅÛ Á¾·á */
+        /* ì¥ì°©ì¤‘ì¸ ì•„ì´í…œ ì¢…ë£Œ */
         w.writeShort(0);
-        /* ÀåÂøÁßÀÎ Ä³½Ã¾ÆÀÌÅÛ ½ÃÀÛ */
+        /* ì¥ì°©ì¤‘ì¸ ìºì‹œì•„ì´í…œ ì‹œì‘ */
         for (IItem item : equipped) {
             if (item.getPosition() <= -100 && item.getPosition() > -1000) {
                 addItemInfo(w, item, false, false, null);
             }
         }
-        /* ÀåÂøÁßÀÎ Ä³½Ã¾ÆÀÌÅÛ Á¾·á */
+        /* ì¥ì°©ì¤‘ì¸ ìºì‹œì•„ì´í…œ ì¢…ë£Œ */
         w.writeShort(0);
-        /* Àåºñ ÀÎº¥Åä¸® ½ÃÀÛ */
+        /* ì¥ë¹„ ì¸ë²¤í† ë¦¬ ì‹œì‘ */
         iv = chr.getInventory(MapleInventoryType.EQUIP);
         for (IItem item : iv.list()) {
             addItemInfo(w, item, false, false, null);
         }
-        /* Àåºñ ÀÎº¥Åä¸®Á¾·á */
+        /* ì¥ë¹„ ì¸ë²¤í† ë¦¬ì¢…ë£Œ */
         w.writeShort(0);
-        /* ¿¡¹İ Àåºñ ÀÎº¥Åä¸® ½ÃÀÛ */
+        /* ì—ë°˜ ì¥ë¹„ ì¸ë²¤í† ë¦¬ ì‹œì‘ */
         for (IItem item : equipped) {
             if (item.getPosition() <= -1000 && item.getPosition() > -1100) {
                 addItemInfo(w, item, false, false, null);
             }
         }
-        /* ¿¡¹İ Àåºñ ÀÎº¥Åä¸® Á¾·á */
+        /* ì—ë°˜ ì¥ë¹„ ì¸ë²¤í† ë¦¬ ì¢…ë£Œ */
         w.writeShort(0);
-        /* ¸ŞÄ«´Ğ Àåºñ ÀÎº¥Åä¸® ½ÃÀÛ */
+        /* ë©”ì¹´ë‹‰ ì¥ë¹„ ì¸ë²¤í† ë¦¬ ì‹œì‘ */
         for (IItem item : equipped) {
             if (item.getPosition() <= -1100 && item.getPosition() > -1200) {
                 addItemInfo(w, item, false, false, null);
             }
         }
-        /* ¸ŞÄ«´Ğ Àåºñ ÀÎº¥Åä¸® Á¾·á */
+        /* ë©”ì¹´ë‹‰ ì¥ë¹„ ì¸ë²¤í† ë¦¬ ì¢…ë£Œ */
         w.writeShort(0);
-        /* ¾Èµå·ÎÀÌµå Àåºñ ÀÎº¥Åä¸® ½ÃÀÛ */
+        /* ì•ˆë“œë¡œì´ë“œ ì¥ë¹„ ì¸ë²¤í† ë¦¬ ì‹œì‘ */
         for (IItem item : equipped) {
             if (item.getPosition() <= -1200 && item.getPosition() > -1300) {
                 addItemInfo(w, item, false, false, null);
             }
         }
-        /* ¾Èµå·ÎÀÌµå Àåºñ ÀÎº¥Åä¸® Á¾·á */
+        /* ì•ˆë“œë¡œì´ë“œ ì¥ë¹„ ì¸ë²¤í† ë¦¬ ì¢…ë£Œ */
         w.writeShort(0);
         for (IItem item : equipped) {
             if (item.getPosition() <= -1300 && item.getPosition() > -1400) {
                 addItemInfo(w, item, false, false, null);
             }
         }
-        /* µå·¹½º¾÷ Ä³½¬ Á¾·á */
+        /* ë“œë ˆìŠ¤ì—… ìºì‰¬ ì¢…ë£Œ */
         w.writeShort(0); //1.2.169+
         w.writeShort(0); //1.2.182+
         for (IItem item : equipped) {
@@ -570,42 +570,42 @@ public class PacketProvider {
                 addItemInfo(w, item, false, false, null);
             }
         }
-        /* Á¦·Î º£Å¸ ¿Ê Á¾·á */
+        /* ì œë¡œ ë² íƒ€ ì˜· ì¢…ë£Œ */
         w.writeShort(0); //1.2.183+
 
         w.writeShort(0); //1.2.193+
         w.writeShort(0); //1.2.201+
 
-        /* ¼Òºñ ÀÎº¥Åä¸® ½ÃÀÛ */
+        /* ì†Œë¹„ ì¸ë²¤í† ë¦¬ ì‹œì‘ */
         iv = chr.getInventory(MapleInventoryType.USE);
         for (IItem item : iv.list()) {
             addItemInfo(w, item, false, false, null);
         }
-        /* ¼Òºñ ÀÎº¥Åä¸® Á¾·á */
+        /* ì†Œë¹„ ì¸ë²¤í† ë¦¬ ì¢…ë£Œ */
         w.write(0);
-        /* ¼³Ä¡ ÀÎº¥Åä¸® ½ÃÀÛ */
+        /* ì„¤ì¹˜ ì¸ë²¤í† ë¦¬ ì‹œì‘ */
         iv = chr.getInventory(MapleInventoryType.SETUP);
         for (IItem item : iv.list()) {
             addItemInfo(w, item, false, false, null);
         }
-        /* ¼³Ä¡ ÀÎº¥Åä¸® Á¾·á */
+        /* ì„¤ì¹˜ ì¸ë²¤í† ë¦¬ ì¢…ë£Œ */
         w.write(0);
-        /* ±âÅ¸ ÀÎº¥Åä¸® ½ÃÀÛ */
+        /* ê¸°íƒ€ ì¸ë²¤í† ë¦¬ ì‹œì‘ */
         iv = chr.getInventory(MapleInventoryType.ETC);
         for (IItem item : iv.list()) {
             addItemInfo(w, item, false, false, chr);
         }
-        /* ±âÅ¸ ÀÎº¥Åä¸® Á¾·á */
+        /* ê¸°íƒ€ ì¸ë²¤í† ë¦¬ ì¢…ë£Œ */
         w.write(0);
-        /* Ä³½Ã ÀÎº¥Åä¸® ½ÃÀÛ */
+        /* ìºì‹œ ì¸ë²¤í† ë¦¬ ì‹œì‘ */
         iv = chr.getInventory(MapleInventoryType.CASH);
         for (IItem item : iv.list()) {
             addItemInfo(w, item, false, false, chr);
         }
-        /* Ä³½Ã ÀÎº¥Åä¸® Á¾·á */
+        /* ìºì‹œ ì¸ë²¤í† ë¦¬ ì¢…ë£Œ */
         w.write(0);
-        w.writeInt(0); // ¼Òºñ °¡¹æ
-        w.writeInt(chr.getExtendedSlots().size()); // ±âÅ¸ °¡¹æ
+        w.writeInt(0); // ì†Œë¹„ ê°€ë°©
+        w.writeInt(chr.getExtendedSlots().size()); // ê¸°íƒ€ ê°€ë°©
         for (int i = 0; i < chr.getExtendedSlots().size(); i++) {
             w.writeInt(i);
             w.writeInt(chr.getInventory(MapleInventoryType.ETC).findByUniqueId(chr.getExtendedSlot(i)).getItemId());
@@ -616,7 +616,7 @@ public class PacketProvider {
             }
             w.writeInt(-1);
         }
-        w.writeInt(0); //1.2.173+ // ¼³Ä¡ °¡¹æ
+        w.writeInt(0); //1.2.173+ // ì„¤ì¹˜ ê°€ë°©
 
         w.writeInt(0);
         for (int i = 0; i < 0; i++) {
@@ -661,7 +661,7 @@ public class PacketProvider {
         w.writeShort(chr.getJob());
         chr.getStat().connectData(w);
         w.writeShort(chr.getRemainingAp());
-        if (!GameConstants.isPinkBean(chr.getJob()) && chr.getJob() != 4100 && chr.getJob() != 900) { //ÇÎÅ©ºó Á¦¿Ü.
+        if (!GameConstants.isPinkBean(chr.getJob()) && chr.getJob() != 4100 && chr.getJob() != 900) { //í•‘í¬ë¹ˆ ì œì™¸.
             w.write(chr.getRemainingSpSize());
             for (int i = 0; i < chr.getRemainingSps().length; i++) {
                 if (chr.getRemainingSp(i) > 0) {
@@ -688,10 +688,10 @@ public class PacketProvider {
         w.write(unk1);
         w.write(unk2);
         if (ingame) {
-            w.writeInt(0);    //¹èÆ² °æÇèÄ¡
-            w.write(0);      //¹èÆ² µî±Ş
-            w.writeInt(0);    //º¸À¯ ¹èÆ² Æ÷ÀÎÆ® (BP)
-            w.write(5);       //°íÁ¤
+            w.writeInt(0);    //ë°°í‹€ ê²½í—˜ì¹˜
+            w.write(0);      //ë°°í‹€ ë“±ê¸‰
+            w.writeInt(0);    //ë³´ìœ  ë°°í‹€ í¬ì¸íŠ¸ (BP)
+            w.write(5);       //ê³ ì •
             w.write(6);       //156 new
             w.writeInt(0);
             PacketProvider.PartTimeJob(w, MapleCharacter.getPartTime(chr.getId()));
@@ -699,9 +699,9 @@ public class PacketProvider {
             w.write(unk2);
             w.write(unk1);
         } else {
-            w.writeInt(0);    //¹èÆ² °æÇèÄ¡
-            w.write(0);      //¹èÆ² µî±Ş
-            w.writeInt(0);    //º¸À¯ ¹èÆ² Æ÷ÀÎÆ® (BP)
+            w.writeInt(0);    //ë°°í‹€ ê²½í—˜ì¹˜
+            w.write(0);      //ë°°í‹€ ë“±ê¸‰
+            w.writeInt(0);    //ë³´ìœ  ë°°í‹€ í¬ì¸íŠ¸ (BP)
             w.write(5);
             w.write(6);
             w.writeInt(0);
@@ -714,18 +714,18 @@ public class PacketProvider {
     }
     
     public static void addAdditionalStats(WritingPacket w, MapleCharacter chr) {
-        w.writeInt(chr.getStat().getAmbition()); //Ä«¸®½º¸¶
-        w.writeInt(chr.getStat().getInsight());  //ÅëÂû·Â
-        w.writeInt(chr.getStat().getWillPower());//ÀÇÁö
-        w.writeInt(chr.getStat().getDiligence());//¼ÕÀçÁÖ
-        w.writeInt(chr.getStat().getEmpathy());  //°¨¼º
-        w.writeInt(chr.getStat().getCharm());    //¸Å·Â
-        w.writeShort(chr.getTodayCharisma());     //¿À´ÃÀÇ Ä«¸®½º¸¶
-        w.writeShort(chr.getTodayInsight());     //¿À´ÃÀÇ ÅëÂû·Â
-        w.writeShort(chr.getTodayWillPower());     //¿À´ÃÀÇ ÀÇÁö
-        w.writeShort(chr.getTodayDiligence());     //¿À´ÃÀÇ ¼ÕÀçÁÖ
-        w.writeShort(chr.getTodayEmpathy());     //¿À´ÃÀÇ °¨¼º
-        w.writeShort(chr.getTodayCharm());     //¿À´ÃÀÇ ¸Å·Â
+        w.writeInt(chr.getStat().getAmbition()); //ì¹´ë¦¬ìŠ¤ë§ˆ
+        w.writeInt(chr.getStat().getInsight());  //í†µì°°ë ¥
+        w.writeInt(chr.getStat().getWillPower());//ì˜ì§€
+        w.writeInt(chr.getStat().getDiligence());//ì†ì¬ì£¼
+        w.writeInt(chr.getStat().getEmpathy());  //ê°ì„±
+        w.writeInt(chr.getStat().getCharm());    //ë§¤ë ¥
+        w.writeShort(chr.getTodayCharisma());     //ì˜¤ëŠ˜ì˜ ì¹´ë¦¬ìŠ¤ë§ˆ
+        w.writeShort(chr.getTodayInsight());     //ì˜¤ëŠ˜ì˜ í†µì°°ë ¥
+        w.writeShort(chr.getTodayWillPower());     //ì˜¤ëŠ˜ì˜ ì˜ì§€
+        w.writeShort(chr.getTodayDiligence());     //ì˜¤ëŠ˜ì˜ ì†ì¬ì£¼
+        w.writeShort(chr.getTodayEmpathy());     //ì˜¤ëŠ˜ì˜ ê°ì„±
+        w.writeShort(chr.getTodayCharm());     //ì˜¤ëŠ˜ì˜ ë§¤ë ¥
     }
     
     public static void addMonsterLife(WritingPacket packet, MapleCharacter chr) {
@@ -748,7 +748,7 @@ public class PacketProvider {
         }
         w.write(chr.getGender());
         
-        if (chr.getGender() == 1 && chr.getSecondGender() == 0 && GameConstants.isZero(chr.getJob())) { // º£Å¸¸¦ addPlayerLooks¿¡¼­ Ã³¸®ÇÏ´Â°æ¿ì
+        if (chr.getGender() == 1 && chr.getSecondGender() == 0 && GameConstants.isZero(chr.getJob())) { // ë² íƒ€ë¥¼ addPlayerLooksì—ì„œ ì²˜ë¦¬í•˜ëŠ”ê²½ìš°
             w.write(chr.getSkinColor());
             w.writeInt(chr.getFace());
             w.writeInt(chr.getJob());
@@ -758,7 +758,7 @@ public class PacketProvider {
             } else {
                 w.writeInt(chr.getHair());
             }
-        } else if (chr.getGender() == 0 && chr.getSecondGender() == 1 && GameConstants.isZero(chr.getJob())) { // ¾ËÆÄ¸¦ addPlayerLooks¿¡¼­ Ã³¸®ÇÏ´Â°æ¿ì
+        } else if (chr.getGender() == 0 && chr.getSecondGender() == 1 && GameConstants.isZero(chr.getJob())) { // ì•ŒíŒŒë¥¼ addPlayerLooksì—ì„œ ì²˜ë¦¬í•˜ëŠ”ê²½ìš°
             w.write(chr.getSecondSkinColor());
             w.writeInt(chr.getSecondFace());
             w.writeInt(chr.getJob());
@@ -768,7 +768,7 @@ public class PacketProvider {
             } else {
                 w.writeInt(chr.getSecondHair());
             }
-        } else { //Á¦·Î ÀÌ¿Ü Á÷¾÷±º or Á¦·Î Á÷¾÷±º ¿À·ù.
+        } else { //ì œë¡œ ì´ì™¸ ì§ì—…êµ° or ì œë¡œ ì§ì—…êµ° ì˜¤ë¥˜.
             w.write(chr.getSkinColor());
             w.writeInt(chr.getFace());
             w.writeInt(chr.getJob());
@@ -874,7 +874,7 @@ public class PacketProvider {
             } else {
                 w.writeInt(chr.getHair());
             }
-        } else { //Á¦·Î ¿À·ù.
+        } else { //ì œë¡œ ì˜¤ë¥˜.
             w.write(chr.getSecondSkinColor());
             w.writeInt(chr.getSecondFace());
             w.writeInt(chr.getJob());
@@ -1034,9 +1034,9 @@ public class PacketProvider {
                 return (short) 0xFF93;
             case (short) 0xFA1D://
                 return (short) 0xFF91;
-            //À§°¡ ¾ËÆÄ°¡³¥¶§
+            //ìœ„ê°€ ì•ŒíŒŒê°€ë‚„ë•Œ
 
-            //¹ØÀÌ º£Å¸°¡³¥¶§
+            //ë°‘ì´ ë² íƒ€ê°€ë‚„ë•Œ
         }
         return 0;
     }
@@ -1491,7 +1491,7 @@ public class PacketProvider {
                 w.writeInt(0);
             }
             if (equip.getEnhance() > 25) {
-                w.writeInt(0x100); //+0x1000 : ÀåºñÀÇ Àü½Â
+                w.writeInt(0x100); //+0x1000 : ì¥ë¹„ì˜ ì „ìŠ¹
             }
             w.writeMapleAsciiString(equip.getOwner());
             w.write(equip.getState());
@@ -1647,7 +1647,7 @@ public class PacketProvider {
         packet.writeInt(item.getPriceQuantity() > 0 ? item.getPrice() : 0);
         packet.writeInt(item.getPriceQuantity());
         packet.writeInt(item.getPeriod()); //Period  1min = 1, 1days = 1440
-        packet.write0(34); //1.2.250+, ÀÓ½ÃÃ³¸®.
+        packet.write0(34); //1.2.250+, ì„ì‹œì²˜ë¦¬.
         packet.writeLong(ZERO_TIME);
         packet.writeLong(MAX_TIME);
         packet.writeInt(item.getTab());

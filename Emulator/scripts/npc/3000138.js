@@ -12,7 +12,7 @@ function action(mode , type , selection){
 		cm.dispose();
 	} else {
 	if (mode == 0 && (status == 0)) {
-		cm.sendOk("¾È³çÈ÷ °¡¼¼¿ä.");
+		cm.sendOk("ì•ˆë…•íˆ ê°€ì„¸ìš”.");
 		cm.dispose();
 	} 
 	if (mode > 0)
@@ -20,7 +20,7 @@ function action(mode , type , selection){
 	else
 	    status--;
 	if (status == 0) {
-    		cm.sendYesNo("¼¼µåÇÏ ¶óµ¨Áß ³ª°¡½Ã°Ú½À´Ï±î?");
+    		cm.sendYesNo("ì„¸ë“œí•˜ ë¼ë¸ì¤‘ ë‚˜ê°€ì‹œê² ìŠµë‹ˆê¹Œ?");
         	
         } else if (status == 1) {
 		cm.getPlayer().getMap(680000000).setTeyp(0);

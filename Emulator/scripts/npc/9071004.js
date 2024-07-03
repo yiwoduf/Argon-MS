@@ -1,6 +1,6 @@
 /*
  
-  �ּ���
+  최성우
   sqlstyle...
 
 */
@@ -39,29 +39,29 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-            var chat= "#fUI/UIWindow2.img/characterCard/BtHelp/normal/0#   TIP : [��Ƽ�� �ؾ� �����ϽǼ��ֽ��ϴ�.]#l#e\r\n\r\n";
-	    //chat += "#fs17##fUI/UIWindow2.img/MobGage/Mob/8800000# \#L0# �ɿ��� ���� ���� ����\r\n#l\r\n";
-	    chat += "#fUI/UIWindow2.img/MobGage/Mob/8810018# #k\#L1# ���� ���ֶ� �Ҹ��� ȥ����\r\n#l\r\n";
-	    chat += "#fUI/UIWindow2.img/MobGage/Mob/8840000# #k\#L2# ������������ ������ �� ����\r\n#l\r\n";
-	    chat += "#fUI/UIWindow2.img/MobGage/Mob/8870000# #k\#L3# �ƽ����� ������ �ٽ����� ����\r\n#l\r\n";
-	    chat += "#fUI/UIWindow2.img/MobGage/Mob/8820001# #k\#L4# �ð��� �ź� ��ũ��\r\n#l\r\n";
-	    chat += "#fUI/UIWindow2.img/MobGage/Mob/8850011# #k\#L5# �̷��� ���� �ñ׳ʽ�\r\n#l\r\n";
-	    chat += "#fUI/UIWindow2.img/MobGage/Mob/8880000# #k\#L6# ������ �� �ű׳ʽ�#l#e\r\n\r\n";
-	    chat += "#fUI/UIWindow2.img/MobGage/Mob/8860000# #k\#L7# �ð��� Ż������ ��ī�̷�\r\n#l\r\n";
-	    //chat += "#i3015155##L9#������ ������ ����\r\n#l\r\n";
-	    //chat += "#fUI/UIWindow2.img/MobGage/Mob/8900100##fUI/UIWindow2.img/MobGage/Mob/8910100##fUI/UIWindow2.img/MobGage/Mob/8920100##fUI/UIWindow2.img/MobGage/Mob/8930100# #k\#L8# ��Ÿ�� 4�뺸��#l#e\r\n\r\n";
+            var chat= "#fUI/UIWindow2.img/characterCard/BtHelp/normal/0#   TIP : [파티를 해야 도전하실수있습니다.]#l#e\r\n\r\n";
+	    //chat += "#fs17##fUI/UIWindow2.img/MobGage/Mob/8800000# \#L0# 심연속 폐광의 군주 자쿰\r\n#l\r\n";
+	    chat += "#fUI/UIWindow2.img/MobGage/Mob/8810018# #k\#L1# 용의 군주라 불리는 혼테일\r\n#l\r\n";
+	    chat += "#fUI/UIWindow2.img/MobGage/Mob/8840000# #k\#L2# 검은마법사의 수문장 반 레온\r\n#l\r\n";
+	    chat += "#fUI/UIWindow2.img/MobGage/Mob/8870000# #k\#L3# 아스완의 망령을 다스리는 힐라\r\n#l\r\n";
+	    chat += "#fUI/UIWindow2.img/MobGage/Mob/8820001# #k\#L4# 시간의 신비 핑크빈\r\n#l\r\n";
+	    chat += "#fUI/UIWindow2.img/MobGage/Mob/8850011# #k\#L5# 미래의 여제 시그너스\r\n#l\r\n";
+	    chat += "#fUI/UIWindow2.img/MobGage/Mob/8880000# #k\#L6# 폭군의 왕 매그너스#l#e\r\n\r\n";
+	    chat += "#fUI/UIWindow2.img/MobGage/Mob/8860000# #k\#L7# 시간을 탈취한자 아카이럼\r\n#l\r\n";
+	    //chat += "#i3015155##L9#군단장 폭주한 스우\r\n#l\r\n";
+	    //chat += "#fUI/UIWindow2.img/MobGage/Mob/8900100##fUI/UIWindow2.img/MobGage/Mob/8910100##fUI/UIWindow2.img/MobGage/Mob/8920100##fUI/UIWindow2.img/MobGage/Mob/8930100# #k\#L8# 루타비스 4대보스#l#e\r\n\r\n";
 	    cm.sendSimple(chat);
 
-                } else if (selection == 0) { //����
-		var chat= "#r#e���̵��� ������ �ּ���.#k#n#l\r\n";
-		chat += "#L10##fUI/UIWindow2.img/MobGage/Mob/8800000# #r#e[Lv60]#k#n#b#e�������#k#n#l\r\n";
-		chat += "#L11##fUI/UIWindow2.img/MobGage/Mob/8800000# #r#e[Lv100]#k#n#b#e�븻���#k#n#l\r\n";
-		chat += "#L12##fUI/UIWindow2.img/MobGage/Mob/8800000# #r#e[Lv130]#k#n#b#eī�������#k#n#l\r\n";
+                } else if (selection == 0) { //자쿰
+		var chat= "#r#e난이도를 선택해 주세요.#k#n#l\r\n";
+		chat += "#L10##fUI/UIWindow2.img/MobGage/Mob/8800000# #r#e[Lv60]#k#n#b#e이지모드#k#n#l\r\n";
+		chat += "#L11##fUI/UIWindow2.img/MobGage/Mob/8800000# #r#e[Lv100]#k#n#b#e노말모드#k#n#l\r\n";
+		chat += "#L12##fUI/UIWindow2.img/MobGage/Mob/8800000# #r#e[Lv130]#k#n#b#e카오스모드#k#n#l\r\n";
 		cm.sendSimple(chat);
 
                 } else if (selection == 10) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(280030200).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 }
@@ -71,12 +71,12 @@ function action(mode, type, selection) {
 		cm.spawnNpc(2030010,-523,-420); 
 		cm.dispose();
             } else {
-            cm.sendOk("��Ƽ�� ����ž� �����ϽǼ� �ֽ��ϴ�.");
+            cm.sendOk("파티를 만드셔야 입장하실수 있습니다.");
             cm.dispose();
         }
                 } else if (selection == 11) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(280030000).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 }
@@ -86,12 +86,12 @@ function action(mode, type, selection) {
 		cm.spawnNpc(2030010,-523,-420); 
 		cm.dispose();
             } else {
-            cm.sendOk("��Ƽ�� ����ž� �����ϽǼ� �ֽ��ϴ�.");
+            cm.sendOk("파티를 만드셔야 입장하실수 있습니다.");
             cm.dispose();
         }
                 } else if (selection == 12) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(280030100).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 }
@@ -101,20 +101,20 @@ function action(mode, type, selection) {
 		cm.spawnNpc(2030010,-523,-420); 
 		cm.dispose();
             } else {
-            cm.sendOk("��Ƽ�� ����ž� �����ϽǼ� �ֽ��ϴ�.");
+            cm.sendOk("파티를 만드셔야 입장하실수 있습니다.");
             cm.dispose();
         }
 
-                } else if (selection == 1) { //ȥ����
-		var chat= "#r#e���̵��� ������ �ּ���.#k#n#l\r\n";
-		//chat += "#L13##fUI/UIWindow2.img/MobGage/Mob/8810018# #r#e[Lv130]#k#n#b#e�������#k#n#l\r\n";
-		chat += "#L14##fUI/UIWindow2.img/MobGage/Mob/8810018# #r#e[Lv130]#k#n#b#e�븻���#k#n#l\r\n";
-		chat += "#L15##fUI/UIWindow2.img/MobGage/Mob/8810018# #r#e[Lv135]#k#n#b#eī�������#k#n#l\r\n";
+                } else if (selection == 1) { //혼테일
+		var chat= "#r#e난이도를 선택해 주세요.#k#n#l\r\n";
+		//chat += "#L13##fUI/UIWindow2.img/MobGage/Mob/8810018# #r#e[Lv130]#k#n#b#e이지모드#k#n#l\r\n";
+		chat += "#L14##fUI/UIWindow2.img/MobGage/Mob/8810018# #r#e[Lv130]#k#n#b#e노말모드#k#n#l\r\n";
+		chat += "#L15##fUI/UIWindow2.img/MobGage/Mob/8810018# #r#e[Lv135]#k#n#b#e카오스모드#k#n#l\r\n";
 		cm.sendSimple(chat);
 
                 } else if (selection == 13) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(240050400).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 }
@@ -124,12 +124,12 @@ function action(mode, type, selection) {
 		cm.spawnNpc(2083002,540,22); 
 		cm.dispose();
             } else {
-            cm.sendOk("��Ƽ�� ����ž� �����ϽǼ� �ֽ��ϴ�.");
+            cm.sendOk("파티를 만드셔야 입장하실수 있습니다.");
             cm.dispose();
         }
                 } else if (selection == 14) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(240050400).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 }
@@ -139,12 +139,12 @@ function action(mode, type, selection) {
 		cm.spawnNpc(2083002,540,22);  
 		cm.dispose();
             } else {
-            cm.sendOk("��Ƽ�� ����ž� �����ϽǼ� �ֽ��ϴ�.");
+            cm.sendOk("파티를 만드셔야 입장하실수 있습니다.");
             cm.dispose();
         }
                 } else if (selection == 15) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(240050400).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 }
@@ -154,18 +154,18 @@ function action(mode, type, selection) {
 		cm.spawnNpc(2083002,540,22);  
 		cm.dispose();
             } else {
-            cm.sendOk("��Ƽ�� ����ž� �����ϽǼ� �ֽ��ϴ�.");
+            cm.sendOk("파티를 만드셔야 입장하실수 있습니다.");
             cm.dispose();
         }
-                } else if (selection == 2) { //�ݷ���
-		var chat= "#r#e���̵��� ������ �ּ���.#k#n#l\r\n";
-		chat += "#L23##fUI/UIWindow2.img/MobGage/Mob/8840000# #r#e[Lv125]#k#n#b#e�������#k#n#l\r\n";
-		chat += "#L24##fUI/UIWindow2.img/MobGage/Mob/8840000# #r#e[Lv125]#k#n#b#e�븻���#k#n#l\r\n";
+                } else if (selection == 2) { //반레온
+		var chat= "#r#e난이도를 선택해 주세요.#k#n#l\r\n";
+		chat += "#L23##fUI/UIWindow2.img/MobGage/Mob/8840000# #r#e[Lv125]#k#n#b#e이지모드#k#n#l\r\n";
+		chat += "#L24##fUI/UIWindow2.img/MobGage/Mob/8840000# #r#e[Lv125]#k#n#b#e노말모드#k#n#l\r\n";
 		cm.sendSimple(chat);
 
                 } else if (selection == 23) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(211070100).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 }
@@ -176,12 +176,12 @@ function action(mode, type, selection) {
 		cm.spawnNpc(9000112,-59,-181);
 		cm.dispose();
             } else {
-            cm.sendOk("��Ƽ�� ����ž� �����ϽǼ� �ֽ��ϴ�.");
+            cm.sendOk("파티를 만드셔야 입장하실수 있습니다.");
             cm.dispose();
         }
                 } else if (selection == 24) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(211070102).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 }
@@ -192,19 +192,19 @@ function action(mode, type, selection) {
 		cm.spawnNpc(9000112,-59,-181);
 		cm.dispose();
             } else {
-            cm.sendOk("��Ƽ�� ����ž� �����ϽǼ� �ֽ��ϴ�.");
+            cm.sendOk("파티를 만드셔야 입장하실수 있습니다.");
             cm.dispose();
         }
 
-                } else if (selection == 3) { //����
-		var chat= "#r#e���̵��� ������ �ּ���.#k#n#l\r\n";
-		chat += "#L16##fUI/UIWindow2.img/MobGage/Mob/8870000# #r#e[Lv120]#k#n#b#e�������#k#n#l\r\n";
-		chat += "#L17##fUI/UIWindow2.img/MobGage/Mob/8870000# #r#e[Lv170]#k#n#b#e�ϵ���#k#n#l\r\n";
+                } else if (selection == 3) { //힐라
+		var chat= "#r#e난이도를 선택해 주세요.#k#n#l\r\n";
+		chat += "#L16##fUI/UIWindow2.img/MobGage/Mob/8870000# #r#e[Lv120]#k#n#b#e이지모드#k#n#l\r\n";
+		chat += "#L17##fUI/UIWindow2.img/MobGage/Mob/8870000# #r#e[Lv170]#k#n#b#e하드모드#k#n#l\r\n";
 		cm.sendSimple(chat);
 
                 } else if (selection == 16) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(262030000).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 }
@@ -213,12 +213,12 @@ function action(mode, type, selection) {
 	        //cm.spawnMob(8870100, 5, -41);
 		cm.dispose();
             } else {
-            cm.sendOk("��Ƽ�� ����ž� �����ϽǼ� �ֽ��ϴ�.");
+            cm.sendOk("파티를 만드셔야 입장하실수 있습니다.");
             cm.dispose();
         }
                 } else if (selection == 17) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(262030000).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 }
@@ -227,18 +227,18 @@ function action(mode, type, selection) {
 		//cm.spawnMob(8870200, 5, -41); 
 		cm.dispose();
             } else {
-            cm.sendOk("��Ƽ�� ����ž� �����ϽǼ� �ֽ��ϴ�.");
+            cm.sendOk("파티를 만드셔야 입장하실수 있습니다.");
             cm.dispose();
         }
 
-                } else if (selection == 4) { //��ũ��
-		var chat= "#r#e���̵��� ������ �ּ���.#k#n#l\r\n";
-		chat += "#L26##fUI/UIWindow2.img/MobGage/Mob/8820001# #r#e[Lv200]#k#n#b#eī����hell ���#k#n#l\r\n";
+                } else if (selection == 4) { //핑크빈
+		var chat= "#r#e난이도를 선택해 주세요.#k#n#l\r\n";
+		chat += "#L26##fUI/UIWindow2.img/MobGage/Mob/8820001# #r#e[Lv200]#k#n#b#e카오스hell 모드#k#n#l\r\n";
 		cm.sendSimple(chat);
 
                 } else if (selection == 25) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(270050100).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 }
@@ -246,12 +246,12 @@ function action(mode, type, selection) {
 		cm.allPartyWarp(270050100,true); 
 		cm.dispose();
             } else {
-            cm.sendOk("��Ƽ�� ����ž� �����ϽǼ� �ֽ��ϴ�.");
+            cm.sendOk("파티를 만드셔야 입장하실수 있습니다.");
             cm.dispose();
         }
                 } else if (selection == 26) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(330005200).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 }
@@ -259,19 +259,19 @@ function action(mode, type, selection) {
 		cm.allPartyWarp(330005200,true); 
 		cm.dispose();
             } else {
-            cm.sendOk("��Ƽ�� ����ž� �����ϽǼ� �ֽ��ϴ�.");
+            cm.sendOk("파티를 만드셔야 입장하실수 있습니다.");
             cm.dispose();
         }
 
 
-                } else if (selection == 5) { //�ñ׳ʽ�
-		var chat= "#r#e���̵��� ������ �ּ���.#k#n#l\r\n";
-		chat += "#L18##fUI/UIWindow2.img/MobGage/Mob/8850011# #r#e[Lv170]#k#n#b#e�븻���#k#n#l\r\n";
+                } else if (selection == 5) { //시그너스
+		var chat= "#r#e난이도를 선택해 주세요.#k#n#l\r\n";
+		chat += "#L18##fUI/UIWindow2.img/MobGage/Mob/8850011# #r#e[Lv170]#k#n#b#e노말모드#k#n#l\r\n";
 		cm.sendSimple(chat);
 
                 } else if (selection == 18) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(262031300).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 }
@@ -284,20 +284,20 @@ function action(mode, type, selection) {
 		//cm.spawnMob(8850000, -181, -100); 
 		cm.dispose();
             } else {
-            cm.sendOk("��Ƽ�� ����ž� �����ϽǼ� �ֽ��ϴ�.");
+            cm.sendOk("파티를 만드셔야 입장하실수 있습니다.");
             cm.dispose();
         }
 
-                } else if (selection == 6) { //�ű׳ʽ�
-		var chat= "#r#e���̵��� ������ �ּ���.#k#n#l\r\n";
-		//chat += "#L18##fUI/UIWindow2.img/MobGage/Mob/8880000# #r#e[Lv115]#k#n#b#e�������#k#n#l\r\n";
-		chat += "#L19##fUI/UIWindow2.img/MobGage/Mob/8880000# #r#e[Lv155]#k#n#b#e�븻���#k#n#l\r\n";
-		chat += "#L20##fUI/UIWindow2.img/MobGage/Mob/8880000# #r#e[Lv175]#k#n#b#e�ϵ���#k#n#l\r\n";
+                } else if (selection == 6) { //매그너스
+		var chat= "#r#e난이도를 선택해 주세요.#k#n#l\r\n";
+		//chat += "#L18##fUI/UIWindow2.img/MobGage/Mob/8880000# #r#e[Lv115]#k#n#b#e이지모드#k#n#l\r\n";
+		chat += "#L19##fUI/UIWindow2.img/MobGage/Mob/8880000# #r#e[Lv155]#k#n#b#e노말모드#k#n#l\r\n";
+		chat += "#L20##fUI/UIWindow2.img/MobGage/Mob/8880000# #r#e[Lv175]#k#n#b#e하드모드#k#n#l\r\n";
 		cm.sendSimple(chat);
 
                 } else if (selection == 19) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(401060200).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 }
@@ -305,12 +305,12 @@ function action(mode, type, selection) {
 		cm.allPartyWarp(401060200,true); 
 		cm.dispose();
             } else {
-            cm.sendOk("��Ƽ�� ����ž� �����ϽǼ� �ֽ��ϴ�.");
+            cm.sendOk("파티를 만드셔야 입장하실수 있습니다.");
             cm.dispose();
         }
                 } else if (selection == 20) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(401060300).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 }
@@ -318,19 +318,19 @@ function action(mode, type, selection) {
 		cm.allPartyWarp(401060300,true);
 		cm.dispose();
             } else {
-            cm.sendOk("��Ƽ�� ����ž� �����ϽǼ� �ֽ��ϴ�.");
+            cm.sendOk("파티를 만드셔야 입장하실수 있습니다.");
             cm.dispose();
         }
 
-                } else if (selection == 7) { //��ī�̷�
-		var chat= "#r#e���̵��� ������ �ּ���.#k#n#l\r\n";
-		//chat += "#L21##fUI/UIWindow2.img/MobGage/Mob/8860000# #r#e[Lv140]#k#n#b#e�������#k#n#l\r\n";
-		chat += "#L22##fUI/UIWindow2.img/MobGage/Mob/8860000# #r#e[Lv140]#k#n#b#e�����û#k#n#l\r\n";
+                } else if (selection == 7) { //아카이럼
+		var chat= "#r#e난이도를 선택해 주세요.#k#n#l\r\n";
+		//chat += "#L21##fUI/UIWindow2.img/MobGage/Mob/8860000# #r#e[Lv140]#k#n#b#e이지모드#k#n#l\r\n";
+		chat += "#L22##fUI/UIWindow2.img/MobGage/Mob/8860000# #r#e[Lv140]#k#n#b#e입장신청#k#n#l\r\n";
 		cm.sendSimple(chat);
 
                 } else if (selection == 21) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(272020200).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 }
@@ -338,12 +338,12 @@ function action(mode, type, selection) {
 		cm.allPartyWarp(272020200,true);
 		cm.dispose();
             } else {
-            cm.sendOk("��Ƽ�� ����ž� �����ϽǼ� �ֽ��ϴ�.");
+            cm.sendOk("파티를 만드셔야 입장하실수 있습니다.");
             cm.dispose();
         }
                 } else if (selection == 22) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(272020110).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 }
@@ -351,17 +351,17 @@ function action(mode, type, selection) {
 		cm.allPartyWarp(272020110,true);
 		cm.dispose();
             } else {
-            cm.sendOk("��Ƽ�� ����ž� �����ϽǼ� �ֽ��ϴ�.");
+            cm.sendOk("파티를 만드셔야 입장하실수 있습니다.");
             cm.dispose();
         }
 
-                } else if (selection == 8) { //��Ÿ��
+                } else if (selection == 8) { //루타비스
 		cm.warp(105200000);
 		cm.dispose();
 
-                } else if (selection == 9) { //����
+                } else if (selection == 9) { //스우
              if (cm.getClient().getChannelServer().getMapFactory().getMap(350060160).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 }
@@ -371,7 +371,7 @@ function action(mode, type, selection) {
 	    cm.spawnMob(8240097,-24,-16);
             cm.dispose();
             } else {
-            cm.sendOk("������ 140�̻��� �ƴϽðų� ��Ƽ�������ø� ������ ���մϴ�.");
+            cm.sendOk("레벨이 140이상이 아니시거나 파티가없으시면 도전을 못합니다.");
             cm.dispose();
         }
 

@@ -3,17 +3,17 @@
 
 /*
 
-	* ´Ü¹®¿£ÇÇ½Ã ÀÚµ¿Á¦ÀÛ ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¸¸µé¾îÁø ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	* ë‹¨ë¬¸ì—”í”¼ì‹œ ìë™ì œì‘ ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ë§Œë“¤ì–´ì§„ ìŠ¤í¬ë¦½íŠ¸ ì…ë‹ˆë‹¤.
 
-	* Ç»¾î¿Â¶óÀÎ ¼Ò½º
+	* í“¨ì–´ì˜¨ë¼ì¸ ì†ŒìŠ¤
 
-	¿£ÇÇ½Ã¾ÆÀÌµğ : 9010038
+	ì—”í”¼ì‹œì•„ì´ë”” : 9010038
 
-	¿£ÇÇ½Ã ÀÌ¸§ : ·ç½Ã¾Æ
+	ì—”í”¼ì‹œ ì´ë¦„ : ë£¨ì‹œì•„
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : Çì³×½Ã½º
+	ì—”í”¼ì‹œê°€ ìˆëŠ” ë§µ : í—¤ë„¤ì‹œìŠ¤
 
-	¿£ÇÇ½Ã ¼³¸í : º¸»ó¿£ÇÇ½Ã
+	ì—”í”¼ì‹œ ì„¤ëª… : ë³´ìƒì—”í”¼ì‹œ
 
 
 */
@@ -36,22 +36,22 @@ function action(mode, type, selection) {
             status--;
         if (status == 0) {
             if (cm.getPlayer().getRewardDB().size() == 0) {
-		cm.sendOk("º¸»ó¹ŞÀ» ¾ÆÀÌÅÛÀÌ ¾ø°Å³ª µ¿³× ¾Æ°¡¾¾¸¦ ¾È Ã£¾Æ°¡½Å °Í °°³×¿ä.");
+		cm.sendOk("ë³´ìƒë°›ì„ ì•„ì´í…œì´ ì—†ê±°ë‚˜ ë™ë„¤ ì•„ê°€ì”¨ë¥¼ ì•ˆ ì°¾ì•„ê°€ì‹  ê²ƒ ê°™ë„¤ìš”.");
 		cm.dispose();
 		return;
 	    }
-		cm.sendSimple("¹ŞÀ» ¾ÆÀÌÅÛÀ» ¼±ÅÃÇØ ÁÖ¼¼¿ä.\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0##k#n\r\n#b"+cm.getPlayer().printRewardsSaves());
+		cm.sendSimple("ë°›ì„ ì•„ì´í…œì„ ì„ íƒí•´ ì£¼ì„¸ìš”.\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0##k#n\r\n#b"+cm.getPlayer().printRewardsSaves());
         } else if (status == 1) {
 		select = selection;
-		cm.sendYesNo("Á¤¸» ´ÙÀ½ ¾ÆÀÌÅÛÀ» ¹ŞÀ¸½Ã°Ú½À´Ï±î?\r\n\r\n#b#i"+cm.getPlayer().getRewardsSavedItem(select)[0]+"# #z"+cm.getPlayer().getRewardsSavedItem(select)[0]+"# "+cm.getPlayer().getRewardsSavedItem(select)[1]+" °³");
+		cm.sendYesNo("ì •ë§ ë‹¤ìŒ ì•„ì´í…œì„ ë°›ìœ¼ì‹œê² ìŠµë‹ˆê¹Œ?\r\n\r\n#b#i"+cm.getPlayer().getRewardsSavedItem(select)[0]+"# #z"+cm.getPlayer().getRewardsSavedItem(select)[0]+"# "+cm.getPlayer().getRewardsSavedItem(select)[1]+" ê°œ");
 	} else if (status == 2) {
 		if(cm.canHold(cm.getPlayer().getRewardsSavedItem(select)[0])) {
 			cm.gainItem(cm.getPlayer().getRewardsSavedItem(select)[0],cm.getPlayer().getRewardsSavedItem(select)[1]);
-			cm.sendOk("¾ÆÀÌÅÛÀÌ Á¤»óÀûÀ¸·Î Áö±ŞµÇ¾ú½À´Ï´Ù.");
+			cm.sendOk("ì•„ì´í…œì´ ì •ìƒì ìœ¼ë¡œ ì§€ê¸‰ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			cm.dispose();
 			cm.getPlayer().removeRewardsDB(cm.getPlayer().getRewardsSavedItem(select)[0],cm.getPlayer().getRewardsSavedItem(select)[1],cm.getPlayer().getId());
 		} else {
-			cm.sendOk("ÁË¼ÛÇÕ´Ï´Ù. ¹ŞÀ¸½Ç ÀÎº¥Åä¸® °ø°£À» È®ÀÎÇÏ½Å ÈÄ ´Ù½Ã ½ÃµµÇØ ÁÖ¼¼¿ä.");
+			cm.sendOk("ì£„ì†¡í•©ë‹ˆë‹¤. ë°›ìœ¼ì‹¤ ì¸ë²¤í† ë¦¬ ê³µê°„ì„ í™•ì¸í•˜ì‹  í›„ ë‹¤ì‹œ ì‹œë„í•´ ì£¼ì„¸ìš”.");
 			cm.dispose();
 		}
 	}

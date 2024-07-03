@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -20,7 +20,7 @@ import tools.Timer.WorldTimer;
 
 /**
  *
- * @author ±è½ÂÇö
+ * @author ê¹€ìŠ¹í˜„
  */
 public class AutoReboot {
 
@@ -32,18 +32,18 @@ public class AutoReboot {
         Runnable r = new Runnable() {
             public void run() {
                 if (time == 0) {
-                    System.out.println("[¾Ë¸²] Çö ½Ã°£ºÎ·Î 4½Ã°£ ÁÖ±â·Î ¼­¹ö¸¦ ÀÚµ¿À¸·Î ¸®ºÎÆÃÇÕ´Ï´Ù.");
+                    System.out.println("[ì•Œë¦¼] í˜„ ì‹œê°„ë¶€ë¡œ 4ì‹œê°„ ì£¼ê¸°ë¡œ ì„œë²„ë¥¼ ìë™ìœ¼ë¡œ ë¦¬ë¶€íŒ…í•©ë‹ˆë‹¤.");
                     time++;
                 } else if (time == -1) {
                     time = 0;
                 } else {
-                    WorldBroadcasting.broadcastMessage(MainPacketCreator.serverNotice(1, "¾ÈÁ¤ÀûÀÎ ¼­¹ö¿î¿µÀ» À§ÇØ, ¾à 1ºĞ°£ ¼­¹ö¸®ºÎÆÃÀÌ ÁøÇàµË´Ï´Ù.\r\nºÒÆíÀ» ³¢ÃÄµå·Á ÁË¼ÛÇÕ´Ï´Ù."));
+                    WorldBroadcasting.broadcastMessage(MainPacketCreator.serverNotice(1, "ì•ˆì •ì ì¸ ì„œë²„ìš´ì˜ì„ ìœ„í•´, ì•½ 1ë¶„ê°„ ì„œë²„ë¦¬ë¶€íŒ…ì´ ì§„í–‰ë©ë‹ˆë‹¤.\r\në¶ˆí¸ì„ ë¼ì³ë“œë ¤ ì£„ì†¡í•©ë‹ˆë‹¤."));
                     try {
                         Thread.sleep(10000L);
                     } catch (Exception ex) {
                         ex.printStackTrace();
                     }
-                    for (ChannelServer cserv : ChannelServer.getAllInstances()) { //¼­¹ö Á¾·áÀü, µ¥ÀÌÅÍº£ÀÌ½º ÀúÀå.
+                    for (ChannelServer cserv : ChannelServer.getAllInstances()) { //ì„œë²„ ì¢…ë£Œì „, ë°ì´í„°ë² ì´ìŠ¤ ì €ì¥.
                         cserv.saveAllMerchant();
                         for (MapleCharacter hp : cserv.getPlayerStorage().getAllCharacters().values()) {
                             if (hp != null) {

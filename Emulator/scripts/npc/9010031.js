@@ -7,17 +7,17 @@ importPackage(Packages.database);
 importPackage(java.lang);
 // cm.gainItem(item4[0], item4[1]);
 //cm.gainItem(item5[0], item5[1]);
-/* (¸í) ÃßÃµÀÎ¿¡°Ô Áö±ŞÇÒ ¾ÆÀÌÅÛ */
+/* (ëª…) ì¶”ì²œì¸ì—ê²Œ ì§€ê¸‰í•  ì•„ì´í…œ */
 var item = 0;
 var item4 = new Array(0, 0);
 var item5 = new Array(0, 0);
-/* ÃßÃµÀ» ÇßÀ» ¶§ Áö±ŞÇÒ ¾ÆÀÌÅÛ */
+/* ì¶”ì²œì„ í–ˆì„ ë•Œ ì§€ê¸‰í•  ì•„ì´í…œ */
 var item2 = new Array(0, 0);
 var item3 = new Array(0, 0);
 var item6 = new Array(0, 0)
 var status = -1;
 
-/* ÃßÃµÀÎ µî·Ï Ã¼Å© */
+/* ì¶”ì²œì¸ ë“±ë¡ ì²´í¬ */
 function overlab_recom(name, name2) {
 	var c = MYSQL.getConnection();
 	var con = c.prepareStatement("SELECT * FROM recom_log WHERE name LIKE '"+name+"%'").executeQuery();
@@ -42,7 +42,7 @@ function getAccIdFromDB(name) {
 	return ret;
 }
 
-/* ÃßÃµÀÎ µî·Ï */
+/* ì¶”ì²œì¸ ë“±ë¡ */
 function join_recom(name, name2, recom) {
 	var con = MYSQL.getConnection();
 	var insert = con.prepareStatement("INSERT INTO recom_log(name, recom, state, date) VALUES(?,?,?,now())");
@@ -54,7 +54,7 @@ function join_recom(name, name2, recom) {
 	con.close();
 }
 
-/* ÃßÃµÀÎ ·©Å· */
+/* ì¶”ì²œì¸ ë­í‚¹ */
 function recom_log() {
 	var txt = new StringBuilder();
 	var c = MYSQL.getConnection();
@@ -64,8 +64,8 @@ function recom_log() {
 		txt.append("#L"+con.getInt("id")+"#")
 
 
-		.append("ÃßÃµÀÎ ÄÚµå #k: ").append(con.getString("recom")).append(" | ")
-		.append("ÃßÃµ ¼ö #k: #e").append(con.getString("player")).append("#n\r\n");
+		.append("ì¶”ì²œì¸ ì½”ë“œ #k: ").append(con.getString("recom")).append(" | ")
+		.append("ì¶”ì²œ ìˆ˜ #k: #e").append(con.getString("player")).append("#n\r\n");
 		rank++;
 	}
 	con.close();
@@ -73,7 +73,7 @@ function recom_log() {
 	return txt.toString();
 }
 
-/* ÃßÃµÀÎ ¸®½ºÆ® */
+/* ì¶”ì²œì¸ ë¦¬ìŠ¤íŠ¸ */
 function recom_list(id) {
 	var txt = new StringBuilder();
 	var c = MYSQL.getConnection();
@@ -81,18 +81,18 @@ function recom_list(id) {
 	idcon.next(), recom_per = idcon.getString("recom");
 
 	var con = c.prepareStatement("SELECT * FROM recom_log WHERE recom = '"+recom_per+"'").executeQuery();
-	txt.append(recom_per+"´ÔÀ» ÃßÃµÇÏ½Å ÇÃ·¹ÀÌ¾îµé ÀÔ´Ï´Ù.\r\n\r\n");
+	txt.append(recom_per+"ë‹˜ì„ ì¶”ì²œí•˜ì‹  í”Œë ˆì´ì–´ë“¤ ì…ë‹ˆë‹¤.\r\n\r\n");
 	while(con.next()) {
 		var con_name = con.getString("name").split("%");
-		txt.append("´Ğ³×ÀÓ : #e").append(con_name[1]).append("#n | ")
-		.append("³¯Â¥ : ").append(con.getDate("date")+" "+con.getTime("date")).append("\r\n");
+		txt.append("ë‹‰ë„¤ì„ : #e").append(con_name[1]).append("#n | ")
+		.append("ë‚ ì§œ : ").append(con.getDate("date")+" "+con.getTime("date")).append("\r\n");
 	}
 	con.close();
 	c.close();
 	return txt.toString();
 }
 
-/* ÃßÃµÀÎ ¼ö ºÒ·¯¿À±â */
+/* ì¶”ì²œì¸ ìˆ˜ ë¶ˆëŸ¬ì˜¤ê¸° */
 function recom_num(name) {
 	var c = MYSQL.getConnection();
 	var con = c.prepareStatement("SELECT COUNT(*) AS player FROM recom_log WHERE recom = '"+name+"' and state = 0").executeQuery();
@@ -102,7 +102,7 @@ function recom_num(name) {
 	c.close();
 }
 
-/* ÃßÃµÀÎ ´Ğ³×ÀÓ ºÒ·¯¿À±â */
+/* ì¶”ì²œì¸ ë‹‰ë„¤ì„ ë¶ˆëŸ¬ì˜¤ê¸° */
 function recom_person(name) {
 	var txt = new StringBuilder();
 	var c = MYSQL.getConnection();
@@ -123,37 +123,37 @@ function start() {
 
 function action(mode, type, selection) {
 
-/* ½ºÅ©¸³Æ® ½ÃÀÛ ¼³Á¤ */
+/* ìŠ¤í¬ë¦½íŠ¸ ì‹œì‘ ì„¤ì • */
 if (mode == 1) { status++;
 } else { cm.dispose(); return; }
 
-/* ½ºÅ©¸³Æ® ¸ŞÀÎ ºÎºĞ */
+/* ìŠ¤í¬ë¦½íŠ¸ ë©”ì¸ ë¶€ë¶„ */
 if (status == 0) {
-	cm.sendSimple("#fn³ª´®°íµñ Extrabold# #b"+cm.getPlayer().getName()+"#k´ÔÀº ¾î¶² ºĞ¿¡°Ô ¼Ò°³¸¦ ¹Ş°í ¿À¼Ì³ª¿ä? ±×ºĞ¿¡°Ô º¸´äÇÏ±â À§ÇØ ÀÌ¹ø¿¡´Â #b"+cm.getPlayer().getName()+"#k´Ô²²¼­ ¼Ò°³¸¦ ÇØº¸½Ã´Â °Ç ¾î¶°¼¼¿ä? ¸¸¾à, "+cm.getPlayer().getName()+"´ÔÀÇ ¼Ò°³¸¦ ¹Ş°í ¿À½Å ºĞÀÌ ÀÖ´Ù¸é, ÀÛÀº ¾ÆÀÌÅÛÀ» µå¸®µµ·Ï ÇÒ°Ô¿ä! #r#e(ÃßÃµÀÎÀº ÃßÃµÇØÁÖ½ÅºĞÀÇ °ÔÀÓ´Ğ³×ÀÓÀ» Àû¾îÁÖ½Ã¸é µË´Ï´Ù)#n.\r\n\r\n#fUI/UIWindow.img/UtilDlgEx/list1#\r\n#L0##bÃßÃµÀÎ#k µî·ÏÇÏ±â\r\n#L1##bÃßÃµÀÎ#k ·©Å·º¸±â#l\r\n\r\n\r\n#fUI/UIWindow.img/UtilDlgEx/list0#\r\n#L2##bÃßÃµÀÎ#k ¾ÆÀÌÅÛ ¹Ş±â");
+	cm.sendSimple("#fnë‚˜ëˆ”ê³ ë”• Extrabold# #b"+cm.getPlayer().getName()+"#kë‹˜ì€ ì–´ë–¤ ë¶„ì—ê²Œ ì†Œê°œë¥¼ ë°›ê³  ì˜¤ì…¨ë‚˜ìš”? ê·¸ë¶„ì—ê²Œ ë³´ë‹µí•˜ê¸° ìœ„í•´ ì´ë²ˆì—ëŠ” #b"+cm.getPlayer().getName()+"#kë‹˜ê»˜ì„œ ì†Œê°œë¥¼ í•´ë³´ì‹œëŠ” ê±´ ì–´ë– ì„¸ìš”? ë§Œì•½, "+cm.getPlayer().getName()+"ë‹˜ì˜ ì†Œê°œë¥¼ ë°›ê³  ì˜¤ì‹  ë¶„ì´ ìˆë‹¤ë©´, ì‘ì€ ì•„ì´í…œì„ ë“œë¦¬ë„ë¡ í• ê²Œìš”! #r#e(ì¶”ì²œì¸ì€ ì¶”ì²œí•´ì£¼ì‹ ë¶„ì˜ ê²Œì„ë‹‰ë„¤ì„ì„ ì ì–´ì£¼ì‹œë©´ ë©ë‹ˆë‹¤)#n.\r\n\r\n#fUI/UIWindow.img/UtilDlgEx/list1#\r\n#L0##bì¶”ì²œì¸#k ë“±ë¡í•˜ê¸°\r\n#L1##bì¶”ì²œì¸#k ë­í‚¹ë³´ê¸°#l\r\n\r\n\r\n#fUI/UIWindow.img/UtilDlgEx/list0#\r\n#L2##bì¶”ì²œì¸#k ì•„ì´í…œ ë°›ê¸°");
 
 } else if (status == 1) {
 if (selection == 0) {
 	if (!overlab_recom(cm.getClient().getAccID(), cm.getPlayer().getName())) {
-		cm.sendGetText("#b"+cm.getPlayer().getName()+"#k´ÔÀº ¾î¶² ºĞÀÇ ¼Ò°³·Î ¿À¼Ì³ª¿ä? Ç×»ó ±×ºĞ¿¡°Ô º¸´äÇÏ°í ½ÍÀ¸¼ÌÁÒ? ÀÌ°÷¿¡ ±×ºĞÀÇ #bÀÌ¸§#kÀ» ¾²½Å´Ù¸é, Á¦°¡ Á¶±İ µµ¿Í µå¸±°Ô¿ä. ÇÏÁö¸¸, #rÇÑ¹ø ÀÔ·Â ÇÏ½Ã¸é µÇµ¹¸± ¼ö ¾øÀ¸´Ï#k ½ÅÁßÇÏ°Ô ÀÔ·Â ÇØÁÖ¼¼¿ä.");
+		cm.sendGetText("#b"+cm.getPlayer().getName()+"#kë‹˜ì€ ì–´ë–¤ ë¶„ì˜ ì†Œê°œë¡œ ì˜¤ì…¨ë‚˜ìš”? í•­ìƒ ê·¸ë¶„ì—ê²Œ ë³´ë‹µí•˜ê³  ì‹¶ìœ¼ì…¨ì£ ? ì´ê³³ì— ê·¸ë¶„ì˜ #bì´ë¦„#kì„ ì“°ì‹ ë‹¤ë©´, ì œê°€ ì¡°ê¸ˆ ë„ì™€ ë“œë¦´ê²Œìš”. í•˜ì§€ë§Œ, #rí•œë²ˆ ì…ë ¥ í•˜ì‹œë©´ ë˜ëŒë¦´ ìˆ˜ ì—†ìœ¼ë‹ˆ#k ì‹ ì¤‘í•˜ê²Œ ì…ë ¥ í•´ì£¼ì„¸ìš”.");
 
 	} else {
-		cm.sendOk("#b"+cm.getPlayer().getName()+"#k´ÔÀÌ Ç×»ó °¨»çÇÏ´Â ¸¶À½À» °¡Áö°í °è½Å °Í¡¦ Àß ¾Ë°í ÀÖÁö¸¸, ´õÀÌ»óÀº µµ¿Í µå¸± ¼ö°¡ ¾ø¾î¿ä¡¦.");
+		cm.sendOk("#b"+cm.getPlayer().getName()+"#kë‹˜ì´ í•­ìƒ ê°ì‚¬í•˜ëŠ” ë§ˆìŒì„ ê°€ì§€ê³  ê³„ì‹  ê²ƒâ€¦ ì˜ ì•Œê³  ìˆì§€ë§Œ, ë”ì´ìƒì€ ë„ì™€ ë“œë¦´ ìˆ˜ê°€ ì—†ì–´ìš”â€¦.");
 		cm.dispose();
 	}
 
 } else if (selection == 1) {
-	cm.sendSimple("ÀÌ°÷Àº ¸¹Àº ºĞµé¿¡°Ô ÁöÁö¸¦ ¹Ş°í °è½Å ºĞµéÀÇ ¸ñ·ÏÀÌ¿¡¿ä. #b"+cm.getPlayer().getName()+"#k´Ô²²¼­µµ ÇÑ¹øÂëÀº ÀÌ°÷¿¡ µî·Ï µÇ¾îº¸°í ½ÍÁö ¾ÊÀ¸¼¼¿ä?\r\n"+recom_log());
+	cm.sendSimple("ì´ê³³ì€ ë§ì€ ë¶„ë“¤ì—ê²Œ ì§€ì§€ë¥¼ ë°›ê³  ê³„ì‹  ë¶„ë“¤ì˜ ëª©ë¡ì´ì—ìš”. #b"+cm.getPlayer().getName()+"#kë‹˜ê»˜ì„œë„ í•œë²ˆì¯¤ì€ ì´ê³³ì— ë“±ë¡ ë˜ì–´ë³´ê³  ì‹¶ì§€ ì•Šìœ¼ì„¸ìš”?\r\n"+recom_log());
 	status = 2;
 
 } else if (selection == 2) {
 	recom_num(cm.getPlayer().getName());
-	if (recoms_num == 0) cm.sendOk("¡¦¾Æ½±Áö¸¸, ÀÌ¹ø¿¡´Â #b"+cm.getPlayer().getName()+"#k´ÔÀ» ÁöÁöÇÏ½Å ºĞÀÌ °è½ÃÁö ¾Ê³×¿ä. ÇÏÁö¸¸¡¦ °ğ »ı±â½Ç °ÍÀÌ´Ï, Å©°Ô ½Ç¸ÁÇÏÁö ¾ÊÀ¸¼ÌÀ¸¸é ÁÁ°Ú¾î¿ä. »ç½Ç ÁöÁöÀ² ÀÌ¶ó´Â°Ô¡¦. º° °Í ¾Æ´Ï°Åµç¿ä."), cm.dispose();
+	if (recoms_num == 0) cm.sendOk("â€¦ì•„ì‰½ì§€ë§Œ, ì´ë²ˆì—ëŠ” #b"+cm.getPlayer().getName()+"#kë‹˜ì„ ì§€ì§€í•˜ì‹  ë¶„ì´ ê³„ì‹œì§€ ì•Šë„¤ìš”. í•˜ì§€ë§Œâ€¦ ê³§ ìƒê¸°ì‹¤ ê²ƒì´ë‹ˆ, í¬ê²Œ ì‹¤ë§í•˜ì§€ ì•Šìœ¼ì…¨ìœ¼ë©´ ì¢‹ê² ì–´ìš”. ì‚¬ì‹¤ ì§€ì§€ìœ¨ ì´ë¼ëŠ”ê²Œâ€¦. ë³„ ê²ƒ ì•„ë‹ˆê±°ë“ ìš”."), cm.dispose();
 	else {
-		cm.sendOk("¿ª½Ã³ª¡¦ Á¤¸» ´ë´ÜÇÏ½Ã³×¿ä. #b"+cm.getPlayer().getName()+"#k´ÔÀº Àı Ã£¾Æ ¿À½Ç¶§¸¶´Ù ´õ ¸¹Àº ÁöÁö¸¦ ¹Ş°í °è½Å °Í °°¾Æ¿ä. ÀÌ¹ø¿¡´Â "+recoms_num+"¸í "+recom_person(cm.getPlayer().getName())+"#kÀÇ ÁöÁö¸¦ ¹ŞÀ¸¼Ì¾î¿ä.\ ");
+		cm.sendOk("ì—­ì‹œë‚˜â€¦ ì •ë§ ëŒ€ë‹¨í•˜ì‹œë„¤ìš”. #b"+cm.getPlayer().getName()+"#kë‹˜ì€ ì ˆ ì°¾ì•„ ì˜¤ì‹¤ë•Œë§ˆë‹¤ ë” ë§ì€ ì§€ì§€ë¥¼ ë°›ê³  ê³„ì‹  ê²ƒ ê°™ì•„ìš”. ì´ë²ˆì—ëŠ” "+recoms_num+"ëª… "+recom_person(cm.getPlayer().getName())+"#kì˜ ì§€ì§€ë¥¼ ë°›ìœ¼ì…¨ì–´ìš”.\ ");
 		//cm.gainItem(item4[0], item4[1]*Integer.parseInt(recoms_num));
       	        //cm.gainItem(item5[0], item5[1]*Integer.parseInt(recoms_num));
 		//cm.gainRC(item*Integer.parseInt(recoms_num));
-		//cm.getPlayer().dropMessage(1, item*Integer.parseInt(recoms_num) + "ÈÄ¿ø Æ÷ÀÎÆ®¸¦ Áö±Ş ¹Ş¾Ò½À´Ï´Ù.");
+		//cm.getPlayer().dropMessage(1, item*Integer.parseInt(recoms_num) + "í›„ì› í¬ì¸íŠ¸ë¥¼ ì§€ê¸‰ ë°›ì•˜ìŠµë‹ˆë‹¤.");
 		var c = MYSQL.getConnection();
 		c.prepareStatement("UPDATE recom_log SET state = 1 WHERE recom = '"+cm.getPlayer().getName()+"'").executeUpdate();
 		c.close();
@@ -163,15 +163,15 @@ if (selection == 0) {
 
 } else if (status == 2) {
 	if (cm.getText().equals("") || cm.getText().equals(cm.getPlayer().getName()) || getAccIdFromDB(cm.getText()) == getAccIdFromDB(cm.getPlayer().getName())) {
-		cm.sendOk(cm.getText().equals("") ? "ÀÔ·ÂÀ» Àß¸ø ÇÏ¼Ì½À´Ï´Ù." : "ÀÚ±â ÀÚ½ÅÀ» ÃßÃµ ÇÒ ¼ö´Â ¾ø½À´Ï´Ù.");
+		cm.sendOk(cm.getText().equals("") ? "ì…ë ¥ì„ ì˜ëª» í•˜ì…¨ìŠµë‹ˆë‹¤." : "ìê¸° ìì‹ ì„ ì¶”ì²œ í•  ìˆ˜ëŠ” ì—†ìŠµë‹ˆë‹¤.");
 		cm.dispose();
 	} else {
 		join_recom(cm.getClient().getAccID(), cm.getPlayer().getName(), cm.getText());
 		//cm.gainItem(item2[0], item2[1]);
 		//cm.gainItem(item3[0], item3[1]);
 		//cm.gainItem(item6[0], item6[1]);
-		//cm.sendOk("ÀÌ°Ç #b"+cm.getPlayer().getName()+"#k´Ô¿¡°Ô µå¸®´Â ÀúÀÇ ÀÛÀº ¼ºÀÇÀÔ´Ï´Ù. ¾ÕÀ¸·ÎÀÇ ¿©Çà¿¡ Å« µµ¿òÀÌ µÉ °Å¿¹¿ä.");
-		WorldBroadcasting.broadcast(MainPacketCreator.getGMText(7, "[¾Ë¸²] "+ cm.getPlayer().getName()+" ´ÔÀÌ "+cm.getText()+" ´ÔÀ» ÃßÃµÀÎÀ¸·Î µî·ÏÇÏ¼Ì½À´Ï´Ù."));
+		//cm.sendOk("ì´ê±´ #b"+cm.getPlayer().getName()+"#kë‹˜ì—ê²Œ ë“œë¦¬ëŠ” ì €ì˜ ì‘ì€ ì„±ì˜ì…ë‹ˆë‹¤. ì•ìœ¼ë¡œì˜ ì—¬í–‰ì— í° ë„ì›€ì´ ë  ê±°ì˜ˆìš”.");
+		WorldBroadcasting.broadcast(MainPacketCreator.getGMText(7, "[ì•Œë¦¼] "+ cm.getPlayer().getName()+" ë‹˜ì´ "+cm.getText()+" ë‹˜ì„ ì¶”ì²œì¸ìœ¼ë¡œ ë“±ë¡í•˜ì…¨ìŠµë‹ˆë‹¤."));
 
 		cm.dispose();
 	}

@@ -3,17 +3,17 @@
 
 /*
 
-	ǻ�� �¶��� �ҽ� ���� ��ũ��Ʈ �Դϴ�.
+	퓨어 온라인 소스 팩의 스크립트 입니다.
 
-        ���� : ��ũ����
+        제작 : 주크블랙
 
-	���ǽþ��̵� : 
+	엔피시아이디 : 
 	
-	���ǽ� �̸� :
+	엔피시 이름 :
 
-	���ǽð� �ִ� �� : 
+	엔피시가 있는 맵 : 
 
-	���ǽ� ���� : 
+	엔피시 설명 : 
 
 
 */
@@ -44,22 +44,22 @@ function action(mode, type, selection) {
 //            case 221000000:
 //            case 222000000:
         if (cm.getPlayer().getMapId() == 105000000) {
-            cm.sendYesNo("�ȳ��ϼ���! ������ �޷����� �������� �Ѿ��ý��Դϴ�! �ܵ� 30000�޼ҿ� #b�� �ٸ� ��#k���� �̵����ѵ帮�� �ֽ��ϴ�. ���� �̵��� ���ðھ��?");
+            cm.sendYesNo("안녕하세요! 어디던지 달려가는 위험지역 총알택시입니다! 단돈 30000메소에 #b또 다른 문#k까지 이동시켜드리고 있습니다. 지금 이동해 보시겠어요?");
         }
         if (cm.getPlayer().getMapId() == 240000000) {
-            cm.sendYesNo("�ȳ��ϼ���! ������ �޷����� �������� �Ѿ��ý��Դϴ�! �ܵ� 50000�޼ҿ� #b���� �� �Ա�#k���� �̵����ѵ帮�� �ֽ��ϴ�. ���� �̵��� ���ðھ��?");
+            cm.sendYesNo("안녕하세요! 어디던지 달려가는 위험지역 총알택시입니다! 단돈 50000메소에 #b용의 숲 입구#k까지 이동시켜드리고 있습니다. 지금 이동해 보시겠어요?");
         }
         if (cm.getPlayer().getMapId() == 220000000) {
-            cm.sendSimple("�ȳ��ϼ���! ������ �޷����� �������� �Ѿ��ý��Դϴ�! �̵��Ͻð� ���� ���� �����ϼ���!\r\n\r\n#b#L0#�ð��� ��� (50000�޼�)#l\r\n#L1#������������ (120000�޼�)#l\r\n#L2#���� �� (60000�޼�)#l\r\n#L3#�Ʒ� ���� (120000�޼�)#l");
+            cm.sendSimple("안녕하세요! 어디던지 달려가는 위험지역 총알택시입니다! 이동하시고 싶은 곳을 선택하세요!\r\n\r\n#b#L0#시간의 통로 (50000메소)#l\r\n#L1#지구방위본부 (120000메소)#l\r\n#L2#엘린 숲 (60000메소)#l\r\n#L3#아랫 마을 (120000메소)#l");
         }
         if (cm.getPlayer().getMapId() == 221000000) {
-            cm.sendYesNo("�ȳ��ϼ���! ������ �޷����� �������� �Ѿ��ý��Դϴ�! �ܵ� 120000�޼ҿ� #b���긮��#k���� �̵����ѵ帮�� �ֽ��ϴ�. ���� �̵��� ���ðھ��?");
+            cm.sendYesNo("안녕하세요! 어디던지 달려가는 위험지역 총알택시입니다! 단돈 120000메소에 #b루디브리엄#k까지 이동시켜드리고 있습니다. 지금 이동해 보시겠어요?");
         }
         if (cm.getPlayer().getMapId() == 222000000) {
-            cm.sendYesNo("�ȳ��ϼ���! ������ �޷����� �������� �Ѿ��ý��Դϴ�! �ܵ� 120000�޼ҿ� #b���긮��#k���� �̵����ѵ帮�� �ֽ��ϴ�. ���� �̵��� ���ðھ��?");
+            cm.sendYesNo("안녕하세요! 어디던지 달려가는 위험지역 총알택시입니다! 단돈 120000메소에 #b루디브리엄#k까지 이동시켜드리고 있습니다. 지금 이동해 보시겠어요?");
         }
         if (cm.getPlayer().getMapId() == 300000100) {
-            cm.sendYesNo("�ȳ��ϼ���! ������ �޷����� �������� �Ѿ��ý��Դϴ�! �ܵ� 120000�޼ҿ� #b���긮��#k���� �̵����ѵ帮�� �ֽ��ϴ�. ���� �̵��� ���ðھ��?");
+            cm.sendYesNo("안녕하세요! 어디던지 달려가는 위험지역 총알택시입니다! 단돈 120000메소에 #b루디브리엄#k까지 이동시켜드리고 있습니다. 지금 이동해 보시겠어요?");
         }
     } else if (status == 1) {
         if (cm.getPlayer().getMapId() == 105000000) {
@@ -69,7 +69,7 @@ function action(mode, type, selection) {
                 cm.dispose();
                 return;
             } else {
-                cm.sendOk("����� �����ϽŰ� �ƴѰ���? �ٽ��ѹ� Ȯ���� �ּ���.");
+                cm.sendOk("요금이 부족하신건 아닌가요? 다시한번 확인해 주세요.");
                 cm.dispose();
                 return;
             }
@@ -81,7 +81,7 @@ function action(mode, type, selection) {
                 cm.dispose();
                 return;
             } else {
-                cm.sendOk("����� �����ϽŰ� �ƴѰ���? �ٽ��ѹ� Ȯ���� �ּ���.");
+                cm.sendOk("요금이 부족하신건 아닌가요? 다시한번 확인해 주세요.");
                 cm.dispose();
                 return;
             }
@@ -89,16 +89,16 @@ function action(mode, type, selection) {
         if (cm.getPlayer().getMapId() == 220000000) {
             select = selection;
             if (select == 0) {
-                cm.sendYesNo("���ð� ������ ���� #b�ð��� ���#k �� �½��ϱ�? ����� #b50000�޼�#k �Դϴ�.");
+                cm.sendYesNo("가시고 싶으신 곳이 #b시간의 통로#k 가 맞습니까? 요금은 #b50000메소#k 입니다.");
             }
             if (select == 1) {
-                cm.sendYesNo("���ð� ������ ���� #b������������#k �� �½��ϱ�? ����� #b120000�޼�#k �Դϴ�.");
+                cm.sendYesNo("가시고 싶으신 곳이 #b지구방위본부#k 가 맞습니까? 요금은 #b120000메소#k 입니다.");
             }
             if (select == 2) {
-                cm.sendYesNo("���ð� ������ ���� #b���� ��#k �� �½��ϱ�? ����� #b60000�޼�#k �Դϴ�.");
+                cm.sendYesNo("가시고 싶으신 곳이 #b엘린 숲#k 이 맞습니까? 요금은 #b60000메소#k 입니다.");
             }
             if (select == 3) {
-                cm.sendYesNo("���ð� ������ ���� #b�Ʒ� ����#k �� �½��ϱ�? ����� #b120000�޼�#k �Դϴ�.");
+                cm.sendYesNo("가시고 싶으신 곳이 #b아랫 마을#k 이 맞습니까? 요금은 #b120000메소#k 입니다.");
             }
         }
         if (cm.getPlayer().getMapId() == 221000000) {
@@ -108,7 +108,7 @@ function action(mode, type, selection) {
                 cm.dispose();
                 return;
             } else {
-                cm.sendOk("����� �����ϽŰ� �ƴѰ���? �ٽ��ѹ� Ȯ���� �ּ���.");
+                cm.sendOk("요금이 부족하신건 아닌가요? 다시한번 확인해 주세요.");
                 cm.dispose();
                 return;
             }
@@ -120,7 +120,7 @@ function action(mode, type, selection) {
                 cm.dispose();
                 return;
             } else {
-                cm.sendOk("����� �����ϽŰ� �ƴѰ���? �ٽ��ѹ� Ȯ���� �ּ���.");
+                cm.sendOk("요금이 부족하신건 아닌가요? 다시한번 확인해 주세요.");
                 cm.dispose();
                 return;
             }
@@ -132,7 +132,7 @@ function action(mode, type, selection) {
                 cm.dispose();
                 return;
             } else {
-                cm.sendOk("����� �����ϽŰ� �ƴѰ���? �ٽ��ѹ� Ȯ���� �ּ���.");
+                cm.sendOk("요금이 부족하신건 아닌가요? 다시한번 확인해 주세요.");
                 cm.dispose();
                 return;
             }
@@ -146,7 +146,7 @@ function action(mode, type, selection) {
                     cm.dispose();
                     return;
                 } else {
-                    cm.sendOk("����� �����ϽŰ� �ƴѰ���? �ٽ��ѹ� Ȯ���� �ּ���.");
+                    cm.sendOk("요금이 부족하신건 아닌가요? 다시한번 확인해 주세요.");
                     cm.dispose();
                     return;
                 }
@@ -158,7 +158,7 @@ function action(mode, type, selection) {
                     cm.dispose();
                     return;
                 } else {
-                    cm.sendOk("����� �����ϽŰ� �ƴѰ���? �ٽ��ѹ� Ȯ���� �ּ���.");
+                    cm.sendOk("요금이 부족하신건 아닌가요? 다시한번 확인해 주세요.");
                     cm.dispose();
                     return;
                 }
@@ -170,7 +170,7 @@ function action(mode, type, selection) {
                     cm.dispose();
                     return;
                 } else {
-                    cm.sendOk("����� �����ϽŰ� �ƴѰ���? �ٽ��ѹ� Ȯ���� �ּ���.");
+                    cm.sendOk("요금이 부족하신건 아닌가요? 다시한번 확인해 주세요.");
                     cm.dispose();
                     return;
                 }
@@ -182,7 +182,7 @@ function action(mode, type, selection) {
                     cm.dispose();
                     return;
                 } else {
-                    cm.sendOk("����� �����ϽŰ� �ƴѰ���? �ٽ��ѹ� Ȯ���� �ּ���.");
+                    cm.sendOk("요금이 부족하신건 아닌가요? 다시한번 확인해 주세요.");
                     cm.dispose();
                     return;
                 }

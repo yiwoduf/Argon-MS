@@ -252,7 +252,7 @@ public abstract class AbstractPlayerStore extends AbstractHinaMapObject implemen
                     save1.close();
                     System.out.println(t.getQuantity() + "");
                 } catch (Exception e) {
-                    System.err.println("[¿À·ù] °í¿ë»óÁ¡ ¾ÆÀÌÅÛÀ» Àç¼ÒÈ¯ DB¿¡ ÀúÀåÇÏ´Â µµÁß ¿À·ù ¹ß»ı.");
+                    System.err.println("[ì˜¤ë¥˜] ê³ ìš©ìƒì  ì•„ì´í…œì„ ì¬ì†Œí™˜ DBì— ì €ì¥í•˜ëŠ” ë„ì¤‘ ì˜¤ë¥˜ ë°œìƒ.");
                     if (!ServerConstants.realese) {
                         e.printStackTrace();
                     }

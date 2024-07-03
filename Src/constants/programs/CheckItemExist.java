@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -17,7 +17,7 @@ import java.util.*;
 
 /**
 *
-* @author ¿Â¶óÀÎ¿ùµå
+* @author ì˜¨ë¼ì¸ì›”ë“œ
 */
 public class CheckItemExist {
     private static HashMap<Integer,Integer> itemList = new HashMap<Integer,Integer>();
@@ -40,10 +40,10 @@ public class CheckItemExist {
             }
             sql.close();
         } catch (Exception e) {
-            System.out.println("¾Ë ¼ö ¾ø´Â ¿À·ùÀÔ´Ï´Ù.");
+            System.out.println("ì•Œ ìˆ˜ ì—†ëŠ” ì˜¤ë¥˜ì…ë‹ˆë‹¤.");
         }
         
-        System.out.println("¿Ï·áµÇ¾ú½À´Ï´Ù.");
+        System.out.println("ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
         System.exit(0);
         return;
     }
@@ -57,7 +57,7 @@ public class CheckItemExist {
     }
 
 
-    private static void checkItem(int itemid,int type) { //¾ÆÀÌÅÛ, »óÁ¡, °¡°İ
+    private static void checkItem(int itemid,int type) { //ì•„ì´í…œ, ìƒì , ê°€ê²©
         boolean isExist = false;
         if (type == 1) {
             File source = new File("property/Wz/Character.wz");
@@ -94,7 +94,7 @@ public class CheckItemExist {
     }
     
     public static void RewardIncubator() {
-	System.out.println("RewardIncubator ¸¦ ºÒ·¯¿Ó½À´Ï´Ù.:::");
+	System.out.println("RewardIncubator ë¥¼ ë¶ˆëŸ¬ì™“ìŠµë‹ˆë‹¤.:::");
 	// Gold Box
         try {
         FileReader fl = new FileReader("rewardincubator.celphis");

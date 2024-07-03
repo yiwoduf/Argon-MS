@@ -111,6 +111,6 @@ public class CommodityItemUpdate {
             }
         }
         fos.close();
-        System.out.println("≥°");
+        System.out.println("ÎÅù");
     }
 }

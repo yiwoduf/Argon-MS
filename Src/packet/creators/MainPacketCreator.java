@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  *
  */
@@ -77,7 +77,7 @@ public class MainPacketCreator {
         //}
         packet.writeShort(port);
 
-        // Ã¤ÆÃ ¼­¹ö ///////////////////////////////
+        // ì±„íŒ… ì„œë²„ ///////////////////////////////
         /*if (c.getTempIP().length() > 0) {
             for (String s : c.getTempIP().split(",")) {
                 packet.write(Integer.parseInt(s));
@@ -115,7 +115,7 @@ public class MainPacketCreator {
         packet.write(0);
         packet.write(1);
         for (int i = 0; i < 3; i++) {
-            packet.writeInt(0); //1.2.239, À¯µ¿ °ª.
+            packet.writeInt(0); //1.2.239, ìœ ë™ ê°’.
         }
         packet.write(1);
         packet.writeShort(NotifiCheck ? 1 : 0);
@@ -197,7 +197,7 @@ public class MainPacketCreator {
                     } else if (value >= PlayerStat.HP.getValue() && value <= PlayerStat.MAXMP.getValue()) {
                         packet.writeInt(statupdate.getRight().intValue());
                     } else if (value == PlayerStat.AVAILABLESP.getValue()) { //availablesp
-                        if (!GameConstants.isPinkBean(chr.getJob())) { //ÇÎÅ©ºó Á¦¿Ü ¸ğµçÁ÷¾÷ Extended SP.
+                        if (!GameConstants.isPinkBean(chr.getJob())) { //í•‘í¬ë¹ˆ ì œì™¸ ëª¨ë“ ì§ì—… Extended SP.
                             packet.write(0);
                         } else {
                             packet.writeShort(statupdate.getRight().shortValue());
@@ -235,9 +235,9 @@ public class MainPacketCreator {
     public static byte[] updateHyperSp(String value, int array, int mode, int gainCount) {
         WritingPacket packet = new WritingPacket();
         packet.writeShort(SendPacketOpcode.HYPER.getValue());
-        packet.writeMapleAsciiString(value); // ÀÌ°Íµµ ¾î¶² °ªÀÌ ÀÖ´Â°Å°°À½.
-        packet.writeInt(array); // °ªÀÌ 16Áø¼ö·Î 1¾¿ ´Ã¾î³².
-        packet.writeInt(mode); // 0: Ã³À½, 1: µÎ¹øÂ°, 2: ¼¼¹øÂ°
+        packet.writeMapleAsciiString(value); // ì´ê²ƒë„ ì–´ë–¤ ê°’ì´ ìˆëŠ”ê±°ê°™ìŒ.
+        packet.writeInt(array); // ê°’ì´ 16ì§„ìˆ˜ë¡œ 1ì”© ëŠ˜ì–´ë‚¨.
+        packet.writeInt(mode); // 0: ì²˜ìŒ, 1: ë‘ë²ˆì§¸, 2: ì„¸ë²ˆì§¸
         packet.write(gainCount);
         packet.writeInt(0);
 
@@ -272,7 +272,7 @@ public class MainPacketCreator {
         packet.writeShort(SendPacketOpcode.HEAD_TITLE_NEW.getValue());
         for (Integer num_ : num) {
             packet.writeMapleAsciiString("");
-            packet.write(num_ == 0 ? -1 : num_); //Á¸ÀçÇÏ¸é num_ 
+            packet.write(num_ == 0 ? -1 : num_); //ì¡´ì¬í•˜ë©´ num_ 
         }
         return packet.getPacket();
     }
@@ -290,7 +290,7 @@ public class MainPacketCreator {
         packet.writeShort(SendPacketOpcode.UPDATE_STATS.getValue());
         packet.write(itemReaction ? 1 : 0);
         packet.writeInt(PlayerStat.AVAILABLESP.getValue());
-        if (!GameConstants.isPinkBean(chr.getJob())) { //ÇÎÅ©ºó Á¦¿Ü ¸ğµçÁ÷¾÷ Extended SP.
+        if (!GameConstants.isPinkBean(chr.getJob())) { //í•‘í¬ë¹ˆ ì œì™¸ ëª¨ë“ ì§ì—… Extended SP.
             packet.write(chr.getRemainingSpSize());
             for (int i = 0; i < chr.getRemainingSps().length; i++) {
                 if (chr.getRemainingSp(i) > 0) {
@@ -298,12 +298,12 @@ public class MainPacketCreator {
                     packet.writeInt(chr.getRemainingSp(i));
                 }
             }
-            packet.write(0xFF); //1.2.220+ ½ºÅ¸Æ÷½º °ü·Ã ÆĞÅ¶ ÃßÁ¤.
-            packet.writeInt(0); //1.2.220+ ½ºÅ¸Æ÷½º °ü·Ã ÆĞÅ¶ ÃßÁ¤.
+            packet.write(0xFF); //1.2.220+ ìŠ¤íƒ€í¬ìŠ¤ ê´€ë ¨ íŒ¨í‚· ì¶”ì •.
+            packet.writeInt(0); //1.2.220+ ìŠ¤íƒ€í¬ìŠ¤ ê´€ë ¨ íŒ¨í‚· ì¶”ì •.
         } else {
             packet.writeShort(chr.getRemainingSp());
-            packet.write(0xFF); //1.2.220+ ½ºÅ¸Æ÷½º °ü·Ã ÆĞÅ¶ ÃßÁ¤.
-            packet.write0(6); //1.2.220+ ½ºÅ¸Æ÷½º °ü·Ã ÆĞÅ¶ ÃßÁ¤.
+            packet.write(0xFF); //1.2.220+ ìŠ¤íƒ€í¬ìŠ¤ ê´€ë ¨ íŒ¨í‚· ì¶”ì •.
+            packet.write0(6); //1.2.220+ ìŠ¤íƒ€í¬ìŠ¤ ê´€ë ¨ íŒ¨í‚· ì¶”ì •.
         }
         return packet.getPacket();
     }
@@ -314,8 +314,8 @@ public class MainPacketCreator {
         packet.write(0);
         packet.writeInt(PlayerStat.SAINT_SABER.getValue());
         packet.writeInt(chr.getStat().getSaintSaver());
-        packet.write(0xFF); //1.2.220+ ½ºÅ¸Æ÷½º °ü·Ã ÆĞÅ¶ ÃßÁ¤.
-        packet.writeInt(0); //1.2.220+ ½ºÅ¸Æ÷½º °ü·Ã ÆĞÅ¶ ÃßÁ¤.
+        packet.write(0xFF); //1.2.220+ ìŠ¤íƒ€í¬ìŠ¤ ê´€ë ¨ íŒ¨í‚· ì¶”ì •.
+        packet.writeInt(0); //1.2.220+ ìŠ¤íƒ€í¬ìŠ¤ ê´€ë ¨ íŒ¨í‚· ì¶”ì •.
 
         return packet.getPacket();
     }
@@ -325,16 +325,16 @@ public class MainPacketCreator {
         packet.writeShort(SendPacketOpcode.UPDATE_STATS.getValue());
         packet.write(0);
         packet.writeInt(PlayerStat.TRAIT_LIMIT.getValue());
-        packet.writeShort(chr.getTodayCharisma());     //¿À´ÃÀÇ Ä«¸®½º¸¶
-        packet.writeShort(chr.getTodayInsight());     //¿À´ÃÀÇ ÅëÂû·Â
-        packet.writeShort(chr.getTodayWillPower());     //¿À´ÃÀÇ ÀÇÁö
-        packet.writeShort(chr.getTodayDiligence());     //¿À´ÃÀÇ ¼ÕÀçÁÖ
-        packet.writeShort(chr.getTodayEmpathy());     //¿À´ÃÀÇ °¨¼º
-        packet.writeShort(chr.getTodayCharm());     //¿À´ÃÀÇ ¸Å·Â
+        packet.writeShort(chr.getTodayCharisma());     //ì˜¤ëŠ˜ì˜ ì¹´ë¦¬ìŠ¤ë§ˆ
+        packet.writeShort(chr.getTodayInsight());     //ì˜¤ëŠ˜ì˜ í†µì°°ë ¥
+        packet.writeShort(chr.getTodayWillPower());     //ì˜¤ëŠ˜ì˜ ì˜ì§€
+        packet.writeShort(chr.getTodayDiligence());     //ì˜¤ëŠ˜ì˜ ì†ì¬ì£¼
+        packet.writeShort(chr.getTodayEmpathy());     //ì˜¤ëŠ˜ì˜ ê°ì„±
+        packet.writeShort(chr.getTodayCharm());     //ì˜¤ëŠ˜ì˜ ë§¤ë ¥
         packet.writeShort(0);
         packet.writeLong(PacketProvider.getTime(-2));
-        packet.write(0xFF); //1.2.220+ ½ºÅ¸Æ÷½º °ü·Ã ÆĞÅ¶ ÃßÁ¤.
-        packet.writeInt(0); //1.2.220+ ½ºÅ¸Æ÷½º °ü·Ã ÆĞÅ¶ ÃßÁ¤.
+        packet.write(0xFF); //1.2.220+ ìŠ¤íƒ€í¬ìŠ¤ ê´€ë ¨ íŒ¨í‚· ì¶”ì •.
+        packet.writeInt(0); //1.2.220+ ìŠ¤íƒ€í¬ìŠ¤ ê´€ë ¨ íŒ¨í‚· ì¶”ì •.
 
         return packet.getPacket();
     }
@@ -345,7 +345,7 @@ public class MainPacketCreator {
         packet.writeShort(SendPacketOpcode.WARP_TO_MAP.getValue());
         packet.writeLong(chr.getClient().getChannel());
         packet.write(0);
-        packet.write(2); //¸Ê ÀÌµ¿È½¼ö(Ã³À½ Á¢¼Óµµ Æ÷ÇÔ)
+        packet.write(2); //ë§µ ì´ë™íšŸìˆ˜(ì²˜ìŒ ì ‘ì†ë„ í¬í•¨)
         for (int i = 0; i < 4; i++) {
             packet.writeInt(0);
         }
@@ -432,7 +432,7 @@ public class MainPacketCreator {
         packet.writeInt(0);//nBulletID
         MapleCharacter player = summon.getOwnerChr();
         boolean AvatarLook = (summon.getSkill() == 4341006 || summon.getSkill() == 14111024 || summon.getSkill() == 14121054 || summon.getSkill() == 14121055 || summon.getSkill() == 14121056);
-        packet.write(AvatarLook ? 1 : 0); //¹Ì·¯ ÀÌ¹ÌÂ¡, ½¦µµ¿ì ¼­¹øÆ®
+        packet.write(AvatarLook ? 1 : 0); //ë¯¸ëŸ¬ ì´ë¯¸ì§•, ì‰ë„ìš° ì„œë²ˆíŠ¸
         if (AvatarLook) {
             PacketProvider.addPlayerLooks(packet, player, true);
         }
@@ -531,8 +531,8 @@ public class MainPacketCreator {
             switch (summon.getSkill()) {
                 case 35121003:
                 case 14000027:
-                case 14111024: //½¦µµ¿ì ¼­¹øÆ®
-                case 14121054: //½¦µµ¿ì ÀÏ·çÀü
+                case 14111024: //ì‰ë„ìš° ì„œë²ˆíŠ¸
+                case 14121054: //ì‰ë„ìš° ì¼ë£¨ì „
                     packet.write(10);
                     break;
                 case 35111001:
@@ -549,11 +549,11 @@ public class MainPacketCreator {
                     break;
                 case 101100100:
                 case 101100101:
-                case 14121003: //´ÙÅ©´Ï½º ¿À¸à
-                case 36121002: //È¦·Î±×·¥ ±×·¡ÇÇÆ¼ : °üÅë
-                case 36121013: //È¦·Î±×·¥ ±×·¡ÇÇÆ¼ : ¿ªÀå
-                case 36121014: //È¦·Î±×·¥ ±×·¡ÇÇÆ¼ : Áö¿ø
-                case 5321052:  //·Ñ¸µ Ä³³í ·¹ÀÎº¸¿ì
+                case 14121003: //ë‹¤í¬ë‹ˆìŠ¤ ì˜¤ë©˜
+                case 36121002: //í™€ë¡œê·¸ë¨ ê·¸ë˜í”¼í‹° : ê´€í†µ
+                case 36121013: //í™€ë¡œê·¸ë¨ ê·¸ë˜í”¼í‹° : ì—­ì¥
+                case 36121014: //í™€ë¡œê·¸ë¨ ê·¸ë˜í”¼í‹° : ì§€ì›
+                case 5321052:  //ë¡¤ë§ ìºë…¼ ë ˆì¸ë³´ìš°
                     packet.write(0);
                     break;
                 default:
@@ -729,8 +729,8 @@ public class MainPacketCreator {
 
                 PacketProvider.encodePackedCharacterLook(packet, c);
             } else {
-                packet.write(0); // Å¸ÀÔ
-                // µ¥ÀÌÅÍ (Àü±¤ÆÇ°°Àº°Å)
+                packet.write(0); // íƒ€ì…
+                // ë°ì´í„° (ì „ê´‘íŒê°™ì€ê±°)
             }
         }
         return packet.getPacket();
@@ -873,12 +873,12 @@ public class MainPacketCreator {
         final WritingPacket packet = new WritingPacket();
         packet.writeShort(SendPacketOpcode.SHOW_STATUS_INFO.getValue());
         packet.write(limited ? 0x14 : 0x13); //1.2.250+ (+2)
-        /* 0 : Ä«¸®½º¸¶
-         * 1 : ÅëÂû·Â
-         * 2 : ÀÇÁö
-         * 3 : ¼ÕÀçÁÖ
-         * 4 : °¨¼º
-         * 5 : ¸Å·Â
+        /* 0 : ì¹´ë¦¬ìŠ¤ë§ˆ
+         * 1 : í†µì°°ë ¥
+         * 2 : ì˜ì§€
+         * 3 : ì†ì¬ì£¼
+         * 4 : ê°ì„±
+         * 5 : ë§¤ë ¥
          */
         switch (type) {
             case 0:
@@ -1208,16 +1208,16 @@ public class MainPacketCreator {
         if ((drop.getItemId() / 1000000 == 1) && (drop.getMeso() == 0) && (drop.getEquip() != null)) {
             Equip item = (Equip) drop.getItem();
             switch (item.getState()) {
-                case 17: //·¹¾î
+                case 17: //ë ˆì–´
                     packet.write(1);
                     break;
-                case 18: //¿¡ÇÈ
+                case 18: //ì—í”½
                     packet.write(2);
                     break;
-                case 19: //À¯´ÏÅ©
+                case 19: //ìœ ë‹ˆí¬
                     packet.write(3);
                     break;
-                case 20: //·¹Àüµå¸®
+                case 20: //ë ˆì „ë“œë¦¬
                     packet.write(4);
                     break;
                 default:
@@ -1265,7 +1265,7 @@ public class MainPacketCreator {
                 packet.write(i.left.byteValue());
             }
         }
-        /* ¹öÇÁ¸¶½ºÅ© Á¾·á */
+        /* ë²„í”„ë§ˆìŠ¤í¬ ì¢…ë£Œ */
         packet.write(0);
         packet.write(0);
         packet.write(0);
@@ -1332,11 +1332,11 @@ public class MainPacketCreator {
         if (chr.getSkillLevel(1320016) > 0 && chr.getJob() == 132 && !chr.skillisCooling(1320019)) {
             flag |= 1;
         }
-        // ¿¡¹İÀÌ¸é¼­ ¿ë ÀÖÀ»¶§
+        // ì—ë°˜ì´ë©´ì„œ ìš© ìˆì„ë•Œ
         //flag |= 2;
-        //flag |= 8; // PVP ºĞ³ëÈ¿°ú ½Ã°£ int·Î º¸³»Áà¾ßµÊ
-        //flag |= 0x10; 8°ú else·Î Ã³¸®µÊ. PVP Ã¨ÇÇ¾ğ È¿°ú. int·Î º¸³»Áà¾ßµÊ
-        //flag | 0x20 HitPeriodRemain_Revive int·Î º¸³»ÁÜ.
+        //flag |= 8; // PVP ë¶„ë…¸íš¨ê³¼ ì‹œê°„ intë¡œ ë³´ë‚´ì¤˜ì•¼ë¨
+        //flag |= 0x10; 8ê³¼ elseë¡œ ì²˜ë¦¬ë¨. PVP ì±”í”¼ì–¸ íš¨ê³¼. intë¡œ ë³´ë‚´ì¤˜ì•¼ë¨
+        //flag | 0x20 HitPeriodRemain_Revive intë¡œ ë³´ë‚´ì¤Œ.
         packet.write(flag); //Flag
 
         packet.writeInt(0); //EvanDragonGlide_Riding
@@ -1356,9 +1356,9 @@ public class MainPacketCreator {
         packet.writeInt(0); // if 1 > CustomizeEffect
         packet.write(chr.soulEffect); // soulEffect
 
-        // ¶óÀÌµùÀÏ½Ã
-        // ¾ÆÀÌÅÛ ÄÚµå°¡ 1932249 ÀÏ½Ã
-        // int·Î °¹¼ö º¸³»ÁÜ. °¹¼ö¸¸Å­ int·Î Ä¿½ºÅÒ ¶óÀÌµù º¸³»ÁÜ.
+        // ë¼ì´ë”©ì¼ì‹œ
+        // ì•„ì´í…œ ì½”ë“œê°€ 1932249 ì¼ì‹œ
+        // intë¡œ ê°¯ìˆ˜ ë³´ë‚´ì¤Œ. ê°¯ìˆ˜ë§Œí¼ intë¡œ ì»¤ìŠ¤í…€ ë¼ì´ë”© ë³´ë‚´ì¤Œ.
         packet.write(0);
         if (false) {
             packet.write(0);
@@ -1372,12 +1372,12 @@ public class MainPacketCreator {
 
         packet.write(0);
         if (false) {
-            // ½ºÅ¸ÇÃ·¡´Ö Á¤º¸
+            // ìŠ¤íƒ€í”Œë˜ë‹› ì •ë³´
             packet.writeInt(0); // round id
-            packet.write(0); // ·©Å·?
+            packet.write(0); // ë­í‚¹?
             /*
-            À§¿¡ º¸³½°ªÀÌ 10º¸´Ù Å©´Ù¸é 10¸¸Å­¸¸
-            ¾Æ´Ï¸é ±× °¹¼ö´ë·Î
+            ìœ„ì— ë³´ë‚¸ê°’ì´ 10ë³´ë‹¤ í¬ë‹¤ë©´ 10ë§Œí¼ë§Œ
+            ì•„ë‹ˆë©´ ê·¸ ê°¯ìˆ˜ëŒ€ë¡œ
              */
             for (int i = 0; i < 0; i++) {
                 packet.writeInt(0); // point
@@ -1640,7 +1640,7 @@ public class MainPacketCreator {
                 }
                 for (Pair<Integer, Boolean> eachd : oned.attack) {
                     if (eachd.right) {
-                        packet.writeInt(eachd.left.intValue() | -2147483648); //ÀÌÂÊ ³»ÀÏ ¼öÁ¤ ¹Ù¶÷.
+                        packet.writeInt(eachd.left.intValue() | -2147483648); //ì´ìª½ ë‚´ì¼ ìˆ˜ì • ë°”ëŒ.
                     } else {
                         packet.writeInt(eachd.left.intValue());
                     }
@@ -1719,7 +1719,7 @@ public class MainPacketCreator {
     public static byte[] confirmShopTransactionAdditional(int sid, List<MapleShopItem> items, MapleShop shop, final MapleClient c) {
         WritingPacket packet = new WritingPacket();
         packet.writeShort(SendPacketOpcode.CONFIRM_SHOP_TRANSACTION.getValue());
-        packet.write(8); // 8 = sell, 0 = buy, 0x20 = due to an error <- 160Àº (4) 168Àº (5)
+        packet.write(8); // 8 = sell, 0 = buy, 0x20 = due to an error <- 160ì€ (4) 168ì€ (5)
         addShopInfo(packet, c, sid, items);
 
         return packet.getPacket();
@@ -2200,17 +2200,17 @@ public class MainPacketCreator {
         packet.write(0); //1.2.220+
         packet.write(hp.getLevel());
         packet.writeShort(hp.getJob());
-        packet.write0(3); //¹èÆ²·©Å© 0A Æ÷ÇÔ.
-        packet.writeInt(hp.getFame()); //ÀÎ±âµµ
-        packet.write(0); //°áÈ¥
+        packet.write0(3); //ë°°í‹€ë­í¬ 0A í¬í•¨.
+        packet.writeInt(hp.getFame()); //ì¸ê¸°ë„
+        packet.write(0); //ê²°í˜¼
         List<Integer> professions = new ArrayList<Integer>(2);
-        packet.write(professions.size()); //Àü¹®±â¼ú°¹¼ö
+        packet.write(professions.size()); //ì „ë¬¸ê¸°ìˆ ê°¯ìˆ˜
         for (Integer i : professions) {
             packet.writeShort(i);
         }
         if (hp.getGuildId() <= 0) {
             packet.writeMapleAsciiString("-");
-            packet.writeMapleAsciiString(GameConstants.·©Å©(hp.getRankPoint()));
+            packet.writeMapleAsciiString(GameConstants.ë­í¬(hp.getRankPoint()));
         } else {
             final MapleGuildContents gs = hp.getClient().getChannelServer().getGuildSummary(hp.getGuildId());
             if (gs != null) {
@@ -2218,16 +2218,16 @@ public class MainPacketCreator {
                 if (gs.getAllianceId() > 0) {
                     final MapleAlliance alliance = ChannelServer.getAlliance(gs.getAllianceId());
                     if (alliance != null) {
-                        packet.writeMapleAsciiString(GameConstants.·©Å©(hp.getRankPoint()));
+                        packet.writeMapleAsciiString(GameConstants.ë­í¬(hp.getRankPoint()));
                     } else {
-                        packet.writeMapleAsciiString(GameConstants.·©Å©(hp.getRankPoint()));
+                        packet.writeMapleAsciiString(GameConstants.ë­í¬(hp.getRankPoint()));
                     }
                 } else {
-                    packet.writeMapleAsciiString(GameConstants.·©Å©(hp.getRankPoint()));
+                    packet.writeMapleAsciiString(GameConstants.ë­í¬(hp.getRankPoint()));
                 }
             } else {
                 packet.writeMapleAsciiString("-");
-                packet.writeMapleAsciiString(GameConstants.·©Å©(hp.getRankPoint()));
+                packet.writeMapleAsciiString(GameConstants.ë­í¬(hp.getRankPoint()));
             }
         }
         packet.write(hp.getEqPet());
@@ -2288,7 +2288,7 @@ public class MainPacketCreator {
         return packet.getPacket();
     }
 
-    public static byte[] giveSpecialMount(int skillid, int bufflength, int mountid, List<Triple<BuffStats, Integer, Boolean>> statups, Map<BuffStats, List<StackedSkillEntry>> stacks) { // Ä¡¿ì¾¾ :: ¶óÀÌµù ±¸Çö
+    public static byte[] giveSpecialMount(int skillid, int bufflength, int mountid, List<Triple<BuffStats, Integer, Boolean>> statups, Map<BuffStats, List<StackedSkillEntry>> stacks) { // ì¹˜ìš°ì”¨ :: ë¼ì´ë”© êµ¬í˜„
         WritingPacket packet = new WritingPacket();
         packet.writeShort(SendPacketOpcode.GIVE_BUFF.getValue());
         PacketProvider.writeBuffMask(packet, statups);
@@ -2312,7 +2312,7 @@ public class MainPacketCreator {
         return packet.getPacket();
     }
 
-    public static byte[] giveMount(int buffid, int skillid) { // Ä¡¿ì¾¾ :: ¶óÀÌµù ±¸Çö
+    public static byte[] giveMount(int buffid, int skillid) { // ì¹˜ìš°ì”¨ :: ë¼ì´ë”© êµ¬í˜„
         WritingPacket packet = new WritingPacket();
         packet.writeShort(SendPacketOpcode.GIVE_BUFF.getValue());
         PacketProvider.writeSingleMask(packet, BuffStats.CTS_MonsterRiding);
@@ -2327,7 +2327,7 @@ public class MainPacketCreator {
         return packet.getPacket();
     }
 
-    public static byte[] cancelMount() { // Ä¡¿ì¾¾ :: ¶óÀÌµù ±¸Çö
+    public static byte[] cancelMount() { // ì¹˜ìš°ì”¨ :: ë¼ì´ë”© êµ¬í˜„
         WritingPacket packet = new WritingPacket();
         packet.writeShort(SendPacketOpcode.CANCEL_BUFF.getValue());
         PacketProvider.writeSingleMask(packet, BuffStats.CTS_MonsterRiding);
@@ -2337,7 +2337,7 @@ public class MainPacketCreator {
         return packet.getPacket();
     }
 
-    public static byte[] showMonsterRiding(int cid, int itemId, int skillId) { // Ä¡¿ì¾¾ :: ¶óÀÌµù ±¸Çö
+    public static byte[] showMonsterRiding(int cid, int itemId, int skillId) { // ì¹˜ìš°ì”¨ :: ë¼ì´ë”© êµ¬í˜„
         WritingPacket packet = new WritingPacket();
         packet.writeShort(SendPacketOpcode.GIVE_FOREIGN_BUFF.getValue());
         packet.writeInt(cid);
@@ -2629,7 +2629,7 @@ public class MainPacketCreator {
         return packet.getPacket();
     }
 
-    public static byte[] giveBuff(int buffid, int bufflength, List<Triple<BuffStats, Integer, Boolean>> statups, SkillStatEffect effect, Map<BuffStats, List<StackedSkillEntry>> stacks, int animationTime) { // Ä¡¿ì¾¾ :: ¾Æ¶õ ÄŞº¸ ¹× ÀÌ¹Ã¹è¸®¾î
+    public static byte[] giveBuff(int buffid, int bufflength, List<Triple<BuffStats, Integer, Boolean>> statups, SkillStatEffect effect, Map<BuffStats, List<StackedSkillEntry>> stacks, int animationTime) { // ì¹˜ìš°ì”¨ :: ì•„ë€ ì½¤ë³´ ë° ì´ë®¨ë°°ë¦¬ì–´
         WritingPacket packet = new WritingPacket();
         packet.writeShort(SendPacketOpcode.GIVE_BUFF.getValue());
         PacketProvider.writeBuffMask(packet, statups);
@@ -2671,7 +2671,7 @@ public class MainPacketCreator {
             packet.write(buffid == 3111011 || buffid == 3211012 ? 0 : buffid == 33101006 ? 0x5A : 1);
         }
 
-        /* Stack Buff Ã³¸® ±¸°£, ½ÃÀÛ*/
+        /* Stack Buff ì²˜ë¦¬ êµ¬ê°„, ì‹œì‘*/
         if (buffid == 2321005 || buffid == 3111011 || buffid == 3211012 || buffid == 36111003 || buffid == 25121209 || buffid == 27121005) {
             packet.writeInt(buffid == 36111003 || buffid == 2321005 ? 10 - effect.getX() : effect.getX());
             if (buffid == 36111003) {
@@ -2696,7 +2696,7 @@ public class MainPacketCreator {
             }
         }
 
-        /* Stack Buff Ã³¸® ±¸°£, Á¾·á */
+        /* Stack Buff ì²˜ë¦¬ êµ¬ê°„, ì¢…ë£Œ */
         for (Triple<BuffStats, Integer, Boolean> statup : statups) {
             if (statup.getThird()) {
                 packet.writeInt(stacks.get(statup.getFirst()).size());
@@ -2711,7 +2711,7 @@ public class MainPacketCreator {
             }
         }
 
-        /* ½ºÅ³ µô·¹ÀÌ ½ÃÀÛ */
+        /* ìŠ¤í‚¬ ë”œë ˆì´ ì‹œì‘ */
         if ((animationTime > 0) && (buffid != 101120109)) {
             packet.writeShort(animationTime * 10);
         } else if (buffid == 101120109) {
@@ -2725,12 +2725,12 @@ public class MainPacketCreator {
         } else {
             packet.writeShort(0);
         }
-        /* ½ºÅ³ µô·¹ÀÌ Á¾·á */
+        /* ìŠ¤í‚¬ ë”œë ˆì´ ì¢…ë£Œ */
         packet.writeShort(0);
-        /* SkillType ½ÃÀÛ */
+        /* SkillType ì‹œì‘ */
         packet.write(1);
-        /* SkillType Á¾·á */
-        packet.writeLong(0); //1.2.251+, ¸ğµç ¹öÇÁ ÆÃ±è ¹æÁö.
+        /* SkillType ì¢…ë£Œ */
+        packet.writeLong(0); //1.2.251+, ëª¨ë“  ë²„í”„ íŒ…ê¹€ ë°©ì§€.
 
         return packet.getPacket();
     }
@@ -2743,7 +2743,7 @@ public class MainPacketCreator {
 
         packet.writeShort(SendPacketOpcode.GIVE_BUFF.getValue());
         PacketProvider.writeBuffMask(packet, statups);
-        for (Triple<BuffStats, Integer, Boolean> statup : statups) { // Ä¡¿ì¾¾ :: ÀÌ¹Ã¹è¸®¾î
+        for (Triple<BuffStats, Integer, Boolean> statup : statups) { // ì¹˜ìš°ì”¨ :: ì´ë®¨ë°°ë¦¬ì–´
             if (!statup.getThird()) {
                 if (buffid == 101120109) {
                     packet.writeInt(statup.getSecond().intValue());
@@ -2778,7 +2778,7 @@ public class MainPacketCreator {
             packet.write(1);
         }
 
-        /* Stack Buff Ã³¸® ±¸°£, ½ÃÀÛ*/
+        /* Stack Buff ì²˜ë¦¬ êµ¬ê°„, ì‹œì‘*/
         if (buffid == 15001022) {
             packet.writeInt(effect.getY());
             if (buffid == 15001022) {
@@ -2805,9 +2805,9 @@ public class MainPacketCreator {
                 packet.writeLong(0);
             }
         }
-        packet.write0((buffid != 36111003 && buffid != 101120109 && buffid != 27121005) ? 3 : 0); //1.2.197+ Ä¡¿ì¾¾ :: ÀÌ¹Ã¹è¸®¾î
+        packet.write0((buffid != 36111003 && buffid != 101120109 && buffid != 27121005) ? 3 : 0); //1.2.197+ ì¹˜ìš°ì”¨ :: ì´ë®¨ë°°ë¦¬ì–´
 
-        /* Stack Buff Ã³¸® ±¸°£, Á¾·á */
+        /* Stack Buff ì²˜ë¦¬ êµ¬ê°„, ì¢…ë£Œ */
         for (Triple<BuffStats, Integer, Boolean> statup : statups) {
             if (statup.getThird()) {
                 packet.writeInt(stacks.get(statup.getFirst()).size());
@@ -2820,7 +2820,7 @@ public class MainPacketCreator {
             }
         }
 
-        /* ½ºÅ³ µô·¹ÀÌ ½ÃÀÛ */
+        /* ìŠ¤í‚¬ ë”œë ˆì´ ì‹œì‘ */
         if ((animationTime > 0) && (buffid != 101120109)) {
             packet.writeShort(animationTime * 10);
         } else if (buffid == 101120109) {
@@ -2834,12 +2834,12 @@ public class MainPacketCreator {
         } else {
             packet.writeShort(0);
         }
-        /* ½ºÅ³ µô·¹ÀÌ Á¾·á */
+        /* ìŠ¤í‚¬ ë”œë ˆì´ ì¢…ë£Œ */
         packet.writeShort(0);
-        /* SkillType ½ÃÀÛ */
+        /* SkillType ì‹œì‘ */
         packet.write(1);
-        /* SkillType Á¾·á */
-        packet.writeLong(0); //1.2.251+, ¸ğµç ¹öÇÁ ÆÃ±è ¹æÁö.
+        /* SkillType ì¢…ë£Œ */
+        packet.writeLong(0); //1.2.251+, ëª¨ë“  ë²„í”„ íŒ…ê¹€ ë°©ì§€.
 
         return packet.getPacket();
     }
@@ -2923,7 +2923,7 @@ public class MainPacketCreator {
         } else if (stats.SEDUCE != null) {
             packet.writeShort(2400); //1.2.239+
         } else if (stats.TELEPORT != null || stats.WEAKEN != null) {
-            packet.writeShort(2350); //¸Ó¸®À§¿¡ ¶ß±â±îÁöÀÇ ½Ã°£
+            packet.writeShort(2350); //ë¨¸ë¦¬ìœ„ì— ëœ¨ê¸°ê¹Œì§€ì˜ ì‹œê°„
         } else if (stats.ZOMBIFY != null) {
             packet.writeShort(2280);
         } else {
@@ -2998,7 +2998,7 @@ public class MainPacketCreator {
         } else if (stats.SEDUCE != null) {
             packet.writeShort(2400); //1.2.239+
         } else if (stats.TELEPORT != null || stats.WEAKEN != null) {
-            packet.writeShort(2350); //¸Ó¸®À§¿¡ ¶ß±â±îÁöÀÇ ½Ã°£
+            packet.writeShort(2350); //ë¨¸ë¦¬ìœ„ì— ëœ¨ê¸°ê¹Œì§€ì˜ ì‹œê°„
         } else if (stats.ZOMBIFY != null) {
             packet.writeShort(2280);
         } else {
@@ -3061,7 +3061,7 @@ public class MainPacketCreator {
         WritingPacket packet = new WritingPacket();
         packet.writeShort(SendPacketOpcode.SHOW_VOYD_PRESSURE.getValue());
         packet.writeInt(cid);
-        packet.write(HexTool.getByteArrayFromHexString(Hex)); //ÀÍ½Ãµå¶û ÀÍ½Ãµå°ø°İ½ºÅ³
+        packet.write(HexTool.getByteArrayFromHexString(Hex)); //ìµì‹œë“œë‘ ìµì‹œë“œê³µê²©ìŠ¤í‚¬
 
         return packet.getPacket();
     }
@@ -3465,7 +3465,7 @@ public class MainPacketCreator {
         for (int i = 0; i < args.length; i++) {
             packet.writeInt(args[i]);
         }
-        if (isZero) { //ÀÓ½ÃÃ³¸®, ÃßÈÄ ¼öÁ¤¹Ù¶÷.
+        if (isZero) { //ì„ì‹œì²˜ë¦¬, ì¶”í›„ ìˆ˜ì •ë°”ëŒ.
             packet.write(args.length);
             for (int i = 0; i < args.length; i++) {
                 packet.writeInt(args[i]);
@@ -3547,10 +3547,10 @@ public class MainPacketCreator {
         boolean create = false;
         switch (skillid) {
             case 22170074:
-                packet.write(create ? 1 : 0);//¿¡¹İ ¿ë ÀÌÆåÆ®
+                packet.write(create ? 1 : 0);//ì—ë°˜ ìš© ì´í™íŠ¸
                 break;
             case 1320016:
-                packet.write(create ? 1 : 0);//¸®ÀÎÄ«³×ÀÌ¼Ç ÀÌÆåÆ®
+                packet.write(create ? 1 : 0);//ë¦¬ì¸ì¹´ë„¤ì´ì…˜ ì´í™íŠ¸
                 break;
             case 4331006:
                 packet.write(0);
@@ -3625,15 +3625,15 @@ public class MainPacketCreator {
     }
 
     /**
-     * ¿î¿µÀÚ Ã¤ÆÃ »ö»ó ÄÚµå
+     * ìš´ì˜ì ì±„íŒ… ìƒ‰ìƒ ì½”ë“œ
      * <p>
-     * <code>»ö»ó ÄÚµå</code>:<br>
-     * 0 : ÀÏ¹İ Ã¤ÆÃ(Èò»ö) 1 : ±Ó¼Ó¸» Ã¤ÆÃ(ÃÊ·Ï»ö) 2 : ÆÄÆ¼ Ã¤ÆÃ(ºĞÈ«»ö) 3 : Ä£±¸ Ã¤ÆÃ(ÁÖÈ²»ö) 4 : ±æµå
-     * Ã¤ÆÃ(º¸¶ó»ö) 5 : (¿¶Àº ÃÊ·Ï»ö) 6 : (¾à°£ Å©°í ÁøÇÑ ºĞÈ«»ö) 7 : (È¸»ö) 8 : (³ë¶õ»ö) 9 : (¿¬ÇÑ ³ë¶õ»ö)
-     * 10 : (ÆÄ¶õ»ö) 11 : ¿î¿µÀÚ Ã¤ÆÃ(Èò»ö¹ÙÅÁ¿¡ °ËÀº»ö) 12 : (°¥»ö) 13 : (¿¶ÀºÆÄ¶õ¹ÙÅÁ¿¡ ÆÄ¶õ»ö) 15 :
-     * (»¡°£¹ÙÅÁ¿¡ °ËÀº»ö) 17 : (Áøº¸¶ó»ö) 18 : (¿¬ÇÑÆÄ¶õ»ö¹ÙÅÁ¿¡ ºĞÈ«»ö) 19 : (°¥»ö¹ÙÅÁ¿¡ °ËÀº»ö) 20 : (°¥»ö¹ÙÅÁ¿¡
-     * Èò»ö) 21 : (³ë¶õ»ö¹ÙÅÁ¿¡ °ËÀº»ö) 22 : (ÃÊ·Ï»ö¹ÙÅÁ¿¡ Èò»ö) 23 : (ÃÊ·Ï»ö¹ÙÅÁ¿¡ °¥»ö[W:-1]) 25 : (³ë¶õ»ö)
-     * 26 : (ÇÏ´Ã»ö) 27 : (ÀÛÀº ±Û¾¾Ã¼)
+     * <code>ìƒ‰ìƒ ì½”ë“œ</code>:<br>
+     * 0 : ì¼ë°˜ ì±„íŒ…(í°ìƒ‰) 1 : ê·“ì†ë§ ì±„íŒ…(ì´ˆë¡ìƒ‰) 2 : íŒŒí‹° ì±„íŒ…(ë¶„í™ìƒ‰) 3 : ì¹œêµ¬ ì±„íŒ…(ì£¼í™©ìƒ‰) 4 : ê¸¸ë“œ
+     * ì±„íŒ…(ë³´ë¼ìƒ‰) 5 : (ì˜…ì€ ì´ˆë¡ìƒ‰) 6 : (ì•½ê°„ í¬ê³  ì§„í•œ ë¶„í™ìƒ‰) 7 : (íšŒìƒ‰) 8 : (ë…¸ë€ìƒ‰) 9 : (ì—°í•œ ë…¸ë€ìƒ‰)
+     * 10 : (íŒŒë€ìƒ‰) 11 : ìš´ì˜ì ì±„íŒ…(í°ìƒ‰ë°”íƒ•ì— ê²€ì€ìƒ‰) 12 : (ê°ˆìƒ‰) 13 : (ì˜…ì€íŒŒë€ë°”íƒ•ì— íŒŒë€ìƒ‰) 15 :
+     * (ë¹¨ê°„ë°”íƒ•ì— ê²€ì€ìƒ‰) 17 : (ì§„ë³´ë¼ìƒ‰) 18 : (ì—°í•œíŒŒë€ìƒ‰ë°”íƒ•ì— ë¶„í™ìƒ‰) 19 : (ê°ˆìƒ‰ë°”íƒ•ì— ê²€ì€ìƒ‰) 20 : (ê°ˆìƒ‰ë°”íƒ•ì—
+     * í°ìƒ‰) 21 : (ë…¸ë€ìƒ‰ë°”íƒ•ì— ê²€ì€ìƒ‰) 22 : (ì´ˆë¡ìƒ‰ë°”íƒ•ì— í°ìƒ‰) 23 : (ì´ˆë¡ìƒ‰ë°”íƒ•ì— ê°ˆìƒ‰[W:-1]) 25 : (ë…¸ë€ìƒ‰)
+     * 26 : (í•˜ëŠ˜ìƒ‰) 27 : (ì‘ì€ ê¸€ì”¨ì²´)
      */
     public static byte[] getGMText(int type, String text) {
         WritingPacket packet = new WritingPacket();
@@ -3644,14 +3644,14 @@ public class MainPacketCreator {
     }
 
     /*
-     * Ãß°¡·Î ¸Å°³º¯¼ö°¡ ÇÊ¿äÇÏÁö ¾ÊÀº ÀÌÆåÆ® *
+     * ì¶”ê°€ë¡œ ë§¤ê°œë³€ìˆ˜ê°€ í•„ìš”í•˜ì§€ ì•Šì€ ì´í™íŠ¸ *
      *
-     * 0x01 : ·¹º§¾÷
+     * 0x01 : ë ˆë²¨ì—…
      * 0x0A : RESIST
-     * 0x0C : Æ÷Å»»ç¿îµå
-     * 0x0D : Á÷¾÷º¯°æ
-     * 0x12 : ¸ó½ºÅÍºÏ
-     * 0x14 : ÀåºñÁ¦ÀÛ (¶Ç´Â ´ë³­Åõ) ·¹º§¾÷
+     * 0x0C : í¬íƒˆì‚¬ìš´ë“œ
+     * 0x0D : ì§ì—…ë³€ê²½
+     * 0x12 : ëª¬ìŠ¤í„°ë¶
+     * 0x14 : ì¥ë¹„ì œì‘ (ë˜ëŠ” ëŒ€ë‚œíˆ¬) ë ˆë²¨ì—…
      *
      */
     public static byte[] showSpecialEffect(int effect) {
@@ -3875,7 +3875,7 @@ public class MainPacketCreator {
         return packet.getPacket();
     }
 
-    /* Ã¢°í ÆĞÅ¶ ½ÃÀÛ */
+    /* ì°½ê³  íŒ¨í‚· ì‹œì‘ */
     public static byte[] getStorage(int npcId, byte slots, Collection<IItem> items, long meso) {
         WritingPacket packet = new WritingPacket();
         packet.writeShort(SendPacketOpcode.OPEN_STORAGE.getValue());
@@ -3970,7 +3970,7 @@ public class MainPacketCreator {
         return packet.getPacket();
     }
 
-    /* Ã¢°í ÆĞÅ¶ Á¾·á */
+    /* ì°½ê³  íŒ¨í‚· ì¢…ë£Œ */
     public static byte[] fairyPendantMessage(int type, int percent) {
         WritingPacket packet = new WritingPacket();
         packet.writeShort(SendPacketOpcode.FAIRY_PEND_MSG.getValue());
@@ -4363,7 +4363,7 @@ public class MainPacketCreator {
                 packet.writeAsciiString(StringUtil.getRightPaddedStr(buddy.getGroup(), '\0', 18));
                 packet.writeInt(buddy.getCharacterId()); //AccID Packets
                 packet.writeAsciiString(StringUtil.getRightPaddedStr(buddy.getName(), '\0', 13)); //NICKNAME
-                packet.write0(260); //¸Ş¸ğ + ±×·ì
+                packet.write0(260); //ë©”ëª¨ + ê·¸ë£¹
             }
         }
         return packet.getPacket();
@@ -4385,18 +4385,18 @@ public class MainPacketCreator {
             packet.writeAsciiString(StringUtil.getRightPaddedStr(nameFrom, '\0', 13));
             packet.write(1);
             packet.writeInt(c.getChannel());
-            packet.writeAsciiString("±×·ì ¹ÌÁöÁ¤", 18);
-            packet.write0(280); //¸Ş¸ğ + ±×·ì.
+            packet.writeAsciiString("ê·¸ë£¹ ë¯¸ì§€ì •", 18);
+            packet.write0(280); //ë©”ëª¨ + ê·¸ë£¹.
         } else {
             packet.write(0x28);
             packet.writeInt(cidFrom);
             packet.writeAsciiString(StringUtil.getRightPaddedStr(nameFrom, '\0', 13));
             packet.write(1);
             packet.writeInt(c.getChannel());
-            packet.writeAsciiString("±×·ì ¹ÌÁöÁ¤", 18);
-            packet.writeInt(0); //IP, °èÁ¤Ä£±¸ µî·Ï.
-            packet.writeAsciiString(" ", 13); //´Ğ³×ÀÓ
-            packet.writeAsciiString(" ", 270); //¸Ş¸ğ
+            packet.writeAsciiString("ê·¸ë£¹ ë¯¸ì§€ì •", 18);
+            packet.writeInt(0); //IP, ê³„ì •ì¹œêµ¬ ë“±ë¡.
+            packet.writeAsciiString(" ", 13); //ë‹‰ë„¤ì„
+            packet.writeAsciiString(" ", 270); //ë©”ëª¨
         }
         return packet.getPacket();
     }
@@ -4584,8 +4584,8 @@ public class MainPacketCreator {
         packet.writeShort(g.getLogo());
         packet.write(g.getLogoColor());
         packet.writeMapleAsciiString(g.getNotice());
-        packet.writeInt(500); //¸í¼ºÄ¡
-        packet.writeInt(500); //¸í¼ºÄ¡
+        packet.writeInt(500); //ëª…ì„±ì¹˜
+        packet.writeInt(500); //ëª…ì„±ì¹˜
         packet.writeInt(g.getAllianceId());
         packet.write(1); // GuildLevel
         packet.writeShort(1); // GuildRank
@@ -4621,8 +4621,8 @@ public class MainPacketCreator {
             packet.writeShort(g.getLogo());
             packet.write(g.getLogoColor());
             packet.writeMapleAsciiString(g.getNotice());
-            packet.writeInt(500); // ¸í¼ºÄ¡
-            packet.writeInt(500); // ¸í¼ºÄ¡
+            packet.writeInt(500); // ëª…ì„±ì¹˜
+            packet.writeInt(500); // ëª…ì„±ì¹˜
             packet.writeInt(g.getAllianceId());
             packet.write(1); // GuildLevel
             packet.writeShort(c.getMGC().getGuildRank()); // GuildRank
@@ -4636,7 +4636,7 @@ public class MainPacketCreator {
                 packet.writeMapleAsciiString(i.activator);
             }
             packet.write(0);
-            packet.write0(106); //ÀÌ¿ÜÀÇ °ªµé.
+            packet.write0(106); //ì´ì™¸ì˜ ê°’ë“¤.
         }
         return packet.getPacket();
     }
@@ -4852,7 +4852,7 @@ public class MainPacketCreator {
         packet.writeInt(expelledGuild.getGP());
         packet.writeInt(expelledGuild.getGP());
         packet.writeInt(expelledGuild.getAllianceId());
-        packet.write(6); //±æµå·¹º§
+        packet.write(6); //ê¸¸ë“œë ˆë²¨
         packet.writeShort(0); // guild rank 
         packet.writeShort(expelledGuild.getSkills().size());
         for (GuildSkills sk : expelledGuild.getSkills()) {
@@ -4899,7 +4899,7 @@ public class MainPacketCreator {
         packet.writeInt(newGuild.getGP());
         packet.writeInt(newGuild.getGP());
         packet.writeInt(newGuild.getAllianceId());
-        packet.write(6); //±æµå·¹º§
+        packet.write(6); //ê¸¸ë“œë ˆë²¨
         packet.writeShort(0); // guild rank 
         packet.writeShort(newGuild.getSkills().size());
         for (GuildSkills sk : newGuild.getSkills()) {
@@ -5100,7 +5100,7 @@ public class MainPacketCreator {
                 packet.writeInt(gg.getGP());
                 packet.writeInt(gg.getGP());
                 packet.writeInt(gg.getAllianceId());
-                packet.write(6); //±æµå·¹º§
+                packet.write(6); //ê¸¸ë“œë ˆë²¨
                 packet.writeShort(0); // guild rank 
                 packet.writeShort(gg.getSkills().size());
                 for (GuildSkills sk : gg.getSkills()) {
@@ -5156,7 +5156,7 @@ public class MainPacketCreator {
                 packet.writeInt(gg.getGP());
                 packet.writeInt(gg.getGP());
                 packet.writeInt(gg.getAllianceId());
-                packet.write(6); //±æµå·¹º§
+                packet.write(6); //ê¸¸ë“œë ˆë²¨
                 packet.writeShort(0); // guild rank 
                 packet.writeShort(gg.getSkills().size());
                 for (GuildSkills sk : gg.getSkills()) {
@@ -5439,7 +5439,7 @@ public class MainPacketCreator {
         if (isNoCoolBuff) {
             return serverNotice(5, "");
         }
-        if (isGM) { // Ä¡¿ì¾¾ :: GM ÄğÅ¸ÀÔ ½ºÅµ credit ¼Û¹Î¿ì
+        if (isGM) { // ì¹˜ìš°ì”¨ :: GM ì¿¨íƒ€ì… ìŠ¤í‚µ credit ì†¡ë¯¼ìš°
             return serverNotice(5, "");
         }
         if (isRune) {
@@ -5456,7 +5456,7 @@ public class MainPacketCreator {
 
     public static byte[] skillCooldown(int sid, int time, final boolean isGM) {
         WritingPacket packet = new WritingPacket();
-        if (isGM) { // Ä¡¿ì¾¾ :: GM ÄğÅ¸ÀÔ ½ºÅµ credit ¼Û¹Î¿ì
+        if (isGM) { // ì¹˜ìš°ì”¨ :: GM ì¿¨íƒ€ì… ìŠ¤í‚µ credit ì†¡ë¯¼ìš°
             return serverNotice(5, "");
         }
         packet.writeShort(SendPacketOpcode.COOLDOWN.getValue());
@@ -6241,7 +6241,7 @@ public class MainPacketCreator {
         packet.writeInt((int) System.currentTimeMillis());
         packet.writeInt(targetCount);
         packet.writeInt(0);
-        packet.write(0); // ¹İº¹ Á¾·á
+        packet.write(0); // ë°˜ë³µ ì¢…ë£Œ
         packet.writeInt(direction);
         packet.writeInt(range); //range
 
@@ -6338,10 +6338,10 @@ public class MainPacketCreator {
         packet.writeShort(SendPacketOpcode.ABSORB_DF.getValue());
         packet.write(1);
         packet.writeInt(cid);
-        packet.writeInt(beforeTarget); // ÀÌÀü Å¸°Ù ID
+        packet.writeInt(beforeTarget); // ì´ì „ íƒ€ê²Ÿ ID
         packet.writeInt(0x10);
         packet.write(1);
-        packet.writeInt(nextTarget); // ´ÙÀ½ Å¸°Ù ID
+        packet.writeInt(nextTarget); // ë‹¤ìŒ íƒ€ê²Ÿ ID
         packet.writeInt(14000029);
         packet.write(1);
         packet.writeInt(12); //key
@@ -6517,7 +6517,7 @@ public class MainPacketCreator {
         packet.writeInt(oid);
         packet.writeInt(skillid);
 
-        /* ½ºÅ³ µµÀÔºÎ ½ÃÀÛ */
+        /* ìŠ¤í‚¬ ë„ì…ë¶€ ì‹œì‘ */
         packet.write(1);
         packet.writeInt((0x6 + i));
         packet.writeInt(0);
@@ -6528,7 +6528,7 @@ public class MainPacketCreator {
         packet.writeInt(0);
         packet.writeInt(0);
         packet.writeInt(Randomizer.nextInt());
-        /* ½ºÅ³ µµÀÔºÎ Á¾·á */
+        /* ìŠ¤í‚¬ ë„ì…ë¶€ ì¢…ë£Œ */
 
         packet.write(0);
 
@@ -6978,7 +6978,7 @@ public class MainPacketCreator {
     public static byte[] showGageUI(int i) {
         WritingPacket packet = new WritingPacket();
         packet.writeShort(SendPacketOpcode.SHOW_FEVER_GAUGE.getValue());
-        packet.writeInt(70);//ÃÖ´ë°ÔÀÌÁö
+        packet.writeInt(70);//ìµœëŒ€ê²Œì´ì§€
         packet.writeInt(i);
 
         return packet.getPacket();
@@ -7075,7 +7075,7 @@ public class MainPacketCreator {
         packet.write(0x6);
         packet.write(count);
         packet.writeShort(0x0C);
-        packet.writeShort(514); //02 02, ÀÇ¹Ì°¡ ÀÖÀ» µí.
+        packet.writeShort(514); //02 02, ì˜ë¯¸ê°€ ìˆì„ ë“¯.
         packet.write0(13);
 
         return packet.getPacket();
@@ -7210,7 +7210,7 @@ public class MainPacketCreator {
 
         packet.writeShort(718);// Opcode JAGUAR_SKILL + 4
         packet.writeInt(skillid);
-        packet.writeInt(1); //1ÀÌ»ó½Ã Æ÷ÀÎÆ®¸¦ ¹Ş´Â´Ù.
+        packet.writeInt(1); //1ì´ìƒì‹œ í¬ì¸íŠ¸ë¥¼ ë°›ëŠ”ë‹¤.
         packet.writeInt(pos.x);//x
         packet.writeInt(pos.y);//y
         packet.writeInt(0); // area?
@@ -7219,7 +7219,7 @@ public class MainPacketCreator {
 
     public static byte[] ANOTHERBITE(int BonusSkillID, List<Triple<Integer, Integer, Integer>> mobList) {
         WritingPacket packet = new WritingPacket();
-        packet.writeShort(717);//¿ÉÄÚµå JAGUAR_SKILL + 3
+        packet.writeShort(717);//ì˜µì½”ë“œ JAGUAR_SKILL + 3
         packet.writeInt(BonusSkillID);//BonusSkillID
         packet.writeInt(mobList.size());
         packet.writeInt(1);//NJAGUARBLEEDINGATTACKCOUNT (v4)
@@ -7328,7 +7328,7 @@ public class MainPacketCreator {
             packet.writeInt(0);
             packet.writeInt(0);
             packet.writeInt(0);
-            packet.writeInt(Randomizer.nextInt()); //1.2.220+ ±×¸®°í À¯µ¿
+            packet.writeInt(Randomizer.nextInt()); //1.2.220+ ê·¸ë¦¬ê³  ìœ ë™
             packet.writeInt(0);
             packet.writeInt(0);
         }
@@ -7395,7 +7395,7 @@ public class MainPacketCreator {
         packet.writeInt(oid);
         packet.writeInt(skillid);
 
-        /* ½ºÅ³ µµÀÔºÎ ½ÃÀÛ */
+        /* ìŠ¤í‚¬ ë„ì…ë¶€ ì‹œì‘ */
         packet.write(1);
         packet.writeInt(6 + i);
         packet.writeInt(Randomizer.rand(1, 3));
@@ -7408,7 +7408,7 @@ public class MainPacketCreator {
         packet.writeInt(Randomizer.nextInt());
         packet.writeInt(0);
         packet.writeInt(0);
-        /* ½ºÅ³ µµÀÔºÎ Á¾·á */
+        /* ìŠ¤í‚¬ ë„ì…ë¶€ ì¢…ë£Œ */
 
         packet.write(0);
 
@@ -7426,12 +7426,12 @@ public class MainPacketCreator {
             packet.writeInt(useDamageSkin);
             packet.writeInt(GameConstants.getDamageSkinItemByNumber(useDamageSkin));
             packet.write(0);
-            packet.writeMapleAsciiString("µ¥¹ÌÁö½ºÅ²");
+            packet.writeMapleAsciiString("ë°ë¯¸ì§€ìŠ¤í‚¨");
 
             packet.writeInt(useDamageSkin);
             packet.writeInt(GameConstants.getDamageSkinItemByNumber(useDamageSkin));
             packet.write(0);
-            packet.writeMapleAsciiString("µ¥¹ÌÁö½ºÅ²");
+            packet.writeMapleAsciiString("ë°ë¯¸ì§€ìŠ¤í‚¨");
 
             packet.writeShort(50);
 
@@ -7441,7 +7441,7 @@ public class MainPacketCreator {
                 packet.writeInt(GameConstants.getDamageSkinNumberByItem(Integer.parseInt(v2)));
                 packet.writeInt(Integer.parseInt(v2));
                 packet.write(0);
-                packet.writeMapleAsciiString("µ¥¹ÌÁö½ºÅ²");
+                packet.writeMapleAsciiString("ë°ë¯¸ì§€ìŠ¤í‚¨");
             }
         }
     }
@@ -7461,12 +7461,12 @@ public class MainPacketCreator {
         packet.writeInt(PremiumDamageSkin ? -1 : chr.getDamageSkin());
         packet.writeInt(chr.getDamageSkin() == 0 ? 2431965 : PremiumDamageSkin ? 0 : GameConstants.getDamageSkinItemByNumber(chr.getDamageSkin()));
         packet.write(PremiumDamageSkin ? 1 : 0);
-        packet.writeMapleAsciiString(PremiumDamageSkin ? "" : "»ç¿ë ÁßÀÎ µ¥¹ÌÁö ½ºÅ²ÀÌ´Ù.\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n");
+        packet.writeMapleAsciiString(PremiumDamageSkin ? "" : "ì‚¬ìš© ì¤‘ì¸ ë°ë¯¸ì§€ ìŠ¤í‚¨ì´ë‹¤.\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n");
         //---------- PremiumDamageSkin ------------//
         packet.writeInt(PremiumDamageSkin ? chr.getDamageSkin() : -1);
         packet.writeInt(PremiumDamageSkin ? GameConstants.getDamageSkinItemByNumber(chr.getDamageSkin()) : 0);
         packet.write(PremiumDamageSkin ? 0 : 1);
-        packet.writeMapleAsciiString(PremiumDamageSkin ? "»ç¿ë ÁßÀÎ ÇÁ¸®¹Ì¾ö µ¥¹ÌÁö ½ºÅ²ÀÌ´Ù.\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n" : "");
+        packet.writeMapleAsciiString(PremiumDamageSkin ? "ì‚¬ìš© ì¤‘ì¸ í”„ë¦¬ë¯¸ì—„ ë°ë¯¸ì§€ ìŠ¤í‚¨ì´ë‹¤.\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n" : "");
         //------------- nSlotCount --------------//
         packet.writeShort(chr.getDamageSkinSlot());
         //---------- SavedDamageSkin -------------//
@@ -7475,7 +7475,7 @@ public class MainPacketCreator {
             packet.writeInt(ds.getRight());
             packet.writeInt(ds.getLeft());
             packet.write(0);
-            packet.writeMapleAsciiString("ÀúÀåµÈ µ¥¹ÌÁö ½ºÅ²ÀÌ´Ù.\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n");
+            packet.writeMapleAsciiString("ì €ì¥ëœ ë°ë¯¸ì§€ ìŠ¤í‚¨ì´ë‹¤.\\r\\n\\r\\n\\r\\n\\r\\n\\r\\n");
         }
     }
 
@@ -7560,8 +7560,8 @@ public class MainPacketCreator {
         //0A 00 03 3C 00 00 00
         mplew.writeShort(SendPacketOpcode.INTERNET_CAFE.getValue());
 
-        mplew.write(type); //2, 3 = ÇÁ¸®¹Ì¾ö ÇÇ½Ã¹æ È°¼ºÈ­ / ÀÌ¿ÜÄÚµå = ÇÇ½Ã¹æ Á¤·® ½Ã°£ ¸¸·á
-        mplew.writeInt(time); //½Ã°£ °è»ê EX) 60 = 1½Ã°£, 30 = 30ºĞ, 1 = 1ºĞ
+        mplew.write(type); //2, 3 = í”„ë¦¬ë¯¸ì—„ í”¼ì‹œë°© í™œì„±í™” / ì´ì™¸ì½”ë“œ = í”¼ì‹œë°© ì •ëŸ‰ ì‹œê°„ ë§Œë£Œ
+        mplew.writeInt(time); //ì‹œê°„ ê³„ì‚° EX) 60 = 1ì‹œê°„, 30 = 30ë¶„, 1 = 1ë¶„
         return mplew.getPacket();
     }
 
@@ -7605,7 +7605,7 @@ public class MainPacketCreator {
         packet.writeInt(oid);
         packet.writeInt(skillID);
         packet.writeInt(0); //type
-        packet.writeInt(count); //¹öÇÁ È¿°ú
+        packet.writeInt(count); //ë²„í”„ íš¨ê³¼
         return packet.getPacket();
     }
 
@@ -7635,7 +7635,7 @@ public class MainPacketCreator {
         packet.writeInt(skillID);
 
         for (int i = 0; i < wreakageList.size(); ++i) {
-            packet.write(1); // 0ÀÌµÉ¶§±îÁö ¹İº¹
+            packet.write(1); // 0ì´ë ë•Œê¹Œì§€ ë°˜ë³µ
             packet.writeInt(i + 2); // key
             packet.writeInt(1); // inc
             packet.writeInt(28 + i); // firstImpact
@@ -7648,7 +7648,7 @@ public class MainPacketCreator {
             packet.writeInt(0); // maxHitCount
             packet.writeInt(0); // effectIdx
         }
-        packet.write(0); // ¹İº¹ Á¾·á
+        packet.write(0); // ë°˜ë³µ ì¢…ë£Œ
         return packet.getPacket();
     }
 
@@ -7670,13 +7670,13 @@ public class MainPacketCreator {
         packet.writeShort(SendPacketOpcode.FREE_JOB_RESULT.getValue());
         /*
          * 0 :
-         * 1 : ÀÚÀ¯ÀüÁ÷ÀÌ ºÒ°¡´ÉÇÑ Á÷¾÷±ºÀÔ´Ï´Ù.
-         * 2 : ¾Ë ¼ö ¾ø´Â ¿À·ù·Î ÀüÁ÷¿¡ ½ÇÆĞ ÇÏ¿´½À´Ï´Ù.
-         * 3 : ÀÚÀ¯ÀüÁ÷ ºñ¿ëÀÌ ºÎÁ·ÇÕ´Ï´Ù.
-         * 4 : ÇØ´ç Á÷¾÷±ºÀ¸·Î´Â ÀÚÀ¯ÀüÁ÷À» ÇÒ ¼ö ¾ø½À´Ï´Ù.
-         * 5 : ¾ÆÁ÷ ÀüÁ÷ ÇÏ½Ç¼ö ¾ø½À´Ï´Ù. Àá½ÃÈÄ ´Ù½Ã ½ÃµµÇØÁÖ¼¼¿ä
-         * 6 : ÀÚÀ¯ ÀüÁ÷Àº ÇÏ·ç¿¡ ÇÑ¹ø¸¸ ÁøÇà °¡´ÉÇÕ´Ï´Ù. 12½ÃÀÌÈÄ¿¡ ´Ù½Ã ½ÃµµÇÏ¿© ÁÖ¼¼¿ä
-         * 7 : ÀÚÀ¯ÀüÁ÷ ÈÄ Àåºñ »óÀÚ¸¦ Áö±ŞÇØµå¸®°í ÀÖÀ¸³ª ºó °ø°£ÀÌ ºÎÁ·ÇÕ´Ï´Ù. ¼Òºñ Ã¢ 1Ä­À» ºñ¿ì°í ´Ù½Ã ½ÃµµÇØÁÖ¼¼¿ä
+         * 1 : ììœ ì „ì§ì´ ë¶ˆê°€ëŠ¥í•œ ì§ì—…êµ°ì…ë‹ˆë‹¤.
+         * 2 : ì•Œ ìˆ˜ ì—†ëŠ” ì˜¤ë¥˜ë¡œ ì „ì§ì— ì‹¤íŒ¨ í•˜ì˜€ìŠµë‹ˆë‹¤.
+         * 3 : ììœ ì „ì§ ë¹„ìš©ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.
+         * 4 : í•´ë‹¹ ì§ì—…êµ°ìœ¼ë¡œëŠ” ììœ ì „ì§ì„ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
+         * 5 : ì•„ì§ ì „ì§ í•˜ì‹¤ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ì ì‹œí›„ ë‹¤ì‹œ ì‹œë„í•´ì£¼ì„¸ìš”
+         * 6 : ììœ  ì „ì§ì€ í•˜ë£¨ì— í•œë²ˆë§Œ ì§„í–‰ ê°€ëŠ¥í•©ë‹ˆë‹¤. 12ì‹œì´í›„ì— ë‹¤ì‹œ ì‹œë„í•˜ì—¬ ì£¼ì„¸ìš”
+         * 7 : ììœ ì „ì§ í›„ ì¥ë¹„ ìƒìë¥¼ ì§€ê¸‰í•´ë“œë¦¬ê³  ìˆìœ¼ë‚˜ ë¹ˆ ê³µê°„ì´ ë¶€ì¡±í•©ë‹ˆë‹¤. ì†Œë¹„ ì°½ 1ì¹¸ì„ ë¹„ìš°ê³  ë‹¤ì‹œ ì‹œë„í•´ì£¼ì„¸ìš”
          * */
 
         packet.write(value);
@@ -7711,7 +7711,7 @@ public class MainPacketCreator {
         p.writeInt(delay);
         p.writeInt(targetId);
         p.writeInt(userRequestTime);
-        /* ÁÂÇ¥ ¾÷µ¥ÀÌÆ®*/
+        /* ì¢Œí‘œ ì—…ë°ì´íŠ¸*/
         p.write(direction);
         p.writePos(position);
         return p.getPacket();

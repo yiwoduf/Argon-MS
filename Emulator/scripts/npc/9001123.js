@@ -3,19 +3,19 @@
 
 /*
 
-	* �ܹ����ǽ� �ڵ����� ��ũ��Ʈ�� ���� ������� ��ũ��Ʈ �Դϴ�.
+	* 단문엔피시 자동제작 스크립트를 통해 만들어진 스크립트 입니다.
 
 	* (Guardian Project Development Source Script)
 
-	Ÿ�� �� ���� ����� �����ϴ�.
+	타임 에 의해 만들어 졌습니다.
 
-	���ǽþ��̵� : 9001123
+	엔피시아이디 : 9001123
 
-	���ǽ� �̸� : ��帮ġ
+	엔피시 이름 : 골드리치
 
-	���ǽð� �ִ� �� :  :  (0)
+	엔피시가 있는 맵 :  :  (0)
 
-	���ǽ� ���� : �ݰ��� ����
+	엔피시 설명 : 금고의 주인
 
 
 */
@@ -35,12 +35,12 @@ function action(mode, type, selection) {
 	cm.dispose();
 	return;
     }
-	//���� 2300000 , ��õ� 9300008
+	//스우 2300000 , 루시드 9300008
     if (status == 0) {
-	var chat = "#i3992025##i3992025# #b ����� ���̵� ���";
-chat += "\r\n#r#L24##fUI/UIWindow2.img/MobGage/Mob/8820001#ī������ũ��#l  #r#L30000##i3015155#����#l";
-chat += "\r\n#r#L25##fUI/UIWindow2.img/MobGage/Mob/8850011#�ñ׳ʽ�����#l  #r#L30001##i3015637# ��õ�#l" ;
-chat += "\r\n#d#L29# ��ȭ�� �׸� �Ѵ�.#l";
+	var chat = "#i3992025##i3992025# #b 어려움 난이도 출력";
+chat += "\r\n#r#L24##fUI/UIWindow2.img/MobGage/Mob/8820001#카오스핑크빈#l  #r#L30000##i3015155#스우#l";
+chat += "\r\n#r#L25##fUI/UIWindow2.img/MobGage/Mob/8850011#시그너스여제#l  #r#L30001##i3015637# 루시드#l" ;
+chat += "\r\n#d#L29# 대화를 그만 한다.#l";
 
 
 	cm.sendSpirit(chat,true,0);

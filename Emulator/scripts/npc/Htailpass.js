@@ -13,7 +13,7 @@ function action(mode, type, selection) {
 	return;
     }
     if (status == 0) {
-        cm.sendNextS("(¾Õ ÂÊ¿¡ È¥Å×ÀÏÀÇ µ¿±¼ÀÌ º¸ÀÎ´Ù. µé¾î°¡ÀÚ.)",2);
+        cm.sendNextS("(ì• ìª½ì— í˜¼í…Œì¼ì˜ ë™êµ´ì´ ë³´ì¸ë‹¤. ë“¤ì–´ê°€ì.)",2);
     } else if (status == 1) {
         cm.warp(240050000,0);
         cm.dispose();

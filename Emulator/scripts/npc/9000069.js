@@ -28,17 +28,17 @@ function action1(mode, type, selection, chrs) {
 		return;
 	}
 	if (status == 0) {
-		cm.sendYesNo(info + "\r\n������ ���� ������û�� ��� �Խ��ϴ�. �³��ҽ� �ٷ� PVP�� ���۵˴ϴ�.");
+		cm.sendYesNo(info + "\r\n님으로 부터 대전신청이 들어 왔습니다. 승낙할시 바로 PVP가 시작됩니다.");
 	} else {
 		if (cm.getChar(chr.getName()) == null) {
-			cm.sendOk(chr.getName() + "���� ���� �� �ʿ� �������� �ʾƿ�.");
+			cm.sendOk(chr.getName() + "님이 현재 이 맵에 존재하지 않아요.");
 			cm.dispose();
 			return;
 		}
 		cm.timeMoveMap(100000000,960040002,600);
 		chr.timeMoveMap(100000000,960040002,600);
-		cm.getPlayer().dropMessage(1,"���ѽð� 10�оȿ� ������ ���� óġ �ϴ����� �¸� �մϴ�.");
-		chr.dropMessage(1,"���ѽð� 10�оȿ� ������ ���� óġ �ϴ����� �¸� �մϴ�.");
+		cm.getPlayer().dropMessage(1,"제한시간 10분안에 상대방을 먼저 처치 하는쪽이 승리 합니다.");
+		chr.dropMessage(1,"제한시간 10분안에 상대방을 먼저 처치 하는쪽이 승리 합니다.");
 		cm.dispose();
 	}
 }
@@ -56,60 +56,60 @@ function action(mode, type, selection) {
 	return;
     }
     if (status == 0) {
-        var chat = "������ ����.. �� �ƴϰ�!! ����� ���ϽŴٸ� PVP ����!! �����?";
-	chat += "\r\n#b#L0##e1 vs 1 PVP�� �̿� �ϰڽ��ϴ�.#l";
-	chat += "\r\n#L2#��Ʋ ����Ʈ�� �������� ��ȯ �ϰڽ��ϴ�.#l";
-	chat += "\r\n#L3#��Ʋ ����Ʈ�� �ʱ�ȭ �ϰڽ��ϴ�.#l";
+        var chat = "진정한 현ㅍ.. 가 아니고!! 대결을 원하신다면 PVP 한판!! 어떠세요?";
+	chat += "\r\n#b#L0##e1 vs 1 PVP를 이용 하겠습니다.#l";
+	chat += "\r\n#L2#배틀 포인트로 아이템을 교환 하겠습니다.#l";
+	chat += "\r\n#L3#배틀 포인트를 초기화 하겠습니다.#l";
 	cm.sendSimple(chat);
     } else if (status == 1) {
 	sel = selection;
 	if (selection == 0) {
 		if (cm.getPlayerCount(960040002) > 0) {
-			cm.sendOk("�̹� �ٸ� �÷��̾���� PVP�� �̿��ϰ� ������ �ٸ�ä���� �̿����ֽø� �����ϰھ��");
+			cm.sendOk("이미 다른 플레이어들이 PVP를 이용하고 있으니 다른채널을 이용해주시면 감사하겠어요");
 			cm.dispose();
 			return;
 		}
 		if (cm.getPlayer().getRankPoint() < 20) {
-			cm.sendOk("PVP�� �̿��ϱ� ���ؼ� ��Ʋ ����Ʈ�� 20�̻��� �ʿ� �մϴ�. #Cgray#��Ʋ ����Ʈ �ʱ�ȭ ����� �̿��� �ּ���");
+			cm.sendOk("PVP를 이용하기 위해선 배틀 포인트가 20이상은 필요 합니다. #Cgray#배틀 포인트 초기화 기능을 이용해 주세요");
 			cm.dispose();
 			return;
 		}
-		cm.sendGetText("����� ���ϴ� ������ �г����� �Է��� �ּ���.");
+		cm.sendGetText("대결을 원하는 상대방의 닉네임을 입력해 주세요.");
 	} else if (selection == 2) {
-		var chat = "��ȯ �ϰ����� �������� �����غ�����.";
+		var chat = "교환 하고싶은 아이템을 선택해보세요.";
 		chat += "\r\n\r\n";
-		chat += "���� #b#h #���� ���� ��Ʋ����Ʈ : #e#r"+cm.getPlayer().getRankPoint() +"#n#k\r\n";
+		chat += "　◆ #b#h #님의 보유 배틀포인트 : #e#r"+cm.getPlayer().getRankPoint() +"#n#k\r\n";
 		for (var i = 0; i < itemlist.length; i ++) {
-			chat += "#L" + i + "# #b#i" + itemlist[i][0] + "# #z" + itemlist[i][0] + "# #k#e: " + itemlist[i][1] + "����Ʈ#n#l\r\n";
+			chat += "#L" + i + "# #b#i" + itemlist[i][0] + "# #z" + itemlist[i][0] + "# #k#e: " + itemlist[i][1] + "포인트#n#l\r\n";
 		}
 		cm.sendSimple(chat);
 	} else if (selection == 3) {
-		cm.sendYesNo("��Ʋ ����Ʈ�� �ʱ�ȭ�� �ϴµ� �ʿ��� ����� #e#b100,000,000 �޼�#n#k�� �ʿ� �ϸ� ��Ʋ ����Ʈ�� 500 ����Ʈ�� ���� �˴ϴ�.");
+		cm.sendYesNo("배틀 포인트를 초기화를 하는데 필요한 비용은 #e#b100,000,000 메소#n#k가 필요 하며 배틀 포인트가 500 포인트로 설정 됩니다.");
 	}
     } else if (status == 2) {
 	if (sel == 0) {
 		if (cm.getPlayer().getName() == cm.getText()) {
-			cm.sendOk("���ΰ��� �ο��� ���� �ȵ��ݾƿ�!!");
+			cm.sendOk("본인과의 싸움은 말이 안되잖아요!!");
 			cm.dispose();
 			return;
 		}
 		chr = cm.getChar(cm.getText());
 		if (chr != null) {
-			cm.sendYesNo("#Cgray##e�г��� : " + chr.getName() + "\r\n#r���� : " + chr.getLevel() + "#n#k\r\n�Կ��� ������ ���� ��û�� �����ðھ��?");
+			cm.sendYesNo("#Cgray##e닉네임 : " + chr.getName() + "\r\n#r레벨 : " + chr.getLevel() + "#n#k\r\n님에게 정말로 대전 신청을 보내시겠어요?");
 		} else {
-			cm.sendOk("�Է��Ͻ� ���� ���� �̸ʿ� ����� �ʾƿ�");
+			cm.sendOk("입력하신 분은 현재 이맵에 계시지 않아요");
 			cm.dispose();
 		}
 	} else if (sel == 2) {
 		sel2 = selection;
-		cm.sendYesNo("#i" + itemlist[sel2][0] + "# #Cgray##e" + itemlist[sel2][0] + "#r\r\n" + itemlist[sel2][1] + "��Ʋ ����Ʈ\r\n�� ������ ��ȯ �Ͻðھ��?");
+		cm.sendYesNo("#i" + itemlist[sel2][0] + "# #Cgray##e" + itemlist[sel2][0] + "#r\r\n" + itemlist[sel2][1] + "배틀 포인트\r\n을 정말로 교환 하시겠어요?");
 	} else if (sel == 3) {
 		if (cm.getPlayer().getMeso() >= 100000000) {
 			cm.getPlayer().setRankPoint(500);
-			cm.sendOk("��Ʋ ����Ʈ �ʱ�ȭ�� �Ϸ� �Ͽ����ϴ�.");
+			cm.sendOk("배틀 포인트 초기화를 완료 하였습니다.");
 			cm.dispose();
 		} else {
-			cm.sendOk("��Ʋ ����Ʈ�� �ʱ�ȭ �ϱ� ���ؼ� #e#b100,000,000 �޼�#n#k�� �ʿ� �մϴ�.");
+			cm.sendOk("배틀 포인트를 초기화 하기 위해선 #e#b100,000,000 메소#n#k가 필요 합니다.");
 			cm.dispose();
 		}
 	}
@@ -117,33 +117,33 @@ function action(mode, type, selection) {
 	if (sel == 0) {
 		if (chr.getLevel() >= cm.getPlayer().getLevel()) {
 			if ((chr.getLevel() - cm.getPlayer().getLevel()) > 50) {
-				cm.sendOk("PVP�� ���� ���� 50 �̻�,���� ���̳��� �̿��� �Ұ��� �մϴ�.");
+				cm.sendOk("PVP는 상대와 레벨 50 이상,이하 차이날시 이용이 불가능 합니다.");
 				cm.dispose();
 				return;
 			}
 		} else if (chr.getLevel() <= cm.getPlayer().getLevel()) {
 			if ((cm.getPlayer().getLevel() - chr.getLevel()) > 50) {
-				cm.sendOk("PVP�� ���� ���� 50 �̻�,���� ���̳��� �̿��� �Ұ��� �մϴ�.");
+				cm.sendOk("PVP는 상대와 레벨 50 이상,이하 차이날시 이용이 불가능 합니다.");
 				cm.dispose();
 				return;
 			}
 		}
-		cm.sendOk("#Cgray##e�г��� : " + chr.getName() + "\r\n#r���� : " + chr.getLevel() + "#n#k\r\n�Կ��� ���� ��û�� ���½��ϴ�. ������ ���� ��û�� �³� �ҽ� �ٷ� PVP�� ���� �˴ϴ�.");
-		cm.sendPVP("#Cgray##e�г��� : " + cm.getPlayer().getName() + "\r\n#r���� : " + cm.getPlayer().getLevel() + "#n#k", cm.getPlayer(), chr);
+		cm.sendOk("#Cgray##e닉네임 : " + chr.getName() + "\r\n#r레벨 : " + chr.getLevel() + "#n#k\r\n님에게 대전 신청을 보냈습니다. 상대방이 대전 신청을 승낙 할시 바로 PVP가 시작 됩니다.");
+		cm.sendPVP("#Cgray##e닉네임 : " + cm.getPlayer().getName() + "\r\n#r레벨 : " + cm.getPlayer().getLevel() + "#n#k", cm.getPlayer(), chr);
 		cm.dispose();
 	} else if (sel == 2) {
 		if (cm.getPlayer().getRankPoint() >= itemlist[sel2][1]) {
 			if (!cm.canHold(itemlist[sel2][0])) {
-				cm.sendOk("�����Ͻ� �������� ��ȯ �ϱ⿡�� �κ��丮�� ������ �����մϴ�.");
+				cm.sendOk("선택하신 아이템을 교환 하기에는 인벤토리에 공간이 부족합니다.");
 				cm.dispose();
 				return;
 			}
 			cm.gainItem(itemlist[sel2][0],1);
 			cm.getPlayer().addRankPoint(-itemlist[sel2][1]);
-			cm.sendOk("�����Ͻ� �������� ���� �ص������ �κ��丮�� Ȯ���� ������.");
+			cm.sendOk("선택하신 아이템을 지급 해드렸으니 인벤토리를 확인해 보세요.");
 			cm.dispose();
 		} else {
-			cm.sendOk("�����Ͻ� �������� ��ȯ�ϱ⿡�� ��Ʋ ����Ʈ�� �����ؿ�");
+			cm.sendOk("선택하신 아이템을 교환하기에는 배틀 포인트가 부족해요");
 			cm.dispose();
 		}
 	}

@@ -18,7 +18,7 @@ function action(mode, type, selection) {
 			cm.dispose();
 			return;
 		} else {
-			cm.getPlayer().dropMessage(6, "¸ó½ºÅÍ¸¦ ¸ğµÎ Ã³Ä¡ÇØ¾ß ½Ã±×³Ê½ºÀÇ Á¤¿øÀ¸·Î ÀÌµ¿ÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.")
+			cm.getPlayer().dropMessage(6, "ëª¬ìŠ¤í„°ë¥¼ ëª¨ë‘ ì²˜ì¹˜í•´ì•¼ ì‹œê·¸ë„ˆìŠ¤ì˜ ì •ì›ìœ¼ë¡œ ì´ë™í•˜ì‹¤ ìˆ˜ ìˆìŠµë‹ˆë‹¤.")
                         cm.dispose();
 		}
 

@@ -64,7 +64,7 @@ public class ChatHandler {
                     if (chr.getBuddylist().containsVisible(cid) || chr.getId() == cid) {
                         mcc.sendPacket(ChatPacket.OnFriendChatMessage(mc, text));
                         if (chr.getId() == cid) {
-                            AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[模备][Ch." + chr.getClient().getChannel() + "]" + chr.getName() + " : " + text));
+                            AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[旃滉惮][Ch." + chr.getClient().getChannel() + "]" + chr.getName() + " : " + text));
                         }
                     }
                 }
@@ -82,7 +82,7 @@ public class ChatHandler {
                         if (chr.getGuild().getId() == gid) {
                             mcc.sendPacket(ChatPacket.OnGuildChatMessage(mc, text));
                             if (chr.getId() == mc.getSenderCID()) {
-                                AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[模备][Ch." + chr.getClient().getChannel() + "]" + chr.getName() + " : " + text));
+                                AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[旃滉惮][Ch." + chr.getClient().getChannel() + "]" + chr.getName() + " : " + text));
                             }
                         }
                     }

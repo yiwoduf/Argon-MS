@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -69,10 +69,10 @@ public class LoginServer {
                 ps.close();
                 con.close();
             } catch (SQLException ex) {
-                throw new RuntimeException("[¿À·ù] ¸ğµç Ä³¸¯ÅÍ¸¦ Á¢¼ÓÁ¾·á ½ÃÅ°´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù. µ¥ÀÌÅÍº£ÀÌ½º ¿¬°áÀÌ ¿Ã¹Ù¸¥Áö È®ÀÎÇØ ÁÖ¼¼¿ä.");
+                throw new RuntimeException("[ì˜¤ë¥˜] ëª¨ë“  ìºë¦­í„°ë¥¼ ì ‘ì†ì¢…ë£Œ ì‹œí‚¤ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤. ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²°ì´ ì˜¬ë°”ë¥¸ì§€ í™•ì¸í•´ ì£¼ì„¸ìš”.");
             }
         } catch (Exception re) {
-            System.err.println("[¿À·ù] ·Î±×ÀÎ ¼­¹ö ½ÇÇàÁß ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] ë¡œê·¸ì¸ ì„œë²„ ì‹¤í–‰ì¤‘ ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
             if (!ServerConstants.realese) {
                 re.printStackTrace();
             }
@@ -100,7 +100,7 @@ public class LoginServer {
                     .option(ChannelOption.SO_BACKLOG, 128)
                     .childOption(ChannelOption.SO_KEEPALIVE, true);
             ChannelFuture f = bootstrap.bind(PORT).sync(); // (7)
-            /* ¼ÒÄÏ ¼³Á¤ Á¾·á */
+            /* ì†Œì¼“ ì„¤ì • ì¢…ë£Œ */
             Start.println("[ARGON] Loggin Server " + PORT + " Port successfully opened.", 36);
         } catch (InterruptedException e) {
             Start.println("[ERROR] Loggin Server " + PORT + " Port error!", 36);
@@ -111,7 +111,7 @@ public class LoginServer {
     }
 
     public void shutdown() {
-        System.out.println("[Á¾·á] ¼­¹ö¸¦ Á¾·áÇÕ´Ï´Ù..");
+        System.out.println("[ì¢…ë£Œ] ì„œë²„ë¥¼ ì¢…ë£Œí•©ë‹ˆë‹¤..");
         WorldTimer.getInstance().stop();
         Running = false;
     }

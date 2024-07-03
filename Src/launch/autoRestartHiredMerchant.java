@@ -107,11 +107,11 @@ public class autoRestartHiredMerchant {
                 }
                 con.close();
             } else {
-                Start.println("[¿À·ù] °í¿ë»óÁ¡À» Àç¼ÒÈ¯ ÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù. ÇØ´ç ¾ÆÀÌµğ°¡ ¾ø½À´Ï´Ù. : " + merchid, 34);
+                Start.println("[ì˜¤ë¥˜] ê³ ìš©ìƒì ì„ ì¬ì†Œí™˜ í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤. í•´ë‹¹ ì•„ì´ë””ê°€ ì—†ìŠµë‹ˆë‹¤. : " + merchid, 34);
             }
 
         } catch (Exception e) {
-            Start.println("[¿À·ù] °í¿ë»óÁ¡À» Àç¼ÒÈ¯ ÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.", 34);
+            Start.println("[ì˜¤ë¥˜] ê³ ìš©ìƒì ì„ ì¬ì†Œí™˜ í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.", 34);
             if (!ServerConstants.realese) {
                 e.printStackTrace();
             }

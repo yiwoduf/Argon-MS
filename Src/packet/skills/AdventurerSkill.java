@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -22,7 +22,7 @@ public class AdventurerSkill {
         PacketProvider.writeSingleMask(packet, BuffStats.CTS_Beholder);
         packet.writeShort(1);
         packet.writeInt(1301013);
-        packet.writeInt(400000); //Áö¼Ó½Ã°£, ³» ¸¶À½´ë·Î~
+        packet.writeInt(400000); //ì§€ì†ì‹œê°„, ë‚´ ë§ˆìŒëŒ€ë¡œ~
         packet.writeInt(0);
         packet.write(5);
         packet.writeInt(isDominant ? 1311013 : 1301013);

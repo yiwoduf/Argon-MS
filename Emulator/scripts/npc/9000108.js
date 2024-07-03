@@ -19,12 +19,12 @@ function action(mode, type, selection) {
             status--;
         if (status == 0) {
 		if (!cm.haveItem(2431156,1)) {
-			cm.sendOk("°³»õ³¢");
+			cm.sendOk("ê°œìƒˆë¼");
 			cm.dispose();
 			return;
 		}
 		var rand = Randomizer.nextInt(itemid.length);
-		cm.sendOk("ÃàÇÏÇØ~ ÇÖÅ¸ÀÓ »óÀÚ¿¡¼­ #i" + itemid[rand] + "##b #z" + itemid[rand] + "# " + number[rand] + "°³#k°¡ ³ª¿Ô¾î");
+		cm.sendOk("ì¶•í•˜í•´~ í•«íƒ€ì„ ìƒìì—ì„œ #i" + itemid[rand] + "##b #z" + itemid[rand] + "# " + number[rand] + "ê°œ#kê°€ ë‚˜ì™”ì–´");
 		cm.gainItem(itemid[rand],number[rand]);
 		cm.gainItem(2431156,-1);
 		cm.dispose();

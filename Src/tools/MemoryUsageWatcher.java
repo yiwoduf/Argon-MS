@@ -1,5 +1,5 @@
 /*
-    ±è½ÂÇö
+    ê¹€ìŠ¹í˜„
  */
 package tools;
 
@@ -66,48 +66,48 @@ public class MemoryUsageWatcher extends Thread {
                                         for (int i = 0; i < ServerConstants.AutoHotTimeSundayItemCode.size(); i++) {
                                             chr.gainItem(ServerConstants.AutoHotTimeSundayItemCode.get(i), ServerConstants.AutoHotTimeSundayItemCount.get(i), false, -1, null);
                                         }
-                                        System.out.println("[ARGON] ÃÑ " + cs.getPlayerStorage().getOnlinePlayers(false) + "¸í¿¡°Ô ¾ÆÀÌÅÛÀ» Áö±Þ ÇÏ¿´½À´Ï´Ù");
+                                        System.out.println("[ARGON] ì´ " + cs.getPlayerStorage().getOnlinePlayers(false) + "ëª…ì—ê²Œ ì•„ì´í…œì„ ì§€ê¸‰ í•˜ì˜€ìŠµë‹ˆë‹¤");
                                         break;
                                     }
                                     case 2: {
                                         for (int i = 0; i < ServerConstants.AutoHotTimeMondayItemCode.size(); i++) {
                                             chr.gainItem(ServerConstants.AutoHotTimeMondayItemCode.get(i), ServerConstants.AutoHotTimeMondayItemCount.get(i), false, -1, null);
                                         }
-                                        System.out.println("[ARGON] ÃÑ " + cs.getPlayerStorage().getOnlinePlayers(false) + "¸í¿¡°Ô ¾ÆÀÌÅÛÀ» Áö±Þ ÇÏ¿´½À´Ï´Ù");
+                                        System.out.println("[ARGON] ì´ " + cs.getPlayerStorage().getOnlinePlayers(false) + "ëª…ì—ê²Œ ì•„ì´í…œì„ ì§€ê¸‰ í•˜ì˜€ìŠµë‹ˆë‹¤");
                                         break;
                                     }
                                     case 3:
                                         for (int i = 0; i < ServerConstants.AutoHotTimeTuesdayItemCode.size(); i++) {
                                             chr.gainItem(ServerConstants.AutoHotTimeTuesdayItemCode.get(i), ServerConstants.AutoHotTimeTuesdayItemCount.get(i), false, -1, null);
                                         }
-                                        System.out.println("[ARGON] ÃÑ " + cs.getPlayerStorage().getOnlinePlayers(false) + "¸í¿¡°Ô ¾ÆÀÌÅÛÀ» Áö±Þ ÇÏ¿´½À´Ï´Ù");
+                                        System.out.println("[ARGON] ì´ " + cs.getPlayerStorage().getOnlinePlayers(false) + "ëª…ì—ê²Œ ì•„ì´í…œì„ ì§€ê¸‰ í•˜ì˜€ìŠµë‹ˆë‹¤");
                                         break;
                                     case 4:
                                         for (int i = 0; i < ServerConstants.AutoHotTimeWednesdayItemCode.size(); i++) {
                                             chr.gainItem(ServerConstants.AutoHotTimeWednesdayItemCode.get(i), ServerConstants.AutoHotTimeWednesdayItemCount.get(i), false, -1, null);
                                         }
-                                        System.out.println("[ARGON] ÃÑ " + cs.getPlayerStorage().getOnlinePlayers(false) + "¸í¿¡°Ô ¾ÆÀÌÅÛÀ» Áö±Þ ÇÏ¿´½À´Ï´Ù");
+                                        System.out.println("[ARGON] ì´ " + cs.getPlayerStorage().getOnlinePlayers(false) + "ëª…ì—ê²Œ ì•„ì´í…œì„ ì§€ê¸‰ í•˜ì˜€ìŠµë‹ˆë‹¤");
                                         break;
                                     case 5:
                                         for (int i = 0; i < ServerConstants.AutoHotTimeThursdayItemCode.size(); i++) {
                                             chr.gainItem(ServerConstants.AutoHotTimeThursdayItemCode.get(i), ServerConstants.AutoHotTimeThursdayItemCount.get(i), false, -1, null);
                                         }
-                                        System.out.println("[ARGON] ÃÑ " + cs.getPlayerStorage().getOnlinePlayers(false) + "¸í¿¡°Ô ¾ÆÀÌÅÛÀ» Áö±Þ ÇÏ¿´½À´Ï´Ù");
+                                        System.out.println("[ARGON] ì´ " + cs.getPlayerStorage().getOnlinePlayers(false) + "ëª…ì—ê²Œ ì•„ì´í…œì„ ì§€ê¸‰ í•˜ì˜€ìŠµë‹ˆë‹¤");
                                         break;
                                     case 6:
                                         for (int i = 0; i < ServerConstants.AutoHotTimeFridayItemCode.size(); i++) {
                                             chr.gainItem(ServerConstants.AutoHotTimeFridayItemCode.get(i), ServerConstants.AutoHotTimeFridayItemCount.get(i), false, -1, null);
                                         }
-                                        System.out.println("[ARGON] ÃÑ " + cs.getPlayerStorage().getOnlinePlayers(false) + "¸í¿¡°Ô ¾ÆÀÌÅÛÀ» Áö±Þ ÇÏ¿´½À´Ï´Ù");
+                                        System.out.println("[ARGON] ì´ " + cs.getPlayerStorage().getOnlinePlayers(false) + "ëª…ì—ê²Œ ì•„ì´í…œì„ ì§€ê¸‰ í•˜ì˜€ìŠµë‹ˆë‹¤");
                                         break;
                                     case 7:
                                         for (int i = 0; i < ServerConstants.AutoHotTimeSaturdayItemCode.size(); i++) {
                                             chr.gainItem(ServerConstants.AutoHotTimeSaturdayItemCode.get(i), ServerConstants.AutoHotTimeSaturdayItemCount.get(i), false, -1, null);
                                         }
-                                        System.out.println("[ARGON] ÃÑ " + cs.getPlayerStorage().getOnlinePlayers(false) + "¸í¿¡°Ô ¾ÆÀÌÅÛÀ» Áö±Þ ÇÏ¿´½À´Ï´Ù");
+                                        System.out.println("[ARGON] ì´ " + cs.getPlayerStorage().getOnlinePlayers(false) + "ëª…ì—ê²Œ ì•„ì´í…œì„ ì§€ê¸‰ í•˜ì˜€ìŠµë‹ˆë‹¤");
                                         break;
                                 }
-                                WorldBroadcasting.broadcastMessage(MainPacketCreator.serverNotice(1, "[¿ÀÅä ÇÖÅ¸ÀÓ] ÇÖÅ¸ÀÓ ¾ÆÀÌÅÛÀ» Áö±Þ ¹ÞÀ¸¼Ë½À´Ï´Ù."));
+                                WorldBroadcasting.broadcastMessage(MainPacketCreator.serverNotice(1, "[ì˜¤í†  í•«íƒ€ìž„] í•«íƒ€ìž„ ì•„ì´í…œì„ ì§€ê¸‰ ë°›ìœ¼ì…§ìŠµë‹ˆë‹¤."));
                                 ServerConstants.AutoHotTimeSystemtemchacks = false;
                             }
                         }

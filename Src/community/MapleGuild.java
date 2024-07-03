@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  *
  */
@@ -620,7 +620,7 @@ public class MapleGuild {
                         PreparedStatement ps = con.prepareStatement("INSERT INTO notes (`to`, `from`, `message`, `timestamp`) VALUES (?, ?, ?, ?)");
                         ps.setString(1, mgc.getName());
                         ps.setString(2, initiator.getName());
-                        ps.setString(3, "´ç½ÅÀº ±æµå¿¡¼­ Ãß¹æµÇ¾ú½À´Ï´Ù.");
+                        ps.setString(3, "ë‹¹ì‹ ì€ ê¸¸ë“œì—ì„œ ì¶”ë°©ë˜ì—ˆìŠµë‹ˆë‹¤.");
                         ps.setLong(4, System.currentTimeMillis());
                         ps.executeUpdate();
                         ps.close();
@@ -731,7 +731,7 @@ public class MapleGuild {
                     ChannelServer.setOfflineGuildStatus((short) this.id, (byte) newRank, cid);
                 }
                 mgc.setGuildRank(newRank);
-                broadcast(MainPacketCreator.serverNotice(5, "[±æµå ¾Ë¸²] " + mgc.getName() + "´ÔÀÇ Á÷À§°¡ [" + this.getRankTitle(newRank) + "](À¸)·Î º¯°æ µÇ¾ú½À´Ï´Ù."));
+                broadcast(MainPacketCreator.serverNotice(5, "[ê¸¸ë“œ ì•Œë¦¼] " + mgc.getName() + "ë‹˜ì˜ ì§ìœ„ê°€ [" + this.getRankTitle(newRank) + "](ìœ¼)ë¡œ ë³€ê²½ ë˜ì—ˆìŠµë‹ˆë‹¤."));
                 sendGuildInfo();
                 return true;
             }
@@ -760,7 +760,7 @@ public class MapleGuild {
 
     public final void createAlliance(final MapleClient c, final String name) {
         if (allianceid != 0) {
-            c.getPlayer().dropMessage(1, "ÀÌ¹Ì ¿¬ÇÕ¿¡ °¡ÀÔµÇ¾î ÀÖ½À´Ï´Ù.");
+            c.getPlayer().dropMessage(1, "ì´ë¯¸ ì—°í•©ì— ê°€ì…ë˜ì–´ ìˆìŠµë‹ˆë‹¤.");
             return;
         }
         if (checkAllianceName(name)) {
@@ -785,11 +785,11 @@ public class MapleGuild {
                 ps.close();
                 con.close();
                 writeToDB(false);
-                c.getPlayer().dropMessage(1, "¿¬ÇÕÀÌ ¼º°øÀûÀ¸·Î ¸¸µé¾îÁ³½À´Ï´Ù.");
+                c.getPlayer().dropMessage(1, "ì—°í•©ì´ ì„±ê³µì ìœ¼ë¡œ ë§Œë“¤ì–´ì¡ŒìŠµë‹ˆë‹¤.");
             } catch (SQLException a) {
             }
         } else {
-            c.getPlayer().dropMessage(1, "ÇØ´ç ÀÌ¸§Àº ÀÌ¹Ì »ç¿ëÁßÀÔ´Ï´Ù.");
+            c.getPlayer().dropMessage(1, "í•´ë‹¹ ì´ë¦„ì€ ì´ë¯¸ ì‚¬ìš©ì¤‘ì…ë‹ˆë‹¤.");
         }
     }
 
@@ -913,8 +913,8 @@ public class MapleGuild {
             packet.writeInt(mgc.getGuildRank());
             packet.writeInt(mgc.isOnline() ? 1 : 0);
             packet.writeInt(3);
-            packet.writeInt(500); // ±â¿©µµ
-            packet.writeInt(500); // ¾Ë ¼ö ¾øÀ½.
+            packet.writeInt(500); // ê¸°ì—¬ë„
+            packet.writeInt(500); // ì•Œ ìˆ˜ ì—†ìŒ.
             packet.writeInt(500); // IGP
             packet.writeLong(PacketProvider.getTime(-2));
         }
@@ -933,7 +933,7 @@ public class MapleGuild {
             mplew.writeInt(mgc.getGuildRank());
             mplew.writeInt(mgc.isOnline() ? 1 : 0);
             mplew.writeInt(3);
-            mplew.writeInt(500); // ±â¿©µµ
+            mplew.writeInt(500); // ê¸°ì—¬ë„
             mplew.writeInt(0);
             mplew.writeInt(500); // IGP
             mplew.writeLong(PacketProvider.getTime(-2));

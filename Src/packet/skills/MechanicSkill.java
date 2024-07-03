@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -21,19 +21,19 @@ import tools.Triple;
 
 /**
  *
- * @author ¿äÅ©(sch2307)
+ * @author ìš”í¬(sch2307)
  */
 public class MechanicSkill {
 
     /**
-     * ¸ŞÅ»¾Æ¸Ó : ÈŞ¸Õ
+     * ë©”íƒˆì•„ë¨¸ : íœ´ë¨¼
      *
      * @param statups
      * @param skillid
      * @param bufflength
      * @param mountid
      * @param smountid
-     * @return - ÆĞÅ¶°ªÀ» º¸³¿.
+     * @return - íŒ¨í‚·ê°’ì„ ë³´ëƒ„.
      */
     public static byte[] giveHuman(List<Triple<BuffStats, Integer, Boolean>> statups, int skillid, int bufflength, int mountid) {
         WritingPacket packet = new WritingPacket();
@@ -121,10 +121,10 @@ public class MechanicSkill {
     }
 
     /**
-     * ¸ŞÅ»¾Æ¸Ó : ÈŞ¸Õ Äµ½½¸ğ¼Ç
+     * ë©”íƒˆì•„ë¨¸ : íœ´ë¨¼ ìº”ìŠ¬ëª¨ì…˜
      *
-     * @param skillId - ÆĞÅ¶°ª ±¸ºĞ.
-     * @return - ÆĞÅ¶°ªÀ» º¸³¿.
+     * @param skillId - íŒ¨í‚·ê°’ êµ¬ë¶„.
+     * @return - íŒ¨í‚·ê°’ì„ ë³´ëƒ„.
      */
     public static byte[] cancelHuman() {
         WritingPacket packet = new WritingPacket();
@@ -138,10 +138,10 @@ public class MechanicSkill {
     }
 
     /**
-     * ¸ŞÅ»¾Æ¸Ó : ÅÊÅ© Äµ½½¸ğ¼Ç
+     * ë©”íƒˆì•„ë¨¸ : íƒ±í¬ ìº”ìŠ¬ëª¨ì…˜
      *
-     * @param skillId - ÆĞÅ¶°ª ±¸ºĞ.
-     * @return - ÆĞÅ¶°ªÀ» º¸³¿.
+     * @param skillId - íŒ¨í‚·ê°’ êµ¬ë¶„.
+     * @return - íŒ¨í‚·ê°’ì„ ë³´ëƒ„.
      */
     public static byte[] cancelTank() {
         WritingPacket packet = new WritingPacket();
@@ -155,10 +155,10 @@ public class MechanicSkill {
     }
 
     /**
-     * ¸ŞÅ»¾Æ¸Ó : ÈŞ¸Õ, ÅÊÅ© °øÅë ½ºÅÈ
+     * ë©”íƒˆì•„ë¨¸ : íœ´ë¨¼, íƒ±í¬ ê³µí†µ ìŠ¤íƒ¯
      *
-     * @param skillId - ÆĞÅ¶°ª ±¸ºĞ.
-     * @return - ÆĞÅ¶°ªÀ» º¸³¿.
+     * @param skillId - íŒ¨í‚·ê°’ êµ¬ë¶„.
+     * @return - íŒ¨í‚·ê°’ì„ ë³´ëƒ„.
      */
     public static byte[] giveMetalStats(int skillid) {
         WritingPacket packet = new WritingPacket();
@@ -199,11 +199,11 @@ public class MechanicSkill {
     }
 
     /**
-     * ¸ŞÄ«´Ğ ¿ÀÇÂ°ÔÀÌÆ® ¼ÒÈ¯ ÆĞÅ¶
+     * ë©”ì¹´ë‹‰ ì˜¤í”ˆê²Œì´íŠ¸ ì†Œí™˜ íŒ¨í‚·
      *
-     * @param door - ¸ŞÄ«´ĞÀÇ ¿ÀÇÂ°ÔÀÌÆ® Å¬·¡½º¸¦ ºÒ·¯¿È.
-     * @param active - ÀÛµ¿ÇÏ´ÂÁö ¾ÈÇÏ´ÂÁö ¿©ºÎ¸¦ ¹°À½.
-     * @return - ÆĞÅ¶°ªÀ» º¸³¿.
+     * @param door - ë©”ì¹´ë‹‰ì˜ ì˜¤í”ˆê²Œì´íŠ¸ í´ë˜ìŠ¤ë¥¼ ë¶ˆëŸ¬ì˜´.
+     * @param active - ì‘ë™í•˜ëŠ”ì§€ ì•ˆí•˜ëŠ”ì§€ ì—¬ë¶€ë¥¼ ë¬¼ìŒ.
+     * @return - íŒ¨í‚·ê°’ì„ ë³´ëƒ„.
      */
     public static byte[] mechDoorSpawn(MapleMechDoor door, boolean active) {
         WritingPacket packet = new WritingPacket();
@@ -226,11 +226,11 @@ public class MechanicSkill {
     }
 
     /**
-     * ¸ŞÄ«´Ğ ¿ÀÇÂ°ÔÀÌÆ® Ãë¼Ò ÆĞÅ¶
+     * ë©”ì¹´ë‹‰ ì˜¤í”ˆê²Œì´íŠ¸ ì·¨ì†Œ íŒ¨í‚·
      *
-     * @param door - ¸ŞÄ«´ĞÀÇ ¿ÀÇÂ°ÔÀÌÆ® Å¬·¡½º¸¦ ºÒ·¯¿È.
-     * @param active - ÀÛµ¿ÇÏ´ÂÁö ¾ÈÇÏ´ÂÁö ¿©ºÎ¸¦ ¹°À½.
-     * @return - ÆĞÅ¶°ªÀ» º¸³¿.
+     * @param door - ë©”ì¹´ë‹‰ì˜ ì˜¤í”ˆê²Œì´íŠ¸ í´ë˜ìŠ¤ë¥¼ ë¶ˆëŸ¬ì˜´.
+     * @param active - ì‘ë™í•˜ëŠ”ì§€ ì•ˆí•˜ëŠ”ì§€ ì—¬ë¶€ë¥¼ ë¬¼ìŒ.
+     * @return - íŒ¨í‚·ê°’ì„ ë³´ëƒ„.
      */
     public static byte[] mechDoorRemove(MapleMechDoor door, boolean active) {
         WritingPacket packet = new WritingPacket();
@@ -243,10 +243,10 @@ public class MechanicSkill {
     }
 
     /**
-     * ¸ŞÄ«´Ğ Æ÷Å»±¸ÇöÆĞÅ¶
+     * ë©”ì¹´ë‹‰ í¬íƒˆêµ¬í˜„íŒ¨í‚·
      *
-     * @param pos - ÇöÀç ÇÃ·¹ÀÌ¾îÀÇ À§Ä¡.
-     * @return - ÆĞÅ¶°ªÀ» º¸³¿.
+     * @param pos - í˜„ì¬ í”Œë ˆì´ì–´ì˜ ìœ„ì¹˜.
+     * @return - íŒ¨í‚·ê°’ì„ ë³´ëƒ„.
      */
     public static byte[] mechPortal(Point pos) {
         WritingPacket packet = new WritingPacket();
@@ -257,7 +257,7 @@ public class MechanicSkill {
     }
 
     /**
-     * ¸ŞÄ«´Ğ À§Àå»ö
+     * ë©”ì¹´ë‹‰ ìœ„ì¥ìƒ‰
      *
      */
     public static byte[] MechanicMetalArmorCamouflage(int id, int time) {

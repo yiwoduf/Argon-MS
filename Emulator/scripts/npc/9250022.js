@@ -5,20 +5,20 @@
 
 Corporation.Spirit
 
-leader.½ºÇÇ¸´¿Â¶óÀÎ (terams_@nate.com)
+leader.ìŠ¤í”¼ë¦¿ì˜¨ë¼ì¸ (terams_@nate.com)
 
 member.UnknownStar (rhduddlr6996@nate.com)
 
-member.¿ìºñ (guri__s@nate.com)
+member.ìš°ë¹„ (guri__s@nate.com)
 
-Make.°ø¼® (iureal@nate.com)
-
-
+Make.ê³µì„ (iureal@nate.com)
 
 
-ÀÌ ½ºÅ©¸³Æ®´Â ½ºÇÇ¸´¿Â¶óÀÎ¿¡¸¸ »ç¿ëµË´Ï´Ù.
 
-¸¸¾à À¯ÃâÀÌ µÇ´õ¶óµµ ÀÌ ÁÖ¼®Àº »èÁ¦ÇÏÁö ¾ÊÀ¸¼ÌÀ¸¸é ÁÁ°Ú½À´Ï´Ù.
+
+ì´ ìŠ¤í¬ë¦½íŠ¸ëŠ” ìŠ¤í”¼ë¦¿ì˜¨ë¼ì¸ì—ë§Œ ì‚¬ìš©ë©ë‹ˆë‹¤.
+
+ë§Œì•½ ìœ ì¶œì´ ë˜ë”ë¼ë„ ì´ ì£¼ì„ì€ ì‚­ì œí•˜ì§€ ì•Šìœ¼ì…¨ìœ¼ë©´ ì¢‹ê² ìŠµë‹ˆë‹¤.
 
 
 
@@ -86,11 +86,11 @@ function action(mode, type, selection) {
 
  if (cm.getMeso() > Meso) {
 
-  cm.sendYesNo("·Î¶Ç¿¡ Âü¿©ÇÏ½Ã°Ú½À´Ï±î?\r\n·Î¶Ç Âü¿©±İÀº #b" + Meso + "¿ø#k(1¾ï) ÀÔ´Ï´Ù.\r\n\r\n#e#r[·Î¶Ç ´çÃ·±İÀº 500¾ï]#k#dÀÔ´Ï´Ù ÇÏ´Â¹æ¹ıÀº »ÌÈù ·Î¶Ç¹øÈ£¿Í ÀÚ½ÅÀÇ ´Ğ³×ÀÓ³ª¿Àµµ·Ï ½º¼¦À¸·Î Âï¾î¼­ Ä«Æä ·Î¶Ç\r\n°Ô½ÃÆÇ¿¡ ¿Ã·ÁÁÖ½Ã¸é ¼ö½Ã·Î È®ÀÎÇØµå¸®°Ú½À´Ï´Ù.\r\n#e#r·Î¶Ç ´çÃ·¹øÈ£ È®ÀÎÀº Ä«Æä °øÁö»çÇ×¿¡¼­ È®ÀÎ");
+  cm.sendYesNo("ë¡œë˜ì— ì°¸ì—¬í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\r\në¡œë˜ ì°¸ì—¬ê¸ˆì€ #b" + Meso + "ì›#k(1ì–µ) ì…ë‹ˆë‹¤.\r\n\r\n#e#r[ë¡œë˜ ë‹¹ì²¨ê¸ˆì€ 500ì–µ]#k#dì…ë‹ˆë‹¤ í•˜ëŠ”ë°©ë²•ì€ ë½‘íŒ ë¡œë˜ë²ˆí˜¸ì™€ ìì‹ ì˜ ë‹‰ë„¤ì„ë‚˜ì˜¤ë„ë¡ ìŠ¤ìƒ·ìœ¼ë¡œ ì°ì–´ì„œ ì¹´í˜ ë¡œë˜\r\nê²Œì‹œíŒì— ì˜¬ë ¤ì£¼ì‹œë©´ ìˆ˜ì‹œë¡œ í™•ì¸í•´ë“œë¦¬ê² ìŠµë‹ˆë‹¤.\r\n#e#rë¡œë˜ ë‹¹ì²¨ë²ˆí˜¸ í™•ì¸ì€ ì¹´í˜ ê³µì§€ì‚¬í•­ì—ì„œ í™•ì¸");
 
  } else {
 
-  cm.sendOk("·Î¶Ç¿¡ Âü¿©ÇÏ½Ã·Á¸é #b" + Meso + "¿ø#k(1¾ï) ÀÌ ÇÊ¿äÇÕ´Ï´Ù.");
+  cm.sendOk("ë¡œë˜ì— ì°¸ì—¬í•˜ì‹œë ¤ë©´ #b" + Meso + "ì›#k(1ì–µ) ì´ í•„ìš”í•©ë‹ˆë‹¤.");
 
   cm.dispose();
 
@@ -100,9 +100,9 @@ function action(mode, type, selection) {
 
   cm.gainMeso(-Meso);
 
-  var jessica = "#r¸ŞÀÌÇÃ½ºÅä¸® ·Î¶Ç ¹øÈ£ »Ì±â ½Ã½ºÅÛ#k ÀÔ´Ï´Ù.\r\n";
+  var jessica = "#rë©”ì´í”ŒìŠ¤í† ë¦¬ ë¡œë˜ ë²ˆí˜¸ ë½‘ê¸° ì‹œìŠ¤í…œ#k ì…ë‹ˆë‹¤.\r\n";
 
-  jessica += "\r\n#bÃ¹¹øÂ° ¼ıÀÚ·Î " + jessica1 + "°¡ ³ª¿Ô½À´Ï´Ù.";
+  jessica += "\r\n#bì²«ë²ˆì§¸ ìˆ«ìë¡œ " + jessica1 + "ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤.";
 
   cm.sendNext(jessica);
 
@@ -113,9 +113,9 @@ function action(mode, type, selection) {
 
   first = jessica1;
 
-  jessica = "#rÃ¹¹øÂ° ¼ıÀÚ´Â " + first + "ÀÔ´Ï´Ù.\r\n";
+  jessica = "#rì²«ë²ˆì§¸ ìˆ«ìëŠ” " + first + "ì…ë‹ˆë‹¤.\r\n";
 
-  jessica += "\r\n#bµÎ¹øÂ° ¼ıÀÚ·Î´Â " + jessica2 + "°¡ ³ª¿Ô½À´Ï´Ù.";
+  jessica += "\r\n#bë‘ë²ˆì§¸ ìˆ«ìë¡œëŠ” " + jessica2 + "ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤.";
 
   cm.sendNext(jessica);
 
@@ -128,11 +128,11 @@ function action(mode, type, selection) {
 
   second = jessica2;
 
-  var jessica = "#rÃ¹¹øÂ° ¼ıÀÚ´Â " + first + "ÀÔ´Ï´Ù.";
+  var jessica = "#rì²«ë²ˆì§¸ ìˆ«ìëŠ” " + first + "ì…ë‹ˆë‹¤.";
 
-  jessica += "\r\nµÎ¹øÂ° ¼ıÀÚ´Â " + second + "ÀÔ´Ï´Ù.\r\n";
+  jessica += "\r\në‘ë²ˆì§¸ ìˆ«ìëŠ” " + second + "ì…ë‹ˆë‹¤.\r\n";
 
-  jessica += "\r\n#b¼¼¹øÂ° ¼ıÀÚ·Î´Â " + jessica3 + "°¡ ³ª¿Ô½À´Ï´Ù.";
+  jessica += "\r\n#bì„¸ë²ˆì§¸ ìˆ«ìë¡œëŠ” " + jessica3 + "ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤.";
 
   cm.sendNext(jessica);
 
@@ -147,13 +147,13 @@ function action(mode, type, selection) {
 
   third = jessica3;
 
-  var jessica = "#rÃ¹¹øÂ° ¼ıÀÚ´Â " + first + "ÀÔ´Ï´Ù.";
+  var jessica = "#rì²«ë²ˆì§¸ ìˆ«ìëŠ” " + first + "ì…ë‹ˆë‹¤.";
 
-  jessica += "\r\nµÎ¹øÂ° ¼ıÀÚ´Â " + second + "ÀÔ´Ï´Ù.";
+  jessica += "\r\në‘ë²ˆì§¸ ìˆ«ìëŠ” " + second + "ì…ë‹ˆë‹¤.";
 
-  jessica += "\r\n¼¼¹øÂ° ¼ıÀÚ´Â " + third + "ÀÔ´Ï´Ù.\r\n";
+  jessica += "\r\nì„¸ë²ˆì§¸ ìˆ«ìëŠ” " + third + "ì…ë‹ˆë‹¤.\r\n";
 
-  jessica += "\r\n#b³×¹øÂ° ¼ıÀÚ·Î´Â " + jessica4 + "°¡ ³ª¿Ô½À´Ï´Ù.";
+  jessica += "\r\n#bë„¤ë²ˆì§¸ ìˆ«ìë¡œëŠ” " + jessica4 + "ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤.";
 
   cm.sendNext(jessica);
 
@@ -170,15 +170,15 @@ function action(mode, type, selection) {
 
   fourth = jessica4;
 
-  var jessica = "#rÃ¹¹øÂ° ¼ıÀÚ´Â " + first + "ÀÔ´Ï´Ù.";
+  var jessica = "#rì²«ë²ˆì§¸ ìˆ«ìëŠ” " + first + "ì…ë‹ˆë‹¤.";
 
-  jessica += "\r\nµÎ¹øÂ° ¼ıÀÚ´Â " + second + "ÀÔ´Ï´Ù.";
+  jessica += "\r\në‘ë²ˆì§¸ ìˆ«ìëŠ” " + second + "ì…ë‹ˆë‹¤.";
 
-  jessica += "\r\n¼¼¹øÂ° ¼ıÀÚ´Â " + third + "ÀÔ´Ï´Ù.";
+  jessica += "\r\nì„¸ë²ˆì§¸ ìˆ«ìëŠ” " + third + "ì…ë‹ˆë‹¤.";
 
-  jessica += "\r\n³×¹øÂ° ¼ıÀÚ´Â " + fourth + "ÀÔ´Ï´Ù.\r\n";
+  jessica += "\r\në„¤ë²ˆì§¸ ìˆ«ìëŠ” " + fourth + "ì…ë‹ˆë‹¤.\r\n";
 
-  jessica += "\r\n#b´Ù¼¸¹øÂ° ¼ıÀÚ·Î´Â " + jessica5 + "°¡ ³ª¿Ô½À´Ï´Ù.";
+  jessica += "\r\n#bë‹¤ì„¯ë²ˆì§¸ ìˆ«ìë¡œëŠ” " + jessica5 + "ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤.";
 
   cm.sendNext(jessica);
 
@@ -197,17 +197,17 @@ function action(mode, type, selection) {
 
   fifth = jessica5;
 
-  var jessica = "#rÃ¹¹øÂ° ¼ıÀÚ´Â " + first + "ÀÔ´Ï´Ù.";
+  var jessica = "#rì²«ë²ˆì§¸ ìˆ«ìëŠ” " + first + "ì…ë‹ˆë‹¤.";
 
-  jessica += "\r\nµÎ¹øÂ° ¼ıÀÚ´Â " + second + "ÀÔ´Ï´Ù.";
+  jessica += "\r\në‘ë²ˆì§¸ ìˆ«ìëŠ” " + second + "ì…ë‹ˆë‹¤.";
 
-  jessica += "\r\n¼¼¹øÂ° ¼ıÀÚ´Â " + third + "ÀÔ´Ï´Ù.";
+  jessica += "\r\nì„¸ë²ˆì§¸ ìˆ«ìëŠ” " + third + "ì…ë‹ˆë‹¤.";
 
-  jessica += "\r\n³×¹øÂ° ¼ıÀÚ´Â " + fourth + "ÀÔ´Ï´Ù.";
+  jessica += "\r\në„¤ë²ˆì§¸ ìˆ«ìëŠ” " + fourth + "ì…ë‹ˆë‹¤.";
 
-  jessica += "\r\n´Ù¼¸¹øÂ° ¼ıÀÚ´Â " + fifth + "ÀÔ´Ï´Ù.\r\n";
+  jessica += "\r\në‹¤ì„¯ë²ˆì§¸ ìˆ«ìëŠ” " + fifth + "ì…ë‹ˆë‹¤.\r\n";
 
-  jessica += "\r\n#b¿©¼¸¹øÂ° ¼ıÀÚ·Î´Â " + jessica6 + "°¡ ³ª¿Ô½À´Ï´Ù.";
+  jessica += "\r\n#bì—¬ì„¯ë²ˆì§¸ ìˆ«ìë¡œëŠ” " + jessica6 + "ê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤.";
 
   cm.sendNext(jessica);
 
@@ -228,7 +228,7 @@ function action(mode, type, selection) {
 
   sixth = jessica6;
 
-  var jessica = "Áö±İ±îÁö ÃÑ ³ª¿Â ¼ıÀÚ´Â\r\n";
+  var jessica = "ì§€ê¸ˆê¹Œì§€ ì´ ë‚˜ì˜¨ ìˆ«ìëŠ”\r\n";
 
   jessica += "#r" + first + "\r\n";
 
@@ -242,7 +242,7 @@ function action(mode, type, selection) {
 
   jessica += "" + sixth + "#k";
 
-  jessica += " ÀÔ´Ï´Ù.\r\n";
+  jessica += " ì…ë‹ˆë‹¤.\r\n";
 
   cm.sendNext(jessica);
 

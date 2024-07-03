@@ -3,7 +3,7 @@
 
 /*
 
-½º¸¶Æ®¿Â¶óÀÎ 
+ìŠ¤ë§ˆíŠ¸ì˜¨ë¼ì¸ 
 
 
 */
@@ -17,7 +17,7 @@ var itemsz6 = new Array(new Array(100, 1022196, 1), new Array(100, 1022177, 1), 
 var itemsz7 = new Array(new Array(100, 1702553, 1), new Array(100, 1702502, 1), new Array(100, 1702562, 1), new Array(100, 1702525, 1), new Array(100, 1702365, 1), new Array(100, 1702480, 1), new Array(100, 1702550, 1), new Array(100, 1702464, 1), new Array(100, 1702485, 1), new Array(100, 1702503, 1), new Array(100, 1702512, 1), new Array(100, 1702528, 1), new Array(100, 1702505, 1), new Array(100, 1702541, 1), new Array(100, 1702535, 1), new Array(100, 1702487, 1), new Array(100, 1702521, 1), new Array(100, 1702362, 1), new Array(100, 1702329, 1), new Array(100, 1702497, 1), new Array(100, 1702530, 1), new Array(100, 1702529, 1), new Array(100, 1702574, 1), new Array(100, 1702575, 1), new Array(100, 1702576, 1), new Array(100, 1702584, 1), new Array(100, 1702571, 1), new Array(100, 1702570, 1), new Array(100, 1702565, 1), new Array(100, 1702571, 1), new Array(100, 1702574, 1), new Array(100, 1702575, 1), new Array(100, 1702576, 1), new Array(100, 1702584, 1), new Array(100, 1702586, 1), new Array(100, 1702587, 1), new Array(100, 1702590, 1), new Array(100, 1702591, 1), new Array(100, 1702593, 1), new Array(100, 1702594, 1), new Array(100, 1702595, 1), new Array(100, 1702597, 1), new Array(100, 1702599, 1), new Array(100, 1702607, 1), new Array(100, 1702608, 1), new Array(100, 1702612, 1), new Array(100, 1702613, 1), new Array(100, 1702614, 1), new Array(100, 1702616, 1), new Array(100, 1702623, 1), new Array(100, 1702628, 1), new Array(100, 1702629, 1), new Array(100, 1702631, 1), new Array(100, 1702632, 1), new Array(100, 1702634, 1), new Array(100, 1702637, 1), new Array(100, 1702638, 1), new Array(100, 1702639, 1));
 var itemsz8 = new Array(new Array(100, 1112182, 1), new Array(100, 1112180, 1), new Array(100, 1112178, 1), new Array(100, 1112170, 1), new Array(100, 1112295, 1), new Array(100, 1112293, 1), new Array(100, 1112290, 1), new Array(100, 1112282, 1));
 
-var itemCategorys = new Array("#b¸ğÀÚ", "ÇÑ¹ú¿Ê", "»óÀÇ", "ÇÏÀÇ", "\r\n¡¡ ¸ÁÅä", "¾ó±¼Àå½Ä", "´«Àå½Ä", "¹«±â", "¹İÁö");
+var itemCategorys = new Array("#bëª¨ì", "í•œë²Œì˜·", "ìƒì˜", "í•˜ì˜", "\r\nã€€ ë§í† ", "ì–¼êµ´ì¥ì‹", "ëˆˆì¥ì‹", "ë¬´ê¸°", "ë°˜ì§€");
 
 
 var status = -1;
@@ -41,14 +41,14 @@ function action(mode, type, selection) {
     
     if (status == 0) {
 	var leaf = cm.itemQuantity(4250502);
-        var trade = "#fs20##fn³ª´®°íµñ##r#eÃÖ½Å¾ÆÀÌÅÛµéÀ» ¾î¼­ °¡Á®°¡¼¼¿ä!!#n#k\r\n#fs14# ÀÌ ¾ÆÀÌÅÛµéÀº #b¿Ã½ºÅİ+100 °ø¸¶+50#k Ãß°¡¿É¼ÇÀÌ ºÙ¾îÀÖ´Â ¾ÆÀÌÅÛµéÀÔ´Ï´Ù. \r\n\r\n¾ÆÀÌÅÛ °¡°İ #e:#n #i4310154# #r#z4310154# 100 °³#k \r\n\r\n";
+        var trade = "#fs20##fnë‚˜ëˆ”ê³ ë”•##r#eìµœì‹ ì•„ì´í…œë“¤ì„ ì–´ì„œ ê°€ì ¸ê°€ì„¸ìš”!!#n#k\r\n#fs14# ì´ ì•„ì´í…œë“¤ì€ #bì˜¬ìŠ¤í…Ÿ+100 ê³µë§ˆ+50#k ì¶”ê°€ì˜µì…˜ì´ ë¶™ì–´ìˆëŠ” ì•„ì´í…œë“¤ì…ë‹ˆë‹¤. \r\n\r\nì•„ì´í…œ ê°€ê²© #e:#n #i4310154# #r#z4310154# 100 ê°œ#k \r\n\r\n";
         for (var i = 0; i < itemCategorys.length; i++) {
             trade += "#L"+i+"#"+itemCategorys[i]+"#l";
         }
         cm.sendSimple(trade);
     } else if (status == 1) {
         menuSelect = selection;
-        var trade = "#fn³ª´®°íµñ##fs20##e#r¿øÇÏ´Â ¾ÆÀÌÅÛÀ» °ñ¶óº¸¼¼¿ä.#n#k#b#fs15#\r\n\r\n";
+        var trade = "#fnë‚˜ëˆ”ê³ ë”•##fs20##e#rì›í•˜ëŠ” ì•„ì´í…œì„ ê³¨ë¼ë³´ì„¸ìš”.#n#k#b#fs15#\r\n\r\n";
         var itemsArray = getArray(selection);
         for (var i = 0;i < itemsArray.length; i++) {
             trade += "#L"+i+"##i"+itemsArray[i][1]+"# #z"+itemsArray[i][1]+"##l\r\n";
@@ -57,16 +57,16 @@ function action(mode, type, selection) {
     } else if (status == 2) {
         select = selection;
         var itemsArray = getArray(menuSelect);
-        cm.sendYesNo("#b#i"+itemsArray[select][1]+"# #z"+itemsArray[select][1]+"##k Á¤¸» ÀÌ¾ÆÅÛÀ» ±¸¸ÅÇÏ½Ã°Ú½À´Ï±î?");
+        cm.sendYesNo("#b#i"+itemsArray[select][1]+"# #z"+itemsArray[select][1]+"##k ì •ë§ ì´ì•„í…œì„ êµ¬ë§¤í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
     } else if (status == 3) {
         var itemsArray = getArray(menuSelect);
         if (cm.haveItem(4310154, 100) && cm.canHold(itemsArray[select][1])) {
             cm.gainItem(4310154, -100);
-	    cm.gainSponserItem(itemsArray[select][1],'½º¸¶Æ®¿Â¶óÀÎ',100,50,0);
-            cm.sendOk("#i4310154# 100°³·Î #i"+itemsArray[select][1]+"#À» ±³È¯ÇÏ¼Ë½À´Ï´Ù.");
+	    cm.gainSponserItem(itemsArray[select][1],'ìŠ¤ë§ˆíŠ¸ì˜¨ë¼ì¸',100,50,0);
+            cm.sendOk("#i4310154# 100ê°œë¡œ #i"+itemsArray[select][1]+"#ì„ êµí™˜í•˜ì…§ìŠµë‹ˆë‹¤.");
             cm.dispose();
         } else {
-            cm.sendOk("ÀÎº¥Åä¸®°¡ °¡µæ Ã¡°Å³ª #i4310154##z4310154# ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+            cm.sendOk("ì¸ë²¤í† ë¦¬ê°€ ê°€ë“ ì°¼ê±°ë‚˜ #i4310154##z4310154# ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
             cm.dispose();
             return;
         }

@@ -1,8 +1,8 @@
 /*
- * �׽��Ǿ� Project
+ * 테스피아 Project
  * ==================================
- * �Ҵ� spirit_m@nate.com
- * ��ȣ softwarewithcreative@nate.com
+ * 팬더 spirit_m@nate.com
+ * 백호 softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -20,12 +20,12 @@ public enum ItemFlag {
     CHARM_EQUIPPED(0x20),
     ANDROID_ACTIVATED(0x40),
     CRAFT(0x80), //1000 0000 (0x80 & 0xFF)
-    PROTECT(0x100), // ������Ʈ
-    LUKCYDAY(0x200), // ��Ű����
-    TRADE_ON_ACCOUNT_USE(0x400), // �Ǽ� ī����
-    TRADE_ON_ACCOUNT(0x1000), // �Ǽ� ī����
-    SAFETY(0x2000), // ������Ƽ    
-    RECOVERY(0x4000); // ��Ŀ����
+    PROTECT(0x100), // 프로텍트
+    LUKCYDAY(0x200), // 럭키데이
+    TRADE_ON_ACCOUNT_USE(0x400), // 악세 카르마
+    TRADE_ON_ACCOUNT(0x1000), // 악세 카르마
+    SAFETY(0x2000), // 세이프티    
+    RECOVERY(0x4000); // 리커버리
   ;
     private final int i;
 

@@ -1,7 +1,7 @@
 /*
  * Tespia Project
  * ==================================
- * ½º¸¶ÀÌÆ® smite_demolition@nate.com
+ * ìŠ¤ë§ˆì´íŠ¸ smite_demolition@nate.com
  * ==================================
  *
  */
@@ -45,11 +45,11 @@ public class AuctionHandler {
 
     public static final void Handle(final ReadingMaple rh, final MapleClient c, byte op) {
         switch (op) {
-            case 0: { // ¾ÆÀÌÅÛ ·Îµå
+            case 0: { // ì•„ì´í…œ ë¡œë“œ
                 c.getSession().writeAndFlush(AuctionPacket.showItemList(WorldAuction.getItems(c.getPlayer()), false));
                 break;
             }
-            case 1: { // ÆÇ¸Å µî·Ï
+            case 1: { // íŒë§¤ ë“±ë¡
                 final boolean isbargain = rh.readInt() > 0;
                 final int itemid = rh.readInt();
                 final int quantity = rh.readInt();
@@ -64,7 +64,7 @@ public class AuctionHandler {
                     return;
                 }
                 if (item == null || item.getItemId() != itemid || item.getQuantity() < quantity) {
-                    c.getPlayer().dropMessage(1, "¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(1, "ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
                     return;
                 }
                 boolean isPremiumUser = AuctionHandler.WorldAuction.isPremiumUser(c.getPlayer());
@@ -77,18 +77,18 @@ public class AuctionHandler {
                 copyItem.setQuantity((short) quantity);
                 AuctionItemPackage aitem = new AuctionItemPackage(c.getPlayer().getId(), c.getPlayer().getName(), copyItem, bid, meso, System.currentTimeMillis() + (time * 60 * 60 * 1000), isbargain, 0, 0, System.currentTimeMillis(), 0);
                 WorldAuction.addItem(aitem);
-                c.getPlayer().gainMeso(-2000, true); // º¸Áõ±İ
+                c.getPlayer().gainMeso(-2000, true); // ë³´ì¦ê¸ˆ
                 c.getSession().writeAndFlush(AuctionPacket.AuctionMessage((byte) 1, (byte) 0));
                 c.getSession().writeAndFlush(AuctionPacket.AuctionSell(WorldAuction.getSellItems(c.getPlayer().getId())));
                 InventoryManipulator.removeFromSlot(c, MapleInventoryType.getByType(inv), slot, (short) quantity, false);
                 WorldAuction.addAuction(c.getPlayer().getId(), bid, item.getInventoryId(), (byte) 0);
                 break;
             }
-            case 2: { //¾ÆÀÌÅÛ µî·Ï Ãë¼Ò
+            case 2: { //ì•„ì´í…œ ë“±ë¡ ì·¨ì†Œ
                 AuctionItemPackage item = WorldAuction.findByIid(rh.readInt());
                 final int status = 4;
                 if (item == null) {
-                    c.getPlayer().dropMessage(1, "¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(1, "ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
                     return;
                 }
                 if (status == 1) {
@@ -97,7 +97,7 @@ public class AuctionHandler {
                     c.getPlayer().gainMeso(item.getBid(), true);
                 } else if (status == 2 || status == 4) {
                     //InventoryManipulator.addbyItem(c, item.getItem());
-                    c.getPlayer().gainMeso(2000, true); // º¸Áõ±İ µ¹·ÁÁÜ
+                    c.getPlayer().gainMeso(2000, true); // ë³´ì¦ê¸ˆ ëŒë ¤ì¤Œ
                 }
 
                 item.setBuyTime(System.currentTimeMillis());
@@ -116,7 +116,7 @@ public class AuctionHandler {
                 final long meso = rh.readLong();
                 AuctionItemPackage item = WorldAuction.findByIid(id);
                 if (item == null) {
-                    c.getPlayer().dropMessage(1, "¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(1, "ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
                     return;
                 }
                 if (c.getPlayer().getMeso() < meso) {
@@ -146,11 +146,11 @@ public class AuctionHandler {
             case 4: {
                 final int id = rh.readInt();
                 final int type = rh.readInt();
-                //1 = ÀÔÂû±İ ¹İÈ¯, 2 = ¹°Ç° ¼ö·É, 3 = ´ë±İ ¼ö·É, 4 = ¹°Ç° ¹İÈ¯ (¹ÌÆÇ¸Å) , 5 = ÀÔÂû±İ ¹İÈ¯ (Â÷¾× ¹ß»ı) , 6 = ¼ö·É ¿Ï·á(»óÈ¸ÀÔÂû), 7 = ¼ö·É ¿Ï·á(³«Âû), 8 = ¼ö·É ¿Ï·á (ÆÇ¸Å ¿Ï·á), 9 = ¼ö·É ¿Ï·á (¹ÌÆÇ¸Å), 10 = ¼ö·É ¿Ï·á (Â÷¾× ¹ß»ı)
+                //1 = ì…ì°°ê¸ˆ ë°˜í™˜, 2 = ë¬¼í’ˆ ìˆ˜ë ¹, 3 = ëŒ€ê¸ˆ ìˆ˜ë ¹, 4 = ë¬¼í’ˆ ë°˜í™˜ (ë¯¸íŒë§¤) , 5 = ì…ì°°ê¸ˆ ë°˜í™˜ (ì°¨ì•¡ ë°œìƒ) , 6 = ìˆ˜ë ¹ ì™„ë£Œ(ìƒíšŒì…ì°°), 7 = ìˆ˜ë ¹ ì™„ë£Œ(ë‚™ì°°), 8 = ìˆ˜ë ¹ ì™„ë£Œ (íŒë§¤ ì™„ë£Œ), 9 = ìˆ˜ë ¹ ì™„ë£Œ (ë¯¸íŒë§¤), 10 = ìˆ˜ë ¹ ì™„ë£Œ (ì°¨ì•¡ ë°œìƒ)
                 final long meso = rh.readLong();
                 AuctionItemPackage item = WorldAuction.findByIid(id);
                 /* if (item == null || c.getPlayer().getMeso() < meso) {
-                    c.getPlayer().dropMessage(1, "¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(1, "ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
                     return;
                 }*/
                 item.setBuyer(c.getPlayer().getId());
@@ -167,7 +167,7 @@ public class AuctionHandler {
                 final long meso = rh.readLong();
                 AuctionItemPackage item = WorldAuction.findByIid(id);
                 if (item == null || c.getPlayer().getMeso() < meso) {
-                    c.getPlayer().dropMessage(1, "¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(1, "ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
                     return;
                 }
                 item.setBuyer(999999);
@@ -183,13 +183,13 @@ public class AuctionHandler {
             case 6: {
                 final int id = rh.readInt();
                 final int status = rh.readInt();
-                //0 = ÀÔÂû,  1 = ÀÔÂû±İ ¹İÈ¯, 2 = ¹°Ç° ¼ö·É, 3 = ´ë±İ ¼ö·É, 4 = ¹°Ç° ¹İÈ¯ (¹ÌÆÇ¸Å) , 5 = ÀÔÂû±İ ¹İÈ¯ (Â÷¾× ¹ß»ı) , 6 = ¼ö·É ¿Ï·á(»óÈ¸ÀÔÂû), 7 = ¼ö·É ¿Ï·á(³«Âû), 8 = ¼ö·É ¿Ï·á (ÆÇ¸Å ¿Ï·á), 9 = ¼ö·É ¿Ï·á (¹ÌÆÇ¸Å), 10 = ¼ö·É ¿Ï·á (Â÷¾× ¹ß»ı)
+                //0 = ì…ì°°,  1 = ì…ì°°ê¸ˆ ë°˜í™˜, 2 = ë¬¼í’ˆ ìˆ˜ë ¹, 3 = ëŒ€ê¸ˆ ìˆ˜ë ¹, 4 = ë¬¼í’ˆ ë°˜í™˜ (ë¯¸íŒë§¤) , 5 = ì…ì°°ê¸ˆ ë°˜í™˜ (ì°¨ì•¡ ë°œìƒ) , 6 = ìˆ˜ë ¹ ì™„ë£Œ(ìƒíšŒì…ì°°), 7 = ìˆ˜ë ¹ ì™„ë£Œ(ë‚™ì°°), 8 = ìˆ˜ë ¹ ì™„ë£Œ (íŒë§¤ ì™„ë£Œ), 9 = ìˆ˜ë ¹ ì™„ë£Œ (ë¯¸íŒë§¤), 10 = ìˆ˜ë ¹ ì™„ë£Œ (ì°¨ì•¡ ë°œìƒ)
 
                 final long meso = rh.readLong();
                 boolean isPremiumUser = AuctionHandler.WorldAuction.isPremiumUser(c.getPlayer());
                 AuctionItemPackage item = WorldAuction.findByIid(id);
                 if (item == null/* || item.getType(false, true) != status*/) {
-                    c.getPlayer().dropMessage(1, "¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(1, "ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
                     return;
                 }
                 if (status == 1) {
@@ -214,7 +214,7 @@ public class AuctionHandler {
                         }
                     }
                     InventoryManipulator.addbyItem(c, item.getItem());
-                } else if (status == 9) { // º¸Áõ±İ µÇµ¹·ÁÁÜ
+                } else if (status == 9) { // ë³´ì¦ê¸ˆ ë˜ëŒë ¤ì¤Œ
                     c.getPlayer().gainMeso(2000, true);
                 }
 
@@ -228,18 +228,18 @@ public class AuctionHandler {
                 c.getSession().writeAndFlush(AuctionPacket.AuctionBuy(item, meso, status == 1 ? 7 : 8));
                 break;
             }
-            case 7: { //°Ë»ö
+            case 7: { //ê²€ìƒ‰
                 List<AuctionItemPackage> allItem = WorldAuction.getItems(c.getPlayer());
                 List<AuctionItemPackage> filter = new LinkedList<>();
                 List<AuctionItemPackage> filter2 = new LinkedList<>();
                 int equipDetailOpCount = rh.readInt();
                 for (int i = 0; i < equipDetailOpCount; ++i) {
-                    int option = rh.readInt(); // ¼¼ºÎ °Ë»ö ¿É¼Ç
-                    int value = rh.readInt(); // ÃÖ¼Ò ¼öÄ¡
+                    int option = rh.readInt(); // ì„¸ë¶€ ê²€ìƒ‰ ì˜µì…˜
+                    int value = rh.readInt(); // ìµœì†Œ ìˆ˜ì¹˜
                     SearchManager.searchEquipDetailOption(option, value, i == 0 ? allItem : filter, filter);
                 }
                 int resultCount = rh.readInt();
-                rh.skip(1); // Ç×»ó 1ÀÎµí
+                rh.skip(1); // í•­ìƒ 1ì¸ë“¯
                 for (int i = 0; i < resultCount; ++i) {
                     int itemId = rh.readInt();
                     if (equipDetailOpCount > 0) {
@@ -255,9 +255,9 @@ public class AuctionHandler {
                 int grade = (byte) rh.readByte();
                 filter.clear();
                 rh.skip(1);
-                boolean isEquip = rh.readByte() == 1; // 0: ÀÏ¹İ, 1: Àåºñ
+                boolean isEquip = rh.readByte() == 1; // 0: ì¼ë°˜, 1: ì¥ë¹„
                 rh.skip(1);
-                //boolean isProtective = rh.readByte() == 1; // 0: ¹«±â, 1: ¹æ¾î±¸
+                //boolean isProtective = rh.readByte() == 1; // 0: ë¬´ê¸°, 1: ë°©ì–´êµ¬
                 filter2.stream().filter(item -> item.mesos >= minPrice && (maxPrice > 0 ? (item.mesos <= maxPrice) : true))
                         .filter(item -> (minBundle > 0 ? (item.item.getQuantity() >= minBundle) : true && (maxBundle > 0 ? (item.item.getQuantity() <= maxBundle) : true)))
                         .filter(item -> grade != -1 ? (((((Equip) item.item).getState() == 0 && grade == 0) || (((Equip) item.item).getState() == 17 && grade == 1))
@@ -267,9 +267,9 @@ public class AuctionHandler {
                         //.filter(item -> isProtective ? !GameConstants.isWeapon(item.item.getItemId()) : true)
                         .forEach(filter::add);
 
-                int itemType = rh.readInt(); // 0: ¹æ¾î±¸, 1: ¹«±â, 2: ¼Òºñ, 3: Ä³½Ã, 4: ±âÅ¸
-                int itemClass = rh.readInt(); // ¾ÆÀÌÅÛ ºĞ·ù
-                int normalDetailOp = rh.readInt(); // ¼¼ºÎ °Ë»ö (ÀåºñX)
+                int itemType = rh.readInt(); // 0: ë°©ì–´êµ¬, 1: ë¬´ê¸°, 2: ì†Œë¹„, 3: ìºì‹œ, 4: ê¸°íƒ€
+                int itemClass = rh.readInt(); // ì•„ì´í…œ ë¶„ë¥˜
+                int normalDetailOp = rh.readInt(); // ì„¸ë¶€ ê²€ìƒ‰ (ì¥ë¹„X)
                 boolean useLevelSearch = rh.readByte() == 1;
                 AtomicInteger minLevel = new AtomicInteger(0);
                 AtomicInteger maxLevel = new AtomicInteger(250);
@@ -282,15 +282,15 @@ public class AuctionHandler {
                 filter.stream().filter(item -> isEquip ? (ii.getReqLevel(item.item.getItemId()) >= minLevel.get() && ii.getReqLevel(item.item.getItemId()) <= maxLevel.get()) : true)
                         .forEach(filter2::add);
 
-                // °á°ú°ª Ãâ·Â
+                // ê²°ê³¼ê°’ ì¶œë ¥
                 c.getSession().writeAndFlush(AuctionPacket.showItemList(filter2, true));
                 break;
             }
-            case 8: { //ÆÇ¸Å ¾÷µ¥ÀÌÆ®
+            case 8: { //íŒë§¤ ì—…ë°ì´íŠ¸
                 c.getSession().writeAndFlush(AuctionPacket.AuctionSell(WorldAuction.getSellItems(c.getPlayer().getId())));
                 break;
             }
-            case 9: { //¿Ï·á ¾÷µ¥ÀÌÆ®
+            case 9: { //ì™„ë£Œ ì—…ë°ì´íŠ¸
                 //c.getSession().writeAndFlush(AuctionPacket.showItemList(WorldAuction.getItems(c.getPlayer()), false));
                 //c.getSession().writeAndFlush(AuctionPacket.AuctionSell(WorldAuction.getSellItems(c.getPlayer().getId())));
                 c.getSession().writeAndFlush(AuctionPacket.updateAuctionHistory(WorldAuction.getCompleteItems(c.getPlayer().getId()), c.getPlayer().getName(), c.getPlayer().getId()));
@@ -299,13 +299,13 @@ public class AuctionHandler {
             case 10: {
                 break;
             }
-            case 11: { //ÈïÁ¤
+            case 11: { //í¥ì •
                 final int id = rh.readInt();
                 final long meso = rh.readLong();
                 final String bargaining = rh.readMapleAsciiString();
                 AuctionItemPackage item = WorldAuction.findByIid(id);
                 if (item == null || c.getPlayer().getMeso() < meso) {
-                    c.getPlayer().dropMessage(1, "¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(1, "ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
                     return;
                 }
                 c.getSession().writeAndFlush(AuctionPacket.AuctionBargaining(item, meso, bargaining));
@@ -360,7 +360,7 @@ public class AuctionHandler {
                         }
                     });
                     break;
-                case 4: // °ø°İ·Â
+                case 4: // ê³µê²©ë ¥
                     allItem.stream().filter(item -> item.getItem().getType() == 1)
                             .filter(item -> ((Equip) item.getItem()).getWatk() >= value).forEach(a -> {
                         if (!filter.contains(a)) {
@@ -368,7 +368,7 @@ public class AuctionHandler {
                         }
                     });
                     break;
-                case 5: // ¸¶·Â
+                case 5: // ë§ˆë ¥
                     allItem.stream().filter(item -> item.getItem().getType() == 1)
                             .filter(item -> ((Equip) item.getItem()).getMatk() >= value).forEach(a -> {
                         if (!filter.contains(a)) {
@@ -376,7 +376,7 @@ public class AuctionHandler {
                         }
                     });
                     break;
-                case 6: // º¸°ø µ¥¹ÌÁö
+                case 6: // ë³´ê³µ ë°ë¯¸ì§€
                     allItem.stream().filter(item -> item.getItem().getType() == 1)
                             .filter(item -> ((Equip) item.getItem()).getBossDamage() >= value).forEach(a -> {
                         if (!filter.contains(a)) {
@@ -384,7 +384,7 @@ public class AuctionHandler {
                         }
                     });
                     break;
-                case 7: // ¸ó½ºÅÍ ¹æ¾îÀ² ¹«½Ã
+                case 7: // ëª¬ìŠ¤í„° ë°©ì–´ìœ¨ ë¬´ì‹œ
                     allItem.stream().filter(item -> item.getItem().getType() == 1)
                             .filter(item -> ((Equip) item.getItem()).getIgnoreWdef() >= value).forEach(a -> {
                         if (!filter.contains(a)) {
@@ -392,9 +392,9 @@ public class AuctionHandler {
                         }
                     });
                     break;
-                case 8: // º¸°ø µ¥¹ÌÁö %Áõ°¡
+                case 8: // ë³´ê³µ ë°ë¯¸ì§€ %ì¦ê°€
                 {
-                    int[] potentials = new int[]{601, 602, 603, 604, 30601, 30602, 32601, 40601, 40602, 40603, 42601, 42602, 60003, 60011, 60024, 60039}; // º¸½º °ø°İ½Ã µ¥¹ÌÁö Áõ°¡
+                    int[] potentials = new int[]{601, 602, 603, 604, 30601, 30602, 32601, 40601, 40602, 40603, 42601, 42602, 60003, 60011, 60024, 60039}; // ë³´ìŠ¤ ê³µê²©ì‹œ ë°ë¯¸ì§€ ì¦ê°€
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -427,7 +427,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 9: // ¸ó½ºÅÍ ¹æ¾îÀ² ¹«½Ã
+                case 9: // ëª¬ìŠ¤í„° ë°©ì–´ìœ¨ ë¬´ì‹œ
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -457,9 +457,9 @@ public class AuctionHandler {
                                 }
                             });
                     break;
-                case 10: // ÃÑ µ¥¹ÌÁö % Áõ°¡
+                case 10: // ì´ ë°ë¯¸ì§€ % ì¦ê°€
                 {
-                    int[] potentials = new int[]{10070, 12070, 20070, 22070, 30070, 32070, 32071, 40070, 42070, 42071, 60001, 60009, 60037}; // µ¥¹ÌÁö %
+                    int[] potentials = new int[]{10070, 12070, 20070, 22070, 30070, 32070, 32071, 40070, 42070, 42071, 60001, 60009, 60037}; // ë°ë¯¸ì§€ %
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -492,7 +492,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 11: // °ø°İ·Â %Áõ°¡
+                case 11: // ê³µê²©ë ¥ %ì¦ê°€
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -522,7 +522,7 @@ public class AuctionHandler {
                                 }
                             });
                     break;
-                case 12: // ¸¶·Â %Áõ°¡
+                case 12: // ë§ˆë ¥ %ì¦ê°€
                 {
                     allItem.stream()
                             .forEach(item -> {
@@ -554,9 +554,9 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 13: // ¿Ã½ºÅÈ %Áõ°¡
+                case 13: // ì˜¬ìŠ¤íƒ¯ %ì¦ê°€
                 {
-                    int[] potentials = new int[]{391, 20086, 22086, 22087, 30086, 32086, 32087, 40086, 42086, 42087, 60002, 60004, 60005, 60038}; // ¿Ã½ºÅÈ : + #incSTRr%
+                    int[] potentials = new int[]{391, 20086, 22086, 22087, 30086, 32086, 32087, 40086, 42086, 42087, 60002, 60004, 60005, 60038}; // ì˜¬ìŠ¤íƒ¯ : + #incSTRr%
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -589,7 +589,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 14: // STR %Áõ°¡
+                case 14: // STR %ì¦ê°€
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -619,7 +619,7 @@ public class AuctionHandler {
                                 }
                             });
                     break;
-                case 15: // DEX %Áõ°¡
+                case 15: // DEX %ì¦ê°€
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -649,7 +649,7 @@ public class AuctionHandler {
                                 }
                             });
                     break;
-                case 16: // INT %Áõ°¡
+                case 16: // INT %ì¦ê°€
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -679,7 +679,7 @@ public class AuctionHandler {
                                 }
                             });
                     break;
-                case 17: // LUK %Áõ°¡
+                case 17: // LUK %ì¦ê°€
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -709,7 +709,7 @@ public class AuctionHandler {
                                 }
                             });
                     break;
-                case 18: // Å©¸®Æ¼ÄÃ È®·ü Áõ°¡
+                case 18: // í¬ë¦¬í‹°ì»¬ í™•ë¥  ì¦ê°€
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -739,9 +739,9 @@ public class AuctionHandler {
                                 }
                             });
                     break;
-                case 19: // »óÅÂÀÌ»ó Áö¼Ó ½Ã°£ °¨¼Ò
+                case 19: // ìƒíƒœì´ìƒ ì§€ì† ì‹œê°„ ê°ì†Œ
                 {
-                    int[] potentials = new int[]{20396}; // ¸ğµç »óÅÂÀÌ»óÀÇ Áö¼Ó½Ã°£ : -#timeÃÊ
+                    int[] potentials = new int[]{20396}; // ëª¨ë“  ìƒíƒœì´ìƒì˜ ì§€ì†ì‹œê°„ : -#timeì´ˆ
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -774,7 +774,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 20: // »óÅÂ ÀÌ»ó ³»¼º Áõ°¡
+                case 20: // ìƒíƒœ ì´ìƒ ë‚´ì„± ì¦ê°€
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -804,7 +804,7 @@ public class AuctionHandler {
                                 }
                             });
                     break;
-                case 21: // ¸ğµç ¼Ó¼º ³»¼º Áõ°¡
+                case 21: // ëª¨ë“  ì†ì„± ë‚´ì„± ì¦ê°€
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -834,7 +834,7 @@ public class AuctionHandler {
                                 }
                             });
                     break;
-                case 22: // Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö Áõ°¡
+                case 22: // í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ ì¦ê°€
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -864,7 +864,7 @@ public class AuctionHandler {
                                 }
                             });
                     break;
-                case 23: // Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö Áõ°¡
+                case 23: // í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ ì¦ê°€
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -894,7 +894,7 @@ public class AuctionHandler {
                                 }
                             });
                     break;
-                case 24: // ¸ğµç ½ºÅ³ Àç»ç¿ë ´ë±â½Ã°£ °¨¼Ò
+                case 24: // ëª¨ë“  ìŠ¤í‚¬ ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ ê°ì†Œ
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -924,7 +924,7 @@ public class AuctionHandler {
                                 }
                             });
                     break;
-                case 25: // ±âº»¿É¼Ç: ÃÑ µ¥¹ÌÁö Áõ°¡
+                case 25: // ê¸°ë³¸ì˜µì…˜: ì´ ë°ë¯¸ì§€ ì¦ê°€
                     allItem.stream().filter(item -> item.getItem().getType() == 1)
                             .filter(item -> ((Equip) item.getItem()).getAllDamageP() >= value).forEach(a -> {
                         if (!filter.contains(a)) {
@@ -932,7 +932,7 @@ public class AuctionHandler {
                         }
                     });
                     break;
-                case 26: // ±âº»¿É¼Ç: ¿Ã½ºÅÈ %Áõ°¡
+                case 26: // ê¸°ë³¸ì˜µì…˜: ì˜¬ìŠ¤íƒ¯ %ì¦ê°€
                     allItem.stream().filter(item -> item.getItem().getType() == 1)
                             .filter(item -> ((Equip) item.getItem()).getAllStatP() >= value).forEach(a -> {
                         if (!filter.contains(a)) {
@@ -940,7 +940,7 @@ public class AuctionHandler {
                         }
                     });
                     break;
-                case 27: // ¾ÆÀÌÅÛ È¹µæ È®·ü Áõ°¡
+                case 27: // ì•„ì´í…œ íšë“ í™•ë¥  ì¦ê°€
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -970,7 +970,7 @@ public class AuctionHandler {
                                 }
                             });
                     break;
-                case 28: // MaxHP %Áõ°¡
+                case 28: // MaxHP %ì¦ê°€
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -1000,7 +1000,7 @@ public class AuctionHandler {
                                 }
                             });
                     break;
-                case 29: // MaxMP %Áõ°¡
+                case 29: // MaxMP %ì¦ê°€
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -1030,7 +1030,7 @@ public class AuctionHandler {
                                 }
                             });
                     break;
-                case 30: // ±âº»¿É¼Ç : MaxHP
+                case 30: // ê¸°ë³¸ì˜µì…˜ : MaxHP
                     allItem.stream().filter(item -> item.getItem().getType() == 1)
                             .filter(item -> ((Equip) item.getItem()).getHpR() >= value).forEach(a -> {
                         if (!filter.contains(a)) {
@@ -1038,7 +1038,7 @@ public class AuctionHandler {
                         }
                     });
                     break;
-                case 31: // ±âº»¿É¼Ç : MaxMP
+                case 31: // ê¸°ë³¸ì˜µì…˜ : MaxMP
                     allItem.stream().filter(item -> item.getItem().getType() == 1)
                             .filter(item -> ((Equip) item.getItem()).getMpR() >= value).forEach(a -> {
                         if (!filter.contains(a)) {
@@ -1046,7 +1046,7 @@ public class AuctionHandler {
                         }
                     });
                     break;
-                case 32: // °ø°İ·Â Áõ°¡
+                case 32: // ê³µê²©ë ¥ ì¦ê°€
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -1076,7 +1076,7 @@ public class AuctionHandler {
                                 }
                             });
                     break;
-                case 33: // ¸¶·Â Áõ°¡
+                case 33: // ë§ˆë ¥ ì¦ê°€
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -1106,7 +1106,7 @@ public class AuctionHandler {
                                 }
                             });
                     break;
-                case 34: // ±âº»¿É¼Ç: Âø¿ë Á¦ÇÑ ·¹º§ °¨¼Ò
+                case 34: // ê¸°ë³¸ì˜µì…˜: ì°©ìš© ì œí•œ ë ˆë²¨ ê°ì†Œ
                     allItem.stream().filter(item -> item.getItem().getType() == 1)
                             .filter(item -> ((Equip) item.getItem()).getDownLevel() >= value).forEach(a -> {
                         if (!filter.contains(a)) {
@@ -1114,7 +1114,7 @@ public class AuctionHandler {
                         }
                     });
                     break;
-                case 35: // <¾µ¸¸ÇÑ ÇìÀÌ½ºÆ®> ½ºÅ³
+                case 35: // <ì“¸ë§Œí•œ í—¤ì´ìŠ¤íŠ¸> ìŠ¤í‚¬
                 {
                     int[] potentials = new int[]{31001};
                     allItem.stream()
@@ -1149,7 +1149,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 36: // <¾µ¸¸ÇÑ ¹Ì½ºÆ½ µµ¾î> ½ºÅ³
+                case 36: // <ì“¸ë§Œí•œ ë¯¸ìŠ¤í‹± ë„ì–´> ìŠ¤í‚¬
                 {
                     int[] potentials = new int[]{31002};
                     allItem.stream()
@@ -1184,7 +1184,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 37: // <¾µ¸¸ÇÑ »şÇÁ ¾ÆÀÌÁî> ½ºÅ³
+                case 37: // <ì“¸ë§Œí•œ ìƒ¤í”„ ì•„ì´ì¦ˆ> ìŠ¤í‚¬
                 {
                     int[] potentials = new int[]{31003};
                     allItem.stream()
@@ -1219,7 +1219,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 38: // <¾µ¸¸ÇÑ ÇÏÀÌÆÛ ¹Ùµğ> ½ºÅ³
+                case 38: // <ì“¸ë§Œí•œ í•˜ì´í¼ ë°”ë””> ìŠ¤í‚¬
                 {
                     int[] potentials = new int[]{31004};
                     allItem.stream()
@@ -1254,7 +1254,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 39: // <¾µ¸¸ÇÑ ÄÄ¹î ¿À´õ½º> ½ºÅ³
+                case 39: // <ì“¸ë§Œí•œ ì»´ë±ƒ ì˜¤ë”ìŠ¤> ìŠ¤í‚¬
                 {
                     int[] potentials = new int[]{41005};
                     allItem.stream()
@@ -1289,7 +1289,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 40: // <¾µ¸¸ÇÑ ¾îµå¹ê½ºÆ® ºí·¹½º> ½ºÅ³
+                case 40: // <ì“¸ë§Œí•œ ì–´ë“œë°´ìŠ¤íŠ¸ ë¸”ë ˆìŠ¤> ìŠ¤í‚¬
                 {
                     int[] potentials = new int[]{41006};
                     allItem.stream()
@@ -1324,7 +1324,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 41: // <¾µ¸¸ÇÑ À©µå ºÎ½ºÅÍ> ½ºÅ³
+                case 41: // <ì“¸ë§Œí•œ ìœˆë“œ ë¶€ìŠ¤í„°> ìŠ¤í‚¬
                 {
                     int[] potentials = new int[]{41007};
                     allItem.stream()
@@ -1359,7 +1359,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 42: // ÃÖ´ë µ¥¹ÌÁö Á¦ÇÑ »ó½Â
+                case 42: // ìµœëŒ€ ë°ë¯¸ì§€ ì œí•œ ìƒìŠ¹
                 {
                     allItem.stream()
                             .forEach(item -> {
@@ -1391,7 +1391,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 43: // STR Áõ°¡
+                case 43: // STR ì¦ê°€
                 {
                     allItem.stream()
                             .forEach(item -> {
@@ -1423,7 +1423,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 44: // DEX Áõ°¡
+                case 44: // DEX ì¦ê°€
                 {
                     allItem.stream()
                             .forEach(item -> {
@@ -1455,7 +1455,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 45: // INT Áõ°¡
+                case 45: // INT ì¦ê°€
                 {
                     allItem.stream()
                             .forEach(item -> {
@@ -1487,7 +1487,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 46: { // LUK Áõ°¡
+                case 46: { // LUK ì¦ê°€
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -1518,7 +1518,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 47: // MaxHP Áõ°¡
+                case 47: // MaxHP ì¦ê°€
                 {
                     allItem.stream()
                             .forEach(item -> {
@@ -1548,7 +1548,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 48: { // MaxMP Áõ°¡
+                case 48: { // MaxMP ì¦ê°€
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -1579,7 +1579,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 49: // ¿Ã½ºÅÈ Áõ°¡
+                case 49: // ì˜¬ìŠ¤íƒ¯ ì¦ê°€
                 {
                     int[] potentials = new int[]{201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 10081, 12081, 12082, 40081};
                     allItem.stream()
@@ -1614,7 +1614,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 50: // ¸ğµç ½ºÅ³ ·¹º§ Áõ°¡
+                case 50: // ëª¨ë“  ìŠ¤í‚¬ ë ˆë²¨ ì¦ê°€
                 {
                     allItem.stream()
                             .forEach(item -> {
@@ -1646,7 +1646,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 51: // °ø°İ½Ã HP È¸º¹
+                case 51: // ê³µê²©ì‹œ HP íšŒë³µ
                 {
                     allItem.stream()
                             .forEach(item -> {
@@ -1678,7 +1678,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 52: { // °ø°İ½Ã MP È¸º¹
+                case 52: { // ê³µê²©ì‹œ MP íšŒë³µ
                     allItem.stream()
                             .forEach(item -> {
                                 if (item.getItem().getType() == 1) {
@@ -1709,7 +1709,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 53: // Ä³¸¯ÅÍ 10·¹º§ ´ç STR Áõ°¡
+                case 53: // ìºë¦­í„° 10ë ˆë²¨ ë‹¹ STR ì¦ê°€
                 {
                     allItem.stream()
                             .forEach(item -> {
@@ -1741,7 +1741,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 54: // Ä³¸¯ÅÍ 10·¹º§ ´ç DEX Áõ°¡
+                case 54: // ìºë¦­í„° 10ë ˆë²¨ ë‹¹ DEX ì¦ê°€
                 {
                     allItem.stream()
                             .forEach(item -> {
@@ -1773,7 +1773,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 55: // Ä³¸¯ÅÍ 10·¹º§ ´ç INT Áõ°¡
+                case 55: // ìºë¦­í„° 10ë ˆë²¨ ë‹¹ INT ì¦ê°€
                 {
                     allItem.stream()
                             .forEach(item -> {
@@ -1805,7 +1805,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 56: // Ä³¸¯ÅÍ 10·¹º§ ´ç LUK Áõ°¡
+                case 56: // ìºë¦­í„° 10ë ˆë²¨ ë‹¹ LUK ì¦ê°€
                 {
                     allItem.stream()
                             .forEach(item -> {
@@ -1837,7 +1837,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 57: // HP È¸º¹ ¾ÆÀÌÅÛ ¹× ½ºÅ³ È¿À² Áõ°¡
+                case 57: // HP íšŒë³µ ì•„ì´í…œ ë° ìŠ¤í‚¬ íš¨ìœ¨ ì¦ê°€
                 {
                     allItem.stream()
                             .forEach(item -> {
@@ -1869,7 +1869,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 58: // °æÇèÄ¡ È¹µæ·® Áõ°¡
+                case 58: // ê²½í—˜ì¹˜ íšë“ëŸ‰ ì¦ê°€
                 {
                     allItem.stream()
                             .forEach(item -> {
@@ -1901,7 +1901,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 59: // ¸Ş¼Ò È¹µæ·® Áõ°¡
+                case 59: // ë©”ì†Œ íšë“ëŸ‰ ì¦ê°€
                 {
                     allItem.stream()
                             .forEach(item -> {
@@ -1933,7 +1933,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 60: // Ä³¸¯ÅÍ 10·¹º§ ´ç °ø°İ·Â Áõ°¡
+                case 60: // ìºë¦­í„° 10ë ˆë²¨ ë‹¹ ê³µê²©ë ¥ ì¦ê°€
                 {
                     allItem.stream()
                             .forEach(item -> {
@@ -1965,7 +1965,7 @@ public class AuctionHandler {
                             });
                     break;
                 }
-                case 61: // Ä³¸¯ÅÍ 10·¹º§ ´ç ¸¶·Â Áõ°¡
+                case 61: // ìºë¦­í„° 10ë ˆë²¨ ë‹¹ ë§ˆë ¥ ì¦ê°€
                 {
                     allItem.stream()
                             .forEach(item -> {
@@ -2143,7 +2143,7 @@ public class AuctionHandler {
         public static final void load() {
             try {
                 int i = 0;
-                //System.out.println("[¾Ë¸²] ¸ŞÀÌÇÃ¿Á¼Ç µ¥ÀÌÅÍ¸¦ ºÒ·¯¿É´Ï´Ù.");
+                //System.out.println("[ì•Œë¦¼] ë©”ì´í”Œì˜¥ì…˜ ë°ì´í„°ë¥¼ ë¶ˆëŸ¬ì˜µë‹ˆë‹¤.");
                 ItemFactory.loadItems(null, ItemFactory.InventoryType.AUCTION, null, null, null);
                 Connection con = MYSQL.getConnection();
                 try (PreparedStatement ps = con.prepareStatement("SELECT * FROM `auctions`")) {
@@ -2153,7 +2153,7 @@ public class AuctionHandler {
                             addAuction(rs.getInt("characterid"), rs.getLong("bid"), rs.getInt("inventoryid"), rs.getByte("status"));
                         }
                     }
-                    //System.out.println("[¾Ë¸²] ÃÑ " + i + "°³ÀÇ ¸ŞÀÌÇÃ¿Á¼Ç µ¥ÀÌÅÍ¸¦ ·Îµù ÇÏ¿´½À´Ï´Ù.");
+                    //System.out.println("[ì•Œë¦¼] ì´ " + i + "ê°œì˜ ë©”ì´í”Œì˜¥ì…˜ ë°ì´í„°ë¥¼ ë¡œë”© í•˜ì˜€ìŠµë‹ˆë‹¤.");
                 }
                 con.close();
             } catch (SQLException ex) {
@@ -2354,19 +2354,19 @@ public class AuctionHandler {
         public static byte[] AuctionMessage(byte message, byte sub) {
             WritingPacket mplew = new WritingPacket();
             /*
-             0 : Á¢¼Ó½Ã ¶ß´Â ¸Ş¼¼Áö
-               - 0 : Á¤»óÀûÀ¸·Î ÀÌ¿ë °¡´ÉÇÕ´Ï´Ù. 1 : Á¡°ËÁß
-             1 : µî·Ï
-               - 0 : ¼º°ø 1 : °¡°İ ¼³Á¤ ¿À·ù 2 : ¾ÆÀÌÅÛ ¸¸·á 3 : µî·Ï º¸Áõ±İ ºÎÁ· 4 : ÆÇ¸Å °¡´É ½½·Ô ºÎÁ· 5 : ½ÃÀÛ ÀÔÂû°¡ > Áï½Ã ±¸¸Å°¡
-             2 : Ãë¼Ò
-             3 : Áï½Ã ±¸¸Å
-               - 0 : ¼º°ø 3 : ÀÚ½ÅÀÌ µî·ÏÇÑ°Ç X 4: ¸Ş¼Ò ºÎÁ· 5 : ½½·Ô ºÎÁ·
-             4 : ÀÔÂû
-               - 0 : ¼º°ø  1 : ÃÖ°í°¡ ½ÇÆĞ 2 : ´©±º°¡ ÀÌ¹Ì »óÈ¸ ÀÔÂû 3 : Áï½Ã ±¸¸Å °¡°İÀ¸·Î ÀÔÂû 4 : ÀÚ½ÅÅÛÀÇ ÀÔÂû ºÒ°¡ 5 : ÀÌ¹Ì ÃÖ°í 6 : ¸Ş¼Ò ºÎÁ· 7 : ¹Ì¼ö·É ÀÔÂû±İ 8 ; ÀÔÂû ±İ¾×ÀÌ ³Ê¹« ÀûÀ½(ÇöÀç ÀÔÂû±İÀÇ 5%ÀÌ»ó) 9 : ½½·Ô ºÎÁ·
-             5 : ±¸¸Å
-               - 0 : ¼º°ø  5 : µ· ºÎÁ·
-             6 : ¹İÈ¯
-               - 0 : ¼º°ø 3 : ÀÎº¥ ºÎÁ·
+             0 : ì ‘ì†ì‹œ ëœ¨ëŠ” ë©”ì„¸ì§€
+               - 0 : ì •ìƒì ìœ¼ë¡œ ì´ìš© ê°€ëŠ¥í•©ë‹ˆë‹¤. 1 : ì ê²€ì¤‘
+             1 : ë“±ë¡
+               - 0 : ì„±ê³µ 1 : ê°€ê²© ì„¤ì • ì˜¤ë¥˜ 2 : ì•„ì´í…œ ë§Œë£Œ 3 : ë“±ë¡ ë³´ì¦ê¸ˆ ë¶€ì¡± 4 : íŒë§¤ ê°€ëŠ¥ ìŠ¬ë¡¯ ë¶€ì¡± 5 : ì‹œì‘ ì…ì°°ê°€ > ì¦‰ì‹œ êµ¬ë§¤ê°€
+             2 : ì·¨ì†Œ
+             3 : ì¦‰ì‹œ êµ¬ë§¤
+               - 0 : ì„±ê³µ 3 : ìì‹ ì´ ë“±ë¡í•œê±´ X 4: ë©”ì†Œ ë¶€ì¡± 5 : ìŠ¬ë¡¯ ë¶€ì¡±
+             4 : ì…ì°°
+               - 0 : ì„±ê³µ  1 : ìµœê³ ê°€ ì‹¤íŒ¨ 2 : ëˆ„êµ°ê°€ ì´ë¯¸ ìƒíšŒ ì…ì°° 3 : ì¦‰ì‹œ êµ¬ë§¤ ê°€ê²©ìœ¼ë¡œ ì…ì°° 4 : ìì‹ í…œì˜ ì…ì°° ë¶ˆê°€ 5 : ì´ë¯¸ ìµœê³  6 : ë©”ì†Œ ë¶€ì¡± 7 : ë¯¸ìˆ˜ë ¹ ì…ì°°ê¸ˆ 8 ; ì…ì°° ê¸ˆì•¡ì´ ë„ˆë¬´ ì ìŒ(í˜„ì¬ ì…ì°°ê¸ˆì˜ 5%ì´ìƒ) 9 : ìŠ¬ë¡¯ ë¶€ì¡±
+             5 : êµ¬ë§¤
+               - 0 : ì„±ê³µ  5 : ëˆ ë¶€ì¡±
+             6 : ë°˜í™˜
+               - 0 : ì„±ê³µ 3 : ì¸ë²¤ ë¶€ì¡±
              */
             mplew.writeShort(SendPacketOpcode.AUCTION.getValue());
             mplew.write(message);
@@ -2381,7 +2381,7 @@ public class AuctionHandler {
             mplew.write(0);
             mplew.write(1);
             mplew.write(1);
-            mplew.writeInt(items.size()); //°¹¼ö
+            mplew.writeInt(items.size()); //ê°¯ìˆ˜
             for (AuctionItemPackage aitem : items) {
 
                 mplew.writeInt(0);
@@ -2397,7 +2397,7 @@ public class AuctionHandler {
             WritingPacket mplew = new WritingPacket();
             mplew.writeShort(SendPacketOpcode.AUCTION.getValue());
             mplew.write(9);
-            mplew.writeInt(items.size()); //°¹¼ö
+            mplew.writeInt(items.size()); //ê°¯ìˆ˜
             for (AuctionItemPackage aitem : items) {
                 boolean Refund = false;
                 Item item = aitem.getItem();
@@ -2407,11 +2407,11 @@ public class AuctionHandler {
                 mplew.writeInt(1); // account id
                 mplew.writeInt(aitem.getBuyer());
                 mplew.writeInt(item.getItemId());
-                mplew.writeInt(status); // 1 = »óÈ¸ÀÔÂû 2 = ³«Âû 3 = ÆÇ¸Å ¿Ï·á
-                mplew.writeLong(status == 0 ? WorldAuction.getBidById(ownerId, (int) item.getInventoryId()) : aitem.getMesos()); //ÀÚ½Å ÀÔÂû°¡
+                mplew.writeInt(status); // 1 = ìƒíšŒì…ì°° 2 = ë‚™ì°° 3 = íŒë§¤ ì™„ë£Œ
+                mplew.writeLong(status == 0 ? WorldAuction.getBidById(ownerId, (int) item.getInventoryId()) : aitem.getMesos()); //ìì‹  ì…ì°°ê°€
                 mplew.writeLong(PacketProvider.getTime(aitem.getBuyTime() + (12 * 60 * 60 * 1000)));
                 mplew.writeLong(aitem.getBid());
-                mplew.writeInt(1); // °¹¼ö
+                mplew.writeInt(1); // ê°¯ìˆ˜
                 mplew.writeInt(0);
 
                 mplew.write(Refund ? 0 : 1);
@@ -2427,7 +2427,7 @@ public class AuctionHandler {
             WritingPacket mplew = new WritingPacket();
             mplew.writeShort(SendPacketOpcode.AUCTION.getValue());
             mplew.write(8);
-            mplew.writeInt(aitems.size()); //°¹¼ö
+            mplew.writeInt(aitems.size()); //ê°¯ìˆ˜
             for (AuctionItemPackage aitem : aitems) {
                 mplew.writeInt(aitem.getItem().getInventoryId()); // auctionId
                 addAuctionItemInfo(mplew, aitem, 0, "");
@@ -2441,15 +2441,15 @@ public class AuctionHandler {
             mplew.writeShort(SendPacketOpcode.AUCTION_BUY.getValue());
             /*
              Type
-             0 = ÈïÁ¤
-             1 = »óÈ¸ ÀÔÂû
-             2 = ³«Âû
-             3 = ÆÇ¸Å ¿Ï·á
-             4 = ÆÇ¸ÅµÇÁö ¾Ê¾Ò½À´Ï´Ù.
-             7 = ¹İÈ¯
-             8 = ¼ö·É
+             0 = í¥ì •
+             1 = ìƒíšŒ ì…ì°°
+             2 = ë‚™ì°°
+             3 = íŒë§¤ ì™„ë£Œ
+             4 = íŒë§¤ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.
+             7 = ë°˜í™˜
+             8 = ìˆ˜ë ¹
              */
-            mplew.write(1); //¾Æ¸¶ ¹¹ ±¸ºĞÀÚÀÏµí
+            mplew.write(1); //ì•„ë§ˆ ë­ êµ¬ë¶„ìì¼ë“¯
             mplew.writeInt((int) aitem.getItem().getInventoryId());
             mplew.writeInt(0); // accountId
             mplew.writeInt(aitem.getBuyer());
@@ -2494,18 +2494,18 @@ public class AuctionHandler {
             mplew.writeInt(aitem.isBargain() ? 1 : 0);
             mplew.writeInt(1); // accountId
             mplew.writeInt(aitem.getOwnerId());
-            mplew.writeInt(status == 0 ? 1 : 3); //ÀÔÂûÀº 1? ¿ø·¡´Â 3
+            mplew.writeInt(status == 0 ? 1 : 3); //ì…ì°°ì€ 1? ì›ë˜ëŠ” 3
             mplew.writeInt(item.getItemId() / 1000000); // itemType
             mplew.writeInt(0);
             mplew.writeAsciiString(aitem.getOwnerName(), 13);
-            mplew.writeLong(aitem.getBid()); //ÇöÀç ÀÔÂû°¡
+            mplew.writeLong(aitem.getBid()); //í˜„ì¬ ì…ì°°ê°€
             mplew.writeLong(aitem.getBid());
             mplew.writeLong(aitem.getMesos());
             mplew.writeLong(PacketProvider.getTime(aitem.getExpiredTime()));
-            mplew.writeInt(aitem.getBuyer()); // ÀÔÂûÀÚ userid
+            mplew.writeInt(aitem.getBuyer()); // ì…ì°°ì userid
             mplew.writeAsciiString(buyername, 13);
             mplew.writeInt(0);
-            mplew.writeLong(0); // ³Ø½¼ OID
+            mplew.writeLong(0); // ë„¥ìŠ¨ OID
             mplew.writeLong(PacketProvider.getTime(aitem.getStartTime()));
             mplew.writeLong(0); // deposit
             mplew.writeInt(0);

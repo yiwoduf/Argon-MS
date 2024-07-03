@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -33,7 +33,7 @@ public class NPCSpawningCommands implements Command {
     @Override
     public void execute(MapleClient c, String[] splitted) throws Exception, IllegalCommandSyntaxException {
 
-        if (splitted[0].equals("!¿£ÇÇ½Ã")) {
+        if (splitted[0].equals("!ì—”í”¼ì‹œ")) {
             int npcId = Integer.parseInt(splitted[1]);
             MapleNPC npc = MapleLifeProvider.getNPC(npcId);
             if (npc != null && !npc.getName().equals("MISSINGNO")) {
@@ -46,9 +46,9 @@ public class NPCSpawningCommands implements Command {
                 c.getPlayer().getMap().addMapObject(npc);
                 c.getPlayer().getMap().broadcastMessage(MainPacketCreator.spawnNPC(npc, true));
             } else {
-                c.getPlayer().dropMessage(6, "WZ¿¡ Á¸ÀçÇÏÁö ¾Ê´Â NPC¸¦ ÀÔ·ÂÇß½À´Ï´Ù.");
+                c.getPlayer().dropMessage(6, "WZì— ì¡´ì¬í•˜ì§€ ì•ŠëŠ” NPCë¥¼ ì…ë ¥í–ˆìŠµë‹ˆë‹¤.");
             }
-	} else if (splitted[0].equals("!¿£ÇÇ½Ã»èÁ¦")) {
+	} else if (splitted[0].equals("!ì—”í”¼ì‹œì‚­ì œ")) {
 	    for (MapleMapObject npcss : c.getPlayer().getMap().getAllNPC()) {
                 MapleNPC npc = (MapleNPC) npcss;
                 if (splitted[1] != null) {
@@ -63,11 +63,11 @@ public class NPCSpawningCommands implements Command {
                     c.getPlayer().getMap().removeMapObject(npc);
                 }
 	    }
-            c.getPlayer().dropMessage(6, "ÀÓ½Ã ¼ÒÈ¯µÈ ¿£ÇÇ½Ã°¡ »èÁ¦µÇ¾ú½À´Ï´Ù.");
-        } else if (splitted[0].equals("!ÇöÀçÀ§Ä¡")) {
+            c.getPlayer().dropMessage(6, "ì„ì‹œ ì†Œí™˜ëœ ì—”í”¼ì‹œê°€ ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.");
+        } else if (splitted[0].equals("!í˜„ì¬ìœ„ì¹˜")) {
             Point pos = c.getPlayer().getPosition();
             c.getPlayer().dropMessage(6, "CY: " + (pos.y + 2) + " | RX0: " + (pos.x + 50) + " | RX1: " + (pos.x - 50) + " | FH: " + c.getPlayer().getMap().getFootholds().findMaple(pos).getId());
-        } else if (splitted[0].equals("!ÇÃ·¹ÀÌ¾î¿£ÇÇ½Ã")) {
+        } else if (splitted[0].equals("!í”Œë ˆì´ì–´ì—”í”¼ì‹œ")) {
             int npcId = Integer.parseInt(splitted[1]);
             MaplePlayerNPC npc = new MaplePlayerNPC(npcId, new MapleNPCStats(""));
             if (npc != null) {
@@ -112,18 +112,18 @@ public class NPCSpawningCommands implements Command {
                     }
                     ps.close();
                     con.close();
-                    c.getPlayer().dropMessage(6, "ÇÃ·¹ÀÌ¾î ¿£ÇÇ½Ã°¡ ¼º°øÀûÀ¸·Î DB¿¡ µî·ÏµÇ¾ú½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(6, "í”Œë ˆì´ì–´ ì—”í”¼ì‹œê°€ ì„±ê³µì ìœ¼ë¡œ DBì— ë“±ë¡ë˜ì—ˆìŠµë‹ˆë‹¤.");
                 } catch (Exception e) {
-                    c.getPlayer().dropMessage(1, "ÇÃ·¹ÀÌ¾î ¿£ÇÇ½Ã°¡ DB¿¡ µî·ÏµÇÁö ¸øÇß½À´Ï´Ù.");
-                    System.err.println("[¿À·ù] ÇÃ·¹ÀÌ¾î ¿£ÇÇ½Ã¸¦ Á¦ÀÛÇÏ´Â µµÁß ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(1, "í”Œë ˆì´ì–´ ì—”í”¼ì‹œê°€ DBì— ë“±ë¡ë˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
+                    System.err.println("[ì˜¤ë¥˜] í”Œë ˆì´ì–´ ì—”í”¼ì‹œë¥¼ ì œì‘í•˜ëŠ” ë„ì¤‘ ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
                     if (!ServerConstants.realese) {
                         e.printStackTrace();
                     }
                 }
             } else {
-                c.getPlayer().dropMessage(6, "WZ¿¡ Á¸ÀçÇÏÁö ¾Ê´Â NPC¸¦ ÀÔ·ÂÇß½À´Ï´Ù.");
+                c.getPlayer().dropMessage(6, "WZì— ì¡´ì¬í•˜ì§€ ì•ŠëŠ” NPCë¥¼ ì…ë ¥í–ˆìŠµë‹ˆë‹¤.");
             }
-        } else if (splitted[0].equals("!°íÁ¤¿£ÇÇ½Ã")) {
+        } else if (splitted[0].equals("!ê³ ì •ì—”í”¼ì‹œ")) {
             int npcId = Integer.parseInt(splitted[1]);
             MapleNPC npc = MapleLifeProvider.getNPC(npcId);
             if (npc != null && !npc.getName().equals("MISSINGNO")) {
@@ -135,7 +135,7 @@ public class NPCSpawningCommands implements Command {
                 c.getPlayer().getMap().addMapObject(npc);
                 c.getPlayer().getMap().broadcastMessage(MainPacketCreator.spawnNPC(npc, true));
             } else {
-                c.getPlayer().dropMessage(6, "WZ¿¡ Á¸ÀçÇÏÁö ¾Ê´Â NPC¸¦ ÀÔ·ÂÇß½À´Ï´Ù.");
+                c.getPlayer().dropMessage(6, "WZì— ì¡´ì¬í•˜ì§€ ì•ŠëŠ” NPCë¥¼ ì…ë ¥í–ˆìŠµë‹ˆë‹¤.");
                 return;
             }
             try {
@@ -155,12 +155,12 @@ public class NPCSpawningCommands implements Command {
                 ps.close();
                 con.close();
             } catch (Exception e) {
-                System.err.println("[¿À·ù] ¿£ÇÇ½Ã¸¦ °íÁ¤ µî·ÏÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.");
+                System.err.println("[ì˜¤ë¥˜] ì—”í”¼ì‹œë¥¼ ê³ ì • ë“±ë¡í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
                 if (!ServerConstants.realese) {
                     e.printStackTrace();
                 }
             }
-        } else if (splitted[0].equals("!°íÁ¤¿£ÇÇ½Ã»èÁ¦")) { // Ä¡¿ì¾¾ :: °íÁ¤¿£ÇÇ½Ã »èÁ¦ ½Ãµµ
+        } else if (splitted[0].equals("!ê³ ì •ì—”í”¼ì‹œì‚­ì œ")) { // ì¹˜ìš°ì”¨ :: ê³ ì •ì—”í”¼ì‹œ ì‚­ì œ ì‹œë„
             int npcId = Integer.parseInt(splitted[1]);
             for (MapleMapObject npcss : c.getPlayer().getMap().getAllNPC()) {
                 MapleNPC npc = (MapleNPC) npcss;
@@ -185,8 +185,8 @@ public class NPCSpawningCommands implements Command {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-            c.getPlayer().dropMessage(6, "°íÁ¤ ¼ÒÈ¯µÈ ¿£ÇÇ½Ã°¡ »èÁ¦µÇ¾ú½À´Ï´Ù.");
-        } else if (splitted[0].equals("!°íÁ¤¸÷")) {
+            c.getPlayer().dropMessage(6, "ê³ ì • ì†Œí™˜ëœ ì—”í”¼ì‹œê°€ ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.");
+        } else if (splitted[0].equals("!ê³ ì •ëª¹")) {
             int mobId = Integer.parseInt(splitted[1]);
             MapleMonster mob = MapleLifeProvider.getMonster(mobId);
             c.getPlayer().getMap().spawnMonsterOnGroundBelow(mob, c.getPlayer().getPosition());
@@ -207,13 +207,13 @@ public class NPCSpawningCommands implements Command {
                 ps.close();
                 con.close();
             } catch (Exception e) {
-                System.err.println("[¿À·ù] ¿£ÇÇ½Ã¸¦ °íÁ¤ µî·ÏÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.");
+                System.err.println("[ì˜¤ë¥˜] ì—”í”¼ì‹œë¥¼ ê³ ì • ë“±ë¡í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
                 if (!ServerConstants.realese) {
                     e.printStackTrace();
                 }
             }
         }
-        /* Ä¡¿ì¾¾ :: English Translated GM Command Starts here */
+        /* ì¹˜ìš°ì”¨ :: English Translated GM Command Starts here */
         if (splitted[0].equals("!npc")) {
             int npcId = Integer.parseInt(splitted[1]);
             MapleNPC npc = MapleLifeProvider.getNPC(npcId);
@@ -235,14 +235,14 @@ public class NPCSpawningCommands implements Command {
     @Override
     public CommandDefinition[] getDefinition() {
         return new CommandDefinition[]{
-            new CommandDefinition("¿£ÇÇ½Ã", "<¿£ÇÇ½ÃID>", "ÇöÀç À§Ä¡¿¡ ÇØ´ç IDÀÇ ¿£ÇÇ½Ã¸¦ ¼ÒÈ¯ÇÕ´Ï´Ù.", 5),
+            new CommandDefinition("ì—”í”¼ì‹œ", "<ì—”í”¼ì‹œID>", "í˜„ì¬ ìœ„ì¹˜ì— í•´ë‹¹ IDì˜ ì—”í”¼ì‹œë¥¼ ì†Œí™˜í•©ë‹ˆë‹¤.", 5),
             new CommandDefinition("npc", "<NpcID>", "Spawn NPC yet your current location.", 5),
-            new CommandDefinition("¿£ÇÇ½Ã»èÁ¦", "", "ÇöÀç ¸Ê¿¡¼­ ¸í·É¾î·Î ¼ÒÈ¯µÈ ¸ğµç NPC¸¦ Á¦°ÅÇÕ´Ï´Ù.", 5),
-            new CommandDefinition("ÇÃ·¹ÀÌ¾î¿£ÇÇ½Ã", "<½ºÅ©¸³Æ®ID>", "ÇöÀç ¸Ê¿¡ ÇöÀç ÇÃ·¹ÀÌ¾î¸¦ ¿£ÇÇ½Ã·Î µî·ÏÇÕ´Ï´Ù.", 5),
-            new CommandDefinition("°íÁ¤¿£ÇÇ½Ã", "<¿£ÇÇ½ÃID>", "ÇöÀç ¸ÊÀÇ ÇöÀç À§Ä¡¿¡ ÇØ´ç ¿£ÇÇ½Ã¸¦ °íÁ¤À¸·Î µî·ÏÇÕ´Ï´Ù.", 5),
-            new CommandDefinition("°íÁ¤¿£ÇÇ½Ã»èÁ¦", "", "", 6),
-            new CommandDefinition("°íÁ¤¸÷", "<¸÷ID>", "ÇöÀç ¸ÊÀÇ ÇöÀç À§Ä¡¿¡ ÇØ´ç ¸ó½ºÅÍ¸¦ °íÁ¤À¸·Î µî·ÏÇÕ´Ï´Ù.", 5),
-            new CommandDefinition("ÇöÀçÀ§Ä¡", "", "ÇöÀç X,Y °ª µî ÁÂÇ¥¸¦ Ãâ·ÂÇÕ´Ï´Ù.", 2)
+            new CommandDefinition("ì—”í”¼ì‹œì‚­ì œ", "", "í˜„ì¬ ë§µì—ì„œ ëª…ë ¹ì–´ë¡œ ì†Œí™˜ëœ ëª¨ë“  NPCë¥¼ ì œê±°í•©ë‹ˆë‹¤.", 5),
+            new CommandDefinition("í”Œë ˆì´ì–´ì—”í”¼ì‹œ", "<ìŠ¤í¬ë¦½íŠ¸ID>", "í˜„ì¬ ë§µì— í˜„ì¬ í”Œë ˆì´ì–´ë¥¼ ì—”í”¼ì‹œë¡œ ë“±ë¡í•©ë‹ˆë‹¤.", 5),
+            new CommandDefinition("ê³ ì •ì—”í”¼ì‹œ", "<ì—”í”¼ì‹œID>", "í˜„ì¬ ë§µì˜ í˜„ì¬ ìœ„ì¹˜ì— í•´ë‹¹ ì—”í”¼ì‹œë¥¼ ê³ ì •ìœ¼ë¡œ ë“±ë¡í•©ë‹ˆë‹¤.", 5),
+            new CommandDefinition("ê³ ì •ì—”í”¼ì‹œì‚­ì œ", "", "", 6),
+            new CommandDefinition("ê³ ì •ëª¹", "<ëª¹ID>", "í˜„ì¬ ë§µì˜ í˜„ì¬ ìœ„ì¹˜ì— í•´ë‹¹ ëª¬ìŠ¤í„°ë¥¼ ê³ ì •ìœ¼ë¡œ ë“±ë¡í•©ë‹ˆë‹¤.", 5),
+            new CommandDefinition("í˜„ì¬ìœ„ì¹˜", "", "í˜„ì¬ X,Y ê°’ ë“± ì¢Œí‘œë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.", 2)
         };
     }
 }

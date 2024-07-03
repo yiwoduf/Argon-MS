@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹èÁöÈÆ raccoonfox69@gmail.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°°ì§€í›ˆ raccoonfox69@gmail.com
  * ==================================
  * 
  */
@@ -29,15 +29,15 @@ public class SearchCommands implements Command {
     @Override
     public void execute(MapleClient c, String[] splitted) throws Exception, IllegalCommandSyntaxException {
 	if (splitted.length == 1) {
-	    c.getPlayer().dropMessage(6, splitted[0] + ": <¿£ÇÇ½Ã> <¸÷> <¾ÆÀÌÅÛ> <¸Ê> <½ºÅ³>");
+	    c.getPlayer().dropMessage(6, splitted[0] + ": <ì—”í”¼ì‹œ> <ëª¹> <ì•„ì´í…œ> <ë§µ> <ìŠ¤í‚¬>");
 	} else {
 	    String type = splitted[1];
 	    String search = StringUtil.joinStringFrom(splitted, 2);
 	    MapleData data = null;
 	    MapleDataProvider dataProvider = MapleDataProviderFactory.getDataProvider(new File("property/Wz/String.wz"));
-	    c.getPlayer().dropMessage(6, "<<Å¸ÀÔ: " + type + " | °Ë»ö¾î: " + search + ">>");
+	    c.getPlayer().dropMessage(6, "<<íƒ€ì…: " + type + " | ê²€ìƒ‰ì–´: " + search + ">>");
 
-	    if (type.equalsIgnoreCase("¿£ÇÇ½Ã")) {
+	    if (type.equalsIgnoreCase("ì—”í”¼ì‹œ")) {
 		List<String> retNpcs = new ArrayList<String>();
 		data = dataProvider.getData("Npc.img");
 		List<Pair<Integer, String>> npcPairList = new LinkedList<Pair<Integer, String>>();
@@ -54,10 +54,10 @@ public class SearchCommands implements Command {
 			c.getPlayer().dropMessage(6, singleRetNpc);
 		    }
 		} else {
-		    c.getPlayer().dropMessage(6, "¹ß°ßµÈ ¿£ÇÇ½Ã°¡ ¾ø½À´Ï´Ù.");
+		    c.getPlayer().dropMessage(6, "ë°œê²¬ëœ ì—”í”¼ì‹œê°€ ì—†ìŠµë‹ˆë‹¤.");
 		}
 
-	    } else if (type.equalsIgnoreCase("¸Ê")) {
+	    } else if (type.equalsIgnoreCase("ë§µ")) {
 		List<String> retMaps = new ArrayList<String>();
 		data = dataProvider.getData("Map.img");
 		List<Pair<Integer, String>> mapPairList = new LinkedList<Pair<Integer, String>>();
@@ -76,9 +76,9 @@ public class SearchCommands implements Command {
 			c.getPlayer().dropMessage(6, singleRetMap);
 		    }
 		} else {
-		    c.getPlayer().dropMessage(6, "¹ß°ßµÈ ¸ÊÀÌ ¾ø½À´Ï´Ù.");
+		    c.getPlayer().dropMessage(6, "ë°œê²¬ëœ ë§µì´ ì—†ìŠµë‹ˆë‹¤.");
 		}
-	    } else if (type.equalsIgnoreCase("¸÷")) {
+	    } else if (type.equalsIgnoreCase("ëª¹")) {
 		List<String> retMobs = new ArrayList<String>();
 		data = dataProvider.getData("Mob.img");
 		List<Pair<Integer, String>> mobPairList = new LinkedList<Pair<Integer, String>>();
@@ -95,13 +95,13 @@ public class SearchCommands implements Command {
 			c.getPlayer().dropMessage(6, singleRetMob);
 		    }
 		} else {
-		    c.getPlayer().dropMessage(6, "¹ß°ßµÈ ¸ó½ºÅÍ°¡ ¾ø½À´Ï´Ù.");
+		    c.getPlayer().dropMessage(6, "ë°œê²¬ëœ ëª¬ìŠ¤í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");
 		}
 
 	    } else if (type.equalsIgnoreCase("REACTOR")) {
 		c.getPlayer().dropMessage(6, "NOT ADDED YET");
 
-	    } else if (type.equalsIgnoreCase("¾ÆÀÌÅÛ")) {
+	    } else if (type.equalsIgnoreCase("ì•„ì´í…œ")) {
 		List<String> retItems = new ArrayList<String>();
 		for (Pair<Integer, String> itemPair : ItemInformation.getInstance().getAllItems()) {
 		    if (itemPair.getRight().toLowerCase().contains(search.toLowerCase())) {
@@ -113,10 +113,10 @@ public class SearchCommands implements Command {
 			c.getPlayer().dropMessage(6, singleRetItem);
 		    }
 		} else {
-		    c.getPlayer().dropMessage(6, "¹ß°ßµÈ ¾ÆÀÌÅÛÀÌ ¾ø½À´Ï´Ù.");
+		    c.getPlayer().dropMessage(6, "ë°œê²¬ëœ ì•„ì´í…œì´ ì—†ìŠµë‹ˆë‹¤.");
 		}
 
-	    } else if (type.equalsIgnoreCase("½ºÅ³")) {
+	    } else if (type.equalsIgnoreCase("ìŠ¤í‚¬")) {
 		List<String> retSkills = new ArrayList<String>();
 		data = dataProvider.getData("Skill.img");
 		List<Pair<Integer, String>> skillPairList = new LinkedList<Pair<Integer, String>>();
@@ -133,10 +133,10 @@ public class SearchCommands implements Command {
 			c.getPlayer().dropMessage(6, singleRetSkill);
 		    }
 		} else {
-		    c.getPlayer().dropMessage(6, "¹ß°ßµÈ ½ºÅ³ÀÌ ¾ø½À´Ï´Ù.");
+		    c.getPlayer().dropMessage(6, "ë°œê²¬ëœ ìŠ¤í‚¬ì´ ì—†ìŠµë‹ˆë‹¤.");
 		}
 	    } else {
-		c.getPlayer().dropMessage(6, "ÇØ´ç °Ë»öÀº Ã³¸®ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+		c.getPlayer().dropMessage(6, "í•´ë‹¹ ê²€ìƒ‰ì€ ì²˜ë¦¬í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 	    }
 	}
     }
@@ -144,8 +144,8 @@ public class SearchCommands implements Command {
     @Override
     public CommandDefinition[] getDefinition() {
 	return new CommandDefinition[]{
-		    new CommandDefinition("Ã£±â", "<Å¸ÀÔ> <°Ë»ö¾î>", "¸Ê, ¾ÆÀÌÅÛ µîÀÇ °íÀ¯¹øÈ£ID¸¦ °Ë»öÇÕ´Ï´Ù.", 2),
-		    new CommandDefinition("°Ë»ö", "<Å¸ÀÔ> <°Ë»ö¾î>", "¸Ê, ¾ÆÀÌÅÛ µîÀÇ °íÀ¯¹øÈ£ID¸¦ °Ë»öÇÕ´Ï´Ù.", 2)
+		    new CommandDefinition("ì°¾ê¸°", "<íƒ€ì…> <ê²€ìƒ‰ì–´>", "ë§µ, ì•„ì´í…œ ë“±ì˜ ê³ ìœ ë²ˆí˜¸IDë¥¼ ê²€ìƒ‰í•©ë‹ˆë‹¤.", 2),
+		    new CommandDefinition("ê²€ìƒ‰", "<íƒ€ì…> <ê²€ìƒ‰ì–´>", "ë§µ, ì•„ì´í…œ ë“±ì˜ ê³ ìœ ë²ˆí˜¸IDë¥¼ ê²€ìƒ‰í•©ë‹ˆë‹¤.", 2)
 	};
     }
 }

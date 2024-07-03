@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -70,7 +70,7 @@ public class PhantomHandler {
         }
         MapleCharacter targetchr = (MapleCharacter) chrobj;
         byte action = rh.readByte();
-        if (action == 0) { //ÈÉÄ§
+        if (action == 0) { //í›”ì¹¨
             SteelSkillEntry sse = new SteelSkillEntry(skillId, targetchr.getSkillLevel(skillId));
             if (!ha.getPlayer().getSteelSkills().isExistSkill(skillId)) {
                 sse.setSlot(ha.getPlayer().getSteelSkills().getNextFreeSlot(SteelSkillEntry.getJobIndex(skillId)));
@@ -79,8 +79,8 @@ public class PhantomHandler {
                 ISkill skills = SkillFactory.getSkill(skillId);
                 ha.getPlayer().changeSkillLevel(skills, (byte) sse.getSkillLevel(), (byte) skills.getMasterLevel());
             } else {
-                //¿ø·¡ÀÖ´ø ½ºÅ³ÀÇ ½½·ÔÀ» ÀúÀå
-                //±× ½½·Ô¿¡ÀÖ´ø µ¥ÀÌÅÍ Áö¿ò -> °Å±â¿¡ »õ·Î¿î½ºÅ³ ÀúÀå
+                //ì›ë˜ìˆë˜ ìŠ¤í‚¬ì˜ ìŠ¬ë¡¯ì„ ì €ì¥
+                //ê·¸ ìŠ¬ë¡¯ì—ìˆë˜ ë°ì´í„° ì§€ì›€ -> ê±°ê¸°ì— ìƒˆë¡œìš´ìŠ¤í‚¬ ì €ì¥
                 SteelSkillEntry sse2 = ha.getPlayer().getSteelSkills().getSkillEntryById(skillId);
                 int slot = sse2.getSlot();
                 ISkill skills = SkillFactory.getSkill(skillId);
@@ -92,11 +92,11 @@ public class PhantomHandler {
                 ha.getPlayer().changeSkillLevel(skills, (byte) sse.getSkillLevel(), (byte) skills.getMasterLevel());
             }
 
-        } else if (action == 1) { //»èÁ¦
+        } else if (action == 1) { //ì‚­ì œ
             SteelSkillEntry sse = ha.getPlayer().getSteelSkills().getSkillEntryById(skillId);
             if (sse == null) {
-                ha.getPlayer().message(1, "ÇØ´ç ½ºÅ³À» Ã£À» ¼ö ¾ø½À´Ï´Ù.");
-                System.err.println("[¿À·ù] ½ºÆ¿ ½ºÅ³À» »èÁ¦ÇÏ´Ù°¡ ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù. - ÀÏÄ¡ÇÏ´Â ½ºÅ³À» ¹ß°ßÇÏÁö ¸øÇß½À´Ï´Ù.");
+                ha.getPlayer().message(1, "í•´ë‹¹ ìŠ¤í‚¬ì„ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
+                System.err.println("[ì˜¤ë¥˜] ìŠ¤í‹¸ ìŠ¤í‚¬ì„ ì‚­ì œí•˜ë‹¤ê°€ ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤. - ì¼ì¹˜í•˜ëŠ” ìŠ¤í‚¬ì„ ë°œê²¬í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
                 ha.getPlayer().ea();
                 return;
             }

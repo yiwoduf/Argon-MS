@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -65,7 +65,7 @@ public class MapleCashInventory {
         if (index!=-1) {
             inventory.remove(index);
         } else {
-            System.err.println("[¿À·ù] Ä³½Ã¾ÆÀÌÅÛÀ» ¹ß°ßÇÏÁö ¸øÇØ »èÁ¦ÇÏÁö ¸øÇß½À´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] ìºì‹œì•„ì´í…œì„ ë°œê²¬í•˜ì§€ ëª»í•´ ì‚­ì œí•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
         }
     }
     

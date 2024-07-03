@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -20,18 +20,18 @@ import java.util.Date;
 
 /**
  *
- * @author ¿¡¹İÅ×ÀÌ¸£
+ * @author ì—ë°˜í…Œì´ë¥´
  */
 public class OldUserDelete {
     public static void main(String[] args) {
-        System.out.println("[ARGON] µ¥ÀÌÅÍº£ÀÌ½º Á¤¸® ÇÁ·Î±×·¥ ÀÛµ¿µÇ¾ú½À´Ï´Ù.");
+        System.out.println("[ARGON] ë°ì´í„°ë² ì´ìŠ¤ ì •ë¦¬ í”„ë¡œê·¸ë¨ ì‘ë™ë˜ì—ˆìŠµë‹ˆë‹¤.");
         long startTime = System.currentTimeMillis();
         int deletedrows = 0;
         
         try {
             Connection con = MYSQL.getConnection();
             
-            System.out.println("[ARGON] DB »èÁ¦ÁßÀÔ´Ï´Ù.");
+            System.out.println("[ARGON] DB ì‚­ì œì¤‘ì…ë‹ˆë‹¤.");
             
             PreparedStatement ps = con.prepareStatement("SELECT * FROM accounts");
             ResultSet rs = ps.executeQuery();
@@ -65,7 +65,7 @@ public class OldUserDelete {
             t.printStackTrace();
         }
         
-        System.out.println("[ARGON] "+deletedrows+"°³ÀÇ °èÁ¤ÀÌ »èÁ¦µÇ¾ú½À´Ï´Ù. ¼Ò¿ä½Ã°£Àº "+(System.currentTimeMillis() - startTime)+"ms ÀÔ´Ï´Ù.");
+        System.out.println("[ARGON] "+deletedrows+"ê°œì˜ ê³„ì •ì´ ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤. ì†Œìš”ì‹œê°„ì€ "+(System.currentTimeMillis() - startTime)+"ms ì…ë‹ˆë‹¤.");
     }
     
     public final static boolean deleteCharacter(final int accId, final int cid) {

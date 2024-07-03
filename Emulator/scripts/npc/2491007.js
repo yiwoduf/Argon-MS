@@ -1,6 +1,6 @@
 /*
- * @Author ¹ÙÀÌ·¯½º(v_ir_us@nate.com)
- * MYSQL - MYSQL·Î º¯°æ ÈÄ¿¡ »ç¿ëÇØÁÖ¼¼¿ä.
+ * @Author ë°”ì´ëŸ¬ìŠ¤(v_ir_us@nate.com)
+ * MYSQL - MYSQLë¡œ ë³€ê²½ í›„ì— ì‚¬ìš©í•´ì£¼ì„¸ìš”.
  */
 importPackage(java.lang);
 importPackage(java.sql);
@@ -20,7 +20,7 @@ function start() {
     if (getDate() != today) {
         updateChance();
     }
-    cm.sendSimple("ÀÚÀ½ÄûÁîÀÇ ½Å, #d¸Ş¸£¼¼µ¥½º#kÀÔ´Ï´Ù. ¹«¾ùÀ» ÇÏ½Ã°Ú½À´Ï±î?\r\n#d(ÄûÁî Ç® ¼ö ÀÖ´Â ±âÈ¸ : #r"+getChance()+" #dÈ¸)\r\n#b#L1#ÀÚÀ½ÄûÁî¸¦ µî·ÏÇÏ°Ú½À´Ï´Ù.\r\n#L2#ÀÚÀ½ÄûÁî¸¦ Ç®°Ú½À´Ï´Ù.\r\n#L3#µî·ÏÇÑ ÀÚÀ½ÄûÁî¸¦ »èÁ¦ÇÏ°Ú½À´Ï´Ù.");
+    cm.sendSimple("ììŒí€´ì¦ˆì˜ ì‹ , #dë©”ë¥´ì„¸ë°ìŠ¤#kì…ë‹ˆë‹¤. ë¬´ì—‡ì„ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\r\n#d(í€´ì¦ˆ í’€ ìˆ˜ ìˆëŠ” ê¸°íšŒ : #r"+getChance()+" #díšŒ)\r\n#b#L1#ììŒí€´ì¦ˆë¥¼ ë“±ë¡í•˜ê² ìŠµë‹ˆë‹¤.\r\n#L2#ììŒí€´ì¦ˆë¥¼ í’€ê² ìŠµë‹ˆë‹¤.\r\n#L3#ë“±ë¡í•œ ììŒí€´ì¦ˆë¥¼ ì‚­ì œí•˜ê² ìŠµë‹ˆë‹¤.");
 }
 
 function action(mode,type,selection) {
@@ -32,10 +32,10 @@ function action(mode,type,selection) {
     }
     if (status == 0) {
         if (selection == 1) {
-            cm.sendGetText("ÄûÁîÀÇ ÁÖÁ¦¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+            cm.sendGetText("í€´ì¦ˆì˜ ì£¼ì œë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
         } else if (selection == 2) {
             if (getChance() == 0) {
-                sendHint("³²Àº µµÀüÈ½¼ö°¡ ¾ø½À´Ï´Ù.",250,20);
+                sendHint("ë‚¨ì€ ë„ì „íšŸìˆ˜ê°€ ì—†ìŠµë‹ˆë‹¤.",250,20);
                 cm.dispose();
             } else { 
             getQuizList(1);
@@ -47,28 +47,28 @@ function action(mode,type,selection) {
     } else if (status == 1) {
         if (selected == 1) {
             main = cm.getText();
-            cm.sendGetText("#eÁÖÁ¦ : #n#b"+main+"#k\r\n¹®Á¦¿Í ´äÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä. Ex) ¤±¤·¤½¤µ¤¼¤©,¸ŞÀÌÇÃ½ºÅä¸®");
+            cm.sendGetText("#eì£¼ì œ : #n#b"+main+"#k\r\në¬¸ì œì™€ ë‹µì„ ì…ë ¥í•´ì£¼ì„¸ìš”. Ex) ã…ã…‡ã…ã……ã…Œã„¹,ë©”ì´í”ŒìŠ¤í† ë¦¬");
         } else if (selected == 2) {
             number = selection;
-            cm.sendGetText(getQuizInfo(number)+"Á¤´äÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+            cm.sendGetText(getQuizInfo(number)+"ì •ë‹µì„ ì…ë ¥í•´ì£¼ì„¸ìš”.");
         } else if (selected == 3) {
             del = selection;
-            cm.sendYesNo("Á¤¸» ÄûÁî¸¦ »èÁ¦ÇÏ½Ã°Ú½À´Ï±î? ÄûÁîÀÇ »ó±İÀº µÇµ¹·Á¹ŞÀ» ¼ö ¾ø½À´Ï´Ù.");
+            cm.sendYesNo("ì •ë§ í€´ì¦ˆë¥¼ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ? í€´ì¦ˆì˜ ìƒê¸ˆì€ ë˜ëŒë ¤ë°›ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
         }
     } else if (status == 2) {
         if (selected == 1) {
         text = cm.getText().split(",");
         if (checkText(text[0]) == false || checkText(text[1]) == false) {
-            sendHint("¹®Á¦¿Í ´ä¿¡´Â ¿µ¹®°ú ¼ıÀÚ¸¦ Æ÷ÇÔÇÒ ¼ö ¾ø½À´Ï´Ù.",300,20);
+            sendHint("ë¬¸ì œì™€ ë‹µì—ëŠ” ì˜ë¬¸ê³¼ ìˆ«ìë¥¼ í¬í•¨í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.",300,20);
             cm.dispose();
         } else {
             var length1 = text[0].split("").length;
             var length2 = text[1].split("").length;
             if (length1 != length2) {
-                sendHint("¹®Á¦¿Í ´äÀÇ ±æÀÌ°¡ °°Áö ¾Ê½À´Ï´Ù.",250,20);
+                sendHint("ë¬¸ì œì™€ ë‹µì˜ ê¸¸ì´ê°€ ê°™ì§€ ì•ŠìŠµë‹ˆë‹¤.",250,20);
                 cm.dispose();
             } else {
-                cm.sendGetText("ÈùÆ®¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä. (ÃÖ´ë 4°³, ¾øÀ¸¸é ÀÔ·Â X)\r\nEx) º£,¸®,±Â,Àâ (#b,#k·Î ±¸ºĞ)")
+                cm.sendGetText("íŒíŠ¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”. (ìµœëŒ€ 4ê°œ, ì—†ìœ¼ë©´ ì…ë ¥ X)\r\nEx) ë² ,ë¦¬,êµ¿,ì¡ (#b,#kë¡œ êµ¬ë¶„)")
             }
         }
     } else if (selected == 2) {
@@ -77,30 +77,30 @@ function action(mode,type,selection) {
         var delquiz = MYSQL.getConnection().prepareStatement("DELETE FROM consonantquiz WHERE id = ?");
         delquiz.setInt(1,del);
         delquiz.executeUpdate();
-        sendHint("¼º°øÀûÀ¸·Î »èÁ¦ÇÏ¿´½À´Ï´Ù.",250,20);
+        sendHint("ì„±ê³µì ìœ¼ë¡œ ì‚­ì œí•˜ì˜€ìŠµë‹ˆë‹¤.",250,20);
         cm.dispose();
         }
     } else if (status == 3) {
         if (selected == 1) {
             hint = cm.getText();
-            cm.sendGetNumber("¸Ş¼Ò¸¦ ¾ó¸¶³ª °Å½Ã°Ú½À´Ï±î?\r\n#bÇöÀç ¸Ş¼Ò º¸À¯·® : "+cm.getMeso()+" ¸Ş¼Ò",10000,10000,cm.getMeso() >= 100000000 ? 100000000 : cm.getMeso());
+            cm.sendGetNumber("ë©”ì†Œë¥¼ ì–¼ë§ˆë‚˜ ê±°ì‹œê² ìŠµë‹ˆê¹Œ?\r\n#bí˜„ì¬ ë©”ì†Œ ë³´ìœ ëŸ‰ : "+cm.getMeso()+" ë©”ì†Œ",10000,10000,cm.getMeso() >= 100000000 ? 100000000 : cm.getMeso());
         }
     } else if (status == 4) {
         if (selected == 1) {
             meso = selection;
-            cm.sendGetNumber("ÃÑ ¸î ¹øÀÇ ±âÈ¸¸¦ ÁÖ½Ã°Ú½À´Ï±î? #b(20 ~ 50È¸)",20,20,50);
+            cm.sendGetNumber("ì´ ëª‡ ë²ˆì˜ ê¸°íšŒë¥¼ ì£¼ì‹œê² ìŠµë‹ˆê¹Œ? #b(20 ~ 50íšŒ)",20,20,50);
         }
     } else if (status == 5) {
         if (selected == 1) {
             chance = selection;
-            var txt = "#eÁÖÁ¦ : #n#b"+main+"#k\r\n";
-            txt += "#e¹®Á¦ & ´ä : #n#r"+text[0]+" / "+text[1]+"#k\r\n";
-            txt += "#e»ó±İ : #n"+meso+" ¸Ş¼Ò\r\n";
-            txt += "#e±âÈ¸ : #n#b"+chance+" È¸#k\r\n";
+            var txt = "#eì£¼ì œ : #n#b"+main+"#k\r\n";
+            txt += "#eë¬¸ì œ & ë‹µ : #n#r"+text[0]+" / "+text[1]+"#k\r\n";
+            txt += "#eìƒê¸ˆ : #n"+meso+" ë©”ì†Œ\r\n";
+            txt += "#eê¸°íšŒ : #n#b"+chance+" íšŒ#k\r\n";
             for (var i = 0; i < 4; i++) {
-                txt += !hint.equals("") ? "\r\n#eÈùÆ® #n"+Integer.parseInt(i+1)+" : #n"+hint.split(",")[i]:"";
+                txt += !hint.equals("") ? "\r\n#eíŒíŠ¸ #n"+Integer.parseInt(i+1)+" : #n"+hint.split(",")[i]:"";
             }
-            cm.sendYesNo(txt+"\r\n\r\n#kÀ§ Á¤º¸°¡ ¸ÂÀ¸½Ã¸é ¿¹¸¦ ´­·¯ÁÖ¼¼¿ä.");
+            cm.sendYesNo(txt+"\r\n\r\n#kìœ„ ì •ë³´ê°€ ë§ìœ¼ì‹œë©´ ì˜ˆë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš”.");
         }
     } else if (status == 6) {
         if (selected == 1) {
@@ -194,7 +194,7 @@ function updateQuiz(name,main,answer,hint,meso,chance) {
     ins.setInt(6,chance);
     ins.executeUpdate();
     cm.gainMeso(-meso);
-    sendHint("ÄûÁî°¡ ¾÷µ¥ÀÌÆ® µÇ¾ú½À´Ï´Ù.",250,20);
+    sendHint("í€´ì¦ˆê°€ ì—…ë°ì´íŠ¸ ë˜ì—ˆìŠµë‹ˆë‹¤.",250,20);
     cm.dipsose();
 }
 
@@ -210,13 +210,13 @@ function getQuizList(mode) {
     while (rs.next()) {
         isExist = true;
         question = rs.getString("answer").split(",");
-        string.append("#L"+rs.getInt("id")+"#").append("ÁÖÁ¦ : #n#b"+rs.getString("main")+"").append(" #k|| ±âÈ¸ :#r "+Integer(rs.getInt("chance"))+" (È¸)\r\n#k");
+        string.append("#L"+rs.getInt("id")+"#").append("ì£¼ì œ : #n#b"+rs.getString("main")+"").append(" #k|| ê¸°íšŒ :#r "+Integer(rs.getInt("chance"))+" (íšŒ)\r\n#k");
     }
     if (isExist) {
-        var t = mode == 2 ? "»èÁ¦ÇÒ ÄûÁî¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.\r\n" : mode == 1 ? "ÇöÀç±îÁö µî·ÏµÈ ÄûÁîÀÔ´Ï´Ù.\r\n" : "";
+        var t = mode == 2 ? "ì‚­ì œí•  í€´ì¦ˆë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.\r\n" : mode == 1 ? "í˜„ì¬ê¹Œì§€ ë“±ë¡ëœ í€´ì¦ˆì…ë‹ˆë‹¤.\r\n" : "";
         cm.sendSimple(t+string.toString());
     } else {
-        sendHint("µî·ÏµÈ ÄûÁî°¡ ¾ø½À´Ï´Ù.",250,20);
+        sendHint("ë“±ë¡ëœ í€´ì¦ˆê°€ ì—†ìŠµë‹ˆë‹¤.",250,20);
         cm.dispose();
     }
 }
@@ -232,15 +232,15 @@ function getQuizInfo(id) {
         var del = MYSQL.getConnection().prepareStatement("DELETE FROM consonantquiz WHERE id = ?");
         del.setInt(1,id);
         del.executeUpdate();
-        sendHint("ÄûÁî°¡ ÀÚµ¿»èÁ¦ µÇ¾ú½À´Ï´Ù. (»çÀ¯ - ±âÈ¸ X)",280,20);
+        sendHint("í€´ì¦ˆê°€ ìë™ì‚­ì œ ë˜ì—ˆìŠµë‹ˆë‹¤. (ì‚¬ìœ  - ê¸°íšŒ X)",280,20);
         cm.dispose();
     }
     quest = rs.getString("answer").split(",");
-    string.append("#eÁÖÁ¦ : #n#b").append(rs.getString("main")).append("\r\n#k");
-    string.append("#e¹®Á¦ : #n#r").append(quest[0]).append("\r\n#k");
-    string.append("#e»ó±İ : #n#d").append(Integer(rs.getInt("meso"))).append(" ¸Ş¼Ò#k\r\n");
+    string.append("#eì£¼ì œ : #n#b").append(rs.getString("main")).append("\r\n#k");
+    string.append("#eë¬¸ì œ : #n#r").append(quest[0]).append("\r\n#k");
+    string.append("#eìƒê¸ˆ : #n#d").append(Integer(rs.getInt("meso"))).append(" ë©”ì†Œ#k\r\n");
     if (!rs.getString("hint").equals("")) {
-        string.append("#eÈùÆ® : #n").append(rs.getString("hint"));
+        string.append("#eíŒíŠ¸ : #n").append(rs.getString("hint"));
     }
     string.append("\r\n\r\n");
     return string.toString();
@@ -257,13 +257,13 @@ function getResult(id,text) {
         upd.setInt(1,rs.getInt("chance") - 1);
         upd.setInt(2,id);
         upd.executeUpdate();
-        sendHint("¿À´äÀÔ´Ï´Ù. ´Ù½Ã µµÀüÇØÁÖ¼¼¿ä. #r(µµÀüÈ½¼ö Â÷°¨)",300,20);
+        sendHint("ì˜¤ë‹µì…ë‹ˆë‹¤. ë‹¤ì‹œ ë„ì „í•´ì£¼ì„¸ìš”. #r(ë„ì „íšŸìˆ˜ ì°¨ê°)",300,20);
     } else {
         cm.gainMeso(rs.getInt("meso"));
         var del = MYSQL.getConnection().prepareStatement("DELETE FROM consonantquiz WHERE id = ?");
         del.setInt(1,id);
         del.executeUpdate();
-        sendHint("Á¤´äÀÔ´Ï´Ù! º¸»óÀ¸·Î #b"+rs.getInt("meso")+" ¸Ş¼Ò#k°¡ Áö±ŞµÇ¾ú½À´Ï´Ù.",320,20);
+        sendHint("ì •ë‹µì…ë‹ˆë‹¤! ë³´ìƒìœ¼ë¡œ #b"+rs.getInt("meso")+" ë©”ì†Œ#kê°€ ì§€ê¸‰ë˜ì—ˆìŠµë‹ˆë‹¤.",320,20);
     }
     var lost = MYSQL.getConnection().prepareStatement("UPDATE consonantchance SET chance = ? WHERE name = ?");
     lost.setInt(1,getChance() - 1);

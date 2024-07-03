@@ -19,7 +19,7 @@ return;
 
 function start() { Jessica = -1; action(1, 0, 0); }
 function action(music, type, girl) { (music == 1) ? Jessica++ : (Jessica--, cm.dispose());
-    (Jessica == 0) ? cm.sendGetText("ÇöÀç Á¢¼ÓÁßÀÎ ¿À·ù°¡ ¶ß´Â ¾ÆÀÌµğ¸¦ ÀÔ·Â ÇØ ÁÖ¼¼¿ä.")
-    :(Jessica == 1) ? (login(cm.getText()), (i != 0) ? (cm.sendOk("ÇØÁ¦ µÇ¾ú½À´Ï´Ù."), cm.dispose())
-    : (cm.sendOk("°¡ÀÔµÈ ¾ÆÀÌµğ°¡ ¾Æ´Õ´Ï´Ù."), cm.dispose())) : cm.dispose();
+    (Jessica == 0) ? cm.sendGetText("í˜„ì¬ ì ‘ì†ì¤‘ì¸ ì˜¤ë¥˜ê°€ ëœ¨ëŠ” ì•„ì´ë””ë¥¼ ì…ë ¥ í•´ ì£¼ì„¸ìš”.")
+    :(Jessica == 1) ? (login(cm.getText()), (i != 0) ? (cm.sendOk("í•´ì œ ë˜ì—ˆìŠµë‹ˆë‹¤."), cm.dispose())
+    : (cm.sendOk("ê°€ì…ëœ ì•„ì´ë””ê°€ ì•„ë‹™ë‹ˆë‹¤."), cm.dispose())) : cm.dispose();
 }

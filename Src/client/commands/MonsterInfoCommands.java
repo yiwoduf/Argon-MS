@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹èÁöÈÆ raccoonfox69@gmail.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°°ì§€í›ˆ raccoonfox69@gmail.com
  * ==================================
  * 
  */
@@ -33,26 +33,26 @@ public class MonsterInfoCommands implements Command {
 		map = c.getChannelServer().getMapFactory().getMap(Integer.parseInt(splitted[2]));
 	    }
 	}
-	if (splitted[0].equals("!Å³¿Ã")) {
+	if (splitted[0].equals("!í‚¬ì˜¬")) {
 	    MapleMonster mob;
 	    for (MapleMapObject monstermo : map.getMapObjectsInRange(c.getPlayer().getPosition(), range, Arrays.asList(MapleMapObjectType.MONSTER))) {
 		mob = (MapleMonster) monstermo;
 		map.killMonster(mob, c.getPlayer(), false, false, (byte) 1);
 	    }
-	} else if (splitted[0].equals("!Å³¿Ãµå·Ó")) {
+	} else if (splitted[0].equals("!í‚¬ì˜¬ë“œë¡­")) {
 	    MapleMonster mob;
 	    for (MapleMapObject monstermo : map.getMapObjectsInRange(c.getPlayer().getPosition(), range, Arrays.asList(MapleMapObjectType.MONSTER))) {
 		mob = (MapleMonster) monstermo;
 		map.killMonster(mob, c.getPlayer(), true, false, (byte) 1);
 	    }
-	} else if (splitted[0].equals("!Å³¿Ã³ë½ºÆù")) {
+	} else if (splitted[0].equals("!í‚¬ì˜¬ë…¸ìŠ¤í°")) {
 	    map.killAllMonsters(false);
 	    
-	} else if (splitted[0].equals("!¸ó½ºÅÍ¼ÒÈ¯°³Ã¼")) {
+	} else if (splitted[0].equals("!ëª¬ìŠ¤í„°ì†Œí™˜ê°œì²´")) {
 	    MapleMonster mob;
 	    for (MapleMapObject monstermo : map.getMapObjectsInRange(c.getPlayer().getPosition(), range, Arrays.asList(MapleMapObjectType.MONSTER))) {
 		mob = (MapleMonster) monstermo;
-		c.getPlayer().dropMessage(6, "¸ó½ºÅÍ " + mob.toString());
+		c.getPlayer().dropMessage(6, "ëª¬ìŠ¤í„° " + mob.toString());
 	    }
 	}
     }
@@ -60,10 +60,10 @@ public class MonsterInfoCommands implements Command {
     @Override
     public CommandDefinition[] getDefinition() {
 	return new CommandDefinition[]{
-		    new CommandDefinition("Å³¿Ã", "(<¹üÀ§>) (<¸ÊID>)", "¸ğµç ¸ó½ºÅÍ¸¦ Á×ÀÔ´Ï´Ù. ¸Ê ID°¡ Á¤ÀÇµÉ °æ¿ì, ¹üÀ§°ªÀº ¹«½ÃµË´Ï´Ù.", 5),
-		    new CommandDefinition("Å³¿Ã³ë½ºÆù", "(<¹üÀ§>) (<¸ÊID>)", "¸ğµç ¸ó½ºÅÍ¸¦ Á×ÀÌµÇ, ÇØ´ç ¸ó½ºÅÍ´Â ´Ù¸¥¸ó½ºÅÍ·Î ºÎÈ°ÇÏÁö ¾Ê½À´Ï´Ù.", 5),
-		    new CommandDefinition("Å³¿Ãµå·Ó", "(<¹üÀ§>) (<¸ÊID>)", "¸ğµç ¸ó½ºÅÍ¸¦ Á×ÀÌµÇ, ÇØ´ç ¸ó½ºÅÍ´Â ¾ÆÀÌÅÛµµ µå·ÓÇÏ°Ô µË´Ï´Ù.", 5),
-		    new CommandDefinition("¸ó½ºÅÍ¼ÒÈ¯°³Ã¼", "", "ÇöÀç ¸ÊÀÇ ¸ğµç ¸ó½ºÅÍ¸¦ Ãâ·ÂÇÕ´Ï´Ù.", 5)
+		    new CommandDefinition("í‚¬ì˜¬", "(<ë²”ìœ„>) (<ë§µID>)", "ëª¨ë“  ëª¬ìŠ¤í„°ë¥¼ ì£½ì…ë‹ˆë‹¤. ë§µ IDê°€ ì •ì˜ë  ê²½ìš°, ë²”ìœ„ê°’ì€ ë¬´ì‹œë©ë‹ˆë‹¤.", 5),
+		    new CommandDefinition("í‚¬ì˜¬ë…¸ìŠ¤í°", "(<ë²”ìœ„>) (<ë§µID>)", "ëª¨ë“  ëª¬ìŠ¤í„°ë¥¼ ì£½ì´ë˜, í•´ë‹¹ ëª¬ìŠ¤í„°ëŠ” ë‹¤ë¥¸ëª¬ìŠ¤í„°ë¡œ ë¶€í™œí•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.", 5),
+		    new CommandDefinition("í‚¬ì˜¬ë“œë¡­", "(<ë²”ìœ„>) (<ë§µID>)", "ëª¨ë“  ëª¬ìŠ¤í„°ë¥¼ ì£½ì´ë˜, í•´ë‹¹ ëª¬ìŠ¤í„°ëŠ” ì•„ì´í…œë„ ë“œë¡­í•˜ê²Œ ë©ë‹ˆë‹¤.", 5),
+		    new CommandDefinition("ëª¬ìŠ¤í„°ì†Œí™˜ê°œì²´", "", "í˜„ì¬ ë§µì˜ ëª¨ë“  ëª¬ìŠ¤í„°ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.", 5)
 	};
     }
 }

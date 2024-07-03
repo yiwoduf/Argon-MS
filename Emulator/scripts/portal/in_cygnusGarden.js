@@ -8,10 +8,10 @@ function enter(pi) {
 if (pi.getQuestStatus(31149) < 2) {
 
 if (pi.getQuestStatus(31149) == 1) {
-    pi.getPlayer().send(UIPacket.showInfo("¾Ë·º½ºÇÑÅ× °¡¼­ º¸°íÇÏÀÚ."));
+    pi.getPlayer().send(UIPacket.showInfo("ì•Œë ‰ìŠ¤í•œí…Œ ê°€ì„œ ë³´ê³ í•˜ìž."));
     pi.forceCompleteQuest(31149);
 } else {
-    pi.getPlayer().send(UIPacket.showInfo("½Ã±×³Ê½ºÀÇ Á¤¿ø Äù½ºÆ®¸¦ Å¬¸®¾î ÇØÁÖ½Ê½Ã¿À."));
+    pi.getPlayer().send(UIPacket.showInfo("ì‹œê·¸ë„ˆìŠ¤ì˜ ì •ì› í€˜ìŠ¤íŠ¸ë¥¼ í´ë¦¬ì–´ í•´ì£¼ì‹­ì‹œì˜¤."));
 }
 } else if (pi.getQuestStatus(31149) == 2) {
     pi.warp(271040000);

@@ -3,17 +3,17 @@
 
 /*
  
- È÷³ª ¿Â¶óÀÎ ¼Ò½º ÆÑÀÇ ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+ íˆë‚˜ ì˜¨ë¼ì¸ ì†ŒìŠ¤ íŒ©ì˜ ìŠ¤í¬ë¦½íŠ¸ ì…ë‹ˆë‹¤.
  
- Á¦ÀÛ : Æ¼½ã
+ ì œì‘ : í‹°ì¬
  
- ¿£ÇÇ½Ã¾ÆÀÌµğ : 
+ ì—”í”¼ì‹œì•„ì´ë”” : 
  
- ¿£ÇÇ½Ã ÀÌ¸§ :
+ ì—”í”¼ì‹œ ì´ë¦„ :
  
- ¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : µ¿ÂÊ¼ºÅ¾
+ ì—”í”¼ì‹œê°€ ìˆëŠ” ë§µ : ë™ìª½ì„±íƒ‘
  
- ¿£ÇÇ½Ã ¼³¸í : 
+ ì—”í”¼ì‹œ ì„¤ëª… : 
  
  
  */
@@ -46,18 +46,18 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        cm.sendSimple("±ŞÇÑ ÀÏÀÔ´Ï´Ù! ¸Å±×³Ê½º·Î ÀÎÇØ ÈûÀ» ÀÒÀº ¿ì¸®·Î¼­´Â ´ç½ÅÀÇ µµ¿òÀÌ Àı½ÇÇÕ´Ï´Ù!\r\n#b#L0#¸Å±×³Ê½º (³ë¸» / ·¹º§ : 160ÀÌ»ó)#l \r\n\r\n#b#L1#¸Å±×³Ê½º (ÇÏµå / ·¹º§ : 160ÀÌ»ó)#l#k")
+        cm.sendSimple("ê¸‰í•œ ì¼ì…ë‹ˆë‹¤! ë§¤ê·¸ë„ˆìŠ¤ë¡œ ì¸í•´ í˜ì„ ìƒì€ ìš°ë¦¬ë¡œì„œëŠ” ë‹¹ì‹ ì˜ ë„ì›€ì´ ì ˆì‹¤í•©ë‹ˆë‹¤!\r\n#b#L0#ë§¤ê·¸ë„ˆìŠ¤ (ë…¸ë§ / ë ˆë²¨ : 160ì´ìƒ)#l \r\n\r\n#b#L1#ë§¤ê·¸ë„ˆìŠ¤ (í•˜ë“œ / ë ˆë²¨ : 160ì´ìƒ)#l#k")
     } else if (status == 1) {
         if (selection == 0) {
             if (cm.getPlayer().getParty() != null) {
                 if (!cm.allMembersHere()) {
-                    cm.getPlayer().message(5, "ÆÄÆ¼¿øÀÌ ¸ğµÎ ¸ğ¿©ÀÖ¾î¾ß ÀÔÀåÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+                    cm.getPlayer().message(5, "íŒŒí‹°ì›ì´ ëª¨ë‘ ëª¨ì—¬ìˆì–´ì•¼ ì…ì¥í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
                 }
                 if (!cm.isLeader()) {
-                    cm.getPlayer().message(5, "ÆÄÆ¼ÀåÀÌ ÀÔÀåÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+                    cm.getPlayer().message(5, "íŒŒí‹°ì¥ì´ ì…ì¥í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
                 }
                 if (cm.getPlayerCount(401060100) != 0) {
-                    cm.sendOk("ÀÌ¹Ì ¾È¿¡ ´©±º°¡ÀÖ½À´Ï´Ù.");
+                    cm.sendOk("ì´ë¯¸ ì•ˆì— ëˆ„êµ°ê°€ìˆìŠµë‹ˆë‹¤.");
                     cm.dispose();
                 }
                 cm.getPlayer().setKeyValue2("BossData5", count + 1);
@@ -66,12 +66,12 @@ function action(mode, type, selection) {
                 cm.scheduleTimeMoveMap(401060100, 401060100, 3600, true);
                 cm.getPlayer().getMap().spawnMonsterOnGroundMaple(Packages.server.life.MapleLifeProvider.getMonster(8880000), new java.awt.Point(2886, -1347));
 
-                cm.mapMessage(6, "[¾Ë¸²] º¸½º ·¹ÀÌµå Å¸ÀÓ¾Æ¿ô¸Å´ÏÀú - ¸Å±×³Ê½º (³ë¸») - ÀÛµ¿µÇ¾ú½À´Ï´Ù. Çà¿îÀ» º÷´Ï´Ù!");
+                cm.mapMessage(6, "[ì•Œë¦¼] ë³´ìŠ¤ ë ˆì´ë“œ íƒ€ì„ì•„ì›ƒë§¤ë‹ˆì € - ë§¤ê·¸ë„ˆìŠ¤ (ë…¸ë§) - ì‘ë™ë˜ì—ˆìŠµë‹ˆë‹¤. í–‰ìš´ì„ ë¹•ë‹ˆë‹¤!");
 
-                cm.mapMessage(5, "[°æ°í] º¸½º ·¹ÀÌµå°¡ ½ÃÀÛµÇ¾î ÇöÀç Ã¤³Î¿¡ ÇöÀç º¸½º ÄğÅ¸ÀÓÀÌ ½ÃÀÛµË´Ï´Ù.");
+                cm.mapMessage(5, "[ê²½ê³ ] ë³´ìŠ¤ ë ˆì´ë“œê°€ ì‹œì‘ë˜ì–´ í˜„ì¬ ì±„ë„ì— í˜„ì¬ ë³´ìŠ¤ ì¿¨íƒ€ì„ì´ ì‹œì‘ë©ë‹ˆë‹¤.");
             } else {
                 if (cm.getPlayerCount(401060100) != 0) {
-                    cm.sendOk("ÀÌ¹Ì ¾È¿¡ ´©±º°¡ÀÖ½À´Ï´Ù.");
+                    cm.sendOk("ì´ë¯¸ ì•ˆì— ëˆ„êµ°ê°€ìˆìŠµë‹ˆë‹¤.");
                     cm.dispose();
                 }
                 cm.allExpSetTimeValueCurrent("Meg_BattleStartTime");
@@ -81,9 +81,9 @@ function action(mode, type, selection) {
                 cm.scheduleTimeMoveMap(401060100, 401060100, 3600, true);
                 cm.getPlayer().getMap().spawnMonsterOnGroundBelow(Packages.server.life.MapleLifeProvider.getMonster(8880000), new java.awt.Point(2886, -1347));
 
-                cm.mapMessage(6, "[¾Ë¸²] º¸½º ·¹ÀÌµå Å¸ÀÓ¾Æ¿ô¸Å´ÏÀú - ¸Å±×³Ê½º (³ë¸») - ÀÛµ¿µÇ¾ú½À´Ï´Ù. Çà¿îÀ» º÷´Ï´Ù!");
+                cm.mapMessage(6, "[ì•Œë¦¼] ë³´ìŠ¤ ë ˆì´ë“œ íƒ€ì„ì•„ì›ƒë§¤ë‹ˆì € - ë§¤ê·¸ë„ˆìŠ¤ (ë…¸ë§) - ì‘ë™ë˜ì—ˆìŠµë‹ˆë‹¤. í–‰ìš´ì„ ë¹•ë‹ˆë‹¤!");
 
-                cm.mapMessage(5, "[°æ°í] º¸½º ·¹ÀÌµå°¡ ½ÃÀÛµÇ¾î ÇöÀç Ã¤³Î¿¡ ÇöÀç º¸½º ÄğÅ¸ÀÓÀÌ ½ÃÀÛµË´Ï´Ù.");
+                cm.mapMessage(5, "[ê²½ê³ ] ë³´ìŠ¤ ë ˆì´ë“œê°€ ì‹œì‘ë˜ì–´ í˜„ì¬ ì±„ë„ì— í˜„ì¬ ë³´ìŠ¤ ì¿¨íƒ€ì„ì´ ì‹œì‘ë©ë‹ˆë‹¤.");
             }
             cm.dispose();
         } else {
@@ -92,13 +92,13 @@ function action(mode, type, selection) {
         if (selection == 1) {
             if (cm.getPlayer().getParty() != null) {
                 if (!cm.allMembersHere()) {
-                    cm.getPlayer().message(5, "ÆÄÆ¼¿øÀÌ ¸ğµÎ ¸ğ¿©ÀÖ¾î¾ß ÀÔÀåÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+                    cm.getPlayer().message(5, "íŒŒí‹°ì›ì´ ëª¨ë‘ ëª¨ì—¬ìˆì–´ì•¼ ì…ì¥í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
                 }
                 if (!cm.isLeader()) {
-                    cm.getPlayer().message(5, "ÆÄÆ¼ÀåÀÌ ÀÔÀåÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+                    cm.getPlayer().message(5, "íŒŒí‹°ì¥ì´ ì…ì¥í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
                 }
                 if (cm.getPlayerCount(401060200) != 0) {
-                    cm.sendOk("ÀÌ¹Ì ¾È¿¡ ´©±º°¡ÀÖ½À´Ï´Ù.");
+                    cm.sendOk("ì´ë¯¸ ì•ˆì— ëˆ„êµ°ê°€ìˆìŠµë‹ˆë‹¤.");
                     cm.dispose();
                 }
                 cm.allExpSetTimeValueCurrent("Meg1_BattleStartTime");
@@ -107,12 +107,12 @@ function action(mode, type, selection) {
                 cm.scheduleTimeMoveMap(401060200, 401060200, 3600, true);
                 cm.getPlayer().getMap().spawnMonsterOnGroundBelow(Packages.server.life.MapleLifeProvider.getMonster(8880002), new java.awt.Point(2886, -1347));
 
-                cm.mapMessage(6, "[¾Ë¸²] º¸½º ·¹ÀÌµå Å¸ÀÓ¾Æ¿ô¸Å´ÏÀú - ¸Å±×³Ê½º (ÇÏµå) - ÀÛµ¿µÇ¾ú½À´Ï´Ù. Çà¿îÀ» º÷´Ï´Ù!");
+                cm.mapMessage(6, "[ì•Œë¦¼] ë³´ìŠ¤ ë ˆì´ë“œ íƒ€ì„ì•„ì›ƒë§¤ë‹ˆì € - ë§¤ê·¸ë„ˆìŠ¤ (í•˜ë“œ) - ì‘ë™ë˜ì—ˆìŠµë‹ˆë‹¤. í–‰ìš´ì„ ë¹•ë‹ˆë‹¤!");
 
-                cm.mapMessage(5, "[°æ°í] º¸½º ·¹ÀÌµå°¡ ½ÃÀÛµÇ¾î ÇöÀç Ã¤³Î¿¡ ÇöÀç º¸½º ÄğÅ¸ÀÓÀÌ ½ÃÀÛµË´Ï´Ù.");
+                cm.mapMessage(5, "[ê²½ê³ ] ë³´ìŠ¤ ë ˆì´ë“œê°€ ì‹œì‘ë˜ì–´ í˜„ì¬ ì±„ë„ì— í˜„ì¬ ë³´ìŠ¤ ì¿¨íƒ€ì„ì´ ì‹œì‘ë©ë‹ˆë‹¤.");
             } else {
                 if (cm.getPlayerCount(401060200) != 0) {
-                    cm.sendOk("ÀÌ¹Ì ¾È¿¡ ´©±º°¡ÀÖ½À´Ï´Ù.");
+                    cm.sendOk("ì´ë¯¸ ì•ˆì— ëˆ„êµ°ê°€ìˆìŠµë‹ˆë‹¤.");
                     cm.dispose();
                 }
                 cm.allExpSetTimeValueCurrent("Meg1_BattleStartTime");
@@ -122,9 +122,9 @@ function action(mode, type, selection) {
                 cm.getPlayer().getMap().spawnMonsterOnGroundBelow(Packages.server.life.MapleLifeProvider.getMonster(8880002), new java.awt.Point(2886, -1347));
 
 
-                cm.mapMessage(6, "[¾Ë¸²] º¸½º ·¹ÀÌµå Å¸ÀÓ¾Æ¿ô¸Å´ÏÀú - ¸Å±×³Ê½º (ÇÏµå) - ÀÛµ¿µÇ¾ú½À´Ï´Ù. Çà¿îÀ» º÷´Ï´Ù!");
+                cm.mapMessage(6, "[ì•Œë¦¼] ë³´ìŠ¤ ë ˆì´ë“œ íƒ€ì„ì•„ì›ƒë§¤ë‹ˆì € - ë§¤ê·¸ë„ˆìŠ¤ (í•˜ë“œ) - ì‘ë™ë˜ì—ˆìŠµë‹ˆë‹¤. í–‰ìš´ì„ ë¹•ë‹ˆë‹¤!");
 
-                cm.mapMessage(5, "[°æ°í] º¸½º ·¹ÀÌµå°¡ ½ÃÀÛµÇ¾î ÇöÀç Ã¤³Î¿¡ ÇöÀç º¸½º ÄğÅ¸ÀÓÀÌ ½ÃÀÛµË´Ï´Ù.");
+                cm.mapMessage(5, "[ê²½ê³ ] ë³´ìŠ¤ ë ˆì´ë“œê°€ ì‹œì‘ë˜ì–´ í˜„ì¬ ì±„ë„ì— í˜„ì¬ ë³´ìŠ¤ ì¿¨íƒ€ì„ì´ ì‹œì‘ë©ë‹ˆë‹¤.");
             }
             cm.dispose();
         } else {

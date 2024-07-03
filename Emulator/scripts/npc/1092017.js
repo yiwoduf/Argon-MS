@@ -18,9 +18,9 @@ function action(mode, type, selection) {
         else
             status--;
 	if (status == 0) {
-		var jessica = "#fn³ª´®°íµñ Extrabold##bµ¹¸²ÆÇ ½Ã½ºÅÛ#k ÀÔ´Ï´Ù.\r\n¿øÇÏ½Ã´Â Ç×¸ñÀ» °ñ¶óÁÖ¼¼¿ä.\r\n";
-                jessica += "#L0##rµ¹¸²ÆÇ µ¹¸®±â#k\r\n";
-                jessica += "#L1##bµ¹¸²ÆÇ ÀÌ¿ë±Ç ±¸ÀÔÇÏ±â";
+		var jessica = "#fnë‚˜ëˆ”ê³ ë”• Extrabold##bëŒë¦¼íŒ ì‹œìŠ¤í…œ#k ì…ë‹ˆë‹¤.\r\nì›í•˜ì‹œëŠ” í•­ëª©ì„ ê³¨ë¼ì£¼ì„¸ìš”.\r\n";
+                jessica += "#L0##rëŒë¦¼íŒ ëŒë¦¬ê¸°#k\r\n";
+                jessica += "#L1##bëŒë¦¼íŒ ì´ìš©ê¶Œ êµ¬ì…í•˜ê¸°";
 		cm.sendSimple(jessica);
 
 	} else if (status == 1) {

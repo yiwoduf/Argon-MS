@@ -7,7 +7,7 @@ package client.test;
 
 /**
  *
- * @author ¹Î¿ì
+ * @author ë¯¼ìš°
  */
 public interface GlobalTestMonsterStat {
 

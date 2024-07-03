@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -15,7 +15,7 @@ import java.util.Map;
 
 /**
  *
- * @author ÃÖ¿ëÀç <virgo_s_t@naver.com>
+ * @author ìµœìš©ì¬ <virgo_s_t@naver.com>
  */
 public class PotentialOption {
     

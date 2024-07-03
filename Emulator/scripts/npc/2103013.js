@@ -25,7 +25,7 @@ function action(mode, type, selection) {
 
     if (status == 0) {
         if (cm.getPlayer().getMapId() == 926010000) {
-            cm.sendSimple("³ª´Â ³×Æ®½ÅÀÇ ÇÇ¶ó¹Ìµå¸¦ ÁöÅ°´Â µÎ¾ÆÆ®¶ó°í ÇÏ³×.\r\n\r\n#L0##b#e ÇÇ¶ó¹Ìµå·Î µé¾î°£´Ù");
+            cm.sendSimple("ë‚˜ëŠ” ë„¤íŠ¸ì‹ ì˜ í”¼ë¼ë¯¸ë“œë¥¼ ì§€í‚¤ëŠ” ë‘ì•„íŠ¸ë¼ê³  í•˜ë„¤.\r\n\r\n#L0##b#e í”¼ë¼ë¯¸ë“œë¡œ ë“¤ì–´ê°„ë‹¤");
         } else {
             cm.warp(926010000);
             cm.dispose();
@@ -33,16 +33,16 @@ function action(mode, type, selection) {
     } else if (status == 1) {
         if (selection == 0) {
             if (cm.getPlayer().getParty() == null) {
-                cm.sendOk("ÆÄÆ¼¸¦ »ı¼ºÇÏ½Å ÈÄ ÀÔÀå ½ÅÃ»À» ÇÏ°Ô³ª");
+                cm.sendOk("íŒŒí‹°ë¥¼ ìƒì„±í•˜ì‹  í›„ ì…ì¥ ì‹ ì²­ì„ í•˜ê²Œë‚˜");
                 cm.dispose();
             } else if (!cm.isLeader()) {
-                cm.sendOk("ÆÄÆ¼Àå¸¸ ÀÔÀå ½ÅÃ»À» ÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.");
+                cm.sendOk("íŒŒí‹°ì¥ë§Œ ì…ì¥ ì‹ ì²­ì„ í•˜ì‹¤ ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
                 cm.dispose();
             } else if (!cm.allMembersHere()) {
-                cm.sendOk("ÆÄÆ¼¿ø Àü¿øÀÌ ÀÌ °÷¿¡ ¸ğ¿© ÀÖ¾î¾ß ÇÕ´Ï´Ù.");
+                cm.sendOk("íŒŒí‹°ì› ì „ì›ì´ ì´ ê³³ì— ëª¨ì—¬ ìˆì–´ì•¼ í•©ë‹ˆë‹¤.");
                 cm.dispose();
             } else if (cm.getPlayerCount(926010300) > 0) {
-                cm.sendOk("ÀÌ¹Ì ´Ù¸¥ ÆÄÆ¼°¡ ÇÇ¶ó¹Ìµå¿¡ µµÀüÇÏ°í ÀÖ½À´Ï´Ù");
+                cm.sendOk("ì´ë¯¸ ë‹¤ë¥¸ íŒŒí‹°ê°€ í”¼ë¼ë¯¸ë“œì— ë„ì „í•˜ê³  ìˆìŠµë‹ˆë‹¤");
                 cm.dispose();
             } else {
                 chr = cm.getPlayer();
@@ -50,7 +50,7 @@ function action(mode, type, selection) {
                 var count = 0;
                 cm.allPartyWarp(926010300, false);
                 if (count == 0) {
-                    cm.getPlayer().send(UIPacket.showInfo("ÇÇ¶ó¹Ìµå¿¡ ÀÔÀåÇÏ¼Ì½À´Ï´Ù."));
+                    cm.getPlayer().send(UIPacket.showInfo("í”¼ë¼ë¯¸ë“œì— ì…ì¥í•˜ì…¨ìŠµë‹ˆë‹¤."));
                     Thread.sleep(1000);
                 }
                 Thread.sleep(2000);
@@ -76,18 +76,18 @@ function action(mode, type, selection) {
                     }
                     if (stage >= 19) {
                         cm.allPartyWarp(926010300, false);
-                        cm.getPlayer().send(UIPacket.showInfo("¸ğµç ¿şÀÌºê¸¦ °İÆÄÇÏ¼Ì½À´Ï´Ù."));
-                        cm.sendOk("°İÆÄ¿Ï·á~");
+                        cm.getPlayer().send(UIPacket.showInfo("ëª¨ë“  ì›¨ì´ë¸Œë¥¼ ê²©íŒŒí•˜ì…¨ìŠµë‹ˆë‹¤."));
+                        cm.sendOk("ê²©íŒŒì™„ë£Œ~");
                         schedule.cancel(true);
                     }
                     if (cm.getMonsterCount(cm.getPlayer().getMapId()) == 0 && infocount == 0 && stage < 19) {
-                        cm.getPlayer().send(UIPacket.showInfo("¿şÀÌºê¸¦ °İÆÄÇÏ¼Ì½À´Ï´Ù. ´ÙÀ½ ¿şÀÌºê¸¦ ÁØºñÇØ ÁÖ¼¼¿ä."));
+                        cm.getPlayer().send(UIPacket.showInfo("ì›¨ì´ë¸Œë¥¼ ê²©íŒŒí•˜ì…¨ìŠµë‹ˆë‹¤. ë‹¤ìŒ ì›¨ì´ë¸Œë¥¼ ì¤€ë¹„í•´ ì£¼ì„¸ìš”."));
                         count = 0;
                         infocount++;
                         stage++;
                         Thread.sleep(2000);
                         cm.showEffect(true, "Gstar/start");
-                        cm.getPlayer().dropMessage(5, "" + stage + "´Ü°è µµÀüÀ» ½ÃÀÛÇÕ´Ï´Ù.");
+                        cm.getPlayer().dropMessage(5, "" + stage + "ë‹¨ê³„ ë„ì „ì„ ì‹œì‘í•©ë‹ˆë‹¤.");
                         Thread.sleep(1000);
                     }
                     if (cm.getPlayer().getParty() == null) {

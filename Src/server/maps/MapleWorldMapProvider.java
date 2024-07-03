@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -55,7 +55,7 @@ public class MapleWorldMapProvider {
                 if (map != null) {
                     return map;
                 }
-                //GenÃ¼Å© ½ÃÀÛ
+                //Genì²´í¬ ì‹œì‘
                 MapleData fieldgenData = source.getData(getFieldGenerator());
                 List<MapleData> fieldgenmaps = fieldgenData.getChildren();
                 int templatemapid = mapid;
@@ -71,7 +71,7 @@ public class MapleWorldMapProvider {
                         }
                     }
                 }
-                //GenÃ¼Å© ³¡
+                //Genì²´í¬ ë
                 MapleData mapData = source.getData(getMapName(templatemapid));
 
                 MapleData link = mapData.getChildByPath("info/link");
@@ -190,14 +190,14 @@ public class MapleWorldMapProvider {
                         if (mob != null) {
                             map.addMonsterSpawn(mob, rs.getInt("mobTime"), null);
                         } else {
-                            System.err.println("[¿À·ù] ¿£ÇÇ½Ã µ¥ÀÌÅÍ¸¦ ¸¸µå´ÂÁß ³Î Æ÷ÀÎÅÍ ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                            System.err.println("[ì˜¤ë¥˜] ì—”í”¼ì‹œ ë°ì´í„°ë¥¼ ë§Œë“œëŠ”ì¤‘ ë„ í¬ì¸í„° ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
                         }
                     }
                     rs.close();
                     ps.close();
                     con.close();
                 } catch (Exception e) {
-                    System.err.println("[¿À·ù] ¿£ÇÇ½Ã¸¦ DB·ÎºÎÅÍ ºÒ·¯¿À´Âµ¥ ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                    System.err.println("[ì˜¤ë¥˜] ì—”í”¼ì‹œë¥¼ DBë¡œë¶€í„° ë¶ˆëŸ¬ì˜¤ëŠ”ë° ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
                     if (!ServerConstants.realese) {
                         e.printStackTrace();
                     }
@@ -215,7 +215,7 @@ public class MapleWorldMapProvider {
                             if (pnpc != null) {
                                 map.addMapObject(pnpc);
                             } else {
-                                System.err.println("[¿À·ù] ÇÃ·¹ÀÌ¾î ¿£ÇÇ½Ã µ¥ÀÌÅÍ¸¦ ¸¸µå´ÂÁß ³Î Æ÷ÀÎÅÍ ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                                System.err.println("[ì˜¤ë¥˜] í”Œë ˆì´ì–´ ì—”í”¼ì‹œ ë°ì´í„°ë¥¼ ë§Œë“œëŠ”ì¤‘ ë„ í¬ì¸í„° ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
                             }
 //                     System.out.println("ID " + rs.getInt("id") + "Something Added..");
                         }
@@ -224,7 +224,7 @@ public class MapleWorldMapProvider {
                         con.close();
 
                     } catch (Exception e) {
-                        System.err.println("[¿À·ù] ÇÃ·¹ÀÌ¾î ¿£ÇÇ½Ã¸¦ DB·ÎºÎÅÍ ºÒ·¯¿À´Âµ¥ ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                        System.err.println("[ì˜¤ë¥˜] í”Œë ˆì´ì–´ ì—”í”¼ì‹œë¥¼ DBë¡œë¶€í„° ë¶ˆëŸ¬ì˜¤ëŠ”ë° ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
                         if (!ServerConstants.realese) {
                             e.printStackTrace();
                         }
@@ -246,14 +246,14 @@ public class MapleWorldMapProvider {
                             if (npc != null) {
                                 map.addMapObject(npc);
                             } else {
-                                System.err.println("[¿À·ù] ¿£ÇÇ½Ã µ¥ÀÌÅÍ¸¦ ¸¸µå´ÂÁß ³Î Æ÷ÀÎÅÍ ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                                System.err.println("[ì˜¤ë¥˜] ì—”í”¼ì‹œ ë°ì´í„°ë¥¼ ë§Œë“œëŠ”ì¤‘ ë„ í¬ì¸í„° ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
                             }
                         }
                         rs.close();
                         ps.close();
                         con.close();
                     } catch (Exception e) {
-                        System.err.println("[¿À·ù] ¿£ÇÇ½Ã¸¦ DB·ÎºÎÅÍ ºÒ·¯¿À´Âµ¥ ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                        System.err.println("[ì˜¤ë¥˜] ì—”í”¼ì‹œë¥¼ DBë¡œë¶€í„° ë¶ˆëŸ¬ì˜¤ëŠ”ë° ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
                         if (!ServerConstants.realese) {
                             e.printStackTrace();
                         }
@@ -286,7 +286,7 @@ public class MapleWorldMapProvider {
                         con.close();
                     }
                 } catch (Exception e) {
-                    System.err.println("[¿À·ù] ±æµåÈ­ºĞÀ» DB·ÎºÎÅÍ ºÒ·¯¿À´Âµ¥ ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                    System.err.println("[ì˜¤ë¥˜] ê¸¸ë“œí™”ë¶„ì„ DBë¡œë¶€í„° ë¶ˆëŸ¬ì˜¤ëŠ”ë° ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
                     if (!ServerConstants.realese) {
                         e.printStackTrace();
                     }
@@ -318,7 +318,7 @@ public class MapleWorldMapProvider {
                             myReactor.setPosition(new Point(rs.getInt("x"), rs.getInt("y")));
                             myReactor.setDelay(900000);
                             myReactor.setState((byte) 0);
-                            myReactor.setName("±¤¸Æ");
+                            myReactor.setName("ê´‘ë§¥");
                             myReactor.setRank(Integer.parseInt(rs.getString("type")));
                             map.spawnReactor(myReactor);
                         }
@@ -326,7 +326,7 @@ public class MapleWorldMapProvider {
                         ps.close();
                         con.close();
                     } catch (Exception e) {
-                        System.err.println("[¿À·ù] ±¤¸ÆÀ» DB·ÎºÎÅÍ ºÒ·¯¿À´Âµ¥ ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                        System.err.println("[ì˜¤ë¥˜] ê´‘ë§¥ì„ DBë¡œë¶€í„° ë¶ˆëŸ¬ì˜¤ëŠ”ë° ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
                         if (!ServerConstants.realese) {
                             e.printStackTrace();
                         }
@@ -345,7 +345,7 @@ public class MapleWorldMapProvider {
                     rs.close();
                     con.close();
                 } catch (Exception e) {
-                    System.err.println("[¿À·ù] º¸½º¸Ê ÄğÅ¸ÀÓÀ» Àû¿ë½ÃÅ°´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.");
+                    System.err.println("[ì˜¤ë¥˜] ë³´ìŠ¤ë§µ ì¿¨íƒ€ì„ì„ ì ìš©ì‹œí‚¤ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
                     if (!ServerConstants.realese) {
                         e.printStackTrace();
                     }

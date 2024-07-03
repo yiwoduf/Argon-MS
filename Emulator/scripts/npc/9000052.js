@@ -4,19 +4,19 @@ importPackage(Packages.packet.creators);
 
 /*
 
-	* ´Ü¹®¿£ÇÇ½Ã ÀÚµ¿Á¦ÀÛ ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¸¸µé¾îÁø ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	* ë‹¨ë¬¸ì—”í”¼ì‹œ ìë™ì œì‘ ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ë§Œë“¤ì–´ì§„ ìŠ¤í¬ë¦½íŠ¸ ì…ë‹ˆë‹¤.
 
 	* (Hina Online Development Source Script)
 
-	Å×¶ó ¿¡ ÀÇÇØ ¸¸µé¾î Á³½À´Ï´Ù.
+	í…Œë¼ ì— ì˜í•´ ë§Œë“¤ì–´ ì¡ŒìŠµë‹ˆë‹¤.
 
-	¿£ÇÇ½Ã¾ÆÀÌµğ : 3000022
+	ì—”í”¼ì‹œì•„ì´ë”” : 3000022
 
-	¿£ÇÇ½Ã ÀÌ¸§ : º¸¼®
+	ì—”í”¼ì‹œ ì´ë¦„ : ë³´ì„
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê :  :  (400000002)
+	ì—”í”¼ì‹œê°€ ìˆëŠ” ë§µ :  :  (400000002)
 
-	¿£ÇÇ½Ã ¼³¸í : MISSINGNO
+	ì—”í”¼ì‹œ ì„¤ëª… : MISSINGNO
 
 
 */
@@ -46,22 +46,22 @@ function action(mode, type, selection) {
     
     						cm.getPlayer().addSpiritPoint(5);
     						cm.warp(109090000);
-                cm.getPlayer().send(MainPacketCreator.sendHint("#b¼ú·¡Àâ±â º¸»ó#kÀÌ Áö±ŞµÇ¾ú½À´Ï´Ù.\r\n#e#r´©ÀûÅ³ +6Á¡#k#nÀ» È¹µæÇÏ¼Ì½À´Ï´Ù.",300,20));
+                cm.getPlayer().send(MainPacketCreator.sendHint("#bìˆ ë˜ì¡ê¸° ë³´ìƒ#kì´ ì§€ê¸‰ë˜ì—ˆìŠµë‹ˆë‹¤.\r\n#e#rëˆ„ì í‚¬ +6ì #k#nì„ íšë“í•˜ì…¨ìŠµë‹ˆë‹¤.",300,20));
                 cm.dispose();
                 } else if (cm.getPlayer().getMapId() == 109090101) {
                 cm.getPlayer().addSpiritPoint(1);
                 cm.warp(109090000);
-                cm.getPlayer().send(MainPacketCreator.sendHint("#b¼ú·¡Àâ±â º¸»ó#kÀÌ Áö±ŞµÇ¾ú½À´Ï´Ù.\r\n#e#r´©ÀûÅ³ +1Á¡#k#nÀ» È¹µæÇÏ¼Ì½À´Ï´Ù.",300,20));
+                cm.getPlayer().send(MainPacketCreator.sendHint("#bìˆ ë˜ì¡ê¸° ë³´ìƒ#kì´ ì§€ê¸‰ë˜ì—ˆìŠµë‹ˆë‹¤.\r\n#e#rëˆ„ì í‚¬ +1ì #k#nì„ íšë“í•˜ì…¨ìŠµë‹ˆë‹¤.",300,20));
                 cm.dispose();
                 } else if (cm.getPlayer().getMapId() == 109090200) {
                    cm.getPlayer().addSpiritPoint(6);
                 cm.warp(109090000);
-                cm.getPlayer().send(MainPacketCreator.sendHint("#b¼ú·¡Àâ±â º¸»ó#kÀÌ Áö±ŞµÇ¾ú½À´Ï´Ù.\r\n#e#r´©ÀûÅ³ +5Á¡#k#nÀ» È¹µæÇÏ¼Ì½À´Ï´Ù.",300,20));
+                cm.getPlayer().send(MainPacketCreator.sendHint("#bìˆ ë˜ì¡ê¸° ë³´ìƒ#kì´ ì§€ê¸‰ë˜ì—ˆìŠµë‹ˆë‹¤.\r\n#e#rëˆ„ì í‚¬ +5ì #k#nì„ íšë“í•˜ì…¨ìŠµë‹ˆë‹¤.",300,20));
                 cm.dispose();
                 } else if (cm.getPlayer().getMapId() == 109090201) {
                 cm.getPlayer().addSpiritPoint(1);
                 cm.warp(109090000);
-                cm.getPlayer().send(MainPacketCreator.sendHint("#b¼ú·¡Àâ±â º¸»ó#kÀÌ Áö±ŞµÇ¾ú½À´Ï´Ù.\r\n#e#r´©ÀûÅ³ +1Á¡#k#nÀ» È¹µæÇÏ¼Ì½À´Ï´Ù.",300,20));
+                cm.getPlayer().send(MainPacketCreator.sendHint("#bìˆ ë˜ì¡ê¸° ë³´ìƒ#kì´ ì§€ê¸‰ë˜ì—ˆìŠµë‹ˆë‹¤.\r\n#e#rëˆ„ì í‚¬ +1ì #k#nì„ íšë“í•˜ì…¨ìŠµë‹ˆë‹¤.",300,20));
                 cm.dispose();
 
 }

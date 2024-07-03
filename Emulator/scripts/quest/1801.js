@@ -1,5 +1,5 @@
 /*
-ÆÄ¶õµ¹·û±º
+íŒŒë€ëŒë¥œêµ°
 */
 
 var status = -1;
@@ -13,7 +13,7 @@ function start(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-            qm.sendNext("ÁØºñ°¡ µÇ¾ú±¸³ª..");
+            qm.sendNext("ì¤€ë¹„ê°€ ë˜ì—ˆêµ¬ë‚˜..");
         } else if (status == 1) {
             qm.forceCompleteQuest();
             qm.dispose();

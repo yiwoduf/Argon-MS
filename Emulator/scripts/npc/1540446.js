@@ -10,8 +10,8 @@ function action(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	cm.sendNext("½¬,,,,ÆŞ");
-//cm.getPlayer().setKeyValue2("µî±ŞÁ¡¼ö", 60300);
+	cm.sendNext("ì‰¬,,,,í„");
+//cm.getPlayer().setKeyValue2("ë“±ê¸‰ì ìˆ˜", 60300);
     } else if (status == 1) {
 	cm.warp(350060300);
 	cm.dispose();

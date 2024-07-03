@@ -1,9 +1,9 @@
 var status = -1;
-º°»¡ = "#fUI/GuildMark.img/Mark/Pattern/00004001/1#"
-º°ÆÄ = "#fUI/GuildMark.img/Mark/Pattern/00004001/11#"
-º°ÃÊ = "#fUI/GuildMark.img/Mark/Pattern/00004001/8#"
-º°º¸ = "#fUI/GuildMark.img/Mark/Pattern/00004001/13#"
-º°È¸ = "#fUI/GuildMark.img/Mark/Pattern/00004001/15#"
+ë³„ë¹¨ = "#fUI/GuildMark.img/Mark/Pattern/00004001/1#"
+ë³„íŒŒ = "#fUI/GuildMark.img/Mark/Pattern/00004001/11#"
+ë³„ì´ˆ = "#fUI/GuildMark.img/Mark/Pattern/00004001/8#"
+ë³„ë³´ = "#fUI/GuildMark.img/Mark/Pattern/00004001/13#"
+ë³„íšŒ = "#fUI/GuildMark.img/Mark/Pattern/00004001/15#"
 
 importPackage(Packages.constants);
 
@@ -25,12 +25,12 @@ function action(mode, type, selection) {
         else
             status--;
     if (status == 0) {
-	var chat = " #fn³ª´®°íµñ Extrabold##d[#h #]#k : "+ServerConstants.serverName+"¿¡¼­ ¹«¾ùÀ» ¼±ÅÃÇØº¼±î?\r\n  ¾Æ·¡ÀÇ ¼±ÅÃ»çÇ×Áß ÇÏ³ª¸¦ °ñ¶óº¸ÀÚ.\r\n";
-	chat += "#L1#"+º°»¡+"#r  ½º¿ì vs µ¥¹Ì¾ÈÀÇ °á°ú´Â?\r\n";
-	chat += "#L2#"+º°ÆÄ+"#b  Áö·ÚÃ£±â#k¸¦ ÇÃ·¹ÀÌ ÇÏ°Ú¾î.\r\n";
-	chat += "#L3#"+º°º¸+"#d  ½æ¸Ó¸®¹ÔÄÚÀÎ#k·Î µµ¹ÚÀ» ÁøÇàÇÏ°Ú¾î.\r\n";
-	chat += "#L4#"+º°È¸+"#Cgray#  °¡À§¹ÙÀ§º¸#k µµ¹ÚÀ» ÁøÇàÇÏ°Ú¾î.\r\n";
-	chat += "#L5#"+º°º¸+"#d  ÈÄ¿øÆ÷ÀÎÆ®#k·Î µµ¹ÚÀ» ÁøÇàÇÏ°Ú¾î.\r\n";
+	var chat = " #fnë‚˜ëˆ”ê³ ë”• Extrabold##d[#h #]#k : "+ServerConstants.serverName+"ì—ì„œ ë¬´ì—‡ì„ ì„ íƒí•´ë³¼ê¹Œ?\r\n  ì•„ë˜ì˜ ì„ íƒì‚¬í•­ì¤‘ í•˜ë‚˜ë¥¼ ê³¨ë¼ë³´ì.\r\n";
+	chat += "#L1#"+ë³„ë¹¨+"#r  ìŠ¤ìš° vs ë°ë¯¸ì•ˆì˜ ê²°ê³¼ëŠ”?\r\n";
+	chat += "#L2#"+ë³„íŒŒ+"#b  ì§€ë¢°ì°¾ê¸°#kë¥¼ í”Œë ˆì´ í•˜ê² ì–´.\r\n";
+	chat += "#L3#"+ë³„ë³´+"#d  ì¸ë¨¸ë¦¬ë°‹ì½”ì¸#kë¡œ ë„ë°•ì„ ì§„í–‰í•˜ê² ì–´.\r\n";
+	chat += "#L4#"+ë³„íšŒ+"#Cgray#  ê°€ìœ„ë°”ìœ„ë³´#k ë„ë°•ì„ ì§„í–‰í•˜ê² ì–´.\r\n";
+	chat += "#L5#"+ë³„ë³´+"#d  í›„ì›í¬ì¸íŠ¸#kë¡œ ë„ë°•ì„ ì§„í–‰í•˜ê² ì–´.\r\n";
 	cm.sendSimpleS(chat,2);
 
      } else if (status == 1) {

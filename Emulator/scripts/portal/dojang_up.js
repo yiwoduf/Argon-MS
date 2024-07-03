@@ -1,6 +1,6 @@
 function enter(pi) {
     if (!pi.haveMonster(9300216)) {
-	pi.playerMessage("¾ÆÁ÷ ¸ó½ºÅÍ°¡ ³²¾ÆÀÖ½À´Ï´Ù.");
+	pi.playerMessage("ì•„ì§ ëª¬ìŠ¤í„°ê°€ ë‚¨ì•„ìˆìŠµë‹ˆë‹¤.");
     } else {
 	pi.dojo_getUp();
 	pi.getMap().setReactorState();

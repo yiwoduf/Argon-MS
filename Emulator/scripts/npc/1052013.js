@@ -4,11 +4,11 @@
 	MapleStory 1.2.246 Varon Team Script Maker	Scripted By Varon Team :: MelnoK
 
 
-	SCRIPT MAKER : ¹Ù·Ğ
+	SCRIPT MAKER : ë°”ë¡ 
 
 	NPC ID : 2491000
 
-	NPC NAME : ¾È³»ÀÚ
+	NPC NAME : ì•ˆë‚´ì
 
 */
 
@@ -20,7 +20,7 @@ function start() {
 }
 
 function action(mode, type, selection) {
-ºñÀ² = 50; // ¸Ş¼Ò ¸î¿ø´ç Ä³½Ã 1¿ø?
+ë¹„ìœ¨ = 50; // ë©”ì†Œ ëª‡ì›ë‹¹ ìºì‹œ 1ì›?
     if (mode == -1) {
         cm.dispose();
         return;
@@ -35,14 +35,14 @@ function action(mode, type, selection) {
        cm.dispose();
     }
     if (status == 0) {
-        if(cm.getPlayer().getMeso() * ºñÀ² >= 2147483647) {
-        ÇÑ°è = 2147483647 / ºñÀ²
+        if(cm.getPlayer().getMeso() * ë¹„ìœ¨ >= 2147483647) {
+        í•œê³„ = 2147483647 / ë¹„ìœ¨
         } else {
-        ÇÑ°è = cm.getPlayer().getMeso() / ºñÀ²
+        í•œê³„ = cm.getPlayer().getMeso() / ë¹„ìœ¨
         }
-        cm.sendGetNumber("Ä³½ÃÃæÀüÀ» ÇÏ½Ã·¯ ¿À¼Ì±º¿ä!\r\n#rÃæÀüÇÏ½Ç Ä³½Ã ±İ¾×À» Àû¾î ÁÖ¼¼¿ä#k\r\nÇöÀç #b"+ºñÀ²+" ¸Ş¼Ò#k´ç #b1 Ä³½Ã#k¿¡ ¸ğ½Ã°í ÀÖ½À´Ï´Ù!",1,1,ÇÑ°è)
+        cm.sendGetNumber("ìºì‹œì¶©ì „ì„ í•˜ì‹œëŸ¬ ì˜¤ì…¨êµ°ìš”!\r\n#rì¶©ì „í•˜ì‹¤ ìºì‹œ ê¸ˆì•¡ì„ ì ì–´ ì£¼ì„¸ìš”#k\r\ní˜„ì¬ #b"+ë¹„ìœ¨+" ë©”ì†Œ#kë‹¹ #b1 ìºì‹œ#kì— ëª¨ì‹œê³  ìˆìŠµë‹ˆë‹¤!",1,1,í•œê³„)
     } else if (status == 1) {
-        cm.gainMeso(-selection * ºñÀ²);
+        cm.gainMeso(-selection * ë¹„ìœ¨);
         cm.gainNX(selection);
         cm.dispose();
     } 

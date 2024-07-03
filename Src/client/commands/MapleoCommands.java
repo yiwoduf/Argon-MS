@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹èÁöÈÆ raccoonfox69@gmail.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°°ì§€í›ˆ raccoonfox69@gmail.com
  * ==================================
  * 
  */
@@ -20,64 +20,64 @@ public class MapleoCommands implements Command {
     private final HashMap<String, Integer> Mapleomaps = new HashMap<String, Integer>();
     
     public MapleoCommands() {
-	Mapleomaps.put("GM¸Ê", 180000000);
-	Mapleomaps.put("»ç¿ì½ºÆä¸®", 60000);
-	Mapleomaps.put("¾ÏÇã½ºÆ®", 1010000);
-	Mapleomaps.put("Çì³×½Ã½º", 100000000);
-	Mapleomaps.put("¿¤¸®´Ï¾Æ", 101000000);
-	Mapleomaps.put("Æä¸®¿Â", 102000000);
-	Mapleomaps.put("Ä¿´×½ÃÆ¼", 103000000);
-	Mapleomaps.put("¸®½ºÇ×±¸", 104000000);
-	Mapleomaps.put("½½¸®ÇÇ¿ìµå", 105000000);
-	Mapleomaps.put("ÇÃ·Î¸®³ªºñÄ¡", 110000000);
-	Mapleomaps.put("¿À¸£ºñ½º", 200000000);
-	Mapleomaps.put("Çàº¹ÀÇ¸¶À»", 209000000);
-	Mapleomaps.put("¿¤³ª½º", 211000000);
-	Mapleomaps.put("·çµğºê¸®¾ö", 220000000);
-	Mapleomaps.put("¾ÆÄí¾Æ¸®¿ò", 230000000);
-	Mapleomaps.put("¸®ÇÁ·¹", 240000000);
-	Mapleomaps.put("¹«¸ª", 250000000);
-	Mapleomaps.put("¹éÃÊ¸¶À»", 251000000);
-	Mapleomaps.put("Áö±¸¹æÀ§º»ºÎ", 221000000);
-	Mapleomaps.put("¾Æ·§¸¶À»", 222000000);
-	Mapleomaps.put("»ş·¹´Ï¾È", 990000000);
-	Mapleomaps.put("ÇÇ¾Æ´©½º", 230040420);
-	Mapleomaps.put("È¥Å×ÀÏ", 240060200);
-	Mapleomaps.put("±×¸®ÇÉ", 240020101);
-	Mapleomaps.put("¸¶´¨", 240020401);
-	Mapleomaps.put("ÀÚÄñ", 280030000);
-	Mapleomaps.put("ÆÄÇ®¶óÅõ½º", 220080001);
-	Mapleomaps.put("¾Æ¸®¾ÈÆ®", 260000100);
-	Mapleomaps.put("³ëÆ¿·¯½º", 120000000);
-	Mapleomaps.put("¿¡·¹ºê", 130000000);
-	Mapleomaps.put("¿¤¸°½£", 300000000);
-	Mapleomaps.put("½Ã°£ÀÇ½ÅÀü", 270000000);
-	Mapleomaps.put("ÇÎÅ©ºó", 270050100);
-	Mapleomaps.put("¸®¿£", 140000000);
-        Mapleomaps.put("¿¡¿ì·¼", 101050000);
-	Mapleomaps.put("¿¡µ¨½´Å¸ÀÎ", 310000000);
-	Mapleomaps.put("½ÃÃ»", 310000001);
+	Mapleomaps.put("GMë§µ", 180000000);
+	Mapleomaps.put("ì‚¬ìš°ìŠ¤í˜ë¦¬", 60000);
+	Mapleomaps.put("ì•”í—ˆìŠ¤íŠ¸", 1010000);
+	Mapleomaps.put("í—¤ë„¤ì‹œìŠ¤", 100000000);
+	Mapleomaps.put("ì—˜ë¦¬ë‹ˆì•„", 101000000);
+	Mapleomaps.put("í˜ë¦¬ì˜¨", 102000000);
+	Mapleomaps.put("ì»¤ë‹ì‹œí‹°", 103000000);
+	Mapleomaps.put("ë¦¬ìŠ¤í•­êµ¬", 104000000);
+	Mapleomaps.put("ìŠ¬ë¦¬í”¼ìš°ë“œ", 105000000);
+	Mapleomaps.put("í”Œë¡œë¦¬ë‚˜ë¹„ì¹˜", 110000000);
+	Mapleomaps.put("ì˜¤ë¥´ë¹„ìŠ¤", 200000000);
+	Mapleomaps.put("í–‰ë³µì˜ë§ˆì„", 209000000);
+	Mapleomaps.put("ì—˜ë‚˜ìŠ¤", 211000000);
+	Mapleomaps.put("ë£¨ë””ë¸Œë¦¬ì—„", 220000000);
+	Mapleomaps.put("ì•„ì¿ ì•„ë¦¬ì›€", 230000000);
+	Mapleomaps.put("ë¦¬í”„ë ˆ", 240000000);
+	Mapleomaps.put("ë¬´ë¦‰", 250000000);
+	Mapleomaps.put("ë°±ì´ˆë§ˆì„", 251000000);
+	Mapleomaps.put("ì§€êµ¬ë°©ìœ„ë³¸ë¶€", 221000000);
+	Mapleomaps.put("ì•„ë«ë§ˆì„", 222000000);
+	Mapleomaps.put("ìƒ¤ë ˆë‹ˆì•ˆ", 990000000);
+	Mapleomaps.put("í”¼ì•„ëˆ„ìŠ¤", 230040420);
+	Mapleomaps.put("í˜¼í…Œì¼", 240060200);
+	Mapleomaps.put("ê·¸ë¦¬í•€", 240020101);
+	Mapleomaps.put("ë§ˆë‡½", 240020401);
+	Mapleomaps.put("ìì¿°", 280030000);
+	Mapleomaps.put("íŒŒí’€ë¼íˆ¬ìŠ¤", 220080001);
+	Mapleomaps.put("ì•„ë¦¬ì•ˆíŠ¸", 260000100);
+	Mapleomaps.put("ë…¸í‹¸ëŸ¬ìŠ¤", 120000000);
+	Mapleomaps.put("ì—ë ˆë¸Œ", 130000000);
+	Mapleomaps.put("ì—˜ë¦°ìˆ²", 300000000);
+	Mapleomaps.put("ì‹œê°„ì˜ì‹ ì „", 270000000);
+	Mapleomaps.put("í•‘í¬ë¹ˆ", 270050100);
+	Mapleomaps.put("ë¦¬ì—”", 140000000);
+        Mapleomaps.put("ì—ìš°ë ", 101050000);
+	Mapleomaps.put("ì—ë¸ìŠˆíƒ€ì¸", 310000000);
+	Mapleomaps.put("ì‹œì²­", 310000001);
     }
 
     @Override
     public void execute(MapleClient c, String[] splitted) throws Exception, IllegalCommandSyntaxException {
 	if (splitted.length < 2) {
-	    c.getPlayer().dropMessage(6, "»ç¿ë¹ı: !ÀÌµ¿ <¸ÊÀÌ¸§>   [!ÀÌµ¿ ¸Ê] À» ÀÔ·ÂÇÏ¸é »ç¿ë°¡´ÉÇÑ ¸Ê ¸ñ·ÏÀ» º¼ ¼ö ÀÖ½À´Ï´Ù.");
+	    c.getPlayer().dropMessage(6, "ì‚¬ìš©ë²•: !ì´ë™ <ë§µì´ë¦„>   [!ì´ë™ ë§µ] ì„ ì…ë ¥í•˜ë©´ ì‚¬ìš©ê°€ëŠ¥í•œ ë§µ ëª©ë¡ì„ ë³¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
 	} else {
 	    if (Mapleomaps.containsKey(splitted[1])) {
 		MapleMap target = c.getChannelServer().getMapFactory().getMap(Mapleomaps.get(splitted[1]));
 		MaplePortal targetPortal = target.getPortal(0);
 		c.getPlayer().changeMap(target, targetPortal);
 	    } else {
-		if (splitted[1].equals("¸Ê")) {
-		    c.getPlayer().dropMessage(6, "»ç¿ë°¡´ÉÇÑ ¸Ê ¸ñ·ÏÀº ´ÙÀ½°ú °°½À´Ï´Ù.");
+		if (splitted[1].equals("ë§µ")) {
+		    c.getPlayer().dropMessage(6, "ì‚¬ìš©ê°€ëŠ¥í•œ ë§µ ëª©ë¡ì€ ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤.");
 		    StringBuilder sb = new StringBuilder();
 		    for (String s : Mapleomaps.keySet()) {
 			sb.append(s + ", ");
 		    }
 		    c.getPlayer().dropMessage(6, sb.substring(0, sb.length() - 2));
 		} else {
-		    c.getPlayer().dropMessage(6, "¹®¹ıÀÌ ¿Ã¹Ù¸£Áö ¾Ê½À´Ï´Ù. !ÀÌµ¿ ¸Ê À» ÀÔ·ÂÇÏ¸é »ç¿ë°¡´ÉÇÑ ¸Ê ¸ñ·ÏÀ» º¼ ¼ö ÀÖ½À´Ï´Ù.");
+		    c.getPlayer().dropMessage(6, "ë¬¸ë²•ì´ ì˜¬ë°”ë¥´ì§€ ì•ŠìŠµë‹ˆë‹¤. !ì´ë™ ë§µ ì„ ì…ë ¥í•˜ë©´ ì‚¬ìš©ê°€ëŠ¥í•œ ë§µ ëª©ë¡ì„ ë³¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
 		}
 	    }
 	}
@@ -86,7 +86,7 @@ public class MapleoCommands implements Command {
     @Override
     public CommandDefinition[] getDefinition() {
 	return new CommandDefinition[]{
-            new CommandDefinition("ÀÌµ¿", "?", "ÀÔ·ÂÇÑ ¸¶À»/¸Ê À¸·Î ÀÌµ¿ÇÕ´Ï´Ù.", 1)
+            new CommandDefinition("ì´ë™", "?", "ì…ë ¥í•œ ë§ˆì„/ë§µ ìœ¼ë¡œ ì´ë™í•©ë‹ˆë‹¤.", 1)
         };
     }
 }

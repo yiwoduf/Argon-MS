@@ -59,7 +59,7 @@ function action(mode, type, selection) {
 //        cm.getClient().getSession().write(PlayerShopPacket.merchItemStore_ItemData(pack));
         cm.getPlayer().message(Packages.tools.CurrentTime.getLeftTimeFromMinute(15));
         //cm.getPlayer().addHP(-99999);
-        //cm.getClient().getChannelServer().getPlayerStorage().getCharacterByName("¿µÄï").setMonitored(true);
+        //cm.getClient().getChannelServer().getPlayerStorage().getCharacterByName("ì˜ì¿¤").setMonitored(true);
 	cm.dispose();
     }
 }

@@ -10,22 +10,22 @@ importPackage(Packages.main.world);
 		if (M == 1) Status++; else Status--;    
 
 	if(Status == 0) {
-	cm.sendYesNo("¸Þ¼Ò²Ù·¯±â(¼Ò)¸¦ ¿­¾îº¸°Ú¾î? #b50¸¸ ¸Þ¼Ò¿¡¼­ 100¾ï ¸Þ¼Ò#k »çÀÌÀÇ ±Ý¾×À» È¹µæÇÒ ¼ö ÀÖ¾î ³ÊÀÇ ¿îÀ»ÇÑ¹ø ½ÃÇèÇØº¸°Ú´Ï?"
+	cm.sendYesNo("ë©”ì†Œê¾¸ëŸ¬ê¸°(ì†Œ)ë¥¼ ì—´ì–´ë³´ê² ì–´? #b50ë§Œ ë©”ì†Œì—ì„œ 100ì–µ ë©”ì†Œ#k ì‚¬ì´ì˜ ê¸ˆì•¡ì„ íšë“í•  ìˆ˜ ìžˆì–´ ë„ˆì˜ ìš´ì„í•œë²ˆ ì‹œí—˜í•´ë³´ê² ë‹ˆ?"
 		+"")
 	}
 
 	else if(Status == 1) {
 
 		if(!cm.haveItem(2432393)) {
-		cm.sendOk("#i2432393# #b#z2432393##kÀÌ ÀÖ´Ù°í ¿ì°Ü¼­ µÇ´Â°Ô ¾Æ´Ï¾ß. ºÁ, ³× ÀÎº¥Åä¸®¿¡´Â ¾øÀÝ¾Æ?");
+		cm.sendOk("#i2432393# #b#z2432393##kì´ ìžˆë‹¤ê³  ìš°ê²¨ì„œ ë˜ëŠ”ê²Œ ì•„ë‹ˆì•¼. ë´, ë„¤ ì¸ë²¤í† ë¦¬ì—ëŠ” ì—†ìž–ì•„?");
 		cm.dispose();
 		} else {
 		cm.gainItem(2433019, -1);
 		Rullet();
-		cm.sendOk("ÃàÇÏÇØ ¸Þ¼Ò ·°Å°¹é¿¡¼­ "+W+"¸Þ¼Ò¸¦ ¾ò¾ú¾î. Áö±Ý ¹Ù·Î ÀÎº¥Åä¸®¸¦ È®ÀÎÇØ ºÁ.#b"
-			+ "\r\n\r\n #fUI/UIWindow.img/QuestIcon/7/0# "+W+" ¸Þ¼Ò\r\n");
+		cm.sendOk("ì¶•í•˜í•´ ë©”ì†Œ ëŸ­í‚¤ë°±ì—ì„œ "+W+"ë©”ì†Œë¥¼ ì–»ì—ˆì–´. ì§€ê¸ˆ ë°”ë¡œ ì¸ë²¤í† ë¦¬ë¥¼ í™•ì¸í•´ ë´.#b"
+			+ "\r\n\r\n #fUI/UIWindow.img/QuestIcon/7/0# "+W+" ë©”ì†Œ\r\n");
 			if(N > 4001207 && N < 4001213) {
-			WorldBroadcasting.broadcast(MainPacketCreator.getGMText(20, "[´ë¹Ú] "+cm.getPlayer().getName()+" ´ÔÀÌ ¸Þ¼Ò ²Ù·¯±â(¼Ò)¿¡¼­ "+W+" ¸Þ¼Ò¸¦ È¹µæÇß½À´Ï´Ù. ¸ðµÎ ÃàÇÏÇØÁÖ¼¼¿ä~"));
+			WorldBroadcasting.broadcast(MainPacketCreator.getGMText(20, "[ëŒ€ë°•] "+cm.getPlayer().getName()+" ë‹˜ì´ ë©”ì†Œ ê¾¸ëŸ¬ê¸°(ì†Œ)ì—ì„œ "+W+" ë©”ì†Œë¥¼ íšë“í–ˆìŠµë‹ˆë‹¤. ëª¨ë‘ ì¶•í•˜í•´ì£¼ì„¸ìš”~"));
 			cm.gainItem(N, Q);
 			} else {
 			cm.gainMeso(N);
@@ -41,54 +41,54 @@ importPackage(Packages.main.world);
 function Rullet() {
 M = Math.floor(Math.random() * 10000);
 	switch(M) {
-	// 100¾ï¿¡¼­ 20¾ï¾¿ °¨¼ÒÇØ¼­ Áö±Þ
-	case 0:    case 5000: N = 4001212; Q = 50; W = "100¾ï"; break;
-	case 1000: case 6000: N = 4001212; Q = 40; W = "80¾ï"; break;
-	case 2000: case 7000: N = 4001212; Q = 30; W = "60¾ï"; break;
-	case 3000: case 8000: N = 4001212; Q = 20; W = "40¾ï"; break;
-	case 4000: case 9000: N = 4001212; Q = 10; W = "20¾ï"; break;
+	// 100ì–µì—ì„œ 20ì–µì”© ê°ì†Œí•´ì„œ ì§€ê¸‰
+	case 0:    case 5000: N = 4001212; Q = 50; W = "100ì–µ"; break;
+	case 1000: case 6000: N = 4001212; Q = 40; W = "80ì–µ"; break;
+	case 2000: case 7000: N = 4001212; Q = 30; W = "60ì–µ"; break;
+	case 3000: case 8000: N = 4001212; Q = 20; W = "40ì–µ"; break;
+	case 4000: case 9000: N = 4001212; Q = 10; W = "20ì–µ"; break;
 
-	// 90¾ï¿¡¼­ 20¾ï¾¿ °¨¼ÒÇØ¼­ Áö±Þ
-	case 100:  case 5100: N = 4001212; Q = 45; W = "90¾ï"; break;
-	case 1100: case 6100: N = 4001212; Q = 35; W = "70¾ï"; break;
-	case 2100: case 7100: N = 4001212; Q = 25; W = "50¾ï"; break;
-	case 3100: case 8100: N = 4001212; Q = 15; W = "30¾ï"; break;
-	case 4100: case 9100: N = 4001212; Q = 5;  W = "10¾ï"; break;
+	// 90ì–µì—ì„œ 20ì–µì”© ê°ì†Œí•´ì„œ ì§€ê¸‰
+	case 100:  case 5100: N = 4001212; Q = 45; W = "90ì–µ"; break;
+	case 1100: case 6100: N = 4001212; Q = 35; W = "70ì–µ"; break;
+	case 2100: case 7100: N = 4001212; Q = 25; W = "50ì–µ"; break;
+	case 3100: case 8100: N = 4001212; Q = 15; W = "30ì–µ"; break;
+	case 4100: case 9100: N = 4001212; Q = 5;  W = "10ì–µ"; break;
 
-	// 10¾ï¿¡¼­ 2¾ï¾¿ °¨¼ÒÇØ¼­ Áö±Þ
-	case 50:   case 5050: N = 4001212; Q = 5;  W = "10¾ï"; break;
-	case 1050: case 6050: N = 4001212; Q = 4;  W = "8¾ï"; break;
-	case 2050: case 7050: N = 4001212; Q = 3;  W = "6¾ï"; break;
-	case 3050: case 8050: N = 4001212; Q = 2;  W = "4¾ï"; break;
-	case 4050: case 9050: N = 4001212; Q = 1;  W = "2¾ï"; break;
+	// 10ì–µì—ì„œ 2ì–µì”© ê°ì†Œí•´ì„œ ì§€ê¸‰
+	case 50:   case 5050: N = 4001212; Q = 5;  W = "10ì–µ"; break;
+	case 1050: case 6050: N = 4001212; Q = 4;  W = "8ì–µ"; break;
+	case 2050: case 7050: N = 4001212; Q = 3;  W = "6ì–µ"; break;
+	case 3050: case 8050: N = 4001212; Q = 2;  W = "4ì–µ"; break;
+	case 4050: case 9050: N = 4001212; Q = 1;  W = "2ì–µ"; break;
 
-	// 9¾ï¿¡¼­ 2¾ï¾¿ °¨¼ÒÇØ¼­ Áö±Þ
-	case 70:   case 5070: N = 4001211; Q = 9;  W = "9¾ï"; break;
-	case 1070: case 6070: N = 4001211; Q = 7;  W = "7¾ï"; break;
-	case 2070: case 7070: N = 4001211; Q = 5;  W = "5¾ï"; break;
-	case 3070: case 8070: N = 4001211; Q = 3;  W = "3¾ï"; break;
-	case 4070: case 9070: N = 4001211; Q = 1;  W = "1¾ï"; break;
+	// 9ì–µì—ì„œ 2ì–µì”© ê°ì†Œí•´ì„œ ì§€ê¸‰
+	case 70:   case 5070: N = 4001211; Q = 9;  W = "9ì–µ"; break;
+	case 1070: case 6070: N = 4001211; Q = 7;  W = "7ì–µ"; break;
+	case 2070: case 7070: N = 4001211; Q = 5;  W = "5ì–µ"; break;
+	case 3070: case 8070: N = 4001211; Q = 3;  W = "3ì–µ"; break;
+	case 4070: case 9070: N = 4001211; Q = 1;  W = "1ì–µ"; break;
 
-	// 1¾ï¿¡¼­ 5Ãµ¸¸¾¿ °¨¼ÒÇØ¼­ Áö±Þ
-	case 60:   case 5060: N = 4001210; Q = 2;  W = "1¾ï"; break;
-	case 1060: case 6060: N = 4001210; Q = 1;  W = "5Ãµ¸¸"; break;
+	// 1ì–µì—ì„œ 5ì²œë§Œì”© ê°ì†Œí•´ì„œ ì§€ê¸‰
+	case 60:   case 5060: N = 4001210; Q = 2;  W = "1ì–µ"; break;
+	case 1060: case 6060: N = 4001210; Q = 1;  W = "5ì²œë§Œ"; break;
 
-	// 9Ãµ¸¸¿¡¼­ 3Ãµ¸¸¾¿ °¨¼ÒÇØ¼­ Áö±Þ
-	case 145:  case 5145: N = 4001209; Q = 3;  W = "9Ãµ¸¸"; break;
-	case 1145: case 6145: N = 4001209; Q = 2;  W = "6Ãµ¸¸"; break;
-	case 2145: case 7145: N = 4001209; Q = 1;  W = "3Ãµ¸¸"; break;
+	// 9ì²œë§Œì—ì„œ 3ì²œë§Œì”© ê°ì†Œí•´ì„œ ì§€ê¸‰
+	case 145:  case 5145: N = 4001209; Q = 3;  W = "9ì²œë§Œ"; break;
+	case 1145: case 6145: N = 4001209; Q = 2;  W = "6ì²œë§Œ"; break;
+	case 2145: case 7145: N = 4001209; Q = 1;  W = "3ì²œë§Œ"; break;
 
-	// 1¾ï¿¡¼­ 1Ãµ¸¸¾¿ °¨¼ÒÇØ¼­ Áö±Þ
-	case 474:  case 5474: N = 4001208; Q = 10; W = "1¾ï"; break;
-	case 1474: case 6474: N = 4001208; Q = 9;  W = "9Ãµ¸¸"; break;
-	case 2474: case 7474: N = 4001208; Q = 8;  W = "8Ãµ¸¸"; break;
-	case 3474: case 8474: N = 4001208; Q = 7;  W = "7Ãµ¸¸"; break;
-	case 4474: case 9474: N = 4001208; Q = 6;  W = "6Ãµ¸¸"; break;
-	case 873 : case 5873: N = 4001208; Q = 5;  W = "5Ãµ¸¸"; break;
-	case 1873: case 9873: N = 4001208; Q = 4;  W = "4Ãµ¸¸"; break;
-	case 2873: case 9873: N = 4001208; Q = 3;  W = "3Ãµ¸¸"; break;
-	case 3873: case 9873: N = 4001208; Q = 2;  W = "2Ãµ¸¸"; break;
-	case 4873: case 9873: N = 4001208; Q = 1;  W = "Ãµ¸¸"; break;
+	// 1ì–µì—ì„œ 1ì²œë§Œì”© ê°ì†Œí•´ì„œ ì§€ê¸‰
+	case 474:  case 5474: N = 4001208; Q = 10; W = "1ì–µ"; break;
+	case 1474: case 6474: N = 4001208; Q = 9;  W = "9ì²œë§Œ"; break;
+	case 2474: case 7474: N = 4001208; Q = 8;  W = "8ì²œë§Œ"; break;
+	case 3474: case 8474: N = 4001208; Q = 7;  W = "7ì²œë§Œ"; break;
+	case 4474: case 9474: N = 4001208; Q = 6;  W = "6ì²œë§Œ"; break;
+	case 873 : case 5873: N = 4001208; Q = 5;  W = "5ì²œë§Œ"; break;
+	case 1873: case 9873: N = 4001208; Q = 4;  W = "4ì²œë§Œ"; break;
+	case 2873: case 9873: N = 4001208; Q = 3;  W = "3ì²œë§Œ"; break;
+	case 3873: case 9873: N = 4001208; Q = 2;  W = "2ì²œë§Œ"; break;
+	case 4873: case 9873: N = 4001208; Q = 1;  W = "ì²œë§Œ"; break;
 
 	default: N = M*1000; W = N; break;
 	}

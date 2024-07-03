@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -92,16 +92,16 @@ public class BuddyListHandler {
         final BuddyList buddylist = c.getPlayer().getBuddylist();
         switch (mode) {
             case 1:
-                //Ä£±¸ Ãß°¡.
+                //ì¹œêµ¬ ì¶”ê°€.
                 final String addName = rh.readMapleAsciiString();
                 final String groupName = rh.readMapleAsciiString();
                 final BuddylistEntry ble = buddylist.get(addName);
                 if (addName.length() > 13 || groupName.length() > 16) {
                     return;
                 }
-                if (ble != null && !ble.isVisible()) { //ÀÌ¹Ì Ä£±¸·Î µî·ÏµÇ¾î ÀÖ½À´Ï´Ù.
-                    c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "ÀÌ¹Ì Ä£±¸·Î µî·ÏµÇ¾î ÀÖ½À´Ï´Ù."));
-                } else if (buddylist.isFull()) { //Ä£±¸¸®½ºÆ®°¡ ²Ë Ã¡½À´Ï´Ù.
+                if (ble != null && !ble.isVisible()) { //ì´ë¯¸ ì¹œêµ¬ë¡œ ë“±ë¡ë˜ì–´ ìžˆìŠµë‹ˆë‹¤.
+                    c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "ì´ë¯¸ ì¹œêµ¬ë¡œ ë“±ë¡ë˜ì–´ ìžˆìŠµë‹ˆë‹¤."));
+                } else if (buddylist.isFull()) { //ì¹œêµ¬ë¦¬ìŠ¤íŠ¸ê°€ ê½‰ ì°¼ìŠµë‹ˆë‹¤.
                     c.getSession().writeAndFlush(MainPacketCreator.buddylistMessage((byte) 11));
                 } else {
                     try {
@@ -151,13 +151,13 @@ public class BuddyListHandler {
                                 ps.close();
                                 con.close();
                             }
-                            if (buddyAddResult == BuddyAddResult.BUDDYLIST_FULL) { //»ó´ë Ä£±¸Ãß°¡Ã¢ÀÌ ²Ë Ã¡½À´Ï´Ù.
-                                c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "»ó´ë Ä£±¸¸ñ·ÏÀÌ ²Ë Ã¡½À´Ï´Ù."));
+                            if (buddyAddResult == BuddyAddResult.BUDDYLIST_FULL) { //ìƒëŒ€ ì¹œêµ¬ì¶”ê°€ì°½ì´ ê½‰ ì°¼ìŠµë‹ˆë‹¤.
+                                c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "ìƒëŒ€ ì¹œêµ¬ëª©ë¡ì´ ê½‰ ì°¼ìŠµë‹ˆë‹¤."));
                             } else {
                                 int displayChannel = -1;
                                 int otherCid = charWithId.getId();
                                 if (buddyAddResult == BuddyAddResult.ALREADY_ON_LIST && channel != -1) {
-                                    c.send(MainPacketCreator.serverNotice(1, "ÀÌ¹Ì ´ë»óÀÇ Ä£±¸¸ñ·Ï¿¡ Ä³¸¯ÅÍ°¡ ÀÖ½À´Ï´Ù."));
+                                    c.send(MainPacketCreator.serverNotice(1, "ì´ë¯¸ ëŒ€ìƒì˜ ì¹œêµ¬ëª©ë¡ì— ìºë¦­í„°ê°€ ìžˆìŠµë‹ˆë‹¤."));
                                     return;
                                 } else if (buddyAddResult != BuddyAddResult.ALREADY_ON_LIST && channel == -1) {
                                     Connection con = MYSQL.getConnection();
@@ -172,7 +172,7 @@ public class BuddyListHandler {
                                 buddylist.put(new BuddylistEntry(charWithId.getName(), otherCid, groupName, displayChannel, true, charWithId.getLevel(), charWithId.getJob()));
                                 c.getSession().writeAndFlush(MainPacketCreator.updateBuddylist(buddylist.getBuddies(), 10, 0));
                             }
-                        } else { //Ä³¸¯ÅÍ¸¦ ¹ß°ßÇÏÁö ¸øÇß½À´Ï´Ù.
+                        } else { //ìºë¦­í„°ë¥¼ ë°œê²¬í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.
                             c.getSession().writeAndFlush(MainPacketCreator.buddylistMessage((byte) 15));
                         }
                     } catch (SQLException e) {
@@ -181,7 +181,7 @@ public class BuddyListHandler {
                 }
                 break;
             case 2: {
-                //Ä£±¸ ¼ö¶ô
+                //ì¹œêµ¬ ìˆ˜ë½
                 int otherCid = rh.readInt();
                 if (!buddylist.isFull()) {
                     try {
@@ -212,7 +212,7 @@ public class BuddyListHandler {
                             otherName = otherChar.getName();
                         }
                         if (otherName != null) {
-                            buddylist.put(new BuddylistEntry(otherName, otherCid, "±×·ì ¹ÌÁöÁ¤", channel, true, otherLevel, otherJob));
+                            buddylist.put(new BuddylistEntry(otherName, otherCid, "ê·¸ë£¹ ë¯¸ì§€ì •", channel, true, otherLevel, otherJob));
                             c.getSession().writeAndFlush(MainPacketCreator.requestBuddylistAdd(c, otherCid, otherName, 0, 0, true));
                             c.getSession().writeAndFlush(MainPacketCreator.updateBuddylist(buddylist.getBuddies(), 10, 0));
                             notifyRemoteChannel(c, channel, otherCid, ADDED);
@@ -226,7 +226,7 @@ public class BuddyListHandler {
                 break;
             }
             case 4: {
-                //Ä£±¸ »èÁ¦
+                //ì¹œêµ¬ ì‚­ì œ
                 final int otherCid = rh.readInt();
                 if (buddylist.containsVisible(otherCid)) {
                     notifyRemoteChannel(c, WorldConnected.find(otherCid), otherCid, DELETED);
@@ -235,11 +235,11 @@ public class BuddyListHandler {
                 c.getSession().writeAndFlush(MainPacketCreator.updateBuddylist(c.getPlayer().getBuddylist().getBuddies(), 18, otherCid));
                 break;
             }
-            //Ä£±¸ °ÅÀý
+            //ì¹œêµ¬ ê±°ì ˆ
             case 6:
                 break;
             case 10:
-                //Ä£±¸ ´Ã¸®±â
+                //ì¹œêµ¬ ëŠ˜ë¦¬ê¸°
                 if (c.getPlayer().getMeso() >= 50000) {
                     c.getPlayer().setBuddyCapacity(c.getPlayer().getBuddyCapacity() + 5);
                     c.getPlayer().gainMeso(-50000, false);

@@ -1,9 +1,9 @@
 var status = 0;
-var º° = "#fUI/FarmUI.img/objectStatus/star/whole#";
-º°»¡ = "#fUI/GuildMark.img/Mark/Pattern/00004001/1#"
-º°ÆÄ = "#fUI/GuildMark.img/Mark/Pattern/00004001/11#"
-º°º¸ = "#fUI/GuildMark.img/Mark/Pattern/00004001/13#"
-º°È¸ = "#fUI/GuildMark.img/Mark/Pattern/00004001/15#"
+var ë³„ = "#fUI/FarmUI.img/objectStatus/star/whole#";
+ë³„ë¹¨ = "#fUI/GuildMark.img/Mark/Pattern/00004001/1#"
+ë³„íŒŒ = "#fUI/GuildMark.img/Mark/Pattern/00004001/11#"
+ë³„ë³´ = "#fUI/GuildMark.img/Mark/Pattern/00004001/13#"
+ë³„íšŒ = "#fUI/GuildMark.img/Mark/Pattern/00004001/15#"
 importPackage(Packages.constants);
 
 function start() {
@@ -14,9 +14,9 @@ function action(mode, type, selection) { if (mode == -1) { cm.dispose(); } else 
 
     if (status == 0) {
 		
-		var chat = "              #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" È¯»ı½Ã½ºÅÛ "+º°+"\r\n#fs10##Cgray#                                "+ServerConstants.serverName+"ÀÇ È¯»ı½Ã½ºÅÛÀÔ´Ï´Ù.#k\r\n\r\n#fs12##b¢º #h # ´ÔÀÇ È¯»ıÈ½¼ö´Â "+cm.Comma(cm.getReborns())+" È¸ÀÔ´Ï´Ù.#k\r\n#r¢º #h #´ÔÀÇ ·¹º§Àº "+cm.getPlayer().getLevel()+" ·¹º§ ÀÔ´Ï´Ù.#k\r\n\r\n";
-	 	chat += "\r\n#L1##fs 13##s9001005##e#r  È¯»ı ½Ã½ºÅÛ#d ( È¯»ı,º¯»ı ÀÌ¿ëÇÏ±â )\r\n";
-		chat += "\r\n#L4##fs 13##s80001079##e#r  È¯»ı »óÁ¡ÀÌ¿ë#d ( È¯»ıÆ÷ÀÎÆ® »óÁ¡ )";
+		var chat = "              #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" í™˜ìƒì‹œìŠ¤í…œ "+ë³„+"\r\n#fs10##Cgray#                                "+ServerConstants.serverName+"ì˜ í™˜ìƒì‹œìŠ¤í…œì…ë‹ˆë‹¤.#k\r\n\r\n#fs12##bâ–¶ #h # ë‹˜ì˜ í™˜ìƒíšŸìˆ˜ëŠ” "+cm.Comma(cm.getReborns())+" íšŒì…ë‹ˆë‹¤.#k\r\n#râ–¶ #h #ë‹˜ì˜ ë ˆë²¨ì€ "+cm.getPlayer().getLevel()+" ë ˆë²¨ ì…ë‹ˆë‹¤.#k\r\n\r\n";
+	 	chat += "\r\n#L1##fs 13##s9001005##e#r  í™˜ìƒ ì‹œìŠ¤í…œ#d ( í™˜ìƒ,ë³€ìƒ ì´ìš©í•˜ê¸° )\r\n";
+		chat += "\r\n#L4##fs 13##s80001079##e#r  í™˜ìƒ ìƒì ì´ìš©#d ( í™˜ìƒí¬ì¸íŠ¸ ìƒì  )";
 		cm.sendSimple(chat);	
 
 	} else if (status == 1) {

@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -21,7 +21,7 @@ import java.nio.charset.Charset;
 
 /**
  *
- * @author Æ¼½ã
+ * @author í‹°ì¬
  *
  * since 2012. 2. 19
  */
@@ -37,7 +37,7 @@ public class NPCAutoWriterHelper {
     
     public final boolean checkFileExist() {
         try {
-            if (new File("Emulator/Scripts/npc/"+npcID+".js").exists()) { // ÀÌ¹Ì ½ºÅ©¸³Æ®°¡ Á¸ÀçÇÏ´Â °æ¿ì
+            if (new File("Emulator/Scripts/npc/"+npcID+".js").exists()) { // ì´ë¯¸ ìŠ¤í¬ë¦½íŠ¸ê°€ ì¡´ì¬í•˜ëŠ” ê²½ìš°
                 return true;
             }
         } catch (Exception e) {
@@ -64,10 +64,10 @@ public class NPCAutoWriterHelper {
     
     public final String addInfo(int id) {
         String a = "#d";
-        a += "¿£ÇÇ½Ã ÀÌ¸§ : "+getNPCName(id);
+        a += "ì—”í”¼ì‹œ ì´ë¦„ : "+getNPCName(id);
         a += "\r\n#r";
         if (!"MISSINGNO".equals(getNPCFunc(id))) {
-            a += "¿£ÇÇ½Ã ¼³¸í : "+getNPCFunc(id)+"\r\n";
+            a += "ì—”í”¼ì‹œ ì„¤ëª… : "+getNPCFunc(id)+"\r\n";
         }
         a += "\r\n#k";
         for (MapleData d : MapleDataProviderFactory.getDataProvider(new File("property/Wz/String.wz")).getData("Npc.img").getChildByPath(id+"").getChildren()) {
@@ -80,15 +80,15 @@ public class NPCAutoWriterHelper {
     
     public final void doMain() {
         try {
-            if (checkFileExist()) { // ÀÌ¹Ì ½ºÅ©¸³Æ®°¡ Á¸ÀçÇÏ´Â °æ¿ì
+            if (checkFileExist()) { // ì´ë¯¸ ìŠ¤í¬ë¦½íŠ¸ê°€ ì¡´ì¬í•˜ëŠ” ê²½ìš°
                 return;
             }
             out = new FileOutputStream("Emulator/Scripts/npc/"+npcID+".js");
         } catch (FileNotFoundException fe) {
-            dropMessage("ÆÄÀÏÀ» ÀÛ¼ºÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù. ¼­¹öÇÁ·Î±×·¥¿¡ ÆÄÀÏ ¾²±â ±ÇÇÑÀÌ ÀÖ´ÂÁö È®ÀÎÇØ ÁÖ¼¼¿ä.");
+            dropMessage("íŒŒì¼ì„ ì‘ì„±í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤. ì„œë²„í”„ë¡œê·¸ë¨ì— íŒŒì¼ ì“°ê¸° ê¶Œí•œì´ ìˆëŠ”ì§€ í™•ì¸í•´ ì£¼ì„¸ìš”.");
             if (!ServerConstants.realese) fe.printStackTrace();
         } catch (NullPointerException ne) {
-            dropMessage("ÆÄÀÏÀ» ÀÛ¼ºÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù. ³Î Æ÷ÀÎÅÍ ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+            dropMessage("íŒŒì¼ì„ ì‘ì„±í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤. ë„ í¬ì¸í„° ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
             if (!ServerConstants.realese) ne.printStackTrace();
         } catch (Exception e) {
             if (!ServerConstants.realese) e.printStackTrace();

@@ -40,19 +40,19 @@ function scheduledTimeout(eim)
 		var chr = it.next();
 		if (chr == null)
 		{
-			System.out.println("Ä³¸¯ÅÍ°¡ NULL!");
+			System.out.println("ìºë¦­í„°ê°€ NULL!");
 		}
 		if (exit == null)
 		{
-			System.out.println("EXIT¸ÊÀÌ NULL!");
+			System.out.println("EXITë§µì´ NULL!");
 		}
 		if (exit.getPortal("sp") == null) {
-			System.out.println("EXIT¸Ê Æ÷Å»ÀÌ NULL!");
+			System.out.println("EXITë§µ í¬íƒˆì´ NULL!");
 		}
 		chr.changeMap(exit, exit.getPortal("sp"));
 		if(eval(eim.getProperty("totalExp")) < eval(eim.getProperty("achivementExp")))
 		{
-			chr.Message(8, "Æú·Î: ¾Æ½±°Ôµµ ÀÌ¹ø¿¡´Â ¸ñÇ¥ °æÇèÄ¡·®À» Ã¤¿ìÁö ¸øÇß±º. ´ÙÀ½¿£ ²À Ã¤¿ï ¼ö ÀÖÀ»°Å´Ù.");
+			chr.Message(8, "í´ë¡œ: ì•„ì‰½ê²Œë„ ì´ë²ˆì—ëŠ” ëª©í‘œ ê²½í—˜ì¹˜ëŸ‰ì„ ì±„ìš°ì§€ ëª»í–ˆêµ°. ë‹¤ìŒì—” ê¼­ ì±„ìš¸ ìˆ˜ ìˆì„ê±°ë‹¤.");
 		}
 	}
 	if(eval(eim.getProperty("totalExp")) < eval(eim.getProperty("achivementExp")))
@@ -99,7 +99,7 @@ function monsterValue(eim, mobid)
 		if(eim.getProperty("check1st") == 1)
 		{
         		eim.getMapFactory().getMap(eim.getProperty("Global_nowMap")).broadcastMessage(MainPacketCreator.showEffect("monsterPark/clearF"));
-   			eim.getMapFactory().getMap(eim.getProperty("Global_nowMap")).broadcastMessage(MainPacketCreator.startMapEffect("ÀÓ¹«¿Ï·á. ¸ñÇ¥ °æÇèÄ¡¸¦ ´Ş¼ºÇß´Ù. ¹Ù·Î º¹±ÍÇÏ°Ú´Ù.", 5120159));
+   			eim.getMapFactory().getMap(eim.getProperty("Global_nowMap")).broadcastMessage(MainPacketCreator.startMapEffect("ì„ë¬´ì™„ë£Œ. ëª©í‘œ ê²½í—˜ì¹˜ë¥¼ ë‹¬ì„±í–ˆë‹¤. ë°”ë¡œ ë³µê·€í•˜ê² ë‹¤.", 5120159));
 			eim.restartEventTimer(6000);
 			eim.setProperty("check1st", "0");
 		}
@@ -114,7 +114,7 @@ function monsterKilled(eim, player)
 	if(eval(eim.getProperty("totalExp")) < eval(eim.getProperty("achivementExp")))
 	{
 		eim.setProperty("check1st", "1");
-		eim.getMapFactory().getMap(player.getMapId()).broadcastMessage(MainPacketCreator.startMapEffect("´©Àû °æÇèÄ¡ "+Comma(eim.getProperty("totalExp"))+" / "+Comma(eim.getProperty("achivementExp"))+"", 5120159));
+		eim.getMapFactory().getMap(player.getMapId()).broadcastMessage(MainPacketCreator.startMapEffect("ëˆ„ì  ê²½í—˜ì¹˜ "+Comma(eim.getProperty("totalExp"))+" / "+Comma(eim.getProperty("achivementExp"))+"", 5120159));
 	}
 }
 
@@ -136,7 +136,7 @@ function playerExit(eim, player)
 	{
 		var chr = it.next();
 		chr.changeMap(exit, exit.getPortal(0));
-		chr.Message("ÆÄÆ¼ Äù½ºÆ®¸¦ Æ÷±âÇÏ¿© ´õÀÌ»ó Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ¾ø½À´Ï´Ù.");
+		chr.Message("íŒŒí‹° í€˜ìŠ¤íŠ¸ë¥¼ í¬ê¸°í•˜ì—¬ ë”ì´ìƒ í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 	}
 	if(eval(eim.getProperty("totalExp")) < eval(eim.getProperty("achivementExp")))
 	{

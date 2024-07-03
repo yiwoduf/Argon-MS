@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -40,7 +40,7 @@ public class Clean {
                         System.out.println("CPUSampler Thread Start!!");
                         DeadLockDetector clean = new DeadLockDetector(10,(byte)1);
                         clean.run();
-                        WorldBroadcasting.broadcast(MainPacketCreator.serverNotice(1, "¼­¹öÃÖÀûÈ­°¡ ÁøÇàÁßÀÔ´Ï´Ù. ´Ù¼Ò ·ºÀÌ À¯¹ßµÉ¼öµµ ÀÖÀ¸´Ï ¾çÇØ ºÎÅ¹µå¸³´Ï´Ù."));
+                        WorldBroadcasting.broadcast(MainPacketCreator.serverNotice(1, "ì„œë²„ìµœì í™”ê°€ ì§„í–‰ì¤‘ì…ë‹ˆë‹¤. ë‹¤ì†Œ ë ‰ì´ ìœ ë°œë ìˆ˜ë„ ìˆìœ¼ë‹ˆ ì–‘í•´ ë¶€íƒë“œë¦½ë‹ˆë‹¤."));
                         timeo++;
                     }
                 }

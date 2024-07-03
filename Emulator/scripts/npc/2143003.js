@@ -1,6 +1,6 @@
 /*
-¸¸µçÀÌ:±Ç¾¾¾ÆÀú¾¾(nicky8209)
-±â»ç´Ü ¿ä»õ:Á¤·ÉÀÇ ÅÍ
+ë§Œë“ ì´:ê¶Œì”¨ì•„ì €ì”¨(nicky8209)
+ê¸°ì‚¬ë‹¨ ìš”ìƒˆ:ì •ë ¹ì˜ í„°
 */
 
 var status = 0;
@@ -23,12 +23,12 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-                var spir = "Á¤·ÉÀÇ ÅÍ·Î °¡·Á´Â°Å±º. ¾Æ Âü, »õ·Î¿î Á¤·ÉÀÇ ÅÍ°¡ ¹ß°ßµÇ¾ú¾î. ½Ã±×³Ê½º Á¤¿ø ¿­¼è¸¦ ÀÌ°÷¿¡¼­ ±¸ÇÒ ¼ö ÀÖ´Â°Å¶ó¸ç? ÆòÈ­¸¦ À§ÇØ °è¼Ó ³ë·ÂÇØ Áà.#b\r\n";
-                spir += "\r\n#L0#¼Ò¿ï(ºû)À» ÀâÀ¸·¯ °¡°Ú½À´Ï´Ù."; 
-                spir += "\r\n#L1#ÇÃ·¹ÀÓ(È­¿°)À» ÀâÀ¸·¯ °¡°Ú½À´Ï´Ù.";
-                spir += "\r\n#L2#½ºÅè(¹Ù¶÷)À» ÀâÀ¸·¯ °¡°Ú½À´Ï´Ù.";
-                spir += "\r\n#L3#´ÙÅ©´Ï½º(¾îµÒ)¸¦ ÀâÀ¸·¯ °¡°Ú½À´Ï´Ù.";
-                spir += "\r\n#L4#¶óÀÌÆ®´×(¹ø°³)À» ÀâÀ¸·¯ °¡°Ú½À´Ï´Ù.";
+                var spir = "ì •ë ¹ì˜ í„°ë¡œ ê°€ë ¤ëŠ”ê±°êµ°. ì•„ ì°¸, ìƒˆë¡œìš´ ì •ë ¹ì˜ í„°ê°€ ë°œê²¬ë˜ì—ˆì–´. ì‹œê·¸ë„ˆìŠ¤ ì •ì› ì—´ì‡ ë¥¼ ì´ê³³ì—ì„œ êµ¬í•  ìˆ˜ ìžˆëŠ”ê±°ë¼ë©°? í‰í™”ë¥¼ ìœ„í•´ ê³„ì† ë…¸ë ¥í•´ ì¤˜.#b\r\n";
+                spir += "\r\n#L0#ì†Œìš¸(ë¹›)ì„ ìž¡ìœ¼ëŸ¬ ê°€ê² ìŠµë‹ˆë‹¤."; 
+                spir += "\r\n#L1#í”Œë ˆìž„(í™”ì—¼)ì„ ìž¡ìœ¼ëŸ¬ ê°€ê² ìŠµë‹ˆë‹¤.";
+                spir += "\r\n#L2#ìŠ¤í†°(ë°”ëžŒ)ì„ ìž¡ìœ¼ëŸ¬ ê°€ê² ìŠµë‹ˆë‹¤.";
+                spir += "\r\n#L3#ë‹¤í¬ë‹ˆìŠ¤(ì–´ë‘ )ë¥¼ ìž¡ìœ¼ëŸ¬ ê°€ê² ìŠµë‹ˆë‹¤.";
+                spir += "\r\n#L4#ë¼ì´íŠ¸ë‹(ë²ˆê°œ)ì„ ìž¡ìœ¼ëŸ¬ ê°€ê² ìŠµë‹ˆë‹¤.";
                 cm.sendSimple(spir);	
         } else if (status == 1) {
 		if (selection == 0) {

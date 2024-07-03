@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -37,7 +37,7 @@ public class PetHandler {
         MaplePet pet = item.getPet();
         if (pet != null) {
             List<Integer> petbufflist = new ArrayList<Integer>(3);
-            if (chr.getPetIndex(pet) != -1) { //Æê ÇØÁ¦
+            if (chr.getPetIndex(pet) != -1) { //í« í•´ì œ
                 for (MaplePet pet_ : chr.getPets()) {
                     if (pet_ != null) {
                         int petbuffid = GameConstants.getPetBuff(pet_.getPetItemId());
@@ -231,7 +231,7 @@ public class PetHandler {
                 chr.getPet(slot).updatePosition(res);
                 chr.getMap().broadcastMessage(chr, PetPacket.movePet(chr.getId(), petId, (byte) slot, res), false);
             } else {
-                String t = "Æê¹«ºê packet : " + originalrh;
+                String t = "í«ë¬´ë¸Œ packet : " + originalrh;
             }
         }
     }
@@ -243,7 +243,7 @@ public class PetHandler {
         MaplePet pet = chr.getPet(petId);
 
         if (pet == null) {
-            chr.dropMessage(1, "ÆêÀ» Ã£´Âµ¥ ½ÇÆĞÇÏ¿´½À´Ï´Ù! ¿î¿µÁø¿¡°Ô Á¦º¸ÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
+            chr.dropMessage(1, "í«ì„ ì°¾ëŠ”ë° ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤! ìš´ì˜ì§„ì—ê²Œ ì œë³´í•´ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
             chr.ea();
             return;
         }

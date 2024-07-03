@@ -1,6 +1,6 @@
 /*
 MADE BY FOX (rinus_alt & fox_devel@nate.com)
-¹«´Ü ¼öÁ¤ ¹× ¹èÆ÷´Â ¾ö°İÈ÷ ±İÁöÇÏ°í ÀÖ½À´Ï´Ù.
+ë¬´ë‹¨ ìˆ˜ì • ë° ë°°í¬ëŠ” ì—„ê²©íˆ ê¸ˆì§€í•˜ê³  ìˆìŠµë‹ˆë‹¤.
 */
 
 importPackage(Packages.client);
@@ -8,10 +8,10 @@ importPackage(Packages.constants);
 
 var status = -1;
 
-// spenditem :: »ç¿ë¾ÆÀÌÅÛ
+// spenditem :: ì‚¬ìš©ì•„ì´í…œ
 var spenditem = 4001431; 
 
-// giveitem :: ³ª¿À´Â ¾ÆÀÌÅÛ
+// giveitem :: ë‚˜ì˜¤ëŠ” ì•„ì´í…œ
 var giveitem = new Array(new Array(4001431, 1), new Array(4001519, 1), new Array(4001431, 2),new Array(4001519, 1),  new Array(4001431, 3), new Array(4001519, 1), new Array(4001431, 4), new Array(4001431, 5), new Array(4001519, 1), new Array(4001432, 1), new Array(4001519, 1), new Array(4001432, 2), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 30), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1), new Array(4001519, 1));
 
 function start(){
@@ -34,28 +34,28 @@ function action(mode,type,selection){
         cm.dispose();
     }
     if (status == 0){
-		//cm.sendOk("#fn³ª´®°íµñ EXtrabold# ¾ÆÁ÷Àº ÀÌ¿ëÇÏ½Ç ¼ö ¾ø½À´Ï´Ù.")
-        cm.sendYesNo("#k#fn³ª´®°íµñ EXtrabold# µ¹·Á µ¹·Á µ¹¸²ÆÇ¿¡ ¿À½Å°É È¯¿µÇØ¿ä.\r\n#fn³ª´®°íµñ EXtrabold# µ¹¸²ÆÇ¿¡¼­´Â #b°¢Á¾ Èñ±ÍÇÑ ¾ÆÀÌÅÛ#kÀÌ ³ª¿Â´ä´Ï´Ù!#k#n\r\n\r\nÀÌ¿ëÇÏ½Ã·Á¸é #i" + spenditem + "# #b#z" + spenditem + "##k 2°³°¡ ÇÊ¿äÇÕ´Ï´Ù.");
+		//cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• EXtrabold# ì•„ì§ì€ ì´ìš©í•˜ì‹¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.")
+        cm.sendYesNo("#k#fnë‚˜ëˆ”ê³ ë”• EXtrabold# ëŒë ¤ ëŒë ¤ ëŒë¦¼íŒì— ì˜¤ì‹ ê±¸ í™˜ì˜í•´ìš”.\r\n#fnë‚˜ëˆ”ê³ ë”• EXtrabold# ëŒë¦¼íŒì—ì„œëŠ” #bê°ì¢… í¬ê·€í•œ ì•„ì´í…œ#kì´ ë‚˜ì˜¨ë‹µë‹ˆë‹¤!#k#n\r\n\r\nì´ìš©í•˜ì‹œë ¤ë©´ #i" + spenditem + "# #b#z" + spenditem + "##k 2ê°œê°€ í•„ìš”í•©ë‹ˆë‹¤.");
     }else if (status == 1){
         if (cm.haveItem(spenditem, 2)){
             if (cm.canHold(giveitem[0][0])){
                 if (giveitem[0][1] != 0) {
                     cm.gainItem(giveitem[0][0], giveitem[0][1]);
                     cm.gainItem(spenditem, -2);
-                    cm.sendOk("#i" + giveitem[0][0] + "# #b#z" + giveitem[0][0] + "# #k" + giveitem[0][1] + " °³¸¦ È¹µæÇÏ¼Ì½À´Ï´Ù.");
+                    cm.sendOk("#i" + giveitem[0][0] + "# #b#z" + giveitem[0][0] + "# #k" + giveitem[0][1] + " ê°œë¥¼ íšë“í•˜ì…¨ìŠµë‹ˆë‹¤.");
 					cm.showWZEffect("UI/UIWindow1.img/HofMEffect/teleport", 1);
                     cm.dispose();
                 } else {
-                    cm.sendOk("#fn³ª´®°íµñ EXtrabold# ¾Æ½±°Ôµµ ²ÎÀÌ ³ª¿Ó½À´Ï´Ù.");
+                    cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• EXtrabold# ì•„ì‰½ê²Œë„ ê½ì´ ë‚˜ì™“ìŠµë‹ˆë‹¤.");
                     cm.gainItem(spenditem, -1);
                     cm.dispose();
                 }
             } else {
-                cm.sendOk("#fn³ª´®°íµñ EXtrabold# ÀÎº¥Åä¸® °ø°£ºÎÁ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+                cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• EXtrabold# ì¸ë²¤í† ë¦¬ ê³µê°„ë¶€ì¡±ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
                 cm.dispose();
             }
         } else {
-            cm.sendOk("#i"+spenditem+"##b#fn³ª´®°íµñ EXtrabold# µ¹¸²ÆÇ ÀÌ¿ë±Ç#k À» °¡Áö°íÀÖÁö ¾Ê½À´Ï´Ù.");
+            cm.sendOk("#i"+spenditem+"##b#fnë‚˜ëˆ”ê³ ë”• EXtrabold# ëŒë¦¼íŒ ì´ìš©ê¶Œ#k ì„ ê°€ì§€ê³ ìˆì§€ ì•ŠìŠµë‹ˆë‹¤.");
             cm.dispose();
         }    
     }    

@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -69,8 +69,8 @@ public class ChannelServer {
     private final Lock merchant_mutex = new ReentrantLock();
     private EventScriptManager eventManager;
     private boolean smegaMuted = false;
-    public boolean ¾ó¸®±â = false;
-    public boolean is¾ó¸®±â = false;
+    public boolean ì–¼ë¦¬ê¸° = false;
+    public boolean isì–¼ë¦¬ê¸° = false;
     private boolean isforce = true;
     private boolean isOp = false;
     private ServerBootstrap bootstrap;
@@ -115,7 +115,7 @@ public class ChannelServer {
             Start.println("[ARGON] Channel " + (getChannel() == 0 ? 1 : getChannel() == 1 ? "Adult" : getChannel()) + " Server " + port + " Port successfully opened.", 36);
             eventManager.init();
         } catch (InterruptedException e) {
-            Start.println("[¿À·ù] Ã¤³Î¼­¹ö°¡ " + port + " Æ÷Æ®¸¦ °³¹æÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.", 36);
+            Start.println("[ì˜¤ë¥˜] ì±„ë„ì„œë²„ê°€ " + port + " í¬íŠ¸ë¥¼ ê°œë°©í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.", 36);
             if (!ServerConstants.realese) {
                 e.printStackTrace();
             }
@@ -126,7 +126,7 @@ public class ChannelServer {
 
     public final void shutdown() {
         shutdown = true;
-        System.out.println("[ARGON] " + channel + " Ã¤³Î ¼­¹ö°¡ Á¾·á¸¦ ½ÃÀÛÇÕ´Ï´Ù.");
+        System.out.println("[ARGON] " + channel + " ì±„ë„ ì„œë²„ê°€ ì¢…ë£Œë¥¼ ì‹œì‘í•©ë‹ˆë‹¤.");
         closeAllMerchant();
         PotSystem.SaveToDB();
         players.disconnectAll();
@@ -286,7 +286,7 @@ public class ChannelServer {
                 instances.put(i, new ChannelServer().serverStart(i));
             }
         } catch (Exception e) {
-            System.out.println("[¿À·ù] Ã¤³Î ¼­¹ö ¿ÀÇÂÀÌ ½ÇÆĞÇß½À´Ï´Ù.");
+            System.out.println("[ì˜¤ë¥˜] ì±„ë„ ì„œë²„ ì˜¤í”ˆì´ ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
             if (!ServerConstants.realese) {
                 e.printStackTrace();
             }
@@ -541,13 +541,13 @@ public class ChannelServer {
             switch (operation) {
                 case ADDED:
                     if (buddylist.contains(cidFrom)) {
-                        buddylist.put(new BuddylistEntry(name, cidFrom, "±×·ì ¹ÌÁöÁ¤", channel, true, level, job));
+                        buddylist.put(new BuddylistEntry(name, cidFrom, "ê·¸ë£¹ ë¯¸ì§€ì •", channel, true, level, job));
                         addChar.getClient().getSession().writeAndFlush(MainPacketCreator.updateBuddyChannel(cidFrom, channel, name, true));
                     }
                     break;
                 case DELETED:
                     if (buddylist.contains(cidFrom)) {
-                        buddylist.put(new BuddylistEntry(name, cidFrom, "±×·ì ¹ÌÁöÁ¤", -1, buddylist.get(cidFrom).isVisible(), level, job));
+                        buddylist.put(new BuddylistEntry(name, cidFrom, "ê·¸ë£¹ ë¯¸ì§€ì •", -1, buddylist.get(cidFrom).isVisible(), level, job));
                         addChar.getClient().getSession().writeAndFlush(MainPacketCreator.updateBuddyChannel(cidFrom, -1, name, buddylist.get(cidFrom).isVisible()));
                     }
                     break;
@@ -870,7 +870,7 @@ public class ChannelServer {
     }
 
     public static void shutdown(int time) {
-        System.out.println("[Á¾·á] ·Î±×ÀÎ¼­¹ö¸¦ ´İ´ÂÁßÀÔ´Ï´Ù.");
+        System.out.println("[ì¢…ë£Œ] ë¡œê·¸ì¸ì„œë²„ë¥¼ ë‹«ëŠ”ì¤‘ì…ë‹ˆë‹¤.");
         LoginServer.getInstance().shutdown();
         for (ChannelServer cserv : ChannelServer.getAllInstances()) {
             Timer.WorldTimer.getInstance().schedule(new ShutdownServer(cserv.getChannel()), time);
@@ -897,20 +897,20 @@ public class ChannelServer {
         return this.eventMessage;
     }
 
-    public boolean ¾ó¸®±â() {
-        return this.is¾ó¸®±â;
+    public boolean ì–¼ë¦¬ê¸°() {
+        return this.isì–¼ë¦¬ê¸°;
     }
 
-    public void ¾ó¸®±â(boolean a) {
-        this.is¾ó¸®±â = a;
+    public void ì–¼ë¦¬ê¸°(boolean a) {
+        this.isì–¼ë¦¬ê¸° = a;
     }
 
-    public boolean is¾ó¸®±â() {
-        return this.¾ó¸®±â;
+    public boolean isì–¼ë¦¬ê¸°() {
+        return this.ì–¼ë¦¬ê¸°;
     }
 
-    public void is¾ó¸®±â(boolean a) {
-        this.¾ó¸®±â = a;
+    public void isì–¼ë¦¬ê¸°(boolean a) {
+        this.ì–¼ë¦¬ê¸° = a;
     }
 
     public boolean isforce() {

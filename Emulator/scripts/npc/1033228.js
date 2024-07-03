@@ -21,13 +21,13 @@ function action(mode, type, selection) {
 	if (status == 0) {
 if(cm.isLeader()) {
 if(cm.getMonsterCount(cm.getPlayer().getMapId()) == 0) {
-cm.sendYesNo("Æ÷¼ÇÀº µçµçÇÏ°Ô ÁØºñ ÇÏ¼Ì³ª¿ä?\r\nÀÚ ±×·³ ÀÌÁ¦ºÎÅÍ º¸½º¼ÒÅÁÀ» ½ÃÀÛ ÇÏ°Ú½À´Ï´Ù.");
+cm.sendYesNo("í¬ì…˜ì€ ë“ ë“ í•˜ê²Œ ì¤€ë¹„ í•˜ì…¨ë‚˜ìš”?\r\nì ê·¸ëŸ¼ ì´ì œë¶€í„° ë³´ìŠ¤ì†Œíƒ•ì„ ì‹œì‘ í•˜ê² ìŠµë‹ˆë‹¤.");
 } else {
-cm.sendOk("ÀÌ¹Ì º¸½º¸¦ ¼ÒÈ¯ ÇÏ¼Ì±º¿ä?");
+cm.sendOk("ì´ë¯¸ ë³´ìŠ¤ë¥¼ ì†Œí™˜ í•˜ì…¨êµ°ìš”?");
 cm.dispose();
 }
 } else {
-cm.sendOk("Æ÷¼ÇÀº µçµçÈ÷ ÁØºñ ÇÏ¼Ì³ª¿ä?");
+cm.sendOk("í¬ì…˜ì€ ë“ ë“ íˆ ì¤€ë¹„ í•˜ì…¨ë‚˜ìš”?");
 cm.dispose();
 }
 } else if (status == 1) {

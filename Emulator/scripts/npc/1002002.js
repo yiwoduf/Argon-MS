@@ -4,12 +4,12 @@ importPackage(Packages.packet.creators);
 
 
 
-var boss = 8840000; //º¸½º ÄÚµå
-var map = 272020200; //¸ÊÄÚµå
-var bn = "¾ÆÄ«ÀÌ·³"; //º¸½ºÀÌ¸§
-var back = 100000000; //µ¹¾Æ°¥ ¸Ê ÄÚµå
-var x = 7; //¼ÒÈ¯xÁÂÇ¥ 
-var y = -160; //¼ÒÈ¯yÁÂÇ¥
+var boss = 8840000; //ë³´ìŠ¤ ì½”ë“œ
+var map = 272020200; //ë§µì½”ë“œ
+var bn = "ì•„ì¹´ì´ëŸ¼"; //ë³´ìŠ¤ì´ë¦„
+var back = 100000000; //ëŒì•„ê°ˆ ë§µ ì½”ë“œ
+var x = 7; //ì†Œí™˜xì¢Œí‘œ 
+var y = -160; //ì†Œí™˜yì¢Œí‘œ
 
 var status = -1;
 
@@ -25,15 +25,15 @@ var status = -1;
             cm.teachSkill(20031260, 1, 1);
 		
 		} else if(status == 1) {
-		if(selection == 1) {//¼ÒÈ¯
+		if(selection == 1) {//ì†Œí™˜
 			if (cm.getMonsterCount(map) > 0) {
-			cm.sendOk("¸ğµç ¸ó½ºÅÍ¸¦ Àü¸ê½ÃÄÑ¾ß ÇÕ´Ï´Ù.");
+			cm.sendOk("ëª¨ë“  ëª¬ìŠ¤í„°ë¥¼ ì „ë©¸ì‹œì¼œì•¼ í•©ë‹ˆë‹¤.");
 			cm.dispose();
 		} else if (cm.getMeso() <= 10000000) {
-			cm.sendOk(""+bn+"À» ¼ÒÈ¯ÇÏ·Á¸é 1000¸¸¸Ş¼Ò°¡ ÇÊ¿äÇÕ´Ï´Ù.");
+			cm.sendOk(""+bn+"ì„ ì†Œí™˜í•˜ë ¤ë©´ 1000ë§Œë©”ì†Œê°€ í•„ìš”í•©ë‹ˆë‹¤.");
 			cm.dispose();
 		} else {    
-			//WorldBroadcasting.broadcast(MainPacketCreator.getGMText(4, "¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡::::::::["+ cm.getPlayer().getName()+"] ´Ô²²¼­ "+(cm.getClient().getChannel()+1) +" Ã¤³Î¿¡¼­ "+bn+"À» ¼ÒÈ¯ÇÏ¼Ì½À´Ï´Ù.::::::::")); // °ÔÀÓ Ã¤ÆÃ¼­¹ö¾Ë¸² ¸Ş¼¼Áö 
+			//WorldBroadcasting.broadcast(MainPacketCreator.getGMText(4, "ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€::::::::["+ cm.getPlayer().getName()+"] ë‹˜ê»˜ì„œ "+(cm.getClient().getChannel()+1) +" ì±„ë„ì—ì„œ "+bn+"ì„ ì†Œí™˜í•˜ì…¨ìŠµë‹ˆë‹¤.::::::::")); // ê²Œì„ ì±„íŒ…ì„œë²„ì•Œë¦¼ ë©”ì„¸ì§€ 
 			cm.gainMeso(-10000000);
 			cm.spawnMob(boss,x,y);
 			cm.dispose();
@@ -44,7 +44,7 @@ var status = -1;
 			cm.dispose();
 		} else if(selection == 3) {
     	    		cm.killAllMob();
-			//WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "¡¡¡¡¡¡¡¡¡¡£ª£ª£ª£ª["+ cm.getPlayer().getName()+"] ´Ô²²¼­ "+(cm.getClient().getChannel()+1) +" Ã¤³Î¿¡¼­ "+bn+"¸¦ Å³¿Ã½ÃÄ×½À´Ï´Ù.<½ºÆ¿ÀÚÁ¦>£ª£ª£ª£ª"));
+			//WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "ã€€ã€€ã€€ã€€ã€€ï¼Šï¼Šï¼Šï¼Š["+ cm.getPlayer().getName()+"] ë‹˜ê»˜ì„œ "+(cm.getClient().getChannel()+1) +" ì±„ë„ì—ì„œ "+bn+"ë¥¼ í‚¬ì˜¬ì‹œì¼°ìŠµë‹ˆë‹¤.<ìŠ¤í‹¸ìì œ>ï¼Šï¼Šï¼Šï¼Š"));
 			cm.dispose();
 		} else {
 			cm.dispose();

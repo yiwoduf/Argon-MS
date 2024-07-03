@@ -2,7 +2,7 @@ var status = 0;
 
 var mySelection = 0;
 
-var Stats = new Array(4); // 0 = ½º¿ì HP, 1 = ½º¿ì ATK, 2 = µ¥¹Ì¾È HP, 3 = µ¥¹Ì¾È ATK
+var Stats = new Array(4); // 0 = ìŠ¤ìš° HP, 1 = ìŠ¤ìš° ATK, 2 = ë°ë¯¸ì•ˆ HP, 3 = ë°ë¯¸ì•ˆ ATK
 var SpicalRage = 20;
 
 var FinalHP1 = 0;
@@ -12,7 +12,7 @@ var Victory = 0;
 var justice = 0;
 
 function start() {
-	cm.sendSimple("½Ã¾Æ½ºÅ¸ÀÏ #b½º¿ì#k vs #bµ¥¹Ì¾È#k ½Ã½ºÅÛ ÀÔ´Ï´Ù.\r\n#Cgray#¤¤½Â¸®ÇÒ °Í °°Àº º¸½º¸¦ ¼±ÅÃ ÇØÁÖ¼¼¿ä.\r\n\r\n#b#L01#½º¿ì#l\r\n#L02#µ¥¹Ì¾È#l");
+	cm.sendSimple("ì‹œì•„ìŠ¤íƒ€ì¼ #bìŠ¤ìš°#k vs #bë°ë¯¸ì•ˆ#k ì‹œìŠ¤í…œ ì…ë‹ˆë‹¤.\r\n#Cgray#ã„´ìŠ¹ë¦¬í•  ê²ƒ ê°™ì€ ë³´ìŠ¤ë¥¼ ì„ íƒ í•´ì£¼ì„¸ìš”.\r\n\r\n#b#L01#ìŠ¤ìš°#l\r\n#L02#ë°ë¯¸ì•ˆ#l");
 }
 
 function action(mode, type, selection) {
@@ -24,21 +24,21 @@ function action(mode, type, selection) {
 
 	if (status == 1) {
 		mySelection = selection;
-		cm.sendGetText("#b#z4310038# #k¸¦ ¾ó¸¶³ª ¹èÆÃ ÇÏ½Ç °Ç°¡¿ä ?\r\n");
+		cm.sendGetText("#b#z4310038# #kë¥¼ ì–¼ë§ˆë‚˜ ë°°íŒ… í•˜ì‹¤ ê±´ê°€ìš” ?\r\n");
 	} else if (status == 2) {
 		justice = cm.getText();
 
 		if (isNaN(justice) || justice < 100) {
-			cm.sendOk("ÃÖ¼Ò 100°³ ºÎÅÍ ¹èÆÃÀÌ °¡´ÉÇÕ´Ï´Ù.");
+			cm.sendOk("ìµœì†Œ 100ê°œ ë¶€í„° ë°°íŒ…ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
 			cm.dispose();
 			return;
 		} else if (justice > 500) {
-			cm.sendOk("ÃÖ´ë 500°³ ±îÁö¸¸ ¹èÆÃÀÌ °¡´ÉÇÕ´Ï´Ù.");
+			cm.sendOk("ìµœëŒ€ 500ê°œ ê¹Œì§€ë§Œ ë°°íŒ…ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
 			cm.dispose();
 			return;
 		} else {
 			if (!cm.haveItem(4310038, justice)) {
-				cm.sendOk("ÀÔ·ÂÇÑ ¸¸Å­ÀÇ #v4310038##b#z4310038# #k¾ÆÀÌÅÛÀÌ ¾ø½À´Ï´Ù.");
+				cm.sendOk("ì…ë ¥í•œ ë§Œí¼ì˜ #v4310038##b#z4310038# #kì•„ì´í…œì´ ì—†ìŠµë‹ˆë‹¤.");
 				cm.dispose();
 				return;
 			}
@@ -55,14 +55,14 @@ function action(mode, type, selection) {
 			}
 		}
 		cm.gainItem(4310038, -justice);
-		cm.sendNext("                    ¼³Á¤µÈ º¸½ºÀÇ ½ºÅÈ ¼öÄ¡ÀÔ´Ï´Ù\r\n\r\n" + "½º¿ì #rHP #k: #b" + Stats[0] + "\r\n#k½º¿ì #rATK #k: #b" + Stats[1] + "#k\r\n\\r\nµ¥¹Ì¾È #rHP #k: #b" + Stats[2] + "\r\n#kµ¥¹Ì¾È #rATK #k: #b" + Stats[3]);
+		cm.sendNext("                    ì„¤ì •ëœ ë³´ìŠ¤ì˜ ìŠ¤íƒ¯ ìˆ˜ì¹˜ì…ë‹ˆë‹¤\r\n\r\n" + "ìŠ¤ìš° #rHP #k: #b" + Stats[0] + "\r\n#kìŠ¤ìš° #rATK #k: #b" + Stats[1] + "#k\r\n\\r\në°ë¯¸ì•ˆ #rHP #k: #b" + Stats[2] + "\r\n#kë°ë¯¸ì•ˆ #rATK #k: #b" + Stats[3]);
 	} else if (status == 3) {
 		var Text = "";
 		var SpicalRanVal = 0;
 		var firstAttack = Math.floor(Math.random() * 100);
 
 		var Damage = 0;
-		// 1 = ½º¿ì , 2 = µ¥¹Ì¾È
+		// 1 = ìŠ¤ìš° , 2 = ë°ë¯¸ì•ˆ
 		if (firstAttack > 45) {
 			firstAttack = mySelection;
 		} else {
@@ -71,9 +71,9 @@ function action(mode, type, selection) {
 
 
 		if (firstAttack == 1) {
-			Text += "                     ¼± °ø°İÀÚ´Â #b½º¿ì#k ÀÔ´Ï´Ù!\r\n\r\n";
+			Text += "                     ì„  ê³µê²©ìëŠ” #bìŠ¤ìš°#k ì…ë‹ˆë‹¤!\r\n\r\n";
 		} else {
-			Text += "                     ¼± °ø°İÀÚ´Â #bµ¥¹Ì¾È#k ÀÔ´Ï´Ù!\r\n\r\n";
+			Text += "                     ì„  ê³µê²©ìëŠ” #bë°ë¯¸ì•ˆ#k ì…ë‹ˆë‹¤!\r\n\r\n";
 		}
 
 		while(true) {
@@ -84,29 +84,29 @@ function action(mode, type, selection) {
 					SpicalRanVal = Math.floor(Math.random() * 100);
 					if (SpicalRanVal < SpicalRage) {
 						Damage = 0;
-						Text += "#d½º¿ìÀÇ °ø°İ : #Cgray#" + Damage + "#k [È¸ÇÇ]\r\n";
+						Text += "#dìŠ¤ìš°ì˜ ê³µê²© : #Cgray#" + Damage + "#k [íšŒí”¼]\r\n";
 					} else {
-						Text += "#e½º¿ìÀÇ °ø°İ : #r" + Damage + "#k [Ä¡¸íÅ¸]#n\r\n";
+						Text += "#eìŠ¤ìš°ì˜ ê³µê²© : #r" + Damage + "#k [ì¹˜ëª…íƒ€]#n\r\n";
 					}
 				} else {
 					SpicalRanVal = Math.floor(Math.random() * 100);
 					if (SpicalRanVal < SpicalRage) {
 						Damage = 0;
-						Text += "#d½º¿ìÀÇ °ø°İ : #Cgray#" + Damage + "#k [È¸ÇÇ]\r\n";
+						Text += "#dìŠ¤ìš°ì˜ ê³µê²© : #Cgray#" + Damage + "#k [íšŒí”¼]\r\n";
 					} else {
 						Damage = Stats[1];
-						Text += "#d½º¿ìÀÇ °ø°İ : #b" + Damage + "#k [ÆòÅ¸]\r\n";
+						Text += "#dìŠ¤ìš°ì˜ ê³µê²© : #b" + Damage + "#k [í‰íƒ€]\r\n";
 					}
 				}
 
 				Stats[2] = Stats[2] - Damage;
 				
 
-				Text += "#Cgray#µ¥¹Ì¾ÈÀÇ ³²Àº HP : #B" + Stats[2] / finalHP2 * 100 + "##k\r\n";
-				Text += "¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\r\n";
+				Text += "#Cgray#ë°ë¯¸ì•ˆì˜ ë‚¨ì€ HP : #B" + Stats[2] / finalHP2 * 100 + "##k\r\n";
+				Text += "â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\r\n";
 
 				if (Stats[2] < 0) {
-					Text += "#b½º¿ì#kÀÇ ½Â¸®!\r\n";
+					Text += "#bìŠ¤ìš°#kì˜ ìŠ¹ë¦¬!\r\n";
 					Victory = 1;
 					break;
 				}
@@ -118,29 +118,29 @@ function action(mode, type, selection) {
 					SpicalRanVal = Math.floor(Math.random() * 100);
 					if (SpicalRanVal < SpicalRage) {
 						Damage = 0;
-						Text += "#dµ¥¹Ì¾ÈÀÇ °ø°İ : #Cgray#" + Damage + "#k [È¸ÇÇ]\r\n";
+						Text += "#dë°ë¯¸ì•ˆì˜ ê³µê²© : #Cgray#" + Damage + "#k [íšŒí”¼]\r\n";
 					} else {
-						Text += "#eµ¥¹Ì¾ÈÀÇ °ø°İ : #r" + Damage + "#k [Ä¡¸íÅ¸]#n\r\n";
+						Text += "#eë°ë¯¸ì•ˆì˜ ê³µê²© : #r" + Damage + "#k [ì¹˜ëª…íƒ€]#n\r\n";
 					}
 				} else {
 					SpicalRanVal = Math.floor(Math.random() * 100);
 					if (SpicalRanVal < SpicalRage) {
 						Damage = 0;
-						Text += "#dµ¥¹Ì¾ÈÀÇ °ø°İ : #Cgray#" + Damage + "#k [È¸ÇÇ]\r\n";
+						Text += "#dë°ë¯¸ì•ˆì˜ ê³µê²© : #Cgray#" + Damage + "#k [íšŒí”¼]\r\n";
 					} else {
 						Damage = Stats[3];
-						Text += "#dµ¥¹Ì¾ÈÀÇ °ø°İ : #b" + Damage + "#k [ÆòÅ¸]\r\n";
+						Text += "#dë°ë¯¸ì•ˆì˜ ê³µê²© : #b" + Damage + "#k [í‰íƒ€]\r\n";
 					}
 				}
 
 				Stats[0] = Stats[0] - Damage;
 				
 
-				Text += "#Cgray#½º¿ìÀÇ ³²Àº HP : #B" + Stats[0] / finalHP1 * 100 + "##k\r\n";
-				Text += "¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\r\n";
+				Text += "#Cgray#ìŠ¤ìš°ì˜ ë‚¨ì€ HP : #B" + Stats[0] / finalHP1 * 100 + "##k\r\n";
+				Text += "â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\r\n";
 
 				if (Stats[0] < 0) {
-					Text += "#bµ¥¹Ì¾È#kÀÇ ½Â¸®!\r\n";
+					Text += "#bë°ë¯¸ì•ˆ#kì˜ ìŠ¹ë¦¬!\r\n";
 					Victory = 2;
 					break;
 				}
@@ -151,29 +151,29 @@ function action(mode, type, selection) {
 					SpicalRanVal = Math.floor(Math.random() * 100);
 					if (SpicalRanVal < SpicalRage) {
 						Damage = 0;
-						Text += "#dµ¥¹Ì¾ÈÀÇ °ø°İ : #Cgray#" + Damage + "#k [È¸ÇÇ]\r\n";
+						Text += "#dë°ë¯¸ì•ˆì˜ ê³µê²© : #Cgray#" + Damage + "#k [íšŒí”¼]\r\n";
 					} else {
-						Text += "#eµ¥¹Ì¾ÈÀÇ °ø°İ : #r" + Damage + "#k [Ä¡¸íÅ¸]#n\r\n";
+						Text += "#eë°ë¯¸ì•ˆì˜ ê³µê²© : #r" + Damage + "#k [ì¹˜ëª…íƒ€]#n\r\n";
 					}
 				} else {
 					SpicalRanVal = Math.floor(Math.random() * 100);
 					if (SpicalRanVal < SpicalRage) {
 						Damage = 0;
-						Text += "#dµ¥¹Ì¾ÈÀÇ °ø°İ : #Cgray#" + Damage + "#k [È¸ÇÇ]\r\n";
+						Text += "#dë°ë¯¸ì•ˆì˜ ê³µê²© : #Cgray#" + Damage + "#k [íšŒí”¼]\r\n";
 					} else {
 						Damage = Stats[3];
-						Text += "#dµ¥¹Ì¾ÈÀÇ °ø°İ : #b" + Damage + "#k [ÆòÅ¸]\r\n";
+						Text += "#dë°ë¯¸ì•ˆì˜ ê³µê²© : #b" + Damage + "#k [í‰íƒ€]\r\n";
 					}
 				}
 
 				Stats[0] = Stats[0] - Damage;
 				
 
-				Text += "#Cgray#½º¿ìÀÇ ³²Àº HP : #B" + Stats[0] / finalHP1 * 100 + "##k\r\n";
-				Text += "¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\r\n";
+				Text += "#Cgray#ìŠ¤ìš°ì˜ ë‚¨ì€ HP : #B" + Stats[0] / finalHP1 * 100 + "##k\r\n";
+				Text += "â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\r\n";
 
 				if (Stats[0] < 0) {
-					Text += "#bµ¥¹Ì¾È#kÀÇ ½Â¸®!\r\n";
+					Text += "#bë°ë¯¸ì•ˆ#kì˜ ìŠ¹ë¦¬!\r\n";
 					Victory = 2;
 					break;
 				}
@@ -185,29 +185,29 @@ function action(mode, type, selection) {
 					SpicalRanVal = Math.floor(Math.random() * 100);
 					if (SpicalRanVal < SpicalRage) {
 						Damage = 0;
-						Text += "#d½º¿ìÀÇ °ø°İ : #Cgray#" + Damage + "#k [È¸ÇÇ]\r\n";
+						Text += "#dìŠ¤ìš°ì˜ ê³µê²© : #Cgray#" + Damage + "#k [íšŒí”¼]\r\n";
 					} else {
-						Text += "#e½º¿ìÀÇ °ø°İ : #r" + Damage + "#k [Ä¡¸íÅ¸]#n\r\n";
+						Text += "#eìŠ¤ìš°ì˜ ê³µê²© : #r" + Damage + "#k [ì¹˜ëª…íƒ€]#n\r\n";
 					}
 				} else {
 					SpicalRanVal = Math.floor(Math.random() * 100);
 					if (SpicalRanVal < SpicalRage) {
 						Damage = 0;
-						Text += "#d½º¿ìÀÇ °ø°İ : #Cgray#" + Damage + "#k [È¸ÇÇ]\r\n";
+						Text += "#dìŠ¤ìš°ì˜ ê³µê²© : #Cgray#" + Damage + "#k [íšŒí”¼]\r\n";
 					} else {
 						Damage = Stats[1];
-						Text += "#d½º¿ìÀÇ °ø°İ : #b" + Damage + "#k [ÆòÅ¸]\r\n";
+						Text += "#dìŠ¤ìš°ì˜ ê³µê²© : #b" + Damage + "#k [í‰íƒ€]\r\n";
 					}
 				}
 
 				Stats[2] = Stats[2] - Damage;
 				
 
-				Text += "#Cgray#µ¥¹Ì¾ÈÀÇ ³²Àº HP : #B" + Stats[2] / finalHP2 * 100 + "##k\r\n";
-				Text += "¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\r\n";
+				Text += "#Cgray#ë°ë¯¸ì•ˆì˜ ë‚¨ì€ HP : #B" + Stats[2] / finalHP2 * 100 + "##k\r\n";
+				Text += "â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\r\n";
 
 				if (Stats[2] < 0) {
-					Text += "#b½º¿ì#kÀÇ ½Â¸®!\r\n";
+					Text += "#bìŠ¤ìš°#kì˜ ìŠ¹ë¦¬!\r\n";
 					Victory = 1;
 					break;
 				}
@@ -218,11 +218,11 @@ function action(mode, type, selection) {
 	} else if (status == 4) {
 		if (mySelection == Victory) {
 			cm.gainItem(4310038, justice * 2);
-			cm.sendOk("´ç½ÅÀÌ °Ç ÂÊÀÌ ½Â¸® ÇÏ¿´¾î¿ä ! ÃàÇÏµå·Á¿ä !\r\n\r\n#b#v4310038##z4310038# " + justice * 2 + "#k È¹µæ !");
+			cm.sendOk("ë‹¹ì‹ ì´ ê±´ ìª½ì´ ìŠ¹ë¦¬ í•˜ì˜€ì–´ìš” ! ì¶•í•˜ë“œë ¤ìš” !\r\n\r\n#b#v4310038##z4310038# " + justice * 2 + "#k íšë“ !");
 			cm.dispose();
 			return;
 		} else {
-			cm.sendOk("¾Æ½±Áö¸¸ ´ç½ÅÀÌ °Ç ÂÊÀÌ ÆĞ¹è ÇÏ¼Ì¾î¿ä.. ´ÙÀ½¿¡ ´Ù½Ã µµÀü ÇØÁÖ¼¼¿ä !");
+			cm.sendOk("ì•„ì‰½ì§€ë§Œ ë‹¹ì‹ ì´ ê±´ ìª½ì´ íŒ¨ë°° í•˜ì…¨ì–´ìš”.. ë‹¤ìŒì— ë‹¤ì‹œ ë„ì „ í•´ì£¼ì„¸ìš” !");
 			cm.dispose();
 			return;
 		}

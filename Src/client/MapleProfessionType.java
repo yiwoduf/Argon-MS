@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -11,7 +11,7 @@ package client;
 
 /**
  *
- * @author ¿¡¹İÅ×ÀÌ¸£
+ * @author ì—ë°˜í…Œì´ë¥´
  */
 public enum MapleProfessionType {
     NONE        (0),
@@ -48,15 +48,15 @@ public enum MapleProfessionType {
     public static String getNameByProfession(MapleProfessionType type) {
         switch (type) {
             case HERBALISM:
-                return "¾àÃÊÃ¤Áı";
+                return "ì•½ì´ˆì±„ì§‘";
             case MINING:
-                return "Ã¤±¤";
+                return "ì±„ê´‘";
             case EQUIP:
-                return "ÀåºñÁ¦ÀÛ";
+                return "ì¥ë¹„ì œì‘";
             case ACC:
-                return "Àå½Å±¸Á¦ÀÛ";
+                return "ì¥ì‹ êµ¬ì œì‘";
             case ALCHEMY:
-                return "¿¬±İ¼ú";
+                return "ì—°ê¸ˆìˆ ";
         }
         return "";
     }

@@ -1,7 +1,7 @@
 /*
  * YorkDEV Project
- * ÃÖÁÖ¿ø sch2307@nate.com
- * ÁÖ´Ï leejun860@nate.com
+ * ìµœì£¼ì› sch2307@nate.com
+ * ì£¼ë‹ˆ leejun860@nate.com
  */
 package packet.crypto;
 

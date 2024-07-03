@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ¾îºñ½º abyss_min@nate.com
- * ¾îºñ½º abyss_min@nate.com
+ * ì–´ë¹„ìŠ¤ abyss_min@nate.com
+ * ì–´ë¹„ìŠ¤ abyss_min@nate.com
  * ==================================
  *
  */
@@ -78,7 +78,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
     private final Map<MonsterStatus, MonsterStatusEffect> stati = new LinkedHashMap<MonsterStatus, MonsterStatusEffect>();
     private Map<Integer, Long> usedSkills;
     private List<Integer> reflections = new LinkedList<Integer>();
-    private int elitetype = 0x70; //±âº»°ª
+    private int elitetype = 0x70; //ê¸°ë³¸ê°’
     private boolean elitemonster;
     private boolean eliteboss;
     private int EliteHP;
@@ -261,7 +261,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
         if (from.getMapId() == 120000102) {
             from.addDamageMeter(rDamage);
             from.send(MainPacketCreator.RemovePopupSay());
-            from.send(MainPacketCreator.OnAddPopupSay(9000036, 3000, "´©Àû µ¥¹ÌÁö #e[#n#r" + Randomizer.Comma(from.getDamageMeter()) + "#k#e]", ""));
+            from.send(MainPacketCreator.OnAddPopupSay(9000036, 3000, "ëˆ„ì  ë°ë¯¸ì§€ #e[#n#r" + Randomizer.Comma(from.getDamageMeter()) + "#k#e]", ""));
         }
         if (skillid == 35101007) {
             from.getMap().broadcastMessage(MobPacket.damageMonster(getId(), damage));
@@ -308,10 +308,10 @@ public class MapleMonster extends AbstractLoadedMapleLife {
                 finalmaxhp -= damage;
                 if (finalmaxhp > 0) {
                     map.broadcastMessage(UIPacket.clearMidMsg());
-                    map.broadcastMessage(UIPacket.greenShowInfo("<" + stats.getName() + "> ÆÄÀÌ³ÎHP : " + finalmaxhp));
+                    map.broadcastMessage(UIPacket.greenShowInfo("<" + stats.getName() + "> íŒŒì´ë„HP : " + finalmaxhp));
                 } else {
                     map.broadcastMessage(UIPacket.clearMidMsg());
-                    map.broadcastMessage(UIPacket.greenShowInfo("<" + stats.getName() + "> ÆÄÀÌ³ÎHP : 0"));
+                    map.broadcastMessage(UIPacket.greenShowInfo("<" + stats.getName() + "> íŒŒì´ë„HP : 0"));
                     map.killMonster(this, from, true, false, stats.getSelfD());
                 }
             }
@@ -494,9 +494,9 @@ public class MapleMonster extends AbstractLoadedMapleLife {
         };
 
         String bossMessage[] = {
-            "[½Ã½ºÅÛ] µ¥¹Ì¾È 1ÆäÀÌÁö¸¦ Å¬¸®¾îÇÏ¼Ì½À´Ï´Ù. 30ÃÊÈÄ¿¡ 2ÆäÀÌÁö µ¥¹Ì¾ÈÀ¸·Î ³Ñ¾î°©´Ï´Ù",
-            "[½Ã½ºÅÛ] µ¥¹Ì¾È 1ÆäÀÌÁö¸¦ Å¬¸®¾îÇÏ¼Ì½À´Ï´Ù. 30ÃÊÈÄ¿¡ 3ÆäÀÌÁö µ¥¹Ì¾ÈÀ¸·Î ³Ñ¾î°©´Ï´Ù",
-            "[½Ã½ºÅÛ] µ¥¹Ì¾È 3ÆäÀÌÁö¸¦ Å¬¸®¾îÇÏ¼Ì½À´Ï´Ù. 30ÃÊÈÄ¿¡ º¸½º ¿øÁ¤½Ç·Î ±ÍÈ¯ÇÕ´Ï´Ù.."
+            "[ì‹œìŠ¤í…œ] ë°ë¯¸ì•ˆ 1í˜ì´ì§€ë¥¼ í´ë¦¬ì–´í•˜ì…¨ìŠµë‹ˆë‹¤. 30ì´ˆí›„ì— 2í˜ì´ì§€ ë°ë¯¸ì•ˆìœ¼ë¡œ ë„˜ì–´ê°‘ë‹ˆë‹¤",
+            "[ì‹œìŠ¤í…œ] ë°ë¯¸ì•ˆ 1í˜ì´ì§€ë¥¼ í´ë¦¬ì–´í•˜ì…¨ìŠµë‹ˆë‹¤. 30ì´ˆí›„ì— 3í˜ì´ì§€ ë°ë¯¸ì•ˆìœ¼ë¡œ ë„˜ì–´ê°‘ë‹ˆë‹¤",
+            "[ì‹œìŠ¤í…œ] ë°ë¯¸ì•ˆ 3í˜ì´ì§€ë¥¼ í´ë¦¬ì–´í•˜ì…¨ìŠµë‹ˆë‹¤. 30ì´ˆí›„ì— ë³´ìŠ¤ ì›ì •ì‹¤ë¡œ ê·€í™˜í•©ë‹ˆë‹¤.."
         };
 
         if (getMap().getId() == mapid[selection]) {
@@ -539,15 +539,15 @@ public class MapleMonster extends AbstractLoadedMapleLife {
         };
 
         String bossMessage[] = {
-            "[½Ã½ºÅÛ] ½º¿ì 1ÆäÀÌÁö¸¦ Å¬¸®¾îÇÏ¼Ì½À´Ï´Ù. 10ÃÊÈÄ¿¡ 2ÆäÀÌÁö ½º¿ì·Î ³Ñ¾î°©´Ï´Ù",
-            "[½Ã½ºÅÛ] ½º¿ì 2ÆäÀÌÁö¸¦ Å¬¸®¾îÇÏ¼Ì½À´Ï´Ù. 10ÃÊÈÄ¿¡ 3ÆäÀÌÁö ½º¿ì·Î ³Ñ¾î°©´Ï´Ù",
-            "[½Ã½ºÅÛ] ½º¿ì 3ÆäÀÌÁö¸¦ Å¬¸®¾îÇÏ¼Ì½À´Ï´Ù. 10ÃÊÈÄ¿¡ º¸½º ¿øÁ¤½Ç·Î ±ÍÈ¯ÇÕ´Ï´Ù.."
+            "[ì‹œìŠ¤í…œ] ìŠ¤ìš° 1í˜ì´ì§€ë¥¼ í´ë¦¬ì–´í•˜ì…¨ìŠµë‹ˆë‹¤. 10ì´ˆí›„ì— 2í˜ì´ì§€ ìŠ¤ìš°ë¡œ ë„˜ì–´ê°‘ë‹ˆë‹¤",
+            "[ì‹œìŠ¤í…œ] ìŠ¤ìš° 2í˜ì´ì§€ë¥¼ í´ë¦¬ì–´í•˜ì…¨ìŠµë‹ˆë‹¤. 10ì´ˆí›„ì— 3í˜ì´ì§€ ìŠ¤ìš°ë¡œ ë„˜ì–´ê°‘ë‹ˆë‹¤",
+            "[ì‹œìŠ¤í…œ] ìŠ¤ìš° 3í˜ì´ì§€ë¥¼ í´ë¦¬ì–´í•˜ì…¨ìŠµë‹ˆë‹¤. 10ì´ˆí›„ì— ë³´ìŠ¤ ì›ì •ì‹¤ë¡œ ê·€í™˜í•©ë‹ˆë‹¤.."
         };
 
         String bossPointMessage[] = {
-            "[½Ã½ºÅÛ] Ä«¿À½º ¿øÁ¤´ë : " + getStats().getName() + "º¸½º ¿øÁ¤´ë¸¦ Å¬¸®¾î ÇÏ¿´½À´Ï´Ù.",
-            "[½Ã½ºÅÛ] Ä«¿À½º ¿øÁ¤´ë : " + getStats().getName() + "º¸½º ¿øÁ¤´ë¸¦ Å¬¸®¾î ÇÏ¿´½À´Ï´Ù.",
-            "[½Ã½ºÅÛ] Ä«¿À½º ¿øÁ¤´ë : " + getStats().getName() + "º¸½º ¿øÁ¤´ë¸¦ Å¬¸®¾î ÇÏ¿´½À´Ï´Ù."
+            "[ì‹œìŠ¤í…œ] ì¹´ì˜¤ìŠ¤ ì›ì •ëŒ€ : " + getStats().getName() + "ë³´ìŠ¤ ì›ì •ëŒ€ë¥¼ í´ë¦¬ì–´ í•˜ì˜€ìŠµë‹ˆë‹¤.",
+            "[ì‹œìŠ¤í…œ] ì¹´ì˜¤ìŠ¤ ì›ì •ëŒ€ : " + getStats().getName() + "ë³´ìŠ¤ ì›ì •ëŒ€ë¥¼ í´ë¦¬ì–´ í•˜ì˜€ìŠµë‹ˆë‹¤.",
+            "[ì‹œìŠ¤í…œ] ì¹´ì˜¤ìŠ¤ ì›ì •ëŒ€ : " + getStats().getName() + "ë³´ìŠ¤ ì›ì •ëŒ€ë¥¼ í´ë¦¬ì–´ í•˜ì˜€ìŠµë‹ˆë‹¤."
         };
 
         if (getMap().getId() == map[selection]) {
@@ -574,7 +574,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
 
     public void SubJobQuest(final MapleCharacter player) {
         if (getId() == 8500001) {
-            player.getClient().getSession().write(MainPacketCreator.getNPCTalk(2144004, (byte) 0, "<Chapter 1 : °¢¼ºÀÇ ÀÚ°İ> Plan 1. < ÆÄÇÃ¶óÅõ½º > ¸¦ ¼º°øÀûÀ¸·Î °İÆÄÇÏ¿´½À´Ï´Ù.\r\n¿£ÇÇ½Ã¸¦ ÅëÇØ º¸»óÀ» ¼ö·ÉÇÏ½Ã°í ´ÙÀ½ Ã©ÅÍ ÁøÇà ºÎÅ¹µå¸³´Ï´Ù.", "00 00", (byte) 0));
+            player.getClient().getSession().write(MainPacketCreator.getNPCTalk(2144004, (byte) 0, "<Chapter 1 : ê°ì„±ì˜ ìê²©> Plan 1. < íŒŒí”Œë¼íˆ¬ìŠ¤ > ë¥¼ ì„±ê³µì ìœ¼ë¡œ ê²©íŒŒí•˜ì˜€ìŠµë‹ˆë‹¤.\r\nì—”í”¼ì‹œë¥¼ í†µí•´ ë³´ìƒì„ ìˆ˜ë ¹í•˜ì‹œê³  ë‹¤ìŒ ì±•í„° ì§„í–‰ ë¶€íƒë“œë¦½ë‹ˆë‹¤.", "00 00", (byte) 0));
             player.setKeyValue("subjob", "2");
             player.setKeyValue("quest", "1");
         }
@@ -593,7 +593,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
             DemianWarp(killer, 1);
         } else if (getId() == 8880131) {
             DemianWarp(killer, 2);
-        } // Ãß°¡
+        } // ì¶”ê°€
 
         int cash = 0;
         int totalBaseExp = (int) (Math.min(Integer.MAX_VALUE, (getMobExp()/* * (killer.getLevel() <= 10 ? 1 : exp)*/)));
@@ -601,9 +601,9 @@ public class MapleMonster extends AbstractLoadedMapleLife {
         long highdamage = 0;
 
         if (Randomizer.nextInt(100) <= 2) {
-            if (killer.getLevel() - getStats().getLevel() <= 10) { //¸ó½ºÅÍ·¹º§ º¸´Ù 10ÀÌ»ó ³ôÀ¸¸éµå·Ó¾ÈµÊ
+            if (killer.getLevel() - getStats().getLevel() <= 10) { //ëª¬ìŠ¤í„°ë ˆë²¨ ë³´ë‹¤ 10ì´ìƒ ë†’ìœ¼ë©´ë“œë¡­ì•ˆë¨
                 cash = Randomizer.rand(50, 150);
-            } else if (killer.getLevel() - getStats().getLevel() <= -10) { //¸ó½ºÅÍ·¹º§ º¸´Ù 10ÀÌ»ó ³·À¸¸é ´õ³ô°Ô
+            } else if (killer.getLevel() - getStats().getLevel() <= -10) { //ëª¬ìŠ¤í„°ë ˆë²¨ ë³´ë‹¤ 10ì´ìƒ ë‚®ìœ¼ë©´ ë”ë†’ê²Œ
                 cash = Randomizer.rand(60, 200);
             }
         }
@@ -890,15 +890,15 @@ public class MapleMonster extends AbstractLoadedMapleLife {
         sb.append(getMp());
         sb.append("/ ");
         sb.append(getMobMaxMp());
-        sb.append(" (»ì¾ÆÀÖÀ½: ");
+        sb.append(" (ì‚´ì•„ìˆìŒ: ");
         sb.append(isAlive());
-        sb.append(" ¿ÀºêÁ§Æ®id: ");
+        sb.append(" ì˜¤ë¸Œì íŠ¸id: ");
         sb.append(getObjectId());
-        sb.append(") || ÄÁÆ®·Ñ·¯ ÀÌ¸§ : ");
+        sb.append(") || ì»¨íŠ¸ë¡¤ëŸ¬ ì´ë¦„ : ");
         final MapleCharacter chr = controller.get();
-        sb.append(chr != null ? chr.getName() : "¾øÀ½");
-        sb.append(" FinalMaxHP ¿©ºÎ: ");
-        sb.append(isFinalBoss() ? "¿¹" : "¾Æ´Ï¿À");
+        sb.append(chr != null ? chr.getName() : "ì—†ìŒ");
+        sb.append(" FinalMaxHP ì—¬ë¶€: ");
+        sb.append(isFinalBoss() ? "ì˜ˆ" : "ì•„ë‹ˆì˜¤");
 
         return sb.toString();
     }
@@ -1333,7 +1333,7 @@ public class MapleMonster extends AbstractLoadedMapleLife {
                         idrop = ItemInformation.getInstance().randomizeStats(eq, false);
                     } else {
                         idrop = new Item(d.itemId, (byte) 0, (short) (d.Maximum != 1 ? Randomizer.nextInt(d.Maximum - d.Minimum) + d.Minimum : 1), (byte) 0);
-                        idrop.setGMLog(chr.getName() + "°¡ ½ºÆ¿·Î ÀÎÇÑ ¾ÆÀÌÅÛ ÈÉÄ¡±â·Î ¾òÀº ¾ÆÀÌÅÛ");
+                        idrop.setGMLog(chr.getName() + "ê°€ ìŠ¤í‹¸ë¡œ ì¸í•œ ì•„ì´í…œ í›”ì¹˜ê¸°ë¡œ ì–»ì€ ì•„ì´í…œ");
                     }
                     stolen = d.itemId;
                     map.spawnMobDrop(idrop, map.calcDropPos(getPosition(), getPosition()), this, chr, (byte) 0, (short) 0);

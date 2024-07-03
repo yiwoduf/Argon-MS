@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -12,28 +12,28 @@ package launch.world;
 import launch.ChannelServer;
 //import packet.transfer.write.byte[];
 
-/** ¸ğµç Ã¤³Î¿¡ ÆĞÅ¶À» ¹æ¼ÛÇÏ´Â ±â´É Á¦°ø.
+/** ëª¨ë“  ì±„ë„ì— íŒ¨í‚·ì„ ë°©ì†¡í•˜ëŠ” ê¸°ëŠ¥ ì œê³µ.
  *
  * 
- * @author Æ¼½ã
+ * @author í‹°ì¬
  *
  * since 2012. 2. 24
      * 
      * @since Revision 25
  */
 public class WorldBroadcasting {
-    /** ¸ğµç Ã¤³Î¿¡ ¸ŞÀÌÇÃÆĞÅ¶ Çü½ÄÀÇ ÆĞÅ¶À» Àü¼ÛÇÔ.
+    /** ëª¨ë“  ì±„ë„ì— ë©”ì´í”ŒíŒ¨í‚· í˜•ì‹ì˜ íŒ¨í‚·ì„ ì „ì†¡í•¨.
      * 
-     * @param <Packet> ¸ŞÀÌÇÃÆĞÅ¶
+     * @param <Packet> ë©”ì´í”ŒíŒ¨í‚·
      * 
      * @since Revision 25
      */
     public static void broadcastMessage(byte[] data) {
         broadcast(data);
     }
-    /** ¸ğµç Ã¤³Î¿¡ ¸ŞÀÌÇÃÆĞÅ¶ Çü½ÄÀÇ ÆĞÅ¶À» Àü¼ÛÇÔ.
+    /** ëª¨ë“  ì±„ë„ì— ë©”ì´í”ŒíŒ¨í‚· í˜•ì‹ì˜ íŒ¨í‚·ì„ ì „ì†¡í•¨.
      * 
-     * @param <Packet> ¸ŞÀÌÇÃÆĞÅ¶
+     * @param <Packet> ë©”ì´í”ŒíŒ¨í‚·
      * 
      * @since Revision 25
      */
@@ -54,26 +54,26 @@ public class WorldBroadcasting {
             cserv.broadcastPacket(data);
         }
     }
-    /** ¸ğµç Ã¤³Î¿¡ È®¼º±â¸¦ ¼ö½ÅÇÏ´Â À¯Àú¸¸ º¼ ¼ö ÀÖ´Â ÆĞÅ¶À» Àü¼ÛÇÔ.
+    /** ëª¨ë“  ì±„ë„ì— í™•ì„±ê¸°ë¥¼ ìˆ˜ì‹ í•˜ëŠ” ìœ ì €ë§Œ ë³¼ ìˆ˜ ìˆëŠ” íŒ¨í‚·ì„ ì „ì†¡í•¨.
      * 
-     * @param <byte[]> ¹ÙÀÌÆ®¹è¿­
+     * @param <byte[]> ë°”ì´íŠ¸ë°°ì—´
      * 
      * @since Revision 25
      */
-    /** ¸ğµç Ã¤³Î¿¡ GM¸¸ ¹ŞÀ» ¼ö ÀÖ´Â ÆĞÅ¶À» Àü¼ÛÇÔ.
+    /** ëª¨ë“  ì±„ë„ì— GMë§Œ ë°›ì„ ìˆ˜ ìˆëŠ” íŒ¨í‚·ì„ ì „ì†¡í•¨.
      * 
-     * @param <byte[]> ¹ÙÀÌÆ®¹è¿­
+     * @param <byte[]> ë°”ì´íŠ¸ë°°ì—´
      * 
      * @since Revision 25
      */
     
     
-    /** ¸ğµç Ã¤³Î¿¡ Ä£±¸ ·Î±×¿ÀÇÁ ÆĞÅ¶À» Àü¼ÛÇÔ.
+    /** ëª¨ë“  ì±„ë„ì— ì¹œêµ¬ ë¡œê·¸ì˜¤í”„ íŒ¨í‚·ì„ ì „ì†¡í•¨.
      * 
-     * @param <String> ¾÷µ¥ÀÌÆ®Ä³¸¯¸í 
-     * @param <int> ¾÷µ¥ÀÌÆ®Ä³¸¯ID 
-     * @param <int> Ã¤³Î 
-     * @param <int[]> ÆĞÅ¶Àü¼Û´ë»óÄ£±¸ID¸ñ·Ï
+     * @param <String> ì—…ë°ì´íŠ¸ìºë¦­ëª… 
+     * @param <int> ì—…ë°ì´íŠ¸ìºë¦­ID 
+     * @param <int> ì±„ë„ 
+     * @param <int[]> íŒ¨í‚·ì „ì†¡ëŒ€ìƒì¹œêµ¬IDëª©ë¡
      * 
      * @since Revision 25
      */
@@ -82,12 +82,12 @@ public class WorldBroadcasting {
             cserv.updateBuddies(characterId, channel, buddies, true);
     }
     
-    /** ¸ğµç Ã¤³Î¿¡ Ä£±¸ ·Î±×¿Â ÆĞÅ¶À» Àü¼ÛÇÔ.
+    /** ëª¨ë“  ì±„ë„ì— ì¹œêµ¬ ë¡œê·¸ì˜¨ íŒ¨í‚·ì„ ì „ì†¡í•¨.
      * 
-     * @param <String> ¾÷µ¥ÀÌÆ®Ä³¸¯¸í 
-     * @param <int> ¾÷µ¥ÀÌÆ®Ä³¸¯ID 
-     * @param <int> Ã¤³Î 
-     * @param <int[]> ÆĞÅ¶Àü¼Û´ë»óÄ£±¸ID¸ñ·Ï
+     * @param <String> ì—…ë°ì´íŠ¸ìºë¦­ëª… 
+     * @param <int> ì—…ë°ì´íŠ¸ìºë¦­ID 
+     * @param <int> ì±„ë„ 
+     * @param <int[]> íŒ¨í‚·ì „ì†¡ëŒ€ìƒì¹œêµ¬IDëª©ë¡
      * 
      * @since Revision 25
      */

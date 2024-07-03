@@ -2,7 +2,7 @@ importPackage(Packages.java.awt);
 importPackage(Packages.packet.creators);
 var status = -1;
 
-var strings = Array("#fUI/UIWindow2.img/MobGage/Mob/8800000# ³ë¸» ÀÚÄñ", "#fUI/UIWindow2.img/MobGage/Mob/8800000# #eÄ«¿À½º ÀÚÄñ#n", "#fUI/UIWindow2.img/MobGage/Mob/8810018# ³ë¸» È¥Å×ÀÏ", "#fUI/UIWindow2.img/MobGage/Mob/8810018# #eÄ«¿À½º È¥Å×ÀÏ#n", "#fUI/UIWindow2.img/MobGage/Mob/8870000# ³ë¸» Èú¶ó", "#fUI/UIWindow2.img/MobGage/Mob/8870000# #eÇÏµå Èú¶ó#n", "#fUI/UIWindow2.img/MobGage/Mob/8900100# ³ë¸» ÇÇ¿¡¸£", "#fUI/UIWindow2.img/MobGage/Mob/8900100# #eÄ«¿À½º ÇÇ¿¡¸£#n", "#fUI/UIWindow2.img/MobGage/Mob/8910100# ³ë¸» ¹İ¹İ", "#fUI/UIWindow2.img/MobGage/Mob/8910100# #eÄ«¿À½º ¹İ¹İ#n", "#fUI/UIWindow2.img/MobGage/Mob/8920100# ³ë¸» ºí·¯µğ Äı", "#fUI/UIWindow2.img/MobGage/Mob/8920100# #eÄ«¿À½º ºí·¯µğ Äı#n", "#fUI/UIWindow2.img/MobGage/Mob/8930100# ³ë¸» º§·ë", "#fUI/UIWindow2.img/MobGage/Mob/8930100# #eÄ«¿À½º º§·ë#n", "#fUI/UIWindow2.img/MobGage/Mob/8840000# ÀÌÁö ¹İ ·¹¿Â", "#fUI/UIWindow2.img/MobGage/Mob/8840000# #e³ë¸» ¹İ ·¹¿Â#n", "#fUI/UIWindow2.img/MobGage/Mob/8860000# ÀÌÁö ¾ÆÄ«ÀÌ·³", "#fUI/UIWindow2.img/MobGage/Mob/8860000# #e³ë¸» ¾ÆÄ«ÀÌ·³#n", "#fUI/UIWindow2.img/MobGage/Mob/8880000# ÀÌÁö ¸Å±×³Ê½º", "#fUI/UIWindow2.img/MobGage/Mob/8880000# ³ë¸» ¸Å±×³Ê½º", "#fUI/UIWindow2.img/MobGage/Mob/8880000# #eÇÏµå ¸Å±×³Ê½º#n", "#fUI/UIWindow2.img/MobGage/Mob/8820001# ³ë¸» ÇÎÅ©ºó", "#fUI/UIWindow2.img/MobGage/Mob/8820001# #eÄ«¿À½º ÇÎÅ©ºó#n", "#fUI/UIWindow2.img/MobGage/Mob/8850011# #e½Ã±×³Ê½º ¿©Á¦#n");
+var strings = Array("#fUI/UIWindow2.img/MobGage/Mob/8800000# ë…¸ë§ ìì¿°", "#fUI/UIWindow2.img/MobGage/Mob/8800000# #eì¹´ì˜¤ìŠ¤ ìì¿°#n", "#fUI/UIWindow2.img/MobGage/Mob/8810018# ë…¸ë§ í˜¼í…Œì¼", "#fUI/UIWindow2.img/MobGage/Mob/8810018# #eì¹´ì˜¤ìŠ¤ í˜¼í…Œì¼#n", "#fUI/UIWindow2.img/MobGage/Mob/8870000# ë…¸ë§ íë¼", "#fUI/UIWindow2.img/MobGage/Mob/8870000# #eí•˜ë“œ íë¼#n", "#fUI/UIWindow2.img/MobGage/Mob/8900100# ë…¸ë§ í”¼ì—ë¥´", "#fUI/UIWindow2.img/MobGage/Mob/8900100# #eì¹´ì˜¤ìŠ¤ í”¼ì—ë¥´#n", "#fUI/UIWindow2.img/MobGage/Mob/8910100# ë…¸ë§ ë°˜ë°˜", "#fUI/UIWindow2.img/MobGage/Mob/8910100# #eì¹´ì˜¤ìŠ¤ ë°˜ë°˜#n", "#fUI/UIWindow2.img/MobGage/Mob/8920100# ë…¸ë§ ë¸”ëŸ¬ë”” í€¸", "#fUI/UIWindow2.img/MobGage/Mob/8920100# #eì¹´ì˜¤ìŠ¤ ë¸”ëŸ¬ë”” í€¸#n", "#fUI/UIWindow2.img/MobGage/Mob/8930100# ë…¸ë§ ë²¨ë£¸", "#fUI/UIWindow2.img/MobGage/Mob/8930100# #eì¹´ì˜¤ìŠ¤ ë²¨ë£¸#n", "#fUI/UIWindow2.img/MobGage/Mob/8840000# ì´ì§€ ë°˜ ë ˆì˜¨", "#fUI/UIWindow2.img/MobGage/Mob/8840000# #eë…¸ë§ ë°˜ ë ˆì˜¨#n", "#fUI/UIWindow2.img/MobGage/Mob/8860000# ì´ì§€ ì•„ì¹´ì´ëŸ¼", "#fUI/UIWindow2.img/MobGage/Mob/8860000# #eë…¸ë§ ì•„ì¹´ì´ëŸ¼#n", "#fUI/UIWindow2.img/MobGage/Mob/8880000# ì´ì§€ ë§¤ê·¸ë„ˆìŠ¤", "#fUI/UIWindow2.img/MobGage/Mob/8880000# ë…¸ë§ ë§¤ê·¸ë„ˆìŠ¤", "#fUI/UIWindow2.img/MobGage/Mob/8880000# #eí•˜ë“œ ë§¤ê·¸ë„ˆìŠ¤#n", "#fUI/UIWindow2.img/MobGage/Mob/8820001# ë…¸ë§ í•‘í¬ë¹ˆ", "#fUI/UIWindow2.img/MobGage/Mob/8820001# #eì¹´ì˜¤ìŠ¤ í•‘í¬ë¹ˆ#n", "#fUI/UIWindow2.img/MobGage/Mob/8850011# #eì‹œê·¸ë„ˆìŠ¤ ì—¬ì œ#n");
 var lev = Array(100, 100, 120, 130, 120, 170, 125, 180, 125, 180, 125, 180, 125, 180, 120, 120, 140, 140, 115, 155, 175, 180, 180, 170);
 var maps = Array(280030100, 280030000, 240060200, 240060201, 262030300, 262031300, 105200210, 105200610, 0, 0, 105200310, 105200710, 105200410, 105200810, 211070100, 211070200, 272020200, 272020210, 401060100, 401060200, 401060300, 270050100, 270051100, 271040100);
 var bosscode = Array(0, 0, 0, 0, 8870000, 8870100, 8900100, 8900000, 8910100, 8910000, 8920100, 8920000, 8930100, 8930000, 8840007, 8840000, 8860007, 8860000, 8880010, 8880002, 8880000, 0, 0, 8850011);
@@ -24,14 +24,14 @@ function action(mode, type, selection) {
     }
     
     if (status == 0) {
-        var text = "#e#r¸ŞÀÌÇÃ½ºÅä¸® ¾î¶² º¸½º¸ó½ºÅÍ¿Í ´ë·ÃÇÏ½Ã°Ú½À´Ï±î?#n#k\r\n#e¡ØÁÖÀÇ!!#n º¸½º¸ó½ºÅÍ¸¦ ¼ÒÈ¯ÇÒ¶§ #bµ¿Àü#kÀÌ µå´Â º¸½º¸ó½ºÅÍµµ ÀÖ½À´Ï´Ù.";
+        var text = "#e#rë©”ì´í”ŒìŠ¤í† ë¦¬ ì–´ë–¤ ë³´ìŠ¤ëª¬ìŠ¤í„°ì™€ ëŒ€ë ¨í•˜ì‹œê² ìŠµë‹ˆê¹Œ?#n#k\r\n#eâ€»ì£¼ì˜!!#n ë³´ìŠ¤ëª¬ìŠ¤í„°ë¥¼ ì†Œí™˜í• ë•Œ #bë™ì „#kì´ ë“œëŠ” ë³´ìŠ¤ëª¬ìŠ¤í„°ë„ ìˆìŠµë‹ˆë‹¤.";
         for (var i = 0; i < strings.length; i++) {
-            text += "\r\n#L" + i + "##b[Lv." + lev[i] + "]#k¡¡" + strings[i] + "#l";
+            text += "\r\n#L" + i + "##b[Lv." + lev[i] + "]#kã€€" + strings[i] + "#l";
         }
         cm.sendSimple(text);
     } else if (status == 1) {
         cm.getPlayer().setSel(selection);
-        cm.sendYesNo("#fUI/UIWindowBT.img/MonsterBattle/start/1#\r\n#e#r " + strings[selection] + "#k #b¿Í(°ú) ´ë·ÃÇÏ½Ã°Ú½À´Ï±î?#k#n ");
+        cm.sendYesNo("#fUI/UIWindowBT.img/MonsterBattle/start/1#\r\n#e#r " + strings[selection] + "#k #bì™€(ê³¼) ëŒ€ë ¨í•˜ì‹œê² ìŠµë‹ˆê¹Œ?#k#n ");
     } else if (status == 2) {
             if (cm.getPlayer().getParty() != null) {
                 if (cm.getPlayerCount(maps[cm.getPlayer().sel()]) == 0) {
@@ -52,11 +52,11 @@ function action(mode, type, selection) {
                     }
                     cm.dispose();
                 } else {
-                    cm.sendOk("´Ù¸¥ À¯Àú°¡ ÀÌ¹Ì ÀÔÀåÇÑ »óÅÂÀÔ´Ï´Ù. Àá½ÃÈÄ ´Ù½Ã µµÀüÇØÁÖ¼¼¿ä.");
+                    cm.sendOk("ë‹¤ë¥¸ ìœ ì €ê°€ ì´ë¯¸ ì…ì¥í•œ ìƒíƒœì…ë‹ˆë‹¤. ì ì‹œí›„ ë‹¤ì‹œ ë„ì „í•´ì£¼ì„¸ìš”.");
                     cm.dispose();
                 }
             } else {
-                cm.sendOk("ÆÄÆ¼¸¦ ±¸¼ºÇÑ µÚ ÀÔÀåÇØ ÁÖ¼¼¿ä.");
+                cm.sendOk("íŒŒí‹°ë¥¼ êµ¬ì„±í•œ ë’¤ ì…ì¥í•´ ì£¼ì„¸ìš”.");
                 cm.dispose();
             }
     }

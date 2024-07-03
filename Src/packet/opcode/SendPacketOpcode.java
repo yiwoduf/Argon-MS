@@ -1,8 +1,8 @@
 /*
- * ≈◊Ω∫««æ∆ Project
+ * ÌÖåÏä§ÌîºÏïÑ Project
  * ==================================
- * ∆“¥ı spirit_m@nate.com
- * πÈ»£ softwarewithcreative@nate.com
+ * Ìå¨Îçî spirit_m@nate.com
+ * Î∞±Ìò∏ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -22,11 +22,11 @@ public enum SendPacketOpcode {
     ZERO_WP,
     /* AntiHank */
     PROCESS_CHECK,
-    /* ≈¨∂Û¿Ãæ∆Æ √º≈© */
+    /* ÌÅ¥ÎùºÏù¥Ïñ∏Ìä∏ Ï≤¥ÌÅ¨ */
     PING,
     HOTFIX,
     SESSION_CHECK,
-    /* ∑Œ±◊¿Œ */
+    /* Î°úÍ∑∏Ïù∏ */
     LOGIN_STATUS(0),
     SECONDPW_ERROR,
     SEND_PASSWORD,
@@ -50,7 +50,7 @@ public enum SendPacketOpcode {
     AUTH_STATUS_WITH_SPW,
     AUTH_STATUS_WITH_SPW_RESULT,
     LAST_WORLD,
-    /* √§≥Œ */
+    /* Ï±ÑÎÑê */
     CHANGE_CHANNEL,
     UPDATE_STATS,
     STEEL_SKILL,

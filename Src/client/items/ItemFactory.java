@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -85,7 +85,7 @@ public class ItemFactory {
         loadItems(hp, ItemFactory.InventoryType.AUCTION, null, null, null);
     }
 
-    public static void loadItems(final MapleCharacter hp, final ItemFactory.InventoryType invtype, final MapleStorage storage, final MerchItemPackage pack, final MapleCashInventory cash) {//ÁÖÀÇ
+    public static void loadItems(final MapleCharacter hp, final ItemFactory.InventoryType invtype, final MapleStorage storage, final MerchItemPackage pack, final MapleCashInventory cash) {//ì£¼ì˜
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -268,7 +268,7 @@ public class ItemFactory {
             }
 
         } catch (Exception e) {
-            System.err.println("DB¿¡¼­ ¾ÆÀÌÅÛÀ» ·ÎµùÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.");
+            System.err.println("DBì—ì„œ ì•„ì´í…œì„ ë¡œë”©í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
             if (!ServerConstants.realese) e.printStackTrace();
         }
     }
@@ -294,7 +294,7 @@ public class ItemFactory {
         saveItems(null, ItemFactory.InventoryType.CASHSHOP, null, null, cash, null);
     }
 
-    public static void saveItems(MapleCharacter hp, ItemFactory.InventoryType invtype, MapleStorage store, Pair<Integer, List<IItem>> pack, MapleCashInventory cash, List<AuctionItemPackage> aitems) {//ÁÖÀÇ
+    public static void saveItems(MapleCharacter hp, ItemFactory.InventoryType invtype, MapleStorage store, Pair<Integer, List<IItem>> pack, MapleCashInventory cash, List<AuctionItemPackage> aitems) {//ì£¼ì˜
         Connection con = null;
         PreparedStatement ps = null, pse = null;
         try {
@@ -369,13 +369,13 @@ public class ItemFactory {
                 ps.executeUpdate();
                 ResultSet rs = ps.getGeneratedKeys();
                 if (!rs.next()) {
-                    throw new MYSQLException("¾ÆÀÌÅÛ Á¤º¸ »ğÀÔ ½ÇÆĞ.");
+                    throw new MYSQLException("ì•„ì´í…œ ì •ë³´ ì‚½ì… ì‹¤íŒ¨.");
                 } else {
                     int type = rs.getInt(1);
                     if (item.getRight().equals(MapleInventoryType.EQUIP.getType()) || item.getRight().equals(MapleInventoryType.EQUIPPED.getType())) {
                         IEquip equip = (IEquip) item.getLeft();
                         if (store == null) {
-                            deleteEquipmentItem(con, type); //Ã¢°í´Â ±âÁ¸ µ¥ÀÌÅÍ »ç¿ë.
+                            deleteEquipmentItem(con, type); //ì°½ê³ ëŠ” ê¸°ì¡´ ë°ì´í„° ì‚¬ìš©.
                         }
                         pse.setInt(1, type);
                         pse.setInt(2, equip.getUpgradeSlots());
@@ -444,7 +444,7 @@ public class ItemFactory {
         }
     }
 
-    public static void deleteMerchantItem(int pid) {//ÁÖÀÇ
+    public static void deleteMerchantItem(int pid) {//ì£¼ì˜
         Connection con = null;
         PreparedStatement ps = null;
         try {
@@ -463,12 +463,12 @@ public class ItemFactory {
         
     public static void deleteEquipmentItem(Connection con, int inventoryid) {
         try {
-            /* ÀÎº¥Åä¸® Àåºñ »èÁ¦ ½ÃÀÛ */
+            /* ì¸ë²¤í† ë¦¬ ì¥ë¹„ ì‚­ì œ ì‹œì‘ */
             PreparedStatement ps = con.prepareStatement("DELETE FROM inventoryequipment WHERE inventoryitemid = ?");
             ps.setInt(1, inventoryid);
             ps.executeUpdate();
             ps.close();
-            /* ÀÎº¥Åä¸® Àåºñ »èÁ¦ Á¾·á */
+            /* ì¸ë²¤í† ë¦¬ ì¥ë¹„ ì‚­ì œ ì¢…ë£Œ */
         } catch (Exception e) {
             if (!ServerConstants.realese) {
                 e.printStackTrace();

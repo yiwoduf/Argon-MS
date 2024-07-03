@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -96,7 +96,7 @@ public class NPCHandler {
         int oid = rh.readInt();
         npc = (MapleNPC) chr.getMap().getNPCByOid(oid);
         if (chr.getConversation() != 0) {
-            c.getPlayer().dropMessage(1, "NPC¿Í ´ëÈ­¸¦ ½ÃµµÇÏ´ø Áß ¿À·ù°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù.\r\n´Ù½Ã½Ãµµ ÇØÁÖ½Ê½Ã¿À.");
+            c.getPlayer().dropMessage(1, "NPCì™€ ëŒ€í™”ë¥¼ ì‹œë„í•˜ë˜ ì¤‘ ì˜¤ë¥˜ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤.\r\në‹¤ì‹œì‹œë„ í•´ì£¼ì‹­ì‹œì˜¤.");
             NPCScriptManager.getInstance().dispose(c);
             c.getSession().writeAndFlush(MainPacketCreator.resetActions());
             return;
@@ -200,16 +200,16 @@ public class NPCHandler {
                         InventoryManipulator.addFromDrop(c, item, false);
                         if (storage.iscompose) {
                             if (slot == 0) {
-                                chr.dropMessage(1, "Ã¹¹øÂ° ÀåºñÅÛÀ» Ã¹¹øÂ° ½½·ÔÀ¸·Î ¿Å°ÜÁÖ¼¼¿ä.");
+                                chr.dropMessage(1, "ì²«ë²ˆì§¸ ì¥ë¹„í…œì„ ì²«ë²ˆì§¸ ìŠ¬ë¡¯ìœ¼ë¡œ ì˜®ê²¨ì£¼ì„¸ìš”.");
                             } else if (slot == 1) {
-                                chr.dropMessage(1, "µÎ¹øÂ° ÀåºñÅÛÀ» µÎ¹øÂ° ½½·ÔÀ¸·Î ¿Å°ÜÁÖ¼¼¿ä.");
+                                chr.dropMessage(1, "ë‘ë²ˆì§¸ ì¥ë¹„í…œì„ ë‘ë²ˆì§¸ ìŠ¬ë¡¯ìœ¼ë¡œ ì˜®ê²¨ì£¼ì„¸ìš”.");
                             } else if (slot == 2) {
-                                chr.dropMessage(1, "º¸Á¶Á¦¸¦ ¼¼¹øÂ° ½½·ÔÀ¸·Î ¿Å°ÜÁÖ¼¼¿ä.");
+                                chr.dropMessage(1, "ë³´ì¡°ì œë¥¼ ì„¸ë²ˆì§¸ ìŠ¬ë¡¯ìœ¼ë¡œ ì˜®ê²¨ì£¼ì„¸ìš”.");
                             }
                         }
                     } else {
                         storage.store(item);
-                        chr.dropMessage(1, "ÀÎº¥Åä¸® °ø°£ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+                        chr.dropMessage(1, "ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
                     }
                     storage.sendTakenOut(c, GameConstants.getInventoryType(item.getItemId()));
                 } else {
@@ -227,7 +227,7 @@ public class NPCHandler {
                     return;
                 }
                 if (chr.getMeso() < 100) {
-                    chr.dropMessage(1, "¾ÆÀÌÅÛÀ» ¸Ã±æ À§ÇÑ ¸Ş¼Ò°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+                    chr.dropMessage(1, "ì•„ì´í…œì„ ë§¡ê¸¸ ìœ„í•œ ë©”ì†Œê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
                 } else {
                     MapleInventoryType type = GameConstants.getInventoryType(itemId);
                     IItem item = chr.getInventory(type).getItem(slot).copy();
@@ -245,16 +245,16 @@ public class NPCHandler {
                         } else {
                             quantity = 1;
                             if (storage.getItems().size() == 0) {
-                                chr.dropMessage(1, "µÎ¹øÂ° ÀåºñÅÛÀ» µÎ¹øÂ° ½½·ÔÀ¸·Î ¿Å°ÜÁÖ¼¼¿ä.");
+                                chr.dropMessage(1, "ë‘ë²ˆì§¸ ì¥ë¹„í…œì„ ë‘ë²ˆì§¸ ìŠ¬ë¡¯ìœ¼ë¡œ ì˜®ê²¨ì£¼ì„¸ìš”.");
                             } else if (storage.getItems().size() == 1) {
-                                chr.dropMessage(1, "¿øÇÏ½Ã´Â º¸Á¶Á¦¸¦ ¼¼¹øÂ° ½½·ÔÀ¸·Î ¿Å°ÜÁÖ¼¼¿ä.");
+                                chr.dropMessage(1, "ì›í•˜ì‹œëŠ” ë³´ì¡°ì œë¥¼ ì„¸ë²ˆì§¸ ìŠ¬ë¡¯ìœ¼ë¡œ ì˜®ê²¨ì£¼ì„¸ìš”.");
                             } else if (storage.getItems().size() == 2) {
                                 if (item.getItemId() != 4025000 && item.getItemId() != 4025001 && item.getItemId() != 4025002) {
-                                    chr.dropMessage(1, "¼¼¹øÂ° ½½·Ô¿¡´Â º¸Á¶Á¦¸¸ °¡´ÉÇÕ´Ï´Ù.");
+                                    chr.dropMessage(1, "ì„¸ë²ˆì§¸ ìŠ¬ë¡¯ì—ëŠ” ë³´ì¡°ì œë§Œ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
                                     return;
                                 }
                             } else if (storage.getItems().size() == 3) {
-                                chr.dropMessage(1, "´õÀÌ»ó Ãß°¡°¡ ºÒ°¡´ÉÇÕ´Ï´Ù.");
+                                chr.dropMessage(1, "ë”ì´ìƒ ì¶”ê°€ê°€ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤.");
                                 return;
 
                             }
@@ -302,20 +302,20 @@ public class NPCHandler {
             case 8: {
                 if (storage.iscompose) {
                     if (storage.getItems().isEmpty()) {
-                        chr.dropMessage(1, "Ã¹¹øÂ° ½½·Ô¿¡ ÀåºñÅÛÀ» ³Ö¾îÁÖ¼¼¿ä.\r\nÇÕ¼ºÀ» Ãë¼ÒÇÏ½Ç·Á¸é Ã¤³ÎÀ» ¿Å°ÜÁÖ¼¼¿ä.");
+                        chr.dropMessage(1, "ì²«ë²ˆì§¸ ìŠ¬ë¡¯ì— ì¥ë¹„í…œì„ ë„£ì–´ì£¼ì„¸ìš”.\r\ní•©ì„±ì„ ì·¨ì†Œí•˜ì‹¤ë ¤ë©´ ì±„ë„ì„ ì˜®ê²¨ì£¼ì„¸ìš”.");
                         chr.setConversation(0);
                         NPCScriptManager.getInstance().dispose(c);
                     } else if (storage.getItems().size() == 1) {
                         IItem item = storage.getItems().get(0);
                         InventoryManipulator.addFromDrop(c, item, false);
-                        chr.dropMessage(1, "µÎ¹øÂ° ½½·Ô¿¡ ÀåºñÅÛÀ» ³Ö¾îÁÖ¼¼¿ä.\r\nÇÕ¼ºÀ» Ãë¼ÒÇÏ½Ç·Á¸é Ã¤³ÎÀ» ¿Å°ÜÁÖ¼¼¿ä.");
+                        chr.dropMessage(1, "ë‘ë²ˆì§¸ ìŠ¬ë¡¯ì— ì¥ë¹„í…œì„ ë„£ì–´ì£¼ì„¸ìš”.\r\ní•©ì„±ì„ ì·¨ì†Œí•˜ì‹¤ë ¤ë©´ ì±„ë„ì„ ì˜®ê²¨ì£¼ì„¸ìš”.");
                         chr.setConversation(0);
                         NPCScriptManager.getInstance().dispose(c);
                     } else {
                         if (isNotCompare(storage.getItems().get(0).getItemId()) || isNotCompare(storage.getItems().get(1).getItemId())) {
                             IItem item = storage.getItems().get(0);
                             InventoryManipulator.addFromDrop(c, item, false);
-                            chr.dropMessage(1, "º¸Á¶Á¦°¡ ¿Ã¹Ù¸£Áö ¸øÇÑ °÷¿¡ ÀÖ½À´Ï´Ù.\r\nÇÕ¼ºÀ» Ãë¼ÒÇÏ½Ç·Á¸é Ã¤³ÎÀ» ¿Å°ÜÁÖ¼¼¿ä.");
+                            chr.dropMessage(1, "ë³´ì¡°ì œê°€ ì˜¬ë°”ë¥´ì§€ ëª»í•œ ê³³ì— ìˆìŠµë‹ˆë‹¤.\r\ní•©ì„±ì„ ì·¨ì†Œí•˜ì‹¤ë ¤ë©´ ì±„ë„ì„ ì˜®ê²¨ì£¼ì„¸ìš”.");
                             chr.setConversation(0);
                             NPCScriptManager.getInstance().dispose(c);
                         } else {
@@ -339,22 +339,22 @@ public class NPCHandler {
                                     if (rand > 40) {
                                         item.setState((byte) 1);
                                         InventoryManipulator.addFromDrop(c, item, false);
-                                        chr.dropMessage(1, "ÀåºñÅÛ ÇÕ¼º¿¡ ¼º°øÇÏ¼Ì½À´Ï´Ù.");
+                                        chr.dropMessage(1, "ì¥ë¹„í…œ í•©ì„±ì— ì„±ê³µí•˜ì…¨ìŠµë‹ˆë‹¤.");
                                     } else {
-                                        chr.dropMessage(1, "ÀåºñÅÛ ÇÕ¼º¿¡ ½ÇÆĞÇÏ¼Ì½À´Ï´Ù.");
+                                        chr.dropMessage(1, "ì¥ë¹„í…œ í•©ì„±ì— ì‹¤íŒ¨í•˜ì…¨ìŠµë‹ˆë‹¤.");
                                     }
                                 } else if (storage.getItems().get(0).getItemId() != storage.getItems().get(1).getItemId()) {
                                     if (rand > 60) {
                                         item.setState((byte) 1);
                                         InventoryManipulator.addFromDrop(c, item, false);
-                                        chr.dropMessage(1, "ÀåºñÅÛ ÇÕ¼ºÀ» ¼º°øÇÏ¼Ì½À´Ï´Ù.");
+                                        chr.dropMessage(1, "ì¥ë¹„í…œ í•©ì„±ì„ ì„±ê³µí•˜ì…¨ìŠµë‹ˆë‹¤.");
                                     } else {
-                                        chr.dropMessage(1, "ÀåºñÅÛ ÇÕ¼ºÀ» ½ÇÆĞÇÏ¼Ì½À´Ï´Ù.");
+                                        chr.dropMessage(1, "ì¥ë¹„í…œ í•©ì„±ì„ ì‹¤íŒ¨í•˜ì…¨ìŠµë‹ˆë‹¤.");
                                     }
                                     chr.saveToDB(false, false);
                                 }
                             } else {
-                                chr.dropMessage(1, "ÀåºñÅÛ ÇÕ¼ºÀ» Ãë¼ÒÇÏ¼Ì½À´Ï´Ù..");
+                                chr.dropMessage(1, "ì¥ë¹„í…œ í•©ì„±ì„ ì·¨ì†Œí•˜ì…¨ìŠµë‹ˆë‹¤..");
                             }
                         }
                     }

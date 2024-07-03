@@ -1,9 +1,9 @@
 /*
- * º» ¼Ò½º´Â È£¾ß(achermusic@naver.com) ´ÔÀÇ Á¦ÀÛÇÏ¼Ì½À´Ï´Ù.
- * È£¾ß(achermusic@naver.com)
- * ¼Ò¶ó(sora_______o@naver.com)
- * ÇÏ¸ğ´Ï(harmonyms@naver.com)
- * µ¹ÇÉ(gamepro_@naver.com)
+ * ë³¸ ì†ŒìŠ¤ëŠ” í˜¸ì•¼(achermusic@naver.com) ë‹˜ì˜ ì œì‘í•˜ì…¨ìŠµë‹ˆë‹¤.
+ * í˜¸ì•¼(achermusic@naver.com)
+ * ì†Œë¼(sora_______o@naver.com)
+ * í•˜ëª¨ë‹ˆ(harmonyms@naver.com)
+ * ëŒí•€(gamepro_@naver.com)
  */
 
 package community;
@@ -12,7 +12,7 @@ import client.MapleCharacter;
 
 /**
  *
- * @author È£¾ß(achermusic@naver.com)
+ * @author í˜¸ì•¼(achermusic@naver.com)
  */
 public class MapleGuildApplication {
     private int id, job, level;

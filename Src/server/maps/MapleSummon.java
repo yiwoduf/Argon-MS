@@ -1,16 +1,16 @@
 /*
  Maple Team ProJect
- Á¦ÀÛ ¿ëµµ : ¼­¹ö¿î¿µ¿ë
- ÆÀ¿ø¸ñ·Ï
- * °­µ¿¿ø dongwon1852@nate.com 
- * ±è¼±ÀÏ fileupload@nate.com
- * ±è¼®Çö azxcs3@nate.com
- * ±èÁø¼º m0nday_s@nate.com
- * °øÁØÇù kkong1001@nate.com
- * ±è¹ÎÈ£ rubystory0603@nate.com
- * ÀÌÀç¿Õ ejwj5592@nate.com
- * ÃÖ¿ëÀç virgo_s_t@nate.com
- * ¼­¼º´ö abq1239@nate.com
+ ì œì‘ ìš©ë„ : ì„œë²„ìš´ì˜ìš©
+ íŒ€ì›ëª©ë¡
+ * ê°•ë™ì› dongwon1852@nate.com 
+ * ê¹€ì„ ì¼ fileupload@nate.com
+ * ê¹€ì„í˜„ azxcs3@nate.com
+ * ê¹€ì§„ì„± m0nday_s@nate.com
+ * ê³µì¤€í˜‘ kkong1001@nate.com
+ * ê¹€ë¯¼í˜¸ rubystory0603@nate.com
+ * ì´ì¬ì™• ejwj5592@nate.com
+ * ìµœìš©ì¬ virgo_s_t@nate.com
+ * ì„œì„±ë• abq1239@nate.com
  */
 package server.maps;
 
@@ -131,10 +131,10 @@ public class MapleSummon extends AnimatedHinaMapObjectExtend {
             case 5211001: // Pirate octopus summon
             case 5211002:
             case 5220002: // wrath of the octopi
-            case 4341006: //´õ¹Ì ÀÌÆåÆ®
-            case 61111002: //ÆäÆ®¸® ÆÄÀÌµå
+            case 4341006: //ë”ë¯¸ ì´í™íŠ¸
+            case 61111002: //í˜íŠ¸ë¦¬ íŒŒì´ë“œ
             case 3221014:
-            case 22171052: //¼­¸Õ ¿À´Ğ½ºµå·¡°ï
+            case 22171052: //ì„œë¨¼ ì˜¤ë‹‰ìŠ¤ë“œë˜ê³¤
             case 13111004:
             case 11001004:
             case 12001004:
@@ -143,9 +143,9 @@ public class MapleSummon extends AnimatedHinaMapObjectExtend {
             case 35111005:
             case 15001004:
             case 35121011:
-            case 35121009: //·Îº¸ ÆÑÅä¸®
+            case 35121009: //ë¡œë³´ íŒ©í† ë¦¬
             case 35121010:
-            case 14000027: //½¦µµ¿ì ¹èÆ®
+            case 14000027: //ì‰ë„ìš° ë°°íŠ¸
                 return true;
         }
         return false;

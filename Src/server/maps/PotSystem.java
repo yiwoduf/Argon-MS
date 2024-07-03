@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -81,16 +81,16 @@ public class PotSystem {
                         if (newExp >= needExp) {
                             SaveToDB(guildid);
                             if (level != 4) {
-                                chr.dropMessage(6, react.getName() + "ÀÇ ³ª¹« : ¿ÀÈ« ÁøÈ­!!");
+                                chr.dropMessage(6, react.getName() + "ì˜ ë‚˜ë¬´ : ì˜¤í™ ì§„í™”!!");
                                 return true;
                             } else {
                                 react.setState((byte) 1);
-                                chr.dropMessage(6, react.getName() + "ÀÇ ³ª¹« : ÀÌÁ¦ Àú¸¦ ¼öÈ®ÇÏ½Ç ¼ö ÀÖ¾î¿ä.");
+                                chr.dropMessage(6, react.getName() + "ì˜ ë‚˜ë¬´ : ì´ì œ ì €ë¥¼ ìˆ˜í™•í•˜ì‹¤ ìˆ˜ ìˆì–´ìš”.");
                                 return false;
                             }
                         }
 
-                        chr.dropMessage(6, react.getName() + "ÀÇ ³ª¹« : ÈÄ·ç·ç·ì ¹°À» ¸ÔÀ¾½Ã´Ù " + newExp + "/" + needExp);
+                        chr.dropMessage(6, react.getName() + "ì˜ ë‚˜ë¬´ : í›„ë£¨ë£¨ë£¹ ë¬¼ì„ ë¨¹ìì‹œë‹¤ " + newExp + "/" + needExp);
                     }
                     return false;
                 }

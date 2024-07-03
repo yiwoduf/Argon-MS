@@ -32,16 +32,16 @@ function action(mode, type, selection) {
         status++;
     }
         if (status == 0) {
-            var text = "#fn³ª´®°íµñ EXtrabold# GM[YOU]´Â À§´ëÇÏ´Ù#n\r\n\r\n";
+            var text = "#fnë‚˜ëˆ”ê³ ë”• EXtrabold# GM[YOU]ëŠ” ìœ„ëŒ€í•˜ë‹¤#n\r\n\r\n";
             text += "#fUI/UIWindow2.img/UtilDlgEx/list5#\r\n"
-            text += "#L2##fn³ª´®°íµñ EXtrabold# ÆêÀ» ±¸¸ÅÇÏ°í ½Í½À´Ï´Ù.";
+            text += "#L2##fnë‚˜ëˆ”ê³ ë”• EXtrabold# í«ì„ êµ¬ë§¤í•˜ê³  ì‹¶ìŠµë‹ˆë‹¤.";
             cm.sendSimple(text);
 
         } else if (status == 1) {
-            cm.sendGetText("#fn³ª´®°íµñ EXtrabold# ÆêÀÇ ÀÌ¸§À» Àû¾î ÁÖ¼¼¿ä.");
+            cm.sendGetText("#fnë‚˜ëˆ”ê³ ë”• EXtrabold# í«ì˜ ì´ë¦„ì„ ì ì–´ ì£¼ì„¸ìš”.");
         } else if (status == 2) {
             if (cm.getText().equals(" ")) {
-                cm.sendOk("#fn³ª´®°íµñ EXtrabold# ÀÔ·ÂÇÑ ±ÛÀÚ°¡ ³Ê¹« Âª½À´Ï´Ù. Á¶±İ ´õ ÀÚ¼¼ÇÏ°Ô Àû¾îÁÖ¼¼¿ä.")
+                cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• EXtrabold# ì…ë ¥í•œ ê¸€ìê°€ ë„ˆë¬´ ì§§ìŠµë‹ˆë‹¤. ì¡°ê¸ˆ ë” ìì„¸í•˜ê²Œ ì ì–´ì£¼ì„¸ìš”.")
                 cm.dispose();
             } else {
                 var chat = "";
@@ -56,7 +56,7 @@ function action(mode, type, selection) {
                     }
                 }
                 if (retItems != null && retItems.size() > 0) {
-                    chat += "#fn³ª´®°íµñ EXtrabold# °Ë»ö °á°úÀÔ´Ï´Ù. ¿øÇÏ½Ã´Â ¾ÆÀÌÅÛÀ» ¼±ÅÃÇØÁÖ¼¼¿ä.#b\r\n";
+                    chat += "#fnë‚˜ëˆ”ê³ ë”• EXtrabold# ê²€ìƒ‰ ê²°ê³¼ì…ë‹ˆë‹¤. ì›í•˜ì‹œëŠ” ì•„ì´í…œì„ ì„ íƒí•´ì£¼ì„¸ìš”.#b\r\n";
                     var it2 = retItems.iterator();
                     while (it2.hasNext()) {
                         var singleRetItem = it2.next();
@@ -67,7 +67,7 @@ function action(mode, type, selection) {
                         }
                     }
                 } else {
-                    chat += "#b#e#fn³ª´®°íµñ EXtrabold# ¹ß°ßµÈ ÆêÀÌ ¾ø½À´Ï´Ù.#n#k";
+                    chat += "#b#e#fnë‚˜ëˆ”ê³ ë”• EXtrabold# ë°œê²¬ëœ í«ì´ ì—†ìŠµë‹ˆë‹¤.#n#k";
                 }
                 cm.sendSimple(chat);
             }
@@ -77,10 +77,10 @@ function action(mode, type, selection) {
             if (cm.getPlayer().getMeso() >= mesocost) {
 		cm.gainMeso(-mesocost)
                 cm.BuyPET(itemid);
-                cm.sendOk("#fn³ª´®°íµñ EXtrabold# ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+                cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• EXtrabold# ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
                 cm.dispose();
             } else {
-                cm.sendOk("#fn³ª´®°íµñ EXtrabold# ¸Ş¼Ò°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+                cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• EXtrabold# ë©”ì†Œê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
                 cm.dispose();
             }
         }

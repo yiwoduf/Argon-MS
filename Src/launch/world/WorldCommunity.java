@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -31,33 +31,33 @@ import server.life.MapleMonster;
 import tools.Pair;
 import tools.Timer;
 
-/** ¼­¹ö ÀüÃ¼¿¡ Ä¿¹Â´ÏÆ¼ (¸Ş½ÅÀú, Ä£±¸, ÆÄÆ¼ µî) ±â´ÉÀ» Á¦°øÇÏ´Â ÇÔ¼öµé.
+/** ì„œë²„ ì „ì²´ì— ì»¤ë®¤ë‹ˆí‹° (ë©”ì‹ ì €, ì¹œêµ¬, íŒŒí‹° ë“±) ê¸°ëŠ¥ì„ ì œê³µí•˜ëŠ” í•¨ìˆ˜ë“¤.
  *
- * @author Æ¼½ã
+ * @author í‹°ì¬
  *
  * since 2012. 2. 24
  * @since Revision 33
  */
 public class WorldCommunity {
     
-    /** ¸Ş½ÅÀú ¹æ ¸¸µé±â - ¿ùµå È¦´õ¿¡ ¸Ş½ÅÀú¸¦ ÇÏ³ª »ı¼ºÇÔ.
+    /** ë©”ì‹ ì € ë°© ë§Œë“¤ê¸° - ì›”ë“œ í™€ë”ì— ë©”ì‹ ì €ë¥¼ í•˜ë‚˜ ìƒì„±í•¨.
      * 
-     * @param <mapleMultiChatCharacter> ¸Ş½ÅÀúÄ³¸¯ÅÍ
-     * @return ¸Ş½ÅÀúÅ¬·¡½º
+     * @param <mapleMultiChatCharacter> ë©”ì‹ ì €ìºë¦­í„°
+     * @return ë©”ì‹ ì €í´ë˜ìŠ¤
      * @since Revision 33
      */
     public static boolean isFreeze = false;
-    public static boolean ¾Æ¸£¹Ì = false;
-    private static java.util.Timer ¾Æ¸£¹ÌÅ¸ÀÓ = null;
+    public static boolean ì•„ë¥´ë¯¸ = false;
+    private static java.util.Timer ì•„ë¥´ë¯¸íƒ€ì„ = null;
 
     public static MapleMultiChat createMessenger(MapleMultiChatCharacter chrfor) {
         return WideObjectHolder.getInstance().createMessenger(chrfor);
     }
     
-    /** ¸Ş½ÅÀú ¹æ ¾ò¾î³¿ - ¿ùµå È¦´õ¿¡¼­ ¸Ş½ÅÀú¸¦ ¾ò¾î³¿.
+    /** ë©”ì‹ ì € ë°© ì–»ì–´ëƒ„ - ì›”ë“œ í™€ë”ì—ì„œ ë©”ì‹ ì €ë¥¼ ì–»ì–´ëƒ„.
      * 
-     * @param <int> ¸Ş½ÅÀúID
-     * @return ¸Ş½ÅÀúÅ¬·¡½º
+     * @param <int> ë©”ì‹ ì €ID
+     * @return ë©”ì‹ ì €í´ë˜ìŠ¤
      * @since Revision 33
      */
 
@@ -66,10 +66,10 @@ public class WorldCommunity {
     }
 
 
-    /** ¸Ş½ÅÀú ¹æ ¶°³² - ¿ùµå È¦´õ¿¡¼­ ¸Ş½ÅÀú¸¦ ¾ò¾î³»¼­ ¸Ş½ÅÀúÄ³¸¯ÅÍ »èÁ¦.
+    /** ë©”ì‹ ì € ë°© ë– ë‚¨ - ì›”ë“œ í™€ë”ì—ì„œ ë©”ì‹ ì €ë¥¼ ì–»ì–´ë‚´ì„œ ë©”ì‹ ì €ìºë¦­í„° ì‚­ì œ.
      * 
-     * @param <int> ¸Ş½ÅÀúID
-     * @param <mapleMultiChatCharacter> ¸Ş½ÅÀúÄ³¸¯ÅÍ
+     * @param <int> ë©”ì‹ ì €ID
+     * @param <mapleMultiChatCharacter> ë©”ì‹ ì €ìºë¦­í„°
      * @since Revision 33
      */
     public static void leaveMessenger(int messengerid, MapleMultiChatCharacter target) {
@@ -89,12 +89,12 @@ public class WorldCommunity {
 	}
     }
 
-    /** ¸Ş½ÅÀú ¹æ¿¡ Âü¿© - ±âÁ¸ ¸Ş½ÅÀú Âü¿©ÀÚµé¿¡°Ô ÆĞÅ¶µµ ¹æ¼ÛÇÔ.
+    /** ë©”ì‹ ì € ë°©ì— ì°¸ì—¬ - ê¸°ì¡´ ë©”ì‹ ì € ì°¸ì—¬ìë“¤ì—ê²Œ íŒ¨í‚·ë„ ë°©ì†¡í•¨.
      * 
-     * @param <int> ¸Ş½ÅÀú ID
-     * @param <mapleMultiChatCharacter> ¸Ş½ÅÀúÄ³¸¯ÅÍ
-     * @param <String> Âü¿©ÀÚ ÀÌ¸§
-     * @param <int> Âü¿©ÀÚ Ã¤³Î
+     * @param <int> ë©”ì‹ ì € ID
+     * @param <mapleMultiChatCharacter> ë©”ì‹ ì €ìºë¦­í„°
+     * @param <String> ì°¸ì—¬ì ì´ë¦„
+     * @param <int> ì°¸ì—¬ì ì±„ë„
      * @since Revision 33
      */
     public static void joinMessenger(int messengerid, MapleMultiChatCharacter newchar, String newcharname, int newcharchannel) {
@@ -121,30 +121,30 @@ public class WorldCommunity {
             
     }
 	
-    public static void ¾Æ¸£¹Ì() {
-        ¾Æ¸£¹Ì = true;
-        ¾Æ¸£¹ÌÄµ½½();
-        WorldBroadcasting.broadcastMessage(MainPacketCreator.startMapEffect("¾Æ¸£¹Ì : ¿ì¿Í~ ¿¹»Û ÆøÁ×ÀÌ ÅÍÁ³¾î¿ä!.", 5120124, true));
-        WorldBroadcasting.broadcastMessage(MainPacketCreator.getGMText(11, "¾Æ¸£¹Ì : ¿ì¿Í~ ¿¹»Û ÆøÁ×ÀÌ ÅÍÁ³¾î¿ä!"));
+    public static void ì•„ë¥´ë¯¸() {
+        ì•„ë¥´ë¯¸ = true;
+        ì•„ë¥´ë¯¸ìº”ìŠ¬();
+        WorldBroadcasting.broadcastMessage(MainPacketCreator.startMapEffect("ì•„ë¥´ë¯¸ : ìš°ì™€~ ì˜ˆìœ í­ì£½ì´ í„°ì¡Œì–´ìš”!.", 5120124, true));
+        WorldBroadcasting.broadcastMessage(MainPacketCreator.getGMText(11, "ì•„ë¥´ë¯¸ : ìš°ì™€~ ì˜ˆìœ í­ì£½ì´ í„°ì¡Œì–´ìš”!"));
     }
 
-    public static void ¾Æ¸£¹ÌÄµ½½() {
+    public static void ì•„ë¥´ë¯¸ìº”ìŠ¬() {
         Timer.EtcTimer tMan1 = Timer.EtcTimer.getInstance();
         tMan1.schedule(new Runnable() {
             @Override
             public void run() {
-                WorldBroadcasting.broadcastMessage(MainPacketCreator.startMapEffect("¾Æ¸£¹Ì : ¿©·¯ºĞ ¾Æ½±Áö¸¸ È­¾àÀÌ ´Ù ¶³¾îÁ® ¹ö·È¾î¿ä ¤Ğ.¤Ğ ´ÙÀ½¿¡ ¶Ç ¸¸³ª¿ä~", 5120124, true));
-                WorldBroadcasting.broadcastMessage(MainPacketCreator.getGMText(11, "¾Æ¸£¹Ì : ¿©·¯ºĞ ¾Æ½±Áö¸¸ È­¾àÀÌ ´Ù ¶³¾îÁ® ¹ö·È¾î¿ä ¤Ğ.¤Ğ ´ÙÀ½¿¡ ¶Ç ¸¸³ª¿ä~"));
-                ¾Æ¸£¹Ì = false;
+                WorldBroadcasting.broadcastMessage(MainPacketCreator.startMapEffect("ì•„ë¥´ë¯¸ : ì—¬ëŸ¬ë¶„ ì•„ì‰½ì§€ë§Œ í™”ì•½ì´ ë‹¤ ë–¨ì–´ì ¸ ë²„ë ¸ì–´ìš” ã… .ã…  ë‹¤ìŒì— ë˜ ë§Œë‚˜ìš”~", 5120124, true));
+                WorldBroadcasting.broadcastMessage(MainPacketCreator.getGMText(11, "ì•„ë¥´ë¯¸ : ì—¬ëŸ¬ë¶„ ì•„ì‰½ì§€ë§Œ í™”ì•½ì´ ë‹¤ ë–¨ì–´ì ¸ ë²„ë ¸ì–´ìš” ã… .ã…  ë‹¤ìŒì— ë˜ ë§Œë‚˜ìš”~"));
+                ì•„ë¥´ë¯¸ = false;
             }
         }, 3600000);
     }
 
-    /** ¸Ş½ÅÀú Ã¤ÆÃ - ÆĞÅ¶¹æ¼Û
+    /** ë©”ì‹ ì € ì±„íŒ… - íŒ¨í‚·ë°©ì†¡
      * 
-     * @param <int> ¸Ş½ÅÀú ID
-     * @param <String> Ã¤ÆÃ´ëÈ­
-     * @param <String> ¼Û½ÅÀÚ ÀÌ¸§
+     * @param <int> ë©”ì‹ ì € ID
+     * @param <String> ì±„íŒ…ëŒ€í™”
+     * @param <String> ì†¡ì‹ ì ì´ë¦„
      * @since Revision 33
      */
     public static void messengerChat(int messengerid, String chattext, String namefrom) {
@@ -164,10 +164,10 @@ public class WorldCommunity {
 	}
     }
 
-    /** ¸Ş½ÅÀú ÃÊ´ë °ÅºÎ
+    /** ë©”ì‹ ì € ì´ˆëŒ€ ê±°ë¶€
      * 
-     * @param <String> ÃÊ´ëÇß´ø»ç¶÷
-     * @param <String> °ÅºÎÇÑ»ç¶÷
+     * @param <String> ì´ˆëŒ€í–ˆë˜ì‚¬ëŒ
+     * @param <String> ê±°ë¶€í•œì‚¬ëŒ
      * @since Revision 33
      */
     public static void declineChat(String target, String namefrom) {
@@ -181,11 +181,11 @@ public class WorldCommunity {
 	
     }
  
-    /** ¸Ş½ÅÀú ¾÷µ¥ÀÌÆ® (·è µîÀÌ ¹Ù²î¾úÀ»¶§)
+    /** ë©”ì‹ ì € ì—…ë°ì´íŠ¸ (ë£© ë“±ì´ ë°”ë€Œì—ˆì„ë•Œ)
      * 
-     * @param <int> ¸Ş½ÅÀúID
-     * @param <String> ¾÷µ¥ÀÌÆ®µÈ »ç¶÷ÀÇ ÀÌ¸§
-     * @param <int> ¾÷µ¥ÀÌÆ®µÈ »ç¶÷ÀÇ ÇöÀç Ã¤³Î 
+     * @param <int> ë©”ì‹ ì €ID
+     * @param <String> ì—…ë°ì´íŠ¸ëœ ì‚¬ëŒì˜ ì´ë¦„
+     * @param <int> ì—…ë°ì´íŠ¸ëœ ì‚¬ëŒì˜ í˜„ì¬ ì±„ë„ 
      * @since Revision 33
      */
     public static void updateMessenger(int messengerid, String namefrom, int fromchannel) {
@@ -205,10 +205,10 @@ public class WorldCommunity {
 	}
     }
 
-    /** ÆĞÅ¶À» ¹æ¼ÛÇÏÁö ¾Ê°í ¸Ş½ÅÀú¿¡¼­ ÇÃ·¹ÀÌ¾î »èÁ¦
+    /** íŒ¨í‚·ì„ ë°©ì†¡í•˜ì§€ ì•Šê³  ë©”ì‹ ì €ì—ì„œ í”Œë ˆì´ì–´ ì‚­ì œ
      * 
-     * @param <int> ¸Ş½ÅÀúID
-     * @param <mapleMultiChatCharacter> ¸Ş½ÅÀúÄ³¸¯ÅÍ
+     * @param <int> ë©”ì‹ ì €ID
+     * @param <mapleMultiChatCharacter> ë©”ì‹ ì €ìºë¦­í„°
      * @since Revision 33
      * 
      */
@@ -221,11 +221,11 @@ public class WorldCommunity {
     }
 
     
-    /** ÆĞÅ¶À» ¹æ¼ÛÇÏÁö ¾Ê°í ¸Ş½ÅÀú¿¡ ÇÃ·¹ÀÌ¾î Âü¿©
+    /** íŒ¨í‚·ì„ ë°©ì†¡í•˜ì§€ ì•Šê³  ë©”ì‹ ì €ì— í”Œë ˆì´ì–´ ì°¸ì—¬
      * 
-     * @param <int> ¸Ş½ÅÀúID
-     * @param <mapleMUltiChatCharacter> Âü¿©ÇÒ ÇÃ·¹ÀÌ¾î
-     * @param <int> Âü¿©µÇ´Â À§Ä¡ (½½·Ô)
+     * @param <int> ë©”ì‹ ì €ID
+     * @param <mapleMUltiChatCharacter> ì°¸ì—¬í•  í”Œë ˆì´ì–´
+     * @param <int> ì°¸ì—¬ë˜ëŠ” ìœ„ì¹˜ (ìŠ¬ë¡¯)
      * @since Revision 33
      */
     public static void silentJoinMessenger(int messengerid, MapleMultiChatCharacter target, int position) {
@@ -237,12 +237,12 @@ public class WorldCommunity {
     }
 
 
-    /** Ä£±¸ Ã¤ÆÃ ÆĞÅ¶¹æ¼Û
+    /** ì¹œêµ¬ ì±„íŒ… íŒ¨í‚·ë°©ì†¡
      * 
-     * @param <int[]> ¼ö½ÅµÇ´Â Ä³¸¯ÅÍ ¸ñ·Ï
-     * @param <int> ¼Û½ÅÀÚ Ä³¸¯ÅÍ ID
-     * @param <String> ¼Û½ÅÀÚ Ä³¸¯ÅÍ¸í
-     * @param <String> Ã¤ÆÃ µ¥ÀÌÅÍ
+     * @param <int[]> ìˆ˜ì‹ ë˜ëŠ” ìºë¦­í„° ëª©ë¡
+     * @param <int> ì†¡ì‹ ì ìºë¦­í„° ID
+     * @param <String> ì†¡ì‹ ì ìºë¦­í„°ëª…
+     * @param <String> ì±„íŒ… ë°ì´í„°
      * @since Revision 33
      */
     public static void buddyChat(int[] recipientCharacterIds, int cidFrom, String nameFrom, String chattext) {
@@ -259,11 +259,11 @@ public class WorldCommunity {
         }
     }
 
-    /** Á¢¼ÓÁßÀÎ Ä£±¸¸¦ ¾ò¾î¿È.
+    /** ì ‘ì†ì¤‘ì¸ ì¹œêµ¬ë¥¼ ì–»ì–´ì˜´.
      * 
-     * @param <int> ¿äÃ»ÀÚID
-     * @param <String> ´ë»óÀÚID
-     * @return ÇÃ·¹ÀÌ¾î¾ÆÀÌµğ, Ã¤³Î Æä¾î Å¬·¡½º ¹è¿­
+     * @param <int> ìš”ì²­ìID
+     * @param <String> ëŒ€ìƒìID
+     * @return í”Œë ˆì´ì–´ì•„ì´ë””, ì±„ë„ í˜ì–´ í´ë˜ìŠ¤ ë°°ì—´
      * @since Revision 33
      */
     public static MaplePlayerIdChannelPair[] multiBuddyFind(int charIdFrom, int[] characterIds) {
@@ -276,15 +276,15 @@ public class WorldCommunity {
 	return foundsChars.toArray(new MaplePlayerIdChannelPair[foundsChars.size()]);
     }
 
-    /** Ä£±¸ Ãß°¡ ¿äÃ»
+    /** ì¹œêµ¬ ì¶”ê°€ ìš”ì²­
      * 
-     * @param <String> Ãß°¡ÀÌ¸§
-     * @param <int> ¿äÃ»ÀÚ Ã¤³Î
-     * @param <int> ¿äÃ»ÀÚ ID
-     * @param <String> ¿äÃ»ÀÚ ÀÌ¸§
-     * @param <int> ¿äÃ»ÀÚ ·¹º§
-     * @param <int> ¿äÃ»ÀÚ Á÷¾÷
-     * @return Ä£±¸ Ãß°¡ °á°ú BuddyList.BuddyAddResult Enum°ª
+     * @param <String> ì¶”ê°€ì´ë¦„
+     * @param <int> ìš”ì²­ì ì±„ë„
+     * @param <int> ìš”ì²­ì ID
+     * @param <String> ìš”ì²­ì ì´ë¦„
+     * @param <int> ìš”ì²­ì ë ˆë²¨
+     * @param <int> ìš”ì²­ì ì§ì—…
+     * @return ì¹œêµ¬ ì¶”ê°€ ê²°ê³¼ BuddyList.BuddyAddResult Enumê°’
      * @since Revision 33
      */
     public static BuddyList.BuddyAddResult requestBuddyAdd(String addName, int channelFrom, int cidFrom, String nameFrom, int levelFrom, int jobFrom, String groupName) {
@@ -307,21 +307,21 @@ public class WorldCommunity {
 	return BuddyList.BuddyAddResult.OK;
     }
     
-    /** ÆÄÆ¼ ¾ò¾î³¿ - ¿ùµå È¦´õ¿¡¼­ ÇØ´çÆÄÆ¼IDÀÇ ÆÄÆ¼¸¦ ¾ò¾î³¿.
+    /** íŒŒí‹° ì–»ì–´ëƒ„ - ì›”ë“œ í™€ë”ì—ì„œ í•´ë‹¹íŒŒí‹°IDì˜ íŒŒí‹°ë¥¼ ì–»ì–´ëƒ„.
      * 
-     * @param <int> ¾ò¾î³¾ ÆÄÆ¼ ID
-     * @return ¿ùµåÈ¦´õ¿¡¼­ ¾ò¾î³½ ÆÄÆ¼
+     * @param <int> ì–»ì–´ë‚¼ íŒŒí‹° ID
+     * @return ì›”ë“œí™€ë”ì—ì„œ ì–»ì–´ë‚¸ íŒŒí‹°
      * @since Revision 33
      */
     public static MapleParty getParty(int partyid) {
         return WideObjectHolder.getInstance().getParty(partyid);
     }
     
-    /** ÆÄÆ¼°¡ ¾÷µ¥ÀÌÆ® µÉ¶§ ÆĞÅ¶ ¼ÛÃâ
+    /** íŒŒí‹°ê°€ ì—…ë°ì´íŠ¸ ë ë•Œ íŒ¨í‚· ì†¡ì¶œ
      * 
-     * @param <int> ÆÄÆ¼ID
-     * @param <maplePartyOperation> ÆÄÆ¼¾÷µ¥ÀÌÆ® ÀÛ¾÷
-     * @param <maplePartyCharacter> ¾÷µ¥ÀÌÆ®µÇ´Â ´ë»ó
+     * @param <int> íŒŒí‹°ID
+     * @param <maplePartyOperation> íŒŒí‹°ì—…ë°ì´íŠ¸ ì‘ì—…
+     * @param <maplePartyCharacter> ì—…ë°ì´íŠ¸ë˜ëŠ” ëŒ€ìƒ
      */
     //TODO only notify channels where partymembers are?
     public static void updateParty(int partyid, MaplePartyOperation operation, MaplePartyCharacter target) {
@@ -353,33 +353,33 @@ public class WorldCommunity {
 	WideObjectHolder.getInstance().updateParty(party, operation, target);
     }
 
-    /** ÆÄÆ¼ »ı¼º - ¿ùµåÈ¦´õ¿¡ »õ ÆÄÆ¼¸¦ ±â¾ï½ÃÅ´.
+    /** íŒŒí‹° ìƒì„± - ì›”ë“œí™€ë”ì— ìƒˆ íŒŒí‹°ë¥¼ ê¸°ì–µì‹œí‚´.
      * 
-     * @param <maplePartyCharacter> ÆÄÆ¼Àå ÆÄÆ¼Ä³¸¯ÅÍ
-     * @return ÆÄÆ¼Å¬·¡½º
+     * @param <maplePartyCharacter> íŒŒí‹°ì¥ íŒŒí‹°ìºë¦­í„°
+     * @return íŒŒí‹°í´ë˜ìŠ¤
      * @since Revision 33
      */
     public static MapleParty createParty(MaplePartyCharacter chrfor) {
 	return WideObjectHolder.getInstance().createParty(chrfor);
     }
 
-    /** ¿¬ÇÕ Ã¤ÆÃ
+    /** ì—°í•© ì±„íŒ…
      * 
-     * @param <int> ±æµå¾ÆÀÌµğ
-     * @param <String> ¼ÛÃâÀÚ ÀÌ¸§
-     * @param <int> ¼ÛÃâÀÚ Ä³¸¯ÅÍID
-     * @param <String> Ã¤ÆÃ µ¥ÀÌÅÍ
+     * @param <int> ê¸¸ë“œì•„ì´ë””
+     * @param <String> ì†¡ì¶œì ì´ë¦„
+     * @param <int> ì†¡ì¶œì ìºë¦­í„°ID
+     * @param <String> ì±„íŒ… ë°ì´í„°
      * @since Revision 33
      */
     public static void allianceChat(int gid, String name, int cid, String msg) {
 	WideObjectHolder.getInstance().allianceChat(gid, name, cid, msg);
     }
 
-    /** ÆÄÆ¼ Ã¤ÆÃ
+    /** íŒŒí‹° ì±„íŒ…
      * 
-     * @param <mapleParty> Ã¤ÆÃÀ» ¼ÛÃâÇÒ ÆÄÆ¼
-     * @param <String> Ã¤ÆÃ µ¥ÀÌÅÍ
-     * @param <String> ¼ÛÃâÀÚ Ä³¸¯ÅÍ¸í
+     * @param <mapleParty> ì±„íŒ…ì„ ì†¡ì¶œí•  íŒŒí‹°
+     * @param <String> ì±„íŒ… ë°ì´í„°
+     * @param <String> ì†¡ì¶œì ìºë¦­í„°ëª…
      * @since Revision 33
      */
     public static void partyChat(MapleParty party, String chattext, String namefrom) {

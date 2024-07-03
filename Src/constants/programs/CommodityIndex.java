@@ -40,6 +40,6 @@ public class CommodityIndex {
         buffer.close();
         fr.close();
         fos.close();
-        System.out.println("Ä³½Ã¼¥ ÄÁ¹öÆÃÀ» ³¡³Â½À´Ï´Ù.");
+        System.out.println("ìºì‹œìƒµ ì»¨ë²„íŒ…ì„ ëëƒˆìŠµë‹ˆë‹¤.");
     }
 }

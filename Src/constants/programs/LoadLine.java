@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -19,11 +19,11 @@ import java.sql.ResultSet;
 
 /**
  *
- * @author ¿¡¹İÅ×ÀÌ¸£
+ * @author ì—ë°˜í…Œì´ë¥´
  */
 public class LoadLine {
     public static void main(String[] args) {	
-        System.out.println("RewardScroll ºÒ·¯¿À´Â ÁßÀÔ´Ï´Ù.:::");
+        System.out.println("RewardScroll ë¶ˆëŸ¬ì˜¤ëŠ” ì¤‘ì…ë‹ˆë‹¤.:::");
 	// Gold Box
         try {
         FileReader fl = new FileReader("db.sql");

@@ -1,4 +1,4 @@
-/* È­ÀÌÆ®¸Å´ÏÀúÀÇ ½ºÅ©¸³Æ® */
+/* í™”ì´íŠ¸ë§¤ë‹ˆì €ì˜ ìŠ¤í¬ë¦½íŠ¸ */
 
 importPackage(java.lang);
 importPackage(Packages.handling.world);
@@ -26,18 +26,18 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-                var chat= "#e#r°¡²û »Ì±â°¡ ¹«½Ã ´çÇÏ´Â °æ¿ì°¡ ÀÖ½À´Ï´Ù.\r\n¿ÃÅİ 2000 °ø¸¶ 500#n#k\r\n#rÈÄ¿ø¾ÆÀÌÅÛ »Ì±â#k¿¡¼­´Â #b¿©·¯°¡Áö ÈÄ¿ø½Ã½ºÅÛ¿¡ »ç¿ë°¡´ÉÇÑ ¾ÆÀÌÅÛµéÀÌ ³ª¿É´Ï´Ù.\r\n\r\n¾ÆÀÌÅÛ ¸®½ºÆ® : #v1142268# #v1142499# #v1402214# #v1452220# #v1462208# #v1492194# #v1432182# #v1482183# #v1382226# #v1472230# #v1332242# #v1342087# #v1422156# #v1122012# #v1402180# \r\n\r\n#r#e»Ì±â ºñ¿ë#n#kÀ¸·Î´Â 5¸¸ Æ÷ÀÎÆ®°¡ ÇÊ¿äÇÕ´Ï´Ù.\r\n";
-	    chat += "#L0##bÈÄ¿ø¾ÆÀÌÅÛÀ» »Ì°Ú½À´Ï´Ù.#k#n\r\n#l";
+                var chat= "#e#rê°€ë” ë½‘ê¸°ê°€ ë¬´ì‹œ ë‹¹í•˜ëŠ” ê²½ìš°ê°€ ìˆìŠµë‹ˆë‹¤.\r\nì˜¬í…Ÿ 2000 ê³µë§ˆ 500#n#k\r\n#rí›„ì›ì•„ì´í…œ ë½‘ê¸°#kì—ì„œëŠ” #bì—¬ëŸ¬ê°€ì§€ í›„ì›ì‹œìŠ¤í…œì— ì‚¬ìš©ê°€ëŠ¥í•œ ì•„ì´í…œë“¤ì´ ë‚˜ì˜µë‹ˆë‹¤.\r\n\r\nì•„ì´í…œ ë¦¬ìŠ¤íŠ¸ : #v1142268# #v1142499# #v1402214# #v1452220# #v1462208# #v1492194# #v1432182# #v1482183# #v1382226# #v1472230# #v1332242# #v1342087# #v1422156# #v1122012# #v1402180# \r\n\r\n#r#eë½‘ê¸° ë¹„ìš©#n#kìœ¼ë¡œëŠ” 5ë§Œ í¬ì¸íŠ¸ê°€ í•„ìš”í•©ë‹ˆë‹¤.\r\n";
+	    chat += "#L0##bí›„ì›ì•„ì´í…œì„ ë½‘ê² ìŠµë‹ˆë‹¤.#k#n\r\n#l";
 	    cm.sendSimple(chat);
 	} else if (selection == 0) {
 	if (cm.getPlayer().getRC() >= 50000) {
-			cm.sendOk("ÈÄ¿ø¾ÆÀÌÅÛ »Ì±â¿¡¼­ ¾Æ·¡ÀÇ ¾ÆÀÌÅÛÀÌ ³ª¿Ô½À´Ï´Ù.");
-			//WorldBroadcasting.broadcast(MainPacketCreator.serverNotice(5, cm.getPlayer().getName() + " ´ÔÀÌ ÈÄ¿ø¾ÆÀÌÅÛ »Ì±â¸¦ ÇÏ¼Ì½À´Ï´Ù."));
+			cm.sendOk("í›„ì›ì•„ì´í…œ ë½‘ê¸°ì—ì„œ ì•„ë˜ì˜ ì•„ì´í…œì´ ë‚˜ì™”ìŠµë‹ˆë‹¤.");
+			//WorldBroadcasting.broadcast(MainPacketCreator.serverNotice(5, cm.getPlayer().getName() + " ë‹˜ì´ í›„ì›ì•„ì´í…œ ë½‘ê¸°ë¥¼ í•˜ì…¨ìŠµë‹ˆë‹¤."));
 			makeSponserItem(items[Math.floor(Math.random() * items.length)], 2000,500,0);
                 	cm.getPlayer().loseRC(50000);
                 	cm.dispose();
 	} else {
-		cm.sendOk("ÈÄ¿øÆ÷ÀÎÆ®°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+		cm.sendOk("í›„ì›í¬ì¸íŠ¸ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		cm.dispose();
 	}
         }
@@ -54,7 +54,7 @@ function action(mode, type, selection) {
 	item.setWatk(atk);
 	item.setMatk(atk);
 	
-	item.setOwner("[·çµ¹ÀÌ]");
+	item.setOwner("[ë£¨ëŒì´]");
 	Packages.server.items.InventoryManipulator.addFromDrop(cm.getC(),item,false);
 }
     

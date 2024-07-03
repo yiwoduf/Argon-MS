@@ -24,66 +24,66 @@ function action(mode, type, selection) {
     }
     if (status == 0) {
         a = new Date();
-        cm.sendSimple("#e<Àåºñ ¹é¾÷>#n\r\n\r\n"
-                     +"¾ÆÀÌÅÛ Àåºñ ÅÇ¿¡ ÀÖ´Â Àåºñ ¾ÆÀÌÅÛµéÀ» ¼­¹ö¿¡ ÀúÀåÇÕ´Ï´Ù.\r\n\r\n"
-                     +"#r#e[À¯ÀÇ»çÇ×]#k#n\r\n"
-                     +"Àåºñ¹é¾÷À» ¿©·¯¹ø ÇÒ °æ¿ì, #b±âÁ¸¿¡ ¹é¾÷µÈ ÆÄÀÏÀº ÀÚµ¿À¸·Î »èÁ¦#kµÇ´Ï À¯ÀÇÇÏ½Ã±æ ¹Ù¶ø´Ï´Ù."
-                     +"\r\n\r\n#L0# #dÀåºñ¸¦ ¹é¾÷ÇÏ°Ú½À´Ï´Ù.\r\n"
-                     +"#L1# ¹é¾÷µÈ Àåºñ¸¦ ºÒ·¯¿À°Ú½À´Ï´Ù.\r\n     (Àåºñ ¹× Âø¿ëµÈ ¾ÆÀÌÅÛÀÌ ÃÊ±âÈ­µË´Ï´Ù.)")
+        cm.sendSimple("#e<ì¥ë¹„ ë°±ì—…>#n\r\n\r\n"
+                     +"ì•„ì´í…œ ì¥ë¹„ íƒ­ì— ìˆëŠ” ì¥ë¹„ ì•„ì´í…œë“¤ì„ ì„œë²„ì— ì €ì¥í•©ë‹ˆë‹¤.\r\n\r\n"
+                     +"#r#e[ìœ ì˜ì‚¬í•­]#k#n\r\n"
+                     +"ì¥ë¹„ë°±ì—…ì„ ì—¬ëŸ¬ë²ˆ í•  ê²½ìš°, #bê¸°ì¡´ì— ë°±ì—…ëœ íŒŒì¼ì€ ìë™ìœ¼ë¡œ ì‚­ì œ#kë˜ë‹ˆ ìœ ì˜í•˜ì‹œê¸¸ ë°”ëë‹ˆë‹¤."
+                     +"\r\n\r\n#L0# #dì¥ë¹„ë¥¼ ë°±ì—…í•˜ê² ìŠµë‹ˆë‹¤.\r\n"
+                     +"#L1# ë°±ì—…ëœ ì¥ë¹„ë¥¼ ë¶ˆëŸ¬ì˜¤ê² ìŠµë‹ˆë‹¤.\r\n     (ì¥ë¹„ ë° ì°©ìš©ëœ ì•„ì´í…œì´ ì´ˆê¸°í™”ë©ë‹ˆë‹¤.)")
     } else if (status == 1) {
         if (selection == 0) {
-            ¸» = "¹é¾÷µÇ´Â ÀåºñÀÇ Á¾·ù´Â ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n"
-            ¸»+= "#e[ÀåÂø]#n\r\n"
+            ë§ = "ë°±ì—…ë˜ëŠ” ì¥ë¹„ì˜ ì¢…ë¥˜ëŠ” ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n"
+            ë§+= "#e[ì¥ì°©]#n\r\n"
             for (i=0; i>-199; i--) {
                 Chr = cm.getInventory(-1).getItem(i)
                 if (Chr != null) {
-                    ¸»+= "#i" + Chr.getItemId()+"#";
+                    ë§+= "#i" + Chr.getItemId()+"#";
                 }
             }
-            ¸»+= "\r\n\r\n#e[Àåºñ]#n\r\n"
+            ë§+= "\r\n\r\n#e[ì¥ë¹„]#n\r\n"
             for (i=0; i<cm.getInventory(1).getSlotLimit(); i++) {
                 Eqp = cm.getInventory(1).getItem(i)
                 if (Eqp != null) {
-                    ¸»+= "#i" + Eqp.getItemId()+"#";
+                    ë§+= "#i" + Eqp.getItemId()+"#";
                 }
             }
-            ¸»+= "\r\n\r\n#e[¼Òºñ]#n\r\n"
+            ë§+= "\r\n\r\n#e[ì†Œë¹„]#n\r\n"
             for (a=0; a<cm.getInventory(2).getSlotLimit(); a++) {
                 Cos = cm.getInventory(2).getItem(a)
                 if (Cos != null) {
-                    ¸»+= "#i" + Cos.getItemId()+"#";
+                    ë§+= "#i" + Cos.getItemId()+"#";
                 }
             }
-            ¸»+= "\r\n\r\n#e[±âÅ¸]#n\r\n"
+            ë§+= "\r\n\r\n#e[ê¸°íƒ€]#n\r\n"
             for (b=0; b<cm.getInventory(4).getSlotLimit(); b++) {
                 Etc = cm.getInventory(4).getItem(b)
                 if (Etc != null) {
-                    ¸»+= "#i" + Etc.getItemId()+"#";
+                    ë§+= "#i" + Etc.getItemId()+"#";
                 }
             }
-            ¸»+= "\r\n\r\n#e[¼³Ä¡]#n\r\n"
+            ë§+= "\r\n\r\n#e[ì„¤ì¹˜]#n\r\n"
             for (c=0; c<cm.getInventory(3).getSlotLimit(); c++) {
                 Ist = cm.getInventory(3).getItem(c)
                 if (Ist != null) {
-                    ¸»+= "#i" + Ist.getItemId()+"#";
+                    ë§+= "#i" + Ist.getItemId()+"#";
                 }
             }
-            ¸»+= "\r\n\r\n#e[Ä³½Ã]#n\r\n"
+            ë§+= "\r\n\r\n#e[ìºì‹œ]#n\r\n"
             for (d=0; d<cm.getInventory(5).getSlotLimit(); d++) {
                 Cas = cm.getInventory(5).getItem(d)
                 if ((Cas != null) && !GameConstants.isPet(Cas.getItemId())) {
-                    ¸»+= "#i" + Cas.getItemId()+"#";
+                    ë§+= "#i" + Cas.getItemId()+"#";
                 }
             }
-            ¸»+= "\r\n\r\n#e[Æê]#n\r\n"
+            ë§+= "\r\n\r\n#e[í«]#n\r\n"
             for (e=0; e<cm.getInventory(5).getSlotLimit(); e++) {
                 Pet = cm.getInventory(5).getItem(e)
                 if ((Pet != null) && GameConstants.isPet(Pet.getItemId())) {
-                    ¸»+= "#i" + Pet.getItemId()+"#";
+                    ë§+= "#i" + Pet.getItemId()+"#";
                 }
             }
-            ¸» += "\r\n#d#L0# Àåºñ ¹é¾÷À» ½ÃÀÛÇÏ°Ú½À´Ï´Ù."
-            cm.sendSimple(¸»);
+            ë§ += "\r\n#d#L0# ì¥ë¹„ ë°±ì—…ì„ ì‹œì‘í•˜ê² ìŠµë‹ˆë‹¤."
+            cm.sendSimple(ë§);
         } else {
             fFile1 = new File("Log/backup/Eqp/Backup_"+cm.getPlayer().getId()+".log");
             fFile2 = new File("Log/backup/Consume/Backup_"+cm.getPlayer().getId()+".log");
@@ -93,10 +93,10 @@ function action(mode, type, selection) {
             fFile6 = new File("Log/backup/Pet/Backup_"+cm.getPlayer().getId()+".log");
             fFile7 = new File("Log/backup/Chr/Backup_"+cm.getPlayer().getId()+".log");
             if (cm.getPlayer().getKeyValue("permission_bok9") != 1) {
-                cm.sendOk("ÇØ´ç Ä³¸¯ÅÍ´Â º¹±¸°¡ Çã¶ôµÇÁö ¾Ê¾Ò½À´Ï´Ù.\r\n\r\nÀÚ¼¼ÇÑ »çÇ×Àº ¿î¿µÀÚ¿¡°Ô ¹®ÀÇÇØ ÁÖ¼¼¿ä.");
+                cm.sendOk("í•´ë‹¹ ìºë¦­í„°ëŠ” ë³µêµ¬ê°€ í—ˆë½ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.\r\n\r\nìì„¸í•œ ì‚¬í•­ì€ ìš´ì˜ìì—ê²Œ ë¬¸ì˜í•´ ì£¼ì„¸ìš”.");
                 cm.dispose();
             } else if (!fFile1.exists() && !fFile2.exists() && !fFile3.exists() && !fFile4.exists() && !fFile5.exists() && !fFile6.exists() && !fFile7.exists()) {
-                cm.sendOk("ÇØ´ç Ä³¸¯ÅÍÀÇ Àåºñ¹é¾÷ ÆÄÀÏÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.\r\n\r\nÀåºñ¸¦ Á¦´ë·Î ¹é¾÷ÇÏ¼Ì´ÂÁö È®ÀÎÇØ ÁÖ¼¼¿ä.")
+                cm.sendOk("í•´ë‹¹ ìºë¦­í„°ì˜ ì¥ë¹„ë°±ì—… íŒŒì¼ì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.\r\n\r\nì¥ë¹„ë¥¼ ì œëŒ€ë¡œ ë°±ì—…í•˜ì…¨ëŠ”ì§€ í™•ì¸í•´ ì£¼ì„¸ìš”.")
 	        cm.dispose();
             } else {
 
@@ -191,40 +191,40 @@ function action(mode, type, selection) {
                  bok9arr7.push(msg);
                  bok9arr7 = JSON.parse(bok9arr7);
 
-                 ¸» = "#b#eÄ³¸¯ÅÍ ÄÚµå#k#n : " + bok9arr1[0] +"\r\n";
-                 ¸»+= "#b#e¹é¾÷ ±âÁØÀÏ#k#n : " + bok9arr1[1] + "\r\n"
-                 ¸»+= "#b#e°Ë»öµÈ ¹é¾÷ ÆÄÀÏ Á¾·ù#k#n : "
+                 ë§ = "#b#eìºë¦­í„° ì½”ë“œ#k#n : " + bok9arr1[0] +"\r\n";
+                 ë§+= "#b#eë°±ì—… ê¸°ì¤€ì¼#k#n : " + bok9arr1[1] + "\r\n"
+                 ë§+= "#b#eê²€ìƒ‰ëœ ë°±ì—… íŒŒì¼ ì¢…ë¥˜#k#n : "
                  if (fFile1.exists()) {
-                    ¸»+= "Àåºñ "
+                    ë§+= "ì¥ë¹„ "
                  }
                  if (fFile2.exists()) {
-                    ¸»+= "¼Òºñ "
+                    ë§+= "ì†Œë¹„ "
                  }
                  if (fFile3.exists()) {
-                    ¸»+= "±âÅ¸ "
+                    ë§+= "ê¸°íƒ€ "
                  }
                  if (fFile4.exists()) {
-                    ¸»+= "¼³Ä¡ "
+                    ë§+= "ì„¤ì¹˜ "
                  }
                  if (fFile5.exists()) {
-                    ¸»+= "Ä³½Ã "
+                    ë§+= "ìºì‹œ "
                  }
                  if (fFile6.exists()) {
-                    ¸»+= "Æê "
+                    ë§+= "í« "
                  }
                  if (fFile7.exists()) {
-                    ¸»+= "ÀåÂø "
+                    ë§+= "ì¥ì°© "
                  }
-                 ¸»+= "\r\n\r\nº¹±¸¸¦ ½ÃÀÛÇÏ½Ã°Ú½À´Ï±î?\r\n\r\n";
-                 ¸»+= "#d#L1# º¹±¸¸¦ ½ÃÀÛÇÏ°Ú½À´Ï´Ù."
-                 cm.sendSimple(¸»);
+                 ë§+= "\r\n\r\në³µêµ¬ë¥¼ ì‹œì‘í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\r\n\r\n";
+                 ë§+= "#d#L1# ë³µêµ¬ë¥¼ ì‹œì‘í•˜ê² ìŠµë‹ˆë‹¤."
+                 cm.sendSimple(ë§);
             }
         }
     } else if (status == 2) {
        if (selection == 0) {
            a = new Date();
 
-           // Àåºñ¹é¾÷ ½ÃÀÛ
+           // ì¥ë¹„ë°±ì—… ì‹œì‘
 
            fFile1 = new File("Log/backup/Eqp/Backup_"+cm.getPlayer().getId()+".log");
            if (!fFile1.exists()) {
@@ -234,7 +234,7 @@ function action(mode, type, selection) {
            msg = "['"
            msg+= cm.getPlayer().getId()
            msg+= "', "
-           msg+= "'"+a.getFullYear()+"³â " + Number(a.getMonth() + 1) + "¿ù " + a.getDate() + "ÀÏ'"
+           msg+= "'"+a.getFullYear()+"ë…„ " + Number(a.getMonth() + 1) + "ì›” " + a.getDate() + "ì¼'"
            for (i=0; i<cm.getInventory(1).getSlotLimit(); i++) {
                Eqp = cm.getInventory(1).getItem(i)
                if (Eqp != null) {
@@ -274,8 +274,8 @@ function action(mode, type, selection) {
             out1.write(msg.getBytes());
             out1.close();
 
-            // Àåºñ¹é¾÷ ³¡
-            // ¼Òºñ¹é¾÷ ½ÃÀÛ
+            // ì¥ë¹„ë°±ì—… ë
+            // ì†Œë¹„ë°±ì—… ì‹œì‘
 
            fFile2 = new File("Log/backup/Consume/Backup_"+cm.getPlayer().getId()+".log");
            if (!fFile2.exists()) {
@@ -285,7 +285,7 @@ function action(mode, type, selection) {
            msg = "['"
            msg+= cm.getPlayer().getId()
            msg+= "', "
-           msg+= "'"+a.getFullYear()+"³â " + Number(a.getMonth() + 1) + "¿ù " + a.getDate() + "ÀÏ'"
+           msg+= "'"+a.getFullYear()+"ë…„ " + Number(a.getMonth() + 1) + "ì›” " + a.getDate() + "ì¼'"
            for (b=0; b<cm.getInventory(2).getSlotLimit(); b++) {
                Cos = cm.getInventory(2).getItem(b)
                if (Cos != null) {
@@ -297,8 +297,8 @@ function action(mode, type, selection) {
             out2.write(msg.getBytes());
             out2.close();
 
-            // ¼Òºñ¹é¾÷ ³¡
-            // ±âÅ¸¹é¾÷ ½ÃÀÛ
+            // ì†Œë¹„ë°±ì—… ë
+            // ê¸°íƒ€ë°±ì—… ì‹œì‘
 
 	   fFile3 = new File("Log/backup/Etc/Backup_"+cm.getPlayer().getId()+".log");
            if (!fFile3.exists()) {
@@ -308,7 +308,7 @@ function action(mode, type, selection) {
            msg = "['"
            msg+= cm.getPlayer().getId()
            msg+= "', "
-           msg+= "'"+a.getFullYear()+"³â " + Number(a.getMonth() + 1) + "¿ù " + a.getDate() + "ÀÏ'"
+           msg+= "'"+a.getFullYear()+"ë…„ " + Number(a.getMonth() + 1) + "ì›” " + a.getDate() + "ì¼'"
            for (c=0; c<cm.getInventory(4).getSlotLimit(); c++) {
                Etc = cm.getInventory(4).getItem(c)
                if (Etc != null) {
@@ -320,8 +320,8 @@ function action(mode, type, selection) {
             out3.write(msg.getBytes());
             out3.close();
 
-            // ±âÅ¸¹é¾÷ ³¡
-            // ¼³Ä¡¹é¾÷ ½ÃÀÛ
+            // ê¸°íƒ€ë°±ì—… ë
+            // ì„¤ì¹˜ë°±ì—… ì‹œì‘
 
            fFile4 = new File("Log/backup/Install/Backup_"+cm.getPlayer().getId()+".log");
            if (!fFile4.exists()) {
@@ -331,7 +331,7 @@ function action(mode, type, selection) {
            msg = "['"
            msg+= cm.getPlayer().getId()
            msg+= "', "
-           msg+= "'"+a.getFullYear()+"³â " + Number(a.getMonth() + 1) + "¿ù " + a.getDate() + "ÀÏ'"
+           msg+= "'"+a.getFullYear()+"ë…„ " + Number(a.getMonth() + 1) + "ì›” " + a.getDate() + "ì¼'"
            for (d=0; d<cm.getInventory(3).getSlotLimit(); d++) {
                Ins = cm.getInventory(3).getItem(d)
                if (Ins != null) {
@@ -343,8 +343,8 @@ function action(mode, type, selection) {
             out4.write(msg.getBytes());
             out4.close();
 
-            // ¼³Ä¡¹é¾÷ ³¡
-            // Ä³½Ã¹é¾÷ ½ÃÀÛ
+            // ì„¤ì¹˜ë°±ì—… ë
+            // ìºì‹œë°±ì—… ì‹œì‘
 
            fFile5 = new File("Log/backup/Cash/Backup_"+cm.getPlayer().getId()+".log");
            if (!fFile5.exists()) {
@@ -354,7 +354,7 @@ function action(mode, type, selection) {
            msg = "['"
            msg+= cm.getPlayer().getId()
            msg+= "', "
-           msg+= "'"+a.getFullYear()+"³â " + Number(a.getMonth() + 1) + "¿ù " + a.getDate() + "ÀÏ'"
+           msg+= "'"+a.getFullYear()+"ë…„ " + Number(a.getMonth() + 1) + "ì›” " + a.getDate() + "ì¼'"
            for (e=0; e<cm.getInventory(5).getSlotLimit(); e++) {
                Cas = cm.getInventory(5).getItem(e)
                if ((Cas != null) && !GameConstants.isPet(Cas.getItemId())) {
@@ -366,8 +366,8 @@ function action(mode, type, selection) {
             out5.write(msg.getBytes());
             out5.close();
 
-            // Ä³½Ã¹é¾÷ ³¡
-            // Æê¹é¾÷ ½ÃÀÛ
+            // ìºì‹œë°±ì—… ë
+            // í«ë°±ì—… ì‹œì‘
 
            fFile6 = new File("Log/backup/Pet/Backup_"+cm.getPlayer().getId()+".log");
            if (!fFile6.exists()) {
@@ -377,7 +377,7 @@ function action(mode, type, selection) {
            msg = "['"
            msg+= cm.getPlayer().getId()
            msg+= "', "
-           msg+= "'"+a.getFullYear()+"³â " + Number(a.getMonth() + 1) + "¿ù " + a.getDate() + "ÀÏ'"
+           msg+= "'"+a.getFullYear()+"ë…„ " + Number(a.getMonth() + 1) + "ì›” " + a.getDate() + "ì¼'"
            for (e=0; e<cm.getInventory(5).getSlotLimit(); e++) {
                Pet = cm.getInventory(5).getItem(e)
                if ((Pet != null) && GameConstants.isPet(Pet.getItemId())) {
@@ -389,8 +389,8 @@ function action(mode, type, selection) {
             out6.write(msg.getBytes());
             out6.close();
 
-            // Æê¹é¾÷ ³¡
-            // ÀåÂø¾ÆÀÌÅÛ ¹é¾÷ ½ÃÀÛ
+            // í«ë°±ì—… ë
+            // ì¥ì°©ì•„ì´í…œ ë°±ì—… ì‹œì‘
            fFile7 = new File("Log/backup/Chr/Backup_"+cm.getPlayer().getId()+".log");
            if (!fFile7.exists()) {
                fFile7.createNewFile();
@@ -399,7 +399,7 @@ function action(mode, type, selection) {
            msg = "['"
            msg+= cm.getPlayer().getId()
            msg+= "', "
-           msg+= "'"+a.getFullYear()+"³â " + Number(a.getMonth() + 1) + "¿ù " + a.getDate() + "ÀÏ'"
+           msg+= "'"+a.getFullYear()+"ë…„ " + Number(a.getMonth() + 1) + "ì›” " + a.getDate() + "ì¼'"
            for (f=0; f>-199; f--) {
                Chr = cm.getInventory(-1).getItem(f)
                if (Chr != null) {
@@ -439,9 +439,9 @@ function action(mode, type, selection) {
             out7.write(msg.getBytes());
             out7.close();
 
-            // ÀåÂø¾ÆÀÌÅÛ ¹é¾÷ ³¡
+            // ì¥ì°©ì•„ì´í…œ ë°±ì—… ë
 
-            cm.sendOk("¹é¾÷ÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù")
+            cm.sendOk("ë°±ì—…ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤")
             cm.dispose();
         } else {
             for (a=0; a<cm.getInventory(1).getSlotLimit(); a++) {
@@ -567,7 +567,7 @@ function action(mode, type, selection) {
             cm.updateChar();
             cm.fakeRelog();
             cm.getPlayer().setKeyValue("permission_bok9",null)
-            cm.sendOk("º¹±¸°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+            cm.sendOk("ë³µêµ¬ê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
             cm.dispose();
         }
     }

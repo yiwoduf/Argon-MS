@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -14,20 +14,20 @@ import java.util.Map;
 
 /**
  *
- * @author 4Â÷¿ø
+ * @author 4ì°¨ì›
  */
-public class MapleSaveItemPot { // ¾Æ·¡ÀÇ Á¶°ÇÀ» ½ÇÇàÇÏ¸é ¸ğµÎ Äõ¸®·Î ÀúÀåµÊ
+public class MapleSaveItemPot { // ì•„ë˜ì˜ ì¡°ê±´ì„ ì‹¤í–‰í•˜ë©´ ëª¨ë‘ ì¿¼ë¦¬ë¡œ ì €ì¥ë¨
         protected Map <Integer, MapleItempot> imphold = new HashMap<Integer, MapleItempot>();
       
-        public void putImp(MapleItempot imp) { // ¾ÆÀÌÅÛÆÌÀ» ÇØ´ç½½·Ô¿¡ Ãß°¡
+        public void putImp(MapleItempot imp) { // ì•„ì´í…œíŒŸì„ í•´ë‹¹ìŠ¬ë¡¯ì— ì¶”ê°€
             imphold.put(imp.getSlot(), imp);
         }
         
-        public MapleItempot getImpInSlot(int slot) { // Æ¯Á¤½½·Ô¿¡ ¾ÆÀÌÅÛÆÌÀ» ºÒ·¯¿È
+        public MapleItempot getImpInSlot(int slot) { // íŠ¹ì •ìŠ¬ë¡¯ì— ì•„ì´í…œíŒŸì„ ë¶ˆëŸ¬ì˜´
             return imphold.get(slot);
         }
         
-        public void removeImpInSlot(int slot) { // ¾ÆÀÌÅÛÆÌÀ» ÇØ´ç½½·Ô¿¡¼­ »èÁ¦
+        public void removeImpInSlot(int slot) { // ì•„ì´í…œíŒŸì„ í•´ë‹¹ìŠ¬ë¡¯ì—ì„œ ì‚­ì œ
             imphold.remove(slot);
         }
 }

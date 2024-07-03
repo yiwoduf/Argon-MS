@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -91,7 +91,7 @@ public class MapleQuestAction {
 		retitem = MapleDataTool.getInt(iEntry.getChildByPath("id"), -1);
 		if (retitem == itemid) {
 		    if (!c.haveItem(retitem, 1, true, false)) {
-			InventoryManipulator.addById(c.getClient(), retitem, (short) 1, null, null, 0, CurrentTime.getAllCurrentTime()+"¿¡ "+c.getName()+"¿¡¼­ È£ÃâµÈ "+itemid+" ¾ÆÀÌÅÛÀ» Äù½ºÆ® Àç·á ´Ù½Ã¹Ş±â·Î ¾òÀ½.");
+			InventoryManipulator.addById(c.getClient(), retitem, (short) 1, null, null, 0, CurrentTime.getAllCurrentTime()+"ì— "+c.getName()+"ì—ì„œ í˜¸ì¶œëœ "+itemid+" ì•„ì´í…œì„ í€˜ìŠ¤íŠ¸ ì¬ë£Œ ë‹¤ì‹œë°›ê¸°ë¡œ ì–»ìŒ.");
 		    }
 		    return true;
 		}
@@ -152,7 +152,7 @@ public class MapleQuestAction {
 			c.getClient().getSession().writeAndFlush(MainPacketCreator.getShowItemGain(id, count, true));
 		    } else { // add items
 //			final int period = MapleDataTool.getInt(iEntry.getChildByPath("period"), 0);
-			InventoryManipulator.addById(c.getClient(), id, count/*, "", -1, 0*/, null, null, 0, CurrentTime.getAllCurrentTime()+"¿¡ "+c.getName()+"¿¡¼­ È£ÃâµÈ "+id+" ¾ÆÀÌÅÛ¿¡À» Äù½ºÆ® Àç·á·Î ¹ŞÀº ¾ÆÀÌÅÛ.");
+			InventoryManipulator.addById(c.getClient(), id, count/*, "", -1, 0*/, null, null, 0, CurrentTime.getAllCurrentTime()+"ì— "+c.getName()+"ì—ì„œ í˜¸ì¶œëœ "+id+" ì•„ì´í…œì—ì„ í€˜ìŠ¤íŠ¸ ì¬ë£Œë¡œ ë°›ì€ ì•„ì´í…œ.");
 			c.getClient().getSession().writeAndFlush(MainPacketCreator.getShowItemGain(id, count, true));
 		    }
 		}
@@ -292,7 +292,7 @@ public class MapleQuestAction {
 		    final short count = (short) MapleDataTool.getInt(iEntry.getChildByPath("count"), 1);
 		    if (count < 0) { // remove items
 			if (!c.haveItem(id, count, false, true)) {
-			    c.dropMessage(1, "Äù½ºÆ®¸¦ ¿Ï·áÇÒ ¾ÆÀÌÅÛÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+			    c.dropMessage(1, "í€˜ìŠ¤íŠ¸ë¥¼ ì™„ë£Œí•  ì•„ì´í…œì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 			    return false;
 			}
 		    } else { // add items
@@ -316,19 +316,19 @@ public class MapleQuestAction {
 		    }
 		}
 		if (c.getInventory(MapleInventoryType.EQUIP).getNumFreeSlot() <= eq) {
-		    c.dropMessage(1, "Àåºñ ÀÎº¥Åä¸®¿¡ °ø°£ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+		    c.dropMessage(1, "ì¥ë¹„ ì¸ë²¤í† ë¦¬ì— ê³µê°„ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		    return false;
 		} else if (c.getInventory(MapleInventoryType.USE).getNumFreeSlot() <= use) {
-		    c.dropMessage(1, "¼Òºñ ÀÎº¥Åä¸®¿¡ °ø°£ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+		    c.dropMessage(1, "ì†Œë¹„ ì¸ë²¤í† ë¦¬ì— ê³µê°„ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		    return false;
 		} else if (c.getInventory(MapleInventoryType.SETUP).getNumFreeSlot() <= setup) {
-		    c.dropMessage(1, "¼Òºñ ÀÎº¥Åä¸®¿¡ °ø°£ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+		    c.dropMessage(1, "ì†Œë¹„ ì¸ë²¤í† ë¦¬ì— ê³µê°„ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		    return false;
 		} else if (c.getInventory(MapleInventoryType.ETC).getNumFreeSlot() <= etc) {
-		    c.dropMessage(1, "±âÅ¸ ÀÎº¥Åä¸®¿¡ °ø°£ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+		    c.dropMessage(1, "ê¸°íƒ€ ì¸ë²¤í† ë¦¬ì— ê³µê°„ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		    return false;
 		} else if (c.getInventory(MapleInventoryType.CASH).getNumFreeSlot() <= cash) {
-		    c.dropMessage(1, "Ä³½Ã ÀÎº¥Åä¸®¿¡ °ø°£ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+		    c.dropMessage(1, "ìºì‹œ ì¸ë²¤í† ë¦¬ì— ê³µê°„ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		    return false;
 		}
 		return true;
@@ -336,10 +336,10 @@ public class MapleQuestAction {
 	    case money: {
 		final int meso = MapleDataTool.getInt(data, 0);
 		if (c.getMeso() + meso < 0) { // Giving, overflow
-		    c.dropMessage(1, "¸Ş¼Ò ÃÖ´ë ¼ÒÁöÇÑµµ¸¦ ÃÊ°úÇß½À´Ï´Ù.");
+		    c.dropMessage(1, "ë©”ì†Œ ìµœëŒ€ ì†Œì§€í•œë„ë¥¼ ì´ˆê³¼í–ˆìŠµë‹ˆë‹¤.");
 		    return false;
 		} else if (c.getMeso() < meso) {
-		    c.dropMessage(1, "¸Ş¼Ò°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+		    c.dropMessage(1, "ë©”ì†Œê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		    return false;
 		}
 		return true;
@@ -401,7 +401,7 @@ public class MapleQuestAction {
 			c.getClient().getSession().writeAndFlush(MainPacketCreator.getShowItemGain(id, count, true));
 		    } else { // add items
 //			final int period = MapleDataTool.getInt(iEntry.getChildByPath("period"), 0);
-			InventoryManipulator.addById(c.getClient(), id, count, /*, -1, period * 60 * 1000*/ null, null, 0, CurrentTime.getAllCurrentTime()+"¿¡ "+c.getName()+"¿¡¼­ È£ÃâµÈ "+quest.id+"Äù½ºÆ®¿¡¼­ º¸»óÀ¸·Î ¾òÀº ¾ÆÀÌÅÛ.");
+			InventoryManipulator.addById(c.getClient(), id, count, /*, -1, period * 60 * 1000*/ null, null, 0, CurrentTime.getAllCurrentTime()+"ì— "+c.getName()+"ì—ì„œ í˜¸ì¶œëœ "+quest.id+"í€˜ìŠ¤íŠ¸ì—ì„œ ë³´ìƒìœ¼ë¡œ ì–»ì€ ì•„ì´í…œ.");
 			c.getClient().getSession().writeAndFlush(MainPacketCreator.getShowItemGain(id, count, true));
 		    }
 		}

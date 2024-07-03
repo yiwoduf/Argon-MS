@@ -13,10 +13,10 @@ function action(mode, type, selection) {
 	return;
     }
     if (status == 0) {
-       cm.sendSimple("¿øÇÏ´Â Ç×¸ñÀ» ¼±ÅÃÇØ ÁÖ¼¼¿ä.\r\n\r\n#L0#getKeyValue_User\r\n#L1#setKeyValue_User\r\n#L2#º¹±¸Çã¶ô")
+       cm.sendSimple("ì›í•˜ëŠ” í•­ëª©ì„ ì„ íƒí•´ ì£¼ì„¸ìš”.\r\n\r\n#L0#getKeyValue_User\r\n#L1#setKeyValue_User\r\n#L2#ë³µêµ¬í—ˆë½")
     } else if (status == 1) {
-       ¼±ÅÃ = selection;
-       cm.sendGetText("À¯Àú ÀÌ¸§À» Àû¾îÁÖ¼¼¿ä.");
+       ì„ íƒ = selection;
+       cm.sendGetText("ìœ ì € ì´ë¦„ì„ ì ì–´ì£¼ì„¸ìš”.");
     } else if (status == 2) {
        if (cm.getText() != cm.getPlayer().getName()) {
            target = cm.getClient().getChannelServer().getPlayerStorage().getCharacterByName(cm.getText());
@@ -24,22 +24,22 @@ function action(mode, type, selection) {
            target = cm.getPlayer()
        }
        if (target != null) {
-           if (¼±ÅÃ == 2) {
+           if (ì„ íƒ == 2) {
                target.setKeyValue("permission_bok9",1);
-               cm.sendOk("º¹±¸½ÅÃ» Çã°¡¸¦ ¼º°øÇß½À´Ï´Ù.");
+               cm.sendOk("ë³µêµ¬ì‹ ì²­ í—ˆê°€ë¥¼ ì„±ê³µí–ˆìŠµë‹ˆë‹¤.");
                cm.dispose();
-           } else if (¼±ÅÃ == 0) {
+           } else if (ì„ íƒ == 0) {
                cm.sendGetText("What KeyValue should I Get for you?");
-           } else if (¼±ÅÃ == 1) {
+           } else if (ì„ íƒ == 1) {
                cm.sendGetText("What KeyValue should I Set for you?");
            }
        } else {
-            cm.sendOk("ÀÔ·ÂÇÏ½Å Ä³¸¯ÅÍ°¡ °°Àº Ã¤³Î¿¡ Á¢¼ÓÁßÀÌÁö ¾Ê½À´Ï´Ù.");
+            cm.sendOk("ì…ë ¥í•˜ì‹  ìºë¦­í„°ê°€ ê°™ì€ ì±„ë„ì— ì ‘ì†ì¤‘ì´ì§€ ì•ŠìŠµë‹ˆë‹¤.");
             cm.dispose();
        }
     } else if (status == 3) {
-       if (¼±ÅÃ == 0) {
-           cm.sendOk("Å¸°Ù : "+target+"\r\nÅ°º§·ù ÀÌ¸§ : "+cm.getText()+"\r\nÅ°º§·ù °ª"+target.getKeyValue(""+cm.getText()+"")+"");
+       if (ì„ íƒ == 0) {
+           cm.sendOk("íƒ€ê²Ÿ : "+target+"\r\ní‚¤ë²¨ë¥˜ ì´ë¦„ : "+cm.getText()+"\r\ní‚¤ë²¨ë¥˜ ê°’"+target.getKeyValue(""+cm.getText()+"")+"");
            cm.dispose();
        } else {
            skv = cm.getText();

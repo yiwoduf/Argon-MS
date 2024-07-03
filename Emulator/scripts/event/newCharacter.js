@@ -26,7 +26,7 @@ function playerEntry(eim, player) {
 }
 
 function announce(eim) {
-    var text = "3ÃÊ ÈÄ º¸½º¸ó½ºÅÍ°¡ ¼ÒÈ¯µË´Ï´Ù.";
+    var text = "3ì´ˆ í›„ ë³´ìŠ¤ëª¬ìŠ¤í„°ê°€ ì†Œí™˜ë©ë‹ˆë‹¤.";
     eim.getMapFactory().getMap(931050800).broadcastMessage(UIPacket.showInfo(text));
     eim.getMapFactory().getMap(931050800).broadcastMessage(MainPacketCreator.getGMText(7, text));
     var level = Integer.parseInt(eim.getProperty("level"));
@@ -43,7 +43,7 @@ function announce(eim) {
     }
 }
 function summon(eim) {
-    var text = "¹Ì½ºÆ½ ÇÊµå¿¡ º¸½º¸ó½ºÅÍ°¡ ¼ÒÈ¯µÇ¾ú½À´Ï´Ù!";
+    var text = "ë¯¸ìŠ¤í‹± í•„ë“œì— ë³´ìŠ¤ëª¬ìŠ¤í„°ê°€ ì†Œí™˜ë˜ì—ˆìŠµë‹ˆë‹¤!";
     eim.getMapFactory().getMap(931050800).broadcastMessage(UIPacket.showInfo(text));
     eim.getMapFactory().getMap(931050800).broadcastMessage(MainPacketCreator.getGMText(5, text)); //-109,154
     var mobid = 0;
@@ -82,14 +82,14 @@ function scheduledTimeout(eim) {
     var chr = eim.getPlayers().iterator().next();
     eim.removePlayer(chr);
     chr.changeMap(exit);
-    chr.Message(8, "½Ã°£ÀÌ ÃÊ°úµÇ¾ú½À´Ï´Ù. Ã³À½ºÎÅÍ ´Ù½Ã ½ÃÀÛÇØÁÖ¼¼¿ä.");
+    chr.Message(8, "ì‹œê°„ì´ ì´ˆê³¼ë˜ì—ˆìŠµë‹ˆë‹¤. ì²˜ìŒë¶€í„° ë‹¤ì‹œ ì‹œìž‘í•´ì£¼ì„¸ìš”.");
     eim.dispose();
 }
 
 function allMonstersDead(eim) {
     var level = Integer.parseInt(eim.getProperty("level"));
     if (level >= 1 && level <= 4) {
-        var text = level + "´Ü°è ¹Ì½ºÆ½ ÇÊµå º¸½º¸ó½ºÅÍ¸¦ Ã³Ä¡ÇÏ¿´½À´Ï´Ù.";
+        var text = level + "ë‹¨ê³„ ë¯¸ìŠ¤í‹± í•„ë“œ ë³´ìŠ¤ëª¬ìŠ¤í„°ë¥¼ ì²˜ì¹˜í•˜ì˜€ìŠµë‹ˆë‹¤.";
         eim.getMapFactory().getMap(931050800).broadcastMessage(UIPacket.showInfo(text));
         eim.getMapFactory().getMap(931050800).broadcastMessage(MainPacketCreator.showEffect("monsterPark/clear"));
         eim.getMapFactory().getMap(931050800).broadcastMessage(MainPacketCreator.playSound("Party1/Clear"));
@@ -98,11 +98,11 @@ function allMonstersDead(eim) {
         var chr = eim.getPlayers().iterator().next();
     }
     if (level == 5) {
-        var text = "¹Ì½ºÆ½ ÇÊµå¸¦ Å¬¸®¾îÇÏ¼Ì½À´Ï´Ù. Àá½ÃÈÄ ±¤ÀåÀ¸·Î ÀÌµ¿µË´Ï´Ù.";
+        var text = "ë¯¸ìŠ¤í‹± í•„ë“œë¥¼ í´ë¦¬ì–´í•˜ì…¨ìŠµë‹ˆë‹¤. ìž ì‹œí›„ ê´‘ìž¥ìœ¼ë¡œ ì´ë™ë©ë‹ˆë‹¤.";
         eim.getMapFactory().getMap(931050800).broadcastMessage(UIPacket.showInfo(text));
         eim.getMapFactory().getMap(931050800).broadcastMessage(MainPacketCreator.getClock(7));
         eim.getMapFactory().getMap(931050800).broadcastMessage(MainPacketCreator.serverNotice(6, text));
-        //eim.getMapFactory().getMap(931050800).broadcastMessage(MainPacketCreator.serverNotice(6, "¹Ì½ºÆ½ÇÊµå Å¬¸®¾î º¸»óÀ¸·Î Çì³×½Ã½º ¹Ì½ºÆ½ ¹®¼­ 1ÀåÀÌ Áö±ÞµÇ¾ú½À´Ï´Ù."));
+        //eim.getMapFactory().getMap(931050800).broadcastMessage(MainPacketCreator.serverNotice(6, "ë¯¸ìŠ¤í‹±í•„ë“œ í´ë¦¬ì–´ ë³´ìƒìœ¼ë¡œ í—¤ë„¤ì‹œìŠ¤ ë¯¸ìŠ¤í‹± ë¬¸ì„œ 1ìž¥ì´ ì§€ê¸‰ë˜ì—ˆìŠµë‹ˆë‹¤."));
         var chr = eim.getPlayers().iterator().next();
         eim.schedule("clearPQ", 7000);
     }
@@ -120,16 +120,16 @@ function playerRevive(eim, player) {
 }
 
 function playerDisconnected(eim, player) {
-    /* 0 : ¸ðµÎ ³ª°¥¶§ ±îÁö´Â ÀÎ½ºÅÏ½º À¯Áö
-     * 1 ~ : ÀÏÁ¤ ¼öÁØ ÀÌ»óÀÇ »ç¶÷¸¸ ³²À¸¸é ´©°¡ ³ª°¡´øÁö ÀÎ½ºÅÏ½º À¯Áö
-     * -1 ~ ÀÌÇÏ : ÀÏÁ¤ ¼öÁØ ÀÌ»óÀÇ »ç¶÷¸¸ ³²À¸¸é À¯ÁöÀÌ³ª, ÆÄÆ¼ÀåÀÌ ³ª°¡¸é ÀÎ½ºÅÏ½º »èÁ¦
+    /* 0 : ëª¨ë‘ ë‚˜ê°ˆë•Œ ê¹Œì§€ëŠ” ì¸ìŠ¤í„´ìŠ¤ ìœ ì§€
+     * 1 ~ : ì¼ì • ìˆ˜ì¤€ ì´ìƒì˜ ì‚¬ëžŒë§Œ ë‚¨ìœ¼ë©´ ëˆ„ê°€ ë‚˜ê°€ë˜ì§€ ì¸ìŠ¤í„´ìŠ¤ ìœ ì§€
+     * -1 ~ ì´í•˜ : ì¼ì • ìˆ˜ì¤€ ì´ìƒì˜ ì‚¬ëžŒë§Œ ë‚¨ìœ¼ë©´ ìœ ì§€ì´ë‚˜, íŒŒí‹°ìž¥ì´ ë‚˜ê°€ë©´ ì¸ìŠ¤í„´ìŠ¤ ì‚­ì œ
      */
     return 0;
 }
 
 function monsterValue(eim, mobid) {
     /*
-     * Å³ Ä«¿îÆ®¸¦ ´õÇÒ ¼ýÀÚ ¹ÝÈ¯
+     * í‚¬ ì¹´ìš´íŠ¸ë¥¼ ë”í•  ìˆ«ìž ë°˜í™˜
      */
     return 1;
 }
@@ -146,7 +146,7 @@ function clearPQ(eim) {
     var exit = em.getChannelServer().getMapFactory().getMap(100000000);
     var chr = eim.getPlayers().iterator().next();
     eim.removePlayer(chr);
-    //chr.gainItem(4031611, 1, false, -1, "Çì³×½Ã½º ¹Ì½ºÆ½ ¹®¼­");
+    //chr.gainItem(4031611, 1, false, -1, "í—¤ë„¤ì‹œìŠ¤ ë¯¸ìŠ¤í‹± ë¬¸ì„œ");
     chr.changeMap(exit, exit.getPortal("sp"));
 }
 

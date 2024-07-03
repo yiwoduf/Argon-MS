@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  *
- * @author ¿¡¹İÅ×ÀÌ¸£
+ * @author ì—ë°˜í…Œì´ë¥´
  */
 public class DatabaseGarbageCollector {
     public static void main(String[] args) {
@@ -434,6 +434,6 @@ public class DatabaseGarbageCollector {
         } catch (Throwable t) {
             t.printStackTrace();
         }
-        System.out.println("[¾Ë¸²] µ¥ÀÌÅÍº£ÀÌ½º Á¤¸® ÇÁ·Î±×·¥¿¡¼­ "+ deletedrows +"°³ÀÇ ÇàÀ» Á¦°ÅÇÏ¿´½À´Ï´Ù.");
+        System.out.println("[ì•Œë¦¼] ë°ì´í„°ë² ì´ìŠ¤ ì •ë¦¬ í”„ë¡œê·¸ë¨ì—ì„œ "+ deletedrows +"ê°œì˜ í–‰ì„ ì œê±°í•˜ì˜€ìŠµë‹ˆë‹¤.");
     }
 }

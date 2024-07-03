@@ -2,9 +2,9 @@
 
      [ PlatinumMS ]
 
-     ÀÌ ½ºÅ©¸³Æ®´Â PlatinumMS ¿¡¼­ Á¦ÀÛÇÑ ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+     ì´ ìŠ¤í¬ë¦½íŠ¸ëŠ” PlatinumMS ì—ì„œ ì œì‘í•œ ìŠ¤í¬ë¦½íŠ¸ ì…ë‹ˆë‹¤.
 
-     ½ºÅ©¸³Æ® ¿ëµµ : ¾Æ½º¿Ï ÁøÇà ÀÌº¥Æ®
+     ìŠ¤í¬ë¦½íŠ¸ ìš©ë„ : ì•„ìŠ¤ì™„ ì§„í–‰ ì´ë²¤íŠ¸
 
 */
 
@@ -46,16 +46,16 @@ function scheduledTimeout(eim) {
     while (it.hasNext()) {
         var chr = it.next();
         if (chr == null) {
-            System.out.println("[¾Ë¸²] Ä³¸¯ÅÍ°¡ ¾ø½À´Ï´Ù.");
+            System.out.println("[ì•Œë¦¼] ìºë¦­í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");
         }
         if (exit == null) {
-            System.out.println("[¾Ë¸²] Ãâ±¸°¡ ¾ø½À´Ï´Ù.");
+            System.out.println("[ì•Œë¦¼] ì¶œêµ¬ê°€ ì—†ìŠµë‹ˆë‹¤.");
         }
         if (exit.getPortal("sp") == null) {
-            System.out.println("[¾Ë¸²] Æ÷Å»ÀÌ ¾ø½À´Ï´Ù.");
+            System.out.println("[ì•Œë¦¼] í¬íƒˆì´ ì—†ìŠµë‹ˆë‹¤.");
         }
         chr.changeMap(exit, exit.getPortal("sp"));
-        chr.Message(8, "½Ã°£ÀÌ ÃÊ°úµÇ¾ú½À´Ï´Ù. Ã³À½ºÎÅÍ ´Ù½Ã ½ÃÀÛÇØÁÖ¼¼¿ä.");
+        chr.Message(8, "ì‹œê°„ì´ ì´ˆê³¼ë˜ì—ˆìŠµë‹ˆë‹¤. ì²˜ìŒë¶€í„° ë‹¤ì‹œ ì‹œì‘í•´ì£¼ì„¸ìš”.");
     }
     eim.unregisterAll();
     if (eim != null) {
@@ -108,7 +108,7 @@ function leftParty(eim, player) {
         while (it.hasNext()) {
             var chr = it.next();
             chr.changeMap(exit, exit.getPortal(0));
-            chr.Message("ÆÄÆ¼¿øÀÌ ÆÄÆ¼¸¦ ±×¸¸µÖ¼­ ´õÀÌ»ó Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ¾ø½À´Ï´Ù.");
+            chr.Message("íŒŒí‹°ì›ì´ íŒŒí‹°ë¥¼ ê·¸ë§Œë‘¬ì„œ ë”ì´ìƒ í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
         }
         eim.unregisterAll();
         if (eim != null) {
@@ -124,7 +124,7 @@ function disbandParty(eim) {
     while (it.hasNext()) {
         var chr = it.next();
         chr.changeMap(exit, exit.getPortal(0));
-        chr.Message("ÆÄÆ¼ÀåÀÌ ÆÄÆ¼¸¦ ±×¸¸µÖ¼­ ´õÀÌ»ó Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ¾ø½À´Ï´Ù.");
+        chr.Message("íŒŒí‹°ì¥ì´ íŒŒí‹°ë¥¼ ê·¸ë§Œë‘¬ì„œ ë”ì´ìƒ í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
     }
     eim.unregisterAll();
     if (eim != null) {
@@ -142,7 +142,7 @@ function playerExit(eim, player) {
     while (it.hasNext()) {
         var chr = it.next();
         chr.changeMap(exit, exit.getPortal(0));
-        chr.Message("ÆÄÆ¼ Äù½ºÆ®¸¦ Æ÷±âÇÏ¿© ´õÀÌ»ó Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ¾ø½À´Ï´Ù.");
+        chr.Message("íŒŒí‹° í€˜ìŠ¤íŠ¸ë¥¼ í¬ê¸°í•˜ì—¬ ë”ì´ìƒ í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
     }
     eim.unregisterAll();
     if (eim != null) {

@@ -14,8 +14,8 @@ function action(mode, type, selection) {
 	return;
     }
     if (status == 0) {
-	var chat = "Àç±Ô¾î¼­½ÄÁö·ÎÀÌµ¿ÇÑ´Ù. #b"+ cm.getPlayer().getName() + "#k  Å©±à#r";
-        chat += "\r\n#r#L6##i2431267# Àç±Ô¾î¸Ê#l #d#L10# ´ëÈ­¸¦ ±×¸¸ ÇÑ´Ù.";
+	var chat = "ì¬ê·œì–´ì„œì‹ì§€ë¡œì´ë™í•œë‹¤. #b"+ cm.getPlayer().getName() + "#k  í¬ê¸#r";
+        chat += "\r\n#r#L6##i2431267# ì¬ê·œì–´ë§µ#l #d#L10# ëŒ€í™”ë¥¼ ê·¸ë§Œ í•œë‹¤.";
         cm.sendSpirit(chat,true,0);
       } else if (status == 1) {
         if (selection == 0) {

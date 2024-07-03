@@ -51,58 +51,58 @@ public class CharCommands implements Command {
 
     public void execute(MapleClient c, String[] splitted) throws Exception, IllegalCommandSyntaxException {
 
-        if (splitted[0].equals("!Ã¼·Â³·Ãß±â")) {
+        if (splitted[0].equals("!ì²´ë ¥ë‚®ì¶”ê¸°")) {
             c.getPlayer().getStat().setHp(1, c.getPlayer());
             c.getPlayer().getStat().setMp(500);
             c.getPlayer().updateSingleStat(PlayerStat.HP, 1);
             c.getPlayer().updateSingleStat(PlayerStat.MP, 500);
-        } else if (splitted[0].equals("!Èú")) {
+        } else if (splitted[0].equals("!í")) {
             c.getPlayer().getStat().setHp(c.getPlayer().getStat().getMaxHp(), c.getPlayer());
             c.getPlayer().getStat().setMp(c.getPlayer().getStat().getMaxMp());
             c.getPlayer().updateSingleStat(PlayerStat.HP, c.getPlayer().getStat().getMaxHp());
             c.getPlayer().updateSingleStat(PlayerStat.MP, c.getPlayer().getStat().getMaxMp());
-        } else if (splitted[0].equals("!ÀÎº¥ÃÊ±âÈ­")) {
+        } else if (splitted[0].equals("!ì¸ë²¤ì´ˆê¸°í™”")) {
             Map<Pair<Short, Short>, MapleInventoryType> eqs = new ArrayMap<Pair<Short, Short>, MapleInventoryType>();
-            if (splitted[1].equals("¸ğµÎ")) {
+            if (splitted[1].equals("ëª¨ë‘")) {
                 for (MapleInventoryType type : MapleInventoryType.values()) {
                     for (IItem item : c.getPlayer().getInventory(type)) {
                         eqs.put(new Pair<Short, Short>(item.getPosition(), item.getQuantity()), type);
                     }
                 }
-            } else if (splitted[1].equals("ÀåÂø")) {
+            } else if (splitted[1].equals("ì¥ì°©")) {
                 for (IItem item : c.getPlayer().getInventory(MapleInventoryType.EQUIPPED)) {
                     eqs.put(new Pair<Short, Short>(item.getPosition(), item.getQuantity()), MapleInventoryType.EQUIPPED);
                 }
-            } else if (splitted[1].equals("Àåºñ")) {
+            } else if (splitted[1].equals("ì¥ë¹„")) {
                 for (IItem item : c.getPlayer().getInventory(MapleInventoryType.EQUIP)) {
                     eqs.put(new Pair<Short, Short>(item.getPosition(), item.getQuantity()), MapleInventoryType.EQUIP);
                 }
-            } else if (splitted[1].equals("¼Òºñ")) {
+            } else if (splitted[1].equals("ì†Œë¹„")) {
                 for (IItem item : c.getPlayer().getInventory(MapleInventoryType.USE)) {
                     eqs.put(new Pair<Short, Short>(item.getPosition(), item.getQuantity()), MapleInventoryType.USE);
                 }
-            } else if (splitted[1].equals("¼³Ä¡")) {
+            } else if (splitted[1].equals("ì„¤ì¹˜")) {
                 for (IItem item : c.getPlayer().getInventory(MapleInventoryType.SETUP)) {
                     eqs.put(new Pair<Short, Short>(item.getPosition(), item.getQuantity()), MapleInventoryType.SETUP);
                 }
-            } else if (splitted[1].equals("±âÅ¸")) {
+            } else if (splitted[1].equals("ê¸°íƒ€")) {
                 for (IItem item : c.getPlayer().getInventory(MapleInventoryType.ETC)) {
                     eqs.put(new Pair<Short, Short>(item.getPosition(), item.getQuantity()), MapleInventoryType.ETC);
                 }
-            } else if (splitted[1].equals("Ä³½Ã")) {
+            } else if (splitted[1].equals("ìºì‹œ")) {
                 for (IItem item : c.getPlayer().getInventory(MapleInventoryType.CASH)) {
                     eqs.put(new Pair<Short, Short>(item.getPosition(), item.getQuantity()), MapleInventoryType.CASH);
                 }
             } else {
-                c.getPlayer().dropMessage(6, "[¸ğµÎ/ÀåÂø/Àåºñ/¼Òºñ/¼³Ä¡/±âÅ¸/Ä³½Ã]");
+                c.getPlayer().dropMessage(6, "[ëª¨ë‘/ì¥ì°©/ì¥ë¹„/ì†Œë¹„/ì„¤ì¹˜/ê¸°íƒ€/ìºì‹œ]");
             }
             for (Entry<Pair<Short, Short>, MapleInventoryType> eq : eqs.entrySet()) {
                 InventoryManipulator.removeFromSlot(c, eq.getValue(), eq.getKey().left, eq.getKey().right, false, false);
             }
-        } else if (splitted[0].equals("!¸ó½ºÅÍ¹öÇÁ")) {
+        } else if (splitted[0].equals("!ëª¬ìŠ¤í„°ë²„í”„")) {
             c.getPlayer().giveDebuff(DiseaseStats.ZOMBIFY, MobSkillFactory.getMobSkill(133, 1));
             c.getPlayer().dropMessage(1, "Monster Buff");
-        } else if (splitted[0].equals("!½ºÅ³")) {
+        } else if (splitted[0].equals("!ìŠ¤í‚¬")) {
             ISkill skill = SkillFactory.getSkill(Integer.parseInt(splitted[1]));
             byte level = (byte) getOptionalIntArg(splitted, 2, 1);
             byte masterlevel = (byte) getOptionalIntArg(splitted, 3, 1);
@@ -111,7 +111,7 @@ public class CharCommands implements Command {
                 level = skill.getMaxLevel();
             }
             c.getPlayer().changeSkillLevel(skill, level, masterlevel);
-        } else if (splitted[0].equals("!¸Æ½º½ºÅ³")) {
+        } else if (splitted[0].equals("!ë§¥ìŠ¤ìŠ¤í‚¬")) {
             for (MapleData skill_ : MapleDataProviderFactory.getDataProvider(new File("Setting/wz/String.wz")).getData("Skill.img").getChildren()) {
                 try {
                     ISkill skill = SkillFactory.getSkill(Integer.parseInt(skill_.getName()));
@@ -123,89 +123,89 @@ public class CharCommands implements Command {
                     continue;
                 }
             }
-        } else if (splitted[0].equals("!½ºÅ³Æ÷ÀÎÆ®")) {
+        } else if (splitted[0].equals("!ìŠ¤í‚¬í¬ì¸íŠ¸")) {
             c.getPlayer().setRemainingSp(getOptionalIntArg(splitted, 1, 1));
             c.getPlayer().updateSingleStat(PlayerStat.AVAILABLESP, c.getPlayer().getRemainingSp());
-        } else if (splitted[0].equals("!½ºÅ³Æ÷ÀÎÆ®2")) {
+        } else if (splitted[0].equals("!ìŠ¤í‚¬í¬ì¸íŠ¸2")) {
             c.getPlayer().setRemainingSp(getOptionalIntArg(splitted, 2, 1), getOptionalIntArg(splitted, 1, 1) - 1);
             c.getPlayer().updateSingleStat(PlayerStat.AVAILABLESP, c.getPlayer().getRemainingSp());
-        } else if (splitted[0].equals("!½ºÅÈÆ÷ÀÎÆ®")) {
+        } else if (splitted[0].equals("!ìŠ¤íƒ¯í¬ì¸íŠ¸")) {
             c.getPlayer().setRemainingAp(Integer.parseInt(splitted[1]));
             c.getPlayer().updateSingleStat(PlayerStat.AVAILABLEAP, c.getPlayer().getRemainingAp());
-        } else if (splitted[0].equals("!Á÷¾÷")) {
+        } else if (splitted[0].equals("!ì§ì—…")) {
             c.getPlayer().changeJob(Integer.parseInt(splitted[1]));
-        } else if (splitted[0].equals("!¾ó¸®±â")) {
+        } else if (splitted[0].equals("!ì–¼ë¦¬ê¸°")) {
             for (ChannelServer ch : ChannelServer.getAllInstances()) {
-                if (ch.¾ó¸®±â() == false) {
-                    ch.¾ó¸®±â(true);
-                    byte[] packet = MainPacketCreator.serverNotice(1, "Ã¤ÆÃ±İÁö°¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.\r\n¸ğµçÃ¤ÆÃÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù.");
+                if (ch.ì–¼ë¦¬ê¸°() == false) {
+                    ch.ì–¼ë¦¬ê¸°(true);
+                    byte[] packet = MainPacketCreator.serverNotice(1, "ì±„íŒ…ê¸ˆì§€ê°€ ì‹œì‘ë˜ì—ˆìŠµë‹ˆë‹¤.\r\nëª¨ë“ ì±„íŒ…ì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤.");
                     ChannelServer.getInstance(ch.getChannel()).broadcastPacket(packet);
                 }
             }
-        } else if (splitted[0].equals("!³ìÀÌ±â")) {
+        } else if (splitted[0].equals("!ë…¹ì´ê¸°")) {
             for (ChannelServer ch : ChannelServer.getAllInstances()) {
-                if (ch.¾ó¸®±â() == true) {
-                    ch.¾ó¸®±â(false);
-                    byte[] packet = MainPacketCreator.serverNotice(1, "Ã¤ÆÃ±İÁö°¡ Á¾·á µÇ¾ú½À´Ï´Ù.");
+                if (ch.ì–¼ë¦¬ê¸°() == true) {
+                    ch.ì–¼ë¦¬ê¸°(false);
+                    byte[] packet = MainPacketCreator.serverNotice(1, "ì±„íŒ…ê¸ˆì§€ê°€ ì¢…ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
                     ChannelServer.getInstance(ch.getChannel()).broadcastPacket(packet);
                 }
             }
-        } else if (splitted[0].equals("!Ã¤ÆÃ±İÁö")) {
+        } else if (splitted[0].equals("!ì±„íŒ…ê¸ˆì§€")) {
             for (ChannelServer ch : ChannelServer.getAllInstances()) {
-                if (ch.¾ó¸®±â() == false) {
-                    ch.¾ó¸®±â(true);
-                    byte[] packet = MainPacketCreator.serverNotice(1, "Ã¤ÆÃ±İÁö°¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.\r\n¸ğµçÃ¤ÆÃÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù.");
+                if (ch.ì–¼ë¦¬ê¸°() == false) {
+                    ch.ì–¼ë¦¬ê¸°(true);
+                    byte[] packet = MainPacketCreator.serverNotice(1, "ì±„íŒ…ê¸ˆì§€ê°€ ì‹œì‘ë˜ì—ˆìŠµë‹ˆë‹¤.\r\nëª¨ë“ ì±„íŒ…ì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤.");
                     ChannelServer.getInstance(ch.getChannel()).broadcastPacket(packet);
-                } else if (ch.¾ó¸®±â() == true) {
-                    ch.¾ó¸®±â(false);
-                    byte[] packet = MainPacketCreator.serverNotice(1, "Ã¤ÆÃ±İÁö°¡ Á¾·á µÇ¾ú½À´Ï´Ù.");
+                } else if (ch.ì–¼ë¦¬ê¸°() == true) {
+                    ch.ì–¼ë¦¬ê¸°(false);
+                    byte[] packet = MainPacketCreator.serverNotice(1, "ì±„íŒ…ê¸ˆì§€ê°€ ì¢…ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
                     ChannelServer.getInstance(ch.getChannel()).broadcastPacket(packet);
                 }
             }
-        } else if (splitted[0].equals("!ÇöÀç¸Ê")) {
-            c.getPlayer().dropMessage(5, "ÇöÀç " + c.getPlayer().getMap().getId() + " ¸Ê¿¡ ÀÖ½À´Ï´Ù.");
-        } else if (splitted[0].equals("!¹Ì½ºÆ½¿ÀÇÂ")) {
-            c.getPlayer().Message(7, "[ ¾Ë¸² ] ¹Ì½ºÆ½ÇÊµå ¿ÀÇÂ - ÀÔÀå°¡´É -");
-            c.getPlayer().Message(7, "[ ¾Ë¸² ] ¹Ì½ºÆ½ÇÊµå ¿ÀÇÂ - ÀÔÀå°¡´É -");
-            c.getPlayer().Message(7, "[ ¾Ë¸² ] ¹Ì½ºÆ½ÇÊµå ¿ÀÇÂ - ÀÔÀå°¡´É -");
-            c.getPlayer().Message(7, "[ ¾Ë¸² ] ¹Ì½ºÆ½ÇÊµå ¿ÀÇÂ - ÀÔÀå°¡´É -");
-            c.getPlayer().Message(7, "[ ¾Ë¸² ] ¹Ì½ºÆ½ÇÊµå ¿ÀÇÂ - ÀÔÀå°¡´É -");
-        } else if (splitted[0].equals("!¹Ì½ºÆ½¿ÀÇÁ")) {
-            c.getPlayer().Message(7, "[ ¾Ë¸² ] ¹Ì½ºÆ½ÇÊµå ¿ÀÇÁ - ÀÔÀåºÒ°¡ -");
-            c.getPlayer().Message(7, "[ ¾Ë¸² ] ¹Ì½ºÆ½ÇÊµå ¿ÀÇÁ - ÀÔÀåºÒ°¡ -");
-            c.getPlayer().Message(7, "[ ¾Ë¸² ] ¹Ì½ºÆ½ÇÊµå ¿ÀÇÁ - ÀÔÀåºÒ°¡ -");
-            c.getPlayer().Message(7, "[ ¾Ë¸² ] ¹Ì½ºÆ½ÇÊµå ¿ÀÇÁ - ÀÔÀåºÒ°¡ -");
-            c.getPlayer().Message(7, "[ ¾Ë¸² ] ¹Ì½ºÆ½ÇÊµå ¿ÀÇÁ - ÀÔÀåºÒ°¡ -");
+        } else if (splitted[0].equals("!í˜„ì¬ë§µ")) {
+            c.getPlayer().dropMessage(5, "í˜„ì¬ " + c.getPlayer().getMap().getId() + " ë§µì— ìˆìŠµë‹ˆë‹¤.");
+        } else if (splitted[0].equals("!ë¯¸ìŠ¤í‹±ì˜¤í”ˆ")) {
+            c.getPlayer().Message(7, "[ ì•Œë¦¼ ] ë¯¸ìŠ¤í‹±í•„ë“œ ì˜¤í”ˆ - ì…ì¥ê°€ëŠ¥ -");
+            c.getPlayer().Message(7, "[ ì•Œë¦¼ ] ë¯¸ìŠ¤í‹±í•„ë“œ ì˜¤í”ˆ - ì…ì¥ê°€ëŠ¥ -");
+            c.getPlayer().Message(7, "[ ì•Œë¦¼ ] ë¯¸ìŠ¤í‹±í•„ë“œ ì˜¤í”ˆ - ì…ì¥ê°€ëŠ¥ -");
+            c.getPlayer().Message(7, "[ ì•Œë¦¼ ] ë¯¸ìŠ¤í‹±í•„ë“œ ì˜¤í”ˆ - ì…ì¥ê°€ëŠ¥ -");
+            c.getPlayer().Message(7, "[ ì•Œë¦¼ ] ë¯¸ìŠ¤í‹±í•„ë“œ ì˜¤í”ˆ - ì…ì¥ê°€ëŠ¥ -");
+        } else if (splitted[0].equals("!ë¯¸ìŠ¤í‹±ì˜¤í”„")) {
+            c.getPlayer().Message(7, "[ ì•Œë¦¼ ] ë¯¸ìŠ¤í‹±í•„ë“œ ì˜¤í”„ - ì…ì¥ë¶ˆê°€ -");
+            c.getPlayer().Message(7, "[ ì•Œë¦¼ ] ë¯¸ìŠ¤í‹±í•„ë“œ ì˜¤í”„ - ì…ì¥ë¶ˆê°€ -");
+            c.getPlayer().Message(7, "[ ì•Œë¦¼ ] ë¯¸ìŠ¤í‹±í•„ë“œ ì˜¤í”„ - ì…ì¥ë¶ˆê°€ -");
+            c.getPlayer().Message(7, "[ ì•Œë¦¼ ] ë¯¸ìŠ¤í‹±í•„ë“œ ì˜¤í”„ - ì…ì¥ë¶ˆê°€ -");
+            c.getPlayer().Message(7, "[ ì•Œë¦¼ ] ë¯¸ìŠ¤í‹±í•„ë“œ ì˜¤í”„ - ì…ì¥ë¶ˆê°€ -");
 
-        } else if (splitted[0].equals("!»óÁ¡")) {
+        } else if (splitted[0].equals("!ìƒì ")) {
             MapleShopFactory shop = MapleShopFactory.getInstance();
             int shopId = Integer.parseInt(splitted[1]);
             if (shop.getShop(shopId) != null) {
                 shop.getShop(shopId).sendShop(c);
             }
 
-        } else if (splitted[0].equals("!¸Ş¼Ò")) {
+        } else if (splitted[0].equals("!ë©”ì†Œ")) {
             c.getPlayer().gainMeso((long) (9999999999L - c.getPlayer().getMeso()), true);
 
-        } else if (splitted[0].equals("!·¹º§¾÷")) {
+        } else if (splitted[0].equals("!ë ˆë²¨ì—…")) {
             if (c.getPlayer().getLevel() < 200) {
                 c.getPlayer().gainExp(500000000, false, false, true);
             }
-        } else if (splitted[0].equals("!¾ÆÀÌÅÛÅõ")) {
+        } else if (splitted[0].equals("!ì•„ì´í…œíˆ¬")) {
             final int itemId = Integer.parseInt(splitted[1]);
             final short quantity = (short) getOptionalIntArg(splitted, 2, 1);
             if (c.getPlayer().getGMLevel() < 6) {
                 for (int i : GameConstants.itemBlock) {
                     if (itemId == i) {
-                        c.getPlayer().dropMessage(5, "ÇØ´ç ¾ÆÀÌÅÛÀº ´ç½ÅÀÇ GM ·¹º§·Î´Â »ı¼º ÇÏ½Ç¼ö ¾ø½À´Ï´Ù.");
+                        c.getPlayer().dropMessage(5, "í•´ë‹¹ ì•„ì´í…œì€ ë‹¹ì‹ ì˜ GM ë ˆë²¨ë¡œëŠ” ìƒì„± í•˜ì‹¤ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                     }
                 }
             }
             ItemInformation ii = ItemInformation.getInstance();
             if (GameConstants.isPet(itemId)) {
-                c.getPlayer().dropMessage(5, "ÆêÀº Ä³½Ã¼¥À» ÀÌ¿ëÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
+                c.getPlayer().dropMessage(5, "í«ì€ ìºì‹œìƒµì„ ì´ìš©í•´ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
             } else if (!ii.itemExists(itemId)) {
-                c.getPlayer().dropMessage(5, itemId + " ¹ø ¾ÆÀÌÅÛÀº Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+                c.getPlayer().dropMessage(5, itemId + " ë²ˆ ì•„ì´í…œì€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
             } else {
                 IItem item;
                 if (GameConstants.getInventoryType(itemId) == MapleInventoryType.EQUIP) {
@@ -217,27 +217,27 @@ public class CharCommands implements Command {
                 InventoryManipulator.addbyItem(c, item);
             }
 
-        } else if (splitted[0].equals("!¾ÆÀÌÅÛ")) {
+        } else if (splitted[0].equals("!ì•„ì´í…œ")) {
             final int itemId = Integer.parseInt(splitted[1]);
             final short quantity = (short) getOptionalIntArg(splitted, 2, 1);
             /*if (itemId == 2100106 | itemId == 2100107 | itemId == 1002140 | itemId == 1003142 | itemId == 1042003 | itemId == 1062007 | itemId == 1322013) {
-                c.getPlayer().dropMessage(5, "" + itemId + " ¾ÆÀÌÅÛÀº »ı¼º ÇÒ ¼ö ¾ø½À´Ï´Ù. by ¼¼ÀÌ¹ö");
+                c.getPlayer().dropMessage(5, "" + itemId + " ì•„ì´í…œì€ ìƒì„± í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. by ì„¸ì´ë²„");
                 return;
             }
              */
             if (c.getPlayer().getGMLevel() < 6) {
                 for (int i : GameConstants.itemBlock) {
                     if (itemId == i) {
-                        c.getPlayer().dropMessage(5, "ÇØ´ç ¾ÆÀÌÅÛÀº ´ç½ÅÀÇ GM ·¹º§·Î´Â »ı¼º ÇÏ½Ç¼ö ¾ø½À´Ï´Ù.");
+                        c.getPlayer().dropMessage(5, "í•´ë‹¹ ì•„ì´í…œì€ ë‹¹ì‹ ì˜ GM ë ˆë²¨ë¡œëŠ” ìƒì„± í•˜ì‹¤ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                     }
                 }
             }
             ItemInformation ii = ItemInformation.getInstance();
             if (GameConstants.isPet(itemId)) {
                 c.getPlayer().BuyPET(itemId);
-                c.getPlayer().Message("[" + ii.getName(itemId) + "] ÆêÀ» ¸¸µé¾ù½À´Ï´Ù.");
+                c.getPlayer().Message("[" + ii.getName(itemId) + "] í«ì„ ë§Œë“¤ì—‡ìŠµë‹ˆë‹¤.");
             } else if (!ii.itemExists(itemId)) {
-                c.getPlayer().dropMessage(5, itemId + " ¹ø ¾ÆÀÌÅÛÀº Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+                c.getPlayer().dropMessage(5, itemId + " ë²ˆ ì•„ì´í…œì€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
             } else {
                 IItem item;
                 if (GameConstants.getInventoryType(itemId) == MapleInventoryType.EQUIP) {
@@ -246,14 +246,14 @@ public class CharCommands implements Command {
                     item = new Item(itemId, (byte) 0, (short) quantity, (byte) 0);
                 }
                 item.setOwner(c.getPlayer().getName());
-                item.setGMLog(CurrentTime.getAllCurrentTime() + "¿¡ " + c.getPlayer().getName() + "ÀÇ ¸í·É¾î·Î ¾òÀº ¾ÆÀÌÅÛ.");
+                item.setGMLog(CurrentTime.getAllCurrentTime() + "ì— " + c.getPlayer().getName() + "ì˜ ëª…ë ¹ì–´ë¡œ ì–»ì€ ì•„ì´í…œ.");
                 InventoryManipulator.addbyItem(c, item);
             }
-        } else if (splitted[0].equals("!µå·Ó")) {
+        } else if (splitted[0].equals("!ë“œë¡­")) {
             final int itemId = Integer.parseInt(splitted[1]);
             final short quantity = (short) (short) getOptionalIntArg(splitted, 2, 1);
             if (GameConstants.isPet(itemId)) {
-                c.getPlayer().dropMessage(5, "ÆêÀº Ä³½Ã¼¥¿¡¼­ ±¸¸ÅÇØ ÁÖ¼¼¿ä.");
+                c.getPlayer().dropMessage(5, "í«ì€ ìºì‹œìƒµì—ì„œ êµ¬ë§¤í•´ ì£¼ì„¸ìš”.");
             } else {
                 IItem toDrop;
                 if (GameConstants.getInventoryType(itemId) == MapleInventoryType.EQUIP) {
@@ -262,40 +262,40 @@ public class CharCommands implements Command {
                 } else {
                     toDrop = new Item(itemId, (byte) 0, (short) quantity, (byte) 0);
                 }
-                toDrop.setGMLog(c.getPlayer().getName() + "ÀÌ µå·Ó ¸í·É¾î·Î Á¦ÀÛÇÑ ¾ÆÀÌÅÛ");
+                toDrop.setGMLog(c.getPlayer().getName() + "ì´ ë“œë¡­ ëª…ë ¹ì–´ë¡œ ì œì‘í•œ ì•„ì´í…œ");
 
                 c.getPlayer().getMap().spawnItemDrop(c.getPlayer(), c.getPlayer(), toDrop, c.getPlayer().getPosition(), true, true);
             }
-        } else if (splitted[0].equals("!·¹º§")) {
+        } else if (splitted[0].equals("!ë ˆë²¨")) {
             c.getPlayer().setLevel(Short.parseShort(splitted[1]));
             c.getPlayer().levelUp();
             if (c.getPlayer().getExp() < 0) {
                 c.getPlayer().gainExp(-c.getPlayer().getExp(), false, false, true);
             }
 
-        } else if (splitted[0].equals("!¿Â¶óÀÎ")) {
-            c.getPlayer().dropMessage(6, "ÇöÀç Ã¤³Î¿¡ Á¢¼ÓµÈ À¯Àú´Â ´ÙÀ½°ú °°½À´Ï´Ù. :");
+        } else if (splitted[0].equals("!ì˜¨ë¼ì¸")) {
+            c.getPlayer().dropMessage(6, "í˜„ì¬ ì±„ë„ì— ì ‘ì†ëœ ìœ ì €ëŠ” ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤. :");
             String names = "";
             for (String name : c.getChannelServer().getPlayerStorage().getAllCharacters().keySet()) {
                 names += name;
                 names += ", ";
             }
             if (names.equals("")) {
-                names = "ÇöÀçÃ¤³Î¿¡ Á¢¼ÓÁßÀÎ À¯Àú°¡ ¾ø½À´Ï´Ù.";
+                names = "í˜„ì¬ì±„ë„ì— ì ‘ì†ì¤‘ì¸ ìœ ì €ê°€ ì—†ìŠµë‹ˆë‹¤.";
             }
             c.getPlayer().dropMessage(6, names);
 
-        } else if (splitted[0].equals("!ÃÑ¿Â¶óÀÎ")) {
+        } else if (splitted[0].equals("!ì´ì˜¨ë¼ì¸")) {
             for (ChannelServer cserv : ChannelServer.getAllInstances()) {
 
-                String names = "Ã¤³Î " + (cserv.getChannel() == 0 ? 1 : cserv.getChannel() == 1 ? "20¼¼ÀÌ»ó" : cserv.getChannel() == ServerConstants.serverCount - 1 ? cserv.getChannel() + " (°ü¸®Å×½ºÆ®Ã¤³Î)" : cserv.getChannel()) + " (" + cserv.getPlayerStorage().getAllCharacters().size() + " ¸í) : ";
+                String names = "ì±„ë„ " + (cserv.getChannel() == 0 ? 1 : cserv.getChannel() == 1 ? "20ì„¸ì´ìƒ" : cserv.getChannel() == ServerConstants.serverCount - 1 ? cserv.getChannel() + " (ê´€ë¦¬í…ŒìŠ¤íŠ¸ì±„ë„)" : cserv.getChannel()) + " (" + cserv.getPlayerStorage().getAllCharacters().size() + " ëª…) : ";
                 for (String name : cserv.getPlayerStorage().getAllCharacters().keySet()) {
                     names += name + ", ";
                 }
                 c.getPlayer().dropMessage(6, names);
             }
-        } else if (splitted[0].equals("!¸ğµÎÀúÀå")) {
-            c.getPlayer().dropMessage(6, "ÀúÀåÀ» ½ÃÀÛÇÕ´Ï´Ù.");
+        } else if (splitted[0].equals("!ëª¨ë‘ì €ì¥")) {
+            c.getPlayer().dropMessage(6, "ì €ì¥ì„ ì‹œì‘í•©ë‹ˆë‹¤.");
             for (ChannelServer cserv : ChannelServer.getAllInstances()) {
                 cserv.saveAllMerchant();
                 for (MapleCharacter hp : cserv.getPlayerStorage().getAllCharacters().values()) {
@@ -305,25 +305,25 @@ public class CharCommands implements Command {
                 }
             }
             MedalRanking.getInstance().save();
-            c.getPlayer().dropMessage(6, "ÀúÀåÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
-        } else if (splitted[0].equals("!¸»")) {
+            c.getPlayer().dropMessage(6, "ì €ì¥ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
+        } else if (splitted[0].equals("!ë§")) {
             if (splitted.length > 2) {
                 StringBuilder sb = new StringBuilder();
                 sb.append(StringUtil.joinStringFrom(splitted, 2));
                 if (!c.getPlayer().hasGmLevel((byte) 5)) {
                     if (Integer.parseInt(splitted[1]) >= 12) {
-                        c.getPlayer().dropMessage(6, "»ç¿ëÇÒ ¼ö ¾ø´Â »ö±òÄÚµåÀÔ´Ï´Ù. »ç¿ë°¡´ÉÄÚµå : 0~11");
+                        c.getPlayer().dropMessage(6, "ì‚¬ìš©í•  ìˆ˜ ì—†ëŠ” ìƒ‰ê¹”ì½”ë“œì…ë‹ˆë‹¤. ì‚¬ìš©ê°€ëŠ¥ì½”ë“œ : 0~11");
                         return;
                     }
                 }
                 byte[] packet = MainPacketCreator.getGMText(Integer.parseInt(splitted[1]), sb.toString());
                 WorldBroadcasting.broadcastMessage(packet);
             } else {
-                c.getPlayer().dropMessage(6, "»ç¿ë¹ı: !¸» <»ö±òÄÚµå> <ÇÒ¸»>");
+                c.getPlayer().dropMessage(6, "ì‚¬ìš©ë²•: !ë§ <ìƒ‰ê¹”ì½”ë“œ> <í• ë§>");
             }
-        } else if (splitted[0].equals("!¹é")) {
+        } else if (splitted[0].equals("!ë°±")) {
             if (!c.getPlayer().isHidden()) {
-                c.getPlayer().dropMessage(6, "ÇÏÀÌµå ¸ğµå¿¡¼­¸¸ ¹éÀ» »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+                c.getPlayer().dropMessage(6, "í•˜ì´ë“œ ëª¨ë“œì—ì„œë§Œ ë°±ì„ ì‚¬ìš©í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
             } else {
                 for (final MapleMapObject mmo : c.getPlayer().getMap().getAllMonster()) {
                     final MapleMonster monster = (MapleMonster) mmo;
@@ -331,9 +331,9 @@ public class CharCommands implements Command {
                     monster.setPosition(c.getPlayer().getPosition());
                 }
             }
-        } else if (splitted[0].equals("!³ë·¡")) {
+        } else if (splitted[0].equals("!ë…¸ë˜")) {
             c.getPlayer().getMap().broadcastMessage(MainPacketCreator.musicChange(splitted[1]));
-        } else if (splitted[0].equals("!¸Æ½º½ºÅÈ")) {
+        } else if (splitted[0].equals("!ë§¥ìŠ¤ìŠ¤íƒ¯")) {
             c.getPlayer().getStat().setAmbition(32767);
             c.getPlayer().getStat().setCharm(32767);
             c.getPlayer().getStat().setDex(32767);
@@ -366,7 +366,7 @@ public class CharCommands implements Command {
                 c.getPlayer().updateSingleStat(PlayerStat.MP, 500000);
             }
             c.getPlayer().updateSingleStat(PlayerStat.HP, 500000);
-        } else if (splitted[0].equals("!½ºÅÈÃÊ±âÈ­")) {
+        } else if (splitted[0].equals("!ìŠ¤íƒ¯ì´ˆê¸°í™”")) {
             c.getPlayer().getStat().setAmbition(0);
             c.getPlayer().getStat().setCharm(0);
             c.getPlayer().getStat().setDex(4);
@@ -395,7 +395,7 @@ public class CharCommands implements Command {
             c.getPlayer().updateSingleStat(PlayerStat.MAXMP, 1000);
             c.getPlayer().updateSingleStat(PlayerStat.MP, 1000);
             c.getPlayer().updateSingleStat(PlayerStat.HP, 1000);
-        } else if (splitted[0].equals("!½ºÅ³¸¶½ºÅÍ")) {
+        } else if (splitted[0].equals("!ìŠ¤í‚¬ë§ˆìŠ¤í„°")) {
             MapleData data = MapleDataProviderFactory.getDataProvider(MapleDataProviderFactory.fileInWZPath("Skill.wz")).getData(StringUtil.getLeftPaddedStr(splitted[1], '0', 3) + ".img");
             byte maxLevel = 0;
             for (MapleData skill : data) {
@@ -403,15 +403,15 @@ public class CharCommands implements Command {
                     for (MapleData skillId : skill.getChildren()) {
                         if (!skillId.getName().equals("icon")) {
                             maxLevel = (byte) MapleDataTool.getIntConvert("maxLevel", skillId.getChildByPath("common"), 0);
-                            if (MapleDataTool.getIntConvert("invisible", skillId, 0) == 0) { //½ºÅ³Ã¢¿¡ ¾Èº¸ÀÌ´Â ½ºÅ³Àº ¿Ã¸®Áö¾ÊÀ½
+                            if (MapleDataTool.getIntConvert("invisible", skillId, 0) == 0) { //ìŠ¤í‚¬ì°½ì— ì•ˆë³´ì´ëŠ” ìŠ¤í‚¬ì€ ì˜¬ë¦¬ì§€ì•ŠìŒ
                                 c.getPlayer().changeSkillLevel(SkillFactory.getSkill(Integer.parseInt(skillId.getName())), maxLevel, SkillFactory.getSkill(Integer.parseInt(skillId.getName())).isFourthJob() ? maxLevel : 0);
                             }
                         }
                     }
                 }
             }
-            c.send(MainPacketCreator.getGMText(6, "ÇØ´ç Á÷¾÷ÀÇ ½ºÅ³À» ¸ğµÎ ÃÖ´ë·¹º§·Î ¿Ã·È½À´Ï´Ù."));
-        } else if (splitted[0].equals("!½ºÅ³ÃÊ±âÈ­")) {
+            c.send(MainPacketCreator.getGMText(6, "í•´ë‹¹ ì§ì—…ì˜ ìŠ¤í‚¬ì„ ëª¨ë‘ ìµœëŒ€ë ˆë²¨ë¡œ ì˜¬ë ¸ìŠµë‹ˆë‹¤."));
+        } else if (splitted[0].equals("!ìŠ¤í‚¬ì´ˆê¸°í™”")) {
             MapleData data = MapleDataProviderFactory.getDataProvider(MapleDataProviderFactory.fileInWZPath("Skill.wz")).getData(StringUtil.getLeftPaddedStr(splitted[1], '0', 3) + ".img");
             byte maxLevel = 0;
             for (MapleData skill : data) {
@@ -423,54 +423,54 @@ public class CharCommands implements Command {
                     }
                 }
             }
-        } else if (splitted[0].equals("!Ä³½¬")) {
+        } else if (splitted[0].equals("!ìºì‰¬")) {
             if (splitted.length < 2) {
-                c.getPlayer().dropMessage(5, "¸Ş¼Ò°¡ ÇÊ¿äÇÕ´Ï´Ù.");
+                c.getPlayer().dropMessage(5, "ë©”ì†Œê°€ í•„ìš”í•©ë‹ˆë‹¤.");
                 return;
             }
             c.getPlayer().modifyCSPoints(1, Integer.parseInt(splitted[1]), true);
-        } else if (splitted[0].equals("!¸ŞÀÌÇÃÆ÷ÀÎÆ®")) {
+        } else if (splitted[0].equals("!ë©”ì´í”Œí¬ì¸íŠ¸")) {
             if (splitted.length < 2) {
-                c.getPlayer().dropMessage(5, "¸Ş¼Ò°¡ ÇÊ¿äÇÕ´Ï´Ù.");
+                c.getPlayer().dropMessage(5, "ë©”ì†Œê°€ í•„ìš”í•©ë‹ˆë‹¤.");
                 return;
             }
             c.getPlayer().modifyCSPoints(2, Integer.parseInt(splitted[1]), true);
-        } else if (splitted[0].equals("!ÇÏÀÌµå")) {
+        } else if (splitted[0].equals("!í•˜ì´ë“œ")) {
             boolean hided = c.getPlayer().isHidden();
             if (hided == true) {
-                c.getPlayer().message(6, "ÇÏÀÌµå »óÅÂ°¡ ÇØÁ¦µÇ¾ú½À´Ï´Ù.");
+                c.getPlayer().message(6, "í•˜ì´ë“œ ìƒíƒœê°€ í•´ì œë˜ì—ˆìŠµë‹ˆë‹¤.");
             } else {
-                c.getPlayer().message(6, "ÇÏÀÌµå »óÅÂ°¡ Àû¿ëµÇ¾ú½À´Ï´Ù.");
+                c.getPlayer().message(6, "í•˜ì´ë“œ ìƒíƒœê°€ ì ìš©ë˜ì—ˆìŠµë‹ˆë‹¤.");
             }
             c.getPlayer().setHide(!hided);
-         } else if (splitted[0].equals("!ÇÖÅ¸ÀÓ")) {
+         } else if (splitted[0].equals("!í•«íƒ€ì„")) {
             int itemId = Integer.parseInt(splitted[1]);
             final short quantity = (short) getOptionalIntArg(splitted, 2, 1);
             ItemInformation ii = ItemInformation.getInstance();
             short a = (short) Integer.parseInt(splitted[2]);
             for (ChannelServer cserv : ChannelServer.getAllInstances()) {
                 for (MapleCharacter hp : cserv.getPlayerStorage().getAllCharacters().values()) {
-                    c.getSession().write(MainPacketCreator.getNPCTalk(9000108, (byte) 0, "" + c.getPlayer().getName() + " ´Ô ÁØ ¼±¹°Àº Àß ¹Ş¾ÒÁö? ¹Ù·Î ÀÎº¥Åä¸®¸¦ È®ÀÎÇØºÁ", "00 00", (byte) 0));
+                    c.getSession().write(MainPacketCreator.getNPCTalk(9000108, (byte) 0, "" + c.getPlayer().getName() + " ë‹˜ ì¤€ ì„ ë¬¼ì€ ì˜ ë°›ì•˜ì§€? ë°”ë¡œ ì¸ë²¤í† ë¦¬ë¥¼ í™•ì¸í•´ë´", "00 00", (byte) 0));
                     hp.gainItem(itemId, a);
                 }
             }
-            // Àá½Ã ¼Ò½º ¹Ù²ãº¸°ÙÀ½
-        } else if (splitted[0].equals("!ÀüÃ¼¸»")) {
+            // ì ì‹œ ì†ŒìŠ¤ ë°”ê¿”ë³´ê²ŸìŒ
+        } else if (splitted[0].equals("!ì „ì²´ë§")) {
             if (splitted.length > 1) {
                 StringBuilder text = new StringBuilder();
                 text.append(StringUtil.joinStringFrom(splitted, 1));//?
-                WorldBroadcasting.broadcastMessage(UIPacket.showInfo("[°øÁö] : " + text + ""));
+                WorldBroadcasting.broadcastMessage(UIPacket.showInfo("[ê³µì§€] : " + text + ""));
             }
-        } else if (splitted[0].equals("!ÈÄ¿ø")) {
+        } else if (splitted[0].equals("!í›„ì›")) {
             MapleCharacter who = c.getChannelServer().getPlayerStorage().getCharacterByName(splitted[1]);
             final int rc = Integer.parseInt(splitted[2]);
             if (who != null) {
                 who.gainRC(rc);
-                who.dropMessage(6, "¿î¿µÀÚ " + c.getPlayer().getName() + " ´ÔÀ¸·ÎºÎÅÍ " + rc + "ÈÄ¿øÆ÷ÀÎÆ®¸¦ Áö±Ş¹Ş¾Ò½À´Ï´Ù.");
-                c.getPlayer().dropMessage(6, "" + splitted[1] + "¿¡°Ô " + rc + "ÈÄ¿øÆ÷ÀÎÆ®¸¦ Áö±ŞÇß½À´Ï´Ù.");
+                who.dropMessage(6, "ìš´ì˜ì " + c.getPlayer().getName() + " ë‹˜ìœ¼ë¡œë¶€í„° " + rc + "í›„ì›í¬ì¸íŠ¸ë¥¼ ì§€ê¸‰ë°›ì•˜ìŠµë‹ˆë‹¤.");
+                c.getPlayer().dropMessage(6, "" + splitted[1] + "ì—ê²Œ " + rc + "í›„ì›í¬ì¸íŠ¸ë¥¼ ì§€ê¸‰í–ˆìŠµë‹ˆë‹¤.");
                 try {
-                    FileWriter fw = new FileWriter(new File("ÈÄ¿ø ·Î±×.txt"), true);
-                    fw.write("¸í·É¾î »ç¿ëÀÚ : " + c.getPlayer().getName() + " | ÈÄ¿øÀÚ : " + splitted[1] + " | ±İ¾× : " + splitted[2] + " | ½ÃÀÏ : " + FileoutputUtil.CurrentReadable_Time() + "\r\n");
+                    FileWriter fw = new FileWriter(new File("í›„ì› ë¡œê·¸.txt"), true);
+                    fw.write("ëª…ë ¹ì–´ ì‚¬ìš©ì : " + c.getPlayer().getName() + " | í›„ì›ì : " + splitted[1] + " | ê¸ˆì•¡ : " + splitted[2] + " | ì‹œì¼ : " + FileoutputUtil.CurrentReadable_Time() + "\r\n");
                     fw.close();
                 } catch (IOException ioe) {
                     if (!ServerConstants.realese) {
@@ -478,11 +478,11 @@ public class CharCommands implements Command {
                     }
                 }
             } else {
-                c.getPlayer().dropMessage(6, "´ë»ó ÇÃ·¹ÀÌ¾î¸¦ ¹ß°ßÇÏÁö ¸øÇß½À´Ï´Ù.");
+                c.getPlayer().dropMessage(6, "ëŒ€ìƒ í”Œë ˆì´ì–´ë¥¼ ë°œê²¬í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
             }
-        } else if (splitted[0].equals("!Á¦·Î¹«±âÃÊ±âÈ­")) {
+        } else if (splitted[0].equals("!ì œë¡œë¬´ê¸°ì´ˆê¸°í™”")) {
             InventoryHandler.resetZeroWeapon(c.getPlayer());
-        } else if (splitted[0].equals("!½º·ÎÀ×¿şÆù")) {
+        } else if (splitted[0].equals("!ìŠ¤ë¡œì‰ì›¨í°")) {
             Point pos = c.getPlayer().getPosition();
             byte way = Byte.parseByte(splitted[1]);
             final MapleSummon summon = new MapleSummon(c.getPlayer(), 101100100, pos, SummonMovementType.ZEROWEAPON, way);
@@ -494,52 +494,52 @@ public class CharCommands implements Command {
     @Override
     public CommandDefinition[] getDefinition() {
         return new CommandDefinition[]{
-            new CommandDefinition("³ë·¡", "<Àç»ıÇÒBGM>", "Sound.wz¿¡¼­ ÇØ´ç °æ·ÎÀÇ BGMÀ» Àç»ıÇÕ´Ï´Ù.", 1),
-            new CommandDefinition("Ã¼·Â³·Ãß±â", "", "ÀÚ½ÅÀÇ HP¸¦ 1, MP¸¦ 500À¸·Î ¸¸µì´Ï´Ù.", 1),
-            new CommandDefinition("Èú", "", "ÀÚ½ÅÀÇ HP¿Í MP¸¦ ¼­¹ö¿¡¼­ °è»êµÈ ÃÖ´ë HP,MP¸¸Å­ Ã¤¿ó´Ï´Ù.", 1),
-            new CommandDefinition("½ºÅ³", "<½ºÅ³id> <½ºÅ³·¹º§> <½ºÅ³¸¶½ºÅÍ·¹º§>", "ÇØ´ç ½ºÅ³idÀÇ ½ºÅ³·¹º§°ú ¸¶½ºÅÍ·¹º§¸¸Å­ ½ºÅ³À» ¿Ã¸³´Ï´Ù.", 4),
-            new CommandDefinition("¸Æ½º½ºÅ³", "", "¸ğµç ½ºÅ³À» ¸¶½ºÅÍ ÇÕ´Ï´Ù. ´Ü, ÀçÁ¢¼Ó½Ã Æ¨±æ ¿ì·Á°¡ ÀÖ½À´Ï´Ù.", 6),
-            new CommandDefinition("¸Æ½º½ºÅÈ", "", "¸ğµç ½ºÅÈÀ» ÃÖ´ë·Î ¸¸µì´Ï´Ù.", 5),
-            new CommandDefinition("½ºÅÈÃÊ±âÈ­", "", "¸ğµç ½ºÅÈÀ» ÃÊ±âÈ­ ÇÕ´Ï´Ù.", 5),
-            new CommandDefinition("½ºÅ³Æ÷ÀÎÆ®", "<½ºÅ³Æ÷ÀÎÆ®·®>", "±âº» ½ºÅ³Æ÷ÀÎÆ®¸¦ ÀÔ·ÂÇÑ ½ºÅ³Æ÷ÀÎÆ® ¾çÀ¸·Î ¸¸µì´Ï´Ù.", 4),
-            new CommandDefinition("½ºÅ³Æ÷ÀÎÆ®2", "<È®Àå½ºÅ³Æ÷ÀÎÆ® ÀÎµ¦½º> <½ºÅ³Æ÷ÀÎÆ®·®>", "ÇØ´ç ½ºÅ³Æ÷ÀÎÆ®Ã¢ÀÇ ½ºÅ³Æ÷ÀÎÆ®¸¦ ÀÔ·ÂÇÑ ¾çÀ¸·Î ¸¸µì´Ï´Ù.", 4),
-            new CommandDefinition("½ºÅÈÆ÷ÀÎÆ®", "<½ºÅÈÆ÷ÀÎÆ®·®>", "½ºÅÈ Æ÷ÀÎÆ®¸¦ ´Ã¸³´Ï´Ù.", 1),
-            new CommandDefinition("Á÷¾÷", "<Á÷¾÷id>", "ÇØ´çÇÏ´Â Á÷¾÷ id·Î ÀüÁ÷ÇÕ´Ï´Ù. id¸¦ Àß¸ø ÀÔ·ÂÇÒ ½Ã °ÔÀÓÁ¢¼ÓÀÌ ºÒ°¡´ÉÇØÁú ¼ö ÀÖ½À´Ï´Ù.", 5),
-            new CommandDefinition("ÇöÀç¸Ê", "", "ÇöÀç ¸Ê °íÀ¯³Ñ¹ö¸¦ Ãâ·ÂÇÕ´Ï´Ù.", 3),
-            new CommandDefinition("¹Ì½ºÆ½¿ÀÇÂ", "", "¹Ì½ºÆ½ÇÊµå ¿ÀÇÂÀ» ¾Ë·ÁÁÜ", 3),
-            new CommandDefinition("¹Ì½ºÆ½¿ÀÇÁ", "", "¹Ì½ºÆ½ÇÊµå ¿ÀÇÁ¸¦ ¾Ë·ÁÁÜ", 3),
-            new CommandDefinition("¸ğµÎÀúÀå", "", "ÇöÀç Á¢¼ÓÁßÀÎ ¸ğµç ÇÃ·¹ÀÌ¾î¸¦ ÀúÀåÇÕ´Ï´Ù.", 5),
-            new CommandDefinition("»óÁ¡", "<»óÁ¡ID>", "ÇØ´ç »óÁ¡ ID¸¦ °¡Áø »óÁ¡À» ¿±´Ï´Ù.", 5),
-            new CommandDefinition("¸Ş¼Ò", "", Long.MAX_VALUE + "¸Ş¼Ò¸¦ °¡Áö°Ô ¸¸µì´Ï´Ù.", 6), // Meso are untraceable, which may fk up the economy if the GM tries to screw us.
-            new CommandDefinition("·¹º§¾÷", "", "·¹º§¾÷ÀÌ ¹Ù·Î °¡´ÉÇÑ ¸¸Å­ÀÇ °æÇèÄ¡¸¦ È¹µæÇÕ´Ï´Ù.", 4),
-            new CommandDefinition("¾ó¸®±â", "", "Ã¤ÆÃ±İÁö¸¦ ½ÃÀÛÇÕ´Ï´Ù.", 9),
-            new CommandDefinition("³ìÀÌ±â", "", "Ã¤ÆÃ±İÁö¸¦ Á¾·áÇÕ´Ï´Ù.", 9),
-            new CommandDefinition("Ã¤ÆÃ±İÁö", "", "Ã¤ÆÃ±İÁö¸¦ Á¾·áÇÕ´Ï´Ù.", 9),
-            //     new CommandDefinition("¾ÆÀÌÅÛÅõ", "<¾ÆÀÌÅÛID> (<¾ÆÀÌÅÛ°¹¼ö> ±âº»°ª:1)", "ÇØ´ç ¾ÆÀÌÅÛÀ» ¾ÆÀÌÅÛ °¹¼ö¸¸Å­ °¡Áı´Ï´Ù.", 2),
-            new CommandDefinition("¾ÆÀÌÅÛ", "<¾ÆÀÌÅÛID> (<¾ÆÀÌÅÛ°¹¼ö> ±âº»°ª:1)", "ÇØ´ç ¾ÆÀÌÅÛÀ» ¾ÆÀÌÅÛ °¹¼ö¸¸Å­ °¡Áı´Ï´Ù.", 2),
-            new CommandDefinition("ÄÚ¾î", "<ÄÚ¾î ¾ÆÀÌÅÛ ID>", "ÄÚ¾î ¾ÆÀÌÅÛÀ» Áö±ŞÇÕ´Ï´Ù.", 2),
-            new CommandDefinition("µå·Ó", "<¾ÆÀÌÅÛID> (<¾ÆÀÌÅÛ°¹¼ö> ±âº»°ª:1)", "ÇØ´ç ¾ÆÀÌÅÛÀ» ¾ÆÀÌÅÛ °¹¼ö¸¸Å­ µå·ÓÇÕ´Ï´Ù.", 7),
-            new CommandDefinition("·¹º§", "<·¹º§>", "ÀÔ·ÂÇÑ ·¹º§·Î ¿Ã¸®°Å³ª ³»¸³´Ï´Ù.", 4),
-            new CommandDefinition("¿Â¶óÀÎ", "", "ÇöÀç Ã¤³Î¿¡ Á¢¼ÓÁßÀÎ À¯Àú¸¦ ¸ğµÎ Ãâ·ÂÇÕ´Ï´Ù.", 1),
-            new CommandDefinition("ÃÑ¿Â¶óÀÎ", "", "¸ğµç Ã¤³Î¿¡ Á¢¼ÓÁßÀÎ À¯Àú¸¦ ¸ğµÎ Ãâ·ÂÇÕ´Ï´Ù.", 1),
-            new CommandDefinition("ÀÎº¥ÃÊ±âÈ­", "¸ğµÎ/ÀåÂø/Àåºñ/¼Òºñ/¼³Ä¡/±âÅ¸/Ä³½Ã", "ÇØ´ç ÅÇÀÇ ÀÎº¥Åä¸®¸¦ ¸ğµÎ ºñ¿ö¹ö¸³´Ï´Ù.", 1),
-            new CommandDefinition("¹é", "", "ÇöÀç Ä³¸¯ÅÍÀÇ À§Ä¡·Î ¸ó½ºÅÍ¸¦ ÀÚ¼®Ã³·³ ºÙ¿©¹ö¸³´Ï´Ù.", 5),
-            new CommandDefinition("¸»", "<»ö±òÄÚµå> <¸Ş½ÃÁö>", "ÀüÃ¼ ¿ùµå¿¡ GMÅØ½ºÆ® ÆĞÅ¶À» ÀÌ¿ëÇÏ¿© ¸Ş½ÃÁö¸¦ Ãâ·ÂÇÕ´Ï´Ù.", 2),
-            new CommandDefinition("ÇÏÀÌµå", "", "´Ù¸¥ ÇÃ·¹ÀÌ¾î¿¡°Ô º¸ÀÌÁö ¾Ê°Ô ¼û¾î¹ö¸³´Ï´Ù.", 2),
-            new CommandDefinition("½ºÅ³¸¶½ºÅÍ", "<Á÷¾÷ÄÚµå>", "Á÷¾÷ÄÚµåÀÇ ½ºÅ³À» ¸ğµÎ ÃÖ´ë·¹º§·Î ¿Ã¸³´Ï´Ù.", 5),
-            new CommandDefinition("½ºÅ³ÃÊ±âÈ­", "", "Á÷¾÷ÄÚµåÀÇ ½ºÅ³À» ¸ğµÎ ÃÖ¼Ò·¹º§·Î ³»¸³´Ï´Ù.", 5),
-            new CommandDefinition("Ä³½¬", "<ÇÊ¿äÄ³½¬·®>", "ÇÊ¿äÇÑ Ä³½¬¸¦ ¾ò½À´Ï´Ù.", 5),
-            new CommandDefinition("ÈÄ¿ø", "", "ÈÄ¿ø ´Ğ³×ÀÓ ±İ¾×", 10),
-            new CommandDefinition("ÀüÃ¼¸»", "ÇÒ¸»", "³ë¶õ»öÀ¸·Î ¾Ë¸³´Ï´Ù.", 9),
-            new CommandDefinition("ÇÖÅ¸ÀÓ", "", "ÇÖÅ¸ÀÓÀÌ ½ÃÀÛµË´Ï´Ù.", 7),
-            new CommandDefinition("Á¦·Î¹«±âÃÊ±âÈ­", "", "Á¦·Î¹«±â¸¦ ÃÊ±âÈ­ÇÕ´Ï´Ù.", 10),
-            new CommandDefinition("½º·ÎÀ×¿şÆù", "way", "Á¦·Î ½º·ÎÀ× ¿şÆùÀ» ½ÃÀüÇÕ´Ï´Ù.", 10),
-            new CommandDefinition("½ºÆä¼È¹öÇÁ", "", "½ºÆä¼È ¹öÇÁ¸¦ ½ÃÀüÇÕ´Ï´Ù.", 10),
-            new CommandDefinition("¸ó½ºÅÍ¹öÇÁ", "", "", 1),
-            new CommandDefinition("¿ÂÅ¸ÀÓ·£´ıº¸³Ê½º", "", "", 1),
-            new CommandDefinition("º°ÀÌÇÖÅ¸ÀÓ", "", "", 1),
-            new CommandDefinition("º°ÀÌÇÖÅ¸ÀÓ2", "", "", 1),
-            new CommandDefinition("¸ŞÀÌÇÃÆ÷ÀÎÆ®", "<¸ŞÀÌÇÃÆ÷ÀÎÆ®·®>", "ÇÊ¿äÇÑ ¸ŞÀÌÇÃÆ÷ÀÎÆ®¸¦ ¾ò½À´Ï´Ù.", 5)
+            new CommandDefinition("ë…¸ë˜", "<ì¬ìƒí• BGM>", "Sound.wzì—ì„œ í•´ë‹¹ ê²½ë¡œì˜ BGMì„ ì¬ìƒí•©ë‹ˆë‹¤.", 1),
+            new CommandDefinition("ì²´ë ¥ë‚®ì¶”ê¸°", "", "ìì‹ ì˜ HPë¥¼ 1, MPë¥¼ 500ìœ¼ë¡œ ë§Œë“­ë‹ˆë‹¤.", 1),
+            new CommandDefinition("í", "", "ìì‹ ì˜ HPì™€ MPë¥¼ ì„œë²„ì—ì„œ ê³„ì‚°ëœ ìµœëŒ€ HP,MPë§Œí¼ ì±„ì›ë‹ˆë‹¤.", 1),
+            new CommandDefinition("ìŠ¤í‚¬", "<ìŠ¤í‚¬id> <ìŠ¤í‚¬ë ˆë²¨> <ìŠ¤í‚¬ë§ˆìŠ¤í„°ë ˆë²¨>", "í•´ë‹¹ ìŠ¤í‚¬idì˜ ìŠ¤í‚¬ë ˆë²¨ê³¼ ë§ˆìŠ¤í„°ë ˆë²¨ë§Œí¼ ìŠ¤í‚¬ì„ ì˜¬ë¦½ë‹ˆë‹¤.", 4),
+            new CommandDefinition("ë§¥ìŠ¤ìŠ¤í‚¬", "", "ëª¨ë“  ìŠ¤í‚¬ì„ ë§ˆìŠ¤í„° í•©ë‹ˆë‹¤. ë‹¨, ì¬ì ‘ì†ì‹œ íŠ•ê¸¸ ìš°ë ¤ê°€ ìˆìŠµë‹ˆë‹¤.", 6),
+            new CommandDefinition("ë§¥ìŠ¤ìŠ¤íƒ¯", "", "ëª¨ë“  ìŠ¤íƒ¯ì„ ìµœëŒ€ë¡œ ë§Œë“­ë‹ˆë‹¤.", 5),
+            new CommandDefinition("ìŠ¤íƒ¯ì´ˆê¸°í™”", "", "ëª¨ë“  ìŠ¤íƒ¯ì„ ì´ˆê¸°í™” í•©ë‹ˆë‹¤.", 5),
+            new CommandDefinition("ìŠ¤í‚¬í¬ì¸íŠ¸", "<ìŠ¤í‚¬í¬ì¸íŠ¸ëŸ‰>", "ê¸°ë³¸ ìŠ¤í‚¬í¬ì¸íŠ¸ë¥¼ ì…ë ¥í•œ ìŠ¤í‚¬í¬ì¸íŠ¸ ì–‘ìœ¼ë¡œ ë§Œë“­ë‹ˆë‹¤.", 4),
+            new CommandDefinition("ìŠ¤í‚¬í¬ì¸íŠ¸2", "<í™•ì¥ìŠ¤í‚¬í¬ì¸íŠ¸ ì¸ë±ìŠ¤> <ìŠ¤í‚¬í¬ì¸íŠ¸ëŸ‰>", "í•´ë‹¹ ìŠ¤í‚¬í¬ì¸íŠ¸ì°½ì˜ ìŠ¤í‚¬í¬ì¸íŠ¸ë¥¼ ì…ë ¥í•œ ì–‘ìœ¼ë¡œ ë§Œë“­ë‹ˆë‹¤.", 4),
+            new CommandDefinition("ìŠ¤íƒ¯í¬ì¸íŠ¸", "<ìŠ¤íƒ¯í¬ì¸íŠ¸ëŸ‰>", "ìŠ¤íƒ¯ í¬ì¸íŠ¸ë¥¼ ëŠ˜ë¦½ë‹ˆë‹¤.", 1),
+            new CommandDefinition("ì§ì—…", "<ì§ì—…id>", "í•´ë‹¹í•˜ëŠ” ì§ì—… idë¡œ ì „ì§í•©ë‹ˆë‹¤. idë¥¼ ì˜ëª» ì…ë ¥í•  ì‹œ ê²Œì„ì ‘ì†ì´ ë¶ˆê°€ëŠ¥í•´ì§ˆ ìˆ˜ ìˆìŠµë‹ˆë‹¤.", 5),
+            new CommandDefinition("í˜„ì¬ë§µ", "", "í˜„ì¬ ë§µ ê³ ìœ ë„˜ë²„ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.", 3),
+            new CommandDefinition("ë¯¸ìŠ¤í‹±ì˜¤í”ˆ", "", "ë¯¸ìŠ¤í‹±í•„ë“œ ì˜¤í”ˆì„ ì•Œë ¤ì¤Œ", 3),
+            new CommandDefinition("ë¯¸ìŠ¤í‹±ì˜¤í”„", "", "ë¯¸ìŠ¤í‹±í•„ë“œ ì˜¤í”„ë¥¼ ì•Œë ¤ì¤Œ", 3),
+            new CommandDefinition("ëª¨ë‘ì €ì¥", "", "í˜„ì¬ ì ‘ì†ì¤‘ì¸ ëª¨ë“  í”Œë ˆì´ì–´ë¥¼ ì €ì¥í•©ë‹ˆë‹¤.", 5),
+            new CommandDefinition("ìƒì ", "<ìƒì ID>", "í•´ë‹¹ ìƒì  IDë¥¼ ê°€ì§„ ìƒì ì„ ì—½ë‹ˆë‹¤.", 5),
+            new CommandDefinition("ë©”ì†Œ", "", Long.MAX_VALUE + "ë©”ì†Œë¥¼ ê°€ì§€ê²Œ ë§Œë“­ë‹ˆë‹¤.", 6), // Meso are untraceable, which may fk up the economy if the GM tries to screw us.
+            new CommandDefinition("ë ˆë²¨ì—…", "", "ë ˆë²¨ì—…ì´ ë°”ë¡œ ê°€ëŠ¥í•œ ë§Œí¼ì˜ ê²½í—˜ì¹˜ë¥¼ íšë“í•©ë‹ˆë‹¤.", 4),
+            new CommandDefinition("ì–¼ë¦¬ê¸°", "", "ì±„íŒ…ê¸ˆì§€ë¥¼ ì‹œì‘í•©ë‹ˆë‹¤.", 9),
+            new CommandDefinition("ë…¹ì´ê¸°", "", "ì±„íŒ…ê¸ˆì§€ë¥¼ ì¢…ë£Œí•©ë‹ˆë‹¤.", 9),
+            new CommandDefinition("ì±„íŒ…ê¸ˆì§€", "", "ì±„íŒ…ê¸ˆì§€ë¥¼ ì¢…ë£Œí•©ë‹ˆë‹¤.", 9),
+            //     new CommandDefinition("ì•„ì´í…œíˆ¬", "<ì•„ì´í…œID> (<ì•„ì´í…œê°¯ìˆ˜> ê¸°ë³¸ê°’:1)", "í•´ë‹¹ ì•„ì´í…œì„ ì•„ì´í…œ ê°¯ìˆ˜ë§Œí¼ ê°€ì§‘ë‹ˆë‹¤.", 2),
+            new CommandDefinition("ì•„ì´í…œ", "<ì•„ì´í…œID> (<ì•„ì´í…œê°¯ìˆ˜> ê¸°ë³¸ê°’:1)", "í•´ë‹¹ ì•„ì´í…œì„ ì•„ì´í…œ ê°¯ìˆ˜ë§Œí¼ ê°€ì§‘ë‹ˆë‹¤.", 2),
+            new CommandDefinition("ì½”ì–´", "<ì½”ì–´ ì•„ì´í…œ ID>", "ì½”ì–´ ì•„ì´í…œì„ ì§€ê¸‰í•©ë‹ˆë‹¤.", 2),
+            new CommandDefinition("ë“œë¡­", "<ì•„ì´í…œID> (<ì•„ì´í…œê°¯ìˆ˜> ê¸°ë³¸ê°’:1)", "í•´ë‹¹ ì•„ì´í…œì„ ì•„ì´í…œ ê°¯ìˆ˜ë§Œí¼ ë“œë¡­í•©ë‹ˆë‹¤.", 7),
+            new CommandDefinition("ë ˆë²¨", "<ë ˆë²¨>", "ì…ë ¥í•œ ë ˆë²¨ë¡œ ì˜¬ë¦¬ê±°ë‚˜ ë‚´ë¦½ë‹ˆë‹¤.", 4),
+            new CommandDefinition("ì˜¨ë¼ì¸", "", "í˜„ì¬ ì±„ë„ì— ì ‘ì†ì¤‘ì¸ ìœ ì €ë¥¼ ëª¨ë‘ ì¶œë ¥í•©ë‹ˆë‹¤.", 1),
+            new CommandDefinition("ì´ì˜¨ë¼ì¸", "", "ëª¨ë“  ì±„ë„ì— ì ‘ì†ì¤‘ì¸ ìœ ì €ë¥¼ ëª¨ë‘ ì¶œë ¥í•©ë‹ˆë‹¤.", 1),
+            new CommandDefinition("ì¸ë²¤ì´ˆê¸°í™”", "ëª¨ë‘/ì¥ì°©/ì¥ë¹„/ì†Œë¹„/ì„¤ì¹˜/ê¸°íƒ€/ìºì‹œ", "í•´ë‹¹ íƒ­ì˜ ì¸ë²¤í† ë¦¬ë¥¼ ëª¨ë‘ ë¹„ì›Œë²„ë¦½ë‹ˆë‹¤.", 1),
+            new CommandDefinition("ë°±", "", "í˜„ì¬ ìºë¦­í„°ì˜ ìœ„ì¹˜ë¡œ ëª¬ìŠ¤í„°ë¥¼ ìì„ì²˜ëŸ¼ ë¶™ì—¬ë²„ë¦½ë‹ˆë‹¤.", 5),
+            new CommandDefinition("ë§", "<ìƒ‰ê¹”ì½”ë“œ> <ë©”ì‹œì§€>", "ì „ì²´ ì›”ë“œì— GMí…ìŠ¤íŠ¸ íŒ¨í‚·ì„ ì´ìš©í•˜ì—¬ ë©”ì‹œì§€ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.", 2),
+            new CommandDefinition("í•˜ì´ë“œ", "", "ë‹¤ë¥¸ í”Œë ˆì´ì–´ì—ê²Œ ë³´ì´ì§€ ì•Šê²Œ ìˆ¨ì–´ë²„ë¦½ë‹ˆë‹¤.", 2),
+            new CommandDefinition("ìŠ¤í‚¬ë§ˆìŠ¤í„°", "<ì§ì—…ì½”ë“œ>", "ì§ì—…ì½”ë“œì˜ ìŠ¤í‚¬ì„ ëª¨ë‘ ìµœëŒ€ë ˆë²¨ë¡œ ì˜¬ë¦½ë‹ˆë‹¤.", 5),
+            new CommandDefinition("ìŠ¤í‚¬ì´ˆê¸°í™”", "", "ì§ì—…ì½”ë“œì˜ ìŠ¤í‚¬ì„ ëª¨ë‘ ìµœì†Œë ˆë²¨ë¡œ ë‚´ë¦½ë‹ˆë‹¤.", 5),
+            new CommandDefinition("ìºì‰¬", "<í•„ìš”ìºì‰¬ëŸ‰>", "í•„ìš”í•œ ìºì‰¬ë¥¼ ì–»ìŠµë‹ˆë‹¤.", 5),
+            new CommandDefinition("í›„ì›", "", "í›„ì› ë‹‰ë„¤ì„ ê¸ˆì•¡", 10),
+            new CommandDefinition("ì „ì²´ë§", "í• ë§", "ë…¸ë€ìƒ‰ìœ¼ë¡œ ì•Œë¦½ë‹ˆë‹¤.", 9),
+            new CommandDefinition("í•«íƒ€ì„", "", "í•«íƒ€ì„ì´ ì‹œì‘ë©ë‹ˆë‹¤.", 7),
+            new CommandDefinition("ì œë¡œë¬´ê¸°ì´ˆê¸°í™”", "", "ì œë¡œë¬´ê¸°ë¥¼ ì´ˆê¸°í™”í•©ë‹ˆë‹¤.", 10),
+            new CommandDefinition("ìŠ¤ë¡œì‰ì›¨í°", "way", "ì œë¡œ ìŠ¤ë¡œì‰ ì›¨í°ì„ ì‹œì „í•©ë‹ˆë‹¤.", 10),
+            new CommandDefinition("ìŠ¤í˜ì…œë²„í”„", "", "ìŠ¤í˜ì…œ ë²„í”„ë¥¼ ì‹œì „í•©ë‹ˆë‹¤.", 10),
+            new CommandDefinition("ëª¬ìŠ¤í„°ë²„í”„", "", "", 1),
+            new CommandDefinition("ì˜¨íƒ€ì„ëœë¤ë³´ë„ˆìŠ¤", "", "", 1),
+            new CommandDefinition("ë³„ì´í•«íƒ€ì„", "", "", 1),
+            new CommandDefinition("ë³„ì´í•«íƒ€ì„2", "", "", 1),
+            new CommandDefinition("ë©”ì´í”Œí¬ì¸íŠ¸", "<ë©”ì´í”Œí¬ì¸íŠ¸ëŸ‰>", "í•„ìš”í•œ ë©”ì´í”Œí¬ì¸íŠ¸ë¥¼ ì–»ìŠµë‹ˆë‹¤.", 5)
         };
     }
 }

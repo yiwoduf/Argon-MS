@@ -1,9 +1,9 @@
 var status = 0;
-var º° = "#fUI/FarmUI.img/objectStatus/star/whole#";
-º°»¡ = "#fUI/GuildMark.img/Mark/Pattern/00004001/1#"
-º°ÆÄ = "#fUI/GuildMark.img/Mark/Pattern/00004001/11#"
-º°º¸ = "#fUI/GuildMark.img/Mark/Pattern/00004001/13#"
-º°È¸ = "#fUI/GuildMark.img/Mark/Pattern/00004001/15#"
+var ë³„ = "#fUI/FarmUI.img/objectStatus/star/whole#";
+ë³„ë¹¨ = "#fUI/GuildMark.img/Mark/Pattern/00004001/1#"
+ë³„íŒŒ = "#fUI/GuildMark.img/Mark/Pattern/00004001/11#"
+ë³„ë³´ = "#fUI/GuildMark.img/Mark/Pattern/00004001/13#"
+ë³„íšŒ = "#fUI/GuildMark.img/Mark/Pattern/00004001/15#"
 importPackage(Packages.constants);
 
 function start() {
@@ -14,13 +14,13 @@ function action(mode, type, selection) { if (mode == -1) { cm.dispose(); } else 
 
     if (status == 0) {
 		
-		var chat = "              #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" È¯»ı½Ã½ºÅÛ "+º°+"\r\n#fs10##Cgray#                                "+ServerConstants.serverName+"ÀÇ È¯»ı½Ã½ºÅÛÀÔ´Ï´Ù.#k\r\n\r\n#fs12##b¢º #h # ´ÔÀÇ È¯»ıÈ½¼ö´Â "+cm.Comma(cm.getReborns())+" È¸ÀÔ´Ï´Ù.#k\r\n#r¢º #h #´ÔÀÇ ·¹º§Àº "+cm.getPlayer().getLevel()+" ·¹º§ ÀÔ´Ï´Ù.#k\r\n\r\n";
-	        chat += "#L1#"+º°»¡+" #rÈ¯»ı½Ã½ºÅÛ#kÀ» ÀÌ¿ëÇÏ°Ú½À´Ï´Ù.\r\n";
+		var chat = "              #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" í™˜ìƒì‹œìŠ¤í…œ "+ë³„+"\r\n#fs10##Cgray#                                "+ServerConstants.serverName+"ì˜ í™˜ìƒì‹œìŠ¤í…œì…ë‹ˆë‹¤.#k\r\n\r\n#fs12##bâ–¶ #h # ë‹˜ì˜ í™˜ìƒíšŸìˆ˜ëŠ” "+cm.Comma(cm.getReborns())+" íšŒì…ë‹ˆë‹¤.#k\r\n#râ–¶ #h #ë‹˜ì˜ ë ˆë²¨ì€ "+cm.getPlayer().getLevel()+" ë ˆë²¨ ì…ë‹ˆë‹¤.#k\r\n\r\n";
+	        chat += "#L1#"+ë³„ë¹¨+" #rí™˜ìƒì‹œìŠ¤í…œ#kì„ ì´ìš©í•˜ê² ìŠµë‹ˆë‹¤.\r\n";
 	        if (cm.getPlayer().getJob() == 10112) {
-                chat += "#L2#"+º°ÆÄ+" #bÁ¦·ÎÀü¿ë#k È¯»ı½Ã½ºÅÛÀ» ÀÌ¿ëÇÏ°Ú½À´Ï´Ù.\r\n";
+                chat += "#L2#"+ë³„íŒŒ+" #bì œë¡œì „ìš©#k í™˜ìƒì‹œìŠ¤í…œì„ ì´ìš©í•˜ê² ìŠµë‹ˆë‹¤.\r\n";
 }
-	 	chat += "#L3#"+º°º¸+" #dÈ¯»ıÆ÷ÀÎÆ®#k·Î Ãß°¡µ¥¹ÌÁö¸¦ ±¸¸ÅÇÏ°Ú½À´Ï´Ù.\r\n";
-		chat += "#L4#"+º°È¸+" #Cgray#È¯»ıÆ÷ÀÎÆ®#k·Î »óÁ¡À» ÀÌ¿ëÇÏ°Ú½À´Ï´Ù.";
+	 	chat += "#L3#"+ë³„ë³´+" #dí™˜ìƒí¬ì¸íŠ¸#kë¡œ ì¶”ê°€ë°ë¯¸ì§€ë¥¼ êµ¬ë§¤í•˜ê² ìŠµë‹ˆë‹¤.\r\n";
+		chat += "#L4#"+ë³„íšŒ+" #Cgray#í™˜ìƒí¬ì¸íŠ¸#kë¡œ ìƒì ì„ ì´ìš©í•˜ê² ìŠµë‹ˆë‹¤.";
 		cm.sendSimple(chat);	
 
 	} else if (status == 1) {

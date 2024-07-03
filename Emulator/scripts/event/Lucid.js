@@ -42,13 +42,13 @@ function scheduledTimeout(eim) {
     var nextWarp = eim.getProperty("nextWarp");
     var it = eim.getPlayers().iterator();
     if (Stage == 2) {
-        WorldBroadcasting.broadcast(MainPacketCreator.serverNotice(6, "¾Ç¸ùÀÇ ÆÄ±«ÀÚ ·ç½Ãµå¸¦ ¹°¸®Ä£ ¿øÁ¤´ë¿©! ±×´ëµéÀÌ ÁøÁ¤ÇÑ ¿µ¿õÀÌ´Ù!"));
+        WorldBroadcasting.broadcast(MainPacketCreator.serverNotice(6, "ì•…ëª½ì˜ íŒŒê´´ì ë£¨ì‹œë“œë¥¼ ë¬¼ë¦¬ì¹œ ì›ì •ëŒ€ì—¬! ê·¸ëŒ€ë“¤ì´ ì§„ì •í•œ ì˜ì›…ì´ë‹¤!"));
         while (it.hasNext()) {
             var chr = it.next();
             chr.warp(rewardmap, "sp");
             randomk = Randomizer.rand(1,3)
             chr.gainItem(4001879, randomk)
-            chr.getClient().send(UIPacket.getItemTopMsg(4001879, "·ç½Ãµå¸¦ ¹°¸®ÃÄ ³ªºñ³¯°³ ¹°¹æ¿ï¼®À»(¸¦) "+randomk+"°³ ¾òÀ¸¼Ì½À´Ï´Ù."));
+            chr.getClient().send(UIPacket.getItemTopMsg(4001879, "ë£¨ì‹œë“œë¥¼ ë¬¼ë¦¬ì³ ë‚˜ë¹„ë‚ ê°œ ë¬¼ë°©ìš¸ì„ì„(ë¥¼) "+randomk+"ê°œ ì–»ìœ¼ì…¨ìŠµë‹ˆë‹¤."));
         }
             eim.getMapFactory().getMap(rewardmap).spawnMonsterOnGroundBelow(em.getMonster(8880177), new Point(88,38));
             eim.unregisterAll();
@@ -128,7 +128,7 @@ function leftParty(eim, player) {
         {
             var chr = it.next();
             chr.changeMap(exit, exit.getPortal(0));
-            chr.Message("ÆÄÆ¼¿øÀÌ ÆÄÆ¼¸¦ ±×¸¸µÖ¼­ ´õÀÌ»ó Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ¾ø½À´Ï´Ù.");
+            chr.Message("íŒŒí‹°ì›ì´ íŒŒí‹°ë¥¼ ê·¸ë§Œë‘¬ì„œ ë”ì´ìƒ í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
         }
         eim.unregisterAll();
         if (eim != null)
@@ -146,7 +146,7 @@ function disbandParty(eim)
     {
         var chr = it.next();
         chr.changeMap(exit, exit.getPortal(0));
-        chr.Message("ÆÄÆ¼ÀåÀÌ ÆÄÆ¼¸¦ ±×¸¸µÖ¼­ ´õÀÌ»ó Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ¾ø½À´Ï´Ù.");
+        chr.Message("íŒŒí‹°ì¥ì´ íŒŒí‹°ë¥¼ ê·¸ë§Œë‘¬ì„œ ë”ì´ìƒ í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
     }
     eim.unregisterAll();
     if (eim != null)

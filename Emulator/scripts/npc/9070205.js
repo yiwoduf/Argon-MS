@@ -1,5 +1,5 @@
 /*
-	°õ°í(leehodud302@naver.com)´ÔÀÇ  ½ºÅ©¸³Æ® ÆÄÀÏÀÔ´Ï´Ù.
+	ê³°ê³ (leehodud302@naver.com)ë‹˜ì˜  ìŠ¤í¬ë¦½íŠ¸ íŒŒì¼ì…ë‹ˆë‹¤.
 */
 var status = -1;
  var itemlist = new Array();
@@ -19,19 +19,19 @@ function start() {
         if (mode == 0)
             cm.dispose();
         else
-            cm.sendGetText("#r#e[¹«·áÄ³½Ã°Ë»ö]#n#k \r\n\r\nÄ³½Ã¾ÆÀÌÅÛ µÎ±ÛÀÚ ÀÌ»ó ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+            cm.sendGetText("#r#e[ë¬´ë£Œìºì‹œê²€ìƒ‰]#n#k \r\n\r\nìºì‹œì•„ì´í…œ ë‘ê¸€ì ì´ìƒ ì…ë ¥í•´ì£¼ì„¸ìš”.");
     } else if (status == 1) {
         var itemid = cm.getText();
         cm.SearchItem(itemid);
     } else if (status == 2) {
         for (var i = 0; i < itemlist.length; i++) {
             if (selection == itemlist[i]) {
-                cm.sendOk("ÀÌ¾ÆÀÌÅÛÀº ÈÄ¿ø¹× È«º¸·Î ±¸¸Å°¡°¡´ÉÇÕ´Ï´Ù.");
+                cm.sendOk("ì´ì•„ì´í…œì€ í›„ì›ë° í™ë³´ë¡œ êµ¬ë§¤ê°€ê°€ëŠ¥í•©ë‹ˆë‹¤.");
                 cm.dispose();
                 return;
             }
         }
-        cm.sendOk("#i" + selection + "# #fs14##e#b#t" + selection + "##n#k#fs12#À»(¸¦) È¹µæÇÏ¼Ì½À´Ï´Ù.");
+        cm.sendOk("#i" + selection + "# #fs14##e#b#t" + selection + "##n#k#fs12#ì„(ë¥¼) íšë“í•˜ì…¨ìŠµë‹ˆë‹¤.");
         cm.gainItem(selection, 1);
         cm.dispose();
     }

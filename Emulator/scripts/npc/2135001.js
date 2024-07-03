@@ -3,19 +3,19 @@
 
 /*
 
-	* ´Ü¹®¿£ÇÇ½Ã ÀÚµ¿Á¦ÀÛ ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¸¸µé¾îÁø ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	* ë‹¨ë¬¸ì—”í”¼ì‹œ ìžë™ì œìž‘ ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ë§Œë“¤ì–´ì§„ ìŠ¤í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤.
 
 	* (Pure Online Development Source Script)
 
-	Á¤±Û·¯ ¿¡ ÀÇÇØ ¸¸µé¾î Á³½À´Ï´Ù.
+	ì •ê¸€ëŸ¬ ì— ì˜í•´ ë§Œë“¤ì–´ ì¡ŒìŠµë‹ˆë‹¤.
 
-	¿£ÇÇ½Ã¾ÆÀÌµð : 9330008
+	ì—”í”¼ì‹œì•„ì´ë”” : 9330008
 
-	¿£ÇÇ½Ã ÀÌ¸§ : FAQ Äù½ºÆ® npc 1
+	ì—”í”¼ì‹œ ì´ë¦„ : FAQ í€˜ìŠ¤íŠ¸ npc 1
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : ¸ÞÀÌÇÃ·Îµå : ¼±ÂøÀå (2000100)
+	ì—”í”¼ì‹œê°€ ìžˆëŠ” ë§µ : ë©”ì´í”Œë¡œë“œ : ì„ ì°©ìž¥ (2000100)
 
-	¿£ÇÇ½Ã ¼³¸í : MISSINGNO
+	ì—”í”¼ì‹œ ì„¤ëª… : MISSINGNO
 
 
 */
@@ -41,7 +41,7 @@ function action(mode, type, selection) {
     if (status == 0) {
          cm.sendMixHair("123",2008);
     } else if (status == 1) {
-         cm.sendOk("Çì¾î°¡ Àß ¿°»öµÇ¾ú½À´Ï´Ù.");
+         cm.sendOk("í—¤ì–´ê°€ ìž˜ ì—¼ìƒ‰ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		 cm.gainItem(2432946,-1);
          cm.dispose();
 		 	 

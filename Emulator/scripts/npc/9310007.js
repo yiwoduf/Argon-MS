@@ -22,7 +22,7 @@ function action(mode, type, selection) {
                     }
 			cm.sendOk(name);
 	} else {
-		cm.sendOk("´©¸£Áö Á» ¸»¶ó°í ¤Ñ¤Ñ");
+		cm.sendOk("ëˆ„ë¥´ì§€ ì¢€ ë§ë¼ê³  ã…¡ã…¡");
 	}
 		cm.dispose();
 	}

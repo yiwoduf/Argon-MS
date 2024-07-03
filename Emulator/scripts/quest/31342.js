@@ -6,7 +6,7 @@ function start(mode, type, selection) {
     } else {
         status++;
         if (status == 0) {
-            qm.sendOk("ÀÚ.ÀÌÁ¦ ½Â°­±â¿¡ ¿Ã¶óÅ¸¼­ ¾Ïº®°ÅÀÎÇÑÅ× °¡º¸µµ·ÏÇØ!");
+            qm.sendOk("ì.ì´ì œ ìŠ¹ê°•ê¸°ì— ì˜¬ë¼íƒ€ì„œ ì•”ë²½ê±°ì¸í•œí…Œ ê°€ë³´ë„ë¡í•´!");
             qm.forceCompleteQuest();
         }
     }

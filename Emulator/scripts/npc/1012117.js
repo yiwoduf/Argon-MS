@@ -1,8 +1,8 @@
 
 
 /*
-À§ ½ºÅ©¸³Æ®ÀÇ ÀúÀÛ±ÇÀº FoxDevelopTeam ÆÀÀå Fox¿¡°Ô ÀÖ½À´Ï´Ù.
-¹®ÀÇ : rinus_alt / fox_devel@nate.com / opharks (skype)
+ìœ„ ìŠ¤í¬ë¦½íŠ¸ì˜ ì €ì‘ê¶Œì€ FoxDevelopTeam íŒ€ì¥ Foxì—ê²Œ ìˆìŠµë‹ˆë‹¤.
+ë¬¸ì˜ : rinus_alt / fox_devel@nate.com / opharks (skype)
 */
 var status = -1;
 
@@ -19,10 +19,10 @@ function action(mode, type, selection) {
         status++;
     }
     if (status == 0) {
-º° = "#fUI/UIToolTip/Item/Equip/Star/Star#"
+ë³„ = "#fUI/UIToolTip/Item/Equip/Star/Star#"
 var choose ="";
-º° = "#fUI/UIToolTip/Item/Equip/Star/Star#"
-        choose += "\r\n#b#L0##i1142744#»óÀÚ»Ì±â#k#l #L1##i5450011#ÄÚÀÎ»Ì±â#l";
+ë³„ = "#fUI/UIToolTip/Item/Equip/Star/Star#"
+        choose += "\r\n#b#L0##i1142744#ìƒìë½‘ê¸°#k#l #L1##i5450011#ì½”ì¸ë½‘ê¸°#l";
         if (cm.getPlayer().hasGmLevel(10)){
         choose += "";
 }

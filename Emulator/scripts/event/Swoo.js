@@ -56,7 +56,7 @@ function monsterKilled(eim, player, mobid) {
         eim.restartEventTimer(5000);
         eim.setProperty("nextWarp", "true");
     } else if (mobid == 8240099) {
-       WorldBroadcasting.broadcast(MainPacketCreator.serverNotice(6, "ºí·¢ÇØºìÀÇ ½º¿ì¸¦ ¹°¸®Ä£ ¿øÁ¤´ë¿©! ±×´ëµéÀÌ ÁøÁ¤ÇÑ ¿µ¿õÀÌ´Ù!"));
+       WorldBroadcasting.broadcast(MainPacketCreator.serverNotice(6, "ë¸”ë™í•´ë¸ì˜ ìŠ¤ìš°ë¥¼ ë¬¼ë¦¬ì¹œ ì›ì •ëŒ€ì—¬! ê·¸ëŒ€ë“¤ì´ ì§„ì •í•œ ì˜ì›…ì´ë‹¤!"));
         var it = eim.getPlayers().iterator();
         while (it.hasNext()) {
             var chr = it.next();
@@ -125,7 +125,7 @@ function leftParty(eim, player) {
         {
             var chr = it.next();
             chr.changeMap(exit, exit.getPortal(0));
-            chr.Message("ÆÄÆ¼¿øÀÌ ÆÄÆ¼¸¦ ±×¸¸µÖ¼­ ´õÀÌ»ó Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ¾ø½À´Ï´Ù.");
+            chr.Message("íŒŒí‹°ì›ì´ íŒŒí‹°ë¥¼ ê·¸ë§Œë‘¬ì„œ ë”ì´ìƒ í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
         }
         eim.unregisterAll();
         if (eim != null)
@@ -143,7 +143,7 @@ function disbandParty(eim)
     {
         var chr = it.next();
         chr.changeMap(exit, exit.getPortal(0));
-        chr.Message("ÆÄÆ¼ÀåÀÌ ÆÄÆ¼¸¦ ±×¸¸µÖ¼­ ´õÀÌ»ó Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ¾ø½À´Ï´Ù.");
+        chr.Message("íŒŒí‹°ì¥ì´ íŒŒí‹°ë¥¼ ê·¸ë§Œë‘¬ì„œ ë”ì´ìƒ í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
     }
     eim.unregisterAll();
     if (eim != null)

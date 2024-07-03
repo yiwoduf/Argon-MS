@@ -35,17 +35,17 @@ function action(mode, type, selection) {
     if (status == 0) {
         cm.showEffect(false,"adventureStory/brandNew");
         cm.playSound(false,"Field.img/Party1/Clear");
-        cm.sendYesNo("#fn³ª´®°íµñ Extrabold##fs15##d[ÆÇµµ¶ó] ¸ğÇè°¡ÀÇ ÈûÀÌ ·Îµå µÇ¾ú½À´Ï´Ù.#k\r\n\r\n#fs14##r¿¹#k#fs12# ¸¦ ´©¸£½Ã¸é Áö±İ ¹Ù·Î #dÆÇµµ¶óÀÇ ¼Ò¿ï »óÀÚ#k ¸¦ °³ºÀÇÕ´Ï´Ù.\r\n\r\n#fs15##bÇöÀç Fever °ÔÀÌÁö#k : #r" + cm.getPlayer().getPandoraBoxFever() + " %#k");
+        cm.sendYesNo("#fnë‚˜ëˆ”ê³ ë”• Extrabold##fs15##d[íŒë„ë¼] ëª¨í—˜ê°€ì˜ í˜ì´ ë¡œë“œ ë˜ì—ˆìŠµë‹ˆë‹¤.#k\r\n\r\n#fs14##rì˜ˆ#k#fs12# ë¥¼ ëˆ„ë¥´ì‹œë©´ ì§€ê¸ˆ ë°”ë¡œ #díŒë„ë¼ì˜ ì†Œìš¸ ìƒì#k ë¥¼ ê°œë´‰í•©ë‹ˆë‹¤.\r\n\r\n#fs15##bí˜„ì¬ Fever ê²Œì´ì§€#k : #r" + cm.getPlayer().getPandoraBoxFever() + " %#k");
     } else if (status == 1) {
         if (cm.haveItem(5060028, 1) && cm.haveItem(4170049, 1)) {
 	    var itemda = dropItems[Randomizer.rand(0, dropItems.length - 1)];
             cm.gainItem(itemda, 1);
             cm.gainItem(5060028, -1);
             cm.gainItem(4170049, -1);
-            cm.sendOk("#fn³ª´®°íµñ Extrabold##fUI/UIWindow2.img/QuestIcon/4/0#\r\n#v" + itemda + "##z" + itemda +"# 1°³");
+            cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• Extrabold##fUI/UIWindow2.img/QuestIcon/4/0#\r\n#v" + itemda + "##z" + itemda +"# 1ê°œ");
             cm.dispose();
         } else {
-	    cm.sendOk("#fn³ª´®°íµñ Extrabold##rÆÇµµ¶óÀÇ »óÀÚ ¶Ç´Â ¿­¼è°¡ ¿©À¯ ¼ö·®ÀÌ ÀÖ´ÂÁö È®ÀÎÇØÁÖ¼¼¿ä.#k");
+	    cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• Extrabold##ríŒë„ë¼ì˜ ìƒì ë˜ëŠ” ì—´ì‡ ê°€ ì—¬ìœ  ìˆ˜ëŸ‰ì´ ìˆëŠ”ì§€ í™•ì¸í•´ì£¼ì„¸ìš”.#k");
 	    cm.dispose();
 	}
         cm.dispose();

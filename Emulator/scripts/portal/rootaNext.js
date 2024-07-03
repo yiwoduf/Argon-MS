@@ -18,7 +18,7 @@ pi.spawnMob(8900100,517,551);
 //pi.getPlayer().send(UIPacket.showWZEffect("Map/Effect.img/WU_PartyQuest/RankedIn", 1));
 pi.getPlayer().send(MainPacketCreator.showEffect("rootabyss/firework"));
 pi.getPlayer().send(MainPacketCreator.playSound("rootabyss/firework"));
-pi.getPlayer().getMap().startMapEffect("ÇÇ¿¡¸£ÀÇ Æ¼ÆÄÆ¼¿¡ ¿Â °ÍÀ» Áø½ÉÀ¸·Î È¯¿µÇÑ´Ù³×!", 5120098);
+pi.getPlayer().getMap().startMapEffect("í”¼ì—ë¥´ì˜ í‹°íŒŒí‹°ì— ì˜¨ ê²ƒì„ ì§„ì‹¬ìœ¼ë¡œ í™˜ì˜í•œë‹¤ë„¤!", 5120098);
 break;
 
 case 105200300:
@@ -26,7 +26,7 @@ pi.resetMap(105200310);
 pi.PartyTimeMove(105200000,105200310,1800);
 pi.spawnMob(8920100,88,135);
 pi.getPlayer().getMap().destroyReactor(100003);
-pi.getPlayer().getMap().startMapEffect("´ç½ÅÀÇ Á×À½À» ¹Ì¸® ½½ÆÛÇØµå¸®Áö¿ä.", 5120102);
+pi.getPlayer().getMap().startMapEffect("ë‹¹ì‹ ì˜ ì£½ìŒì„ ë¯¸ë¦¬ ìŠ¬í¼í•´ë“œë¦¬ì§€ìš”.", 5120102);
 break;
 
 case 105200401:
@@ -37,6 +37,6 @@ break;
 
 }
 } else {
-pi.getPlayer().Message(6,"¸Ê¿¡ ÀÖ´Â ¸ó½ºÅÍ¸¦ ¸ğµÎ Ã³Ä¡ÇØ ÁÖ½Ê½Ã¿À.");
+pi.getPlayer().Message(6,"ë§µì— ìˆëŠ” ëª¬ìŠ¤í„°ë¥¼ ëª¨ë‘ ì²˜ì¹˜í•´ ì£¼ì‹­ì‹œì˜¤.");
 }
 }

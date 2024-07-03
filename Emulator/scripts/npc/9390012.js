@@ -7,9 +7,9 @@ function start() {
 
 function action(mode, type, selection) {
 
-    hpoint = 5000; //ÇÊ¿äÇÑ ÈÄ¿øÆ÷ÀÎÆ®
-    gpoint1 = 1000; //·£´ýÃÖ¼Ò
-    gpoint2 = 10000; //·£´ýÃÖ´ë
+    hpoint = 5000; //í•„ìš”í•œ í›„ì›í¬ì¸íŠ¸
+    gpoint1 = 1000; //ëžœë¤ìµœì†Œ
+    gpoint2 = 10000; //ëžœë¤ìµœëŒ€
 
     if (mode == -1 || mode == 0) {
         cm.dispose();
@@ -19,11 +19,11 @@ function action(mode, type, selection) {
            status++;
     }
     if (status == 0) {
-        ¸» = "ÈÄ¿øÆ÷ÀÎÆ®¸¦ °É°í, ³ª¶û µµ¹Ú ÇÑ ¹ø ÇÏ´Â°Å ¾î¶§?\r\n"
-        ¸»+= "#b"+hpoint+"Æ÷ÀÎÆ®#k·Î ÀÚ±×¸¶Ä¡ #¤Ð"+gpoint2+"#kÆ÷ÀÎÆ® ±îÁö ¹ú ¼ö ÀÖ´Ù°í!\r\n";
-        ¸»+= "¹°·Ð... Á¶±Ý ÀÒÀ» ¼ö µµ ÀÖÁö¸¸ ¸»ÀÌ¾ß!\r\n\r\n"
-        ¸»+= "#L0# #dÈÄ¿øÆ÷ÀÎÆ®·Î µµ¹ÚÀ» ÇØ º¼·¡!"
-        cm.sendSimple(¸»);
+        ë§ = "í›„ì›í¬ì¸íŠ¸ë¥¼ ê±¸ê³ , ë‚˜ëž‘ ë„ë°• í•œ ë²ˆ í•˜ëŠ”ê±° ì–´ë•Œ?\r\n"
+        ë§+= "#b"+hpoint+"í¬ì¸íŠ¸#kë¡œ ìžê·¸ë§ˆì¹˜ #ã… "+gpoint2+"#kí¬ì¸íŠ¸ ê¹Œì§€ ë²Œ ìˆ˜ ìžˆë‹¤ê³ !\r\n";
+        ë§+= "ë¬¼ë¡ ... ì¡°ê¸ˆ ìžƒì„ ìˆ˜ ë„ ìžˆì§€ë§Œ ë§ì´ì•¼!\r\n\r\n"
+        ë§+= "#L0# #dí›„ì›í¬ì¸íŠ¸ë¡œ ë„ë°•ì„ í•´ ë³¼ëž˜!"
+        cm.sendSimple(ë§);
     } else if (status == 1) {
         if (hpoint > 0) {
             g1 = Math.floor(Math.random() * 100)
@@ -32,15 +32,15 @@ function action(mode, type, selection) {
             } else {
                 g2 = Randomizer.rand(gpoint1,gpoint2);
             }
-            ¸» = "¿À.. "+hpoint+"Æ÷ÀÎÆ®¸¦ ÅõÀÚÇÑ °á°ú°¡ ³ª¿Ô¾î!\r\n"
-            ¸»+= ""+g2+"Æ÷ÀÎÆ®¸¦ È¹µæÇß±¸³ª!\r\n"
-            ¸»+= "¸¸Á·ÇÑ °á°ú¸é ´ÙÇàÀÌ°í, ¸¸Á·ÇÏÁö ¸øÇØµµ ½Ç¸ÁÇÏÁö¸¶!";
-            cm.sendOk(¸»);
+            ë§ = "ì˜¤.. "+hpoint+"í¬ì¸íŠ¸ë¥¼ íˆ¬ìží•œ ê²°ê³¼ê°€ ë‚˜ì™”ì–´!\r\n"
+            ë§+= ""+g2+"í¬ì¸íŠ¸ë¥¼ íšë“í–ˆêµ¬ë‚˜!\r\n"
+            ë§+= "ë§Œì¡±í•œ ê²°ê³¼ë©´ ë‹¤í–‰ì´ê³ , ë§Œì¡±í•˜ì§€ ëª»í•´ë„ ì‹¤ë§í•˜ì§€ë§ˆ!";
+            cm.sendOk(ë§);
             cm.gainRC(-hpoint);
             cm.gainRC(g2);
             cm.dispose()l
          } else {
-            cm.sendOk("À½... ¹º°¡ »óÈ²ÀÌ Àß¸øµÈ °Í °°Àºµ¥?\r\n¿î¿µÁø²² ¹®ÀÇ¸¦ ÁÙ ¼ö ÀÖ°Ú´Ï?");
+            cm.sendOk("ìŒ... ë­”ê°€ ìƒí™©ì´ ìž˜ëª»ëœ ê²ƒ ê°™ì€ë°?\r\nìš´ì˜ì§„ê»˜ ë¬¸ì˜ë¥¼ ì¤„ ìˆ˜ ìžˆê² ë‹ˆ?");
             cm.dispose();
          }
     }

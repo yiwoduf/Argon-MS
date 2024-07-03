@@ -48,4 +48,4 @@ function getOnline()
 }
 
 
-//#k#l\r\n#gÇöÀç #r"+getOnline()+"¸í#k#gÀÌ Á¢¼ÓÁßÀÔ´Ï´Ù#k #e¹èÀ²#n : °æÇèÄ¡ #r"+cm.getClient().getChannelServer().getExpRate()+"#k¹è, ¸Ş¼Ò #r"+cm.getClient().getChannelServer().getMesoRate()+"#k¹è, µå·Ó #r"+cm.getClient().getChannelServer().getDropRate()+"#k¹è
+//#k#l\r\n#gí˜„ì¬ #r"+getOnline()+"ëª…#k#gì´ ì ‘ì†ì¤‘ì…ë‹ˆë‹¤#k #eë°°ìœ¨#n : ê²½í—˜ì¹˜ #r"+cm.getClient().getChannelServer().getExpRate()+"#kë°°, ë©”ì†Œ #r"+cm.getClient().getChannelServer().getMesoRate()+"#kë°°, ë“œë¡­ #r"+cm.getClient().getChannelServer().getDropRate()+"#kë°°

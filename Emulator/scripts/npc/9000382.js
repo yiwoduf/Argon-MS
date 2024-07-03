@@ -1,6 +1,6 @@
 /*
-À§ ½ºÅ©¸³Æ®ÀÇ ÀúÀÛ±ÇÀº FoxDevelopTeam ÆÀÀå Fox¿¡°Ô ÀÖ½À´Ï´Ù.
-¹®ÀÇ : rinus_alt / fox_devel@nate.com / opharks (skype)
+ìœ„ ìŠ¤í¬ë¦½íŠ¸ì˜ ì €ì‘ê¶Œì€ FoxDevelopTeam íŒ€ì¥ Foxì—ê²Œ ìˆìŠµë‹ˆë‹¤.
+ë¬¸ì˜ : rinus_alt / fox_devel@nate.com / opharks (skype)
 */
 
 var status = 0;
@@ -25,8 +25,8 @@ function action(mode, type, selection) {
             status--;
         if (status == 0) {
 			
-			var warp = "ÀÛ¹æÀ¸·Î ÀÌµ¿ÇÏ½Ã°Ú½À´Ï±î?\r\n\r\n";
-			warp += "#L100000003#ÀÛ¹æÀÌµ¿#l";
+			var warp = "ì‘ë°©ìœ¼ë¡œ ì´ë™í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\r\n\r\n";
+			warp += "#L100000003#ì‘ë°©ì´ë™#l";
 
 			cm.sendSimple(warp);
 

@@ -8,9 +8,9 @@ function start() {
 }
 
 function action(mode, type, selection) {
-    normalitem = [[2000000,5],[4001713,6],[4001714,5],[4001715,1],[5680157,1],[2000001,2],[2000002,3],[2000003,4]]; // 1~10ÀÏÂ÷
-    gooditem = [[2049309,5],[2049311,4],[2049351,3],[2049360,2],[2049304,1],[2431938,3],[2434007,2]]; //11~20ÀÏÂ÷
-    superitem = [[5680340,4],[5680399,5],[2434340,3],[2049704,1],[2048717,2],[4031856,3],[2048717,1]]; //21~28ÀÏÂ÷
+    normalitem = [[2000000,5],[4001713,6],[4001714,5],[4001715,1],[5680157,1],[2000001,2],[2000002,3],[2000003,4]]; // 1~10ì¼ì°¨
+    gooditem = [[2049309,5],[2049311,4],[2049351,3],[2049360,2],[2049304,1],[2431938,3],[2434007,2]]; //11~20ì¼ì°¨
+    superitem = [[5680340,4],[5680399,5],[2434340,3],[2049704,1],[2048717,2],[4031856,3],[2048717,1]]; //21~28ì¼ì°¨
 
 
     if (mode == -1) {
@@ -28,7 +28,7 @@ function action(mode, type, selection) {
         month = Number(new Date().getMonth()) + 1
         fFile = new File("dailygift/"+cm.getPlayer().getId()+"_"+month+".dgift");
         if (!fFile.exists()) {
-            cm.sendOk("ÀÌ¹ø´Þ¿¡ ¾ÆÁ÷ ÇÑ¹øµµ µ¥ÀÏ¸®±âÇÁÆ®¸¦ ¹ÞÁö ¾ÊÀ¸¼Ì±º¿ä?\r\n»õ·Î¿î µ¥ÀÏ¸®±âÇÁÆ® ¸®½ºÆ®¸¦ ²¨³» µå¸±°Ô¿ä!\r\n\r\n#b(È®ÀÎÀ» ´©¸¥ ÈÄ ´Ù½Ã ÇÑ ¹ø ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.)");
+            cm.sendOk("ì´ë²ˆë‹¬ì— ì•„ì§ í•œë²ˆë„ ë°ì¼ë¦¬ê¸°í”„íŠ¸ë¥¼ ë°›ì§€ ì•Šìœ¼ì…¨êµ°ìš”?\r\nìƒˆë¡œìš´ ë°ì¼ë¦¬ê¸°í”„íŠ¸ ë¦¬ìŠ¤íŠ¸ë¥¼ êº¼ë‚´ ë“œë¦´ê²Œìš”!\r\n\r\n#b(í™•ì¸ì„ ëˆ„ë¥¸ í›„ ë‹¤ì‹œ í•œ ë²ˆ ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ ì£¼ì‹œê¸° ë°”ëžë‹ˆë‹¤.)");
             fFile.createNewFile();
             cm.getPlayer().setKeyValue("dailyhow",1);
             out = new FileOutputStream("dailygift/"+cm.getPlayer().getId()+"_"+month+".dgift",false);
@@ -49,7 +49,7 @@ function action(mode, type, selection) {
             cm.dispose();
         } else {
             if (cm.getPlayer().getDateKey("dailygift") == null) {
-                hi = "¿À´Ãµµ ¿À¼Ì±º¿ä. ¸ÅÀÏ¸ÅÀÏ ¿À½Ã´Â ºÐµé Á¤¸» °¨»çÇÕ´Ï´Ù´Ï±ñ¿ä! ±×·³ ¿À´ÃÀÇ ¼±¹°À» ¾Ë·Áµå¸±°Ô¿ä!\r\n\r\n"
+                hi = "ì˜¤ëŠ˜ë„ ì˜¤ì…¨êµ°ìš”. ë§¤ì¼ë§¤ì¼ ì˜¤ì‹œëŠ” ë¶„ë“¤ ì •ë§ ê°ì‚¬í•©ë‹ˆë‹¤ë‹ˆê¹ìš”! ê·¸ëŸ¼ ì˜¤ëŠ˜ì˜ ì„ ë¬¼ì„ ì•Œë ¤ë“œë¦´ê²Œìš”!\r\n\r\n"
                 infile = new BufferedReader(new FileReader(fFile));
                 put = "";
                 msg = "";
@@ -62,29 +62,29 @@ function action(mode, type, selection) {
                 msg = msg.replace(/'/g, '\"');
                 chrdailylist.push(msg);
                 chrdailylist = JSON.parse(chrdailylist);
-                hi+= "#e¦£¦¡¦¡¦¡¦¡¦¡¦¡¿À´ÃÀÇ µ¥ÀÏ¸® ±âÇÁÆ®¦¡¦¡¦¡¦¡¦¡¦¡¦¤\r\n"
-                hi+= "¡¡¡¡¡¡¡¡¡¡"
+                hi+= "#eâ”Œâ”€â”€â”€â”€â”€â”€ì˜¤ëŠ˜ì˜ ë°ì¼ë¦¬ ê¸°í”„íŠ¸â”€â”€â”€â”€â”€â”€â”\r\n"
+                hi+= "ã€€ã€€ã€€ã€€ã€€"
                 hi+= "#i"+chrdailylist[cm.getPlayer().getKeyValue("dailyhow")][0]+"# #b#z"+chrdailylist[cm.getPlayer().getKeyValue("dailyhow")][0]+"# #r[x"+chrdailylist[cm.getPlayer().getKeyValue("dailyhow")][1]+"]#k\r\n"
-                hi+= "¦¦¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¥#n\r\n"
-                hi+= "#L0##d ÀÌ ´Þ ÀüÃ¼ µ¥ÀÏ¸®±âÇÁÆ® ¸®½ºÆ® º¸±â#l\r\n"
-                hi+= "#L1# ¿À´ÃÀÇ µ¥ÀÏ¸®±âÇÁÆ® ¹Þ±â"
+                hi+= "â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜#n\r\n"
+                hi+= "#L0##d ì´ ë‹¬ ì „ì²´ ë°ì¼ë¦¬ê¸°í”„íŠ¸ ë¦¬ìŠ¤íŠ¸ ë³´ê¸°#l\r\n"
+                hi+= "#L1# ì˜¤ëŠ˜ì˜ ë°ì¼ë¦¬ê¸°í”„íŠ¸ ë°›ê¸°"
                 cm.sendSimple(hi);
             } else if (cm.getPlayer().getKeyValue("dailyhow") >= 29) {
-                cm.sendOk("ÀÌ¹Ì ÀÌ ´ÞÀÇ µ¥ÀÏ¸®±âÇÁÆ®´Â ¸ðµÎ ¹ÞÀ¸¼Ì´ä´Ï´Ù. ´ÙÀ½´ÞÀ» ±â´ëÇØ ÁÖ¼¼¿ä!");
+                cm.sendOk("ì´ë¯¸ ì´ ë‹¬ì˜ ë°ì¼ë¦¬ê¸°í”„íŠ¸ëŠ” ëª¨ë‘ ë°›ìœ¼ì…¨ë‹µë‹ˆë‹¤. ë‹¤ìŒë‹¬ì„ ê¸°ëŒ€í•´ ì£¼ì„¸ìš”!");
                 cm.dispose();
             } else {
-                cm.sendOk("¿À´Ã ¼±¹°Àº ÀÌ¹Ì ¹Þ¾Æ°£ °Í °°¾Æ¿ä!\r\n³»ÀÏ ´Ù½Ã Ã£¾Æ¿Í ÁÖ¼¼¿ä!");
+                cm.sendOk("ì˜¤ëŠ˜ ì„ ë¬¼ì€ ì´ë¯¸ ë°›ì•„ê°„ ê²ƒ ê°™ì•„ìš”!\r\në‚´ì¼ ë‹¤ì‹œ ì°¾ì•„ì™€ ì£¼ì„¸ìš”!");
                 cm.dispose();
             }
         }
     } else if (status == 1) {
         if (selection == 0) {
-            hi = ""+month+"¿ù´ÞÀÇ µ¥ÀÏ¸®±âÇÁÆ® ¸®½ºÆ®ÀÔ´Ï´Ù.\r\n\r\n"
+            hi = ""+month+"ì›”ë‹¬ì˜ ë°ì¼ë¦¬ê¸°í”„íŠ¸ ë¦¬ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.\r\n\r\n"
             for (i=1; i<chrdailylist.length; i++) {
-                hi+= "#b"+i+"ÀÏ#k #i"+chrdailylist[i][0]+"#    "
+                hi+= "#b"+i+"ì¼#k #i"+chrdailylist[i][0]+"#    "
                 if (i%4 == 0) {
                     hi+= "\r\n"
-                    hi+= "#e¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡#n\r\n"
+                    hi+= "#eâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€#n\r\n"
                 }
             }
             cm.sendOk(hi);
@@ -93,7 +93,7 @@ function action(mode, type, selection) {
             cm.gainItem(chrdailylist[cm.getPlayer().getKeyValue("dailyhow")][0], chrdailylist[cm.getPlayer().getKeyValue("dailyhow")][1]);
             cm.getPlayer().setKeyValue("dailyhow",Number(cm.getPlayer().getKeyValue("dailyhow")) + 1);
             cm.getPlayer().setDateKey("dailygift",1);
-            cm.sendOk("¿À´ÃÀÇ µ¥ÀÏ¸®±âÇÁÆ®¸¦ µå·È¾î¿ä!");
+            cm.sendOk("ì˜¤ëŠ˜ì˜ ë°ì¼ë¦¬ê¸°í”„íŠ¸ë¥¼ ë“œë ¸ì–´ìš”!");
             cm.dispose();
         }
     }

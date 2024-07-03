@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -177,35 +177,35 @@ public class PlayersHandler {
             chr.getMap().broadcastMessage(RunePacket.removeRune(rune, chr));
             chr.send(MainPacketCreator.resetActions());
             switch (chr.getTouchedRune()) {
-                case 0: //½Å¼ÓÀÇ ·é
+                case 0: //ì‹ ì†ì˜ ë£¬
                     effect = SkillFactory.getSkill(80001427).getEffect(1);
                     effect.applyTo(chr);
                     break;
-                case 1: //Àç»ıÀÇ ·é
+                case 1: //ì¬ìƒì˜ ë£¬
                     effect = SkillFactory.getSkill(80001428).getEffect(1);
                     effect.applyTo(chr);
                     break;
-                case 2: //ºØ±«ÀÇ ·é
+                case 2: //ë¶•ê´´ì˜ ë£¬
                     effect = SkillFactory.getSkill(80001430).getEffect(1);
                     effect.applyTo(chr);
                     break;
-                case 3: //ÆÄ¸êÀÇ ·é
+                case 3: //íŒŒë©¸ì˜ ë£¬
                     effect = SkillFactory.getSkill(80001432).getEffect(1);
                     effect.applyTo(chr);
                     break;
-                case 4: //ÃµµÕÀÇ ·é
+                case 4: //ì²œë‘¥ì˜ ë£¬
                     effect = SkillFactory.getSkill(80001752).getEffect(1);
                     effect.applyTo(chr);
                     break;
-                case 5: //ÁöÁøÀÇ ·é
+                case 5: //ì§€ì§„ì˜ ë£¬
                     effect = SkillFactory.getSkill(80001753).getEffect(1);
                     effect.applyTo(chr);
                     break;
-                case 6: //¾îµÒÀÇ ·é
+                case 6: //ì–´ë‘ ì˜ ë£¬
                     effect = SkillFactory.getSkill(80001754).getEffect(1);
                     effect.applyTo(chr);
                     break;
-                case 7: //º¸¹°ÀÇ ·é
+                case 7: //ë³´ë¬¼ì˜ ë£¬
                     effect = SkillFactory.getSkill(80001755).getEffect(1);
                     effect.applyTo(chr);
                     break;
@@ -279,7 +279,7 @@ public class PlayersHandler {
             c.getPlayer().setFollowInitiator(false);
             tt.getClient().getSession().writeAndFlush(MainPacketCreator.followRequest(c.getPlayer().getId()));
         } else {
-            c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "³Ê¹« ¸Ö¸® ¶³¾îÁ® ÀÖ½À´Ï´Ù."));
+            c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "ë„ˆë¬´ ë©€ë¦¬ ë–¨ì–´ì ¸ ìˆìŠµë‹ˆë‹¤."));
         }
     }
 
@@ -305,7 +305,7 @@ public class PlayersHandler {
                     tt.setFollowId(0);
                     c.getPlayer().setFollowId(0);
                 }
-                c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "³Ê¹« ¸Ö¸® ¶³¾îÁ® ÀÖ½À´Ï´Ù."));
+                c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "ë„ˆë¬´ ë©€ë¦¬ ë–¨ì–´ì ¸ ìˆìŠµë‹ˆë‹¤."));
             }
         } else {
             c.getPlayer().setFollowId(0);

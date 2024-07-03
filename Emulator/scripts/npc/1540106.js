@@ -1,8 +1,8 @@
 /*
 
-	Á¦ÀÛ Àè½¼¿Â¶óÀÎ
-	2Â÷¼öÁ¤ Ä¡ ¿ì ¾¾ : projectchiu16@nate.com
-	3Â÷¼öÁ¤ »ç ¶ó ¼¾ : saracen_dev@nate.com
+	ì œì‘ ì­ìŠ¨ì˜¨ë¼ì¸
+	2ì°¨ìˆ˜ì • ì¹˜ ìš° ì”¨ : projectchiu16@nate.com
+	3ì°¨ìˆ˜ì • ì‚¬ ë¼ ì„¼ : saracen_dev@nate.com
 
 */
 function start() {
@@ -43,12 +43,12 @@ function action(mode, type, selection) {
 } else if (selection == 6) {
 	cm.dispose();
 	cm.warp(910002020, 0);
-	cm.playerMessage(1, "Á¨¿¡°Ô ¸»À» °É¾îº¸¼¼¿ä.");
+	cm.playerMessage(1, "ì  ì—ê²Œ ë§ì„ ê±¸ì–´ë³´ì„¸ìš”.");
 
 } else if (selection == 7) {
 	cm.dispose();
 	cm.warp(680000300, 0);
-	cm.playerMessage(1, "¹®¿ùÇÏorºñºñ¾È¿¡°Ô ¸»À» °É¾îº¸¼¼¿ä.");
+	cm.playerMessage(1, "ë¬¸ì›”í•˜orë¹„ë¹„ì•ˆì—ê²Œ ë§ì„ ê±¸ì–´ë³´ì„¸ìš”.");
 
 } else if (selection == 8) {
 	cm.dispose();

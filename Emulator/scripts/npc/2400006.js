@@ -7,7 +7,7 @@ importPackage(Packages.database);
 importPackage(java.lang);
 importPackage(Packages.tools.RandomStream);
 
-/* 0 Á¾·á 1 ÁøÇàÁß  */
+/* 0 ì¢…ë£Œ 1 ì§„í–‰ì¤‘  */
 
 var status = -1;
 var startmessage = "";
@@ -21,7 +21,7 @@ function start() {
 }
 
 function action(mode, type, selection) {
-/* rottostart(½ÃÀÛ) end(Á¾·á) check(Á¶°Ç) buyrotto(±¸¸Å)*/
+/* rottostart(ì‹œì‘) end(ì¢…ë£Œ) check(ì¡°ê±´) buyrotto(êµ¬ë§¤)*/
     if (mode == -1) {
         cm.dispose();
         return;
@@ -34,17 +34,17 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-       var text = "#e< ÄÁÅÙÃ÷ : ·Î¶Ç½Ã½ºÅÛ >#n\r\n¾È³çÇÏ¼¼¿ä, ¸ğÇè°¡ºĞµé È¤½Ã ·Î¶Ç¿¡ °ü½ÉÀÌ ¾øÀ¸½Ê´Ï±î? ÀÎ»ı ¿ªÀüÀ» ¿øÇÏ½Ã´Â ºĞµé, µ·ÀÌ ±ÃÇÌÇØ ¾ÆÀÌÅÛÀ» ±¸¸ÅÇÏ½Ã Èûµå½Å ºĞµé ¸ğµÎ ·Î¶Ç·Î ÀÎ»ı¿ªÀüÀ» ³ë·Áº¸¼¼¿ä!!\r\n\r\n\r\n#b#L0#·Î¶Ç ±¸¸ÅÇÏ±â\r\n#L1#±¸¸Å ³»¿ªº¸±â";
-	text += "\r\n#L4#´çÃ·¿©ºÎ È®ÀÎ";
+       var text = "#e< ì»¨í…ì¸  : ë¡œë˜ì‹œìŠ¤í…œ >#n\r\nì•ˆë…•í•˜ì„¸ìš”, ëª¨í—˜ê°€ë¶„ë“¤ í˜¹ì‹œ ë¡œë˜ì— ê´€ì‹¬ì´ ì—†ìœ¼ì‹­ë‹ˆê¹Œ? ì¸ìƒ ì—­ì „ì„ ì›í•˜ì‹œëŠ” ë¶„ë“¤, ëˆì´ ê¶í•í•´ ì•„ì´í…œì„ êµ¬ë§¤í•˜ì‹œ í˜ë“œì‹  ë¶„ë“¤ ëª¨ë‘ ë¡œë˜ë¡œ ì¸ìƒì—­ì „ì„ ë…¸ë ¤ë³´ì„¸ìš”!!\r\n\r\n\r\n#b#L0#ë¡œë˜ êµ¬ë§¤í•˜ê¸°\r\n#L1#êµ¬ë§¤ ë‚´ì—­ë³´ê¸°";
+	text += "\r\n#L4#ë‹¹ì²¨ì—¬ë¶€ í™•ì¸";
 	if (cm.getPlayer().hasGmLevel(6)){
-	text += "#l\r\n\r\n#e#r[GM ¸Ş´º]#k#n#b";
-	text += "\r\n#L2#·Î¶Ç ÁøÇàÇÏ±â";
-	text += "\r\n#L3#ÁøÇàÁßÀÎ ·Î¶ÇÀÌº¥Æ® ¸¶°¨ÇÏ±â";
+	text += "#l\r\n\r\n#e#r[GM ë©”ë‰´]#k#n#b";
+	text += "\r\n#L2#ë¡œë˜ ì§„í–‰í•˜ê¸°";
+	text += "\r\n#L3#ì§„í–‰ì¤‘ì¸ ë¡œë˜ì´ë²¤íŠ¸ ë§ˆê°í•˜ê¸°";
         }
 	cm.sendSimple(text);
     } else if(status == 1) {
        if(selection == 0) {
-       cm.sendSimple("·Î¶Ç±¸¸Å¸¦ ¿øÇÏ¼¼¿ä? ¾î¶² ¹æ½ÄÀ¸·Î ±¸¸ÅÇÏ½Ã°Ú½À´Ï±î?\r\n\r\n#b#L0#Á÷Á¢ ÀÔ·ÂÀ¸·Î ±¸¸Å\r\n#L1#ÀÚµ¿ ¹ß±ŞÀ¸·Î ±¸¸Å");
+       cm.sendSimple("ë¡œë˜êµ¬ë§¤ë¥¼ ì›í•˜ì„¸ìš”? ì–´ë–¤ ë°©ì‹ìœ¼ë¡œ êµ¬ë§¤í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\r\n\r\n#b#L0#ì§ì ‘ ì…ë ¥ìœ¼ë¡œ êµ¬ë§¤\r\n#L1#ìë™ ë°œê¸‰ìœ¼ë¡œ êµ¬ë§¤");
        } else if(selection == 1) {
        rottolog();
        } else if(selection == 2) {
@@ -52,12 +52,12 @@ function action(mode, type, selection) {
 	} else if(selection == 3) {
 	end();
 	} else if(selection == 4) {
-	´çÃ·¿©ºÎ();
+	ë‹¹ì²¨ì—¬ë¶€();
 	}
     } else if(status == 2) {
 	sel = selection;
        if(sel == 0) {
-       cm.sendGetText("¡Ø ÀÏ°ö¹øÂ° ÀÚ¸®±îÁö¸¸ ÀÔ·ÂÇØ ÁÖ¼¼¿ä. (º¸³Ê½º¹øÈ£)\r\n¡Ø ex) 1,2,3,4,5,6,7\r\n¡Ø ¶ç¾î¾²±â,°ø¹é ¾øÀÌ ÀÔ·ÂÇØÁÖ½Ã°í, À§¿Í°°ÀÌ ÀÔ·ÂÇÏÁö ¾ÊÀ¸¸é ´çÃ·Á¶È¸°¡ ¾ÈµË´Ï´Ù.");
+       cm.sendGetText("â€» ì¼ê³±ë²ˆì§¸ ìë¦¬ê¹Œì§€ë§Œ ì…ë ¥í•´ ì£¼ì„¸ìš”. (ë³´ë„ˆìŠ¤ë²ˆí˜¸)\r\nâ€» ex) 1,2,3,4,5,6,7\r\nâ€» ë„ì–´ì“°ê¸°,ê³µë°± ì—†ì´ ì…ë ¥í•´ì£¼ì‹œê³ , ìœ„ì™€ê°™ì´ ì…ë ¥í•˜ì§€ ì•Šìœ¼ë©´ ë‹¹ì²¨ì¡°íšŒê°€ ì•ˆë©ë‹ˆë‹¤.");
        } else if(sel == 1) {
 	fir = Randomizer.rand(1,50); sec = Randomizer.rand(1,50); thi = Randomizer.rand(1,50);
 	fou = Randomizer.rand(1,50); fif = Randomizer.rand(1,50); six = Randomizer.rand(1,50); sev = Randomizer.rand(1,50);
@@ -72,67 +72,67 @@ function action(mode, type, selection) {
      }
 }
 
-function rottostart() { // ·Î¶Ç ½ÃÀÛ (¿î¿µÀÚ)
-	var con = MYSQL.getConnection().prepareStatement("SELECT * FROM arotto1 WHERE »óÅÂ = 0").executeQuery();
+function rottostart() { // ë¡œë˜ ì‹œì‘ (ìš´ì˜ì)
+	var con = MYSQL.getConnection().prepareStatement("SELECT * FROM arotto1 WHERE ìƒíƒœ = 0").executeQuery();
 	if(!con.next()) {
-	startmessage += "ÁøÇàÇÒ ¼ö ¾ø½À´Ï´Ù.";
+	startmessage += "ì§„í–‰í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.";
 	cm.sendOk(startmessage); cm.dispose(); con.close();
 	} else {
 	var aa = Randomizer.rand(1,50);var bb = Randomizer.rand(1,50);var cc = Randomizer.rand(1,50);
 	var dd = Randomizer.rand(1,50);var ee = Randomizer.rand(1,50);var ff = Randomizer.rand(1,50);var gg = Randomizer.rand(1,50);
-	var upda = MYSQL.getConnection().prepareStatement("UPDATE arotto1 set È¸Â÷ = ?,»óÅÂ = ?, ´çÃ·¹øÈ£ = ? WHERE »óÅÂ = 0");
-        upda.setInt(1, con.getInt("È¸Â÷") +1);
+	var upda = MYSQL.getConnection().prepareStatement("UPDATE arotto1 set íšŒì°¨ = ?,ìƒíƒœ = ?, ë‹¹ì²¨ë²ˆí˜¸ = ? WHERE ìƒíƒœ = 0");
+        upda.setInt(1, con.getInt("íšŒì°¨") +1);
         upda.setInt(2, 1);
         upda.setString(3, aa+","+bb+","+cc+","+dd+","+ee+","+ff+","+gg);
 	upda.executeUpdate();
 	var del = MYSQL.getConnection().prepareStatement("DELETE FROM arotto");
 	del.executeUpdate();
 	del.close();
-	startmessage += (con.getInt("È¸Â÷")+1)+"È¸Â÷°¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù. ´çÃ·¹øÈ£("+aa+","+bb+","+cc+","+dd+","+ee+","+ff+" + º¸³Ê½º ¹øÈ£ "+gg+")";
-	WorldBroadcasting.broadcast(MainPacketCreator.getGMText(12, "[·Î¶Ç] ·Î¶Ç¿£ÇÇ½Ã : "+(con.getInt("È¸Â÷")+1)+"È¸Â÷ ÀÌº¥Æ®°¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù."));
+	startmessage += (con.getInt("íšŒì°¨")+1)+"íšŒì°¨ê°€ ì‹œì‘ë˜ì—ˆìŠµë‹ˆë‹¤. ë‹¹ì²¨ë²ˆí˜¸("+aa+","+bb+","+cc+","+dd+","+ee+","+ff+" + ë³´ë„ˆìŠ¤ ë²ˆí˜¸ "+gg+")";
+	WorldBroadcasting.broadcast(MainPacketCreator.getGMText(12, "[ë¡œë˜] ë¡œë˜ì—”í”¼ì‹œ : "+(con.getInt("íšŒì°¨")+1)+"íšŒì°¨ ì´ë²¤íŠ¸ê°€ ì‹œì‘ë˜ì—ˆìŠµë‹ˆë‹¤."));
 	cm.sendOk(startmessage); cm.dispose(); upda.close(); con.close();
         }
-}                     // ·Î¶Ç ½ÃÀÛÇÔ¼ö ³¡
+}                     // ë¡œë˜ ì‹œì‘í•¨ìˆ˜ ë
 
-function end() {      // ·Î¶Ç Á¾·á (¿î¿µÀÚ)
-	var con = MYSQL.getConnection().prepareStatement("SELECT * FROM arotto1 WHERE »óÅÂ = 1").executeQuery();
+function end() {      // ë¡œë˜ ì¢…ë£Œ (ìš´ì˜ì)
+	var con = MYSQL.getConnection().prepareStatement("SELECT * FROM arotto1 WHERE ìƒíƒœ = 1").executeQuery();
 	if(!con.next()) {
-	endmessage += "Á¾·áÇÒ ¼ö ¾ø½À´Ï´Ù.";
+	endmessage += "ì¢…ë£Œí•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.";
         cm.sendOk(endmessage); cm.dispose(); con.close();
 	} else {
-        var upda1 = MYSQL.getConnection().prepareStatement("UPDATE arotto set »óÅÂ = ? WHERE Âü¿©¹øÈ£ = ?");
+        var upda1 = MYSQL.getConnection().prepareStatement("UPDATE arotto set ìƒíƒœ = ? WHERE ì°¸ì—¬ë²ˆí˜¸ = ?");
 	upda1.setInt(1, 1);
-	upda1.setString(2, con.getString("´çÃ·¹øÈ£"));
+	upda1.setString(2, con.getString("ë‹¹ì²¨ë²ˆí˜¸"));
         upda1.executeUpdate(); upda1.close();
-	var upda = MYSQL.getConnection().prepareStatement("UPDATE arotto1 set »óÅÂ = ?, ´çÃ·¹øÈ£ = ? WHERE »óÅÂ = 1");
+	var upda = MYSQL.getConnection().prepareStatement("UPDATE arotto1 set ìƒíƒœ = ?, ë‹¹ì²¨ë²ˆí˜¸ = ? WHERE ìƒíƒœ = 1");
 	upda.setInt(1, 0);
         upda.setString(2, 0);
         upda.executeUpdate();
-	endmessage += con.getInt("È¸Â÷")+"È¸Â÷¸¦ Á¾·áÇÏ¿´½À´Ï´Ù.";
-	WorldBroadcasting.broadcast(MainPacketCreator.getGMText(12, "[·Î¶Ç] ·Î¶Ç¿£ÇÇ½Ã : "+con.getInt("È¸Â÷")+"È¸Â÷ ÀÌº¥Æ®°¡ Á¾·áµÇ¾ú½À´Ï´Ù. ´çÃ· µÇ½ÅºĞµéÀº Àú¸¦ Ã£¾Æ¿Í ÁÖ¼¼¿ä.  ´çÃ·¹øÈ£ : ("+con.getString("´çÃ·¹øÈ£")+")"));
+	endmessage += con.getInt("íšŒì°¨")+"íšŒì°¨ë¥¼ ì¢…ë£Œí•˜ì˜€ìŠµë‹ˆë‹¤.";
+	WorldBroadcasting.broadcast(MainPacketCreator.getGMText(12, "[ë¡œë˜] ë¡œë˜ì—”í”¼ì‹œ : "+con.getInt("íšŒì°¨")+"íšŒì°¨ ì´ë²¤íŠ¸ê°€ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤. ë‹¹ì²¨ ë˜ì‹ ë¶„ë“¤ì€ ì €ë¥¼ ì°¾ì•„ì™€ ì£¼ì„¸ìš”.  ë‹¹ì²¨ë²ˆí˜¸ : ("+con.getString("ë‹¹ì²¨ë²ˆí˜¸")+")"));
         cm.sendOk(endmessage); cm.dispose(); upda.close(); con.close();
         }
-}		    // ·Î¶Ç Á¾·áÇÔ¼ö ³¡
+}		    // ë¡œë˜ ì¢…ë£Œí•¨ìˆ˜ ë
 
-function check() {      // ±¸¸Å Á¶°Ç 
+function check() {      // êµ¬ë§¤ ì¡°ê±´ 
 
 	
-}		    // ±¸¸Å Á¶°Ç ÇÔ¼ö ³¡
+}		    // êµ¬ë§¤ ì¡°ê±´ í•¨ìˆ˜ ë
 
-function buyrotto() { // ·Î¶Ç ±¸¸Å ÇÔ¼ö (À¯Àú) /* °á°ú Àü 0 °á°ú ÈÄ 1 */
-	var con = MYSQL.getConnection().prepareStatement("SELECT * FROM arotto WHERE ¾ÆÀÌµğ = "+cm.getPlayer().getId()).executeQuery();
+function buyrotto() { // ë¡œë˜ êµ¬ë§¤ í•¨ìˆ˜ (ìœ ì €) /* ê²°ê³¼ ì „ 0 ê²°ê³¼ í›„ 1 */
+	var con = MYSQL.getConnection().prepareStatement("SELECT * FROM arotto WHERE ì•„ì´ë”” = "+cm.getPlayer().getId()).executeQuery();
 	if(con.next()) {
 	}
-	var con = MYSQL.getConnection().prepareStatement("SELECT * FROM arotto1 WHERE »óÅÂ = 1").executeQuery();
+	var con = MYSQL.getConnection().prepareStatement("SELECT * FROM arotto1 WHERE ìƒíƒœ = 1").executeQuery();
 	if(con.next()) {
 	if(cm.getPlayer().getMeso() < 1000000000) {
-        cm.sendOk("·Î¶Ç¸¦ ±¸¸ÅÇÒ 1,000,000,000¸Ş¼Ò°¡ ºÎÁ·ÇÕ´Ï´Ù."); cm.dispose(); con.close();
+        cm.sendOk("ë¡œë˜ë¥¼ êµ¬ë§¤í•  1,000,000,000ë©”ì†Œê°€ ë¶€ì¡±í•©ë‹ˆë‹¤."); cm.dispose(); con.close();
         }
-	st = con.getInt("È¸Â÷");
+	st = con.getInt("íšŒì°¨");
 	} else {
-	cm.getPlayer().dropMessage(1,"ÇöÀç´Â ·Î¶Ç ÀÌº¥Æ® ½ÃÀÛ ÀÌÀüÀÌ¶ó ±¸¸ÅÇÏ½Ç ¼ö ¾ø½À´Ï´Ù."); cm.dispose(); con.close(); return; 
+	cm.getPlayer().dropMessage(1,"í˜„ì¬ëŠ” ë¡œë˜ ì´ë²¤íŠ¸ ì‹œì‘ ì´ì „ì´ë¼ êµ¬ë§¤í•˜ì‹¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤."); cm.dispose(); con.close(); return; 
 	}
-	var insert = MYSQL.getConnection().prepareStatement("INSERT INTO arotto(È¸Â÷,»óÅÂ,Âü¿©¹øÈ£,´Ğ³×ÀÓ,¾ÆÀÌµğ) VALUES(?,?,?,?,?)");
+	var insert = MYSQL.getConnection().prepareStatement("INSERT INTO arotto(íšŒì°¨,ìƒíƒœ,ì°¸ì—¬ë²ˆí˜¸,ë‹‰ë„¤ì„,ì•„ì´ë””) VALUES(?,?,?,?,?)");
 	insert.setInt(1, st);
         insert.setInt(2, 0);
         insert.setString(3, fir+","+sec+","+thi+","+fou+","+fif+","+six+","+sev);
@@ -141,45 +141,45 @@ function buyrotto() { // ·Î¶Ç ±¸¸Å ÇÔ¼ö (À¯Àú) /* °á°ú Àü 0 °á°ú ÈÄ 1 */
         insert.executeUpdate();
         insert.close();
 		cm.gainMeso(-1000000000);
-	cm.sendOk("±¸¸ÅÇÏ½Å ¹øÈ£¸¦ È®ÀÎÇØ ÁÖ¼¼¿ä.\r\n#e"+fir+"#n + #e"+sec+"#n + #e"+thi+"#n + #e"+fou+"#n + #e"+fif+"#n + #e"+six+"#n #r#eº¸³Ê½º¹øÈ£ "+sev);cm.dispose(); return; con.close();
-}                     // ·Î¶Ç ±¸¸Å ÇÔ¼ö ³¡
+	cm.sendOk("êµ¬ë§¤í•˜ì‹  ë²ˆí˜¸ë¥¼ í™•ì¸í•´ ì£¼ì„¸ìš”.\r\n#e"+fir+"#n + #e"+sec+"#n + #e"+thi+"#n + #e"+fou+"#n + #e"+fif+"#n + #e"+six+"#n #r#eë³´ë„ˆìŠ¤ë²ˆí˜¸ "+sev);cm.dispose(); return; con.close();
+}                     // ë¡œë˜ êµ¬ë§¤ í•¨ìˆ˜ ë
 
-function rottolog() { //·Î¶Ç ±¸¸Å³»¿ª ÇÔ¼ö (À¯Àú)
+function rottolog() { //ë¡œë˜ êµ¬ë§¤ë‚´ì—­ í•¨ìˆ˜ (ìœ ì €)
 	var i = 1;
-	var con = MYSQL.getConnection().prepareStatement("SELECT * FROM arotto WHERE ¾ÆÀÌµğ = "+cm.getPlayer().getId()).executeQuery();
-	logmessage += "·Î¶Ç ±¸¸Å³»¿ªÀÔ´Ï´Ù.\r\n\r\n";
+	var con = MYSQL.getConnection().prepareStatement("SELECT * FROM arotto WHERE ì•„ì´ë”” = "+cm.getPlayer().getId()).executeQuery();
+	logmessage += "ë¡œë˜ êµ¬ë§¤ë‚´ì—­ì…ë‹ˆë‹¤.\r\n\r\n";
 	while(con.next()) {
-	logmessage += "#e["+i+"]#n #b"+con.getString("Âü¿©¹øÈ£")+"#k\r\n";
+	logmessage += "#e["+i+"]#n #b"+con.getString("ì°¸ì—¬ë²ˆí˜¸")+"#k\r\n";
 	i++;
 	}
 	if(i == 1) {
-	logmessage += "#r·Î¶Ç¸¦ ±¸¸ÅÇÏ½ÅÀûÀÌ ¾ø´Â°Í °°½À´Ï´Ù.";
+	logmessage += "#rë¡œë˜ë¥¼ êµ¬ë§¤í•˜ì‹ ì ì´ ì—†ëŠ”ê²ƒ ê°™ìŠµë‹ˆë‹¤.";
 	cm.sendOk(logmessage); cm.dispose(); con.close();  return;
 	} else {
 	cm.sendOk(logmessage); cm.dispose(); con.close(); return;
 	}
 }
 
-function ´çÃ·¿©ºÎ() {
-	var con = MYSQL.getConnection().prepareStatement("SELECT * FROM arotto WHERE »óÅÂ = 1").executeQuery();
-	var con2 = MYSQL.getConnection().prepareStatement("SELECT * FROM arotto1 WHERE »óÅÂ = 0").executeQuery();
+function ë‹¹ì²¨ì—¬ë¶€() {
+	var con = MYSQL.getConnection().prepareStatement("SELECT * FROM arotto WHERE ìƒíƒœ = 1").executeQuery();
+	var con2 = MYSQL.getConnection().prepareStatement("SELECT * FROM arotto1 WHERE ìƒíƒœ = 0").executeQuery();
 	if(con2.next()) {
 	if(con.next()) {
-	if(con.getInt("¾ÆÀÌµğ") == cm.getPlayer().getId()) {
+	if(con.getInt("ì•„ì´ë””") == cm.getPlayer().getId()) {
 var del = MYSQL.getConnection().prepareStatement("DELETE FROM arotto WHERE id = ?");
 	del.setInt(1, con.getInt("id"));
 	del.executeUpdate(); del.close();
-	cm.sendOk("·Î¶Ç¿¡ ´çÃ·µÇ¼Ì½À´Ï´Ù! ÃàÇÏµå¸³´Ï´Ù.");
+	cm.sendOk("ë¡œë˜ì— ë‹¹ì²¨ë˜ì…¨ìŠµë‹ˆë‹¤! ì¶•í•˜ë“œë¦½ë‹ˆë‹¤.");
 	//cm.gainMeso(3000000000);
 	cm.gainItem(4001715, 50);
 	cm.dispose(); con.close(); con2.close();
 	   } else {
-		cm.sendOk("¾Æ½±Áö¸¸ ´çÃ·ÀÌ µÈ°Í°°Áö ¾Ê½À´Ï´Ù.");cm.dispose(); con.close(); con2.close();
+		cm.sendOk("ì•„ì‰½ì§€ë§Œ ë‹¹ì²¨ì´ ëœê²ƒê°™ì§€ ì•ŠìŠµë‹ˆë‹¤.");cm.dispose(); con.close(); con2.close();
 	   }  
 	} else {
-	cm.sendOk("¾Æ½±Áö¸¸ ´çÃ·ÀÌ µÈ°Í°°Áö ¾Ê½À´Ï´Ù.");cm.dispose(); con.close(); con2.close();
+	cm.sendOk("ì•„ì‰½ì§€ë§Œ ë‹¹ì²¨ì´ ëœê²ƒê°™ì§€ ì•ŠìŠµë‹ˆë‹¤.");cm.dispose(); con.close(); con2.close();
 	}
 	} else {
-	cm.sendOk("¾ÆÁ÷ °á°ú°¡ ¸¶°¨µÇÁö ¾Ê¾Ò½À´Ï´Ù.");cm.dispose(); con.close(); con2.close();
+	cm.sendOk("ì•„ì§ ê²°ê³¼ê°€ ë§ˆê°ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");cm.dispose(); con.close(); con2.close();
 	}
 }

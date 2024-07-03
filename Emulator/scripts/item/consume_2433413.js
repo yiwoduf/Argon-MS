@@ -4,11 +4,11 @@ var status = -1;
 
 
 bosses = [["0100100",500,30,40],["4250000",2500,100,130],["2220000",5000,200,250],["3300006",15000,500,1000],["8130100",40000,2000,5000]];
-// º¸½ºÄÚµå,Hp,ÃÖ¼Ò°ø°İ·Â,ÃÖ´ë°ø°İ·Â ¼øÀÌ¸ç À§Á¬¿¡  ¸÷ÄÚµåimg/stand/0 °æ·Î°¡ Á¸ÀçÇÏ´Â ¸ó½ºÅÍ¸¸ °¡´É, ¾Æ´Ï¸é ·±Å¸ÀÓ ¶ä
+// ë³´ìŠ¤ì½”ë“œ,Hp,ìµœì†Œê³µê²©ë ¥,ìµœëŒ€ê³µê²©ë ¥ ìˆœì´ë©° ìœ„ì ¯ì—  ëª¹ì½”ë“œimg/stand/0 ê²½ë¡œê°€ ì¡´ì¬í•˜ëŠ” ëª¬ìŠ¤í„°ë§Œ ê°€ëŠ¥, ì•„ë‹ˆë©´ ëŸ°íƒ€ì„ ëœ¸
 
 
 
-// °ÇµéÁö ¸»°Í
+// ê±´ë“¤ì§€ ë§ê²ƒ
 cplayer = [];
 bbcheck = -1;
 ccheck = -1;
@@ -33,13 +33,13 @@ if ((cm.getPlayer().getKeyValue("maplemon_hunger") - hcheck) >= 0) {
 cm.getPlayer().setKeyValue("maplemon_hungertime",new Date().getTime());
     mobcheck = [0,1000,2500,4500,8000,13000,20000,30000,45000,68000,87000,110000,99999999999999]
     if (mode == 1) {
-        if (status == 1 && ¼±ÅÃ1 == 0 && selection == 0) {
+        if (status == 1 && ì„ íƒ1 == 0 && selection == 0) {
             if (cm.getPlayer().getKeyValue("maplemon_hunger") == 100) {
-                 cm.sendOk("Çã±â°¡ ²Ë Â÷ ÀÖ¾î ¸ÔÀÌ¸¦ ÁÙ ¼ö ¾ø½À´Ï´Ù.");
+                 cm.sendOk("í—ˆê¸°ê°€ ê½‰ ì°¨ ìˆì–´ ë¨¹ì´ë¥¼ ì¤„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                  cm.dispose();
                  return;
             } else if (cm.itemQuantity(4032862) == 0) {
-                 cm.sendOk("#i4032862##z4032862#°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.\r\n\r\n°¡»ó´ë°áÀ» ÅëÇØ #i4032862##z4032862#¸¦ ¸ğ¾ÆÁÖ¼¼¿ä!");
+                 cm.sendOk("#i4032862##z4032862#ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.\r\n\r\nê°€ìƒëŒ€ê²°ì„ í†µí•´ #i4032862##z4032862#ë¥¼ ëª¨ì•„ì£¼ì„¸ìš”!");
                  cm.dispose();
                  return;
             } else {
@@ -65,24 +65,24 @@ cm.getPlayer().setKeyValue("maplemon_hungertime",new Date().getTime());
                  }
                  cm.gainItem(4032862, -1);        
             }
-        } else if (status == 1 && ¼±ÅÃ1 == 0 && selection == 1)  {
+        } else if (status == 1 && ì„ íƒ1 == 0 && selection == 1)  {
                  cm.getPlayer().setKeyValue("maplemon_currenthp", cm.getPlayer().getKeyValue("maplemon_fullhp"));
                  selection = 0;
-        } else if (status == 2 && ¼±ÅÃ1 == 2) {
+        } else if (status == 2 && ì„ íƒ1 == 2) {
             attackRd = Randomizer.rand(Math.floor(cm.getPlayer().getKeyValue("maplemon_acc1") / 3), Math.floor(cm.getPlayer().getKeyValue("maplemon_acc2") / 3));
-            if (º¸½ºHP - attackRd > 0) {
-                º¸½ºHP -= attackRd;
+            if (ë³´ìŠ¤HP - attackRd > 0) {
+                ë³´ìŠ¤HP -= attackRd;
             } else {
-                cm.sendOk("´ç½ÅÀÇ ½Â¸®ÀÔ´Ï´Ù.");
-                cm.gainItem(4032862, ¼±ÅÃ2);
+                cm.sendOk("ë‹¹ì‹ ì˜ ìŠ¹ë¦¬ì…ë‹ˆë‹¤.");
+                cm.gainItem(4032862, ì„ íƒ2);
                 cm.dispose();
                 return;
             }
-            BattackRd = Randomizer.rand(bosses[¼±ÅÃ2][2]/3, bosses[¼±ÅÃ2][3]/3);
+            BattackRd = Randomizer.rand(bosses[ì„ íƒ2][2]/3, bosses[ì„ íƒ2][3]/3);
             if (cm.getPlayer().getKeyValue("maplemon_currenthp") - BattackRd > 0) {
                 cm.getPlayer().setKeyValue("maplemon_currenthp",cm.getPlayer().getKeyValue("maplemon_currenthp") - BattackRd);
             } else {
-                cm.sendOk("´ç½ÅÀÇ ÆĞ¹èÀÔ´Ï´Ù.");
+                cm.sendOk("ë‹¹ì‹ ì˜ íŒ¨ë°°ì…ë‹ˆë‹¤.");
                 cm.dispose();
                 return;
             }
@@ -90,10 +90,10 @@ cm.getPlayer().setKeyValue("maplemon_hungertime",new Date().getTime());
             if (selection == 0) {
                attackRd = Randomizer.rand(Math.floor(cm.getPlayer().getKeyValue("maplemon_acc1") / 3), Math.floor(cm.getPlayer().getKeyValue("maplemon_acc2") / 3));
                if (Number(target.getKeyValue("maplemon_currenthp")) - attackRd <= 0) {
-                   cm.sendOk("´ç½ÅÀÇ ½Â¸®ÀÔ´Ï´Ù.");
+                   cm.sendOk("ë‹¹ì‹ ì˜ ìŠ¹ë¦¬ì…ë‹ˆë‹¤.");
                    cm.gainItem(4310229, -10);
                    target.setKeyValue("maplemon_currenthp", 0);
-                   target.dropMessage(6, "´ç½ÅÀÇ ÅÏÀÌ µÇ¾ú½À´Ï´Ù. ÁøÇàÇØÁÖ¼¼¿ä.");
+                   target.dropMessage(6, "ë‹¹ì‹ ì˜ í„´ì´ ë˜ì—ˆìŠµë‹ˆë‹¤. ì§„í–‰í•´ì£¼ì„¸ìš”.");
                    target.setKeyValue("maplemon_mytime", 1);
                    cm.getPlayer().setKeyValue("maplemon_mytime", null);
                    cm.getPlayer().setKeyValue("maplemon_attack_ok",null);
@@ -108,21 +108,21 @@ cm.getPlayer().setKeyValue("maplemon_hungertime",new Date().getTime());
                    cm.getPlayer().setKeyValue("maplemon_acc1",cm.getPlayer().getKeyValue("maplemon_acc1") / 2);
                    cm.getPlayer().setKeyValue("maplemon_acc2",cm.getPlayer().getKeyValue("maplemon_acc2") / 2);
                }
-                   target.dropMessage(6, "´ç½ÅÀÇ ÅÏÀÌ µÇ¾ú½À´Ï´Ù. ÁøÇàÇØÁÖ¼¼¿ä.")
+                   target.dropMessage(6, "ë‹¹ì‹ ì˜ í„´ì´ ë˜ì—ˆìŠµë‹ˆë‹¤. ì§„í–‰í•´ì£¼ì„¸ìš”.")
                    target.setKeyValue("maplemon_mytime", 1);
             } else if (selection == 1) {
                cm.getPlayer().setKeyValue("maplemon_currenthp", 0);
-               target.dropMessage(6, "´ç½ÅÀÇ ÅÏÀÌ µÇ¾ú½À´Ï´Ù. ÁøÇàÇØÁÖ¼¼¿ä.")
+               target.dropMessage(6, "ë‹¹ì‹ ì˜ í„´ì´ ë˜ì—ˆìŠµë‹ˆë‹¤. ì§„í–‰í•´ì£¼ì„¸ìš”.")
                target.setKeyValue("maplemon_mytime", 1);
-               cm.sendOk("Ç×º¹ÇÏ¼Ì½À´Ï´Ù.");
+               cm.sendOk("í•­ë³µí•˜ì…¨ìŠµë‹ˆë‹¤.");
                cm.dispose();
                return;
             } else if (selection == 2) {
                if (cm.getPlayer().getKeyValue("maplemon_mytime") != 1) {
-                   cm.getPlayer().dropMessage(6, "¾ÆÁ÷ ´ç½ÅÀÇ ÅÏÀÌ µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+                   cm.getPlayer().dropMessage(6, "ì•„ì§ ë‹¹ì‹ ì˜ í„´ì´ ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
                    ccheck--;
                } else if (target.getKeyValue("maplemon_currenthp") <= 0) {
-                   cm.sendOk("´ç½ÅÀÇ ½Â¸®ÀÔ´Ï´Ù.");
+                   cm.sendOk("ë‹¹ì‹ ì˜ ìŠ¹ë¦¬ì…ë‹ˆë‹¤.");
                    cm.gainItem(4310229, -10);
                    cm.getPlayer().setKeyValue("maplemon_mytime", null);
                    cm.getPlayer().setKeyValue("maplemon_attack_ok",null);
@@ -133,7 +133,7 @@ cm.getPlayer().setKeyValue("maplemon_hungertime",new Date().getTime());
                    return;
 
                } else if (Math.floor(cm.getPlayer().getKeyValue("maplemon_currenthp")) <= 0) {
-                   cm.sendOk("ÆĞ¹èÇÏ¿´½À´Ï´Ù.");
+                   cm.sendOk("íŒ¨ë°°í•˜ì˜€ìŠµë‹ˆë‹¤.");
                    cm.getPlayer().setKeyValue("maplemon_mytime", null);
                    cm.getPlayer().setKeyValue("maplemon_attack_ok",null);
                    if (cm.getPlayer().getKeyValue("maplemon_skill") != null) {
@@ -150,11 +150,11 @@ cm.getPlayer().setKeyValue("maplemon_hungertime",new Date().getTime());
                    } else {
                        cm.getPlayer().setKeyValue("maplemon_currenthp", Number(cm.getPlayer().getKeyValue("maplemon_currenthp")) + healhp);
                    }
-                   target.dropMessage(6, "»ó´ë°¡ Ã¼·Â 30% È¸º¹ ½ºÅ³À» »ç¿ëÇÏ¼Ì½À´Ï´Ù.");
+                   target.dropMessage(6, "ìƒëŒ€ê°€ ì²´ë ¥ 30% íšŒë³µ ìŠ¤í‚¬ì„ ì‚¬ìš©í•˜ì…¨ìŠµë‹ˆë‹¤.");
                } else if (cm.getPlayer().getKeyValue("maplemon_skill") == 1) {
                    cm.getPlayer().setKeyValue("maplemon_acc1", cm.getPlayer().getKeyValue("maplemon_acc1") * 2);
                    cm.getPlayer().setKeyValue("maplemon_acc2", cm.getPlayer().getKeyValue("maplemon_acc2") * 2);
-                   target.dropMessage(6, "»ó´ë°¡ ÇÑÅÏµ¿¾È °ø°İ·Â 2¹è ½ºÅ³À» »ç¿ëÇÏ¼Ì½À´Ï´Ù.");
+                   target.dropMessage(6, "ìƒëŒ€ê°€ í•œí„´ë™ì•ˆ ê³µê²©ë ¥ 2ë°° ìŠ¤í‚¬ì„ ì‚¬ìš©í•˜ì…¨ìŠµë‹ˆë‹¤.");
                } else if (cm.getPlayer().getKeyValue("maplemon_skill") == 2) {
                    rdkill = Math.floor(Math.random() * 200);
                    if (rdkill == 100) {
@@ -162,7 +162,7 @@ cm.getPlayer().setKeyValue("maplemon_hungertime",new Date().getTime());
                    } else {
                        cm.getPlayer().setKeyValue("maplemon_currenthp", cm.getPlayer().getKeyValue("maplemon_currenthp") * 0.9);
                    }
-                   target.dropMessage(6, "»ó´ë°¡ 0.5% È®·ü·Î Áï»ç ½ºÅ³À» »ç¿ëÇÏ¼Ì½À´Ï´Ù.");
+                   target.dropMessage(6, "ìƒëŒ€ê°€ 0.5% í™•ë¥ ë¡œ ì¦‰ì‚¬ ìŠ¤í‚¬ì„ ì‚¬ìš©í•˜ì…¨ìŠµë‹ˆë‹¤.");
                }
                ccheck++;
                cm.getPlayer().setKeyValue("maplemon_skill_used" ,1);
@@ -175,86 +175,86 @@ cm.getPlayer().setKeyValue("maplemon_hungertime",new Date().getTime());
 	return;
     }
     if (status == 0) {
-        ¸» = "¾È³çÇÏ¼¼¿ä #h # ¸ŞÀÌÇÃ¸ó ¸¶½ºÅÍ´Ô! ¿øÇÏ½Ã´Â Ç×¸ñÀ» ¼±ÅÃÇØÁÖ¼¼¿ä.\r\n\r\n"
-        ¸»+= "#L0# ¸ŞÀÌÇÃ¸ó Å°¿ì±â\r\n"
-        ¸»+= "#L1# À¯Àú¿Í ´ëÀüÇÏ±â\r\n"
-        ¸»+= "#L2# °¡»ó´ë°áÇÏ±â\r\n"
+        ë§ = "ì•ˆë…•í•˜ì„¸ìš” #h # ë©”ì´í”Œëª¬ ë§ˆìŠ¤í„°ë‹˜! ì›í•˜ì‹œëŠ” í•­ëª©ì„ ì„ íƒí•´ì£¼ì„¸ìš”.\r\n\r\n"
+        ë§+= "#L0# ë©”ì´í”Œëª¬ í‚¤ìš°ê¸°\r\n"
+        ë§+= "#L1# ìœ ì €ì™€ ëŒ€ì „í•˜ê¸°\r\n"
+        ë§+= "#L2# ê°€ìƒëŒ€ê²°í•˜ê¸°\r\n"
         if (cm.getPlayer().getKeyValue("maplemon_skill") == null) {
-            ¸»+= "#L3# ½ºÅ³ ¼±ÅÃ (ÃÖÃÊ 1È¸¸¸ °¡´É)"
+            ë§+= "#L3# ìŠ¤í‚¬ ì„ íƒ (ìµœì´ˆ 1íšŒë§Œ ê°€ëŠ¥)"
         }
-        cm.sendSimple(¸»);
+        cm.sendSimple(ë§);
     } else if (status == 1) {
-        ¼±ÅÃ1 = selection;
+        ì„ íƒ1 = selection;
         if (selection == 0) {
-            ¸» = "¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡#fMob/"+cm.getPlayer().getKeyValue("maplemon_mobcode")+".img/stand/0#\r\n"
-            ¸»+= "                 ¡¡¡¡   "+ cm.getPlayer().getKeyValue("maplemon_mobname")+" #b(LV."+cm.getPlayer().getKeyValue("maplemon_moblevel")+")#k\r\n"
+            ë§ = "ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€#fMob/"+cm.getPlayer().getKeyValue("maplemon_mobcode")+".img/stand/0#\r\n"
+            ë§+= "                 ã€€ã€€   "+ cm.getPlayer().getKeyValue("maplemon_mobname")+" #b(LV."+cm.getPlayer().getKeyValue("maplemon_moblevel")+")#k\r\n"
             Bshop = Math.floor(Number(cm.getPlayer().getKeyValue("maplemon_fullhp") / cm.getPlayer().getKeyValue("maplemon_currenthp"))) * 100;
-            ¸»+= "        ¡¡¡¡°ø°İ·Â : #r"+cm.getPlayer().getKeyValue("maplemon_acc1")+" ~ "+cm.getPlayer().getKeyValue("maplemon_acc2")+"#k\r\n"
-            ¸»+= "        ¡¡¡¡HP : #r"+cm.getPlayer().getKeyValue("maplemon_currenthp")+"#k/"+cm.getPlayer().getKeyValue("maplemon_fullhp")+"    #B"+Bshop+"#\r\n"
-            ¸»+= "            Çã±â : #r"+cm.getPlayer().getKeyValue("maplemon_hunger")+"#k/100    #B"+cm.getPlayer().getKeyValue("maplemon_hunger")+"#\r\n"
+            ë§+= "        ã€€ã€€ê³µê²©ë ¥ : #r"+cm.getPlayer().getKeyValue("maplemon_acc1")+" ~ "+cm.getPlayer().getKeyValue("maplemon_acc2")+"#k\r\n"
+            ë§+= "        ã€€ã€€HP : #r"+cm.getPlayer().getKeyValue("maplemon_currenthp")+"#k/"+cm.getPlayer().getKeyValue("maplemon_fullhp")+"    #B"+Bshop+"#\r\n"
+            ë§+= "            í—ˆê¸° : #r"+cm.getPlayer().getKeyValue("maplemon_hunger")+"#k/100    #B"+cm.getPlayer().getKeyValue("maplemon_hunger")+"#\r\n"
             Echeck = mobcheck[cm.getPlayer().getKeyValue("maplemon_moblevel")]
             Eshop = Math.floor(Number(cm.getPlayer().getKeyValue("maplemon_mobexp")/Echeck) * 100)
-            ¸»+= "        ¡¡  EXP : #b"+cm.getPlayer().getKeyValue("maplemon_mobexp")+"#k/"+Echeck+"    #B"+Eshop+"#   "+Eshop+"%\r\n\r\n"
-            ¸»+= "#L0# #i4032862##d ¸ÔÀÌÁÖ±â (Çã±â +5, Çã±â°¡ 100ÀÏ¶§´Â »ç¿ë ºÒ°¡)\r\n"
-            ¸»+= "#L1# #i2000005##d Ä¡·áÇÏ±â (Ã¼·Â +100%)\r\n"
-            cm.sendSimple(¸»);
+            ë§+= "        ã€€  EXP : #b"+cm.getPlayer().getKeyValue("maplemon_mobexp")+"#k/"+Echeck+"    #B"+Eshop+"#   "+Eshop+"%\r\n\r\n"
+            ë§+= "#L0# #i4032862##d ë¨¹ì´ì£¼ê¸° (í—ˆê¸° +5, í—ˆê¸°ê°€ 100ì¼ë•ŒëŠ” ì‚¬ìš© ë¶ˆê°€)\r\n"
+            ë§+= "#L1# #i2000005##d ì¹˜ë£Œí•˜ê¸° (ì²´ë ¥ +100%)\r\n"
+            cm.sendSimple(ë§);
         } else if (selection == 1) {
-            cm.sendGetText("´ëÀüÀ» ½ÅÃ»ÇÒ ÇÃ·¹ÀÌ¾î ÀÌ¸§À» Àû¾î ÁÖ¼¼¿ä.");
+            cm.sendGetText("ëŒ€ì „ì„ ì‹ ì²­í•  í”Œë ˆì´ì–´ ì´ë¦„ì„ ì ì–´ ì£¼ì„¸ìš”.");
         } else if (selection == 2) {
-            ¸» = "¿øÇÏ´Â °¡»ó´ë°á»ó´ë¸¦ ¼±ÅÃÇØ ÁÖ¼¼¿ä.\r\n\r\n"
+            ë§ = "ì›í•˜ëŠ” ê°€ìƒëŒ€ê²°ìƒëŒ€ë¥¼ ì„ íƒí•´ ì£¼ì„¸ìš”.\r\n\r\n"
             for (i=0; i<bosses.length; i++) {
-                ¸»+= "#L"+i+"# #b#b#o"+bosses[i][0]+"# #r[Ã¼·Â : "+bosses[i][1]+"][°ø°İ·Â : "+bosses[i][2]+" ~ "+bosses[i][3]+"]#k\r\n"
+                ë§+= "#L"+i+"# #b#b#o"+bosses[i][0]+"# #r[ì²´ë ¥ : "+bosses[i][1]+"][ê³µê²©ë ¥ : "+bosses[i][2]+" ~ "+bosses[i][3]+"]#k\r\n"
             }
-            cm.sendSimple(¸»);
+            cm.sendSimple(ë§);
         } else if (selection == 3) {
-            ¸» = "»ç¿ëÀ» ¿øÇÏ½Ã´Â ½ºÅ³À» ¼±ÅÃÇØ ÁÖ¼¼¿ä. ½ºÅ³Àº 1¹ø¸¸ ¼±ÅÃ °¡´ÉÇÏ¸ç, ¼±ÅÃ ÈÄ¿¡´Â ½ºÅ³À» º¯°æÇÏ½Ç ¼ö ¾øÀ¸´Ï ½ÅÁßÈ÷ ¼±ÅÃÇØ ÁÖ¼¼¿ä.\r\n#r (¸ğµç ½ºÅ³Àº ´ëÀü´ç 1È¸¸¸ »ç¿ë°¡´ÉÇÕ´Ï´Ù.)\r\n\r\n"
-            ¸»+= "#L0# #b#i2900000# HP 30% È¸º¹\r\n"
-            ¸»+= "#L1# #i2022858# ÇÑ ÅÏµ¿¾È °ø°İ·Â 2¹è\r\n"
-            ¸»+= "#L2# #i2010001# 0.5% È®·ü·Î »ó´ë Áï»ç (½ÇÆĞ½Ã 10%ÀÇ Ã¼·ÂÇÇÇØ)"
-            cm.sendSimple(¸»);
+            ë§ = "ì‚¬ìš©ì„ ì›í•˜ì‹œëŠ” ìŠ¤í‚¬ì„ ì„ íƒí•´ ì£¼ì„¸ìš”. ìŠ¤í‚¬ì€ 1ë²ˆë§Œ ì„ íƒ ê°€ëŠ¥í•˜ë©°, ì„ íƒ í›„ì—ëŠ” ìŠ¤í‚¬ì„ ë³€ê²½í•˜ì‹¤ ìˆ˜ ì—†ìœ¼ë‹ˆ ì‹ ì¤‘íˆ ì„ íƒí•´ ì£¼ì„¸ìš”.\r\n#r (ëª¨ë“  ìŠ¤í‚¬ì€ ëŒ€ì „ë‹¹ 1íšŒë§Œ ì‚¬ìš©ê°€ëŠ¥í•©ë‹ˆë‹¤.)\r\n\r\n"
+            ë§+= "#L0# #b#i2900000# HP 30% íšŒë³µ\r\n"
+            ë§+= "#L1# #i2022858# í•œ í„´ë™ì•ˆ ê³µê²©ë ¥ 2ë°°\r\n"
+            ë§+= "#L2# #i2010001# 0.5% í™•ë¥ ë¡œ ìƒëŒ€ ì¦‰ì‚¬ (ì‹¤íŒ¨ì‹œ 10%ì˜ ì²´ë ¥í”¼í•´)"
+            cm.sendSimple(ë§);
         }
     } else if (status == 2) {
-       if (¼±ÅÃ1 == 1) {
+       if (ì„ íƒ1 == 1) {
            target = cm.getClient().getChannelServer().getPlayerStorage().getCharacterByName(cm.getText());
            if (target.getName() == cm.getPlayer().getName()) {
-              cm.sendOk("ÀÚ±âÀÚ½ÅÇÑÅ×´Â ´ëÀüÀ» ½ÅÃ»ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+              cm.sendOk("ìê¸°ìì‹ í•œí…ŒëŠ” ëŒ€ì „ì„ ì‹ ì²­í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
               cm.dispose();
               return;
            } else if (target == null) {
-               cm.sendOk("Ä³¸¯ÅÍ¸¦ ÇöÀç Ã¤³Î¿¡¼­ Ã£À» ¼ö ¾ø½À´Ï´Ù.");
+               cm.sendOk("ìºë¦­í„°ë¥¼ í˜„ì¬ ì±„ë„ì—ì„œ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                cm.dispose();
                return;
            } else if (target.getKeyValue("maplemon_mobname") == null) {
-               cm.sendOk("ÇØ´ç ÇÃ·¹ÀÌ¾î°¡ ¾ÆÁ÷ ¸ŞÀÌÇÃ¸óÀ» ºĞ¾ç¹ŞÁö ¾Ê¾Ò½À´Ï´Ù.");
+               cm.sendOk("í•´ë‹¹ í”Œë ˆì´ì–´ê°€ ì•„ì§ ë©”ì´í”Œëª¬ì„ ë¶„ì–‘ë°›ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
                cm.dispose();
                return;
            } else {
                target.setKeyValue("maplemon_attacker",cm.getPlayer().getName());
                NPCScriptManager.getInstance().start(target.getClient(), 9000252);
-               cm.sendSimple(""+cm.getText()+"´Ô²² ´ëÀü½ÅÃ»À» º¸³Â½À´Ï´Ù.\r\n\r\n#L0# ¼ö¶ôÇß´ÂÁö È®ÀÎÇÏ±â.");
+               cm.sendSimple(""+cm.getText()+"ë‹˜ê»˜ ëŒ€ì „ì‹ ì²­ì„ ë³´ëƒˆìŠµë‹ˆë‹¤.\r\n\r\n#L0# ìˆ˜ë½í–ˆëŠ”ì§€ í™•ì¸í•˜ê¸°.");
            }
-       } else if (¼±ÅÃ1 == 2) {
+       } else if (ì„ íƒ1 == 2) {
             if (bbcheck == -1) {
-                ¼±ÅÃ2 = selection;
-                ¸» = ""
-                º¸½ºHP = bosses[¼±ÅÃ2][1]
+                ì„ íƒ2 = selection;
+                ë§ = ""
+                ë³´ìŠ¤HP = bosses[ì„ íƒ2][1]
             } else {
-                ¸» = "#r#eº¸½º°¡ "+BattackRd+"¸¸Å­ÀÇ µ¥¹ÌÁö¸¦ ÁÖ¾ú½À´Ï´Ù.\r\n\r\n"
+                ë§ = "#r#eë³´ìŠ¤ê°€ "+BattackRd+"ë§Œí¼ì˜ ë°ë¯¸ì§€ë¥¼ ì£¼ì—ˆìŠµë‹ˆë‹¤.\r\n\r\n"
             }
             bbcheck++;
-            ¸»+= "#fMob/"+cm.getPlayer().getKeyValue("maplemon_mobcode")+".img/stand/0#       #fs15##evs#n     #fMob/"+bosses[¼±ÅÃ2][0]+".img/stand/0##fs#\r\n\r\n"
-            ¸»+= "ÀÌ¸§ : "+cm.getPlayer().getKeyValue("maplemon_mobname")+" #b[Lv."+cm.getPlayer().getKeyValue("maplemon_moblevel")+"]#k¡¡¡¡¡¡¡¡"
-            ¸»+= "ÀÌ¸§ : #o"+bosses[¼±ÅÃ2][0]+"##k\r\n"
-            ¸»+= "HP : "+cm.getPlayer().getKeyValue("maplemon_currenthp")+"/"+cm.getPlayer().getKeyValue("maplemon_fullhp")+"¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡"
-            ¸»+= "HP : "+º¸½ºHP+"/"+bosses[¼±ÅÃ2][1]+"\r\n"
-            ¸»+= "°ø°İ·Â : "+cm.getPlayer().getKeyValue("maplemon_acc1")+" ~ "+cm.getPlayer().getKeyValue("maplemon_acc2")+"¡¡¡¡¡¡¡¡¡¡¡¡¡¡"      
-            ¸»+= "°ø°İ·Â : "+bosses[¼±ÅÃ2][2]+" ~ "+bosses[¼±ÅÃ2][3]+"\r\n\r\n"
-            ¸»+= "#L0# °ø°İÇÏ±â";
-            cm.sendSimple(¸»);
-       } else if (¼±ÅÃ1 == 3) {
+            ë§+= "#fMob/"+cm.getPlayer().getKeyValue("maplemon_mobcode")+".img/stand/0#       #fs15##evs#n     #fMob/"+bosses[ì„ íƒ2][0]+".img/stand/0##fs#\r\n\r\n"
+            ë§+= "ì´ë¦„ : "+cm.getPlayer().getKeyValue("maplemon_mobname")+" #b[Lv."+cm.getPlayer().getKeyValue("maplemon_moblevel")+"]#kã€€ã€€ã€€ã€€"
+            ë§+= "ì´ë¦„ : #o"+bosses[ì„ íƒ2][0]+"##k\r\n"
+            ë§+= "HP : "+cm.getPlayer().getKeyValue("maplemon_currenthp")+"/"+cm.getPlayer().getKeyValue("maplemon_fullhp")+"ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€"
+            ë§+= "HP : "+ë³´ìŠ¤HP+"/"+bosses[ì„ íƒ2][1]+"\r\n"
+            ë§+= "ê³µê²©ë ¥ : "+cm.getPlayer().getKeyValue("maplemon_acc1")+" ~ "+cm.getPlayer().getKeyValue("maplemon_acc2")+"ã€€ã€€ã€€ã€€ã€€ã€€ã€€"      
+            ë§+= "ê³µê²©ë ¥ : "+bosses[ì„ íƒ2][2]+" ~ "+bosses[ì„ íƒ2][3]+"\r\n\r\n"
+            ë§+= "#L0# ê³µê²©í•˜ê¸°";
+            cm.sendSimple(ë§);
+       } else if (ì„ íƒ1 == 3) {
            cm.getPlayer().setKeyValue("maplemon_skill", selection);
            cm.getPlayer().setKeyValue("maplemon_skill_used",0);
-           cm.sendOk("½ºÅ³¼±ÅÃÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+           cm.sendOk("ìŠ¤í‚¬ì„ íƒì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
            cm.dispose();
        }
     } else if (status == 3) {
@@ -268,26 +268,26 @@ cm.getPlayer().setKeyValue("maplemon_hungertime",new Date().getTime());
                cm.getPlayer().setKeyValue("maplemon_skill_used", 0)
             }
 
-            ¸» = "#r#e"+cplayer[ccheck%2]+"´Ô²²¼­ °ø°İÇÏ½Ç Â÷·ÊÀÔ´Ï´Ù.#k#n\r\n\r\n"
-            ¸»+= "#fMob/"+cm.getPlayer().getKeyValue("maplemon_mobcode")+".img/stand/0#          	#fs15##evs#n         	 #fMob/"+target.getKeyValue("maplemon_mobcode")+".img/stand/0##fs#\r\n\r\n"
-            ¸»+= "ÀÌ¸§ : "+cm.getPlayer().getKeyValue("maplemon_mobname")+" #b[Lv."+cm.getPlayer().getKeyValue("maplemon_moblevel")+"]#k¡¡¡¡¡¡¡¡"
-            ¸»+= "ÀÌ¸§ : "+target.getKeyValue("maplemon_mobname")+" #b[Lv."+target.getKeyValue("maplemon_moblevel")+"]#k\r\n"
-            ¸»+= "HP : "+cm.getPlayer().getKeyValue("maplemon_currenthp")+"/"+cm.getPlayer().getKeyValue("maplemon_fullhp")+"¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡"
-            ¸»+= "HP : "+target.getKeyValue("maplemon_currenthp")+"/"+target.getKeyValue("maplemon_fullhp")+"\r\n"
-            ¸»+= "°ø°İ·Â : "+cm.getPlayer().getKeyValue("maplemon_acc1")+" ~ "+cm.getPlayer().getKeyValue("maplemon_acc2")+"¡¡¡¡¡¡¡¡¡¡¡¡¡¡"      
-            ¸»+= "°ø°İ·Â : "+target.getKeyValue("maplemon_acc1")+" ~ "+target.getKeyValue("maplemon_acc2")+"\r\n\r\n"    
+            ë§ = "#r#e"+cplayer[ccheck%2]+"ë‹˜ê»˜ì„œ ê³µê²©í•˜ì‹¤ ì°¨ë¡€ì…ë‹ˆë‹¤.#k#n\r\n\r\n"
+            ë§+= "#fMob/"+cm.getPlayer().getKeyValue("maplemon_mobcode")+".img/stand/0#          	#fs15##evs#n         	 #fMob/"+target.getKeyValue("maplemon_mobcode")+".img/stand/0##fs#\r\n\r\n"
+            ë§+= "ì´ë¦„ : "+cm.getPlayer().getKeyValue("maplemon_mobname")+" #b[Lv."+cm.getPlayer().getKeyValue("maplemon_moblevel")+"]#kã€€ã€€ã€€ã€€"
+            ë§+= "ì´ë¦„ : "+target.getKeyValue("maplemon_mobname")+" #b[Lv."+target.getKeyValue("maplemon_moblevel")+"]#k\r\n"
+            ë§+= "HP : "+cm.getPlayer().getKeyValue("maplemon_currenthp")+"/"+cm.getPlayer().getKeyValue("maplemon_fullhp")+"ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€"
+            ë§+= "HP : "+target.getKeyValue("maplemon_currenthp")+"/"+target.getKeyValue("maplemon_fullhp")+"\r\n"
+            ë§+= "ê³µê²©ë ¥ : "+cm.getPlayer().getKeyValue("maplemon_acc1")+" ~ "+cm.getPlayer().getKeyValue("maplemon_acc2")+"ã€€ã€€ã€€ã€€ã€€ã€€ã€€"      
+            ë§+= "ê³µê²©ë ¥ : "+target.getKeyValue("maplemon_acc1")+" ~ "+target.getKeyValue("maplemon_acc2")+"\r\n\r\n"    
             if (ccheck%2 == 0) {
-                 ¸»+= "#L0# #d°ø°İÇÏ±â#l #L1# #dÇ×º¹ÇÏ±â#l"
+                 ë§+= "#L0# #dê³µê²©í•˜ê¸°#l #L1# #dí•­ë³µí•˜ê¸°#l"
                  if (cm.getPlayer().getKeyValue("maplemon_skill_used") == 0) {
-                     ¸»+= "#L3# #d½ºÅ³ »ç¿ëÇÏ±â#l"
+                     ë§+= "#L3# #dìŠ¤í‚¬ ì‚¬ìš©í•˜ê¸°#l"
                  }
             } else {
-                 ¸»+= "#L2# "+target.getName()+"´Ô²²¼­ °ø°İÇÏ¼Ì´ÂÁö È®ÀÎÇÏ±â#l"
+                 ë§+= "#L2# "+target.getName()+"ë‹˜ê»˜ì„œ ê³µê²©í•˜ì…¨ëŠ”ì§€ í™•ì¸í•˜ê¸°#l"
             }
-            cm.sendSimple(¸»);
+            cm.sendSimple(ë§);
             
         } else {
-            cm.sendOk("¾ÆÁ÷ »ó´ë°¡ ´ëÀü¼ö¶ôÀ» ÇÏÁö ¾Ê¾Ò½À´Ï´Ù.");
+            cm.sendOk("ì•„ì§ ìƒëŒ€ê°€ ëŒ€ì „ìˆ˜ë½ì„ í•˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
             status -= 2;
         }
     }

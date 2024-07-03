@@ -1,15 +1,15 @@
 /*
  made by gkskehls
  2008.06.07
- 	½ºÅİÀ» ¿Ã·ÁÁØ´Ù.
- 	°¢ ½ºÅİº°·Î +10, +50, +100, +500 ±îÁö ¿Ã·ÁÁØ´Ù
+ 	ìŠ¤í…Ÿì„ ì˜¬ë ¤ì¤€ë‹¤.
+ 	ê° ìŠ¤í…Ÿë³„ë¡œ +10, +50, +100, +500 ê¹Œì§€ ì˜¬ë ¤ì¤€ë‹¤
  2008.06.08
- 	½ºÅİÀ» ³»·ÁÁØ´Ù.
- 	°¢ ½ºÅİº°·Î -100 Ãß°¡
- 	È­¸é¿¡ º¸¿©Áö´Â ±ÛÀÚ º¸±â ÆíÇÏ°Ô º¯¼öÈ­.
+ 	ìŠ¤í…Ÿì„ ë‚´ë ¤ì¤€ë‹¤.
+ 	ê° ìŠ¤í…Ÿë³„ë¡œ -100 ì¶”ê°€
+ 	í™”ë©´ì— ë³´ì—¬ì§€ëŠ” ê¸€ì ë³´ê¸° í¸í•˜ê²Œ ë³€ìˆ˜í™”.
  2008.07.08
-  ½ºÅİÀ» ÇÑ¹ø¿¡ ´Ù ¿Ã·ÁÁÖ°í ´Ù ³»·ÁÁÖ´Â ±â´ÉÃß°¡
-2009.11.08 fx1548 ¼öÁ¤ 
+  ìŠ¤í…Ÿì„ í•œë²ˆì— ë‹¤ ì˜¬ë ¤ì£¼ê³  ë‹¤ ë‚´ë ¤ì£¼ëŠ” ê¸°ëŠ¥ì¶”ê°€
+2009.11.08 fx1548 ìˆ˜ì • 
 */
 
 /*
@@ -52,21 +52,21 @@ function action(mode, type, selection) {
 		cm.dispose();
 	} else {
 		status++;
-		if(status == 0) { //1¹ø ¸Ş¼¼Áö :  ½ºÅİ ¼±ÅÃ
-			var stat_msg = "Èû, µ¦, ÀÎÆ®, ·°Áß¿¡ ÇÏ³ª¸¦ ´­·¯ÁÖ¼¼¿ä.\r\n";
-			stat_msg = stat_msg + "#b#L0#10 ¿Ã¸®±â#l        #L11#Èû  #l#L21#µ¦  #l#L31#ÀÎÆ®  #l#L41#·°#l#k\r\n";
-			stat_msg = stat_msg + "#b#L0#50 ¿Ã¸®±â#l        #L12#Èû  #l#L22#µ¦  #l#L32#ÀÎÆ®  #l#L42#·°#l#k\r\n";
-			stat_msg = stat_msg + "#b#L0#100 ¿Ã¸®±â#l      #L13#Èû  #l#L23#µ¦  #l#L33#ÀÎÆ®  #l#L43#·°#l#k\r\n";
-			stat_msg = stat_msg + "#b#L0#1000 ¿Ã¸®±â#l    #L90#Èû  #l#L91#µ¦  #l#L92#ÀÎÆ®  #l#L93#·°#l#k\r\n";
-			stat_msg = stat_msg + "#b#L0#10000 ¿Ã¸®±â#l    #L98#Èû  #l#L99#µ¦  #l#L100#ÀÎÆ®  #l#L101#·°#l#k\r\n";
-			stat_msg = stat_msg + "#b#L0#30000 ¿Ã¸®±â#l    #L102#Èû  #l#L103#µ¦  #l#L104#ÀÎÆ®  #l#L105#·°#l#k\r\n";
-			stat_msg = stat_msg + "#r#L0#100 ³»¸®±â#l      #L15#Èû  #l#L25#µ¦  #l#L35#ÀÎÆ®  #l#L45#·°#l#k\r\n";
-                        stat_msg = stat_msg + "#r#L0#1000 ³»¸®±â#l    #L94#Èû  #l#L95#µ¦  #l#L96#ÀÎÆ®  #l#L97#·°#l#k\r\n\r\n";
-			stat_msg = stat_msg + "#b#L0#ÀüºÎ ¿Ã¸®±â#l     #L14#Èû  #l#L24#µ¦  #l#L34#ÀÎÆ®  #l#L44#·°#l#k\r\n";
-			stat_msg = stat_msg + "#r#L0#ÀüºÎ ³»¸®±â#l     #L16#Èû  #l#L26#µ¦  #l#L36#ÀÎÆ®  #l#L46#·°#l#k\r\n";
+		if(status == 0) { //1ë²ˆ ë©”ì„¸ì§€ :  ìŠ¤í…Ÿ ì„ íƒ
+			var stat_msg = "í˜, ë±, ì¸íŠ¸, ëŸ­ì¤‘ì— í•˜ë‚˜ë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš”.\r\n";
+			stat_msg = stat_msg + "#b#L0#10 ì˜¬ë¦¬ê¸°#l        #L11#í˜  #l#L21#ë±  #l#L31#ì¸íŠ¸  #l#L41#ëŸ­#l#k\r\n";
+			stat_msg = stat_msg + "#b#L0#50 ì˜¬ë¦¬ê¸°#l        #L12#í˜  #l#L22#ë±  #l#L32#ì¸íŠ¸  #l#L42#ëŸ­#l#k\r\n";
+			stat_msg = stat_msg + "#b#L0#100 ì˜¬ë¦¬ê¸°#l      #L13#í˜  #l#L23#ë±  #l#L33#ì¸íŠ¸  #l#L43#ëŸ­#l#k\r\n";
+			stat_msg = stat_msg + "#b#L0#1000 ì˜¬ë¦¬ê¸°#l    #L90#í˜  #l#L91#ë±  #l#L92#ì¸íŠ¸  #l#L93#ëŸ­#l#k\r\n";
+			stat_msg = stat_msg + "#b#L0#10000 ì˜¬ë¦¬ê¸°#l    #L98#í˜  #l#L99#ë±  #l#L100#ì¸íŠ¸  #l#L101#ëŸ­#l#k\r\n";
+			stat_msg = stat_msg + "#b#L0#30000 ì˜¬ë¦¬ê¸°#l    #L102#í˜  #l#L103#ë±  #l#L104#ì¸íŠ¸  #l#L105#ëŸ­#l#k\r\n";
+			stat_msg = stat_msg + "#r#L0#100 ë‚´ë¦¬ê¸°#l      #L15#í˜  #l#L25#ë±  #l#L35#ì¸íŠ¸  #l#L45#ëŸ­#l#k\r\n";
+                        stat_msg = stat_msg + "#r#L0#1000 ë‚´ë¦¬ê¸°#l    #L94#í˜  #l#L95#ë±  #l#L96#ì¸íŠ¸  #l#L97#ëŸ­#l#k\r\n\r\n";
+			stat_msg = stat_msg + "#b#L0#ì „ë¶€ ì˜¬ë¦¬ê¸°#l     #L14#í˜  #l#L24#ë±  #l#L34#ì¸íŠ¸  #l#L44#ëŸ­#l#k\r\n";
+			stat_msg = stat_msg + "#r#L0#ì „ë¶€ ë‚´ë¦¬ê¸°#l     #L16#í˜  #l#L26#ë±  #l#L36#ì¸íŠ¸  #l#L46#ëŸ­#l#k\r\n";
 			stat_msg = stat_msg + "";
 			cm.sendSimple(stat_msg);
-		} else if(status == 1) { //2¹ø ¸Ş¼¼Áö  
+		} else if(status == 1) { //2ë²ˆ ë©”ì„¸ì§€  
 			var statup = new java.util.ArrayList();
 			var p = cm.c.getPlayer();
 			var set_Str = p.getStr();
@@ -159,8 +159,8 @@ function action(mode, type, selection) {
 			} else if(selection == 46) { //LUK-all
 				if(set_Luk > 4) { set_Ap = p.getRemainingAp()+set_Luk-4; set_Luk = 4; }
 
-			} else if(selection == 0) { //Å¬¸¯Àß¸øÇÒ°æ¿ì ³ª¿À´Â ÅØ½ºÆ® 
-				cm.sendOk("#bÀß¸ø´©¸£¼Ì½À´Ï´Ù. Èû,µ¦,ÀÎÆ®,·° À» ´©¸£¼Å¾ßÇÕ´Ï´Ù#k ");
+			} else if(selection == 0) { //í´ë¦­ì˜ëª»í• ê²½ìš° ë‚˜ì˜¤ëŠ” í…ìŠ¤íŠ¸ 
+				cm.sendOk("#bì˜ëª»ëˆ„ë¥´ì…¨ìŠµë‹ˆë‹¤. í˜,ë±,ì¸íŠ¸,ëŸ­ ì„ ëˆ„ë¥´ì…”ì•¼í•©ë‹ˆë‹¤#k ");
 				cm.dispose();
 			}
 			
@@ -176,7 +176,7 @@ function action(mode, type, selection) {
 			statup.add (new net.sf.odinms.tools.Pair(net.sf.odinms.client.MapleStat.AVAILABLEAP, java.lang.Integer.valueOf(set_Ap)));
 			p.getClient().getSession().write (net.sf.odinms.tools.MaplePacketCreator.updatePlayerStats(statup));
 			cm.dispose();
-		} else if(status == 2) { //3¹ø ¸Ş¼¼Áö 
+		} else if(status == 2) { //3ë²ˆ ë©”ì„¸ì§€ 
 			cm.dispose();
 		}
 	}

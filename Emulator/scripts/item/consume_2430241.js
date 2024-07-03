@@ -1,4 +1,4 @@
-﻿var status;
+癤워ar status;
 
 function start() {
     status = -1;
@@ -15,12 +15,12 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-            cm.gainSponserItem(1052671,'[û]',300,50,0);
-            cm.gainSponserItem(1003541,'[û]',500,50,0);
-            cm.gainSponserItem(1112940,'[û]',500,50,0);
-            cm.gainSponserItem(1142282,'[û]',2000,300,0);
-            cm.gainSponserItem(1112184,'[û]',500,50,0);
-            cm.gainSponserItem(3700148,'[û]',1,3,0);
+            cm.gainSponserItem(1052671,'[청]',300,50,0);
+            cm.gainSponserItem(1003541,'[청]',500,50,0);
+            cm.gainSponserItem(1112940,'[청]',500,50,0);
+            cm.gainSponserItem(1142282,'[청]',2000,300,0);
+            cm.gainSponserItem(1112184,'[청]',500,50,0);
+            cm.gainSponserItem(3700148,'[청]',1,3,0);
 	    
 	    
 	    

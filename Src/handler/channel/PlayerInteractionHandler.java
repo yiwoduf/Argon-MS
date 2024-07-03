@@ -66,7 +66,7 @@ public class PlayerInteractionHandler {
         BUY_ITEM_STORE2(37),
         BUY_ITEM_STORE3(38),
         MAINTANCE_OFF(39),
-        REMOVE_ITEM(47), //+10 ½ÃÀÛ
+        REMOVE_ITEM(47), //+10 ì‹œì‘
         MERCHANT_EXIT(48), //+10 v192
         MAINTANCE_ORGANISE(49), //+10 v192
         CLOSE_MERCHANT(50), //+10 v192
@@ -74,7 +74,7 @@ public class PlayerInteractionHandler {
         VIEW_MERCHANT_VISITOR(55),
         VIEW_MERCHANT_BLACKLIST(56),
         MERCHANT_BLACKLIST_ADD(57),
-        MERCHANT_BLACKLIST_REMOVE(58), //+10 v192 ±îÁö
+        MERCHANT_BLACKLIST_REMOVE(58), //+10 v192 ê¹Œì§€
         ADMIN_STORE_NAMECHANGE(59),
         START_ROCK_PAPER_SCISSORS1(-1),
         START_ROCK_PAPER_SCISSORS2(-2),
@@ -120,7 +120,7 @@ public class PlayerInteractionHandler {
         switch (action) { // Mode
             case CREATE: {
                 final byte createType = rh.readByte();
-                if (createType == 3 || createType == 4) { // °¡À§¹ÙÀ§º¸, ±³È¯
+                if (createType == 3 || createType == 4) { // ê°€ìœ„ë°”ìœ„ë³´, êµí™˜
                     MapleUserTrade.startTrade(chr, createType == 4 ? true : false, false);
                     if (createType == 3 || createType == 4 || createType == 7) { // trade
                         if (createType != 7) {
@@ -131,11 +131,11 @@ public class PlayerInteractionHandler {
                     }
                 } else if (createType == IMapleCharacterShop.HIRED_MERCHANT || createType == IMapleCharacterShop.PLAYER_SHOP) { // shop
                     if (!chr.getMap().getMapObjectsInRange(chr.getPosition(), 19500, Arrays.asList(MapleMapObjectType.SHOP, MapleMapObjectType.HIRED_MERCHANT)).isEmpty()) {
-                        chr.dropMessage(1, "ÀÌ°÷¿¡ »óÁ¡À» ¼¼¿ï ¼ö ¾ø½À´Ï´Ù.");
+                        chr.dropMessage(1, "ì´ê³³ì— ìƒì ì„ ì„¸ìš¸ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                         return;
                     }
                     if (!chr.getMap().getMapObjectsInRange(chr.getPosition(), 19500, Arrays.asList(MapleMapObjectType.NPC)).isEmpty()) {
-                        chr.dropMessage(1, "¿£ÇÇ½Ã ±ÙÃ³¿¡´Â »óÁ¡À» ¼¼¿ï ¼ö ¾ø½À´Ï´Ù.");
+                        chr.dropMessage(1, "ì—”í”¼ì‹œ ê·¼ì²˜ì—ëŠ” ìƒì ì„ ì„¸ìš¸ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                         return;
                     }
                     if (createType != IMapleCharacterShop.HIRED_MERCHANT && !chr.isGM()) {
@@ -160,7 +160,7 @@ public class PlayerInteractionHandler {
                     }
                 } else if (createType == 1 || createType == 2) {
                     if (!chr.getMap().getMapObjectsInRange(chr.getPosition(), 19500, Arrays.asList(MapleMapObjectType.MINI_GAME)).isEmpty()) {
-                        chr.dropMessage(1, "ÀÌ°÷¿¡ ¹Ì´Ï°ÔÀÓÀ» ¼¼¿ï ¼ö ¾ø½À´Ï´Ù.");
+                        chr.dropMessage(1, "ì´ê³³ì— ë¯¸ë‹ˆê²Œì„ì„ ì„¸ìš¸ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                         chr.ea();
                         return;
                     }
@@ -244,12 +244,12 @@ public class PlayerInteractionHandler {
                             chr.setPlayerShop(ips);
                             c.send(PlayerShopPacket.getHiredMerch(chr, merchant, false));
                         } else if (!merchant.isOpen()) {
-                            chr.dropMessage(1, "ÇöÀç °í¿ë»óÁ¡ÀÌ ÁØºñÁß¿¡ ÀÖ½À´Ï´Ù.");
+                            chr.dropMessage(1, "í˜„ì¬ ê³ ìš©ìƒì ì´ ì¤€ë¹„ì¤‘ì— ìˆìŠµë‹ˆë‹¤.");
                         } else if (ips.getFreeSlot() == -1) {
-                            chr.dropMessage(1, "ÇØ´ç »óÁ¡À» ÀÌ¹Ì ¼ö¿ë°¡´ÉÇÑ ÃÖ´ë ÀÎ¿øÀÌ º¸°í ÀÖ½À´Ï´Ù. Àá½Ã ÈÄ ´Ù½Ã ½ÃµµÇØ ÁÖ¼¼¿ä.");
+                            chr.dropMessage(1, "í•´ë‹¹ ìƒì ì„ ì´ë¯¸ ìˆ˜ìš©ê°€ëŠ¥í•œ ìµœëŒ€ ì¸ì›ì´ ë³´ê³  ìˆìŠµë‹ˆë‹¤. ì ì‹œ í›„ ë‹¤ì‹œ ì‹œë„í•´ ì£¼ì„¸ìš”.");
                         } else if (merchant.isInBlackList(chr.getName())) {
 //                                        chr.getClient().send(PlayerShopPacket.shopErrorMessage(0x10, 1));
-                            chr.dropMessage(1, "ºí·¢¸®½ºÆ®¿¡ µî·ÏµÇ¾î ÇØ´ç »óÁ¡À» ÀÌ¿ëÇÏ½Ç ¼ö ¾ø½À´Ï´Ù.");
+                            chr.dropMessage(1, "ë¸”ë™ë¦¬ìŠ¤íŠ¸ì— ë“±ë¡ë˜ì–´ í•´ë‹¹ ìƒì ì„ ì´ìš©í•˜ì‹¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                         } else {
                             chr.setPlayerShop(ips);
                             merchant.addVisitor(chr);
@@ -259,16 +259,16 @@ public class PlayerInteractionHandler {
                     } else {
                         MapleMiniGame ips = (MapleMiniGame) chr.getMap().getMapObject(oid);
                         if (ips.getFreeSlot() < 0 || ips.getVisitorSlot(chr) > -1 || !ips.isOpen()) {
-                            c.getPlayer().dropMessage(1, "ÇØ´ç ¹æÀº ÀÌ¹Ì ÀÎ¿øÀÌ °¡µæ Ã¡½À´Ï´Ù.");
+                            c.getPlayer().dropMessage(1, "í•´ë‹¹ ë°©ì€ ì´ë¯¸ ì¸ì›ì´ ê°€ë“ ì°¼ìŠµë‹ˆë‹¤.");
                         } else {
                             if (rh.available() > 0 && rh.readByte() > 0) { //a password has been entered
                                 String pass = rh.readMapleAsciiString();
                                 if (!pass.equals(ips.getPassword())) {
-                                    c.getPlayer().dropMessage(1, "ÀÔ·ÂÇÑ ºñ¹Ğ¹øÈ£°¡ ¿Ã¹Ù¸£Áö ¾Ê½À´Ï´Ù.");
+                                    c.getPlayer().dropMessage(1, "ì…ë ¥í•œ ë¹„ë°€ë²ˆí˜¸ê°€ ì˜¬ë°”ë¥´ì§€ ì•ŠìŠµë‹ˆë‹¤.");
                                     return;
                                 }
                             } else if (ips.getPassword().length() > 0) {
-                                c.getPlayer().dropMessage(1, "ÀÔ·ÂÇÑ ºñ¹Ğ¹øÈ£°¡ ¿Ã¹Ù¸£Áö ¾Ê½À´Ï´Ù.");
+                                c.getPlayer().dropMessage(1, "ì…ë ¥í•œ ë¹„ë°€ë²ˆí˜¸ê°€ ì˜¬ë°”ë¥´ì§€ ì•ŠìŠµë‹ˆë‹¤.");
                                 return;
                             }
                             chr.setPlayerShop(ips);
@@ -485,7 +485,7 @@ public class PlayerInteractionHandler {
                 }
                 final MapleCharacterShopItem tobuy = shop.getItems().get(item);
                 if (tobuy == null) {
-                    c.getPlayer().message(1, "ÇØ´ç ¾ÆÀÌÅÛÀÌ ÀÌ¹Ì Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+                    c.getPlayer().message(1, "í•´ë‹¹ ì•„ì´í…œì´ ì´ë¯¸ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
                     return;
                 }
                 long check = tobuy.bundles * quantity;
@@ -497,14 +497,14 @@ public class PlayerInteractionHandler {
                 }
                 if (quantity <= 0 || tobuy.bundles < quantity || (tobuy.bundles % quantity != 0 && GameConstants.isEquip(tobuy.item.getItemId())) // Buying
                         || chr.getMeso() - (check2) < 0 || shop.getMeso() + (check2) < 0) {
-                    c.getPlayer().message(1, "¸Ş¼Ò°¡ ºÎÁ·ÇÕ´Ï´Ù!");
+                    c.getPlayer().message(1, "ë©”ì†Œê°€ ë¶€ì¡±í•©ë‹ˆë‹¤!");
                     c.getPlayer().ea();
                     return;
                 }
                 shop.buy(c, item, quantity);
 
                 if (c.getChannelServer().getPlayerStorage().getCharacterById(shop.getOwnerId()) != null) {
-                    c.getChannelServer().getPlayerStorage().getCharacterById(shop.getOwnerId()).message(5, "°í¿ë»óÁ¡¿¡ ¿Ã¸®½Å [" + ItemInformation.getInstance().getName(item) + "] ¾ÆÀÌÅÛ " + quantity + "°³°¡ ÆÇ¸ÅµÇ¾ú½À´Ï´Ù.");
+                    c.getChannelServer().getPlayerStorage().getCharacterById(shop.getOwnerId()).message(5, "ê³ ìš©ìƒì ì— ì˜¬ë¦¬ì‹  [" + ItemInformation.getInstance().getName(item) + "] ì•„ì´í…œ " + quantity + "ê°œê°€ íŒë§¤ë˜ì—ˆìŠµë‹ˆë‹¤.");
                 }
                 shop.broadcastToVisitors(PlayerShopPacket.shopItemUpdate(shop));
                 break;
@@ -544,7 +544,7 @@ public class PlayerInteractionHandler {
                 final IMapleCharacterShop shop = chr.getPlayerShop();
                 if (shop != null && shop instanceof HiredMerchant && shop.isOwner(chr)) {
                     if (shop.getItems().isEmpty()) {
-                        chr.message(1, "»óÁ¡¿¡ ¾ÆÀÌÅÛÀÌ ºñ¾îÀÖ½À´Ï´Ù. »óÁ¡¿¡ ¾ÆÀÌÅÛÀÌ ¾ø´Ù¸é °í¿ë»óÁ¡À» ¿­¾îµÑ ¼ö ¾ø½À´Ï´Ù.");
+                        chr.message(1, "ìƒì ì— ì•„ì´í…œì´ ë¹„ì–´ìˆìŠµë‹ˆë‹¤. ìƒì ì— ì•„ì´í…œì´ ì—†ë‹¤ë©´ ê³ ìš©ìƒì ì„ ì—´ì–´ë‘˜ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                         chr.ea();
                     } else {
                         shop.getMessages().clear();
@@ -597,7 +597,7 @@ public class PlayerInteractionHandler {
                 final IMapleCharacterShop merchant = chr.getPlayerShop();
                 if (merchant != null && merchant.getShopType() == IMapleCharacterShop.HIRED_MERCHANT && merchant.isOwner(chr)) {
                     boolean save = false;
-                    if (chr.getMeso() + merchant.getMeso() < 0) { //¿À¹öÇÃ·Î¿ì
+                    if (chr.getMeso() + merchant.getMeso() < 0) { //ì˜¤ë²„í”Œë¡œìš°
                         save = false;
                     } else {
                         if (merchant.getItems().size() > 0) {
@@ -611,7 +611,7 @@ public class PlayerInteractionHandler {
                         }
                     }
                     if (save) {
-                        c.getPlayer().dropMessage(1, "ÇÁ·¹µå¸¯ ¿¡°Ô¼­ ¾ÆÀÌÅÛÀ» Ã£¾Æ°¡ ÁÖ½Ê½Ã¿À.");
+                        c.getPlayer().dropMessage(1, "í”„ë ˆë“œë¦­ ì—ê²Œì„œ ì•„ì´í…œì„ ì°¾ì•„ê°€ ì£¼ì‹­ì‹œì˜¤.");
                         c.send(PlayerShopPacket.shopErrorMessage(0x1C, 0, 0x14));
                     } else {
                         c.send(PlayerShopPacket.shopErrorMessage(0x1C, 0, 0x14));
@@ -696,7 +696,7 @@ public class PlayerInteractionHandler {
             case EXPEL: {
                 final IMapleCharacterShop ips = chr.getPlayerShop();
                 ips.removeAllVisitors(3, 1); //no msg
-                chr.dropMessage(1, "¼±ÅÃÇÑ ÇÃ·¹ÀÌ¾î¸¦ °­Á¦ ÅğÀå ½ÃÄ×½À´Ï´Ù.");
+                chr.dropMessage(1, "ì„ íƒí•œ í”Œë ˆì´ì–´ë¥¼ ê°•ì œ í‡´ì¥ ì‹œì¼°ìŠµë‹ˆë‹¤.");
                 break;
             }
             case START: {
@@ -839,7 +839,7 @@ public class PlayerInteractionHandler {
                     final IMapleCharacterShop ips = chr.getPlayerShop();
                     if (ips != null && ips instanceof MapleMiniGame) {
                         MapleMiniGame game = (MapleMiniGame) ips;
-                        game.broadcastToVisitors(PlayerShopPacket.shopChat("¹«¸£±â°¡ ½Â¶ôµÇ¾ú½À´Ï´Ù.", game.getVisitorSlot(chr)));
+                        game.broadcastToVisitors(PlayerShopPacket.shopChat("ë¬´ë¥´ê¸°ê°€ ìŠ¹ë½ë˜ì—ˆìŠµë‹ˆë‹¤.", game.getVisitorSlot(chr)));
                         game.nextLoser();
                         ips.broadcastToVisitors(MiniGamePacket.getMiniGameSkip(ips.getVisitorSlot(chr)));
                     }
@@ -865,7 +865,7 @@ public class PlayerInteractionHandler {
                     }
                     // game.setRequestedTie(game.getVisitorSlot(chr));
                 }
-                //       c.getPlayer().dropMessage(1, "ÁË¼ÛÇÕ´Ï´Ù. ÇöÀç ÇØ´ç ±â´ÉÀ» Áö¿øÇÏÁö ¾Ê½À´Ï´Ù.");
+                //       c.getPlayer().dropMessage(1, "ì£„ì†¡í•©ë‹ˆë‹¤. í˜„ì¬ í•´ë‹¹ ê¸°ëŠ¥ì„ ì§€ì›í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
                 break;
             }
 

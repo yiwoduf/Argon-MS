@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -13,7 +13,7 @@ import constants.ServerConstants;
 
 /**
  *
- * @author 4Â÷¿ø
+ * @author 4ì°¨ì›
  */
 public class MapleEnterHandler {
     public static String PlayerHost = "192.168.194.2";
@@ -22,10 +22,10 @@ public class MapleEnterHandler {
             String Machine = java.net.InetAddress.getLocalHost().getHostAddress();
             if (Machine == null ? PlayerHost == null : Machine.equals(PlayerHost)) {
                 if (Machine == null ? ServerConstants.Host == null : Machine.equals(ServerConstants.Host)) {
-                    System.out.println("[ARGON] ±¸µ¿±â°¡ Á¤»óÀûÀ¸·Î ½ÇÇàµÇ¾ú½À´Ï´Ù.");
+                    System.out.println("[ARGON] êµ¬ë™ê¸°ê°€ ì •ìƒì ìœ¼ë¡œ ì‹¤í–‰ë˜ì—ˆìŠµë‹ˆë‹¤.");
                 } else {
                     if (Machine.contains("192.") && ServerConstants.Host.contains("5.")) {
-                        System.out.println("[ARGON] ±¸µ¿±â°¡ Á¤»óÀûÀ¸·Î ½ÇÇàµÇ¾ú½À´Ï´Ù.");
+                        System.out.println("[ARGON] êµ¬ë™ê¸°ê°€ ì •ìƒì ìœ¼ë¡œ ì‹¤í–‰ë˜ì—ˆìŠµë‹ˆë‹¤.");
                     } else {
                         System.exit(1);
                     }

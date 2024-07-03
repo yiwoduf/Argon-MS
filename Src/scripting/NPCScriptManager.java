@@ -1,16 +1,16 @@
 /*
  Maple Team ProJect
- Á¦ÀÛ ¿ëµµ : ¼­¹ö¿î¿µ¿ë
- ÆÀ¿ø¸ñ·Ï
- * °­µ¿¿ø dongwon1852@nate.com 
- * ±è¼±ÀÏ fileupload@nate.com
- * ±è¼®Çö azxcs3@nate.com
- * ±èÁø¼º m0nday_s@nate.com
- * °øÁØÇù kkong1001@nate.com
- * ±è¹ÎÈ£ rubystory0603@nate.com
- * ÀÌÀç¿Õ ejwj5592@nate.com
- * ÃÖ¿ëÀç virgo_s_t@nate.com
- * ¼­¼º´ö abq1239@nate.com
+ ì œì‘ ìš©ë„ : ì„œë²„ìš´ì˜ìš©
+ íŒ€ì›ëª©ë¡
+ * ê°•ë™ì› dongwon1852@nate.com 
+ * ê¹€ì„ ì¼ fileupload@nate.com
+ * ê¹€ì„í˜„ azxcs3@nate.com
+ * ê¹€ì§„ì„± m0nday_s@nate.com
+ * ê³µì¤€í˜‘ kkong1001@nate.com
+ * ê¹€ë¯¼í˜¸ rubystory0603@nate.com
+ * ì´ì¬ì™• ejwj5592@nate.com
+ * ìµœìš©ì¬ virgo_s_t@nate.com
+ * ì„œì„±ë• abq1239@nate.com
  */
 package scripting;
 
@@ -67,7 +67,7 @@ public class NPCScriptManager extends AbstractScriptManager {
                 }
                 if (c.getPlayer().getGMLevel() > 1) {
                     MapleNPC npcs = MapleLifeProvider.getNPC(npc);
-                    c.getPlayer().dropMessage(6, "[¿£ÇÇ½Ã ÀÌ¸§ : " + npcs.getName() + "] [¿£ÇÇ½Ã ÄÚµå : " + npcs.getId() + "]");
+                    c.getPlayer().dropMessage(6, "[ì—”í”¼ì‹œ ì´ë¦„ : " + npcs.getName() + "] [ì—”í”¼ì‹œ ì½”ë“œ : " + npcs.getId() + "]");
                 }
             }
         } catch (final Exception e) {
@@ -118,16 +118,16 @@ public class NPCScriptManager extends AbstractScriptManager {
                 }
                 if (c.getPlayer().getGMLevel() > 1) {
                     MapleNPC npcs = MapleLifeProvider.getNPC(npc);
-                    c.getPlayer().dropMessage(6, "[¿£ÇÇ½Ã ÀÌ¸§ : " + npcs.getName() + "] [¿£ÇÇ½Ã ÄÚµå : " + npcs.getId() + "]");
+                    c.getPlayer().dropMessage(6, "[ì—”í”¼ì‹œ ì´ë¦„ : " + npcs.getName() + "] [ì—”í”¼ì‹œ ì½”ë“œ : " + npcs.getId() + "]");
                 }
             }
         } catch (final Exception e) {
             //    if (!AboutMaple.realese) e.printStackTrace();
             if (script == null) {
-                System.err.println("[¿À·ù] ¿£ÇÇ½Ã ½ºÅ©¸³Æ® ½ÇÇà¿¡ ½ÇÆĞÇß½À´Ï´Ù. : " + npc);
+                System.err.println("[ì˜¤ë¥˜] ì—”í”¼ì‹œ ìŠ¤í¬ë¦½íŠ¸ ì‹¤í–‰ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤. : " + npc);
                 e.printStackTrace();
             } else {
-                System.err.println("[¿À·ù] ¿£ÇÇ½Ã ½ºÅ©¸³Æ® ½ÇÇà¿¡ ½ÇÆĞÇß½À´Ï´Ù. : " + npc);
+                System.err.println("[ì˜¤ë¥˜] ì—”í”¼ì‹œ ìŠ¤í¬ë¦½íŠ¸ ì‹¤í–‰ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤. : " + npc);
                 e.printStackTrace();
             }
             dispose(c);

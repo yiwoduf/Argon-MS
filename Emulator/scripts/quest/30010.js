@@ -9,9 +9,9 @@ function start(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-	qm.sendYesNo("ÀÌ¹ø¿¡´Â ÂşÁÖÀüÀÚ°¡ ±×·ÁÁø ¹® ¹Û¿¡ ÀÖ´Â ºÀÀÎÀÇ ¼öÈ£ÀÚ¸¦ Ã³ÁöÇØÁà.");
+	qm.sendYesNo("ì´ë²ˆì—ëŠ” ì°»ì£¼ì „ìê°€ ê·¸ë ¤ì§„ ë¬¸ ë°–ì— ìˆëŠ” ë´‰ì¸ì˜ ìˆ˜í˜¸ìë¥¼ ì²˜ì§€í•´ì¤˜.");
 } else if (status == 1) {
-	qm.sendNext("ÀÌ¹ø¿¡´Â Á» ´õ °­·ÂÇÑ ±â¿îÀÌ ´À²¸Áö´Ï±î ¸¸¹İÀÇ ÁØºñ¸¦ ÇØ¾ß ÇÒ°Å¾ß.");
+	qm.sendNext("ì´ë²ˆì—ëŠ” ì¢€ ë” ê°•ë ¥í•œ ê¸°ìš´ì´ ëŠê»´ì§€ë‹ˆê¹Œ ë§Œë°˜ì˜ ì¤€ë¹„ë¥¼ í•´ì•¼ í• ê±°ì•¼.");
 	qm.getPlayer().setKeyValue("pier","start");
 	qm.startQuest(30010);
 	qm.dispose();

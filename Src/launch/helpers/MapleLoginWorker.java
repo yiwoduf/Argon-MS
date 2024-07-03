@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -33,7 +33,7 @@ public class MapleLoginWorker {
     public static void registerClient(final MapleClient c) {
 	if (c.finishLogin() == 0) {
             c.getSession().writeAndFlush(LoginPacket.getAuthSuccessRequest(c));
-            /* Display Channel ¿øÀÏÈ­. */
+            /* Display Channel ì›ì¼í™”. */
             CharLoginHandler.getDisplayChannel(true, c);
             c.setIdleTask(PingTimer.getInstance().schedule(new Runnable() {
                 public void run() {

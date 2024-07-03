@@ -567,7 +567,7 @@ public class SkillSubHandler {
             if (player.getBuffedValue(BuffStats.CTS_StormBringer) != null) {
                 if (Randomizer.isSuccess(SkillFactory.getSkill(13121054).getEffect(player.getSkillLevel(13121054)).getProb())) {
                     SkillFactory.getSkill(13121054).getEffect(player.getSkillLevel(13121054)).applyAtom(player, 8);
-                    player.message("½ºÅèºê¸µ¾î ¹ßµ¿");
+                    player.message("ìŠ¤í†°ë¸Œë§ì–´ ë°œë™");
                 }
             }
 
@@ -726,7 +726,7 @@ public class SkillSubHandler {
                             if (mobList.size() > 0) {
                                 int i = 1;
                                 for (Point pos : mobList) {
-                                    if (player.getWreckageCount() < e.getX()) { // x°³¸¦ ³ÑÀ» ¼ö ¾ø´Ù.
+                                    if (player.getWreckageCount() < e.getX()) { // xê°œë¥¼ ë„˜ì„ ìˆ˜ ì—†ë‹¤.
                                         player.getMap().spawnWreckage(new MapleWreckage(player, e.getTime() / 1000, wreckageSkillID, player.incAndGetWreckageCount(), pos));
                                     } else {
                                         break;
@@ -828,24 +828,24 @@ public class SkillSubHandler {
                     int equalibrium = player.getBuffedValue(BuffStats.CTS_Larkness).intValue();
                     if (equalibrium == 20040216) {
                         switch (attack.skill) {
-                            case 20041226: // ½ºÆåÆ®·² ¶óÀÌÆ® (±âº» Á÷¾÷)
-                            case 27001100: // Æ®À®Å¬ ÇÃ·¡½¬
-                            case 27101100: // ½ÇÇÇµå ·£¼­
-                            case 27111100: // ½ºÆåÆ®·² ¶óÀÌÆ®
-                            case 27121100: // ¶óÀÌÆ® ¸®ÇÃ·º¼Ç
-                                player.addHP((int) Math.min((totDamageToOneMonster * (1 / 100.0D)), player.getStat().getCurrentMaxHp() / 2)); //Ã¼·Â È¸º¹
+                            case 20041226: // ìŠ¤íŽ™íŠ¸ëŸ´ ë¼ì´íŠ¸ (ê¸°ë³¸ ì§ì—…)
+                            case 27001100: // íŠ¸ìœ™í´ í”Œëž˜ì‰¬
+                            case 27101100: // ì‹¤í”¼ë“œ ëžœì„œ
+                            case 27111100: // ìŠ¤íŽ™íŠ¸ëŸ´ ë¼ì´íŠ¸
+                            case 27121100: // ë¼ì´íŠ¸ ë¦¬í”Œë ‰ì…˜
+                                player.addHP((int) Math.min((totDamageToOneMonster * (1 / 100.0D)), player.getStat().getCurrentMaxHp() / 2)); //ì²´ë ¥ íšŒë³µ
                                 break;
 
                         }
                     }
                     if (equalibrium == 2) {
                         switch (attack.skill) {
-                            case 20041226: // ½ºÆåÆ®·² ¶óÀÌÆ® (±âº» Á÷¾÷)
-                            case 27001100: // Æ®À®Å¬ ÇÃ·¡½¬
-                            case 27101100: // ½ÇÇÇµå ·£¼­
-                            case 27111100: // ½ºÆåÆ®·² ¶óÀÌÆ®
-                            case 27121100: // ¶óÀÌÆ® ¸®ÇÃ·º¼Ç
-                                player.addHP((int) Math.min((totDamageToOneMonster * (1 / 100.0D)), player.getStat().getCurrentMaxHp() / 2)); //Ã¼·Â È¸º¹
+                            case 20041226: // ìŠ¤íŽ™íŠ¸ëŸ´ ë¼ì´íŠ¸ (ê¸°ë³¸ ì§ì—…)
+                            case 27001100: // íŠ¸ìœ™í´ í”Œëž˜ì‰¬
+                            case 27101100: // ì‹¤í”¼ë“œ ëžœì„œ
+                            case 27111100: // ìŠ¤íŽ™íŠ¸ëŸ´ ë¼ì´íŠ¸
+                            case 27121100: // ë¼ì´íŠ¸ ë¦¬í”Œë ‰ì…˜
+                                player.addHP((int) Math.min((totDamageToOneMonster * (1 / 100.0D)), player.getStat().getCurrentMaxHp() / 2)); //ì²´ë ¥ íšŒë³µ
                                 break;
                         }
                     }

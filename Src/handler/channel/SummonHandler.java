@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -146,10 +146,10 @@ public class SummonHandler {
         }
         map.broadcastMessage(chr, MainPacketCreator.summonAttack(summon, tbyte, animation, allDamage), summon.getPosition());
         switch (summon.getSkill()) {
-            case 32001014: // µ¥½º
-            case 32100010: // µ¥½º ÄÁÆ®·¢Æ®
-            case 32110017: // µ¥½º ÄÁÆ®·¢Æ®2
-            case 32120019: // µ¥½º ÄÁÆ®·¢Æ®3
+            case 32001014: // ë°ìŠ¤
+            case 32100010: // ë°ìŠ¤ ì»¨íŠ¸ë™íŠ¸
+            case 32110017: // ë°ìŠ¤ ì»¨íŠ¸ë™íŠ¸2
+            case 32120019: // ë°ìŠ¤ ì»¨íŠ¸ë™íŠ¸3
                 summon.setEndTime(System.currentTimeMillis() + 1000);
                 c.getPlayer().deathCount = 1;
                 c.getPlayer().getBuffedSkillEffect(BuffStats.CTS_BMageDeath).applyToBMDeath(chr);
@@ -169,7 +169,7 @@ public class SummonHandler {
         }
         hs.removeSummon(ha.getPlayer().getMap());
         if (hs == null) {
-            System.err.println("[¿À·ù] ÇöÀç ¼ÒÈ¯µÈ ¼ÒÈ¯¼öµéÁß ÇØ´çÇÏ´Â ¿ÀºêÁ§Æ®¸¦ ¹ß°ßÇÏÁö ¸øÇß½À´Ï´Ù. : " + oid);
+            System.err.println("[ì˜¤ë¥˜] í˜„ì¬ ì†Œí™˜ëœ ì†Œí™˜ìˆ˜ë“¤ì¤‘ í•´ë‹¹í•˜ëŠ” ì˜¤ë¸Œì íŠ¸ë¥¼ ë°œê²¬í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. : " + oid);
             return;
         }
     }
@@ -182,7 +182,7 @@ public class SummonHandler {
             hs = (MapleSummon) ha.getPlayer().getMap().getMapObject(oid);
         }
         if (hs == null) {
-            System.err.println("[¿À·ù] ÇöÀç ¼ÒÈ¯µÈ ¼ÒÈ¯¼öµéÁß ÇØ´çÇÏ´Â ¿ÀºêÁ§Æ®¸¦ ¹ß°ßÇÏÁö ¸øÇß½À´Ï´Ù. : " + oid);
+            System.err.println("[ì˜¤ë¥˜] í˜„ì¬ ì†Œí™˜ëœ ì†Œí™˜ìˆ˜ë“¤ì¤‘ í•´ë‹¹í•˜ëŠ” ì˜¤ë¸Œì íŠ¸ë¥¼ ë°œê²¬í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. : " + oid);
             return;
         }
         switch (skillid) {
@@ -227,19 +227,19 @@ public class SummonHandler {
                     ItemInformation ii = ItemInformation.getInstance();
                     int effectid = 0;
                     switch (skillid % 1000) {
-                        case 86: //¿£Á©¸¯ºí·¹½º
+                        case 86: //ì—”ì ¤ë¦­ë¸”ë ˆìŠ¤
                             ii.getItemEffect(2022746).applyTo(ha.getPlayer());
                             effectid = 1085;
                             break;
-                        case 88: //´ÙÅ©¿£Á©¸¯ºí·¹½º
+                        case 88: //ë‹¤í¬ì—”ì ¤ë¦­ë¸”ë ˆìŠ¤
                             ii.getItemEffect(2022747).applyTo(ha.getPlayer());
                             effectid = 1087;
                             break;
-                        case 91: //´«²É¿£Á©¸¯ºí·¹½º
+                        case 91: //ëˆˆê½ƒì—”ì ¤ë¦­ë¸”ë ˆìŠ¤
                             ii.getItemEffect(2022764).applyTo(ha.getPlayer());
                             effectid = 1090;
                             break;
-                        case 180://È­ÀÌÆ®¿£Á©¸¯ºí·¹½º
+                        case 180://í™”ì´íŠ¸ì—”ì ¤ë¦­ë¸”ë ˆìŠ¤
                             ii.getItemEffect(2022823).applyTo(ha.getPlayer());
                             effectid = 1179;
                             break;

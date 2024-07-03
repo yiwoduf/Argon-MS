@@ -26,8 +26,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /*
  * NPCID : 2010000
  * ScriptName : carlie
- * NPCNameFunc : Âû¸®Áß»ç
- * Location : 200000000 (½ºÄ«ÀÌ·Îµå - ¿À¸£ºñ½º)
+ * NPCNameFunc : ì°°ë¦¬ì¤‘ì‚¬
+ * Location : 200000000 (ìŠ¤ì¹´ì´ë¡œë“œ - ì˜¤ë¥´ë¹„ìŠ¤)
  * 
  * @author T-Sun
  *
@@ -55,13 +55,13 @@ function start() {
 function action(mode, type, selection) {
 
     if (mode == 0 && (status == 1 || status == 3)) {
-	cm.sendNext("Èì. ±×·¸´Ù¸é ¾îÂ¿ ¼ö ¾ø±º.");
+	cm.sendNext("í . ê·¸ë ‡ë‹¤ë©´ ì–´ì©” ìˆ˜ ì—†êµ°.");
 	cm.dispose();
 	return;
     } else if (mode == 0 && status == 3) {
 	cm.dispose();
     } else if (mode == 0 && status == 4) {
-	cm.sendNext("Èì. ±×·¸´Ù¸é ¾îÂ¿ ¼ö ¾ø±º.");
+	cm.sendNext("í . ê·¸ë ‡ë‹¤ë©´ ì–´ì©” ìˆ˜ ì—†êµ°.");
 	cm.dispose();
 	return;
     }
@@ -70,11 +70,11 @@ function action(mode, type, selection) {
     else
 	status--;
     if (status == 1) { // first interaction with NPC
-	cm.sendNext("¾îÀÌ ÀÚ³×, ½Ã°£ Á» ÀÖ´Â°¡? À½. ³­ ÀÌ°ÍÀú°ÍÀ» ¼öÁıÇÏ´Â°Ô Ãë¹Ì¶ó³×. ³»°¡ ¿øÇÏ´Â ¾ÆÀÌÅÛÀ» °¡Á®¿À¸é ÀÚ³×¿¡°Ô ÇÊ¿äÇÒ¸¸ÇÑ ¹°°ÇÀ¸·Î ¹Ù²ãÁÖÁö. ´Ù¸¸ ³»°¡ ÁÖ´Â ¹°°ÇÀº ¸¸³¯¶§ ¸¶´Ù ¹Ù²ğ ¼ö ÀÖ´Ù³×. ¾î¶²°¡? »ı°¢ ÀÖ´Â°¡?");
+	cm.sendNext("ì–´ì´ ìë„¤, ì‹œê°„ ì¢€ ìˆëŠ”ê°€? ìŒ. ë‚œ ì´ê²ƒì €ê²ƒì„ ìˆ˜ì§‘í•˜ëŠ”ê²Œ ì·¨ë¯¸ë¼ë„¤. ë‚´ê°€ ì›í•˜ëŠ” ì•„ì´í…œì„ ê°€ì ¸ì˜¤ë©´ ìë„¤ì—ê²Œ í•„ìš”í• ë§Œí•œ ë¬¼ê±´ìœ¼ë¡œ ë°”ê¿”ì£¼ì§€. ë‹¤ë§Œ ë‚´ê°€ ì£¼ëŠ” ë¬¼ê±´ì€ ë§Œë‚ ë•Œ ë§ˆë‹¤ ë°”ë€” ìˆ˜ ìˆë‹¤ë„¤. ì–´ë–¤ê°€? ìƒê° ìˆëŠ”ê°€?");
     //cm.dispose();
 	} else if (status == 2) {
-		var eQuestChoice = "ÁÁ¾Æ! ¸ÕÀú ÀÚ³×°¡ ±³È¯ÇÏ°íÀÚ ÇÏ´Â ¾ÆÀÌÅÛÀ» ¼±ÅÃÇÏ°Ô. ´õ ÁÁÀº Àü¸®Ç°ÀÏ¼ö·Ï ´õ ÁÁÀº ¾ÆÀÌÅÛÀ» ¾òÀ» ¼ö ÀÖ´Ù³×.";
-		eQuestChoice += "\r\n\r\n#b#L0# #t4000073# 100°³#l\r\n#L1# #t4000059# 100°³#l\r\n#L2# #t4000076# 100°³#l\r\n#L3# #t4000058# 100°³#l\r\n#L4# #t4000078# 100°³#l\r\n#L5# #t4000060# 100°³#l\r\n#L6# #t4000062# 100°³#l\r\n#L7# #t4000048# 100°³#l\r\n#L8# #t4000081# 100°³#l\r\n#L9# #t4000061# 100°³#l\r\n#L10# #t4000070# 100°³#l\r\n#L11# #t4000071# 100°³#l\r\n#L12# #t4000072# 100°³#l\r\n#L13# #t4000051# 100°³#l\r\n#L14# #t4000055# 100°³#l\r\n#L15# #t4000069# 100°³#l\r\n#L16# #t4000052# 100°³#l\r\n#L17# #t4000050# 100°³#l\r\n#L18# #t4000057# 100°³#l\r\n#L19# #t4000049# 100°³#l\r\n#L20# #t4000056# 100°³#l\r\n#L21# #t4000079# 100°³#l\r\n#L22# #t4000053# 100°³#l\r\n#L23# #t4000054# 100°³#l\r\n#L24# #t4000080# 100°³#l\r\n";
+		var eQuestChoice = "ì¢‹ì•„! ë¨¼ì € ìë„¤ê°€ êµí™˜í•˜ê³ ì í•˜ëŠ” ì•„ì´í…œì„ ì„ íƒí•˜ê²Œ. ë” ì¢‹ì€ ì „ë¦¬í’ˆì¼ìˆ˜ë¡ ë” ì¢‹ì€ ì•„ì´í…œì„ ì–»ì„ ìˆ˜ ìˆë‹¤ë„¤.";
+		eQuestChoice += "\r\n\r\n#b#L0# #t4000073# 100ê°œ#l\r\n#L1# #t4000059# 100ê°œ#l\r\n#L2# #t4000076# 100ê°œ#l\r\n#L3# #t4000058# 100ê°œ#l\r\n#L4# #t4000078# 100ê°œ#l\r\n#L5# #t4000060# 100ê°œ#l\r\n#L6# #t4000062# 100ê°œ#l\r\n#L7# #t4000048# 100ê°œ#l\r\n#L8# #t4000081# 100ê°œ#l\r\n#L9# #t4000061# 100ê°œ#l\r\n#L10# #t4000070# 100ê°œ#l\r\n#L11# #t4000071# 100ê°œ#l\r\n#L12# #t4000072# 100ê°œ#l\r\n#L13# #t4000051# 100ê°œ#l\r\n#L14# #t4000055# 100ê°œ#l\r\n#L15# #t4000069# 100ê°œ#l\r\n#L16# #t4000052# 100ê°œ#l\r\n#L17# #t4000050# 100ê°œ#l\r\n#L18# #t4000057# 100ê°œ#l\r\n#L19# #t4000049# 100ê°œ#l\r\n#L20# #t4000056# 100ê°œ#l\r\n#L21# #t4000079# 100ê°œ#l\r\n#L22# #t4000053# 100ê°œ#l\r\n#L23# #t4000054# 100ê°œ#l\r\n#L24# #t4000080# 100ê°œ#l\r\n";
 		cm.sendSimple(eQuestChoice);
     } else if (status == 3){
 		v = selection;
@@ -103,7 +103,7 @@ function action(mode, type, selection) {
 			else if ( v == 22 ) requiredItem =  4000053;
 			else if ( v == 23 ) requiredItem =  4000054 ;
 			else if ( v == 24 ) requiredItem =  4000080 ;
-		cm.sendYesNo("¾îµğº¸ÀÚ, Á¤¸» #b#t" + requiredItem + "# 100°³#k¸¦ ±³È¯ÇÏ°í ½Í¾î? ±³È¯ÇÏ±â Àü¿¡ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºĞÈ÷ ÀÖ´ÂÁö È®ÀÎÇÏ¶ó±¸. ±×·¡¼­ Á¤¸» ±³È¯ÇÏ°í½Í³ª?");
+		cm.sendYesNo("ì–´ë””ë³´ì, ì •ë§ #b#t" + requiredItem + "# 100ê°œ#kë¥¼ êµí™˜í•˜ê³  ì‹¶ì–´? êµí™˜í•˜ê¸° ì „ì— ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„íˆ ìˆëŠ”ì§€ í™•ì¸í•˜ë¼êµ¬. ê·¸ë˜ì„œ ì •ë§ êµí™˜í•˜ê³ ì‹¶ë‚˜?");
     }else if (status == 4){	
 		itemCode = requiredItem;
 		if ( itemCode == 4000073 ) {
@@ -686,15 +686,15 @@ function action(mode, type, selection) {
 			nNewItemNum = 0;
 		}
 	if(!cm.haveItem(requiredItem,100)){
-	    cm.sendOk("ÀÚ³×..¾ÆÀÌÅÛÀº ºĞ¸í Á¦´ë·Î °®°í ÀÖ´Â°Ç°¡?");
+	    cm.sendOk("ìë„¤..ì•„ì´í…œì€ ë¶„ëª… ì œëŒ€ë¡œ ê°–ê³  ìˆëŠ”ê±´ê°€?");
 	} else if(!cm.canHold(nNewItemID)){
-	    cm.sendNext("ÀÚ³×.. ÀÎº¥Åä¸® °ø°£ÀÌ ºÎÁ·ÇÏÁö´Â ¾Ê³ª?");
+	    cm.sendNext("ìë„¤.. ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ë¶€ì¡±í•˜ì§€ëŠ” ì•Šë‚˜?");
 	} else {
 	    cm.gainItem(requiredItem,-100);
 	    cm.gainExp(500);
 	    cm.gainItem(nNewItemID, nNewItemNum);
-	    cm.sendOk("ÀÚ, ±³È¯ÀÌ ´Ù µÇ¾ú´Ù³×. ¾î¶²°¡? ¸¶À½¿¡ µå´Â°¡? ´ÙÀ½¹ø¿¡ ¿Ã¶© ´õ ÁÁÀº ¾ÆÀÌÅÛÀÌ ÀÖÀ» ¼ö ÀÖÀ¸´Ï ±â´ëÇÏ°Ô³ª.");
-	cm.getPlayer().send(MainPacketCreator.getGMText(6, "¾ÆÀÌÅÛÀ» È¹µæÇÏ¿´½À´Ï´Ù. ("+Packages.server.items.ItemInformation.getInstance().getName(nNewItemID)+" "+nNewItemNum+"°³)"));
+	    cm.sendOk("ì, êµí™˜ì´ ë‹¤ ë˜ì—ˆë‹¤ë„¤. ì–´ë–¤ê°€? ë§ˆìŒì— ë“œëŠ”ê°€? ë‹¤ìŒë²ˆì— ì˜¬ë• ë” ì¢‹ì€ ì•„ì´í…œì´ ìˆì„ ìˆ˜ ìˆìœ¼ë‹ˆ ê¸°ëŒ€í•˜ê²Œë‚˜.");
+	cm.getPlayer().send(MainPacketCreator.getGMText(6, "ì•„ì´í…œì„ íšë“í•˜ì˜€ìŠµë‹ˆë‹¤. ("+Packages.server.items.ItemInformation.getInstance().getName(nNewItemID)+" "+nNewItemNum+"ê°œ)"));
 
 	}
 	cm.dispose();

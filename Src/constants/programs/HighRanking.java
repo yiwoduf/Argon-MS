@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -23,7 +23,7 @@ import java.util.*;
 
 /**
  *
- * @author ¿¡¹İÅ×ÀÌ¸£
+ * @author ì—ë°˜í…Œì´ë¥´
  */
 public class HighRanking {
     
@@ -51,7 +51,7 @@ public class HighRanking {
     }
     
     public final void refreshData() {
-        /* [ÀÚµ¿ÀúÀå] */
+        /* [ìë™ì €ì¥] */
         for (ChannelServer cserv : ChannelServer.getAllInstances()) {
             cserv.saveAllMerchant();
             cserv.getPlayerStorage().saveAll();
@@ -62,7 +62,7 @@ public class HighRanking {
         try {
             con = MYSQL.getConnection();
             //Type 0
-            //<editor-fold defaultstate="collapsed" desc="1Â÷ ÀüÁ÷ ÃÖ´Ü½Ã°£">
+            //<editor-fold defaultstate="collapsed" desc="1ì°¨ ì „ì§ ìµœë‹¨ì‹œê°„">
             String sql = "SELECT k.value as time, c.id, c.name FROM keyvalue2 as k, characters as c WHERE k.`key` = '1stJobTrialCompleteTime' AND k.cid = c.id ORDER BY k.`value` ASC LIMIT 100";
             PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
@@ -76,7 +76,7 @@ public class HighRanking {
             
             
             //Type 1
-            //<editor-fold defaultstate="collapsed" desc="2Â÷ ÀüÁ÷ ÃÖ´Ü½Ã°£">
+            //<editor-fold defaultstate="collapsed" desc="2ì°¨ ì „ì§ ìµœë‹¨ì‹œê°„">
             sql = "SELECT k.value as time, c.id, c.name FROM keyvalue2 as k, characters as c WHERE k.`key` = '2ndJobTrialCompleteTime' AND k.cid = c.id ORDER BY k.`value` ASC LIMIT 100";
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
@@ -90,7 +90,7 @@ public class HighRanking {
             
             
             //Type 2
-            //<editor-fold defaultstate="collapsed" desc="3Â÷ ÀüÁ÷ ÃÖ´Ü½Ã°£">
+            //<editor-fold defaultstate="collapsed" desc="3ì°¨ ì „ì§ ìµœë‹¨ì‹œê°„">
             sql = "SELECT k.value as time, c.id, c.name FROM keyvalue2 as k, characters as c WHERE k.`key` = '3rdJobTrialCompleteTime' AND k.cid = c.id ORDER BY k.`value` ASC LIMIT 100";
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
@@ -116,7 +116,7 @@ public class HighRanking {
             
             
             //Type 3
-            //<editor-fold defaultstate="collapsed" desc="4Â÷ ÀüÁ÷ ÃÖ´Ü½Ã°£">
+            //<editor-fold defaultstate="collapsed" desc="4ì°¨ ì „ì§ ìµœë‹¨ì‹œê°„">
             sql = "SELECT k.value as time, c.id, c.name FROM keyvalue2 as k, characters as c WHERE k.`key` = '4thJobTrialCompleteTime' AND k.cid = c.id ORDER BY k.`value` ASC LIMIT 100";
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
@@ -131,7 +131,7 @@ public class HighRanking {
             
             con.close();
         } catch (Exception e) {
-            System.err.println("[¿À·ù] ÇÏÀÌ ·©Å· µ¥ÀÌÅÍ¸¦ °»½ÅÇÏ´Â Áß ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] í•˜ì´ ë­í‚¹ ë°ì´í„°ë¥¼ ê°±ì‹ í•˜ëŠ” ì¤‘ ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
             if (!ServerConstants.realese) e.printStackTrace();
         }
     }

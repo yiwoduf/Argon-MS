@@ -22,32 +22,32 @@ function action(mode, type, selection) {
 
 
 	if (status == 0) {
-	var text = "½ºÅä¸®¸¦ ¸ğµÎ ÀĞÀ¸½Ã¸é Æ¯º°ÇÑ º¸»óÀ» ¹ŞÀ» ¼ö ÀÖ´Â »ç½Ç ¾Ë°í °è½Å°¡¿ä?\r\n";
+	var text = "ìŠ¤í† ë¦¬ë¥¼ ëª¨ë‘ ì½ìœ¼ì‹œë©´ íŠ¹ë³„í•œ ë³´ìƒì„ ë°›ì„ ìˆ˜ ìˆëŠ” ì‚¬ì‹¤ ì•Œê³  ê³„ì‹ ê°€ìš”?\r\n";
 		if(cm.getPlayer().getKeyValue("31232") == 1) {
-		text += "#L0##r¨Û#d ½ºÅä¸® : ¿¤¸° ½£#l\r\n";
+		text += "#L0##râ“#d ìŠ¤í† ë¦¬ : ì—˜ë¦° ìˆ²#l\r\n";
 		}
 		if(cm.getPlayer().getKeyValue("3872") == 1) {
-		text += "#L1##r¨Û#d ½ºÅä¸® : È²±İ»ç¿ø#l\r\n";
+		text += "#L1##râ“#d ìŠ¤í† ë¦¬ : í™©ê¸ˆì‚¬ì›#l\r\n";
 		}
 		if(cm.getPlayer().getKeyValue("31328") == 1) {
-		text += "#L2##r¨Û#d ½ºÅä¸® : ÆÇÅ¸½ºÆ½ Å×¸¶ÆÄÅ©#l\r\n";
+		text += "#L2##râ“#d ìŠ¤í† ë¦¬ : íŒíƒ€ìŠ¤í‹± í…Œë§ˆíŒŒí¬#l\r\n";
 		}
 		if(cm.getPlayer().getKeyValue("3521") == 1) {
-		text += "#L3##r¨Û#d ½ºÅä¸® : ½Ã°£ÀÇ ½ÅÀü#l\r\n";
+		text += "#L3##râ“#d ìŠ¤í† ë¦¬ : ì‹œê°„ì˜ ì‹ ì „#l\r\n";
 		}
 		if(cm.getPlayer().getKeyValue("32524") == 1) {
-		text += "#L4##r¨Û#d ½ºÅä¸® : Å©¸®Æ¼¾Æ½º#l\r\n";
+		text += "#L4##râ“#d ìŠ¤í† ë¦¬ : í¬ë¦¬í‹°ì•„ìŠ¤#l\r\n";
 		}
 	cm.sendSimple(text);
 
 
 	} else if (status == 1) {
 		sL = selection;
-		var StoryName = sL == 0 ? "¿¤¸° ½£#kÀ»" :
-				sL == 1 ? "È²±İ»ç¿ø#kÀ»" :
-				sL == 2 ? "ÆÇÅ¸½ºÆ½ Å×¸¶ÆÄÅ©#k¸¦" :
-				sL == 3 ? "½Ã°£ÀÇ ½ÅÀü#kÀ»" :
-				sL == 4 ? "Å©¸®Æ¼¾Æ½º" : "";
+		var StoryName = sL == 0 ? "ì—˜ë¦° ìˆ²#kì„" :
+				sL == 1 ? "í™©ê¸ˆì‚¬ì›#kì„" :
+				sL == 2 ? "íŒíƒ€ìŠ¤í‹± í…Œë§ˆíŒŒí¬#kë¥¼" :
+				sL == 3 ? "ì‹œê°„ì˜ ì‹ ì „#kì„" :
+				sL == 4 ? "í¬ë¦¬í‹°ì•„ìŠ¤" : "";
 		var s = sL == 0 ? 0 : 1
 		itemSet = new Array(
 					new Array(2432532, 4310015, 4001832, 5064000, 5064100, 5062009),
@@ -61,11 +61,11 @@ function action(mode, type, selection) {
 					new Array(1, 1, 1, 200, 700, 1000, 1500, 300));
 		GiveItem = itemSet[sL];
 		Quantity = itemQty[sL];
-		var text = "#b½ºÅä¸® : "+StoryName+" ¸ğµÎ ±ú¼Ì±º¿ä! ÃàÇÏµå¸³´Ï´Ù. Ã¥À» ÀĞ´Â Áñ°Å¿òÀ» ¾Æ´Â ÀÚ¿¡°Ô´Â ¼±¹°ÀÌ ÁØºñµÇ¾î ÀÖ½À´Ï´Ù.\r\n\r\n";
+		var text = "#bìŠ¤í† ë¦¬ : "+StoryName+" ëª¨ë‘ ê¹¨ì…¨êµ°ìš”! ì¶•í•˜ë“œë¦½ë‹ˆë‹¤. ì±…ì„ ì½ëŠ” ì¦ê±°ì›€ì„ ì•„ëŠ” ìì—ê²ŒëŠ” ì„ ë¬¼ì´ ì¤€ë¹„ë˜ì–´ ìˆìŠµë‹ˆë‹¤.\r\n\r\n";
 		text += "#fUI/UIWindow.img/QuestIcon/4/0#";
 
 		for(var i = 0; i < GiveItem.length; i++){
-		text += "\r\n#i"+GiveItem[i]+"# #z"+GiveItem[i]+"# "+Quantity[i]+"°³ #k";
+		text += "\r\n#i"+GiveItem[i]+"# #z"+GiveItem[i]+"# "+Quantity[i]+"ê°œ #k";
 		}
 		cm.sendNext(text);
 
@@ -73,11 +73,11 @@ function action(mode, type, selection) {
 		GivenCheck();
 		for (var i = 0; i < GiveItem.length; i++){
 		cm.gainItem(GiveItem[i], Quantity[i]);
-		showText = Quantity[i] == 1 ? "" : " "+Quantity[i]+"°³"
-		showItem = GiveItem[i] == 4001832 ? "ÁÖ¹®ÀÇ ÈçÀû" :
-			   GiveItem[i] == 4310015 ? "Åõ½ÅÀÇ ÁõÇ¥" :
-			   GiveItem[i] == 4310119 ? "ÇÇ¸´½Ã½º ÄÚÀÎ" : Packages.server.items.ItemInformation.getInstance().getName(GiveItem[i])
-		cm.getPlayer().send(MainPacketCreator.getGMText(6, "¾ÆÀÌÅÛÀ» È¹µæÇÏ¿´½À´Ï´Ù. ("+showItem+""+showText+")"));	
+		showText = Quantity[i] == 1 ? "" : " "+Quantity[i]+"ê°œ"
+		showItem = GiveItem[i] == 4001832 ? "ì£¼ë¬¸ì˜ í”ì " :
+			   GiveItem[i] == 4310015 ? "íˆ¬ì‹ ì˜ ì¦í‘œ" :
+			   GiveItem[i] == 4310119 ? "í”¼ë¦¿ì‹œìŠ¤ ì½”ì¸" : Packages.server.items.ItemInformation.getInstance().getName(GiveItem[i])
+		cm.getPlayer().send(MainPacketCreator.getGMText(6, "ì•„ì´í…œì„ íšë“í•˜ì˜€ìŠµë‹ˆë‹¤. ("+showItem+""+showText+")"));	
 		}
 
 		cm.dispose();

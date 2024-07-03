@@ -3,17 +3,17 @@ a
 
 /*
 
-	ǻ�� �¶��� �ҽ� ���� ��ũ��Ʈ �Դϴ�.
+	퓨어 온라인 소스 팩의 스크립트 입니다.
 
-        ���� : ��ũ����
+        제작 : 주크블랙
 
-	���ǽþ��̵� : 
+	엔피시아이디 : 
 	
-	���ǽ� �̸� :
+	엔피시 이름 :
 
-	���ǽð� �ִ� �� : 
+	엔피시가 있는 맵 : 
 
-	���ǽ� ���� : 
+	엔피시 설명 : 
 
 
 */
@@ -38,7 +38,7 @@ function action(mode, type, selection) {
     
     if (status == 0) {
         if (cm.getProfession(1) != MapleProfessionType.HERBALISM.getValue()) {
-            cm.getPlayer().message(5, "��������� ����ä���� �ƴϹǷ� �� �� �����ϴ�.");
+            cm.getPlayer().message(5, "전문기술이 약초채집이 아니므로 열 수 없습니다.");
             cm.dispose();
             return;
         }

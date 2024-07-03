@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  *
  */
@@ -42,7 +42,7 @@ public class MobHandler {
         if (chr.getMapId() == 120000102) {
             return;
         }
-        rh.skip(1);  // ¾Æ½º¿Ï ¾Æ´Ï¸é µğ¸à¼Ç
+        rh.skip(1);  // ì•„ìŠ¤ì™„ ì•„ë‹ˆë©´ ë””ë©˜ì…˜
         final short moveid = rh.readShort(); // m_nMobCtrlSN
         final byte useSkill = rh.readByte(); // bMovingAttack | 4 * (bRushMove | 2 * (bRiseByToss | 2 * (m_nMobCtrlState < 0)))
         final boolean bCheatResult = (useSkill & 0xF) != 0;
@@ -102,7 +102,7 @@ public class MobHandler {
         }
 
         if (monster.getController() != null && monster.getController().getId() != c.getPlayer().getId()) {
-            if (!v56) { // µ¿½Ã¿¡ ÄÁÆ®·Ñ ¹æÁö.. ¾È±×·³ ¹®¿öÅ©ÇÔ ¤Ğ¤Ğ
+            if (!v56) { // ë™ì‹œì— ì»¨íŠ¸ë¡¤ ë°©ì§€.. ì•ˆê·¸ëŸ¼ ë¬¸ì›Œí¬í•¨ ã… ã… 
                 c.sendPacket(MobPacket.stopControllingMonster(oid, false));
                 return;
             } else {

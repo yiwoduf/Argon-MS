@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -53,7 +53,7 @@ public class CashShopOperation {
                 con.close();
                 hp.getCashInventory().saveToDB();
             } else {
-                System.err.println("Ä³½Ã¼¥ ÀÎº¥Åä¸®°¡ ³Î Æ÷ÀÎÅÍ°¡ ¹ß»ıÇÏ¿© ÀúÀåÀ» ½ÇÆĞÇß½À´Ï´Ù.");
+                System.err.println("ìºì‹œìƒµ ì¸ë²¤í† ë¦¬ê°€ ë„ í¬ì¸í„°ê°€ ë°œìƒí•˜ì—¬ ì €ì¥ì„ ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -125,7 +125,7 @@ public class CashShopOperation {
         validCheck:
         if (valid > 0) {
             if (list.contains(ha.getAccountName())) {
-                ha.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "ÀÌ¹Ì ÀÌ ÄíÆùÀ» »ç¿ëÇÏ½Å ±â·ÏÀÌ ÀÖ½À´Ï´Ù."));
+                ha.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "ì´ë¯¸ ì´ ì¿ í°ì„ ì‚¬ìš©í•˜ì‹  ê¸°ë¡ì´ ìˆìŠµë‹ˆë‹¤."));
                 break validCheck;
             }
             for (String ied : list) {
@@ -136,17 +136,17 @@ public class CashShopOperation {
             item = getNXCodeData(code, "item");
             setNXCodeData(code, valid - 1, ready.toString());
             switch (type) {
-                case 1: //³Ø½¼ Ä³½Ã
-                case 2: //¸ŞÀÌÇÃ Æ÷ÀÎÆ®
+                case 1: //ë„¥ìŠ¨ ìºì‹œ
+                case 2: //ë©”ì´í”Œ í¬ì¸íŠ¸
                     ha.getPlayer().modifyCSPoints(type, item, false);
-                    ha.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, item + (type == 1 ? " Ä³½Ã" : " ¸ŞÀÌÇÃ Æ÷ÀÎÆ®") + "¸¦ È¹µæÇß½À´Ï´Ù!"));
+                    ha.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, item + (type == 1 ? " ìºì‹œ" : " ë©”ì´í”Œ í¬ì¸íŠ¸") + "ë¥¼ íšë“í–ˆìŠµë‹ˆë‹¤!"));
                     break;
-                case 3: //¸Ş¼Ò
+                case 3: //ë©”ì†Œ
                     ha.getPlayer().gainMeso(item, false);
-                    ha.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, item + " ¸Ş¼Ò¸¦ È¹µæÇß½À´Ï´Ù!"));
+                    ha.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, item + " ë©”ì†Œë¥¼ íšë“í–ˆìŠµë‹ˆë‹¤!"));
                     break;
-                case 4: //¾ÆÀÌÅÛ
-                    InventoryManipulator.addById(ha, item, (short) 1, null, null, 0, "Ä³½Ã¼¥¿¡¼­ ÄíÆùÀ¸·Î ¾òÀº ¾ÆÀÌÅÛ");
+                case 4: //ì•„ì´í…œ
+                    InventoryManipulator.addById(ha, item, (short) 1, null, null, 0, "ìºì‹œìƒµì—ì„œ ì¿ í°ìœ¼ë¡œ ì–»ì€ ì•„ì´í…œ");
                     ha.getSession().writeAndFlush(CashPacket.showCouponRedeemedItem(item));
                     break;
             }
@@ -244,7 +244,7 @@ public class CashShopOperation {
                 int sn = rh.readInt();
                 final CashItemInfo item = CashItemFactory.getInstance().getItem(sn);
                 if (item == null) {
-                    c.send(MainPacketCreator.serverNotice(1, "¼­¹ö¿¡ µ¥ÀÌÅÍ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù. ±¸¸ÅÇÒ ¼ö ¾ø´Â ¾ÆÀÌÅÛÀÔ´Ï´Ù."));
+                    c.send(MainPacketCreator.serverNotice(1, "ì„œë²„ì— ë°ì´í„°ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤. êµ¬ë§¤í•  ìˆ˜ ì—†ëŠ” ì•„ì´í…œì…ë‹ˆë‹¤."));
                     return;
                 }
                 if (!item.getOnSale()) {
@@ -278,15 +278,15 @@ public class CashShopOperation {
                         tem = itemr.copy();
                     }
                     if (chr.getCashInventory() == null || item == null) {
-                        c.send(MainPacketCreator.serverNotice(1, "Ä³½Ã¾ÆÀÌÅÛÀ» ±¸¸ÅÇÏ´Â µµÁß¿¡ ¿À·ù°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù!"));
+                        c.send(MainPacketCreator.serverNotice(1, "ìºì‹œì•„ì´í…œì„ êµ¬ë§¤í•˜ëŠ” ë„ì¤‘ì— ì˜¤ë¥˜ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤!"));
                         return;
                     }
                     if (tem != null) {
-                        tem.setGMLog(CurrentTime.getAllCurrentTime() + "¿¡ " + c.getPlayer().getName() + "ÀÌ(°¡) Ä³½Ã¼¥¿¡¼­ ±¸¸ÅÇÑ ¾ÆÀÌÅÛ");
+                        tem.setGMLog(CurrentTime.getAllCurrentTime() + "ì— " + c.getPlayer().getName() + "ì´(ê°€) ìºì‹œìƒµì—ì„œ êµ¬ë§¤í•œ ì•„ì´í…œ");
                         chr.getCashInventory().addItem(tem);
                         c.getSession().write(CashPacket.showBoughtCSItem(tem, sn, c.getAccID(), c.getPlayer().getId()));
                     } else {
-                        c.send(MainPacketCreator.serverNotice(1, "Ä³½Ã¾ÆÀÌÅÛÀ» ±¸¸ÅÇÏ´Â µµÁß¿¡ ¿À·ù°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù!"));
+                        c.send(MainPacketCreator.serverNotice(1, "ìºì‹œì•„ì´í…œì„ êµ¬ë§¤í•˜ëŠ” ë„ì¤‘ì— ì˜¤ë¥˜ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤!"));
                         return;
                     }
                 }
@@ -312,9 +312,9 @@ public class CashShopOperation {
                         chr.modifyCSPoints(1, -12000, false);
                         chr.getInventory(type).addSlot((byte) 8);
                         chr.inventoryslot_changed = true;
-                        chr.dropMessage(1, "ÀÎº¥Åä¸® °ø°£À» ´Ã·È½À´Ï´Ù. ÇöÀç " + chr.getInventory(type).getSlotLimit() + " ½½·ÔÀÌ µÇ¾ú½À´Ï´Ù.\r\n\r\nÄ³½Ã¼¥¿¡¼­ ´Ã·ÁÁø ½½·ÔÀÌ ¹Ù·Î º¸ÀÌÁö ¾Ê¾Æµµ ½ÇÁ¦·Î´Â ´Ã·ÁÁ³À¸´Ï, Ä³½Ã¼¥¿¡¼­ ³ª°¡½Ã¸é Á¤»óÀûÀ¸·Î ½½·ÔÀÌ ´Ã¾î³­°É º¼ ¼ö ÀÖ½À´Ï´Ù.");
+                        chr.dropMessage(1, "ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ëŠ˜ë ¸ìŠµë‹ˆë‹¤. í˜„ì¬ " + chr.getInventory(type).getSlotLimit() + " ìŠ¬ë¡¯ì´ ë˜ì—ˆìŠµë‹ˆë‹¤.\r\n\r\nìºì‹œìƒµì—ì„œ ëŠ˜ë ¤ì§„ ìŠ¬ë¡¯ì´ ë°”ë¡œ ë³´ì´ì§€ ì•Šì•„ë„ ì‹¤ì œë¡œëŠ” ëŠ˜ë ¤ì¡Œìœ¼ë‹ˆ, ìºì‹œìƒµì—ì„œ ë‚˜ê°€ì‹œë©´ ì •ìƒì ìœ¼ë¡œ ìŠ¬ë¡¯ì´ ëŠ˜ì–´ë‚œê±¸ ë³¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
                     } else {
-                        chr.dropMessage(1, "½½·ÔÀ» ´õ ÀÌ»ó ´Ã¸± ¼ö ¾ø½À´Ï´Ù.");
+                        chr.dropMessage(1, "ìŠ¬ë¡¯ì„ ë” ì´ìƒ ëŠ˜ë¦´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                     }
                 } else {
                     final MapleInventoryType type = MapleInventoryType.getByType(rh.readByte());
@@ -323,9 +323,9 @@ public class CashShopOperation {
                         chr.modifyCSPoints(1, -8000, false);
                         chr.getInventory(type).addSlot((byte) 4);
                         chr.inventoryslot_changed = true;
-                        chr.dropMessage(1, "ÀÎº¥Åä¸® °ø°£À» ´Ã·È½À´Ï´Ù. ÇöÀç " + chr.getInventory(type).getSlotLimit() + " ½½·ÔÀÌ µÇ¾ú½À´Ï´Ù.\r\n\r\nÄ³½Ã¼¥¿¡¼­ ´Ã·ÁÁø ½½·ÔÀÌ ¹Ù·Î º¸ÀÌÁö ¾Ê¾Æµµ ½ÇÁ¦·Î´Â ´Ã·ÁÁ³À¸´Ï, Ä³½Ã¼¥¿¡¼­ ³ª°¡½Ã¸é Á¤»óÀûÀ¸·Î ½½·ÔÀÌ ´Ã¾î³­°É º¼ ¼ö ÀÖ½À´Ï´Ù.");
+                        chr.dropMessage(1, "ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ëŠ˜ë ¸ìŠµë‹ˆë‹¤. í˜„ì¬ " + chr.getInventory(type).getSlotLimit() + " ìŠ¬ë¡¯ì´ ë˜ì—ˆìŠµë‹ˆë‹¤.\r\n\r\nìºì‹œìƒµì—ì„œ ëŠ˜ë ¤ì§„ ìŠ¬ë¡¯ì´ ë°”ë¡œ ë³´ì´ì§€ ì•Šì•„ë„ ì‹¤ì œë¡œëŠ” ëŠ˜ë ¤ì¡Œìœ¼ë‹ˆ, ìºì‹œìƒµì—ì„œ ë‚˜ê°€ì‹œë©´ ì •ìƒì ìœ¼ë¡œ ìŠ¬ë¡¯ì´ ëŠ˜ì–´ë‚œê±¸ ë³¼ ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
                     } else {
-                        chr.dropMessage(1, "½½·ÔÀ» ´õ ÀÌ»ó ´Ã¸± ¼ö ¾ø½À´Ï´Ù.");
+                        chr.dropMessage(1, "ìŠ¬ë¡¯ì„ ë” ì´ìƒ ëŠ˜ë¦´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                     }
                 }
                 break;
@@ -334,9 +334,9 @@ public class CashShopOperation {
                 if (chr.getCSPoints(1) >= 8000 && chr.getStorage().getSlots() < 48) {
                     chr.modifyCSPoints(1, -8000, false);
                     chr.getStorage().increaseSlots((byte) 4);
-                    chr.dropMessage(1, "Ã¢°í½½·ÔÀ» ´Ã·È½À´Ï´Ù. ÇöÀç Ã¢°í ½½·ÔÀº " + chr.getStorage().getSlots() + "Ä­ ÀÔ´Ï´Ù.");
+                    chr.dropMessage(1, "ì°½ê³ ìŠ¬ë¡¯ì„ ëŠ˜ë ¸ìŠµë‹ˆë‹¤. í˜„ì¬ ì°½ê³  ìŠ¬ë¡¯ì€ " + chr.getStorage().getSlots() + "ì¹¸ ì…ë‹ˆë‹¤.");
                 } else {
-                    chr.dropMessage(1, "½½·ÔÀ» ´õ ÀÌ»ó ´Ã¸± ¼ö ¾ø½À´Ï´Ù.");
+                    chr.dropMessage(1, "ìŠ¬ë¡¯ì„ ë” ì´ìƒ ëŠ˜ë¦´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                 }
                 break;
             case 8:
@@ -344,9 +344,9 @@ public class CashShopOperation {
                 if (chr.getCSPoints(1) >= 6900 && chr.getClient().getChrSlot() < 40) {
                     chr.modifyCSPoints(1, -6900, false);
                     chr.getClient().addChrSlot(1, chr.getAccountID());
-                    chr.dropMessage(1, "Ä³¸¯ÅÍ½½·ÔÀ» ´Ã·È½À´Ï´Ù. \r\nÇöÀç Ä³¸¯ÅÍ ½½·ÔÀº " + chr.getClient().getChrSlot() + "Ä­ ÀÔ´Ï´Ù.");
+                    chr.dropMessage(1, "ìºë¦­í„°ìŠ¬ë¡¯ì„ ëŠ˜ë ¸ìŠµë‹ˆë‹¤. \r\ní˜„ì¬ ìºë¦­í„° ìŠ¬ë¡¯ì€ " + chr.getClient().getChrSlot() + "ì¹¸ ì…ë‹ˆë‹¤.");
                 } else {
-                    chr.dropMessage(1, "½½·ÔÀÌ ÀÌ¹Ì ÃÖ´ëÄ¡°Å³ª Ä³½Ã°¡ ºÎÁ· ÇÕ´Ï´Ù.");
+                    chr.dropMessage(1, "ìŠ¬ë¡¯ì´ ì´ë¯¸ ìµœëŒ€ì¹˜ê±°ë‚˜ ìºì‹œê°€ ë¶€ì¡± í•©ë‹ˆë‹¤.");
                     c.getSession().writeAndFlush(CashPacket.showNXMapleTokens(chr));
                     return;
                 }
@@ -357,25 +357,25 @@ public class CashShopOperation {
                 c.getSession().writeAndFlush(CashPacket.sendPendont());
                 break;
             case 49:
-                // Ææ´øÆ® ½½·Ô Ãß°¡
+                // íœë˜íŠ¸ ìŠ¬ë¡¯ ì¶”ê°€
                 int data = rh.readInt();
                 c.getSession().writeAndFlush(CashPacket.showBoughtPendentSlot(data));
                 c.getPlayer().getQuestNAdd(MapleQuest.getInstance(GameConstants.PENDANT_SLOT)).setCustomData("" + (System.currentTimeMillis() + ((1) * 24 * 60 * 60 * 1000)));
                 break;
             case 14: {
-                //Ä³½Ã¼¥¿¡¼­ ¾ÆÀÌÅÛ ²¨³»±â
+                //ìºì‹œìƒµì—ì„œ ì•„ì´í…œ êº¼ë‚´ê¸°
                 MapleCashInventory csinv = chr.getCashInventory();
                 int uniqueid = rh.readInt();
                 IItem item = csinv.findByCashId(uniqueid);
                 if (item == null) {
-                    c.getPlayer().message(1, "¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù! ÇØ´ç Ä³½Ã¾ÆÀÌÅÛÀ» ¹ß°ßÇÏÁö ¸øÇß½À´Ï´Ù. GM¿¡°Ô ¹®ÀÇÇØ ÁÖ¼¼¿ä.");
+                    c.getPlayer().message(1, "ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤! í•´ë‹¹ ìºì‹œì•„ì´í…œì„ ë°œê²¬í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. GMì—ê²Œ ë¬¸ì˜í•´ ì£¼ì„¸ìš”.");
                     c.getSession().writeAndFlush(CashPacket.showNXMapleTokens(chr));
                     return;
                 }
                 item.setCash(true);
                 short slot = InventoryManipulator.addFromDrop(c, item, false);
                 if (slot == -1) {
-                    c.getPlayer().message(1, "¾ÆÀÌÅÛÀ» ³ÖÀ» °ø°£ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+                    c.getPlayer().message(1, "ì•„ì´í…œì„ ë„£ì„ ê³µê°„ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
                     c.getSession().writeAndFlush(CashPacket.showNXMapleTokens(chr));
                     return;
                 }
@@ -384,7 +384,7 @@ public class CashShopOperation {
                 break;
             }
             case 15: {
-                //Ä³½Ã¼¥¿¡¼­ ¾ÆÀÌÅÛ ³Ö±â
+                //ìºì‹œìƒµì—ì„œ ì•„ì´í…œ ë„£ê¸°
                 IItem item = null;
                 MapleInventory inv = null;
                 short slot = -1;
@@ -406,19 +406,19 @@ public class CashShopOperation {
                     }
                     inv.removeSlot(slot);
                 } else {
-                    c.send(MainPacketCreator.serverNotice(1, "ÇØ´ç Ä³½Ã¾ÆÀÌÅÛÀ» ¹ß°ßÇÏÁö ¸øÇß½À´Ï´Ù."));
+                    c.send(MainPacketCreator.serverNotice(1, "í•´ë‹¹ ìºì‹œì•„ì´í…œì„ ë°œê²¬í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤."));
                 }
                 break;
             }
             case 31: {
-                //ÆäÀÌ¹é ¾ÆÀÌÅÛ »èÁ¦ÈÄ - 30% Àû¸³
+                //í˜ì´ë°± ì•„ì´í…œ ì‚­ì œí›„ - 30% ì ë¦½
                 String password = rh.readMapleAsciiString();
                 int uniqueid = rh.readInt();
                 MapleCashInventory csinv = c.getPlayer().getCashInventory();
                 IItem item = csinv.findByCashId(uniqueid);
                 CashItemInfo cii = CashItemFactory.getInstance().getItemInfoFromItemId(item.getItemId());
                 if (cii == null) {
-                    c.getPlayer().message(1, "Ä³½Ã¾ÆÀÌÅÛ Á¤º¸¸¦ Ã£Áö ¸øÇß½À´Ï´Ù.");
+                    c.getPlayer().message(1, "ìºì‹œì•„ì´í…œ ì •ë³´ë¥¼ ì°¾ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
                     return;
                 }
                 int payback = (int) (cii.getPrice() * 0.3);
@@ -448,7 +448,7 @@ public class CashShopOperation {
                 final CashItemInfo item = CashItemFactory.getInstance().getItem(id);
                 if (id == 170000004) {
                     if (chr.getKeyValue("firstcashbuy") != null) {
-                        c.getPlayer().message(1, "±¸¸ÅÇÏ½Ç·Á´Â ÆĞÅ°Áö´Â Áßº¹ ±¸¸Å°¡ ºÒ°¡´ÉÇÑ ÆĞÅ°Áö ÀÔ´Ï´Ù.");
+                        c.getPlayer().message(1, "êµ¬ë§¤í•˜ì‹¤ë ¤ëŠ” íŒ¨í‚¤ì§€ëŠ” ì¤‘ë³µ êµ¬ë§¤ê°€ ë¶ˆê°€ëŠ¥í•œ íŒ¨í‚¤ì§€ ì…ë‹ˆë‹¤.");
                         c.getSession().writeAndFlush(CashPacket.showNXMapleTokens(chr));
                         return;
                     } else {
@@ -463,7 +463,7 @@ public class CashShopOperation {
                         for (Pair<Integer, CashItemInfo> p : packs) {
                             IItem tem;
                             if (p.getRight() == null) {
-                                c.getPlayer().message(1, "¾ÆÀÌÅÛ Á¤º¸¸¦ Á¦´ë·Î ºÒ·¯¿ÀÁö ¸øÇß½À´Ï´Ù.");
+                                c.getPlayer().message(1, "ì•„ì´í…œ ì •ë³´ë¥¼ ì œëŒ€ë¡œ ë¶ˆëŸ¬ì˜¤ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
                                 c.getSession().writeAndFlush(CashPacket.showNXMapleTokens(chr));
                                 return;
                             }
@@ -488,21 +488,21 @@ public class CashShopOperation {
                                 tem = itemr.copy();
                             }
                             if (chr.getCashInventory() == null) {
-                                System.out.println("Ä³½Ã ÀÎº¥Åä¸®°¡ ³Î");
+                                System.out.println("ìºì‹œ ì¸ë²¤í† ë¦¬ê°€ ë„");
                             } else if (tem == null) {
-                                System.out.println("¾ÆÀÌÅÛÀÌ ³Î");
+                                System.out.println("ì•„ì´í…œì´ ë„");
                             }
                             if (tem != null) {
-                                tem.setGMLog(CurrentTime.getAllCurrentTime() + "¿¡ " + chr.getName() + "ÀÌ Ä³½Ã¼¥¿¡¼­ ±¸¸ÅÇÑ ¾ÆÀÌÅÛ");
+                                tem.setGMLog(CurrentTime.getAllCurrentTime() + "ì— " + chr.getName() + "ì´ ìºì‹œìƒµì—ì„œ êµ¬ë§¤í•œ ì•„ì´í…œ");
                             }
                             chr.getCashInventory().addItem(tem);
                             itemss.add(tem);
                         }
                         c.getSession().write(CashPacket.showBoughtCSPackages(packs, itemss, c.getAccID(), c.getPlayer().getId()));
                     } else if (item == null) {
-                        c.getPlayer().message(1, "¾ÆÀÌÅÛ Á¤º¸¸¦ Ã£Áö ¸øÇß½À´Ï´Ù.");
+                        c.getPlayer().message(1, "ì•„ì´í…œ ì •ë³´ë¥¼ ì°¾ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
                     } else if (chr.getCSPoints(point) <= item.getPrice()) {
-                        c.getPlayer().message(1, "ÇÊ¿äÇÑ Ä³½Ã ¶Ç´Â ¸ŞÀÌÇÃ Æ÷ÀÎÆ®°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+                        c.getPlayer().message(1, "í•„ìš”í•œ ìºì‹œ ë˜ëŠ” ë©”ì´í”Œ í¬ì¸íŠ¸ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
                     }
                 } catch (Exception e) {
                     if (!ServerConstants.realese) {
@@ -522,7 +522,7 @@ public class CashShopOperation {
                     return;
                 }
                 if (c.getPlayer().getMeso() < item.getPrice()) {
-                    c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "¸Ş¼Ò°¡ ºÎÁ· ÇÕ´Ï´Ù."));
+                    c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "ë©”ì†Œê°€ ë¶€ì¡± í•©ë‹ˆë‹¤."));
                     doCSPackets(c);
                     return;
                 }
@@ -548,22 +548,22 @@ public class CashShopOperation {
                     tem = itemr.copy();
                 }
                 if (chr.getCashInventory() == null || item == null) {
-                    c.send(MainPacketCreator.serverNotice(1, "Ä³½Ã¾ÆÀÌÅÛÀ» ±¸¸ÅÇÏ´Â µµÁß¿¡ ¿À·ù°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù!"));
+                    c.send(MainPacketCreator.serverNotice(1, "ìºì‹œì•„ì´í…œì„ êµ¬ë§¤í•˜ëŠ” ë„ì¤‘ì— ì˜¤ë¥˜ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤!"));
                     return;
                 }
                 if (tem != null) {
                     chr.gainMeso(-item.getPrice(), false);
-                    tem.setGMLog(CurrentTime.getAllCurrentTime() + "¿¡ " + c.getPlayer().getName() + "ÀÌ(°¡) Ä³½Ã¼¥¿¡¼­ ±¸¸ÅÇÑ ¾ÆÀÌÅÛ");
+                    tem.setGMLog(CurrentTime.getAllCurrentTime() + "ì— " + c.getPlayer().getName() + "ì´(ê°€) ìºì‹œìƒµì—ì„œ êµ¬ë§¤í•œ ì•„ì´í…œ");
                     chr.getCashInventory().addItem(tem);
                     c.getSession().write(CashPacket.showBoughtCSItem(tem, sn, c.getAccID(), c.getPlayer().getId()));
                 } else {
-                    c.send(MainPacketCreator.serverNotice(1, "Ä³½Ã¾ÆÀÌÅÛÀ» ±¸¸ÅÇÏ´Â µµÁß¿¡ ¿À·ù°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù!"));
+                    c.send(MainPacketCreator.serverNotice(1, "ìºì‹œì•„ì´í…œì„ êµ¬ë§¤í•˜ëŠ” ë„ì¤‘ì— ì˜¤ë¥˜ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤!"));
                     return;
                 }
                 break;
             }
             case 47:
-                // ¾÷µ¥ÀÌÆ®
+                // ì—…ë°ì´íŠ¸
                 c.getSession().writeAndFlush(CashPacket.showNXMapleTokens(chr));
                 return;
             case 48:
@@ -574,43 +574,43 @@ public class CashShopOperation {
                 MapleCashInventory csinv = chr.getCashInventory();
                 IItem item = csinv.findByCashId(uniqueid);
                 if (item == null) {
-                    c.getPlayer().message(1, "¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù! ÇØ´ç Ä³½Ã¾ÆÀÌÅÛÀ» ¹ß°ßÇÏÁö ¸øÇß½À´Ï´Ù. GM¿¡°Ô ¹®ÀÇÇØ ÁÖ¼¼¿ä.");
+                    c.getPlayer().message(1, "ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤! í•´ë‹¹ ìºì‹œì•„ì´í…œì„ ë°œê²¬í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤. GMì—ê²Œ ë¬¸ì˜í•´ ì£¼ì„¸ìš”.");
                     c.getSession().writeAndFlush(CashPacket.showNXMapleTokens(chr));
                     return;
                 }
                 int reward = 0;
                 switch (item.getItemId()) {
-                    case 5533026: { //10ÁÖ³â ¸ğÀÚ»óÀÚ
+                    case 5533026: { //10ì£¼ë…„ ëª¨ììƒì
                         int[] items = {1003873, 1003874, 1003875, 1003876, 1003877, 1003878};
                         reward = items[(int) Math.floor(Math.random() * items.length)];
                         break;
                     }
-                    case 5533008: { //ÇÁ½¬ÄÉÀÇ ³¯°³ »óÀÚ
+                    case 5533008: { //í”„ì‰¬ì¼€ì˜ ë‚ ê°œ ìƒì
                         int[] items = {1102376, 1102377, 1102378};
                         reward = items[(int) Math.floor(Math.random() * items.length)];
                         break;
                     }
-                    case 5533018: { //¾Æ¿ì¶ó ³¯°³ »óÀÚ
+                    case 5533018: { //ì•„ìš°ë¼ ë‚ ê°œ ìƒì
                         int[] items = {1102451, 1102452, 1102453};
                         reward = items[(int) Math.floor(Math.random() * items.length)];
                         break;
                     }
-                    case 5533017: { //È¯»ó¹«±â»óÀÚ
+                    case 5533017: { //í™˜ìƒë¬´ê¸°ìƒì
                         int[] items = {1702361, 1702362, 1702363, 1702364};
                         reward = items[(int) Math.floor(Math.random() * items.length)];
                         break;
                     }
-                    case 5533011: { //´ÙÅ© ±â»ç´ÜÀå ¸ğÀÚ
+                    case 5533011: { //ë‹¤í¬ ê¸°ì‚¬ë‹¨ì¥ ëª¨ì
                         int[] items = {1003398, 1003399, 1003400, 1003401, 1003402};
                         reward = items[(int) Math.floor(Math.random() * items.length)];
                         break;
                     }
-                    case 5533012: { //ÆÄ¶ó´ÙÀÌ½º ³¯°³»óÀÚ
+                    case 5533012: { //íŒŒë¼ë‹¤ì´ìŠ¤ ë‚ ê°œìƒì
                         int[] items = {1102385, 1102386, 1102389, 1102390};
                         reward = items[(int) Math.floor(Math.random() * items.length)];
                         break;
                     }
-                    case 5533002: { //±â»ç´ÜÀåÀÇ ¹«±â »óÀÚ
+                    case 5533002: { //ê¸°ì‚¬ë‹¨ì¥ì˜ ë¬´ê¸° ìƒì
                         int[] items = {1702269, 1702270, 1702271, 1702272, 1702273};
                         reward = items[(int) Math.floor(Math.random() * items.length)];
                         break;
@@ -633,26 +633,26 @@ public class CashShopOperation {
                         tem = itemr.copy();
                     }
                     if (chr.getCashInventory() == null || item == null) {
-                        c.send(MainPacketCreator.serverNotice(1, "Ä³½Ã¾ÆÀÌÅÛÀ» ±¸¸ÅÇÏ´Â µµÁß¿¡ ¿À·ù°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù!"));
+                        c.send(MainPacketCreator.serverNotice(1, "ìºì‹œì•„ì´í…œì„ êµ¬ë§¤í•˜ëŠ” ë„ì¤‘ì— ì˜¤ë¥˜ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤!"));
                         return;
                     }
                     if (tem != null) {
-                        tem.setGMLog(CurrentTime.getAllCurrentTime() + "¿¡ " + c.getPlayer().getName() + "ÀÌ(°¡) Ä³½Ã¼¥¿¡¼­ ±¸¸ÅÇÑ ¾ÆÀÌÅÛ");
+                        tem.setGMLog(CurrentTime.getAllCurrentTime() + "ì— " + c.getPlayer().getName() + "ì´(ê°€) ìºì‹œìƒµì—ì„œ êµ¬ë§¤í•œ ì•„ì´í…œ");
                         tem.setCash(true);
                         short slot = InventoryManipulator.addFromDrop(c, tem, false);
                         if (slot == -1) {
-                            c.getPlayer().message(1, "¾ÆÀÌÅÛÀ» ³ÖÀ» °ø°£ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+                            c.getPlayer().message(1, "ì•„ì´í…œì„ ë„£ì„ ê³µê°„ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
                             c.getSession().writeAndFlush(CashPacket.showNXMapleTokens(chr));
                             return;
                         }
                         csinv.removeItemByCashId(uniqueid);
                         c.getSession().writeAndFlush(CashPacket.showRandomReward(uniqueid, tem, slot));
                     } else {
-                        c.send(MainPacketCreator.serverNotice(1, "Ä³½Ã¾ÆÀÌÅÛÀ» ±¸¸ÅÇÏ´Â µµÁß¿¡ ¿À·ù°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù!"));
+                        c.send(MainPacketCreator.serverNotice(1, "ìºì‹œì•„ì´í…œì„ êµ¬ë§¤í•˜ëŠ” ë„ì¤‘ì— ì˜¤ë¥˜ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤!"));
                         return;
                     }
                 } else {
-                    c.send(MainPacketCreator.serverNotice(1, "Á¤ÀÇµÇÁö ¾ÊÀº »óÀÚÀÔ´Ï´Ù."));
+                    c.send(MainPacketCreator.serverNotice(1, "ì •ì˜ë˜ì§€ ì•Šì€ ìƒìì…ë‹ˆë‹¤."));
                 }
                 break;
             }

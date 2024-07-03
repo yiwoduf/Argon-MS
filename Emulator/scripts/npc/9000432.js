@@ -1,6 +1,6 @@
- // Author : ¸á·ĞK
-// Function : »óÁ¡
-// »ç¿ëÇÏ½Ç ¶§ ÀÌ ÁÖ¼®Àº Áö¿ìÁö ¸»¾Æ ÁÖ¼ÌÀ¸¸é ÁÁ°Ú½À´Ï´Ù.
+ // Author : ë©œë¡ K
+// Function : ìƒì 
+// ì‚¬ìš©í•˜ì‹¤ ë•Œ ì´ ì£¼ì„ì€ ì§€ìš°ì§€ ë§ì•„ ì£¼ì…¨ìœ¼ë©´ ì¢‹ê² ìŠµë‹ˆë‹¤.
 importPackage(java.lang);
 function start() {
 status = -1;
@@ -9,9 +9,9 @@ action(1, 0, 0); }
 function action(mode, type, selection) {
 
 var reward = "#fUI/UIWindow.img/QuestIcon/4/0#";
-itemlist = [2050004, 2000005, 2120000, 5370000,5076000,5076000,5190010,5190001,5190003,5190006,5190000] // ¾ÆÅÛÄÚµå
-qty = [100,1000,100,1,100,100,1,1,1,1,1] //°³¼ö
-cost = [50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000] // °¡°İ
+itemlist = [2050004, 2000005, 2120000, 5370000,5076000,5076000,5190010,5190001,5190003,5190006,5190000] // ì•„í…œì½”ë“œ
+qty = [100,1000,100,1,100,100,1,1,1,1,1] //ê°œìˆ˜
+cost = [50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000] // ê°€ê²©
 
  if (mode == -1) { 
     cm.dispose(); 
@@ -26,11 +26,11 @@ cost = [50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000] // °¡
     else status--;    
 
  if (status == 0) {
-    var hello  = "¾È³çÇÏ¼¼¿ä #b#h0##k °í°´´Ô!\r\n";
+    var hello  = "ì•ˆë…•í•˜ì„¸ìš” #b#h0##k ê³ ê°ë‹˜!\r\n";
     for (var i = 0; i < itemlist.length; i++) {
     for (var i = 0; i < qty.length; i++) {
     for (var i = 0; i < cost.length; i++) {
-    hello += "#L" +i+ "# #i"+itemlist[i] + "# #z"+itemlist[i]+"#["+qty[i]+"°³] #b("+cost[i]+" ¸Ş¼Ò)#k\r\n"
+    hello += "#L" +i+ "# #i"+itemlist[i] + "# #z"+itemlist[i]+"#["+qty[i]+"ê°œ] #b("+cost[i]+" ë©”ì†Œ)#k\r\n"
   }
 }
 }
@@ -39,9 +39,9 @@ cost = [50000,50000,50000,50000,50000,50000,50000,50000,50000,50000,50000] // °¡
             if(cm.getMeso() >= cost[selection]) {
                cm.gainItem(itemlist[selection], qty[selection]);
                cm.gainMeso(-cost[selection]);
-               cm.sendOk("¿©±â ÀÖ½À´Ï´Ù. °í°´´Ô~ °¨»çÇÕ´Ï´Ù °í°´´Ô~\r\n\r\n"+reward+"\r\n#i"+itemlist[selection] + "# #b[#z " + itemlist[selection]+ "#]#k");
+               cm.sendOk("ì—¬ê¸° ìˆìŠµë‹ˆë‹¤. ê³ ê°ë‹˜~ ê°ì‚¬í•©ë‹ˆë‹¤ ê³ ê°ë‹˜~\r\n\r\n"+reward+"\r\n#i"+itemlist[selection] + "# #b[#z " + itemlist[selection]+ "#]#k");
         } else {
-               cm.sendOk("¸Ş¼Ò°¡ ºÎÁ·ÇØ¿ä °í°´´Ô..");
+               cm.sendOk("ë©”ì†Œê°€ ë¶€ì¡±í•´ìš” ê³ ê°ë‹˜..");
     }
   
                cm.dispose();

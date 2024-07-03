@@ -21,7 +21,7 @@ import org.apache.mina.transport.socket.nio.SocketAcceptorConfig;
  *
  * @author KSH
  */
-public class AdminToolServer { // Ä¡¿ì¾¾ :: ÀÌ°Å »ç¿ë ¾ÈÇÔ
+public class AdminToolServer { // ì¹˜ìš°ì”¨ :: ì´ê±° ì‚¬ìš© ì•ˆí•¨
 
     private static int PORT = 9700;
     private static InetSocketAddress InetSocketadd;
@@ -30,7 +30,7 @@ public class AdminToolServer { // Ä¡¿ì¾¾ :: ÀÌ°Å »ç¿ë ¾ÈÇÔ
 
     public static final void run_startup_configurations() {
         try {
-            /* ¼ÒÄÏ ¼³Á¤ ½ÃÀÛ */
+            /* ì†Œì¼“ ì„¤ì • ì‹œì‘ */
             ByteBuffer.setUseDirectBuffers(false);
             ByteBuffer.setAllocator(new SimpleByteBufferAllocator());
 
@@ -40,10 +40,10 @@ public class AdminToolServer { // Ä¡¿ì¾¾ :: ÀÌ°Å »ç¿ë ¾ÈÇÔ
             cfg.setDisconnectOnUnbind(true);
             InetSocketadd = new InetSocketAddress(PORT);
             acceptor.bind(InetSocketadd, new AdminToolServerHandler(), cfg);
-            /* ¼ÒÄÏ ¼³Á¤ Á¾·á */
-            Start.println("[ARGON] °ü¸®±â¼­¹ö°¡ " + PORT + " Æ÷Æ®¸¦ ¼º°øÀûÀ¸·Î °³¹æÇÏ¿´½À´Ï´Ù.", 36);
+            /* ì†Œì¼“ ì„¤ì • ì¢…ë£Œ */
+            Start.println("[ARGON] ê´€ë¦¬ê¸°ì„œë²„ê°€ " + PORT + " í¬íŠ¸ë¥¼ ì„±ê³µì ìœ¼ë¡œ ê°œë°©í•˜ì˜€ìŠµë‹ˆë‹¤.", 36);
         } catch (IOException e) {
-            Start.println("[¿À·ù] °ü¸®±â¼­¹ö°¡ " + PORT + " Æ÷Æ®¸¦ °³¹æÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.", 36);
+            Start.println("[ì˜¤ë¥˜] ê´€ë¦¬ê¸°ì„œë²„ê°€ " + PORT + " í¬íŠ¸ë¥¼ ê°œë°©í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.", 36);
             e.printStackTrace();
         }
     }

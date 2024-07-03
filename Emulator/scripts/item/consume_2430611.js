@@ -16,14 +16,14 @@ function action(mode, type, selection) {
         if (mode == 1)
             status++;
         if (status == 0) {
-	    var text = "¹Ş°í ½ÍÀº ½ºÆä¼È ¸¶½ºÅÍ¸® ºÏÀ» ¼±ÅÃÇØÁà.\r\n\r\n#b";
+	    var text = "ë°›ê³  ì‹¶ì€ ìŠ¤í˜ì…œ ë§ˆìŠ¤í„°ë¦¬ ë¶ì„ ì„ íƒí•´ì¤˜.\r\n\r\n#b";
 		for (var i = 0; i < book.length; i++) {
 		    text+="#L"+i+"##i"+book[i]+"# #t"+book[i]+"##l\r\n";
 		}
 		cm.sendSimple(text);
 	} else if (status == 1) {
 		select = selection;
-		cm.sendYesNo("¹ŞÀ» ¸¶½ºÅÍ¸®ºÏÀº #b#t"+book[select]+"##k ¸Â¾Æ?");
+		cm.sendYesNo("ë°›ì„ ë§ˆìŠ¤í„°ë¦¬ë¶ì€ #b#t"+book[select]+"##k ë§ì•„?");
 	} else if (status == 2) {
 		cm.gainItem(book[select], 1);
 		cm.gainItem(2430611, -1);

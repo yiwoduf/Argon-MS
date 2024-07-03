@@ -3,19 +3,19 @@
 
 /*
 
-	* �ܹ����ǽ� �ڵ����� ��ũ��Ʈ�� ���� ������� ��ũ��Ʈ �Դϴ�.
+	* 단문엔피시 자동제작 스크립트를 통해 만들어진 스크립트 입니다.
 
 	* (Guardian Project Development Source Script)
 
-	���� �� ���� ����� �����ϴ�.
+	대장 에 의해 만들어 졌습니다.
 
-	���ǽþ��̵� : 9000133
+	엔피시아이디 : 9000133
 
-	���ǽ� �̸� : �ȸ ��Ű
+	엔피시 이름 : 운동회 웡키
 
-	���ǽð� �ִ� �� : ���罺Ʈ��Ʈ : ���������Ա� (910000000)
+	엔피시가 있는 맵 : 히든스트리트 : 자유시장입구 (910000000)
 
-	���ǽ� ���� : �ȸ ����ȸ
+	엔피시 설명 : 운동회 바자회
 
 
 */
@@ -41,7 +41,7 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        cm.sendOk("��");
+        cm.sendOk("ㅇ");
         cm.dispose();
         return;
     }

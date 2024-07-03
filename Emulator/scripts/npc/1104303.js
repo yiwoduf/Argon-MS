@@ -18,12 +18,12 @@ function action(mode, type, selection) {
         else
             status--;
 	if (status == 0) {
-		var jessica = "#fn³ª´®°íµñ Extrabold#¼º½º·¯¿î Á¤·ÉÀÌ.. ¸Ó¹«´Â °÷..\r\n";
-		jessica += "#L0##d±â»ç´Ü ¿ä»õ - Á¤·ÉÀÇ ÅÍ#k #r(¼Ò¿ï)#k\r\n";
-		jessica += "#L1##d±â»ç´Ü ¿ä»õ - Á¤·ÉÀÇ ÅÍ#k #r(ÇÃ·¹ÀÓ)#k\r\n";
-		jessica += "#L2##d±â»ç´Ü ¿ä»õ - Á¤·ÉÀÇ ÅÍ#k #r(½ºÅè)#k\r\n";
-		jessica += "#L3##d±â»ç´Ü ¿ä»õ - Á¤·ÉÀÇ ÅÍ#k #r(´ÙÅ©´Ï½º)#k\r\n";
-		jessica += "#L4##d±â»ç´Ü ¿ä»õ - Á¤·ÉÀÇ ÅÍ#k #r(¶óÀÌÆ®´×)#k\r\n";
+		var jessica = "#fnë‚˜ëˆ”ê³ ë”• Extrabold#ì„±ìŠ¤ëŸ¬ìš´ ì •ë ¹ì´.. ë¨¸ë¬´ëŠ” ê³³..\r\n";
+		jessica += "#L0##dê¸°ì‚¬ë‹¨ ìš”ìƒˆ - ì •ë ¹ì˜ í„°#k #r(ì†Œìš¸)#k\r\n";
+		jessica += "#L1##dê¸°ì‚¬ë‹¨ ìš”ìƒˆ - ì •ë ¹ì˜ í„°#k #r(í”Œë ˆì„)#k\r\n";
+		jessica += "#L2##dê¸°ì‚¬ë‹¨ ìš”ìƒˆ - ì •ë ¹ì˜ í„°#k #r(ìŠ¤í†°)#k\r\n";
+		jessica += "#L3##dê¸°ì‚¬ë‹¨ ìš”ìƒˆ - ì •ë ¹ì˜ í„°#k #r(ë‹¤í¬ë‹ˆìŠ¤)#k\r\n";
+		jessica += "#L4##dê¸°ì‚¬ë‹¨ ìš”ìƒˆ - ì •ë ¹ì˜ í„°#k #r(ë¼ì´íŠ¸ë‹)#k\r\n";
 		cm.sendSimple(jessica);
 	} else if (status == 1) {
 	if (selection == 0) {

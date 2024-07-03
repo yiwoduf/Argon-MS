@@ -19,7 +19,7 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        cm.sendOk("#fn³ª´®°íµñ Extrabold##r[°æÃà]#k #¾î ¿µ±¸ Á¤Áö Ã³¸® µÇ¾ú½À´Ï´Ù.#k");
+        cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• Extrabold##r[ê²½ì¶•]#k #ì–´ ì˜êµ¬ ì •ì§€ ì²˜ë¦¬ ë˜ì—ˆìŠµë‹ˆë‹¤.#k");
         cm.dispose();
         return;
     }

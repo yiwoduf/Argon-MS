@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -326,10 +326,10 @@ public class AbstractPlayerInteraction {
 		if (period > 0) {
 		    item.setExpiration(System.currentTimeMillis() + period);
 		}
-                item.setGMLog(CurrentTime.getAllCurrentTime()+"¿¡ gainItem ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¾òÀº ¾ÆÀÌÅÛ.");
+                item.setGMLog(CurrentTime.getAllCurrentTime()+"ì— gainItem ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ì–»ì€ ì•„ì´í…œ.");
 		InventoryManipulator.addbyItem(c, item);
 	    } else {
-		InventoryManipulator.addById(c, id, quantity, "", null, period, CurrentTime.getAllCurrentTime()+"¿¡ gainItem ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¾òÀº ¾ÆÀÌÅÛ.");
+		InventoryManipulator.addById(c, id, quantity, "", null, period, CurrentTime.getAllCurrentTime()+"ì— gainItem ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ì–»ì€ ì•„ì´í…œ.");
 	    }
 	} else {
 	    InventoryManipulator.removeById(c, GameConstants.getInventoryType(id), id, -quantity, true, false);
@@ -355,10 +355,10 @@ public class AbstractPlayerInteraction {
 		if (period > 0) {
 		    item.setExpiration(System.currentTimeMillis() + period);
 		}
-                item.setGMLog(CurrentTime.getAllCurrentTime()+"¿¡ gainItem ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¾òÀº ¾ÆÀÌÅÛ.");
+                item.setGMLog(CurrentTime.getAllCurrentTime()+"ì— gainItem ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ì–»ì€ ì•„ì´í…œ.");
 		InventoryManipulator.addbyItem(chr.getClient(), item);
 	    } else {
-		InventoryManipulator.addById(chr.getClient(), id, quantity, "", null, period, CurrentTime.getAllCurrentTime()+"¿¡ gainItem ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¾òÀº ¾ÆÀÌÅÛ.");
+		InventoryManipulator.addById(chr.getClient(), id, quantity, "", null, period, CurrentTime.getAllCurrentTime()+"ì— gainItem ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ì–»ì€ ì•„ì´í…œ.");
 	    }
 	} else {
 	    InventoryManipulator.removeById(chr.getClient(), GameConstants.getInventoryType(id), id, -quantity, true, false);
@@ -459,7 +459,7 @@ public class AbstractPlayerInteraction {
     public final void givePartyItems(final int id, final short quantity, final List<MapleCharacter> party) {
 	for (MapleCharacter chr : party) {
 	    if (quantity >= 0) {
-		InventoryManipulator.addById(chr.getClient(), id, quantity, null, null, 0, CurrentTime.getAllCurrentTime()+"¿¡ givePartyItems ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¾òÀº ¾ÆÀÌÅÛ.");
+		InventoryManipulator.addById(chr.getClient(), id, quantity, null, null, 0, CurrentTime.getAllCurrentTime()+"ì— givePartyItems ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ì–»ì€ ì•„ì´í…œ.");
 	    } else {
 		InventoryManipulator.removeById(chr.getClient(), GameConstants.getInventoryType(id), id, -quantity, true, false);
 	    }
@@ -690,7 +690,7 @@ public class AbstractPlayerInteraction {
                 }
                 for (MapleCharacter chrz : chr) {
                     chrz.changeMap(dest, dest.getPortal(0));
-                    chrz.message(6, "[¾Ë¸²] ½Ã°£ÀÌ ÃÊ°úµÇ¾î ÀÚµ¿À¸·Î ÅğÀåµÇ¾ú½À´Ï´Ù. ¼ö°íÇÏ¼Ì½À´Ï´Ù :)");
+                    chrz.message(6, "[ì•Œë¦¼] ì‹œê°„ì´ ì´ˆê³¼ë˜ì–´ ìë™ìœ¼ë¡œ í‡´ì¥ë˜ì—ˆìŠµë‹ˆë‹¤. ìˆ˜ê³ í•˜ì…¨ìŠµë‹ˆë‹¤ :)");
                 }
                 if (reset) {
                     from.resetReactors(getClient());
@@ -978,7 +978,7 @@ public class AbstractPlayerInteraction {
     }
     
     public final void warningStartBoss(String name) {
-        WorldBroadcasting.broadcastGM(MainPacketCreator.getGMText(5, "[GM¾Ë¸²] "+getClient().getChannel()+" Ã¤³Î¼­¹ö¿¡¼­ "+name+" º¸½º ·¹ÀÌµå°¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù. ¸Ê ÄÚµå : "+getPlayer().getMapId()));
+        WorldBroadcasting.broadcastGM(MainPacketCreator.getGMText(5, "[GMì•Œë¦¼] "+getClient().getChannel()+" ì±„ë„ì„œë²„ì—ì„œ "+name+" ë³´ìŠ¤ ë ˆì´ë“œê°€ ì‹œì‘ë˜ì—ˆìŠµë‹ˆë‹¤. ë§µ ì½”ë“œ : "+getPlayer().getMapId()));
     }
     
     public final void prepareAswanMob(int mapid, EventInstanceManager eim) {
@@ -1027,11 +1027,11 @@ public class AbstractPlayerInteraction {
 		if (period > 0) {
 		    item.setExpiration(System.currentTimeMillis() + period);
 		}
-                item.setGMLog(CurrentTime.getAllCurrentTime()+"¿¡ gainItem ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¾òÀº ¾ÆÀÌÅÛ.");
+                item.setGMLog(CurrentTime.getAllCurrentTime()+"ì— gainItem ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ì–»ì€ ì•„ì´í…œ.");
                 item.setCash(true);
 		InventoryManipulator.addbyItem(c, item);
 	    } else {
-		InventoryManipulator.addById(c, id, quantity, "", null, period, CurrentTime.getAllCurrentTime()+"¿¡ gainItem ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¾òÀº ¾ÆÀÌÅÛ.");
+		InventoryManipulator.addById(c, id, quantity, "", null, period, CurrentTime.getAllCurrentTime()+"ì— gainItem ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ì–»ì€ ì•„ì´í…œ.");
 	    }
 	} else {
 	    InventoryManipulator.removeById(c, GameConstants.getInventoryType(id), id, -quantity, true, false);

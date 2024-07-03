@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -30,7 +30,7 @@ import tools.HexTool;
 public class KaiserSkill {
 
     /**
-     * Ä«ÀÌÀú ¸ğÇÁ°ÔÀÌÁö ¹öÇÁÆĞÅ¶.
+     * ì¹´ì´ì € ëª¨í”„ê²Œì´ì§€ ë²„í”„íŒ¨í‚·.
      * 
      * @param gauge
      */
@@ -50,11 +50,11 @@ public class KaiserSkill {
 
 
     /**
-     * Àª ¿Àºê ¼Òµå/¾îµå¹ê½ºµå Àª ¿Àºê ¼Òµå.
-     * @param characterid - Ä³¸¯ÅÍ ¾ÆÀÌµğ
-     * @param swordSize - ¼Òµå »çÀÌÁî, ex) 2th - 3, 4th - 5
-     * @param swordCount - ·£´ı°ª
-     * @param skillid - ½ºÅ³ÄÚµå
+     * ìœŒ ì˜¤ë¸Œ ì†Œë“œ/ì–´ë“œë°´ìŠ¤ë“œ ìœŒ ì˜¤ë¸Œ ì†Œë“œ.
+     * @param characterid - ìºë¦­í„° ì•„ì´ë””
+     * @param swordSize - ì†Œë“œ ì‚¬ì´ì¦ˆ, ex) 2th - 3, 4th - 5
+     * @param swordCount - ëœë¤ê°’
+     * @param skillid - ìŠ¤í‚¬ì½”ë“œ
      * @return 
      */
     public static byte[] absorbingSwordCount(int cid, List<Integer> oids, int skillid) {

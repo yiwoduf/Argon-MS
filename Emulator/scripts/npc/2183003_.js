@@ -2,9 +2,9 @@
 
      [ PlatinumMS ]
 
-     �� ��ũ��Ʈ�� PlatinumMS ���� ������ ��ũ��Ʈ �Դϴ�.
+     이 스크립트는 PlatinumMS 에서 제작한 스크립트 입니다.
 
-     ��ũ��Ʈ �뵵 : �ƽ��� �ع��� NPC
+     스크립트 용도 : 아스완 해방전 NPC
 
 */
 
@@ -26,16 +26,16 @@ function action(mode, type, selection) {
     }
     
     if (status == 0) {
-        var txt1 = "#e<�ƽ��� �ع���>#n �ƽ��� �ع����� �����Ͻðڽ��ϱ�?\r\n";
-        txt1 += "#b#L0# ���� ���� óġ�Ѵ�. (���� 120�̻�)\r\n";
-        txt1 += "#b#L1# �ƽ��� �ع����� �����Ѵ�.\r\n";
+        var txt1 = "#e<아스완 해방전>#n 아스완 해방전에 참여하시겠습니까?\r\n";
+        txt1 += "#b#L0# 힐라를 직접 처치한다. (레벨 120이상)\r\n";
+        txt1 += "#b#L1# 아스완 해방전에 참여한다.\r\n";
         cm.sendSimple(txt1);
     } else if (status == 1) {
         if (selection == 0) {
-            var txt2 = "������ ž �Ա��� �����帮�ڽ��ϴ�. ���� �� �������ּ���.";
+            var txt2 = "힐라의 탑 입구로 보내드리겠습니다. 힐라를 꼭 물리쳐주세요.";
             cm.sendSimple(txt2);
         } else if (selection == 1) {
-            var txt3 = "����ġ�� ������ ȹ���Ͻ� �� �ֽ��ϴ�.\r\n\r\n#b#e�ع��� �ð��� �ƴϾ ������ �̿��� �����մϴ�.";
+            var txt3 = "명성치는 언제든 획득하실 수 있습니다.\r\n\r\n#b#e해방전 시간이 아니어도 컨텐츠 이용은 가능합니다.";
             cm.sendYesNo(txt3);
         }
     } else if (status == 2) {

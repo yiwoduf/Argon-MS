@@ -1,5 +1,5 @@
 /*
-ÅÃ½Ã½ºÅ©¸³Æ® ÆÄ¶õµ¹·û±º
+íƒì‹œìŠ¤í¬ë¦½íŠ¸ íŒŒë€ëŒë¥œêµ°
 */
 
 var status = 0;
@@ -22,106 +22,106 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-            var chat = "#bÅ¬¸®¾îÇÏ½Å°É È¯¿µÇÕ´Ï´Ù#k ´ÙÀ½½ºÅ×ÀÌÁö·Î ³Ñ¾î°¡¼¼¿ä\r\n";
-            chat += "\r\n#b#L1#´ÙÀ½½ºÅ×ÀÌÁö·Î ³Ñ¾î°¡°Ú½À´Ï±î ?#k#l";
+            var chat = "#bí´ë¦¬ì–´í•˜ì‹ ê±¸ í™˜ì˜í•©ë‹ˆë‹¤#k ë‹¤ìŒìŠ¤í…Œì´ì§€ë¡œ ë„˜ì–´ê°€ì„¸ìš”\r\n";
+            chat += "\r\n#b#L1#ë‹¤ìŒìŠ¤í…Œì´ì§€ë¡œ ë„˜ì–´ê°€ê² ìŠµë‹ˆê¹Œ ?#k#l";
                               
             cm.sendSimple(chat);
         } else if (status == 1) {
-                var warpmain = "°¡°í½ÍÀº #b¸Ê#kÀÇ Á¾·ù¸¦ ¼±ÅÃÇØÁÖ½Ã¸é µË´Ï´Ù\r\n";
+                var warpmain = "ê°€ê³ ì‹¶ì€ #bë§µ#kì˜ ì¢…ë¥˜ë¥¼ ì„ íƒí•´ì£¼ì‹œë©´ ë©ë‹ˆë‹¤\r\n";
                 warpmain += "";
-                //warpmain += "\r\n#L4##b#fUI/UIToolTip/Item/Equip/Star/Star# #b´Ù¸¥ ¸¶À»·Î ÀÌµ¿À» ÇÏ°Ú½À´Ï´Ù";
-                warpmain += "\r\n#L5##fUI/UIToolTip/Item/Equip/Star/Star# #b ´ÙÀ½½ºÅ×ÀÌÁö·Î ÀÌµ¿À» ÇÏ°Ú½À´Ï´Ù"; 
-                //warpmain += "\r\n#L7##fUI/UIToolTip/Item/Equip/Star/Star# #b¾Û¼Ö·¦½º ÄÚÀÎ»ç³ÉÅÍÀ¸·Î ÀÌµ¿ÇÏ°Ú½À´Ï´Ù";
+                //warpmain += "\r\n#L4##b#fUI/UIToolTip/Item/Equip/Star/Star# #bë‹¤ë¥¸ ë§ˆì„ë¡œ ì´ë™ì„ í•˜ê² ìŠµë‹ˆë‹¤";
+                warpmain += "\r\n#L5##fUI/UIToolTip/Item/Equip/Star/Star# #b ë‹¤ìŒìŠ¤í…Œì´ì§€ë¡œ ì´ë™ì„ í•˜ê² ìŠµë‹ˆë‹¤"; 
+                //warpmain += "\r\n#L7##fUI/UIToolTip/Item/Equip/Star/Star# #bì•±ì†”ë©ìŠ¤ ì½”ì¸ì‚¬ëƒ¥í„°ìœ¼ë¡œ ì´ë™í•˜ê² ìŠµë‹ˆë‹¤";
                 cm.sendSimple(warpmain);
         } else if (status == 2) {
 
 
             if (selection == 4) {
-                var vlig = "¿øÇÏ½Ã´Â ¸ÊÀ» ¼±ÅÃÇØÁÖ½Ã¸é ÀÌµ¿½ÃÄÑµå¸®°Ú½À´Ï´Ù\r\nÁñ°Å¿î ¿©Çà µÇ½Ã±â¸¦ ¹Ù¶ø´Ï´Ù\r\n";
-               // vlig += "\r\n#L3000500#³¬½ÃÅÍ ÀÌµ¿";
-                vlig += "\r\n#L104000000#¸®½ºÇ×±¸ ÀÌµ¿";
-                vlig += "\r\n#L100000000#Çì³×½Ã½º ÀÌµ¿";
-                vlig += "\r\n#L103000000#Ä¿´×½ÃÆ¼ ÀÌµ¿";
-                vlig += "\r\n#L101000000#¿¤¸®´Ï¾Æ ÀÌµ¿";
-                vlig += "\r\n#L102000000#Æä¸®¿Â ÀÌµ¿";
-                vlig += "\r\n#L105000000#½½¸®ÇÇ¿ìµå ÀÌµ¿"; 
-                vlig += "\r\n#L130000000#¿¡·¹ºê ÀÌµ¿";
-                vlig += "\r\n#L101050000#¿¡¿ì·¼ ÀÌµ¿";
-                vlig += "\r\n#L140000000#¸®¿£ ÀÌµ¿"; 
-                vlig += "\r\n#L200000000#¿À¸£ºñ½º ÀÌµ¿";
-                vlig += "\r\n#L211000000#¿¤³ª½º ÀÌµ¿"
-                vlig += "\r\n#L220000000#·çµğºê¸®¾ö ÀÌµ¿";
-                vlig += "\r\n#L261000000#Áö±¸¹æÀ§º»ºÎ ÀÌµ¿";
-                vlig += "\r\n#L222000000#¾Æ·§¸¶À» ÀÌµ¿";
-                vlig += "\r\n#L240000000#¸®ÇÁ·¹ ÀÌµ¿";
-                vlig += "\r\n#L260000000#¾Æ¸®¾ÈÆ® ÀÌµ¿";
-                vlig += "\r\n#L261000000#¸¶°¡Æ¼¾Æ ÀÌµ¿";
-                vlig += "\r\n#L252000000#È²±İ»ç¿ø ÀÌµ¿";
-                vlig += "\r\n#L273000000#È²È¥ÀÇ Æä¸®¿Â";
-                vlig += "\r\n#L301000000#Å©¸²½¼ ¿ìµå";
-                vlig += "\r\n#L105200000#·çÅ¸ºñ½º ÀÌµ¿";
-                vlig += "\r\n#L931050810#ÆÇÅ×¿Â ÀÌµ¿";
-                vlig += "\r\n#L310070000#ÇìÀÌºì ÀÌµ¿";
+                var vlig = "ì›í•˜ì‹œëŠ” ë§µì„ ì„ íƒí•´ì£¼ì‹œë©´ ì´ë™ì‹œì¼œë“œë¦¬ê² ìŠµë‹ˆë‹¤\r\nì¦ê±°ìš´ ì—¬í–‰ ë˜ì‹œê¸°ë¥¼ ë°”ëë‹ˆë‹¤\r\n";
+               // vlig += "\r\n#L3000500#ë‚šì‹œí„° ì´ë™";
+                vlig += "\r\n#L104000000#ë¦¬ìŠ¤í•­êµ¬ ì´ë™";
+                vlig += "\r\n#L100000000#í—¤ë„¤ì‹œìŠ¤ ì´ë™";
+                vlig += "\r\n#L103000000#ì»¤ë‹ì‹œí‹° ì´ë™";
+                vlig += "\r\n#L101000000#ì—˜ë¦¬ë‹ˆì•„ ì´ë™";
+                vlig += "\r\n#L102000000#í˜ë¦¬ì˜¨ ì´ë™";
+                vlig += "\r\n#L105000000#ìŠ¬ë¦¬í”¼ìš°ë“œ ì´ë™"; 
+                vlig += "\r\n#L130000000#ì—ë ˆë¸Œ ì´ë™";
+                vlig += "\r\n#L101050000#ì—ìš°ë  ì´ë™";
+                vlig += "\r\n#L140000000#ë¦¬ì—” ì´ë™"; 
+                vlig += "\r\n#L200000000#ì˜¤ë¥´ë¹„ìŠ¤ ì´ë™";
+                vlig += "\r\n#L211000000#ì—˜ë‚˜ìŠ¤ ì´ë™"
+                vlig += "\r\n#L220000000#ë£¨ë””ë¸Œë¦¬ì—„ ì´ë™";
+                vlig += "\r\n#L261000000#ì§€êµ¬ë°©ìœ„ë³¸ë¶€ ì´ë™";
+                vlig += "\r\n#L222000000#ì•„ë«ë§ˆì„ ì´ë™";
+                vlig += "\r\n#L240000000#ë¦¬í”„ë ˆ ì´ë™";
+                vlig += "\r\n#L260000000#ì•„ë¦¬ì•ˆíŠ¸ ì´ë™";
+                vlig += "\r\n#L261000000#ë§ˆê°€í‹°ì•„ ì´ë™";
+                vlig += "\r\n#L252000000#í™©ê¸ˆì‚¬ì› ì´ë™";
+                vlig += "\r\n#L273000000#í™©í˜¼ì˜ í˜ë¦¬ì˜¨";
+                vlig += "\r\n#L301000000#í¬ë¦¼ìŠ¨ ìš°ë“œ";
+                vlig += "\r\n#L105200000#ë£¨íƒ€ë¹„ìŠ¤ ì´ë™";
+                vlig += "\r\n#L931050810#íŒí…Œì˜¨ ì´ë™";
+                vlig += "\r\n#L310070000#í—¤ì´ë¸ ì´ë™";
                 cm.sendSimple(vlig);
 
             } else if (selection == 5) {
-                var hunt = "#e[WARP]#n #d¿øÇÏ½Ã´Â ¸Ê#kÀ» ¼±ÅÃÇØÁÖ¼¼¿ä.\r\n";
- var hunt = "#b#h ##k´Ô È¯¿µÇÕ´Ï´Ù~¢İ »ç³ÉÅÍ¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.\r\n\r\n"
+                var hunt = "#e[WARP]#n #dì›í•˜ì‹œëŠ” ë§µ#kì„ ì„ íƒí•´ì£¼ì„¸ìš”.\r\n";
+ var hunt = "#b#h ##kë‹˜ í™˜ì˜í•©ë‹ˆë‹¤~â™¬ ì‚¬ëƒ¥í„°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.\r\n\r\n"
               
-                hunt += "\r\n#L922010900#¿¤¸®»ş¸£ ÀâÀ¸·¯°¡±â ";
+                hunt += "\r\n#L922010900#ì—˜ë¦¬ìƒ¤ë¥´ ì¡ìœ¼ëŸ¬ê°€ê¸° ";
                 cm.sendSimple(hunt);
 
             } else if (selection == 6) {
                 var boss = "";
-                     boss += "\r\n #fUI/UIWindow2.img/NewPyramid/Number/1# #k\#L230040410# ¹Ù´Ù¼Ó ½ÉÇØÀÇ ¿Õ ÇÇ¾Æ´©½º\r\n#l"
-                      boss += "\r\n #l\n #fUI/UIWindow2.img/MobGage/Mob/8510000# [³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"   
-                    boss += "\r\n #fUI/UIWindow2.img/NewPyramid/Number/2# #k\#L280030100# ½É¿¬¼Ó Æó±¤ÀÇ ±ºÁÖ Ä«¿À½º ÀÚÄñ\r\n#l"
-                      boss += "\r\n #l\n #fUI/UIWindow2.img/MobGage/Mob/8800000# [³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"
-               boss += "\r\n #fUI/UIWindow2.img/NewPyramid/Number/3# #k\#L240060200# ¿ëÀÇ ±ºÁÖ¶ó ºÒ¸®´Â Ä«¿À½º È¥Å×ÀÏ"
-                     boss += "\r\n#l\r\n #fUI/UIWindow2.img/MobGage/Mob/8810018# [³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"
-                 boss += "k\r\n #fUI/UIWindow2.img/NewPyramid/Number/4# #k\#L211070100# °ËÀº¸¶¹ı»çÀÇ ¼ö¹®Àå ¹İ ·¹¿Â"
-                 boss += "\r\n#l\r\n #fUI/UIWindow2.img/MobGage/Mob/8840000# [³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"
-                 boss += "\r\n #fUI/UIWindow2.img/NewPyramid/Number/5# #k\#L262031300# ¾Æ½º¿ÏÀÇ ¸Á·ÉÀ» ´Ù½º¸®´Â Èú¶ó"
-                boss += "\r\n#l\r\n #fUI/UIWindow2.img/MobGage/Mob/8870000# [³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]l\r\n"                  
-                boss += "\r\n #fUI/UIWindow2.img/NewPyramid/Number/6# #k\#L272020200# ½Ã°£À» Å»ÃëÇÑÀÚ ¾ÆÄ«ÀÌ·³"
-                 boss += "\r\n#l\r\n #fUI/UIWindow2.img/MobGage/Mob/8860000# [³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"
-                 boss += "\r\n #fUI/UIWindow2.img/NewPyramid/Number/7# #k\#L271040100# ¹Ì·¡ÀÇ ¿©Á¦ ½Ã±×³Ê½º"
-                 boss += "\r\n#l\r\n #fUI/UIWindow2.img/MobGage/Mob/8850011# [³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"
-                boss += "\r\n #fUI/UIWindow2.img/NewPyramid/Number/8# #k\#L401060100# Æø±ºÀÇ ¿Õ ¸Å±×³Ê½º"
-                boss += "\r\n#l\r\n #fUI/UIWindow2.img/MobGage/Mob/8880000# [³­ÀÌµµ :¡¡#e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"
-                boss += "\r\n#fUI/UIWindow2.img/NewPyramid/Number/9# #k\#L270050100# ¹Ì·¡¿Í °ú°ÅÀÇ Áö¹èÀÚ Ä«¿À½º ÇÎÅ©ºó"                
-                boss += "\r\n#l\r\n #fUI/UIWindow2.img/MobGage/Mob/8820001# [³­ÀÌµµ :¡¡#e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"              
+                     boss += "\r\n #fUI/UIWindow2.img/NewPyramid/Number/1# #k\#L230040410# ë°”ë‹¤ì† ì‹¬í•´ì˜ ì™• í”¼ì•„ëˆ„ìŠ¤\r\n#l"
+                      boss += "\r\n #l\n #fUI/UIWindow2.img/MobGage/Mob/8510000# [ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"   
+                    boss += "\r\n #fUI/UIWindow2.img/NewPyramid/Number/2# #k\#L280030100# ì‹¬ì—°ì† íê´‘ì˜ êµ°ì£¼ ì¹´ì˜¤ìŠ¤ ìì¿°\r\n#l"
+                      boss += "\r\n #l\n #fUI/UIWindow2.img/MobGage/Mob/8800000# [ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"
+               boss += "\r\n #fUI/UIWindow2.img/NewPyramid/Number/3# #k\#L240060200# ìš©ì˜ êµ°ì£¼ë¼ ë¶ˆë¦¬ëŠ” ì¹´ì˜¤ìŠ¤ í˜¼í…Œì¼"
+                     boss += "\r\n#l\r\n #fUI/UIWindow2.img/MobGage/Mob/8810018# [ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"
+                 boss += "k\r\n #fUI/UIWindow2.img/NewPyramid/Number/4# #k\#L211070100# ê²€ì€ë§ˆë²•ì‚¬ì˜ ìˆ˜ë¬¸ì¥ ë°˜ ë ˆì˜¨"
+                 boss += "\r\n#l\r\n #fUI/UIWindow2.img/MobGage/Mob/8840000# [ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"
+                 boss += "\r\n #fUI/UIWindow2.img/NewPyramid/Number/5# #k\#L262031300# ì•„ìŠ¤ì™„ì˜ ë§ë ¹ì„ ë‹¤ìŠ¤ë¦¬ëŠ” íë¼"
+                boss += "\r\n#l\r\n #fUI/UIWindow2.img/MobGage/Mob/8870000# [ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]l\r\n"                  
+                boss += "\r\n #fUI/UIWindow2.img/NewPyramid/Number/6# #k\#L272020200# ì‹œê°„ì„ íƒˆì·¨í•œì ì•„ì¹´ì´ëŸ¼"
+                 boss += "\r\n#l\r\n #fUI/UIWindow2.img/MobGage/Mob/8860000# [ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"
+                 boss += "\r\n #fUI/UIWindow2.img/NewPyramid/Number/7# #k\#L271040100# ë¯¸ë˜ì˜ ì—¬ì œ ì‹œê·¸ë„ˆìŠ¤"
+                 boss += "\r\n#l\r\n #fUI/UIWindow2.img/MobGage/Mob/8850011# [ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"
+                boss += "\r\n #fUI/UIWindow2.img/NewPyramid/Number/8# #k\#L401060100# í­êµ°ì˜ ì™• ë§¤ê·¸ë„ˆìŠ¤"
+                boss += "\r\n#l\r\n #fUI/UIWindow2.img/MobGage/Mob/8880000# [ë‚œì´ë„ :ã€€#e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"
+                boss += "\r\n#fUI/UIWindow2.img/NewPyramid/Number/9# #k\#L270050100# ë¯¸ë˜ì™€ ê³¼ê±°ì˜ ì§€ë°°ì ì¹´ì˜¤ìŠ¤ í•‘í¬ë¹ˆ"                
+                boss += "\r\n#l\r\n #fUI/UIWindow2.img/MobGage/Mob/8820001# [ë‚œì´ë„ :ã€€#e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"              
                 cm.sendSimple(boss);
 
                     } else if (selection == 8) {
                 var boss = "";
-                   boss += "\r\n#fUI/UIWindow2.img/NewPyramid/Number/1# #k\#L105200529# ¶Ç´Ù¸¥ ½Ã°£ÀÇ ÆÄ±«ÀÚ Ä«¿À½º ¹İ¹İ"
-                   boss += "\r\n #l\n #fUI/UIWindow2.img/MobGage/Mob/8910100# [³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"
-                   boss += "\r\n#fUI/UIWindow2.img/NewPyramid/Number/2# #k\#L105200710# ºÎ¼­Áø ¿©¿Õ ÀÇ ºĞ³ë Ä«¿À½º ºí·¯µğ Äı"
-                    boss += "\r\n #l\n #fUI/UIWindow2.img/MobGage/Mob/8920100# [³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"
-                  boss += "\r\n#fUI/UIWindow2.img/NewPyramid/Number/3# #k\#L105200610# ÆÄ¸êÀÇ ±¤±â Ä«¿À½º ÇÇ¿¡¸£"
-                 boss += "\r\n #l\n #fUI/UIWindow2.img/MobGage/Mob/8900100# [³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"
-               boss += "\r\n#fUI/UIWindow2.img/NewPyramid/Number/4# #k\#L105200810# Á¾¸»ÀÇ ½ÉÆÇÀÚ Ä«¿À½º º§·ë"                
-                boss += "\r\n#l\r\n #fUI/UIWindow2.img/MobGage/Mob/8930100# [³­ÀÌµµ :¡¡#e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"              
+                   boss += "\r\n#fUI/UIWindow2.img/NewPyramid/Number/1# #k\#L105200529# ë˜ë‹¤ë¥¸ ì‹œê°„ì˜ íŒŒê´´ì ì¹´ì˜¤ìŠ¤ ë°˜ë°˜"
+                   boss += "\r\n #l\n #fUI/UIWindow2.img/MobGage/Mob/8910100# [ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"
+                   boss += "\r\n#fUI/UIWindow2.img/NewPyramid/Number/2# #k\#L105200710# ë¶€ì„œì§„ ì—¬ì™• ì˜ ë¶„ë…¸ ì¹´ì˜¤ìŠ¤ ë¸”ëŸ¬ë”” í€¸"
+                    boss += "\r\n #l\n #fUI/UIWindow2.img/MobGage/Mob/8920100# [ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"
+                  boss += "\r\n#fUI/UIWindow2.img/NewPyramid/Number/3# #k\#L105200610# íŒŒë©¸ì˜ ê´‘ê¸° ì¹´ì˜¤ìŠ¤ í”¼ì—ë¥´"
+                 boss += "\r\n #l\n #fUI/UIWindow2.img/MobGage/Mob/8900100# [ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"
+               boss += "\r\n#fUI/UIWindow2.img/NewPyramid/Number/4# #k\#L105200810# ì¢…ë§ì˜ ì‹¬íŒì ì¹´ì˜¤ìŠ¤ ë²¨ë£¸"                
+                boss += "\r\n#l\r\n #fUI/UIWindow2.img/MobGage/Mob/8930100# [ë‚œì´ë„ :ã€€#e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star##fUI/UIWindow2.img/ToolTip/Equip/Star/Star#]#n#l]\r\n"              
                cm.sendSimple(boss);   
 
                     } else if (selection == 7) {
-               var hunt = "#b#h ##k´Ô È¯¿µÇÕ´Ï´Ù~¢İ ¾Û¼Ö·¦½º ÄÚÀÎ »ç³ÉÅÍ ¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.\r\n\r\n"
-                hunt += "#r#e[¾Û¼Ö·¦½º ÄÚÀÎ »ç³ÉÅÍ]\r\n#k#n";
-                hunt += "#L271030310#(Lv.173) ¦¢ #r±â»ç´Ü ¿ä»õ¡¡¡¡¡¡  #k ¦¢ #r¹«±â°í1#k\r\n"
-                hunt += "#L271030400#(Lv.173) ¦¢ #r±â»ç´Ü ¿ä»õ¡¡¡¡¡¡  #k ¦¢ #r±â»ç´Ü Á¦ 4±¸¿ª#k\r\n"
-                hunt += "#L273000000#(Lv.190) ¦¢ #bÈ²È¥ÀÇ Æä¸®¿Â¡¡¡¡  #k ¦¢ #bÈ²È¥ÀÇ Æä¸®¿Â#k\r\n"
-                hunt += "#L273050000#(Lv.197) ¦¢ #rÈ²È¥ÀÇ Æä¸®¿Â¡¡¡¡  #k ¦¢ #r¿øÁÖ¹ÎµéÀÇ ÇÇ³­Ã³#k\r\n"
-                hunt += "#L241020205#(Lv.203) ¦¢ #bÅ©¸®Æ¼¾Æ½º¡¡¡¡      #k ¦¢ #bºñ±ØÀÇ½£#k\r\n"
-                hunt += "#L241020217#(Lv.205) ¦¢ #bÅ©¸®Æ¼¾Æ½º¡¡¡¡      #k ¦¢ #bºùÁ¡ÀÇ½£#k\r\n"
-                hunt += "#L241020207#(Lv.205) ¦¢ #bÅ©¸®Æ¼¾Æ½º¡¡¡¡      #k ¦¢ #bÀÛ¿­ÀÇ½£#k\r\n"
-                hunt += "#L241010227#(Lv.205) ¦¢ #bÅ©¸®Æ¼¾Æ½º¡¡¡¡      #k ¦¢ #b¾ÏÈæÀÇ½£#k\r\n"
-                hunt += "#L241010226#(Lv.205) ¦¢ #bÅ©¸®Æ¼¾Æ½º¡¡¡¡      #k ¦¢ #b¸¶·ÂÀÇ½£#k\r\n"
-                hunt += "#L310070110#(Lv.210) ¦¢ #b±â°è¹«´ı¡¡¡¡         #k ¦¢ #b±â°è¹«´ı ¾ğ´ö1#k\r\n"
-                hunt += "#L310070150#(Lv.210) ¦¢ #b±â°è¹«´ı¡¡¡¡         #k ¦¢ #b±â°è¹«´ı °øÅÍ#k\r\n"
-                hunt += "#L310070220#(Lv.215) ¦¢ #b½ºÄ«ÀÌ¶óÀÎ¡¡¡¡      #k ¦¢ #b °¡ÀåÀÚ¸®#k\r\n"
-                hunt += "#L310070200#(Lv.215) ¦¢ #b½ºÄ«ÀÌ¶óÀÎ¡¡¡¡      #k ¦¢ #b ¿Ã¶ó°¡´Â±æ#k\r\n"
-                //hunt += "#L310070300#(Lv.222) ¦¢ #bºí·¢Çìºì °©ÆÇ       #k ¦¢ #b ºí·¢Çìºì °©ÆÇ 1#k\r\n"
+               var hunt = "#b#h ##kë‹˜ í™˜ì˜í•©ë‹ˆë‹¤~â™¬ ì•±ì†”ë©ìŠ¤ ì½”ì¸ ì‚¬ëƒ¥í„° ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.\r\n\r\n"
+                hunt += "#r#e[ì•±ì†”ë©ìŠ¤ ì½”ì¸ ì‚¬ëƒ¥í„°]\r\n#k#n";
+                hunt += "#L271030310#(Lv.173) â”‚ #rê¸°ì‚¬ë‹¨ ìš”ìƒˆã€€ã€€ã€€  #k â”‚ #rë¬´ê¸°ê³ 1#k\r\n"
+                hunt += "#L271030400#(Lv.173) â”‚ #rê¸°ì‚¬ë‹¨ ìš”ìƒˆã€€ã€€ã€€  #k â”‚ #rê¸°ì‚¬ë‹¨ ì œ 4êµ¬ì—­#k\r\n"
+                hunt += "#L273000000#(Lv.190) â”‚ #bí™©í˜¼ì˜ í˜ë¦¬ì˜¨ã€€ã€€  #k â”‚ #bí™©í˜¼ì˜ í˜ë¦¬ì˜¨#k\r\n"
+                hunt += "#L273050000#(Lv.197) â”‚ #rí™©í˜¼ì˜ í˜ë¦¬ì˜¨ã€€ã€€  #k â”‚ #rì›ì£¼ë¯¼ë“¤ì˜ í”¼ë‚œì²˜#k\r\n"
+                hunt += "#L241020205#(Lv.203) â”‚ #bí¬ë¦¬í‹°ì•„ìŠ¤ã€€ã€€      #k â”‚ #bë¹„ê·¹ì˜ìˆ²#k\r\n"
+                hunt += "#L241020217#(Lv.205) â”‚ #bí¬ë¦¬í‹°ì•„ìŠ¤ã€€ã€€      #k â”‚ #bë¹™ì ì˜ìˆ²#k\r\n"
+                hunt += "#L241020207#(Lv.205) â”‚ #bí¬ë¦¬í‹°ì•„ìŠ¤ã€€ã€€      #k â”‚ #bì‘ì—´ì˜ìˆ²#k\r\n"
+                hunt += "#L241010227#(Lv.205) â”‚ #bí¬ë¦¬í‹°ì•„ìŠ¤ã€€ã€€      #k â”‚ #bì•”í‘ì˜ìˆ²#k\r\n"
+                hunt += "#L241010226#(Lv.205) â”‚ #bí¬ë¦¬í‹°ì•„ìŠ¤ã€€ã€€      #k â”‚ #bë§ˆë ¥ì˜ìˆ²#k\r\n"
+                hunt += "#L310070110#(Lv.210) â”‚ #bê¸°ê³„ë¬´ë¤ã€€ã€€         #k â”‚ #bê¸°ê³„ë¬´ë¤ ì–¸ë•1#k\r\n"
+                hunt += "#L310070150#(Lv.210) â”‚ #bê¸°ê³„ë¬´ë¤ã€€ã€€         #k â”‚ #bê¸°ê³„ë¬´ë¤ ê³µí„°#k\r\n"
+                hunt += "#L310070220#(Lv.215) â”‚ #bìŠ¤ì¹´ì´ë¼ì¸ã€€ã€€      #k â”‚ #b ê°€ì¥ìë¦¬#k\r\n"
+                hunt += "#L310070200#(Lv.215) â”‚ #bìŠ¤ì¹´ì´ë¼ì¸ã€€ã€€      #k â”‚ #b ì˜¬ë¼ê°€ëŠ”ê¸¸#k\r\n"
+                //hunt += "#L310070300#(Lv.222) â”‚ #bë¸”ë™í—¤ë¸ ê°‘íŒ       #k â”‚ #b ë¸”ë™í—¤ë¸ ê°‘íŒ 1#k\r\n"
                   cm.sendSimple(hunt);
 
          

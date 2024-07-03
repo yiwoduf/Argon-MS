@@ -17,7 +17,7 @@ function action(mode, type, selection) {
 		cm.setJagure(selection);
 		cm.fakeRelog();
 		cm.updateChar();
-		cm.sendOk("¼±ÅÃÇÑ Àç±Ô¾î·Î º¯°æÀÌ ¿Ï·á µÇ¾úÀ¸´Ï ÇÑ¹ø È®ÀÎÇØºÁ!");
+		cm.sendOk("ì„ íƒí•œ ì¬ê·œì–´ë¡œ ë³€ê²½ì´ ì™„ë£Œ ë˜ì—ˆìœ¼ë‹ˆ í•œë²ˆ í™•ì¸í•´ë´!");
 		cm.dispose();
     } else {
 	if (selection == 1) {
@@ -32,10 +32,10 @@ function action(mode, type, selection) {
 		 else 
 			i ++;
 	}
-	var chat = "#e¿øÇÏ´Â Àç±Ô¾î¸¦ ¼±ÅÃÇØºÁ!\r\n\r\n";
+	var chat = "#eì›í•˜ëŠ” ì¬ê·œì–´ë¥¼ ì„ íƒí•´ë´!\r\n\r\n";
 	chat += "#L1##e<#n #l             #fMob/" + jagure[i] + "/stand/0#         #L2##e>#n#l";
 	chat += "\r\n#k#e				#o" + jagure[i] + "##n#b";
-	chat += "\r\n#L" + jagure[i] + "# #bÀÌ Àç±Ô¾î·Î º¯°æ ÇÏ°Ú½À´Ï´Ù.#l";
+	chat += "\r\n#L" + jagure[i] + "# #bì´ ì¬ê·œì–´ë¡œ ë³€ê²½ í•˜ê² ìŠµë‹ˆë‹¤.#l";
 	cm.sendSimple(chat);
 	//cm.dispose();
     }

@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹èÁöÈÆ raccoonfox69@gmail.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°°ì§€í›ˆ raccoonfox69@gmail.com
  * ==================================
  * 
  */
@@ -29,7 +29,7 @@ public class WarpCommands implements Command {
     @Override
     public void execute(MapleClient c, String[] splitted) throws Exception, IllegalCommandSyntaxException {
         ChannelServer cserv = c.getChannelServer();
-        if (splitted[0].equals("!¿öÇÁ")) {
+        if (splitted[0].equals("!ì›Œí”„")) {
             MapleCharacter victim = cserv.getPlayerStorage().getCharacterByName(splitted[1]);
             if (victim != null) {
                 c.getPlayer().changeMap(victim.getMap(), victim.getMap().findClosestSpawnpoint(victim.getPosition()));
@@ -43,13 +43,13 @@ public class WarpCommands implements Command {
                 }
                 if (chr != null) {
                     MapleWhereAreYou loc = WorldConnected.getLocation(splitted[1]);
-                    c.getPlayer().dropMessage(6, "Ã¤³ÎÀ» º¯°æÇÏ¿© ¿öÇÁÇÕ´Ï´Ù. Àá½Ã¸¸ ±â´Ù·ÁÁÖ¼¼¿ä.");
+                    c.getPlayer().dropMessage(6, "ì±„ë„ì„ ë³€ê²½í•˜ì—¬ ì›Œí”„í•©ë‹ˆë‹¤. ì ì‹œë§Œ ê¸°ë‹¤ë ¤ì£¼ì„¸ìš”.");
                     c.getPlayer().crossChannelWarp(c, loc.map, (byte) loc.channel);
                 } else {
-                    c.getPlayer().dropMessage(6, "´ë»ó ÇÃ·¹ÀÌ¾î¸¦ ¹ß°ßÇÏÁö ¸øÇß½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(6, "ëŒ€ìƒ í”Œë ˆì´ì–´ë¥¼ ë°œê²¬í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
                 }
             }
-        } else if (splitted[0].equals("!¼ÒÈ¯")) {
+        } else if (splitted[0].equals("!ì†Œí™˜")) {
             MapleCharacter victim = cserv.getPlayerStorage().getCharacterByName(splitted[1]);
             if (victim != null) {
                 victim.changeMap(c.getPlayer().getMap(), c.getPlayer().getMap().findClosestSpawnpoint(c.getPlayer().getPosition()));
@@ -63,13 +63,13 @@ public class WarpCommands implements Command {
                 }
                 if (chr != null) {
                     MapleWhereAreYou loc = WorldConnected.getLocation(c.getPlayer().getName());
-                    chr.dropMessage(6, "Ã¤³ÎÀ» º¯°æÇÏ¿© ¼ÒÈ¯µË´Ï´Ù.");
+                    chr.dropMessage(6, "ì±„ë„ì„ ë³€ê²½í•˜ì—¬ ì†Œí™˜ë©ë‹ˆë‹¤.");
                     chr.crossChannelWarp(chr.getClient(), loc.map, (byte) loc.channel);
                 } else {
-                    c.getPlayer().dropMessage(6, "´ë»ó ÇÃ·¹ÀÌ¾î¸¦ ¹ß°ßÇÏÁö ¸øÇß½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(6, "ëŒ€ìƒ í”Œë ˆì´ì–´ë¥¼ ë°œê²¬í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
                 }
             }
-        } else if (splitted[0].equals("!ÀüÃ¼¼ÒÈ¯")) {
+        } else if (splitted[0].equals("!ì „ì²´ì†Œí™˜")) {
             for (MapleCharacter victim : cserv.getPlayerStorage().getAllCharacters().values()) {
                 if (victim.getMapId() != c.getPlayer().getMapId()) {
                     victim.changeMap(c.getPlayer().getMap(), c.getPlayer().getPosition());
@@ -83,13 +83,13 @@ public class WarpCommands implements Command {
                     }
                     if (chr != null) {
                         MapleWhereAreYou loc = WorldConnected.getLocation(c.getPlayer().getName());
-                        chr.dropMessage(6, "Ã¤³ÎÀ» º¯°æÇÏ¿© ¼ÒÈ¯µË´Ï´Ù.");
+                        chr.dropMessage(6, "ì±„ë„ì„ ë³€ê²½í•˜ì—¬ ì†Œí™˜ë©ë‹ˆë‹¤.");
                         chr.crossChannelWarp(chr.getClient(), loc.map, (byte) loc.channel);
                     }
-                    chr.dropMessage(6, "ÀüÃ¼¼ÒÈ¯ µÇ¾ú½À´Ï´Ù.");
+                    chr.dropMessage(6, "ì „ì²´ì†Œí™˜ ë˜ì—ˆìŠµë‹ˆë‹¤.");
                 }
             }
-        } else if (splitted[0].equals("!¸Ê")) {
+        } else if (splitted[0].equals("!ë§µ")) {
             MapleMap target = null;
             if (c.getPlayer().getEventInstance() != null) {
                 target = c.getPlayer().getEventInstance().getMapFactory().getMap(Integer.parseInt(splitted[1]));
@@ -112,7 +112,7 @@ public class WarpCommands implements Command {
                 targetPortal = target.getPortal(0);
             }
             c.getPlayer().changeMap(target, targetPortal);
-            /* Ä¡¿ì¾¾ :: English Translated GM Command Starts here */
+            /* ì¹˜ìš°ì”¨ :: English Translated GM Command Starts here */
         } else if (splitted[0].equals("!map")) {
             MapleMap target = null;
             if (c.getPlayer().getEventInstance() != null) {
@@ -143,10 +143,10 @@ public class WarpCommands implements Command {
     @Override
     public CommandDefinition[] getDefinition() {
         return new CommandDefinition[]{
-            new CommandDefinition("¿öÇÁ", "<ÇÃ·¹ÀÌ¾îÀÌ¸§> (<Å¸°Ù¸ÊID>)", "ÀÚ½ÅÀ» ÇØ´ç ÇÃ·¹ÀÌ¾î¿¡°Ô ¿öÇÁÇÕ´Ï´Ù. ¸Ê ID°¡ ÀÔ·ÂµÉ °æ¿ì ÀÔ·ÂÇÑ ÇÃ·¹ÀÌ¾î¸¦ ÇØ´ç ¸ÊÀ¸·Î ÀÌµ¿½ÃÅµ´Ï´Ù.", 2),
-            new CommandDefinition("¼ÒÈ¯", "<ÇÃ·¹ÀÌ¾îÀÌ¸§>", "ÇØ´ç ÇÃ·¹ÀÌ¾î¸¦ ÀÚ½ÅÀÇ À§Ä¡·Î ¼ÒÈ¯ÇÕ´Ï´Ù.", 2),
-            new CommandDefinition("ÀüÃ¼¼ÒÈ¯", "<ÀüÃ¼¼ÒÈ¯>", "¸ğµçÀ¯Àú¸¦ ÀÚ½ÅÀÇ À§Ä¡·Î ¼ÒÈ¯ÇÕ´Ï´Ù.", 2),
-            new CommandDefinition("¸Ê", "<¸ÊID>", "ÇØ´ç ¸ÊIDÀÇ ¸ÊÀ¸·Î ÀÌµ¿ÇÕ´Ï´Ù.", 2),
+            new CommandDefinition("ì›Œí”„", "<í”Œë ˆì´ì–´ì´ë¦„> (<íƒ€ê²Ÿë§µID>)", "ìì‹ ì„ í•´ë‹¹ í”Œë ˆì´ì–´ì—ê²Œ ì›Œí”„í•©ë‹ˆë‹¤. ë§µ IDê°€ ì…ë ¥ë  ê²½ìš° ì…ë ¥í•œ í”Œë ˆì´ì–´ë¥¼ í•´ë‹¹ ë§µìœ¼ë¡œ ì´ë™ì‹œí‚µë‹ˆë‹¤.", 2),
+            new CommandDefinition("ì†Œí™˜", "<í”Œë ˆì´ì–´ì´ë¦„>", "í•´ë‹¹ í”Œë ˆì´ì–´ë¥¼ ìì‹ ì˜ ìœ„ì¹˜ë¡œ ì†Œí™˜í•©ë‹ˆë‹¤.", 2),
+            new CommandDefinition("ì „ì²´ì†Œí™˜", "<ì „ì²´ì†Œí™˜>", "ëª¨ë“ ìœ ì €ë¥¼ ìì‹ ì˜ ìœ„ì¹˜ë¡œ ì†Œí™˜í•©ë‹ˆë‹¤.", 2),
+            new CommandDefinition("ë§µ", "<ë§µID>", "í•´ë‹¹ ë§µIDì˜ ë§µìœ¼ë¡œ ì´ë™í•©ë‹ˆë‹¤.", 2),
             new CommandDefinition("map", "<MapID>", "Move to input Map ID.", 2),};
     }
 }

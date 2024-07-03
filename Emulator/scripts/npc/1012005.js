@@ -14,15 +14,15 @@ function action(mode, type, selection) {
     }
     if (mode == 0) {/*
  *
- * SpiritStyle °Ô@ÀÓ ½º@Å©¸³Æ® ÀÔ´Ï´Ù.
- * NPC : 9090008 - Çì¶ó
- * Function : ¿þµùºô¸®Áö ¿öÇÁ
- * Customize : ¾ÆÀÌÅÛ ¿É¼Ç ¼öÁ¤
- * @Author : ¿¬ÀÌ(ljw5528)
- * @Modify : ÇÏ¿ä(ifhayo)
- * ÇØ´ç ½ºÅ©¸³Æ®ÀÇ ÁÖ¼®Àº »èÁ¦ÇØµµ ÁÁÀ¸³ª
- * Á¦ÀÛÀÚ ¹× ¼öÁ¤ÀÚ´Â »èÁ¦ÇÏÁö ¸»¾ÆÁÖ¼¼¿ä.
- * 2014 ¨Ï SpiritStyle
+ * SpiritStyle ê²Œ@ìž„ ìŠ¤@í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤.
+ * NPC : 9090008 - í—¤ë¼
+ * Function : ì›¨ë”©ë¹Œë¦¬ì§€ ì›Œí”„
+ * Customize : ì•„ì´í…œ ì˜µì…˜ ìˆ˜ì •
+ * @Author : ì—°ì´(ljw5528)
+ * @Modify : í•˜ìš”(ifhayo)
+ * í•´ë‹¹ ìŠ¤í¬ë¦½íŠ¸ì˜ ì£¼ì„ì€ ì‚­ì œí•´ë„ ì¢‹ìœ¼ë‚˜
+ * ì œìž‘ìž ë° ìˆ˜ì •ìžëŠ” ì‚­ì œí•˜ì§€ ë§ì•„ì£¼ì„¸ìš”.
+ * 2014 â“’ SpiritStyle
  *
  */
 
@@ -33,11 +33,11 @@ importPackage(Packages.server.items);
 
 
 function start() {
-  cm.sendSimple("È¯¿µÇÕ´Ï´Ù #b#h ##k¿î¿µÀÚ´Ô! ¾ÆÀÌÅÛÀÇ ¿É¼ÇÀ» ¹Ù²ãµå¸®°í ÀÖ½À´Ï´Ù. ¿øÇÏ½Ã´Â ÀÛ¾÷À» ¼±ÅÃÇØÁÖ¼¼¿ä.#b\r\n"
-    +"#L1#¾ÆÀÌÅÛ ¿É¼Ç ¹Ù²Ù±â\r\n"
-    +"#L2#¾ÆÀÌÅÛ Ãß°¡¿É¼Ç »ý¼ºÇÏ±â\r\n"
-    +"#L3#ÀáÀç´É·Â ¼³Á¤ÇÏ±â\r\n"
-    +"#L4#¿¡µð¼Å³Î ÀáÀç´É·Â ¼³Á¤ÇÏ±â\r\n")
+  cm.sendSimple("í™˜ì˜í•©ë‹ˆë‹¤ #b#h ##kìš´ì˜ìžë‹˜! ì•„ì´í…œì˜ ì˜µì…˜ì„ ë°”ê¿”ë“œë¦¬ê³  ìžˆìŠµë‹ˆë‹¤. ì›í•˜ì‹œëŠ” ìž‘ì—…ì„ ì„ íƒí•´ì£¼ì„¸ìš”.#b\r\n"
+    +"#L1#ì•„ì´í…œ ì˜µì…˜ ë°”ê¾¸ê¸°\r\n"
+    +"#L2#ì•„ì´í…œ ì¶”ê°€ì˜µì…˜ ìƒì„±í•˜ê¸°\r\n"
+    +"#L3#ìž ìž¬ëŠ¥ë ¥ ì„¤ì •í•˜ê¸°\r\n"
+    +"#L4#ì—ë””ì…”ë„ ìž ìž¬ëŠ¥ë ¥ ì„¤ì •í•˜ê¸°\r\n")
 }
 
 
@@ -49,7 +49,7 @@ function start() {
 
 
 
-// !½ÃÀÛ
+// !ì‹œìž‘
 function action(mode, type, selection) { if(mode == 1) { status++; } else { status--; cm.dispose(); return;}
 
 
@@ -57,16 +57,16 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
 
 
   Sort = selection == 1 ? 1 : selection == 2 ? 2 : selection == 3 ? 3 : 4
-  Name = selection == 1 ? "¾ÆÀÌÅÛ ´É·ÂÄ¡¸¦ ¼öÁ¤ÇÏ" : selection == 2 ? "¾ÆÀÌÅÛ Ãß°¡¿É¼ÇÀ» »ý¼ºÇÏ" : "¾ÆÀÌÅÛ ÀáÀç´É·ÂÀ» ¼³Á¤ÇÏ"
+  Name = selection == 1 ? "ì•„ì´í…œ ëŠ¥ë ¥ì¹˜ë¥¼ ìˆ˜ì •í•˜" : selection == 2 ? "ì•„ì´í…œ ì¶”ê°€ì˜µì…˜ì„ ìƒì„±í•˜" : "ì•„ì´í…œ ìž ìž¬ëŠ¥ë ¥ì„ ì„¤ì •í•˜"
   if(cm.getPlayer().getGMLevel()>5) {
-  var str = ""+Name+"½Ã·Á¸é ¸ÕÀú #b#h ##k¿î¿µÀÚ´ÔÀÌ º¸À¯ÇÏ½Å ¾ÆÀÌÅÛ ¸ñ·Ï Áß ´ë»ó ¾ÆÀÌÅÛÀ» ¼±ÅÃÇØÁÖ¼¼¿ä.\r\n";
+  var str = ""+Name+"ì‹œë ¤ë©´ ë¨¼ì € #b#h ##kìš´ì˜ìžë‹˜ì´ ë³´ìœ í•˜ì‹  ì•„ì´í…œ ëª©ë¡ ì¤‘ ëŒ€ìƒ ì•„ì´í…œì„ ì„ íƒí•´ì£¼ì„¸ìš”.\r\n";
   for(var i=1;i < 100; i++) {
    if(cm.getEquip(i)){
    str += "#L"+i+"#"; str += "#i"+cm.getEquip(i).getItemId()+"#"; str += " #b#e#z"+cm.getEquip(i).getItemId()+"#"; str += "#n\r\n";
    }
   }
   cm.sendSimple(str);
- } else { cm.sendOk("¿î¿µÀÚ°¡ ¾Æ´Ñ »ç¶÷Àº ÀÌ¿ëÇÏ½Ç ¼ö ¾ø½À´Ï´Ù. #h #´ÔÀÇ ÀÌ¿ë±â·ÏÀÌ ÀúÀåµË´Ï´Ù."); cm.dispose();}
+ } else { cm.sendOk("ìš´ì˜ìžê°€ ì•„ë‹Œ ì‚¬ëžŒì€ ì´ìš©í•˜ì‹¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤. #h #ë‹˜ì˜ ì´ìš©ê¸°ë¡ì´ ì €ìž¥ë©ë‹ˆë‹¤."); cm.dispose();}
  }
 
 
@@ -77,9 +77,9 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    ItemNum        = cm.getEquip(SelectedItemID).getItemId()
    ItemInfo       = cm.getEquip(SelectedItemID);
    Origin         = ItemInformation.getInstance().getEquipById(ItemInfo.getItemId());
-   ShowItemInfo   = "#e¾ÆÀÌÅÛ : #i"+ItemNum+"# #b#z"+ItemNum+"##k#n\r\n#fnµ¸¿òÃ¼#";
-   NormalOption   = "¿øÇÏ½Ã´Â °ªÀ» ÀÔ·ÂÇÏ¼¼¿ä #r(±âº»°ª : 32768)#k#n";
-   AddOption      = "#r(±âº»°ª : 101)#k#n";
+   ShowItemInfo   = "#eì•„ì´í…œ : #i"+ItemNum+"# #b#z"+ItemNum+"##k#n\r\n#fnë‹ì›€ì²´#";
+   NormalOption   = "ì›í•˜ì‹œëŠ” ê°’ì„ ìž…ë ¥í•˜ì„¸ìš” #r(ê¸°ë³¸ê°’ : 32768)#k#n";
+   AddOption      = "#r(ê¸°ë³¸ê°’ : 101)#k#n";
 
 
 
@@ -91,7 +91,7 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
 
 
    case 2:
-   cm.sendGetNumber(""+ShowItemInfo+"\r\nº¸½º °ø°Ý½Ã µ¥¹ÌÁö ¹«½Ã: "+AddOption+"",0,0,101);
+   cm.sendGetNumber(""+ShowItemInfo+"\r\në³´ìŠ¤ ê³µê²©ì‹œ ë°ë¯¸ì§€ ë¬´ì‹œ: "+AddOption+"",0,0,101);
    break;
 
 
@@ -102,11 +102,11 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    P_20 = "#fUI/UIWindow2/AdditionalOptionTooltip/legendary#"
 
 
-   cm.sendSimple(""+ShowItemInfo+"\r\n¼±ÅÃÇÑ ¾ÆÀÌÅÛÀÇ ÀáÀç µî±ÞÀ» ¼±ÅÃÇØÁÖ¼¼¿ä.\r\n"
-     +"#L17#"+P_17+"#b·¹¾î\r\n"
-     +"#L18#"+P_18+"#d¿¡ÇÈ\r\n"
-     +"#L19#"+P_19+"#Cyellow#À¯´ÏÅ©\r\n"
-     +"#L20#"+P_20+"#g·¹Àüµå¸®");
+   cm.sendSimple(""+ShowItemInfo+"\r\nì„ íƒí•œ ì•„ì´í…œì˜ ìž ìž¬ ë“±ê¸‰ì„ ì„ íƒí•´ì£¼ì„¸ìš”.\r\n"
+     +"#L17#"+P_17+"#bë ˆì–´\r\n"
+     +"#L18#"+P_18+"#dì—í”½\r\n"
+     +"#L19#"+P_19+"#Cyellow#ìœ ë‹ˆí¬\r\n"
+     +"#L20#"+P_20+"#gë ˆì „ë“œë¦¬");
    break;
   }
 
@@ -126,22 +126,22 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    case 2:
    cBossDamage = selection == 101 ? Origin.getBossDamage() : selection;
    cm.sendGetNumber(""+ShowItemInfo+"\r\n#g#e"
-     + "º¸½º °ø°Ý½Ã µ¥¹ÌÁö: +"+cBossDamage+"%\r\n"
-     + "#k#n¸ó½ºÅÍ ¹æ¾î·Â ¹«½Ã: "+AddOption+"",0,0,101);
+     + "ë³´ìŠ¤ ê³µê²©ì‹œ ë°ë¯¸ì§€: +"+cBossDamage+"%\r\n"
+     + "#k#nëª¬ìŠ¤í„° ë°©ì–´ë ¥ ë¬´ì‹œ: "+AddOption+"",0,0,101);
    break;
 
 
    case 3:
    cState = selection
-   ShowState = cState == 17 ? "#b·¹¾î" : cState == 18 ? "#d¿¡ÇÈ" : cState == 19 ? "#Cyellow#À¯´ÏÅ©" : "#g·¹Àüµå¸®"
+   ShowState = cState == 17 ? "#bë ˆì–´" : cState == 18 ? "#dì—í”½" : cState == 19 ? "#Cyellow#ìœ ë‹ˆí¬" : "#gë ˆì „ë“œë¦¬"
    PictureiF = cState == 17 ? "#fUI/UIWindow2/AdditionalOptionTooltip/rare#" :
      cState == 18 ? "#fUI/UIWindow2/AdditionalOptionTooltip/epic#" :
      cState == 19 ? "#fUI/UIWindow2/AdditionalOptionTooltip/unique#" : "#fUI/UIWindow2/AdditionalOptionTooltip/legendary#"
 
 
    cm.sendGetNumber(""+ShowItemInfo+"\r\n#Cgray#"
-     + "ÀáÀçµî±Þ : "+PictureiF+""+ShowState+"#k\r\n"
-     + "#kÃ¹ ¹øÂ° ÀáÀç´É·ÂÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.",0,0,42556);
+     + "ìž ìž¬ë“±ê¸‰ : "+PictureiF+""+ShowState+"#k\r\n"
+     + "#kì²« ë²ˆì§¸ ìž ìž¬ëŠ¥ë ¥ì„ ìž…ë ¥í•´ì£¼ì„¸ìš”.",0,0,42556);
    break;
   }
 
@@ -164,9 +164,9 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    case 2:
    cIgnoreWdef = selection == 101 ? Origin.getIgnoreWdef() : selection;
    cm.sendGetNumber(""+ShowItemInfo+"\r\n#g#e"
-     + "º¸½º °ø°Ý½Ã µ¥¹ÌÁö: +"+cBossDamage+"%\r\n"
-     + "¸ó½ºÅÍ ¹æ¾î·Â ¹«½Ã: +"+cIgnoreWdef+"%\r\n"
-     + "#k#nÃÑ µ¥¹ÌÁö: "+AddOption+"",0,0,101);
+     + "ë³´ìŠ¤ ê³µê²©ì‹œ ë°ë¯¸ì§€: +"+cBossDamage+"%\r\n"
+     + "ëª¬ìŠ¤í„° ë°©ì–´ë ¥ ë¬´ì‹œ: +"+cIgnoreWdef+"%\r\n"
+     + "#k#nì´ ë°ë¯¸ì§€: "+AddOption+"",0,0,101);
    break;
 
 
@@ -175,9 +175,9 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    setPotential(cPotential1);
    nPotential1 = PotentialName
    cm.sendGetNumber(""+ShowItemInfo+"\r\n#Cgray#"
-     + "ÀáÀçµî±Þ : "+PictureiF+""+ShowState+"#Cgray#\r\n"
-     + "Ã¹ ¹øÂ° ÀáÀç´É·Â : "+nPotential1+"\r\n"
-     + "#kµÎ ¹øÂ° ÀáÀç´É·ÂÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.", 0,0,60002);
+     + "ìž ìž¬ë“±ê¸‰ : "+PictureiF+""+ShowState+"#Cgray#\r\n"
+     + "ì²« ë²ˆì§¸ ìž ìž¬ëŠ¥ë ¥ : "+nPotential1+"\r\n"
+     + "#kë‘ ë²ˆì§¸ ìž ìž¬ëŠ¥ë ¥ì„ ìž…ë ¥í•´ì£¼ì„¸ìš”.", 0,0,60002);
    break;
   }   
 
@@ -199,10 +199,10 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    case 2:
    cAllDamageP = selection == 101 ? Origin.getAllDamageP() : selection;
    cm.sendGetNumber(""+ShowItemInfo+"\r\n#g#e"
-     + "º¸½º °ø°Ý½Ã µ¥¹ÌÁö: +"+cBossDamage+"%\r\n"
-     + "¸ó½ºÅÍ ¹æ¾î·Â ¹«½Ã: +"+cIgnoreWdef+"%\r\n"
-     + "ÃÑ µ¥¹ÌÁö: +"+cAllDamageP+"%\r\n"
-     + "#k#n¿Ã½ºÅÈ: "+AddOption+"",0,0,101);
+     + "ë³´ìŠ¤ ê³µê²©ì‹œ ë°ë¯¸ì§€: +"+cBossDamage+"%\r\n"
+     + "ëª¬ìŠ¤í„° ë°©ì–´ë ¥ ë¬´ì‹œ: +"+cIgnoreWdef+"%\r\n"
+     + "ì´ ë°ë¯¸ì§€: +"+cAllDamageP+"%\r\n"
+     + "#k#nì˜¬ìŠ¤íƒ¯: "+AddOption+"",0,0,101);
    break;
 
 
@@ -211,10 +211,10 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    setPotential(cPotential2);
    nPotential2 = PotentialName
    cm.sendGetNumber(""+ShowItemInfo+"\r\n#Cgray#"
-     + "ÀáÀçµî±Þ : "+PictureiF+""+ShowState+"#Cgray#\r\n"
-     + "Ã¹ ¹øÂ° ÀáÀç´É·Â : "+nPotential1+"\r\n"
-     + "µÎ ¹øÂ° ÀáÀç´É·Â : "+nPotential2+"\r\n"
-     + "#k¼¼ ¹øÂ° ÀáÀç´É·ÂÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.", 0,0,60002);
+     + "ìž ìž¬ë“±ê¸‰ : "+PictureiF+""+ShowState+"#Cgray#\r\n"
+     + "ì²« ë²ˆì§¸ ìž ìž¬ëŠ¥ë ¥ : "+nPotential1+"\r\n"
+     + "ë‘ ë²ˆì§¸ ìž ìž¬ëŠ¥ë ¥ : "+nPotential2+"\r\n"
+     + "#kì„¸ ë²ˆì§¸ ìž ìž¬ëŠ¥ë ¥ì„ ìž…ë ¥í•´ì£¼ì„¸ìš”.", 0,0,60002);
    break;
   }   
 
@@ -237,11 +237,11 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    case 2:
    cAllStatP = selection == 101 ? Origin.getAllStatP() : selection;
    cm.sendGetNumber(""+ShowItemInfo+"\r\n#g#e"
-     + "º¸½º °ø°Ý½Ã µ¥¹ÌÁö: +"+cBossDamage+"%\r\n"
-     + "¸ó½ºÅÍ ¹æ¾î·Â ¹«½Ã: +"+cIgnoreWdef+"%\r\n"
-     + "ÃÑ µ¥¹ÌÁö: +"+cAllDamageP+"%\r\n"
-     + "¿Ã½ºÅÈ: +"+cAllStatP+"%\r\n"
-     + "#k#nÂø¿ë ·¹º§ °¨¼Ò: "+AddOption+"",0,0,101);
+     + "ë³´ìŠ¤ ê³µê²©ì‹œ ë°ë¯¸ì§€: +"+cBossDamage+"%\r\n"
+     + "ëª¬ìŠ¤í„° ë°©ì–´ë ¥ ë¬´ì‹œ: +"+cIgnoreWdef+"%\r\n"
+     + "ì´ ë°ë¯¸ì§€: +"+cAllDamageP+"%\r\n"
+     + "ì˜¬ìŠ¤íƒ¯: +"+cAllStatP+"%\r\n"
+     + "#k#nì°©ìš© ë ˆë²¨ ê°ì†Œ: "+AddOption+"",0,0,101);
    break;
 
 
@@ -250,11 +250,11 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    setPotential(cPotential3);
    nPotential3 = PotentialName
    cm.sendYesNo(""+ShowItemInfo+"\r\n#Cgray#"
-     + "ÀáÀçµî±Þ : "+PictureiF+""+ShowState+"#Cgray#\r\n"
-     + "Ã¹ ¹øÂ° ÀáÀç´É·Â : "+nPotential1+"\r\n"
-     + "µÎ ¹øÂ° ÀáÀç´É·Â : "+nPotential2+"\r\n"
-     + "¼¼ ¹øÂ° ÀáÀç´É·Â : "+nPotential3+"\r\n"
-     + "\r\n\r\n#e#rÀ§ ¾ÆÀÌÅÛÀ» Á¤¸»·Î ¸¸µå½Ã°Ú½À´Ï±î?");
+     + "ìž ìž¬ë“±ê¸‰ : "+PictureiF+""+ShowState+"#Cgray#\r\n"
+     + "ì²« ë²ˆì§¸ ìž ìž¬ëŠ¥ë ¥ : "+nPotential1+"\r\n"
+     + "ë‘ ë²ˆì§¸ ìž ìž¬ëŠ¥ë ¥ : "+nPotential2+"\r\n"
+     + "ì„¸ ë²ˆì§¸ ìž ìž¬ëŠ¥ë ¥ : "+nPotential3+"\r\n"
+     + "\r\n\r\n#e#rìœ„ ì•„ì´í…œì„ ì •ë§ë¡œ ë§Œë“œì‹œê² ìŠµë‹ˆê¹Œ?");
    break;
   }   
 
@@ -277,12 +277,12 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    case 2:
    cDownLevel = selection == 101 ? Origin.getDownLevel() : selection;
    cm.sendYesNo(""+ShowItemInfo+"\r\n#g#e"
-     + "º¸½º °ø°Ý½Ã µ¥¹ÌÁö: +"+cBossDamage+"%\r\n"
-     + "¸ó½ºÅÍ ¹æ¾î·Â ¹«½Ã: +"+cIgnoreWdef+"%\r\n"
-     + "ÃÑ µ¥¹ÌÁö: +"+cAllDamageP+"%\r\n"
-     + "¿Ã½ºÅÈ: +"+cAllStatP+"%\r\n"
-     + "Âø¿ë ·¹º§ °¨¼Ò: -"+cDownLevel+"\r\n"
-     + "\r\n\r\n#e#rÀ§ ¾ÆÀÌÅÛÀ» Á¤¸»·Î ¸¸µå½Ã°Ú½À´Ï±î?");
+     + "ë³´ìŠ¤ ê³µê²©ì‹œ ë°ë¯¸ì§€: +"+cBossDamage+"%\r\n"
+     + "ëª¬ìŠ¤í„° ë°©ì–´ë ¥ ë¬´ì‹œ: +"+cIgnoreWdef+"%\r\n"
+     + "ì´ ë°ë¯¸ì§€: +"+cAllDamageP+"%\r\n"
+     + "ì˜¬ìŠ¤íƒ¯: +"+cAllStatP+"%\r\n"
+     + "ì°©ìš© ë ˆë²¨ ê°ì†Œ: -"+cDownLevel+"\r\n"
+     + "\r\n\r\n#e#rìœ„ ì•„ì´í…œì„ ì •ë§ë¡œ ë§Œë“œì‹œê² ìŠµë‹ˆê¹Œ?");
    break;
 
 
@@ -314,7 +314,7 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
      + "LUK: +"+cLuk+"\r\n"
      + "MaxHP: +"+cMaxHp+"\r\n"
      + "MaxMP: +"+cMaxMp+"\r\n"
-     + "#k°ø°Ý·Â: "+NormalOption+"",0,0,32768);
+     + "#kê³µê²©ë ¥: "+NormalOption+"",0,0,32768);
    break;
 
 
@@ -345,8 +345,8 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    + "LUK: +"+cLuk+"\r\n"
    + "MaxHP: +"+cMaxHp+"\r\n"
    + "MaxMP: +"+cMaxMp+"\r\n"
-   + "°ø°Ý·Â: +"+cWatk+"\r\n"
-   + "#k¸¶·Â: "+NormalOption+"",0,0,32768);
+   + "ê³µê²©ë ¥: +"+cWatk+"\r\n"
+   + "#kë§ˆë ¥: "+NormalOption+"",0,0,32768);
 
 
  } else if (status == 9) {
@@ -358,9 +358,9 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    + "LUK: +"+cLuk+"\r\n"
    + "MaxHP: +"+cMaxHp+"\r\n"
    + "MaxMP: +"+cMaxMp+"\r\n"
-   + "°ø°Ý·Â: +"+cWatk+"\r\n"
-   + "¸¶·Â: +"+cMatk+"\r\n"
-   + "#k¹°¸®¹æ¾î·Â: "+NormalOption+"",0,0,32768);
+   + "ê³µê²©ë ¥: +"+cWatk+"\r\n"
+   + "ë§ˆë ¥: +"+cMatk+"\r\n"
+   + "#kë¬¼ë¦¬ë°©ì–´ë ¥: "+NormalOption+"",0,0,32768);
 
 
  } else if (status == 10) {
@@ -372,10 +372,10 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    + "LUK: +"+cLuk+"\r\n"
    + "MaxHP: +"+cMaxHp+"\r\n"
    + "MaxMP: +"+cMaxMp+"\r\n"
-   + "°ø°Ý·Â: +"+cWatk+"\r\n"
-   + "¸¶·Â: "+cMatk+"\r\n"
-   + "¹°¸®¹æ¾î·Â: +"+cWdef+"\r\n"
-   + "#k¸¶¹ý¹æ¾î·Â: +"+NormalOption+"",0,0,32768);
+   + "ê³µê²©ë ¥: +"+cWatk+"\r\n"
+   + "ë§ˆë ¥: "+cMatk+"\r\n"
+   + "ë¬¼ë¦¬ë°©ì–´ë ¥: +"+cWdef+"\r\n"
+   + "#kë§ˆë²•ë°©ì–´ë ¥: +"+NormalOption+"",0,0,32768);
 
 
  } else if (status == 11) {
@@ -387,11 +387,11 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    + "LUK: +"+cLuk+"\r\n"
    + "MaxHP: +"+cMaxHp+"\r\n"
    + "MaxMP: +"+cMaxMp+"\r\n"
-   + "°ø°Ý·Â: +"+cWatk+"\r\n"
-   + "¸¶·Â: +"+cMatk+"\r\n"
-   + "¹°¸®¹æ¾î·Â: +"+cWdef+"\r\n"
-   + "¸¶¹ý¹æ¾î·Â: +"+cMdef+"\r\n"
-   + "#k¸íÁßÄ¡: "+NormalOption+"",0,0,32768);
+   + "ê³µê²©ë ¥: +"+cWatk+"\r\n"
+   + "ë§ˆë ¥: +"+cMatk+"\r\n"
+   + "ë¬¼ë¦¬ë°©ì–´ë ¥: +"+cWdef+"\r\n"
+   + "ë§ˆë²•ë°©ì–´ë ¥: +"+cMdef+"\r\n"
+   + "#këª…ì¤‘ì¹˜: "+NormalOption+"",0,0,32768);
 
 
  } else if (status == 12) {
@@ -403,12 +403,12 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    + "LUK: +"+cLuk+"\r\n"
    + "MaxHP: +"+cMaxHp+"\r\n"
    + "MaxMP: +"+cMaxMp+"\r\n"
-   + "°ø°Ý·Â: +"+cWatk+"\r\n"
-   + "¸¶·Â: +"+cMatk+"\r\n"
-   + "¹°¸®¹æ¾î·Â: +"+cWdef+"\r\n"
-   + "¸¶¹ý¹æ¾î·Â: +"+cMdef+"\r\n"
-   + "¸íÁßÄ¡: +"+cAcc+"\r\n"
-   + "#kÈ¸ÇÇÄ¡: "+NormalOption+"",0,0,32768);
+   + "ê³µê²©ë ¥: +"+cWatk+"\r\n"
+   + "ë§ˆë ¥: +"+cMatk+"\r\n"
+   + "ë¬¼ë¦¬ë°©ì–´ë ¥: +"+cWdef+"\r\n"
+   + "ë§ˆë²•ë°©ì–´ë ¥: +"+cMdef+"\r\n"
+   + "ëª…ì¤‘ì¹˜: +"+cAcc+"\r\n"
+   + "#kíšŒí”¼ì¹˜: "+NormalOption+"",0,0,32768);
 
 
  } else if (status == 13) {
@@ -420,13 +420,13 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    + "LUK: +"+cLuk+"\r\n"
    + "MaxHP: +"+cMaxHp+"\r\n"
    + "MaxMP: +"+cMaxMp+"\r\n"
-   + "°ø°Ý·Â: +"+cWatk+"\r\n"
-   + "¸¶·Â: +"+cMatk+"\r\n"
-   + "¹°¸®¹æ¾î·Â: +"+cWdef+"\r\n"
-   + "¸¶¹ý¹æ¾î·Â: +"+cMdef+"\r\n"
-   + "¸íÁßÄ¡: +"+cAcc+"\r\n"
-   + "È¸ÇÇÄ¡: +"+cAvoid+"\r\n"
-   + "#kÀÌµ¿¼Óµµ: "+NormalOption+"",0,0,32768);
+   + "ê³µê²©ë ¥: +"+cWatk+"\r\n"
+   + "ë§ˆë ¥: +"+cMatk+"\r\n"
+   + "ë¬¼ë¦¬ë°©ì–´ë ¥: +"+cWdef+"\r\n"
+   + "ë§ˆë²•ë°©ì–´ë ¥: +"+cMdef+"\r\n"
+   + "ëª…ì¤‘ì¹˜: +"+cAcc+"\r\n"
+   + "íšŒí”¼ì¹˜: +"+cAvoid+"\r\n"
+   + "#kì´ë™ì†ë„: "+NormalOption+"",0,0,32768);
 
 
  } else if (status == 14) {
@@ -438,14 +438,14 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    + "LUK: +"+cLuk+"\r\n"
    + "MaxHP: +"+cMaxHp+"\r\n"
    + "MaxMP: +"+cMaxMp+"\r\n"
-   + "°ø°Ý·Â: +"+cWatk+"\r\n"
-   + "¸¶·Â: +"+cMatk+"\r\n"
-   + "¹°¸®¹æ¾î·Â: +"+cWdef+"\r\n"
-   + "¸¶¹ý¹æ¾î·Â: +"+cMdef+"\r\n"
-   + "¸íÁßÄ¡: +"+cAcc+"\r\n"
-   + "È¸ÇÇÄ¡: +"+cAvoid+"\r\n"
-   + "ÀÌµ¿¼Óµµ: +"+cSpeed+"\r\n"
-   + "#kÁ¡ÇÁ·Â: "+NormalOption+"",0,0,32768);
+   + "ê³µê²©ë ¥: +"+cWatk+"\r\n"
+   + "ë§ˆë ¥: +"+cMatk+"\r\n"
+   + "ë¬¼ë¦¬ë°©ì–´ë ¥: +"+cWdef+"\r\n"
+   + "ë§ˆë²•ë°©ì–´ë ¥: +"+cMdef+"\r\n"
+   + "ëª…ì¤‘ì¹˜: +"+cAcc+"\r\n"
+   + "íšŒí”¼ì¹˜: +"+cAvoid+"\r\n"
+   + "ì´ë™ì†ë„: +"+cSpeed+"\r\n"
+   + "#kì í”„ë ¥: "+NormalOption+"",0,0,32768);
 
 
  } else if (status == 15) {
@@ -457,15 +457,15 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    + "LUK: +"+cLuk+"\r\n"
    + "MaxHP: +"+cMaxHp+"\r\n"
    + "MaxMP: +"+cMaxMp+"\r\n"
-   + "°ø°Ý·Â: +"+cWatk+"\r\n"
-   + "¸¶·Â: +"+cMatk+"\r\n"
-   + "¹°¸®¹æ¾î·Â: +"+cWdef+"\r\n"
-   + "¸¶¹ý¹æ¾î·Â: +"+cMdef+"\r\n"
-   + "¸íÁßÄ¡: +"+cAcc+"\r\n"
-   + "È¸ÇÇÄ¡: +"+cAvoid+"\r\n"
-   + "ÀÌµ¿¼Óµµ: +"+cSpeed+"\r\n"
-   + "Á¡ÇÁ·Â: "+cJump+"\r\n"
-   + "#k¾÷±×·¹ÀÌµå °¡´É È½¼ö: #r(±âº»°ª : 126)#k#n",0,1,126);
+   + "ê³µê²©ë ¥: +"+cWatk+"\r\n"
+   + "ë§ˆë ¥: +"+cMatk+"\r\n"
+   + "ë¬¼ë¦¬ë°©ì–´ë ¥: +"+cWdef+"\r\n"
+   + "ë§ˆë²•ë°©ì–´ë ¥: +"+cMdef+"\r\n"
+   + "ëª…ì¤‘ì¹˜: +"+cAcc+"\r\n"
+   + "íšŒí”¼ì¹˜: +"+cAvoid+"\r\n"
+   + "ì´ë™ì†ë„: +"+cSpeed+"\r\n"
+   + "ì í”„ë ¥: "+cJump+"\r\n"
+   + "#kì—…ê·¸ë ˆì´ë“œ ê°€ëŠ¥ íšŸìˆ˜: #r(ê¸°ë³¸ê°’ : 126)#k#n",0,1,126);
 
 
  } else if (status == 16) {
@@ -477,16 +477,16 @@ function action(mode, type, selection) { if(mode == 1) { status++; } else { stat
    + "LUK: +"+cLuk+"\r\n"
    + "MaxHP: +"+cMaxHp+"\r\n"
    + "MaxMP: +"+cMaxMp+"\r\n"
-   + "°ø°Ý·Â: +"+cWatk+"\r\n"
-   + "¸¶·Â: +"+cMatk+"\r\n"
-   + "¹°¸®¹æ¾î·Â: +"+cWdef+"\r\n"
-   + "¸¶¹ý¹æ¾î·Â: +"+cMdef+"\r\n"
-   + "¸íÁßÄ¡: +"+cAcc+"\r\n"
-   + "È¸ÇÇÄ¡: +"+cAvoid+"\r\n"
-   + "ÀÌµ¿¼Óµµ: +"+cSpeed+"\r\n"
-   + "Á¡ÇÁ·Â: "+cSpeed+"\r\n"
-   + "¾÷±×·¹ÀÌµå °¡´É È½¼ö: "+cUpgradeSlots+"\r\n"
-   + "\r\n\r\n#e#rÀ§ ¾ÆÀÌÅÛÀ» Á¤¸»·Î ¸¸µå½Ã°Ú½À´Ï±î?");
+   + "ê³µê²©ë ¥: +"+cWatk+"\r\n"
+   + "ë§ˆë ¥: +"+cMatk+"\r\n"
+   + "ë¬¼ë¦¬ë°©ì–´ë ¥: +"+cWdef+"\r\n"
+   + "ë§ˆë²•ë°©ì–´ë ¥: +"+cMdef+"\r\n"
+   + "ëª…ì¤‘ì¹˜: +"+cAcc+"\r\n"
+   + "íšŒí”¼ì¹˜: +"+cAvoid+"\r\n"
+   + "ì´ë™ì†ë„: +"+cSpeed+"\r\n"
+   + "ì í”„ë ¥: "+cSpeed+"\r\n"
+   + "ì—…ê·¸ë ˆì´ë“œ ê°€ëŠ¥ íšŸìˆ˜: "+cUpgradeSlots+"\r\n"
+   + "\r\n\r\n#e#rìœ„ ì•„ì´í…œì„ ì •ë§ë¡œ ë§Œë“œì‹œê² ìŠµë‹ˆê¹Œ?");
 
 
  } else if (status == 17) {
@@ -521,25 +521,25 @@ function setPotential(selection) {
 
  if(LV > 0) {
  PotentialName =
- selection == 10041 ? "Èû 1%" :
- selection == 20041 ? "Èû 2%" :
- selection == 30041 ? "Èû 3%" :
- selection == 40041 ? "Èû 6%" :
- selection == 10042 ? "µ¦½º 1%" :
- selection == 20042 ? "µ¦½º 2%" :
- selection == 30042 ? "µ¦½º 3%" :
- selection == 40042 ? "µ¦½º 6%" :
- selection == 10043 ? "ÀÎÆ® 1%" :
- selection == 20043 ? "ÀÎÆ® 2%" :
- selection == 30043 ? "ÀÎÆ® 3%" :
- selection == 40043 ? "ÀÎÆ® 6%" :
- selection == 10044 ? "·° 1%" :
- selection == 20044 ? "·° 2%" :
- selection == 30044 ? "·° 3%" :
- selection == 40044 ? "·° 6%" :
- selection == 20086 ? "¿Ã½ºÅÝ 1%" :
- selection == 30086 ? "¿Ã½ºÅÝ 2%" :
- selection == 40086 ? "¿Ã½ºÅÝ 3%" : 
+ selection == 10041 ? "íž˜ 1%" :
+ selection == 20041 ? "íž˜ 2%" :
+ selection == 30041 ? "íž˜ 3%" :
+ selection == 40041 ? "íž˜ 6%" :
+ selection == 10042 ? "ë±ìŠ¤ 1%" :
+ selection == 20042 ? "ë±ìŠ¤ 2%" :
+ selection == 30042 ? "ë±ìŠ¤ 3%" :
+ selection == 40042 ? "ë±ìŠ¤ 6%" :
+ selection == 10043 ? "ì¸íŠ¸ 1%" :
+ selection == 20043 ? "ì¸íŠ¸ 2%" :
+ selection == 30043 ? "ì¸íŠ¸ 3%" :
+ selection == 40043 ? "ì¸íŠ¸ 6%" :
+ selection == 10044 ? "ëŸ­ 1%" :
+ selection == 20044 ? "ëŸ­ 2%" :
+ selection == 30044 ? "ëŸ­ 3%" :
+ selection == 40044 ? "ëŸ­ 6%" :
+ selection == 20086 ? "ì˜¬ìŠ¤í…Ÿ 1%" :
+ selection == 30086 ? "ì˜¬ìŠ¤í…Ÿ 2%" :
+ selection == 40086 ? "ì˜¬ìŠ¤í…Ÿ 3%" : 
  selection == 10045 ? "MaxHp 1%" :
  selection == 20045 ? "MaxHp 2%" :
  selection == 30045 ? "MaxHp 3%" :
@@ -548,63 +548,63 @@ function setPotential(selection) {
  selection == 20046 ? "MaxMp 2%" :
  selection == 30046 ? "MaxMp 3%" :
  selection == 40046 ? "MaxMp 6%" :
- selection == 10047 ? "¸íÁßÄ¡ 1%" :
- selection == 20047 ? "¸íÁßÄ¡ 2%" :
- selection == 30047 ? "¸íÁßÄ¡ 3%" :
- selection == 40047 ? "¸íÁßÄ¡ 6%" :
- selection == 10048 ? "È¸ÇÇÄ¡ 1%" :
- selection == 20048 ? "È¸ÇÇÄ¡ 2%" :
- selection == 30048 ? "È¸ÇÇÄ¡ 3%" :
- selection == 40048 ? "È¸ÇÇÄ¡ 6%" :
- selection == 10051 ? "°ø°Ý·Â 1%" :
- selection == 20051 ? "°ø°Ý·Â 2%" :
- selection == 30051 ? "°ø°Ý·Â 3%" :
- selection == 40051 ? "°ø°Ý·Â 6%" :
- selection == 10052 ? "¸¶·Â 1%" :
- selection == 20052 ? "¸¶·Â 2%" :
- selection == 30052 ? "¸¶·Â 3%" :
- selection == 40052 ? "¸¶·Â 6%" :
- selection == 10070 ? "ÃÑ µ¥¹ÌÁö 1%" :
- selection == 20070 ? "ÃÑ µ¥¹ÌÁö 2%" :
- selection == 30070 ? "ÃÑ µ¥¹ÌÁö 3%" :
- selection == 40070 ? "ÃÑ µ¥¹ÌÁö 6%" :
- selection == 10053 ? "¹°¸®¹æ¾î·Â 1%" :
- selection == 20053 ? "¹°¸®¹æ¾î·Â 2%" :
- selection == 30053 ? "¹°¸®¹æ¾î·Â 3%" :
- selection == 40053 ? "¹°¸®¹æ¾î·Â 6%" :
- selection == 10054 ? "¸¶¹ý¹æ¾î·Â 1%" :
- selection == 20054 ? "¸¶¹ý¹æ¾î·Â 2%" :
- selection == 30054 ? "¸¶¹ý¹æ¾î·Â 3%" :
- selection == 40054 ? "¸¶¹ý¹æ¾î·Â 6%" :
- selection == 40650 ? "¸Þ¼Ò È¹µæ·® 10%" :
- selection == 40656 ? "¾ÆÀÌÅÛ È¹µæÈ®·ü 10%" :
- selection == 10055 ? "Å©¸®Æ¼ÄÃ È®·ü 1%" :
- selection == 20055 ? "Å©¸®Æ¼ÄÃ È®·ü 2%" :
- selection == 30055 ? "Å©¸®Æ¼ÄÃ È®·ü 3%" :
- selection == 40055 ? "Å©¸®Æ¼ÄÃ È®·ü 6%" :
- selection == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 3%" :
- selection == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 3%" : 
- selection == 40501 ? "¸ðµç ½ºÅ³ÀÇ MP ¼Ò¸ð -5%" :
- selection == 40502 ? "¸ðµç ½ºÅ³ÀÇ MP ¼Ò¸ð -10%" :
- selection == 60001 ? "ÃÑ µ¥¹ÌÁö 20%" :
- selection == 40081 ? "¿Ã½ºÅÝ +12" :
- selection == 30106 ? "¸ðµç ½ºÅ³·¹º§ +1" :
- selection == 40106 ? "¸ðµç ½ºÅ³·¹º§ +2" :
- selection == 40107 ? "¸ðµç ½ºÅ³·¹º§ +3" :
- selection == 40111 ? "¸ðµç ¼Ó¼º ³»¼º 10%" :
- selection == 40116 ? "»óÅÂ ÀÌ»ó ³»¼º 10%" :
- selection == 30291 ? "°ø°Ý ½Ã ¸ó½ºÅÍÀÇ ¹æ¾îÀ² ¹«½Ã 30%" : 
- selection == 40291 ? "°ø°Ý ½Ã ¸ó½ºÅÍÀÇ ¹æ¾îÀ² ¹«½Ã 35%" :
- selection == 40292 ? "°ø°Ý ½Ã ¸ó½ºÅÍÀÇ ¹æ¾îÀ² ¹«½Ã 40%" :
- selection == 30356 ? "ÇÇ°Ý ½Ã 5% È®·ü·Î µ¥¹ÌÁö 20% ¹«½Ã" :
- selection == 40356 ? "ÇÇ°Ý ½Ã 10% È®·ü·Î µ¥¹ÌÁö 20% ¹«½Ã" :
- selection == 40357 ? "ÇÇ°Ý ½Ã 5% È®·ü·Î µ¥¹ÌÁö 40% ¹«½Ã" :
- selection == 20366 ? "ÇÇ°Ý ÈÄ ¹«Àû½Ã°£ 1ÃÊ" :
- selection == 30366 ? "ÇÇ°Ý ÈÄ ¹«Àû½Ã°£ 2ÃÊ" :
- selection == 40366 ? "ÇÇ°Ý ÈÄ ¹«Àû½Ã°£ 3ÃÊ" : 
- selection == 40556 ? "¸ðµç ½ºÅ³ÀÇ Àç»ç¿ë ´ë±â½Ã°£ -1ÃÊ" :
- selection == 40557 ? "¸ðµç ½ºÅ³ÀÇ Àç»ç¿ë ´ë±â½Ã°£ -2ÃÊ" :
- selection == 42556 ? "¸ðµç ½ºÅ³ÀÇ Àç»ç¿ë ´ë±â½Ã°£ -1ÃÊ" : ""
+ selection == 10047 ? "ëª…ì¤‘ì¹˜ 1%" :
+ selection == 20047 ? "ëª…ì¤‘ì¹˜ 2%" :
+ selection == 30047 ? "ëª…ì¤‘ì¹˜ 3%" :
+ selection == 40047 ? "ëª…ì¤‘ì¹˜ 6%" :
+ selection == 10048 ? "íšŒí”¼ì¹˜ 1%" :
+ selection == 20048 ? "íšŒí”¼ì¹˜ 2%" :
+ selection == 30048 ? "íšŒí”¼ì¹˜ 3%" :
+ selection == 40048 ? "íšŒí”¼ì¹˜ 6%" :
+ selection == 10051 ? "ê³µê²©ë ¥ 1%" :
+ selection == 20051 ? "ê³µê²©ë ¥ 2%" :
+ selection == 30051 ? "ê³µê²©ë ¥ 3%" :
+ selection == 40051 ? "ê³µê²©ë ¥ 6%" :
+ selection == 10052 ? "ë§ˆë ¥ 1%" :
+ selection == 20052 ? "ë§ˆë ¥ 2%" :
+ selection == 30052 ? "ë§ˆë ¥ 3%" :
+ selection == 40052 ? "ë§ˆë ¥ 6%" :
+ selection == 10070 ? "ì´ ë°ë¯¸ì§€ 1%" :
+ selection == 20070 ? "ì´ ë°ë¯¸ì§€ 2%" :
+ selection == 30070 ? "ì´ ë°ë¯¸ì§€ 3%" :
+ selection == 40070 ? "ì´ ë°ë¯¸ì§€ 6%" :
+ selection == 10053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 1%" :
+ selection == 20053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 2%" :
+ selection == 30053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 3%" :
+ selection == 40053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 6%" :
+ selection == 10054 ? "ë§ˆë²•ë°©ì–´ë ¥ 1%" :
+ selection == 20054 ? "ë§ˆë²•ë°©ì–´ë ¥ 2%" :
+ selection == 30054 ? "ë§ˆë²•ë°©ì–´ë ¥ 3%" :
+ selection == 40054 ? "ë§ˆë²•ë°©ì–´ë ¥ 6%" :
+ selection == 40650 ? "ë©”ì†Œ íšë“ëŸ‰ 10%" :
+ selection == 40656 ? "ì•„ì´í…œ íšë“í™•ë¥  10%" :
+ selection == 10055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  1%" :
+ selection == 20055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  2%" :
+ selection == 30055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  3%" :
+ selection == 40055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  6%" :
+ selection == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 3%" :
+ selection == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 3%" : 
+ selection == 40501 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -5%" :
+ selection == 40502 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -10%" :
+ selection == 60001 ? "ì´ ë°ë¯¸ì§€ 20%" :
+ selection == 40081 ? "ì˜¬ìŠ¤í…Ÿ +12" :
+ selection == 30106 ? "ëª¨ë“  ìŠ¤í‚¬ë ˆë²¨ +1" :
+ selection == 40106 ? "ëª¨ë“  ìŠ¤í‚¬ë ˆë²¨ +2" :
+ selection == 40107 ? "ëª¨ë“  ìŠ¤í‚¬ë ˆë²¨ +3" :
+ selection == 40111 ? "ëª¨ë“  ì†ì„± ë‚´ì„± 10%" :
+ selection == 40116 ? "ìƒíƒœ ì´ìƒ ë‚´ì„± 10%" :
+ selection == 30291 ? "ê³µê²© ì‹œ ëª¬ìŠ¤í„°ì˜ ë°©ì–´ìœ¨ ë¬´ì‹œ 30%" : 
+ selection == 40291 ? "ê³µê²© ì‹œ ëª¬ìŠ¤í„°ì˜ ë°©ì–´ìœ¨ ë¬´ì‹œ 35%" :
+ selection == 40292 ? "ê³µê²© ì‹œ ëª¬ìŠ¤í„°ì˜ ë°©ì–´ìœ¨ ë¬´ì‹œ 40%" :
+ selection == 30356 ? "í”¼ê²© ì‹œ 5% í™•ë¥ ë¡œ ë°ë¯¸ì§€ 20% ë¬´ì‹œ" :
+ selection == 40356 ? "í”¼ê²© ì‹œ 10% í™•ë¥ ë¡œ ë°ë¯¸ì§€ 20% ë¬´ì‹œ" :
+ selection == 40357 ? "í”¼ê²© ì‹œ 5% í™•ë¥ ë¡œ ë°ë¯¸ì§€ 40% ë¬´ì‹œ" :
+ selection == 20366 ? "í”¼ê²© í›„ ë¬´ì ì‹œê°„ 1ì´ˆ" :
+ selection == 30366 ? "í”¼ê²© í›„ ë¬´ì ì‹œê°„ 2ì´ˆ" :
+ selection == 40366 ? "í”¼ê²© í›„ ë¬´ì ì‹œê°„ 3ì´ˆ" : 
+ selection == 40556 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ ìž¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ -1ì´ˆ" :
+ selection == 40557 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ ìž¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ -2ì´ˆ" :
+ selection == 42556 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ ìž¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ -1ì´ˆ" : ""
  return LV;
 
 
@@ -614,8 +614,8 @@ function setPotential(selection) {
  
  if (LV > 24) {
  PotentialName = 
- selection == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 6%" :
- selection == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 6%" : ""
+ selection == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 6%" :
+ selection == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 6%" : ""
  return LV;
 
 
@@ -628,25 +628,25 @@ function setPotential(selection) {
 
  if (LV > 44) {
  PotentialName =
- selection == 10041 ? "Èû 2%" :
- selection == 20041 ? "Èû 4%" :
- selection == 30041 ? "Èû 6%" :
- selection == 40041 ? "Èû 9%" :
- selection == 10042 ? "µ¦½º 2%" :
- selection == 20042 ? "µ¦½º 4%" :
- selection == 30042 ? "µ¦½º 6%" :
- selection == 40042 ? "µ¦½º 9%" :
- selection == 10043 ? "ÀÎÆ® 2%" :
- selection == 20043 ? "ÀÎÆ® 4%" :
- selection == 30043 ? "ÀÎÆ® 6%" :
- selection == 40043 ? "ÀÎÆ® 9%" :
- selection == 10044 ? "·° 2%" :
- selection == 20044 ? "·° 4%" :
- selection == 30044 ? "·° 6%" :
- selection == 40044 ? "·° 9%" :
- selection == 20086 ? "¿Ã½ºÅÝ 2%" :
- selection == 30086 ? "¿Ã½ºÅÝ 4%" :
- selection == 40086 ? "¿Ã½ºÅÝ 6%" : 
+ selection == 10041 ? "íž˜ 2%" :
+ selection == 20041 ? "íž˜ 4%" :
+ selection == 30041 ? "íž˜ 6%" :
+ selection == 40041 ? "íž˜ 9%" :
+ selection == 10042 ? "ë±ìŠ¤ 2%" :
+ selection == 20042 ? "ë±ìŠ¤ 4%" :
+ selection == 30042 ? "ë±ìŠ¤ 6%" :
+ selection == 40042 ? "ë±ìŠ¤ 9%" :
+ selection == 10043 ? "ì¸íŠ¸ 2%" :
+ selection == 20043 ? "ì¸íŠ¸ 4%" :
+ selection == 30043 ? "ì¸íŠ¸ 6%" :
+ selection == 40043 ? "ì¸íŠ¸ 9%" :
+ selection == 10044 ? "ëŸ­ 2%" :
+ selection == 20044 ? "ëŸ­ 4%" :
+ selection == 30044 ? "ëŸ­ 6%" :
+ selection == 40044 ? "ëŸ­ 9%" :
+ selection == 20086 ? "ì˜¬ìŠ¤í…Ÿ 2%" :
+ selection == 30086 ? "ì˜¬ìŠ¤í…Ÿ 4%" :
+ selection == 40086 ? "ì˜¬ìŠ¤í…Ÿ 6%" : 
  selection == 10045 ? "MaxHp 2%" :
  selection == 20045 ? "MaxHp 4%" :
  selection == 30045 ? "MaxHp 6%" :
@@ -655,50 +655,50 @@ function setPotential(selection) {
  selection == 20046 ? "MaxMp 4%" :
  selection == 30046 ? "MaxMp 6%" :
  selection == 40046 ? "MaxMp 9%" :
- selection == 10047 ? "¸íÁßÄ¡ 2%" :
- selection == 20047 ? "¸íÁßÄ¡ 4%" :
- selection == 30047 ? "¸íÁßÄ¡ 6%" :
- selection == 40047 ? "¸íÁßÄ¡ 9%" :
- selection == 10048 ? "È¸ÇÇÄ¡ 2%" :
- selection == 20048 ? "È¸ÇÇÄ¡ 4%" :
- selection == 30048 ? "È¸ÇÇÄ¡ 6%" :
- selection == 40048 ? "È¸ÇÇÄ¡ 9%" :
- selection == 10051 ? "°ø°Ý·Â 2%" :
- selection == 20051 ? "°ø°Ý·Â 4%" :
- selection == 30051 ? "°ø°Ý·Â 6%" :
- selection == 40051 ? "°ø°Ý·Â 9%" :
- selection == 10052 ? "¸¶·Â 2%" :
- selection == 20052 ? "¸¶·Â 4%" :
- selection == 30052 ? "¸¶·Â 6%" :
- selection == 40052 ? "¸¶·Â 9%" :
- selection == 10070 ? "ÃÑ µ¥¹ÌÁö 2%" :
- selection == 20070 ? "ÃÑ µ¥¹ÌÁö 4%" :
- selection == 30070 ? "ÃÑ µ¥¹ÌÁö 6%" :
- selection == 40070 ? "ÃÑ µ¥¹ÌÁö 9%" :
- selection == 10053 ? "¹°¸®¹æ¾î·Â 2%" :
- selection == 20053 ? "¹°¸®¹æ¾î·Â 4%" :
- selection == 30053 ? "¹°¸®¹æ¾î·Â 6%" :
- selection == 40053 ? "¹°¸®¹æ¾î·Â 9%" :
- selection == 10054 ? "¸¶¹ý¹æ¾î·Â 2%" :
- selection == 20054 ? "¸¶¹ý¹æ¾î·Â 4%" :
- selection == 30054 ? "¸¶¹ý¹æ¾î·Â 6%" :
- selection == 40054 ? "¸¶¹ý¹æ¾î·Â 9%" :
- selection == 40650 ? "¸Þ¼Ò È¹µæ·® 15%" :
- selection == 40656 ? "¾ÆÀÌÅÛ È¹µæÈ®·ü 15%" :
- selection == 10055 ? "Å©¸®Æ¼ÄÃ È®·ü 2%" :
- selection == 20055 ? "Å©¸®Æ¼ÄÃ È®·ü 4%" :
- selection == 30055 ? "Å©¸®Æ¼ÄÃ È®·ü 6%" :
- selection == 40055 ? "Å©¸®Æ¼ÄÃ È®·ü 9%" : ""
- selection == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 9%" :
- selection == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 9%" : ""
+ selection == 10047 ? "ëª…ì¤‘ì¹˜ 2%" :
+ selection == 20047 ? "ëª…ì¤‘ì¹˜ 4%" :
+ selection == 30047 ? "ëª…ì¤‘ì¹˜ 6%" :
+ selection == 40047 ? "ëª…ì¤‘ì¹˜ 9%" :
+ selection == 10048 ? "íšŒí”¼ì¹˜ 2%" :
+ selection == 20048 ? "íšŒí”¼ì¹˜ 4%" :
+ selection == 30048 ? "íšŒí”¼ì¹˜ 6%" :
+ selection == 40048 ? "íšŒí”¼ì¹˜ 9%" :
+ selection == 10051 ? "ê³µê²©ë ¥ 2%" :
+ selection == 20051 ? "ê³µê²©ë ¥ 4%" :
+ selection == 30051 ? "ê³µê²©ë ¥ 6%" :
+ selection == 40051 ? "ê³µê²©ë ¥ 9%" :
+ selection == 10052 ? "ë§ˆë ¥ 2%" :
+ selection == 20052 ? "ë§ˆë ¥ 4%" :
+ selection == 30052 ? "ë§ˆë ¥ 6%" :
+ selection == 40052 ? "ë§ˆë ¥ 9%" :
+ selection == 10070 ? "ì´ ë°ë¯¸ì§€ 2%" :
+ selection == 20070 ? "ì´ ë°ë¯¸ì§€ 4%" :
+ selection == 30070 ? "ì´ ë°ë¯¸ì§€ 6%" :
+ selection == 40070 ? "ì´ ë°ë¯¸ì§€ 9%" :
+ selection == 10053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 2%" :
+ selection == 20053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 4%" :
+ selection == 30053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 6%" :
+ selection == 40053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 9%" :
+ selection == 10054 ? "ë§ˆë²•ë°©ì–´ë ¥ 2%" :
+ selection == 20054 ? "ë§ˆë²•ë°©ì–´ë ¥ 4%" :
+ selection == 30054 ? "ë§ˆë²•ë°©ì–´ë ¥ 6%" :
+ selection == 40054 ? "ë§ˆë²•ë°©ì–´ë ¥ 9%" :
+ selection == 40650 ? "ë©”ì†Œ íšë“ëŸ‰ 15%" :
+ selection == 40656 ? "ì•„ì´í…œ íšë“í™•ë¥  15%" :
+ selection == 10055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  2%" :
+ selection == 20055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  4%" :
+ selection == 30055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  6%" :
+ selection == 40055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  9%" : ""
+ selection == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 9%" :
+ selection == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 9%" : ""
  return LV;
  }
 
 
  if (LV > 54) {
  PotentailName =
- selection == 40501 ? "¸ðµç ½ºÅ³ÀÇ MP ¼Ò¸ð -10%" :
- selection == 40502 ? "¸ðµç ½ºÅ³ÀÇ MP ¼Ò¸ð -20%" : ""
+ selection == 40501 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -10%" :
+ selection == 40502 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -20%" : ""
  return LV;
 
 
@@ -707,33 +707,33 @@ function setPotential(selection) {
 
  if (LV > 64) {
  PotentailName =
- selection == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 12%" :
- selection == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 12%" : ""
+ selection == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 12%" :
+ selection == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 12%" : ""
  return LV;
 
 
  }
  if (LV > 75) {
  PotentialName =
- selection == 10041 ? "Èû 3%" :
- selection == 20041 ? "Èû 6%" :
- selection == 30041 ? "Èû 9%" :
- selection == 40041 ? "Èû 12%":
- selection == 10042 ? "µ¦½º 3%":
- selection == 20042 ? "µ¦½º 6%":
- selection == 30042 ? "µ¦½º 9%":
- selection == 40042 ? "µ¦½º 12%":
- selection == 10043 ? "ÀÎÆ® 3%":
- selection == 20043 ? "ÀÎÆ® 6%":
- selection == 30043 ? "ÀÎÆ® 9%":
- selection == 40043 ? "ÀÎÆ® 12%":
- selection == 10044 ? "·° 3%":
- selection == 20044 ? "·° 6%":
- selection == 30044 ? "·° 9%":
- selection == 40044 ? "·° 12%":
- selection == 20086 ? "¿Ã½ºÅÝ 3%":
- selection == 30086 ? "¿Ã½ºÅÝ 6%":
- selection == 40086 ? "¿Ã½ºÅÝ 9%": 
+ selection == 10041 ? "íž˜ 3%" :
+ selection == 20041 ? "íž˜ 6%" :
+ selection == 30041 ? "íž˜ 9%" :
+ selection == 40041 ? "íž˜ 12%":
+ selection == 10042 ? "ë±ìŠ¤ 3%":
+ selection == 20042 ? "ë±ìŠ¤ 6%":
+ selection == 30042 ? "ë±ìŠ¤ 9%":
+ selection == 40042 ? "ë±ìŠ¤ 12%":
+ selection == 10043 ? "ì¸íŠ¸ 3%":
+ selection == 20043 ? "ì¸íŠ¸ 6%":
+ selection == 30043 ? "ì¸íŠ¸ 9%":
+ selection == 40043 ? "ì¸íŠ¸ 12%":
+ selection == 10044 ? "ëŸ­ 3%":
+ selection == 20044 ? "ëŸ­ 6%":
+ selection == 30044 ? "ëŸ­ 9%":
+ selection == 40044 ? "ëŸ­ 12%":
+ selection == 20086 ? "ì˜¬ìŠ¤í…Ÿ 3%":
+ selection == 30086 ? "ì˜¬ìŠ¤í…Ÿ 6%":
+ selection == 40086 ? "ì˜¬ìŠ¤í…Ÿ 9%": 
  selection == 10045 ? "MaxHp 3%":
  selection == 20045 ? "MaxHp 6%":
  selection == 30045 ? "MaxHp 9%":
@@ -742,48 +742,48 @@ function setPotential(selection) {
  selection == 20046 ? "MaxMp 6%":
  selection == 30046 ? "MaxMp 9%":
  selection == 40046 ? "MaxMp 12%":
- selection == 10047 ? "¸íÁßÄ¡ 3%":
- selection == 20047 ? "¸íÁßÄ¡ 6%":
- selection == 30047 ? "¸íÁßÄ¡ 9%":
- selection == 40047 ? "¸íÁßÄ¡ 12%":
- selection == 10048 ? "È¸ÇÇÄ¡ 3%":
- selection == 20048 ? "È¸ÇÇÄ¡ 6%":
- selection == 30048 ? "È¸ÇÇÄ¡ 9%":
- selection == 40048 ? "È¸ÇÇÄ¡ 12%":
- selection == 10051 ? "°ø°Ý·Â 3%":
- selection == 20051 ? "°ø°Ý·Â 6%":
- selection == 30051 ? "°ø°Ý·Â 9%":
- selection == 40051 ? "°ø°Ý·Â 12%":
- selection == 10052 ? "¸¶·Â 3%":
- selection == 20052 ? "¸¶·Â 6%":
- selection == 30052 ? "¸¶·Â 9%":
- selection == 40052 ? "¸¶·Â 12%":
- selection == 10070 ? "ÃÑ µ¥¹ÌÁö 3%":
- selection == 20070 ? "ÃÑ µ¥¹ÌÁö 6%":
- selection == 30070 ? "ÃÑ µ¥¹ÌÁö 9%":
- selection == 40070 ? "ÃÑ µ¥¹ÌÁö 12%":
- selection == 10053 ? "¹°¸®¹æ¾î·Â 3%":
- selection == 20053 ? "¹°¸®¹æ¾î·Â 6%":
- selection == 30053 ? "¹°¸®¹æ¾î·Â 9%":
- selection == 40053 ? "¹°¸®¹æ¾î·Â 12%":
- selection == 10054 ? "¸¶¹ý¹æ¾î·Â 3%":
- selection == 20054 ? "¸¶¹ý¹æ¾î·Â 6%":
- selection == 30054 ? "¸¶¹ý¹æ¾î·Â 9%":
- selection == 40054 ? "¸¶¹ý¹æ¾î·Â 12%":
- selection == 40650 ? "¸Þ¼Ò È¹µæ·® 20%":
- selection == 40656 ? "¾ÆÀÌÅÛ È¹µæÈ®·ü 20%":
- selection == 10055 ? "Å©¸®Æ¼ÄÃ È®·ü 3%":
- selection == 20055 ? "Å©¸®Æ¼ÄÃ È®·ü 6%":
- selection == 30055 ? "Å©¸®Æ¼ÄÃ È®·ü 9%":
- selection == 40055 ? "Å©¸®Æ¼ÄÃ È®·ü 12%": ""
+ selection == 10047 ? "ëª…ì¤‘ì¹˜ 3%":
+ selection == 20047 ? "ëª…ì¤‘ì¹˜ 6%":
+ selection == 30047 ? "ëª…ì¤‘ì¹˜ 9%":
+ selection == 40047 ? "ëª…ì¤‘ì¹˜ 12%":
+ selection == 10048 ? "íšŒí”¼ì¹˜ 3%":
+ selection == 20048 ? "íšŒí”¼ì¹˜ 6%":
+ selection == 30048 ? "íšŒí”¼ì¹˜ 9%":
+ selection == 40048 ? "íšŒí”¼ì¹˜ 12%":
+ selection == 10051 ? "ê³µê²©ë ¥ 3%":
+ selection == 20051 ? "ê³µê²©ë ¥ 6%":
+ selection == 30051 ? "ê³µê²©ë ¥ 9%":
+ selection == 40051 ? "ê³µê²©ë ¥ 12%":
+ selection == 10052 ? "ë§ˆë ¥ 3%":
+ selection == 20052 ? "ë§ˆë ¥ 6%":
+ selection == 30052 ? "ë§ˆë ¥ 9%":
+ selection == 40052 ? "ë§ˆë ¥ 12%":
+ selection == 10070 ? "ì´ ë°ë¯¸ì§€ 3%":
+ selection == 20070 ? "ì´ ë°ë¯¸ì§€ 6%":
+ selection == 30070 ? "ì´ ë°ë¯¸ì§€ 9%":
+ selection == 40070 ? "ì´ ë°ë¯¸ì§€ 12%":
+ selection == 10053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 3%":
+ selection == 20053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 6%":
+ selection == 30053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 9%":
+ selection == 40053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 12%":
+ selection == 10054 ? "ë§ˆë²•ë°©ì–´ë ¥ 3%":
+ selection == 20054 ? "ë§ˆë²•ë°©ì–´ë ¥ 6%":
+ selection == 30054 ? "ë§ˆë²•ë°©ì–´ë ¥ 9%":
+ selection == 40054 ? "ë§ˆë²•ë°©ì–´ë ¥ 12%":
+ selection == 40650 ? "ë©”ì†Œ íšë“ëŸ‰ 20%":
+ selection == 40656 ? "ì•„ì´í…œ íšë“í™•ë¥  20%":
+ selection == 10055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  3%":
+ selection == 20055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  6%":
+ selection == 30055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  9%":
+ selection == 40055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  12%": ""
  return LV;
  }
 
 
  if (LV > 84) {
  PotentailName =
- selection == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 15%" :
- selection == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 15%" : ""
+ selection == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 15%" :
+ selection == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 15%" : ""
  return LV;
 
 

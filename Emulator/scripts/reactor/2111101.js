@@ -6,6 +6,6 @@ function act()
 		rm.spawnMonster(i);
 	}
 	rm.spawnMonster(8800102);
-	rm.mapMessage("¿ø¼®ÀÇ ÈûÀ¸·Î Ä«¿À½º ÀÚÄñÀÌ ¼ÒÈ¯µË´Ï´Ù.");
+	rm.mapMessage("ì›ì„ì˜ í˜ìœ¼ë¡œ ì¹´ì˜¤ìŠ¤ ìì¿°ì´ ì†Œí™˜ë©ë‹ˆë‹¤.");
 	var em = rm.getPlayer().getEventInstance();
 }

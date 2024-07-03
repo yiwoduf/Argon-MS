@@ -14,27 +14,27 @@ function action (mode, type, selection) {
 		status++;
 	}
 	if (status == 0) {
-		var chat = "#e¿¡¸®¾Æ¿ùµå #b#h ##k \r\n#r#ÈÄÈÄ¿øÆ÷ÀÎÆ® ±¸¸Å¹®ÀÇ\r\n#b#³×Ä«Æä°øÁö ÈÄ¿ø¹®ÀÇÂü°í \r\n#bÇöÀç º¸À¯ÁßÀÎ ÈÄ¿øÆ÷ÀÎÆ® : #k" + cm.getRC() + "#n\r\n";
-		chat += "#L0##b¿øÇÏ´ÂÀåºñ ¿Ã½ºÅİ 2´ç ÈÄ¿øÆ÷ÀÎÆ® 100 #k\r\n";
-		chat += "#L1##b¿øÇÏ´ÂÀåºñ °ø/¸¶ 1´ç ÈÄ¿øÆ÷ÀÎÆ® 100 #k";
+		var chat = "#eì—ë¦¬ì•„ì›”ë“œ #b#h ##k \r\n#r#í›„í›„ì›í¬ì¸íŠ¸ êµ¬ë§¤ë¬¸ì˜\r\n#b#ë„¤ì¹´í˜ê³µì§€ í›„ì›ë¬¸ì˜ì°¸ê³  \r\n#bí˜„ì¬ ë³´ìœ ì¤‘ì¸ í›„ì›í¬ì¸íŠ¸ : #k" + cm.getRC() + "#n\r\n";
+		chat += "#L0##bì›í•˜ëŠ”ì¥ë¹„ ì˜¬ìŠ¤í…Ÿ 2ë‹¹ í›„ì›í¬ì¸íŠ¸ 100 #k\r\n";
+		chat += "#L1##bì›í•˜ëŠ”ì¥ë¹„ ê³µ/ë§ˆ 1ë‹¹ í›„ì›í¬ì¸íŠ¸ 100 #k";
 		cm.sendSimple(chat);
 	} else if (status == 1) {
 		sel = selection;
 		if (sel == 0) {
-            		var chat = "¿Ã½ºÅİ °­È­¸¦ ÇÒ ¾ÆÀÌÅÛÀ» ¼±ÅÃÇØ ÁÖ¼¼¿ä.\r\n\r\n";
+            		var chat = "ì˜¬ìŠ¤í…Ÿ ê°•í™”ë¥¼ í•  ì•„ì´í…œì„ ì„ íƒí•´ ì£¼ì„¸ìš”.\r\n\r\n";
 			chat += cm.getDonateList();
             		cm.sendSimple(chat);
 		} else if (sel == 1) {
-			var chat = "°ø/¸¶ °­È­¸¦ ÇÒ ¾ÆÀÌÅÛÀ» ¼±ÅÃÇØ ÁÖ¼¼¿ä.\r\n\r\n";
+			var chat = "ê³µ/ë§ˆ ê°•í™”ë¥¼ í•  ì•„ì´í…œì„ ì„ íƒí•´ ì£¼ì„¸ìš”.\r\n\r\n";
 			chat += cm.getDonateList();
             		cm.sendSimple(chat);
 		}
 	} else if (status == 2) {
 		itemId = selection;
 		if (sel == 0) {
-			cm.sendGetNumber("¿øÇÏ½Ã´Â ¿Ã½ºÅİ ¼öÄ¡¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä\r\n#r¿Ã½ºÅİ 2 ´ç ÈÄ¿øÆ÷ÀÎÆ® 100#k\r\n", 0, 0, 32000);
+			cm.sendGetNumber("ì›í•˜ì‹œëŠ” ì˜¬ìŠ¤í…Ÿ ìˆ˜ì¹˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”\r\n#rì˜¬ìŠ¤í…Ÿ 2 ë‹¹ í›„ì›í¬ì¸íŠ¸ 100#k\r\n", 0, 0, 32000);
 		} else if (sel == 1) {
-			cm.sendGetNumber("¿øÇÏ½Ã´Â °ø/¸¶ ¼öÄ¡¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä\r\n#r°ø/¸¶ 1 ´ç ÈÄ¿øÆ÷ÀÎÆ® 100#k\r\n", 0, 0, 32000);
+			cm.sendGetNumber("ì›í•˜ì‹œëŠ” ê³µ/ë§ˆ ìˆ˜ì¹˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”\r\n#rê³µ/ë§ˆ 1 ë‹¹ í›„ì›í¬ì¸íŠ¸ 100#k\r\n", 0, 0, 32000);
 		}
 	} else if (status == 3) {
 		if (sel == 0) {
@@ -45,7 +45,7 @@ function action (mode, type, selection) {
 				cm.setDonateStat(itemId, allstat);
 				cm.dispose();
 			} else {
-				cm.sendOk("ÈÄ¿øÆ÷ÀÎÆ®°¡ ¸ğÀÚ¶ø´Ï´Ù.");
+				cm.sendOk("í›„ì›í¬ì¸íŠ¸ê°€ ëª¨ìëë‹ˆë‹¤.");
 				cm.dispose();
 			}
 		} else if (sel == 1) {
@@ -56,7 +56,7 @@ function action (mode, type, selection) {
 				cm.setDonateWatk(itemId, damage);
 				cm.dispose();
 			} else {
-				cm.sendOk("ÈÄ¿øÆ÷ÀÎÆ®°¡ ¸ğÀÚ¶ø´Ï´Ù.");
+				cm.sendOk("í›„ì›í¬ì¸íŠ¸ê°€ ëª¨ìëë‹ˆë‹¤.");
 				cm.dispose();
 			}
 		}

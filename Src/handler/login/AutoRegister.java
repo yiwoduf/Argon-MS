@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹èÁöÈÆ raccoonfox69@gmail.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°°ì§€í›ˆ raccoonfox69@gmail.com
  * ==================================
  * 
  */
@@ -23,18 +23,18 @@ import java.sql.ResultSet;
 
 /**
  *
- * @author ÃÖ¿ëÀç <virgo_s_t@naver.com>
+ * @author ìµœìš©ì¬ <virgo_s_t@naver.com>
  */
 public class AutoRegister {
     
-    private static int ENABLE_IP_COUNT = 3; //Çã¿ë °¡´ÉÇÑ IP°¹¼ö 
+    private static int ENABLE_IP_COUNT = 3; //í—ˆìš© ê°€ëŠ¥í•œ IPê°¯ìˆ˜ 
     
     /*
-     * Áßº¹µÈ °èÁ¤ÀÌ ÀÖ´ÂÁö Ã¼Å© ÈÄ ¾ÆÀÌÇÇ È®ÀÎ
+     * ì¤‘ë³µëœ ê³„ì •ì´ ìˆëŠ”ì§€ ì²´í¬ í›„ ì•„ì´í”¼ í™•ì¸
      * 
-     * 0 : »ı¼º °¡´ÉÇÑ »óÅÂ
-     * 1 : ÃÖ´ë È½¼ö¸¦ ³ÑÀº IP
-     * 2 : ÀÌ¹Ì Á¸ÀçÇÏ´Â °èÁ¤
+     * 0 : ìƒì„± ê°€ëŠ¥í•œ ìƒíƒœ
+     * 1 : ìµœëŒ€ íšŸìˆ˜ë¥¼ ë„˜ì€ IP
+     * 2 : ì´ë¯¸ ì¡´ì¬í•˜ëŠ” ê³„ì •
      */
         public static int checkAccount(MapleClient account, String name, String password) {
             Connection connect = null;

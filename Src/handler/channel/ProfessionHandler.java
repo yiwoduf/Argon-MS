@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -34,7 +34,7 @@ import server.maps.MapleMapObjectType;
 
 /**
  *
- * @author ¿¡¹İÅ×ÀÌ¸£
+ * @author ì—ë°˜í…Œì´ë¥´
  */
 public class ProfessionHandler {
     public static void startGathering(ReadingMaple rh, MapleClient c) {
@@ -44,7 +44,7 @@ public class ProfessionHandler {
             long lastused = ((long) c.getPlayer().getKeyValue2("Gathering_lastUsed") + 8L) * 1000L;
             //c.getPlayer().message(lastused + " / " + System.currentTimeMillis() + " / " + System.currentTimeMillis() / 1000);
             if (lastused > System.currentTimeMillis()) {
-                c.getPlayer().message(5, "¾ÆÁ÷ Ã¤ÁıÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+                c.getPlayer().message(5, "ì•„ì§ ì±„ì§‘ì„ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                 return;
             }
             c.getPlayer().getMap().broadcastMessage(MainPacketCreator.showGathering(c.getPlayer().getId(), c.getPlayer().getGatherTool(c.getPlayer().getProfession().getFirstProfession())));
@@ -62,7 +62,7 @@ public class ProfessionHandler {
         int rate = 0;
         if (skillid.startsWith("9200") || skillid.startsWith("9201")) {
             rate = 100;
-        } else if (skillid.equals("honorLeveling")) { //¸í¼ºÄ¡ ÆÛ¼¾Æ®
+        } else if (skillid.equals("honorLeveling")) { //ëª…ì„±ì¹˜ í¼ì„¼íŠ¸
             c.send(MainPacketCreator.getProfessionInfo(skillid, level, level2, c.getPlayer().getInnerNextExp()));
             return;
         } else {
@@ -114,7 +114,7 @@ public class ProfessionHandler {
         }
         
         if (playerSkillLevel < data.getReqSkillLevel()) {
-            System.err.println("[¿À·ù] Àü¹®±â¼ú Á¦ÀÛ ÇÊ¿ä ·¹º§ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] ì „ë¬¸ê¸°ìˆ  ì œì‘ í•„ìš” ë ˆë²¨ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
             return;
         }
         
@@ -149,7 +149,7 @@ public class ProfessionHandler {
                     final MapleCharacter owner = chr.getMap().getCharacterById_InMap(extractor.owner);
                     if (owner != null && owner.getMeso() < (Integer.MAX_VALUE - extractor.fee)) {
                         owner.gainMeso(extractor.fee, true);
-                        owner.Message(6, "ºĞÇØ±â ¼ö¼ö·á·Î "+extractor.fee+"¸Ş¼Ò¸¦ ¾ò¾ú½À´Ï´Ù.");
+                        owner.Message(6, "ë¶„í•´ê¸° ìˆ˜ìˆ˜ë£Œë¡œ "+extractor.fee+"ë©”ì†Œë¥¼ ì–»ì—ˆìŠµë‹ˆë‹¤.");
                     }
                 }
             }
@@ -171,7 +171,7 @@ public class ProfessionHandler {
                 cg = CraftGrade.COOL;
             }
             fatigue = 3;
-            InventoryManipulator.addById(c, toGet, (short) quantity, null, null, 0, CurrentTime.getAllCurrentTime()+"¿¡ "+c.getPlayer().getName()+"ÀÌ(°¡) Àü¹®±â¼ú·Î Á¦ÀÛÇÑ ¾ÆÀÌÅÛ.");
+            InventoryManipulator.addById(c, toGet, (short) quantity, null, null, 0, CurrentTime.getAllCurrentTime()+"ì— "+c.getPlayer().getName()+"ì´(ê°€) ì „ë¬¸ê¸°ìˆ ë¡œ ì œì‘í•œ ì•„ì´í…œ.");
             InventoryManipulator.removeFromSlot(c, MapleInventoryType.EQUIP, item.getPosition(), (byte) 1, false);
             chr.getProfession().addFatigue(data.getIncFatigability());
             chr.addDiligence(cg.exp);
@@ -225,7 +225,7 @@ public class ProfessionHandler {
             fatigue = 3;
             InventoryManipulator.removeFromSlot(c, MapleInventoryType.EQUIP, item1.getPosition(), (byte) 1, false);
             InventoryManipulator.removeFromSlot(c, MapleInventoryType.EQUIP, item2.getPosition(), (byte) 1, false);
-            newEquip.setGMLog(CurrentTime.getAllCurrentTime()+"¿¡ "+c.getPlayer().getName()+"ÀÌ(°¡) Àü¹®±â¼ú·Î Á¦ÀÛÇÑ ¾ÆÀÌÅÛ.");
+            newEquip.setGMLog(CurrentTime.getAllCurrentTime()+"ì— "+c.getPlayer().getName()+"ì´(ê°€) ì „ë¬¸ê¸°ìˆ ë¡œ ì œì‘í•œ ì•„ì´í…œ.");
             InventoryManipulator.addbyItem(c, newEquip);
             chr.getProfession().addFatigue(data.getIncFatigability());
             chr.addDiligence(cg.exp);
@@ -240,18 +240,18 @@ public class ProfessionHandler {
             }
             fatigue = chr.getProfession().getFatigue();
             if (playerSkillExp < data.getReqSkillProficiency()) {
-                System.err.println("[¿À·ù] Àü¹®±â¼ú Á¦ÀÛ ÇÊ¿ä ¼÷·Ãµµ°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+                System.err.println("[ì˜¤ë¥˜] ì „ë¬¸ê¸°ìˆ  ì œì‘ í•„ìš” ìˆ™ë ¨ë„ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
                 return;
             }
             if (fatigue + data.getIncFatigability() > 200) {
-                System.err.println("[¿À·ù] Àü¹®±â¼ú Á¦ÀÛ ÇÊ¿ä ÇÇ·Îµµ°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+                System.err.println("[ì˜¤ë¥˜] ì „ë¬¸ê¸°ìˆ  ì œì‘ í•„ìš” í”¼ë¡œë„ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
                 return;
             }
             if (chr.getSkillLevel(skillid) == 0 && data.getNeedOpenItem() == 1) {
                 return;
             }
             for (Pair<Integer, Integer> p : recipes) {
-                chr.gainItem(p.getLeft(), (short) -p.getRight().shortValue(), false, -1, "Àü¹®±â¼ú·Î ¸¸µé¾îÁø ¾ÆÀÌÅÛ");
+                chr.gainItem(p.getLeft(), (short) -p.getRight().shortValue(), false, -1, "ì „ë¬¸ê¸°ìˆ ë¡œ ë§Œë“¤ì–´ì§„ ì•„ì´í…œ");
             }
             if (Randomizer.nextInt(100) < (100 - (data.getReqSkillLevel() - playerSkillLevel) * 20) || ((skillid / 10000) <= 9201)) {
                 int rand = Randomizer.nextInt(100);
@@ -287,7 +287,7 @@ public class ProfessionHandler {
                 if (data.getPeriod() > -1) {
                     maked.setExpiration(System.currentTimeMillis() + ((long) data.getPeriod() * 60 * 1000));
                 }
-                maked.setGMLog(CurrentTime.getAllCurrentTime()+" ¿¡ "+skillid+" ±â¼ú·Î Á¦ÀÛµÊ");
+                maked.setGMLog(CurrentTime.getAllCurrentTime()+" ì— "+skillid+" ê¸°ìˆ ë¡œ ì œì‘ë¨");
                 if (data.getNeedOpenItem() == 1) {
                     chr.changeSkillLevel(SkillFactory.getSkill(skillid), (byte) 0, (byte) 0);
                 }
@@ -308,13 +308,13 @@ public class ProfessionHandler {
                     c.getPlayer().changeSkillLevel(SkillFactory.getSkill(pro.getSecondProfessionSkill()), (byte) 1, (byte) 10);
                 }
                 if (pro.getFirstProfessionExp() == GameConstants.getProfessionExpNeededForLevel(pro.getFirstProfessionLevel())) {
-                    chr.Message(6, MapleProfessionType.getNameByProfession(pro.getFirstProfession())+"ÀÇ ¼÷·Ãµµ°¡ ÇöÀç·¹º§ÀÇ ÃÖ´ëÄ¡°¡ µÇ¾ú½À´Ï´Ù. ·¹º§¾÷ ÇØÁÖ¼¼¿ä.");
+                    chr.Message(6, MapleProfessionType.getNameByProfession(pro.getFirstProfession())+"ì˜ ìˆ™ë ¨ë„ê°€ í˜„ì¬ë ˆë²¨ì˜ ìµœëŒ€ì¹˜ê°€ ë˜ì—ˆìŠµë‹ˆë‹¤. ë ˆë²¨ì—… í•´ì£¼ì„¸ìš”.");
                     chr.send(MainPacketCreator.playSound("profession/levelup"));
                 } else if (pro.getSecondProfessionExp() == GameConstants.getProfessionExpNeededForLevel(pro.getSecondProfessionLevel())) {
-                    chr.Message(6, MapleProfessionType.getNameByProfession(pro.getSecondProfession())+"ÀÇ ¼÷·Ãµµ°¡ ÇöÀç·¹º§ÀÇ ÃÖ´ëÄ¡°¡ µÇ¾ú½À´Ï´Ù. ·¹º§¾÷ ÇØÁÖ¼¼¿ä.");
+                    chr.Message(6, MapleProfessionType.getNameByProfession(pro.getSecondProfession())+"ì˜ ìˆ™ë ¨ë„ê°€ í˜„ì¬ë ˆë²¨ì˜ ìµœëŒ€ì¹˜ê°€ ë˜ì—ˆìŠµë‹ˆë‹¤. ë ˆë²¨ì—… í•´ì£¼ì„¸ìš”.");
                     chr.send(MainPacketCreator.playSound("profession/levelup"));
                 } else {
-                    chr.Message(6, MapleProfessionType.getNameByProfession(profType) + "ÀÇ ¼÷·Ãµµ°¡ Áõ°¡ÇÏ¿´½À´Ï´Ù. (+" + exp + ")");
+                    chr.Message(6, MapleProfessionType.getNameByProfession(profType) + "ì˜ ìˆ™ë ¨ë„ê°€ ì¦ê°€í•˜ì˜€ìŠµë‹ˆë‹¤. (+" + exp + ")");
                 }
             } else {
                 exp = 0;
@@ -365,7 +365,7 @@ public class ProfessionHandler {
         final MapleCharacter chr = c.getPlayer();
         if (chr.getInventory(MapleInventoryType.USE).getItem(slot).getItemId() != itemid) {
             chr.ea();
-            System.err.println("[¿À·ù] ½½·Ô¿¡ ÀÖ´Â ¾ÆÀÌÅÛ°ú »ç¿ëÇÑ ¾ÆÀÌÅÛÀÌ ´Ù¸¨´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] ìŠ¬ë¡¯ì— ìˆëŠ” ì•„ì´í…œê³¼ ì‚¬ìš©í•œ ì•„ì´í…œì´ ë‹¤ë¦…ë‹ˆë‹¤.");
             return;
         }
         ItemInformation ii = ItemInformation.getInstance();
@@ -406,7 +406,7 @@ public class ProfessionHandler {
         c.getSession().writeAndFlush(MainPacketCreator.resetActions());
     }
     
-    //E3 00 01 CF 7B 05 -> ¾ÆÀÌÅÛÁ¦ÀÛ
+    //E3 00 01 CF 7B 05 -> ì•„ì´í…œì œì‘
     
     public static final void SwitchBag(final ReadingMaple slea, final MapleClient c) {
         if (c.getPlayer().hasBlockedInventory()) { //hack

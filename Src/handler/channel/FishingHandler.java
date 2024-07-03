@@ -28,7 +28,7 @@ public class FishingHandler {
         int rand = Randomizer.nextInt(Items.length);
         chr.gainItem(Items[rand], quentity[rand], false, 0, null);
         ItemInformation ii = ItemInformation.getInstance();
-        chr.dropMessage(6, "³¬½Ã¸¦ÅëÇØ ¾ÆÀÌÅÛ " + ii.getName(Items[rand]) + "¸¦ " + quentity[rand] + "°³ ¾ò¾ú½À´Ï´Ù!");
+        chr.dropMessage(6, "ë‚šì‹œë¥¼í†µí•´ ì•„ì´í…œ " + ii.getName(Items[rand]) + "ë¥¼ " + quentity[rand] + "ê°œ ì–»ì—ˆìŠµë‹ˆë‹¤!");
     }
     public static void StartFishing(final MapleCharacter chr) {
         chr.setFishing(true);

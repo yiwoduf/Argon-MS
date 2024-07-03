@@ -25,7 +25,7 @@ function start(){
 
 function action(mode, type, selection) {
     if (mode == -1 || mode == 0) {
-        cm.sendOk("Ãë¼ÒÇÏ¼Ì½À´Ï´Ù.");
+        cm.sendOk("ì·¨ì†Œí•˜ì…¨ìŠµë‹ˆë‹¤.");
         cm.dispose();
         return;
     }
@@ -33,57 +33,57 @@ function action(mode, type, selection) {
         status++;
     }
     if (status == 0) {
-        cm.sendYesNo("¾²·¹±â DB¸¦ Á¤¸®ÇÏ½Ã°Ú½À´Ï±î?");
+        cm.sendYesNo("ì“°ë ˆê¸° DBë¥¼ ì •ë¦¬í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
     } else if (status == 1){
 
-	cm.getPlayer().send(MainPacketCreator.sendHint("¾²·¹±âDB¸¦ °Ë»öÁßÀÔ´Ï´Ù.",200,20));
+	cm.getPlayer().send(MainPacketCreator.sendHint("ì“°ë ˆê¸°DBë¥¼ ê²€ìƒ‰ì¤‘ì…ë‹ˆë‹¤.",200,20));
 /*
         var ins = MYSQL.getConnection().prepareStatement("SELECT characterid FROM inventoryitems WHERE NOT EXISTS (SELECT * FROM characters WHERE id = inventoryitems.characterid)").executeQuery();
-	cm.getPlayer().send(MainPacketCreator.sendHint("ÀÎº¥DB ½ºÄµÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù. ¾²·¹±âDB Á¤¸®¸¦ ½ÃÀÛÇÕ´Ï´Ù.",400,20));
+	cm.getPlayer().send(MainPacketCreator.sendHint("ì¸ë²¤DB ìŠ¤ìº”ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤. ì“°ë ˆê¸°DB ì •ë¦¬ë¥¼ ì‹œì‘í•©ë‹ˆë‹¤.",400,20));
 	var mm = 0;
         while (ins.next()){
             var del = MYSQL.getConnection().prepareStatement("DELETE FROM inventoryitems WHERE characterid = ?");
             del.setInt(1, ins.getInt("characterid"));
-            System.out.println(ins.getInt("characterid")+"»èÁ¦ ¿Ï·á");
+            System.out.println(ins.getInt("characterid")+"ì‚­ì œ ì™„ë£Œ");
             del.executeUpdate();
 	    mm++
         }
 */
         var ins = MYSQL.getConnection().prepareStatement("SELECT * FROM inventoryequipment WHERE NOT EXISTS (SELECT * FROM inventoryitems where accountid > -1) or NOT EXISTS (SELECT * FROM inventoryitems WHERE inventoryitemid = inventoryequipment.inventoryitemid)").executeQuery();
-	cm.getPlayer().send(MainPacketCreator.sendHint("¿¡Å¢DB ½ºÄµÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù. ¾²·¹±âDB Á¤¸®¸¦ ½ÃÀÛÇÕ´Ï´Ù.",400,20));
+	cm.getPlayer().send(MainPacketCreator.sendHint("ì—í…DB ìŠ¤ìº”ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤. ì“°ë ˆê¸°DB ì •ë¦¬ë¥¼ ì‹œì‘í•©ë‹ˆë‹¤.",400,20));
 	var ii = 0;
         while (ins.next()){
             var del = MYSQL.getConnection().prepareStatement("DELETE FROM inventoryequipment WHERE inventoryitemid = ?");
             del.setInt(1, ins.getInt("inventoryitemid"));
-            System.out.println(ins.getInt("inventoryitemid")+"»èÁ¦ ¿Ï·á");
+            System.out.println(ins.getInt("inventoryitemid")+"ì‚­ì œ ì™„ë£Œ");
             del.executeUpdate();
 	    ii++
         }
 
 
         var ins = MYSQL.getConnection().prepareStatement("SELECT characterid FROM skills WHERE NOT EXISTS (SELECT * FROM characters WHERE id = skills.characterid)").executeQuery();
-	cm.getPlayer().send(MainPacketCreator.sendHint("½ºÅ³DB ½ºÄµÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù. ¾²·¹±âDB Á¤¸®¸¦ ½ÃÀÛÇÕ´Ï´Ù.",400,20));
+	cm.getPlayer().send(MainPacketCreator.sendHint("ìŠ¤í‚¬DB ìŠ¤ìº”ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤. ì“°ë ˆê¸°DB ì •ë¦¬ë¥¼ ì‹œì‘í•©ë‹ˆë‹¤.",400,20));
 	var zz = 0;
         while (ins.next()){
             var del = MYSQL.getConnection().prepareStatement("DELETE FROM skills WHERE characterid = ?");
             del.setInt(1, ins.getInt("characterid"));
-            System.out.println(ins.getInt("characterid")+"»èÁ¦ ¿Ï·á");
+            System.out.println(ins.getInt("characterid")+"ì‚­ì œ ì™„ë£Œ");
             del.executeUpdate();
 	    zz++
         }
 
 
         var ins = MYSQL.getConnection().prepareStatement("SELECT characterid FROM keymap WHERE NOT EXISTS (SELECT * FROM characters WHERE id = keymap.characterid)").executeQuery();
-	cm.getPlayer().send(MainPacketCreator.sendHint("Å°¸ÊDB ½ºÄµÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù. ¾²·¹±âDB Á¤¸®¸¦ ½ÃÀÛÇÕ´Ï´Ù.",400,20));
+	cm.getPlayer().send(MainPacketCreator.sendHint("í‚¤ë§µDB ìŠ¤ìº”ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤. ì“°ë ˆê¸°DB ì •ë¦¬ë¥¼ ì‹œì‘í•©ë‹ˆë‹¤.",400,20));
 	var xx = 0;
         while (ins.next()){
             var del = MYSQL.getConnection().prepareStatement("DELETE FROM keymap WHERE characterid = ?");
             del.setInt(1, ins.getInt("characterid"));
-            System.out.println(ins.getInt("characterid")+"»èÁ¦ ¿Ï·á");
+            System.out.println(ins.getInt("characterid")+"ì‚­ì œ ì™„ë£Œ");
             del.executeUpdate();
 	    xx++
         }
-	cm.getPlayer().send(MainPacketCreator.sendHint("ÃÑ "+ii+"°³ÀÇ ¿¡Å¢DB¸¦ »èÁ¦Çß½À´Ï´Ù.\r\nÃÑ "+zz+"°³ÀÇ ½ºÅ³DB¸¦ »èÁ¦Çß½À´Ï´Ù.\r\nÃÑ "+xx+"°³ÀÇ Å°¸ÊDB¸¦ »èÁ¦Çß½À´Ï´Ù.",300,20));
+	cm.getPlayer().send(MainPacketCreator.sendHint("ì´ "+ii+"ê°œì˜ ì—í…DBë¥¼ ì‚­ì œí–ˆìŠµë‹ˆë‹¤.\r\nì´ "+zz+"ê°œì˜ ìŠ¤í‚¬DBë¥¼ ì‚­ì œí–ˆìŠµë‹ˆë‹¤.\r\nì´ "+xx+"ê°œì˜ í‚¤ë§µDBë¥¼ ì‚­ì œí–ˆìŠµë‹ˆë‹¤.",300,20));
         cm.dispose();  
     }
 }

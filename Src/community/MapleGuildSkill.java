@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -11,7 +11,7 @@ package community;
 
 /**
  *
- * @author ÀÌÀç¿Õ<saviorms@naver.com>
+ * @author ì´ì¬ì™•<saviorms@naver.com>
  */
 public class MapleGuildSkill implements java.io.Serializable {
     public static final long serialVersionUID = 3565477792055301248L;

@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -50,7 +50,7 @@ public class MapleQuest {
     public static void cacheMapleQuest() {
         synchronized(questReady) {
             if (!questReady) {
-                System.out.println("[ARGON] Äù½ºÆ® µ¥ÀÌÅÍ Ä³½ÌÀ» ½ÃÀÛÇÕ´Ï´Ù.");
+                System.out.println("[ARGON] í€˜ìŠ¤íŠ¸ ë°ì´í„° ìºì‹±ì„ ì‹œì‘í•©ë‹ˆë‹¤.");
                long t = System.currentTimeMillis();
                 for (MapleData d : actions.getChildren()) {
                     MapleQuest ret = new MapleQuest();
@@ -58,7 +58,7 @@ public class MapleQuest {
                         quests.put(Integer.parseInt(d.getName()), ret);
                     }
                 }
-                 System.out.println("[ARGON] Äù½ºÆ® µ¥ÀÌÅÍ Ä³½ÌÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù. µ¥ÀÌÅÍ : " + quests.size() +" ¼Ò¿ä½Ã°£ : "+(System.currentTimeMillis() - t)+"ms");
+                 System.out.println("[ARGON] í€˜ìŠ¤íŠ¸ ë°ì´í„° ìºì‹±ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤. ë°ì´í„° : " + quests.size() +" ì†Œìš”ì‹œê°„ : "+(System.currentTimeMillis() - t)+"ms");
                 questReady = Boolean.TRUE;
             }
         }

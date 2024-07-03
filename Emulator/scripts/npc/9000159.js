@@ -1,5 +1,5 @@
 
-/* Äü¹«ºê - ÀÚÀ¯½ÃÀå */
+/* í€µë¬´ë¸Œ - ììœ ì‹œì¥ */
 
 
 var status = -1;
@@ -20,10 +20,10 @@ function action(mode, type, selection) {
     
     if (status == 0) {
         if (cm.getPlayer().getLevel() < 10) {
-            cm.getPlayer().message(5, "#b<ÀÚÀ¯ ½ÃÀå>#kÀº ·¹º§ 10ÀÌ»ó¸¸ ÀÔÀå °¡´ÉÇÕ´Ï´Ù.");
+            cm.getPlayer().message(5, "#b<ììœ  ì‹œì¥>#kì€ ë ˆë²¨ 10ì´ìƒë§Œ ì…ì¥ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
             return false;
         }
-        cm.sendYesNo("´Ù¸¥ À¯Àúµé°ú ¾ÆÀÌÅÛÀ» °Å·¡ÇÒ ¼ö ÀÖ´Â #c<ÀÚÀ¯ ½ÃÀå>#À¸·Î ÀÌµ¿ÇÑ´Ù.");
+        cm.sendYesNo("ë‹¤ë¥¸ ìœ ì €ë“¤ê³¼ ì•„ì´í…œì„ ê±°ë˜í•  ìˆ˜ ìˆëŠ” #c<ììœ  ì‹œì¥>#ìœ¼ë¡œ ì´ë™í•œë‹¤.");
     } else if (status == 1) {
         cm.saveLocation("FREE_MARKET_SHOP");
         cm.warp(910000000, 0);

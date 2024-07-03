@@ -1,9 +1,9 @@
 /*
 Cps ProJect
 
-Ä«ÀÌ(kai__)
+ì¹´ì´(kai__)
 unfix(unfix__)
-¼¼È£(kast1a)
+ì„¸í˜¸(kast1a)
 
 */
 var status = 0;
@@ -29,8 +29,8 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-	    var cps ="Æ÷±âÇÏ°í ³ª°¡½Ã°Ú½À´Ï±î?\r\n";
-	    cps += "#L1#Æ÷±âÇÑ´Ù.\r\n";		  
+	    var cps ="í¬ê¸°í•˜ê³  ë‚˜ê°€ì‹œê² ìŠµë‹ˆê¹Œ?\r\n";
+	    cps += "#L1#í¬ê¸°í•œë‹¤.\r\n";		  
 	    cm.sendSimple(cps);
 } else if (selection == 1) {
 	    cm.warp(921160000,0)

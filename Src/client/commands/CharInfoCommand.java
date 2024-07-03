@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹èÁöÈÆ raccoonfox69@gmail.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°°ì§€í›ˆ raccoonfox69@gmail.com
  * ==================================
  * 
  */
@@ -20,9 +20,9 @@ public class CharInfoCommand implements Command {
 	MapleCharacter other = c.getChannelServer().getPlayerStorage().getCharacterByName(splittedLine[1]);
 
 	builder.append(MapleClient.getLogMessage(other, ""));
-	builder.append(" ´Â ").append(other.getPosition().x);
+	builder.append(" ëŠ” ").append(other.getPosition().x);
 	builder.append(" /").append(other.getPosition().y);
-	builder.append(" À§Ä¡¿¡ ÀÖÀ½. || HP : ");
+	builder.append(" ìœ„ì¹˜ì— ìˆìŒ. || HP : ");
 	builder.append(other.getStat().getHp());
 	builder.append(" /");
 	builder.append(other.getStat().getCurrentMaxHp());
@@ -31,31 +31,31 @@ public class CharInfoCommand implements Command {
 	builder.append(" /");
 	builder.append(other.getStat().getCurrentMaxMp());
 	builder.append(" || EXP : ");
-	builder.append(" || ÆÄÆ¼Áß : ");
+	builder.append(" || íŒŒí‹°ì¤‘ : ");
 	builder.append(other.getParty() != null);
-	builder.append(" || Æ®·¹ÀÌµåÁß: ");
+	builder.append(" || íŠ¸ë ˆì´ë“œì¤‘: ");
 	builder.append(other.getTrade() != null);
-        builder.append("] || Ä³½Ã: [");
+        builder.append("] || ìºì‹œ: [");
         builder.append(other.getClient().getPlayer().getNX());
-        builder.append("] || ¸Ş¼Ò: [");
+        builder.append("] || ë©”ì†Œ: [");
         builder.append(other.getClient().getPlayer().getMeso());
-	builder.append("] || IP ÁÖ¼Ò: ");
-        builder.append(" || Èû : ").append(other.getClient().getPlayer().getStat().getLocalStr()).append(" (").append(other.getClient().getPlayer().getStat().getStr()).append(" + ").append(other.getClient().getPlayer().getStat().getLocalStr() - other.getClient().getPlayer().getStat().getStr()).append(")");
-        builder.append(" || µ¦½º : ").append(other.getClient().getPlayer().getStat().getLocalDex()).append(" (").append(other.getClient().getPlayer().getStat().getDex()).append(" + ").append(other.getClient().getPlayer().getStat().getLocalDex() - other.getClient().getPlayer().getStat().getDex()).append(")");
-        builder.append(" || ÀÎÆ® : ").append(other.getClient().getPlayer().getStat().getLocalInt()).append(" (").append(other.getClient().getPlayer().getStat().getInt()).append(" + ").append(other.getClient().getPlayer().getStat().getLocalInt() - other.getClient().getPlayer().getStat().getInt()).append(")");
-        builder.append(" || ·° : ").append(other.getClient().getPlayer().getStat().getLocalLuk()).append(" (").append(other.getClient().getPlayer().getStat().getLuk()).append(" + ").append(other.getClient().getPlayer().getStat().getLocalLuk() - other.getClient().getPlayer().getStat().getLuk()).append(")");
-        builder.append(" || °ø°İ·Â : ").append(other.getClient().getPlayer().getStat().getWAtk());
-        builder.append(" || ¸¶·Â : ").append(other.getClient().getPlayer().getStat().getMAtk());
-        builder.append(" || ¹°¸®¸¶½ºÅÍ¸® : ").append(other.getClient().getPlayer().getStat().getWMastery());
-        builder.append(" || ¸¶¹ı¸¶½ºÅÍ¸® : ").append(other.getClient().getPlayer().getStat().getMMastery());
-        builder.append(" || ¹°¸®°ø°İ·ÂÁõ°¡% : ").append(other.getClient().getPlayer().getStat().getPercentWatk());
-        builder.append(" || ¸¶¹ı°ø°İ·ÂÁõ°¡% : ").append(other.getClient().getPlayer().getStat().getPercentMatk());
-        builder.append(" || ÈûÁõ°¡% : ").append(other.getClient().getPlayer().getStat().getPercentStr());
-        builder.append(" || µ¦½ºÁõ°¡% : ").append(other.getClient().getPlayer().getStat().getPercentDex());
-        builder.append(" || ÀÎÆ®Áõ°¡% : ").append(other.getClient().getPlayer().getStat().getPercentInt());
-        builder.append(" || ·°Áõ°¡% : ").append(other.getClient().getPlayer().getStat().getPercentLuk());
+	builder.append("] || IP ì£¼ì†Œ: ");
+        builder.append(" || í˜ : ").append(other.getClient().getPlayer().getStat().getLocalStr()).append(" (").append(other.getClient().getPlayer().getStat().getStr()).append(" + ").append(other.getClient().getPlayer().getStat().getLocalStr() - other.getClient().getPlayer().getStat().getStr()).append(")");
+        builder.append(" || ë±ìŠ¤ : ").append(other.getClient().getPlayer().getStat().getLocalDex()).append(" (").append(other.getClient().getPlayer().getStat().getDex()).append(" + ").append(other.getClient().getPlayer().getStat().getLocalDex() - other.getClient().getPlayer().getStat().getDex()).append(")");
+        builder.append(" || ì¸íŠ¸ : ").append(other.getClient().getPlayer().getStat().getLocalInt()).append(" (").append(other.getClient().getPlayer().getStat().getInt()).append(" + ").append(other.getClient().getPlayer().getStat().getLocalInt() - other.getClient().getPlayer().getStat().getInt()).append(")");
+        builder.append(" || ëŸ­ : ").append(other.getClient().getPlayer().getStat().getLocalLuk()).append(" (").append(other.getClient().getPlayer().getStat().getLuk()).append(" + ").append(other.getClient().getPlayer().getStat().getLocalLuk() - other.getClient().getPlayer().getStat().getLuk()).append(")");
+        builder.append(" || ê³µê²©ë ¥ : ").append(other.getClient().getPlayer().getStat().getWAtk());
+        builder.append(" || ë§ˆë ¥ : ").append(other.getClient().getPlayer().getStat().getMAtk());
+        builder.append(" || ë¬¼ë¦¬ë§ˆìŠ¤í„°ë¦¬ : ").append(other.getClient().getPlayer().getStat().getWMastery());
+        builder.append(" || ë§ˆë²•ë§ˆìŠ¤í„°ë¦¬ : ").append(other.getClient().getPlayer().getStat().getMMastery());
+        builder.append(" || ë¬¼ë¦¬ê³µê²©ë ¥ì¦ê°€% : ").append(other.getClient().getPlayer().getStat().getPercentWatk());
+        builder.append(" || ë§ˆë²•ê³µê²©ë ¥ì¦ê°€% : ").append(other.getClient().getPlayer().getStat().getPercentMatk());
+        builder.append(" || í˜ì¦ê°€% : ").append(other.getClient().getPlayer().getStat().getPercentStr());
+        builder.append(" || ë±ìŠ¤ì¦ê°€% : ").append(other.getClient().getPlayer().getStat().getPercentDex());
+        builder.append(" || ì¸íŠ¸ì¦ê°€% : ").append(other.getClient().getPlayer().getStat().getPercentInt());
+        builder.append(" || ëŸ­ì¦ê°€% : ").append(other.getClient().getPlayer().getStat().getPercentLuk());
         
-        builder.append(" || ½ºÅÈ°ø°İ·Â : ").append(other.getClient().getPlayer().getStat().getMinAttack()).append(" ~ ").append(other.getClient().getPlayer().getStat().getMaxAttack());
+        builder.append(" || ìŠ¤íƒ¯ê³µê²©ë ¥ : ").append(other.getClient().getPlayer().getStat().getMinAttack()).append(" ~ ").append(other.getClient().getPlayer().getStat().getMaxAttack());
         
 	c.getPlayer().dropMessage(6, builder.toString());
         other = null;
@@ -64,7 +64,7 @@ public class CharInfoCommand implements Command {
     @Override
     public CommandDefinition[] getDefinition() {
 	return new CommandDefinition[]{
-		    new CommandDefinition("Ä³¸¯Á¤º¸", "<Ä³¸¯ÅÍÀÌ¸§>", "ÀÔ·ÂÇÑ ÀÌ¸§ÀÇ Ä³¸¯ÅÍÀÇ Á¤º¸¸¦ Ãâ·ÂÇÕ´Ï´Ù.", 3)
+		    new CommandDefinition("ìºë¦­ì •ë³´", "<ìºë¦­í„°ì´ë¦„>", "ì…ë ¥í•œ ì´ë¦„ì˜ ìºë¦­í„°ì˜ ì •ë³´ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.", 3)
 	};
     }
 }

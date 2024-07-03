@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -28,7 +28,7 @@ public class RandomRewards {
     }
 
     protected RandomRewards() {
-	System.out.println("[ARGON] ·£´ı ¾ÆÀÌÅÛ º¸»óÀ» ¸Ş¸ğ¸®·Î ÀĞ¾îµéÀÌ´Â ÁßÀÔ´Ï´Ù.");
+	System.out.println("[ARGON] ëœë¤ ì•„ì´í…œ ë³´ìƒì„ ë©”ëª¨ë¦¬ë¡œ ì½ì–´ë“¤ì´ëŠ” ì¤‘ì…ë‹ˆë‹¤.");
 	// Gold Box
 	List<Integer> returnArray = new ArrayList<Integer>();
 

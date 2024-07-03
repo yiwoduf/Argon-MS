@@ -1,7 +1,7 @@
 /*
 
-Á¦ÀÛÀÚ : ljw5992@naver.com / dbg_yeane@nate.com
-±â´É ¼öÁ¤ : time_amd@nate.com
+ì œìž‘ìž : ljw5992@naver.com / dbg_yeane@nate.com
+ê¸°ëŠ¥ ìˆ˜ì • : time_amd@nate.com
 
 */
 
@@ -23,33 +23,33 @@ function action(mode, type, selection) {
     }
     if (status == 0) {
         /*
-        »óÁ¡ ¼¿·º¼ÇÀº 0ºÎÅÍ 99±îÁö
-        ÀÌµ¿ ¼¿·º¼ÇÀº 100ºÎÅÍ 199±îÁö
-        ÄÁÅÙÃ÷ ¼¿·º¼ÇÀº 200ºÎÅÍ 299±îÁö
-        ¿î¿µÀÚ ¼³·º¼ÇÀº 300ºÎÅÍ 399±îÁö
+        ìƒì  ì…€ë ‰ì…˜ì€ 0ë¶€í„° 99ê¹Œì§€
+        ì´ë™ ì…€ë ‰ì…˜ì€ 100ë¶€í„° 199ê¹Œì§€
+        ì»¨í…ì¸  ì…€ë ‰ì…˜ì€ 200ë¶€í„° 299ê¹Œì§€
+        ìš´ì˜ìž ì„¤ë ‰ì…˜ì€ 300ë¶€í„° 399ê¹Œì§€
         */
-        var choose = "¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡#fUI/CashShop.img/CSEffect/hot/0##fn³ª´®°íµñ Extrabold##fs13##l\r\n";
-        choose += "¡¡¡¡¡¡¡¡¡¡¡¡#d    < ½º¸¶Æ®¿Â¶óÀÎ ÄÁÅÙÃ÷»óÁ¡ >#k#l\r\n\r\n";
-        choose += "\r\n¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\r\n";
-        choose += "#L22# NEW!»¡°£ ´ÜÃßÄÚÀÎ#k#l\r\n\r\n";
-        choose += "#L19# NEW!µ¥¹Ì¾È ÄÚÀÎ#k#l\r\n\r\n";
-        choose += "#L18# ¼¼°è¿©ÇàÀÚ »óÁ¡#k#l\r\n\r\n";
-        choose += "#L21# ¸Å±×³Ê½º ÄÚÀÎ#k#l\r\n\r\n";
-        choose += "#L85# À·³îÀÌÄÚÀÎ ¹ß·Ï»óÁ¡#k#l\r\n\r\n";
-        choose += "\r\n¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡¦¡\r\n";
-        choose += "#L203# ÃÖ½ÅÄ³½Ã#k#l";
-        //choose += "#L204##i4310048# #d9ÁÖ³â»óÁ¡#k#l";  
-        choose += "#L205# 10¾ïÄÚÀÎ#k#l";      
+        var choose = "ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€#fUI/CashShop.img/CSEffect/hot/0##fnë‚˜ëˆ”ê³ ë”• Extrabold##fs13##l\r\n";
+        choose += "ã€€ã€€ã€€ã€€ã€€ã€€#d    < ìŠ¤ë§ˆíŠ¸ì˜¨ë¼ì¸ ì»¨í…ì¸ ìƒì  >#k#l\r\n\r\n";
+        choose += "\r\nâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\r\n";
+        choose += "#L22# NEW!ë¹¨ê°„ ë‹¨ì¶”ì½”ì¸#k#l\r\n\r\n";
+        choose += "#L19# NEW!ë°ë¯¸ì•ˆ ì½”ì¸#k#l\r\n\r\n";
+        choose += "#L18# ì„¸ê³„ì—¬í–‰ìž ìƒì #k#l\r\n\r\n";
+        choose += "#L21# ë§¤ê·¸ë„ˆìŠ¤ ì½”ì¸#k#l\r\n\r\n";
+        choose += "#L85# ìœ·ë†€ì´ì½”ì¸ ë°œë¡ìƒì #k#l\r\n\r\n";
+        choose += "\r\nâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\r\n";
+        choose += "#L203# ìµœì‹ ìºì‹œ#k#l";
+        //choose += "#L204##i4310048# #d9ì£¼ë…„ìƒì #k#l";  
+        choose += "#L205# 10ì–µì½”ì¸#k#l";      
        
         if (cm.getPlayer().hasGmLevel(6)){
-        choose += "\r\n#l#k\r\n\r\n#d#e¡º Áö ¿¥ ½Ã ½º ÅÛ ¡»#n #r(¿î¿µÀÚ¸¸ º¸ÀÌ´Â ¸Þ´º)#k\r\n";
-        choose += "#e#d#L300#ÈÄ¿øÁ¦ÀÛ#k";
-        choose += "#e#g#L301#º¹±¸Á¦ÀÛ#k";
-        choose += "#e#r#L302#¿î¿µÀÚ¸Ê#k";
-        choose += "#e#b#L303#À¯ÀúÁ¤º¸#k\r\n";
-        choose += "#e#d#L304#´Ðº¯ÇÏ±â#k";
-        choose += "#e#g#L305#ÃÑ¸Þ¼¼Áö#k";
-        choose += "#e#r#L306#ºñ¹ø¹ø°æ#K";
+        choose += "\r\n#l#k\r\n\r\n#d#eã€Ž ì§€ ì—  ì‹œ ìŠ¤ í…œ ã€#n #r(ìš´ì˜ìžë§Œ ë³´ì´ëŠ” ë©”ë‰´)#k\r\n";
+        choose += "#e#d#L300#í›„ì›ì œìž‘#k";
+        choose += "#e#g#L301#ë³µêµ¬ì œìž‘#k";
+        choose += "#e#r#L302#ìš´ì˜ìžë§µ#k";
+        choose += "#e#b#L303#ìœ ì €ì •ë³´#k\r\n";
+        choose += "#e#d#L304#ë‹‰ë³€í•˜ê¸°#k";
+        choose += "#e#g#L305#ì´ë©”ì„¸ì§€#k";
+        choose += "#e#r#L306#ë¹„ë²ˆë²ˆê²½#K";
   }
         cm.sendSimple(choose);
 

@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹èÁöÈÆ raccoonfox69@gmail.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°°ì§€í›ˆ raccoonfox69@gmail.com
  * ==================================
  * 
  */
@@ -18,13 +18,13 @@ public class TestCommands implements Command {
 
     @Override
     public void execute(final MapleClient c, final String[] splitted) throws Exception, IllegalCommandSyntaxException {
-        if (splitted[0].equals("!½Ã°è")) {
+        if (splitted[0].equals("!ì‹œê³„")) {
 	    c.getPlayer().getMap().broadcastMessage(MainPacketCreator.getClock(getOptionalIntArg(splitted, 1, 60)));
-	} else if (splitted[0].equals("!ÆĞÅ¶")) {
+	} else if (splitted[0].equals("!íŒ¨í‚·")) {
 	    if (splitted.length > 1) {
 		c.getSession().writeAndFlush(MainPacketCreator.getPacketFromHexString(StringUtil.joinStringFrom(splitted, 1)));
 	    } else {
-		c.getPlayer().dropMessage(6, "ÆĞÅ¶µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+		c.getPlayer().dropMessage(6, "íŒ¨í‚·ë°ì´í„°ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 	    }
           }
     }
@@ -32,8 +32,8 @@ public class TestCommands implements Command {
     @Override
     public CommandDefinition[] getDefinition() {
 	return new CommandDefinition[]{
-	    new CommandDefinition("½Ã°è", "<½Ã°£>", "ÇöÀç ¸Ê¿¡ ½Ã°£À» ¶ç¿ó´Ï´Ù.", 2),
-	    new CommandDefinition("ÆĞÅ¶", "<Çí½ºµ¥ÀÌÅÍ>", "ÀÔ·ÂÇÑ 16Áø¼ö µ¥ÀÌÅÍÀÇ ÆĞÅ¶À» ÇöÀç Å¬¶óÀÌ¾ğÆ®¿¡ º¸³À´Ï´Ù.", 6),
+	    new CommandDefinition("ì‹œê³„", "<ì‹œê°„>", "í˜„ì¬ ë§µì— ì‹œê°„ì„ ë„ì›ë‹ˆë‹¤.", 2),
+	    new CommandDefinition("íŒ¨í‚·", "<í—¥ìŠ¤ë°ì´í„°>", "ì…ë ¥í•œ 16ì§„ìˆ˜ ë°ì´í„°ì˜ íŒ¨í‚·ì„ í˜„ì¬ í´ë¼ì´ì–¸íŠ¸ì— ë³´ëƒ…ë‹ˆë‹¤.", 6),
 	};
       }
 }

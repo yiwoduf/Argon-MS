@@ -11,7 +11,7 @@ function action(mode , type , selection){
 		cm.dispose();
 	} else {
 	if (mode == 0 && (status == 0)) {
-		cm.sendOk("¾È³çÈ÷ °¡¼¼¿ä.");
+		cm.sendOk("ì•ˆë…•ížˆ ê°€ì„¸ìš”.");
 		cm.dispose();
 	} 
 	if (mode > 0)

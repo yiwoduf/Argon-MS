@@ -1,10 +1,10 @@
 /*
- * Ç»¾î¿Â¶óÀÎ ¼Ò½º ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+ * í“¨ì–´ì˜¨ë¼ì¸ ì†ŒìŠ¤ ìŠ¤í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤.
  * 
- * Æ÷Å»À§Ä¡ : 
- * Æ÷Å»¼³¸í : 
+ * í¬íƒˆìœ„ì¹˜ : 
+ * í¬íƒˆì„¤ëª… : 
  * 
- * Á¦ÀÛ : ÁÖÅ©ºí·¢
+ * ì œìž‘ : ì£¼í¬ë¸”ëž™
  * 
  */
 importPackage(java.lang);
@@ -20,8 +20,8 @@ function enter(pi) {
     }
     if (eim.getProperty("CurrentStage").equals("7")) {
         pi.getPlayer().gainExp(eim.getProperty("totalExp"), true, true, true); 
-        if(pi.getPlayer().¸óÆÄ()) {
-           pi.getPlayer().set¸óÆÄ(false);
+        if(pi.getPlayer().ëª¬íŒŒ()) {
+           pi.getPlayer().setëª¬íŒŒ(false);
         if (pi.getPlayer().getLevel() >= 200 && pi.getPlayer().getStoneP() == 9) {
           pi.getPlayer().TheMPClear();
         } else if (pi.getPlayer().getStoneP() <= 4) {
@@ -58,11 +58,11 @@ if (pi.getPlayer().getStoneP() <= 4) {
          
         }
 
-       // eim.removePlayer(pi.getPlayer());// ÀÌ°Å°°Àºµ¥? ÇÔÇØº½ º»¼·ÀÌ¶õ´Ù
+       // eim.removePlayer(pi.getPlayer());// ì´ê±°ê°™ì€ë°? í•¨í•´ë´„ ë³¸ì„­ì´ëž€ë‹¤
         return true;
     } else {
-        pi.getPlayer().send(UIPacket.showInfo("´øÀü ³»ÀÇ ¸ó½ºÅÍ¸¦ ¸ðµÎ Àâ¾Æ¾ß ´ÙÀ½ ½ºÅ×ÀÌÁö·Î ÀÌµ¿ÇÒ ¼ö ÀÖ½À´Ï´Ù."));
-        pi.getPlayer().message(5, "¸ó½ºÅÍ¸¦ ¸ðµÎ ÀâÀ¸½Å ÈÄ ´ÙÀ½ Æ÷Å»·Î ÀÌµ¿ÇØ ÁÖ¼¼¿ä.");
+        pi.getPlayer().send(UIPacket.showInfo("ë˜ì „ ë‚´ì˜ ëª¬ìŠ¤í„°ë¥¼ ëª¨ë‘ ìž¡ì•„ì•¼ ë‹¤ìŒ ìŠ¤í…Œì´ì§€ë¡œ ì´ë™í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤."));
+        pi.getPlayer().message(5, "ëª¬ìŠ¤í„°ë¥¼ ëª¨ë‘ ìž¡ìœ¼ì‹  í›„ ë‹¤ìŒ í¬íƒˆë¡œ ì´ë™í•´ ì£¼ì„¸ìš”.");
         return false;
     }
 }

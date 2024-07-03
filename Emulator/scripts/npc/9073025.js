@@ -15,12 +15,12 @@ function start()
 		return;
 	}
 	nums = 0;
-	cm.sendSimple("·¹º§ÀÌ 120 ÀÌ»óÀÌ°í ¼±ÀÇ¸¦ °¡Áø ÀÚ¶ó¸é ´©±¸³ª ¸ğÀÇÀüÅõ¸¦ °æÇèÇØ º¼ ¼ö ÀÖ¾î¿ä. ±×·³ Á÷Á¢ ÇÑ ¹ø ÇØº¸½Ã´Â °ÍÀÌ ÁÁÀ» °Í °°³×¿ä.#d\r\n\r\n"
+	cm.sendSimple("ë ˆë²¨ì´ 120 ì´ìƒì´ê³  ì„ ì˜ë¥¼ ê°€ì§„ ìë¼ë©´ ëˆ„êµ¬ë‚˜ ëª¨ì˜ì „íˆ¬ë¥¼ ê²½í—˜í•´ ë³¼ ìˆ˜ ìˆì–´ìš”. ê·¸ëŸ¼ ì§ì ‘ í•œ ë²ˆ í•´ë³´ì‹œëŠ” ê²ƒì´ ì¢‹ì„ ê²ƒ ê°™ë„¤ìš”.#d\r\n\r\n"
 			+ "#fUI/UIWindow2.img/UtilDlgEx/list4#\r\n"
-			+ "#L0#(Lv.120) [º¸½º·¹ÀÌµå] ¸ğÀÇ ÀüÅõ Âü¿©ÇÏ±â (½ÃÀÛ°¡´É)#l\r\n\r\n\r\n"
+			+ "#L0#(Lv.120) [ë³´ìŠ¤ë ˆì´ë“œ] ëª¨ì˜ ì „íˆ¬ ì°¸ì—¬í•˜ê¸° (ì‹œì‘ê°€ëŠ¥)#l\r\n\r\n\r\n"
 			+ "#fUI/UIWindow2.img/UtilDlgEx/list2#\r\n"
-			+ "#L1#¸ğÀÇ ÀüÅõ ´©Àû Á¡¼ö·Î ¾ÆÀÌÅÛ ±¸¸ÅÇÏ±â#l\r\n"
-			+ "#L2#¸ğÀÇ ÀüÅõ ¼öÇà ´É·Â ·©Å· È®ÀÎÇÏ±â (½Ã°£¼ø)#l");
+			+ "#L1#ëª¨ì˜ ì „íˆ¬ ëˆ„ì  ì ìˆ˜ë¡œ ì•„ì´í…œ êµ¬ë§¤í•˜ê¸°#l\r\n"
+			+ "#L2#ëª¨ì˜ ì „íˆ¬ ìˆ˜í–‰ ëŠ¥ë ¥ ë­í‚¹ í™•ì¸í•˜ê¸° (ì‹œê°„ìˆœ)#l");
 	St = -2;
 	action(1, 0, 0);
 }
@@ -78,19 +78,19 @@ function action(M, T, S)
 		S0 = S;
 		switch(S0)
 		{
-			case 0: cm.sendSimple("¸ğÀÇ ÀüÅõ¿¡ Âü¿©ÇÏ½Ã°Ú¾î¿ä? #bÃÑ #e4#n°³ÀÇ ¸ğÀÇ ÀüÅõ#k°¡ ÁØºñµÇ¾î ÀÖ´ä´Ï´Ù. ¿øÇÏ½Ã´Â °ÍÀ¸·Î ¼±ÅÃÇØ º¸¼¼¿ä.\r\n"
+			case 0: cm.sendSimple("ëª¨ì˜ ì „íˆ¬ì— ì°¸ì—¬í•˜ì‹œê² ì–´ìš”? #bì´ #e4#nê°œì˜ ëª¨ì˜ ì „íˆ¬#kê°€ ì¤€ë¹„ë˜ì–´ ìˆë‹µë‹ˆë‹¤. ì›í•˜ì‹œëŠ” ê²ƒìœ¼ë¡œ ì„ íƒí•´ ë³´ì„¸ìš”.\r\n"
 				+ "#L0##i3994115##l #L1##i3994116##l #L2##i3994117##l #L3##v03994118##l");
 			break;
 
-			case 1: iz = "Áö±İ #h #´ÔÀº #bÈ°µ¿ Á¡¼ö #e"+Comma(cm.getPlayer().getKeyValue2("BossPoint"))+"#nÁ¡#kÀ» °¡Áö°í °è½Ã³×¿ä. ¸ğµç ¾ÆÀÌÅÛÀº ÀÏÁ¤·® ÀÌ»óÀÇ È°µ¿ Á¡¼ö°¡ ÇÊ¿äÇÏ´ä´Ï´Ù.\r\n#b#fs11#"
+			case 1: iz = "ì§€ê¸ˆ #h #ë‹˜ì€ #bí™œë™ ì ìˆ˜ #e"+Comma(cm.getPlayer().getKeyValue2("BossPoint"))+"#nì #kì„ ê°€ì§€ê³  ê³„ì‹œë„¤ìš”. ëª¨ë“  ì•„ì´í…œì€ ì¼ì •ëŸ‰ ì´ìƒì˜ í™œë™ ì ìˆ˜ê°€ í•„ìš”í•˜ë‹µë‹ˆë‹¤.\r\n#b#fs11#"
 				for(i = 0; i < goods.length; i++)
 				{
-					iz += "#L"+ i +"##v"+goods[i][0]+":# #t"+goods[i][0]+"# #e"+Comma(goods[i][1])+"#n°³ #r("+Comma(goods[i][2])+"Á¡ ÇÊ¿ä)#b\r\n";
+					iz += "#L"+ i +"##v"+goods[i][0]+":# #t"+goods[i][0]+"# #e"+Comma(goods[i][1])+"#nê°œ #r("+Comma(goods[i][2])+"ì  í•„ìš”)#b\r\n";
 				}
 				cm.sendSimple(iz);
 			break;
 
-			case 2: cm.sendSimple("¸ğÀÇ ÀüÅõ ¼öÇà ´É·ÂÀ» È®ÀÎÇÏ½Ã°Ú¾î¿ä? #bÃÑ #e4#n°³ÀÇ ¸ğÀÇ ÀüÅõ#k°¡ ÁØºñµÇ¾î ÀÖ´ä´Ï´Ù. ¿øÇÏ½Ã´Â °ÍÀ¸·Î ¼±ÅÃÇØ º¸¼¼¿ä.\r\n"
+			case 2: cm.sendSimple("ëª¨ì˜ ì „íˆ¬ ìˆ˜í–‰ ëŠ¥ë ¥ì„ í™•ì¸í•˜ì‹œê² ì–´ìš”? #bì´ #e4#nê°œì˜ ëª¨ì˜ ì „íˆ¬#kê°€ ì¤€ë¹„ë˜ì–´ ìˆë‹µë‹ˆë‹¤. ì›í•˜ì‹œëŠ” ê²ƒìœ¼ë¡œ ì„ íƒí•´ ë³´ì„¸ìš”.\r\n"
 				+ "#L0##i3994115##l #L1##i3994116##l #L2##i3994117##l #L3##v03994118##l");
 			break;
 		}
@@ -101,23 +101,23 @@ function action(M, T, S)
 		S1 = S;
 		switch(S0)
 		{
-			case 0: setDifficulty = (S == 0) ? "½¬¿ò" : (S == 1) ? "º¸Åë" : (S == 2) ? "¾î·Á¿ò" : "¸Å¿ì ¾î·Á¿ò";
+			case 0: setDifficulty = (S == 0) ? "ì‰¬ì›€" : (S == 1) ? "ë³´í†µ" : (S == 2) ? "ì–´ë ¤ì›€" : "ë§¤ìš° ì–´ë ¤ì›€";
 				setMinimumHps = (S == 0) ? 1  : (S == 1) ? 4  : (S == 2) ? 8  : 16
 				setMaximumHps = (S == 0) ? 16 : (S == 1) ? 32 : (S == 2) ? 64 : 128
-				cm.sendGetNumber("#r#e"+setDifficulty+"#n ³­ÀÌµµÀÇ ¸ğÀÇ ÀüÅõ#k¸¦ ¼±ÅÃÇÏ¼Ì½À´Ï´Ù. ¸ğÀÇ ÀüÅõ¿¡ µîÀåÇÏ´Â ¸ó½ºÅÍÀÇ Ã¼·ÂÀ» ¼³Á¤ÇØÁÖ¼¼¿ä. #bÃÖ¼Ò #e"+setMinimumHps+"#n¹è ¿¡¼­ ÃÖ´ë #e"+setMaximumHps+"#n¹è#k±îÁö ¼³Á¤ÀÌ °¡´ÉÇÕ´Ï´Ù.", setMinimumHps, setMinimumHps, setMaximumHps);
+				cm.sendGetNumber("#r#e"+setDifficulty+"#n ë‚œì´ë„ì˜ ëª¨ì˜ ì „íˆ¬#kë¥¼ ì„ íƒí•˜ì…¨ìŠµë‹ˆë‹¤. ëª¨ì˜ ì „íˆ¬ì— ë“±ì¥í•˜ëŠ” ëª¬ìŠ¤í„°ì˜ ì²´ë ¥ì„ ì„¤ì •í•´ì£¼ì„¸ìš”. #bìµœì†Œ #e"+setMinimumHps+"#në°° ì—ì„œ ìµœëŒ€ #e"+setMaximumHps+"#në°°#kê¹Œì§€ ì„¤ì •ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.", setMinimumHps, setMinimumHps, setMaximumHps);
 			break;
 
-			case 1: cm.sendYesNo("#b#v"+goods[S1][0]+":# #t"+goods[S1][0]+"##k ¾ÆÀÌÅÛÀ» ¼±ÅÃÇÑ°Ô ¸ÂÀ¸½Å°¡¿ä? #b#e"+Comma(goods[S1][1])+"#n°³#k¸¦ ¾òÀ» ¼ö ÀÖ°í #bÈ°µ¿ Á¡¼ö #e"+Comma(goods[S1][2])+"#nÁ¡#kÀÌ Â÷°¨µË´Ï´Ù.");
+			case 1: cm.sendYesNo("#b#v"+goods[S1][0]+":# #t"+goods[S1][0]+"##k ì•„ì´í…œì„ ì„ íƒí•œê²Œ ë§ìœ¼ì‹ ê°€ìš”? #b#e"+Comma(goods[S1][1])+"#nê°œ#kë¥¼ ì–»ì„ ìˆ˜ ìˆê³  #bí™œë™ ì ìˆ˜ #e"+Comma(goods[S1][2])+"#nì #kì´ ì°¨ê°ë©ë‹ˆë‹¤.");
 			break;
 
 			case 2: strz = new StringBuilder();
 				con = MYSQL.getConnection();
 				switch(S1)
 				{
-					case 0: rank = con.prepareStatement("SELECT * FROM bossraidtime where diff = '½¬¿ò' ORDER BY time ASC LIMIT 100").executeQuery(); break;
-					case 1: rank = con.prepareStatement("SELECT * FROM bossraidtime where diff = 'º¸Åë' ORDER BY time ASC LIMIT 100").executeQuery(); break;
-					case 2: rank = con.prepareStatement("SELECT * FROM bossraidtime where diff = '¾î·Á¿ò' ORDER BY time ASC LIMIT 100").executeQuery(); break;
-					case 3: rank = con.prepareStatement("SELECT * FROM bossraidtime where diff = '¸Å¿ì ¾î·Á¿ò' ORDER BY time ASC LIMIT 100").executeQuery(); break;
+					case 0: rank = con.prepareStatement("SELECT * FROM bossraidtime where diff = 'ì‰¬ì›€' ORDER BY time ASC LIMIT 100").executeQuery(); break;
+					case 1: rank = con.prepareStatement("SELECT * FROM bossraidtime where diff = 'ë³´í†µ' ORDER BY time ASC LIMIT 100").executeQuery(); break;
+					case 2: rank = con.prepareStatement("SELECT * FROM bossraidtime where diff = 'ì–´ë ¤ì›€' ORDER BY time ASC LIMIT 100").executeQuery(); break;
+					case 3: rank = con.prepareStatement("SELECT * FROM bossraidtime where diff = 'ë§¤ìš° ì–´ë ¤ì›€' ORDER BY time ASC LIMIT 100").executeQuery(); break;
 				}
 				while(rank.next())
 				{
@@ -125,7 +125,7 @@ function action(M, T, S)
 				}
 				rank.close();
 				con.close();
-				cm.sendSimple("¸¹Àº Âü¿©ÀÚµéÀÌ ¸ğÀÇ ÀüÅõ¿¡ Âü¿©ÇÏ¼Ì½À´Ï´Ù. ¸ğÀÇ ÀüÅõ°¡ ¼º°øÀûÀ¸·á Á¾·áµÇ¸é ÀüÅõ ±â·ÏÀÌ ÀÚµ¿À¸·Î ±â·ÏµÇ´Ï ÇÑ ¹ø È®ÀÎÇØ º¸¼¼¿ä.\r\n" + strz.toString());
+				cm.sendSimple("ë§ì€ ì°¸ì—¬ìë“¤ì´ ëª¨ì˜ ì „íˆ¬ì— ì°¸ì—¬í•˜ì…¨ìŠµë‹ˆë‹¤. ëª¨ì˜ ì „íˆ¬ê°€ ì„±ê³µì ìœ¼ë£Œ ì¢…ë£Œë˜ë©´ ì „íˆ¬ ê¸°ë¡ì´ ìë™ìœ¼ë¡œ ê¸°ë¡ë˜ë‹ˆ í•œ ë²ˆ í™•ì¸í•´ ë³´ì„¸ìš”.\r\n" + strz.toString());
 			break;
 		}
 	}
@@ -136,24 +136,24 @@ function action(M, T, S)
 		switch(S0)
 		{
 			case 0: setCustomHP = S2;
-				cm.askAcceptDecline("Á¤¸»·Î #r#e"+setDifficulty+"#n ³­ÀÌµµÀÇ ¸ğÀÇ ÀüÅõ#k¸¦ ¸ó½ºÅÍ #b±âº» Ã¼·ÂÀÇ #e"+setCustomHP+"#n¹è#k·Î ¼³Á¤ÇÏ¿© ÁøÇàÇÏ½Ã°Ú¾î¿ä?");
+				cm.askAcceptDecline("ì •ë§ë¡œ #r#e"+setDifficulty+"#n ë‚œì´ë„ì˜ ëª¨ì˜ ì „íˆ¬#kë¥¼ ëª¬ìŠ¤í„° #bê¸°ë³¸ ì²´ë ¥ì˜ #e"+setCustomHP+"#në°°#kë¡œ ì„¤ì •í•˜ì—¬ ì§„í–‰í•˜ì‹œê² ì–´ìš”?");
 			break;
 
 			case 1: if(!cm.canHold(goods[S1][0]))
 				{
-					cm.sendOk("ÀÎº¥Åä¸®¿¡ ¿©À¯ °ø°£ÀÌ ºÎÁ·ÇÑ °Í °°³×¿ä. ¾Æ´Ï¸é ±¸¸ÅÇÏ·Á´Â ¾ÆÀÌÅÛÀÌ °íÀ¯ ¾ÆÀÌÅÛÀÌ ¾Æ´Ò±î¿ä? (°íÀ¯ÀåÂø ¾ÆÀÌÅÛ°ú´Â ¾Æ¹«·± ¿¬°üÀÌ ¾ø½À´Ï´Ù.");
+					cm.sendOk("ì¸ë²¤í† ë¦¬ì— ì—¬ìœ  ê³µê°„ì´ ë¶€ì¡±í•œ ê²ƒ ê°™ë„¤ìš”. ì•„ë‹ˆë©´ êµ¬ë§¤í•˜ë ¤ëŠ” ì•„ì´í…œì´ ê³ ìœ  ì•„ì´í…œì´ ì•„ë‹ê¹Œìš”? (ê³ ìœ ì¥ì°© ì•„ì´í…œê³¼ëŠ” ì•„ë¬´ëŸ° ì—°ê´€ì´ ì—†ìŠµë‹ˆë‹¤.");
 					cm.dispose();
 					return;
 				}
 				if(cm.getPlayer().getKeyValue2("BossPoint") < goods[S1][2])
 				{
-					cm.sendOk("È°µ¿ Á¡¼ö°¡ ºÎÁ·ÇÑ °Í °°³×¿ä. ¸ğÀÇ ÀüÅõ¸¦ Á» ´õ ÇØº¸½Ã´Â °Íµµ ÁÁÀº ¹æ¹ıÀÌ¶ø´Ï´Ù.");
+					cm.sendOk("í™œë™ ì ìˆ˜ê°€ ë¶€ì¡±í•œ ê²ƒ ê°™ë„¤ìš”. ëª¨ì˜ ì „íˆ¬ë¥¼ ì¢€ ë” í•´ë³´ì‹œëŠ” ê²ƒë„ ì¢‹ì€ ë°©ë²•ì´ëë‹ˆë‹¤.");
 					cm.dispose();
 					return;
 				}
 				cm.gainItem(goods[S1][0], goods[S1][1]);
 				cm.getPlayer().setKeyValue2("BossPoint", cm.getPlayer().getKeyValue2("BossPoint") - goods[S1][2]);
-				cm.sendOk("¸ğÀÇ ÀüÅõ¿¡ Âü¿©ÇÑ ´ç½ÅÀ» À§ÇÑ ´ç¿¬ÇÑ º¸»óÀÔ´Ï´Ù. ¾ğÁ¦µçÁö ¸ğÀÇ ÀüÅõ¸¦ Áñ±â·¯ ¿ÍÁÖ¼¼¿ä. ÀÌ¹ø¿¡ #bÈ°µ¿ Á¡¼ö #e"+Comma(goods[S1][2])+"#nÁ¡À» »ç¿ë#kÇÏ¼Å¼­ #r#e"+Comma(cm.getPlayer().getKeyValue2("BossPoint"))+"#nÁ¡ÀÌ ³²¾Ò#k´ä´Ï´Ù.");
+				cm.sendOk("ëª¨ì˜ ì „íˆ¬ì— ì°¸ì—¬í•œ ë‹¹ì‹ ì„ ìœ„í•œ ë‹¹ì—°í•œ ë³´ìƒì…ë‹ˆë‹¤. ì–¸ì œë“ ì§€ ëª¨ì˜ ì „íˆ¬ë¥¼ ì¦ê¸°ëŸ¬ ì™€ì£¼ì„¸ìš”. ì´ë²ˆì— #bí™œë™ ì ìˆ˜ #e"+Comma(goods[S1][2])+"#nì ì„ ì‚¬ìš©#kí•˜ì…”ì„œ #r#e"+Comma(cm.getPlayer().getKeyValue2("BossPoint"))+"#nì ì´ ë‚¨ì•˜#kë‹µë‹ˆë‹¤.");
 				cm.dispose();
 			break;
 
@@ -170,25 +170,25 @@ function action(M, T, S)
 		{
 			case 0: if(!cm.getParty())
 				{
-					cm.sendOk("¸ğÀÇ ÀüÅõ¸¦ ÁøÇàÇÏ·Á¸é ÆÄÆ¼¸¦ ±¸¼ºÇØ¾ß ÇÕ´Ï´Ù.");
+					cm.sendOk("ëª¨ì˜ ì „íˆ¬ë¥¼ ì§„í–‰í•˜ë ¤ë©´ íŒŒí‹°ë¥¼ êµ¬ì„±í•´ì•¼ í•©ë‹ˆë‹¤.");
 					cm.dispose();
 					return;
 				}
 				if(!cm.isLeader())
 				{
-					cm.sendOk("ÆÄÆ¼Àå¸¸¿¡ ¸ğÀÇ ÀüÅõ¸¦ ÁøÇàÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+					cm.sendOk("íŒŒí‹°ì¥ë§Œì— ëª¨ì˜ ì „íˆ¬ë¥¼ ì§„í–‰í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
 					cm.dispose();
 					return;
 				}
 				if(cm.getParty().getMembers().size() < 1)
 				{
-					cm.sendOk("¸ğÀÇ ÀüÅõ´Â µÎ ¸í ÀÌ»óÀ¸·Î ÀÌ·ç¾îÁø ÆÄÆ¼·Î¸¸ ÁøÇàÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+					cm.sendOk("ëª¨ì˜ ì „íˆ¬ëŠ” ë‘ ëª… ì´ìƒìœ¼ë¡œ ì´ë£¨ì–´ì§„ íŒŒí‹°ë¡œë§Œ ì§„í–‰í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
 					cm.dispose();
 					return;
 				}
 				if(cm.getPlayer().getClient().getChannelServer().getMapFactory().getMap(931050800).getAllPlayer().size() > 0)
 				{
-					cm.sendOk("ÀÌ¹Ì ´Ù¸¥ ÆÄÆ¼°¡ ¸ğÀÇ ÀüÅõ¿¡ µµÀüÁßÀÔ´Ï´Ù. ´Ù¸¥ Ã¤³Î¿¡¼­ ´Ù½Ã ½ÃµµÇÏ°Å³ª Àá½Ã¸¸ ±â´Ù·ÁÁÖ¼¼¿ä.");
+					cm.sendOk("ì´ë¯¸ ë‹¤ë¥¸ íŒŒí‹°ê°€ ëª¨ì˜ ì „íˆ¬ì— ë„ì „ì¤‘ì…ë‹ˆë‹¤. ë‹¤ë¥¸ ì±„ë„ì—ì„œ ë‹¤ì‹œ ì‹œë„í•˜ê±°ë‚˜ ì ì‹œë§Œ ê¸°ë‹¤ë ¤ì£¼ì„¸ìš”.");
 					cm.dispose();
 					return;
 				}
@@ -258,18 +258,18 @@ function infomationRaidRanks(i)
 			secs = 0 + secs;
 		}
 	
-		strz.append("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ #e¸ğÀÇ ÀüÅõ ºĞ¼® ±â·Ï#n ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡\r\n\r\n")
-		strz.append("¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ #fs11#±â·Ï ´ã´ç : #b¹® ±³¼ö#k#fs11#\r\n")
-		strz.append("#r< I. ÀüÅõ ½Ã°¢ ±â·Ï ÀÚ·á >#k\r\n")
-		strz.append(" #e¡¤#n ½ÃÀÛ ½Ã°¢ : ").append(""+bgin[0]+"³â "+bgin[1]+"¿ù "+bgin[2]+"ÀÏ "+bgin[3]+"½Ã "+bgin[4]+"ºĞ "+bgin[5]+"ÃÊ\r\n")
-		strz.append(" #e¡¤#n Á¾·á ½Ã°¢ : ").append(""+ends[0]+"³â "+ends[1]+"¿ù "+ends[2]+"ÀÏ "+ends[3]+"½Ã "+ends[4]+"ºĞ "+ends[5]+"ÃÊ\r\n")
-		strz.append(" #e¡¤#n ¼Ò¿ä ½Ã°£ : "+mins+"ºĞ "+secs+"ÃÊ\r\n\r\n")
-		strz.append("#r< II. ÀüÅõ ½ºÅ¸ÀÏ ±â·Ï ÀÚ·á >#k\r\n")
-		strz.append(" #e¡¤#n ¼±ÅÃ ³­ÀÌµµ : ").append(rank.getString("diff")).append("\r\n")
-		strz.append(" #e¡¤#n Ä¿½ºÅÒ Ã¼·Â : ÃÖ´ë Ã¼·ÂÀÇ ").append(rank.getString("rate")).append("00%\r\n\r\n")
-		strz.append("#r< III. ÀüÅõ Âü¿©ÀÚ ±â·Ï ÀÚ·á >#k\r\n")
-		strz.append(" #e¡¤#n ÆÄÆ¼Àå : ").append(rank.getString("name")).append("\r\n")
-		strz.append(" #e¡¤#n ÆÄÆ¼¿ø : "+list+"\r\n")
+		strz.append("ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ #eëª¨ì˜ ì „íˆ¬ ë¶„ì„ ê¸°ë¡#n ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€\r\n\r\n")
+		strz.append("ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ #fs11#ê¸°ë¡ ë‹´ë‹¹ : #bë¬¸ êµìˆ˜#k#fs11#\r\n")
+		strz.append("#r< I. ì „íˆ¬ ì‹œê° ê¸°ë¡ ìë£Œ >#k\r\n")
+		strz.append(" #eÂ·#n ì‹œì‘ ì‹œê° : ").append(""+bgin[0]+"ë…„ "+bgin[1]+"ì›” "+bgin[2]+"ì¼ "+bgin[3]+"ì‹œ "+bgin[4]+"ë¶„ "+bgin[5]+"ì´ˆ\r\n")
+		strz.append(" #eÂ·#n ì¢…ë£Œ ì‹œê° : ").append(""+ends[0]+"ë…„ "+ends[1]+"ì›” "+ends[2]+"ì¼ "+ends[3]+"ì‹œ "+ends[4]+"ë¶„ "+ends[5]+"ì´ˆ\r\n")
+		strz.append(" #eÂ·#n ì†Œìš” ì‹œê°„ : "+mins+"ë¶„ "+secs+"ì´ˆ\r\n\r\n")
+		strz.append("#r< II. ì „íˆ¬ ìŠ¤íƒ€ì¼ ê¸°ë¡ ìë£Œ >#k\r\n")
+		strz.append(" #eÂ·#n ì„ íƒ ë‚œì´ë„ : ").append(rank.getString("diff")).append("\r\n")
+		strz.append(" #eÂ·#n ì»¤ìŠ¤í…€ ì²´ë ¥ : ìµœëŒ€ ì²´ë ¥ì˜ ").append(rank.getString("rate")).append("00%\r\n\r\n")
+		strz.append("#r< III. ì „íˆ¬ ì°¸ì—¬ì ê¸°ë¡ ìë£Œ >#k\r\n")
+		strz.append(" #eÂ·#n íŒŒí‹°ì¥ : ").append(rank.getString("name")).append("\r\n")
+		strz.append(" #eÂ·#n íŒŒí‹°ì› : "+list+"\r\n")
 
 	}
 	rank.close();
@@ -287,7 +287,7 @@ function infomationRaidRanks(i)
 function getRaidRankigByTime()
 {
 	nums++;
-	strz.append("#fnµ¸¿òÃ¼##fs11#")
+	strz.append("#fnë‹ì›€ì²´##fs11#")
 	strz.append("#L"+rank.getInt("id")+"#")
 	if(nums == 1)
 	{
@@ -304,7 +304,7 @@ function getRaidRankigByTime()
 	{
 		strz.append("#b#e").append(Integer.parseInt(nums))
 	}
-	strz.append("À§#n#k ")
+	strz.append("ìœ„#n#k ")
 
 	inzz = rank.getInt("time");
 	mins = new Number(inzz/60);
@@ -321,6 +321,6 @@ function getRaidRankigByTime()
 	{
 		secs = 0 + secs;
 	}
-	strz.append("("+mins+"ºĞ "+secs+"ÃÊ) #b#fnµ¸¿ò#")
-	strz.append(rank.getString("name")).append("#k (#dÆÄÆ¼¿ø #e").append(Integer.parseInt(rank.getInt("size"))).append("#n¸í#k, #rÃ¼·Â #e").append(Integer.parseInt(rank.getInt("rate"))).append("#n¹è#k)\r\n")
+	strz.append("("+mins+"ë¶„ "+secs+"ì´ˆ) #b#fnë‹ì›€#")
+	strz.append(rank.getString("name")).append("#k (#díŒŒí‹°ì› #e").append(Integer.parseInt(rank.getInt("size"))).append("#nëª…#k, #rì²´ë ¥ #e").append(Integer.parseInt(rank.getInt("rate"))).append("#në°°#k)\r\n")
 }

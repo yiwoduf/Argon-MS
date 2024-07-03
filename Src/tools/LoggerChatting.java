@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -21,7 +21,7 @@ import java.util.TimeZone;
 
 /**
  *
- * @author ¿¡¹İÅ×ÀÌ¸£
+ * @author ì—ë°˜í…Œì´ë¥´
  */
 public class LoggerChatting {
     
@@ -43,6 +43,6 @@ public class LoggerChatting {
     }
     
     public static String getChatLogType(String type, MapleCharacter chr, String chattext) {
-        return "["+type+"] "+chr.getName()+" : "+chattext + " ÇöÀç¸Ê : "+chr.getMap().getStreetName()+"-"+chr.getMap().getMapName()+" ("+chr.getMap().getId()+")\r\n";
+        return "["+type+"] "+chr.getName()+" : "+chattext + " í˜„ì¬ë§µ : "+chr.getMap().getStreetName()+"-"+chr.getMap().getMapName()+" ("+chr.getMap().getId()+")\r\n";
     }
 }

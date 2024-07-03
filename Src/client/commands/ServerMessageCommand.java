@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹èÁöÈÆ raccoonfox69@gmail.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°°ì§€í›ˆ raccoonfox69@gmail.com
  * ==================================
  * 
  */
@@ -27,7 +27,7 @@ public class ServerMessageCommand implements Command {
     @Override
     public CommandDefinition[] getDefinition() {
         return new CommandDefinition[]{
-            new CommandDefinition("¼­¹ö°øÁö", "<¸Ş½ÃÁö>", "¼­¹ö ÀüÃ¼ÀÇ ³ë¶õ»ö °øÁö ¸Ş½ÃÁö¸¦ ¹Ù²ß´Ï´Ù.", 2)
+            new CommandDefinition("ì„œë²„ê³µì§€", "<ë©”ì‹œì§€>", "ì„œë²„ ì „ì²´ì˜ ë…¸ë€ìƒ‰ ê³µì§€ ë©”ì‹œì§€ë¥¼ ë°”ê¿‰ë‹ˆë‹¤.", 2)
         };
     }
 }

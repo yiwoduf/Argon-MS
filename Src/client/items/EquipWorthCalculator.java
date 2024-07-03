@@ -9,7 +9,7 @@ import packet.creators.MainPacketCreator;
 
 /**
  *
- * @author ¿Â¶óÀÎ¿ùµå
+ * @author ì˜¨ë¼ì¸ì›”ë“œ
  */
 public class EquipWorthCalculator {
     private int seed = new Random().nextInt();
@@ -29,11 +29,11 @@ public class EquipWorthCalculator {
         k += eqp.getWdef(); //150
         k += eqp.getMdef(); //150
         k += eqp.getAvoid() + eqp.getAcc(); //300
-        return k; //1190 (¾à 1200ÀÌ Æò±Õ)
+        return k; //1190 (ì•½ 1200ì´ í‰ê· )
     }
 
     public String listByClient(MapleClient c) {
-        StringBuilder sb = new StringBuilder("#b#e[Àåºñ ¾ÆÀÌÅÛ ¸ñ·Ï]#n#k");
+        StringBuilder sb = new StringBuilder("#b#e[ì¥ë¹„ ì•„ì´í…œ ëª©ë¡]#n#k");
         for (IItem item : c.getPlayer().getInventory(MapleInventoryType.EQUIP).list()) {
             sb.append("\r\n#L").append(item.getPosition()).append("##i").append(item.getItemId()).append("##t").append(item.getItemId()).append("#");
         }
@@ -43,25 +43,25 @@ public class EquipWorthCalculator {
     public boolean grind(MapleClient c, int slot) {
         Equip eqp = (Equip) c.getPlayer().getInventory(MapleInventoryType.EQUIP).getItem((short) slot);
         if (eqp.getLines() > 0) {
-            final int modify; //°ªÀÌ ³ôÀ»¼ö·Ï ¹ŞÀ» ¼ö ÀÖ´Â Å¥ºêÀÇ ÆøÀÌ ³Ğ¾îÁü
+            final int modify; //ê°’ì´ ë†’ì„ìˆ˜ë¡ ë°›ì„ ìˆ˜ ìˆëŠ” íë¸Œì˜ í­ì´ ë„“ì–´ì§
             int w = worth(eqp);
-            if (w >= 0 && w < 200) { //¾¾¹ß Á¿ ½âÀº ¾ÆÀÌÅÛÀ» ºĞÇØÇÏ·Á°í ÇÔ?; ÀÌ°Å °Á °ËÀÌÁö ¾¾¹ß·Ã¾Æ
-                c.getPlayer().dropMessage(5, "Àåºñ¿¡ ¾îµÎ¿î ºûÀÌ °¨µ¹±â ½ÃÀÛÇÕ´Ï´Ù.");//½º·¹µå½½¸³Àº¿Ö°ÉÀ½ ?
+            if (w >= 0 && w < 200) { //ì”¨ë°œ ì¢† ì©ì€ ì•„ì´í…œì„ ë¶„í•´í•˜ë ¤ê³  í•¨?; ì´ê±° ê± ê²€ì´ì§€ ì”¨ë°œë ¨ì•„
+                c.getPlayer().dropMessage(5, "ì¥ë¹„ì— ì–´ë‘ìš´ ë¹›ì´ ê°ëŒê¸° ì‹œì‘í•©ë‹ˆë‹¤.");//ìŠ¤ë ˆë“œìŠ¬ë¦½ì€ì™œê±¸ìŒ ?
                 modify = -1;
-            } else if (w >= 200 && w < 3600) { //Àåºñ°¡ Á¸³ª ÇÏ±ŞÀÌ½Ã³×¿©. ¾²·¹±â³×.
-                c.getPlayer().dropMessage(5, "¾à°£ÀÇ ¼¶±¤°ú ÇÔ²² Àåºñ°¡ ºĞÇØµË´Ï´Ù.");//½º·¹µå½½¸³Àº¿Ö°ÉÀ½ ?
+            } else if (w >= 200 && w < 3600) { //ì¥ë¹„ê°€ ì¡´ë‚˜ í•˜ê¸‰ì´ì‹œë„¤ì—¬. ì“°ë ˆê¸°ë„¤.
+                c.getPlayer().dropMessage(5, "ì•½ê°„ì˜ ì„¬ê´‘ê³¼ í•¨ê»˜ ì¥ë¹„ê°€ ë¶„í•´ë©ë‹ˆë‹¤.");//ìŠ¤ë ˆë“œìŠ¬ë¦½ì€ì™œê±¸ìŒ ?
                 modify = 0;
-            } else if (w >= 3600 && w < 8100) { //ÆòÅ¸ Ãë½Ã³×¿ä.
-                c.getPlayer().dropMessage(5, "Á¶±İÀÇ ¼¶±¤°ú ÇÔ²² Àåºñ°¡ ºĞÇØµË´Ï´Ù.");//½º·¹µå½½¸³Àº¿Ö°ÉÀ½ ?
+            } else if (w >= 3600 && w < 8100) { //í‰íƒ€ ì·¨ì‹œë„¤ìš”.
+                c.getPlayer().dropMessage(5, "ì¡°ê¸ˆì˜ ì„¬ê´‘ê³¼ í•¨ê»˜ ì¥ë¹„ê°€ ë¶„í•´ë©ë‹ˆë‹¤.");//ìŠ¤ë ˆë“œìŠ¬ë¦½ì€ì™œê±¸ìŒ ?
                 modify = 1;
-            } else if (w >= 8100 && w < 14400) { //¿­ ¤»
-                c.getPlayer().dropMessage(5, "º¸ÅëÀÇ ¼¶±¤°ú ÇÔ²² Àåºñ°¡ ºĞÇØµË´Ï´Ù.");//½º·¹µå½½¸³Àº¿Ö°ÉÀ½ ?
+            } else if (w >= 8100 && w < 14400) { //ì—´ ã…‹
+                c.getPlayer().dropMessage(5, "ë³´í†µì˜ ì„¬ê´‘ê³¼ í•¨ê»˜ ì¥ë¹„ê°€ ë¶„í•´ë©ë‹ˆë‹¤.");//ìŠ¤ë ˆë“œìŠ¬ë¦½ì€ì™œê±¸ìŒ ?
                 modify = 2;
-            } else if (w >= 14400 && w < 30000) { //¤µ¤¼¤º
-                c.getPlayer().dropMessage(5, "¹àÀº ¼¶±¤°ú ÇÔ²² Àåºñ°¡ ºĞÇØµË´Ï´Ù.");//½º·¹µå½½¸³Àº¿Ö°ÉÀ½ ?
+            } else if (w >= 14400 && w < 30000) { //ã……ã…Œã…Š
+                c.getPlayer().dropMessage(5, "ë°ì€ ì„¬ê´‘ê³¼ í•¨ê»˜ ì¥ë¹„ê°€ ë¶„í•´ë©ë‹ˆë‹¤.");//ìŠ¤ë ˆë“œìŠ¬ë¦½ì€ì™œê±¸ìŒ ?
                 modify = 3;
-            } else { //Çæ ÀÌ°Ô ¾ÆÀÌÅÛÀÌ¿©, ³Ê ¿î¿µÀÚÁö
-                c.getPlayer().dropMessage(5, "´«ºÎ½Å ¼¶±¤°ú ÇÔ²² Àåºñ°¡ ºĞÇØµË´Ï´Ù.");//½º·¹µå½½¸³Àº¿Ö°ÉÀ½ ?
+            } else { //í— ì´ê²Œ ì•„ì´í…œì´ì—¬, ë„ˆ ìš´ì˜ìì§€
+                c.getPlayer().dropMessage(5, "ëˆˆë¶€ì‹  ì„¬ê´‘ê³¼ í•¨ê»˜ ì¥ë¹„ê°€ ë¶„í•´ë©ë‹ˆë‹¤.");//ìŠ¤ë ˆë“œìŠ¬ë¦½ì€ì™œê±¸ìŒ ?
                 modify = 4;
             }
             c.getPlayer().getInventory(MapleInventoryType.EQUIP).removeItem((short) slot);
@@ -73,21 +73,21 @@ public class EquipWorthCalculator {
                     short q = makeQuantity(modify);
                     if (q > 0) {
                         int r = reward(modify);
-                        c.getPlayer().gainItem(r, makeQuantity(modify), false, -1, "Àåºñ ºĞÇØ·Î ¾òÀº ¹Ì¶óÅ¬ Å¥ºê");
-                        c.getPlayer().dropMessage(1, "Àåºñ¸¦ ¼º°øÀûÀ¸·Î ºĞÇØÇß½À´Ï´Ù.");
-                    } else c.getPlayer().dropMessage(1, "Àåºñ ºĞÇØ¿¡ ½ÇÆĞÇß½À´Ï´Ù.");
-                } else c.getPlayer().dropMessage(1, "Àåºñ ºĞÇØ¿¡ ½ÇÆĞÇß½À´Ï´Ù.");
-            } else c.getPlayer().dropMessage(1, "Àåºñ ºĞÇØ¿¡ ½ÇÆĞÇß½À´Ï´Ù.");
+                        c.getPlayer().gainItem(r, makeQuantity(modify), false, -1, "ì¥ë¹„ ë¶„í•´ë¡œ ì–»ì€ ë¯¸ë¼í´ íë¸Œ");
+                        c.getPlayer().dropMessage(1, "ì¥ë¹„ë¥¼ ì„±ê³µì ìœ¼ë¡œ ë¶„í•´í–ˆìŠµë‹ˆë‹¤.");
+                    } else c.getPlayer().dropMessage(1, "ì¥ë¹„ ë¶„í•´ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
+                } else c.getPlayer().dropMessage(1, "ì¥ë¹„ ë¶„í•´ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
+            } else c.getPlayer().dropMessage(1, "ì¥ë¹„ ë¶„í•´ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
             return true;
         }
-        c.getPlayer().dropMessage(1, "ÀáÀç ´É·ÂÀÌ ¾ø´Â ¾ÆÀÌÅÛÀº Å¥ºê·Î ºĞÇØµÉ ¼ö ¾ø½À´Ï´Ù.");
+        c.getPlayer().dropMessage(1, "ì ì¬ ëŠ¥ë ¥ì´ ì—†ëŠ” ì•„ì´í…œì€ íë¸Œë¡œ ë¶„í•´ë  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
         return false;
     }
 
     public int reward(int m) {
         List<Integer> l = Arrays.asList(5062000, 5062002, 5062005, 5062500, 5062006, 5062090);
         Collections.shuffle(l);
-        return l.get(Math.max(5, ((int) (Math.random() * m)) + RewardRandomizeIndexCode())); //Math randomÀÌ ´õ¿í ÀÚÀ¯·Î¿î ·£´õ¸¶ÀÌÂ¡ °¡´É
+        return l.get(Math.max(5, ((int) (Math.random() * m)) + RewardRandomizeIndexCode())); //Math randomì´ ë”ìš± ììœ ë¡œìš´ ëœë”ë§ˆì´ì§• ê°€ëŠ¥
     }
 
     public short makeQuantity(int m) {
@@ -95,7 +95,7 @@ public class EquipWorthCalculator {
         int x = Short.parseShort(arr[m].split("~")[0]);
         int y = Short.parseShort(arr[m].split("~")[1]);
         int z = y - x;
-        return (short) (x + z + RewardRandomizeIndexCode()); //º¸³Ê½º 0~3°³
+        return (short) (x + z + RewardRandomizeIndexCode()); //ë³´ë„ˆìŠ¤ 0~3ê°œ
     }
 
     private int RewardRandomizeIndexCode() {

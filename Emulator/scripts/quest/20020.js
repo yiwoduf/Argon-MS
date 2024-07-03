@@ -1,14 +1,14 @@
 /*
 
-	Ç»¾î ¼Ò½º ÆÑÀÇ ½ºÅ©¸³Æ® ÀÔ´Ï´Ù. (Á¦ÀÛ : ¿¤µµ¶óµµ)
+	í“¨ì–´ ì†ŒìŠ¤ íŒ©ì˜ ìŠ¤í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤. (ì œìž‘ : ì—˜ë„ë¼ë„)
 
-	¿£ÇÇ½Ã¾ÆÀÌµð : 
+	ì—”í”¼ì‹œì•„ì´ë”” : 
 	
-	¿£ÇÇ½Ã ÀÌ¸§ : ³ªÀÎÇÏÆ®
+	ì—”í”¼ì‹œ ì´ë¦„ : ë‚˜ì¸í•˜íŠ¸
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : ¿¡·¹ºê
+	ì—”í”¼ì‹œê°€ ìžˆëŠ” ë§µ : ì—ë ˆë¸Œ
 
-	¿£ÇÇ½Ã ¼³¸í : ½Ã±×³Ê½º Æ©Åä¸®¾ó
+	ì—”í”¼ì‹œ ì„¤ëª… : ì‹œê·¸ë„ˆìŠ¤ íŠœí† ë¦¬ì–¼
 
 
 */
@@ -26,16 +26,16 @@ function start(mode, type, selection) {
         else if (mode == 0 && status < 3)
             status--;
 	else if (mode == 0 && status == 3) {
-	    qm.sendOk("¿¡·¹ºê¿¡ ¿À½Å °ÍÀ» È¯¿µÇÕ´Ï´Ù...");
+	    qm.sendOk("ì—ë ˆë¸Œì— ì˜¤ì‹  ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤...");
 	    qm.dispose();
 	    return;
 	}	
         if (status == 0) {
-            qm.sendNext("·¹º§ 10ÀÌ µÈ °É º¸´Ï ²Ï³ª ³ë·ÂÇÏ½Å ¸ð¾çÀÌ±º¿ä. ÁÁ½À´Ï´Ù. ´ç½ÅÀº ÀÌÁ¦ ³ëºí·¹½º¿¡¼­ ¹þ¾î³ª, Á¤½ÄÀ¸·Î ¼ö·Ã±â»ç°¡ µÉ ÀÚ°ÝÀÌ ÀÖÀ½À» ÀÎÁ¤ÇÕ´Ï´Ù. ÇÏÁö¸¸, ±× Àü¿¡ ¸ÕÀú ÇÑ °¡Áö ¹¯°í ½Í½À´Ï´Ù. ´ç½ÅÀº ¾î¶² ±â»çÀÇ ±æÀ» °¥Áö °áÁ¤Çß½À´Ï±î?");
+            qm.sendNext("ë ˆë²¨ 10ì´ ëœ ê±¸ ë³´ë‹ˆ ê½¤ë‚˜ ë…¸ë ¥í•˜ì‹  ëª¨ì–‘ì´êµ°ìš”. ì¢‹ìŠµë‹ˆë‹¤. ë‹¹ì‹ ì€ ì´ì œ ë…¸ë¸”ë ˆìŠ¤ì—ì„œ ë²—ì–´ë‚˜, ì •ì‹ìœ¼ë¡œ ìˆ˜ë ¨ê¸°ì‚¬ê°€ ë  ìžê²©ì´ ìžˆìŒì„ ì¸ì •í•©ë‹ˆë‹¤. í•˜ì§€ë§Œ, ê·¸ ì „ì— ë¨¼ì € í•œ ê°€ì§€ ë¬»ê³  ì‹¶ìŠµë‹ˆë‹¤. ë‹¹ì‹ ì€ ì–´ë–¤ ê¸°ì‚¬ì˜ ê¸¸ì„ ê°ˆì§€ ê²°ì •í–ˆìŠµë‹ˆê¹Œ?");
         } else if (status == 1) {
-            qm.sendNextPrev("±â»çÀÇ ±æÀº ÇÑ °¡Áö°¡ ¾Æ´Õ´Ï´Ù. ´ç½Å ¾Õ¿¡ ÁØºñµÈ ±æÀº ¸ðµÎ ´Ù¼¸ °¡Áö... ¾î¶² ±æÀ» ¼±ÅÃÇÏ°Ç ÀÚÀ¯ÀÔ´Ï´Ù¸¸, Àû¾îµµ ÈÄÈ¸ÇÏ´Â ÀÏÀº ¾ø¾î¾ß°ÚÁö¿ä. ±×·¯³ª ¸ÕÀú ´ç½Å²² º¸¿©µå¸®ÁÒ. ´ç½ÅÀÌ ±â»ç°¡ µÈ ¸ð½ÀÀ»...");
+            qm.sendNextPrev("ê¸°ì‚¬ì˜ ê¸¸ì€ í•œ ê°€ì§€ê°€ ì•„ë‹™ë‹ˆë‹¤. ë‹¹ì‹  ì•žì— ì¤€ë¹„ëœ ê¸¸ì€ ëª¨ë‘ ë‹¤ì„¯ ê°€ì§€... ì–´ë–¤ ê¸¸ì„ ì„ íƒí•˜ê±´ ìžìœ ìž…ë‹ˆë‹¤ë§Œ, ì ì–´ë„ í›„íšŒí•˜ëŠ” ì¼ì€ ì—†ì–´ì•¼ê² ì§€ìš”. ê·¸ëŸ¬ë‚˜ ë¨¼ì € ë‹¹ì‹ ê»˜ ë³´ì—¬ë“œë¦¬ì£ . ë‹¹ì‹ ì´ ê¸°ì‚¬ê°€ ëœ ëª¨ìŠµì„...");
         } else if (status == 2) {
-            qm.sendSimple("¾î¶»½À´Ï±î? ±â»ç´ÜÀåÀÌ µÈ ÀÚ½ÅÀÇ ¸ð½ÀÀ» ¹Ì¸® º¸½Ã°Ú½À´Ï±î? ÀÌ¹Ì ¾î¶² ±â»ç°¡ µÉÁö Á¤ÇØ ³õ¾Ò´Ù¸é º¸Áö ¾Ê¾Æµµ »ó°ü ¾ø½À´Ï´Ù.\r\n#b#L0# ±â»ç´ÜÀåÀÌ µÈ ¸ð½ÀÀ» º¸°í ½Í¾î¿ä.#l\r\n#L1# ±â»ç´ÜÀåÀÌ µÈ ¸ð½ÀÀ» º¸Áö ¾Ê¾Æµµ ±¦Âú¾Æ¿ä.");
+            qm.sendSimple("ì–´ë–»ìŠµë‹ˆê¹Œ? ê¸°ì‚¬ë‹¨ìž¥ì´ ëœ ìžì‹ ì˜ ëª¨ìŠµì„ ë¯¸ë¦¬ ë³´ì‹œê² ìŠµë‹ˆê¹Œ? ì´ë¯¸ ì–´ë–¤ ê¸°ì‚¬ê°€ ë ì§€ ì •í•´ ë†“ì•˜ë‹¤ë©´ ë³´ì§€ ì•Šì•„ë„ ìƒê´€ ì—†ìŠµë‹ˆë‹¤.\r\n#b#L0# ê¸°ì‚¬ë‹¨ìž¥ì´ ëœ ëª¨ìŠµì„ ë³´ê³  ì‹¶ì–´ìš”.#l\r\n#L1# ê¸°ì‚¬ë‹¨ìž¥ì´ ëœ ëª¨ìŠµì„ ë³´ì§€ ì•Šì•„ë„ ê´œì°®ì•„ìš”.");
         } else if (status == 3) {
 	    select = selection;
         if (select == 0) {
@@ -43,7 +43,7 @@ function start(mode, type, selection) {
 	    qm.forceStartQuest();
             cm.dispose();
 	} else if(select == 1) {
-            cm.sendOK("±×·¸±º¿ä. ÀÌÁ¦ Á÷¾÷À» ¼±ÅÃÇØÁÖ¼¼¿ä.");
+            cm.sendOK("ê·¸ë ‡êµ°ìš”. ì´ì œ ì§ì—…ì„ ì„ íƒí•´ì£¼ì„¸ìš”.");
 	    qm.forceCompleteQuest();
             qm.dispose();	
 	    }	

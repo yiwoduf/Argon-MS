@@ -4,12 +4,12 @@ importPackage(Packages.database);
 
 var Jessica = 0;
 
-var gun1 = 1000; // È­¾àÅë ÀÌ¸¸Å­ ¸ğÀ¸¸é ÀÌº¥Æ® ¹ßµ¿!
+var gun1 = 1000; // í™”ì•½í†µ ì´ë§Œí¼ ëª¨ìœ¼ë©´ ì´ë²¤íŠ¸ ë°œë™!
 
 
 function startc() {
 	var con = MYSQL.getConnection().prepareStatement("SELECT * FROM boom WHERE status = ?");
-	con.setString(1, "½ÃÀÛ")
+	con.setString(1, "ì‹œì‘")
 	var eq = con.executeQuery();
 	start = 0;
 	gun = 0;
@@ -27,42 +27,42 @@ function action(music, type, girl) {
 	(music == 1) ? Jessica++ : (Jessica--, cm.dispose());
 	if (Jessica == 0) {
 		startc();
-		var Jess = "È÷È÷~ Àú¿¡°Ô #e#rÈ­¾àÅë#k#nÀ» Áàº¸½Ã°Ú¾î¿ä?\r\n";
+		var Jess = "íˆíˆ~ ì €ì—ê²Œ #e#rí™”ì•½í†µ#k#nì„ ì¤˜ë³´ì‹œê² ì–´ìš”?\r\n";
 
 		if (start == 0) {
-            Jess += "#b#L3#È­¾àÅë ÁÖ±â";
+            Jess += "#b#L3#í™”ì•½í†µ ì£¼ê¸°";
 		} else {
-			Jess += "ÇöÀç±îÁö ¸ğÀÎ #e#rÈ­¾àÅë#k#nÀÇ °¹¼ö´Â #b" + total_gun + "°³#k ¿¡¿ä~\r\n\r\n";
-			Jess += "#b#L1#È­¾àÅë ÁÖ±â";
+			Jess += "í˜„ì¬ê¹Œì§€ ëª¨ì¸ #e#rí™”ì•½í†µ#k#nì˜ ê°¯ìˆ˜ëŠ” #b" + total_gun + "ê°œ#k ì—ìš”~\r\n\r\n";
+			Jess += "#b#L1#í™”ì•½í†µ ì£¼ê¸°";
 		}
 		if (cm.getPlayer().getGMLevel() >= 1) {
-        	Jess += "\r\n#r#L2#[GM]ÆøÁ× ¹ö´× Á¾·á\r\n";
-            Jess += "#r#L0#[GM]ÆøÁ× ÀÌº¥Æ® ½ÃÀÛ\r\n";
-            Jess += "#r#L4#[GM]ÆøÁ× ÀÌº¥Æ® Á¾·á\r\n";
+        	Jess += "\r\n#r#L2#[GM]í­ì£½ ë²„ë‹ ì¢…ë£Œ\r\n";
+            Jess += "#r#L0#[GM]í­ì£½ ì´ë²¤íŠ¸ ì‹œì‘\r\n";
+            Jess += "#r#L4#[GM]í­ì£½ ì´ë²¤íŠ¸ ì¢…ë£Œ\r\n";
 		}
 		cm.sendSimple(Jess);
 
 	} else if (Jessica == 1) {
 		if (girl == 2) {
-			cm.¾Æ¸£¹Ì³¡();
+			cm.ì•„ë¥´ë¯¸ë();
 			cm.dispose();
 		}
 		if (girl == 0) {
 			var insert = MYSQL.getConnection().prepareStatement("INSERT INTO boom(status, gun, date) VALUES(?,?,now())");
-			insert.setString(1, "½ÃÀÛ");
+			insert.setString(1, "ì‹œì‘");
 			insert.setString(2, 0);
 			insert.executeUpdate();
-			cm.sendOk("È÷È÷~ #r¸ğµÎ°¡ ÇÔ²² ÆøÁ×À» ÅÍÆ®¸®ÀÚ!!#k ÀÌº¥Æ®°¡ ½ÃÀÛµÇ¾ú¾î¿ä~");
+			cm.sendOk("íˆíˆ~ #rëª¨ë‘ê°€ í•¨ê»˜ í­ì£½ì„ í„°íŠ¸ë¦¬ì!!#k ì´ë²¤íŠ¸ê°€ ì‹œì‘ë˜ì—ˆì–´ìš”~");
 			cm.dispose();
 		} else if (girl == 1) {
-			cm.sendGetNumber("È÷È÷~ ¸î°³ÀÇ #rÈ­¾àÅë#kÀ» ÁÖ½Ã°Ú¾î¿ä?", 1, 1, 1000);
+			cm.sendGetNumber("íˆíˆ~ ëª‡ê°œì˜ #rí™”ì•½í†µ#kì„ ì£¼ì‹œê² ì–´ìš”?", 1, 1, 1000);
 			Jessica = 1;
 		} else if (girl == 3) {
-			cm.sendOk("¾ÆÁ÷ ÆøÁ× ÀÌº¥Æ®°¡ ½ÃÀÛµÇÁö ¾Ê¾Ò´ä´Ï´Ù~");
+			cm.sendOk("ì•„ì§ í­ì£½ ì´ë²¤íŠ¸ê°€ ì‹œì‘ë˜ì§€ ì•Šì•˜ë‹µë‹ˆë‹¤~");
 			cm.dispose();
 		} else if (girl == 4) {
             MYSQL.getConnection().prepareStatement("DELETE FROM boom").executeUpdate();
-			cm.sendOk("ÆøÁ× ÀÌº¥Æ®¸¦ Á¾·áÇß½À´Ï´Ù");
+			cm.sendOk("í­ì£½ ì´ë²¤íŠ¸ë¥¼ ì¢…ë£Œí–ˆìŠµë‹ˆë‹¤");
 			cm.dispose();
 		}
 
@@ -72,20 +72,20 @@ function action(music, type, girl) {
 			//txt = cm.getText();
 			var total_guns = +total_gun;
 			var plus_gun = total_guns + gun;
-			MYSQL.getConnection().prepareStatement("UPDATE boom SET gun = '" + plus_gun + "' WHERE status = '½ÃÀÛ'").executeUpdate();
+			MYSQL.getConnection().prepareStatement("UPDATE boom SET gun = '" + plus_gun + "' WHERE status = 'ì‹œì‘'").executeUpdate();
 			if (plus_gun >= gun1) {
-				cm.sendOk("¿ì¿Í~~ ¿©·¯ºĞ ´öºĞ¿¡ #b¿¹»Û ÆøÁ×#kÀ» ÅÍÆ®·È¾î¿ä!!");
+				cm.sendOk("ìš°ì™€~~ ì—¬ëŸ¬ë¶„ ë•ë¶„ì— #bì˜ˆìœ í­ì£½#kì„ í„°íŠ¸ë ¸ì–´ìš”!!");
 				cm.gainItem(4001128, -gun);
 				MYSQL.getConnection().prepareStatement("DELETE FROM boom").executeUpdate();
-				cm.¾Æ¸£¹Ì();
+				cm.ì•„ë¥´ë¯¸();
 				cm.dispose();
 			} else {
-				cm.sendOk(gun + "°³ÀÇ È­¾àÅëÀ» ÁÖ¼Å¼­ #b" + plus_gun + "#k °³ÀÇ #e#rÈ­¾àÅë#n#kÀÌ ¸ğ¿´¾î¿ä~");
+				cm.sendOk(gun + "ê°œì˜ í™”ì•½í†µì„ ì£¼ì…”ì„œ #b" + plus_gun + "#k ê°œì˜ #e#rí™”ì•½í†µ#n#kì´ ëª¨ì˜€ì–´ìš”~");
 				cm.gainItem(4001128, -gun);
 				cm.dispose();
 			}
 		} else {
-			cm.sendOk("#e#rÈ­¾àÅë#k#n°¹¼ö¸¦ È®ÀÎÇØºÁÁÖ¼¼¿ä");
+			cm.sendOk("#e#rí™”ì•½í†µ#k#nê°¯ìˆ˜ë¥¼ í™•ì¸í•´ë´ì£¼ì„¸ìš”");
 			cm.dispose();
 		}
 	}

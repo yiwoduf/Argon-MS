@@ -24,12 +24,12 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-	cm.sendSimple("¾È³çÇÏ¼¼¿ä, Àú´Â ÀÏ¹İ °­È­ ¿£ÇÇ½Ã ÀÔ´Ï´Ù.\r\n#rÈ²±İ´ÜÇ³ÀÙ <50°³ ¼Ò¸ğ>#k#l\r\n#b#L0#¿Ã½ºÅİÀ» °­È­ÇÏ°Ú½À´Ï´Ù.\r\n#L1#°ø ¸¶¸¦ °­È­ÇÏ°Ú½À´Ï´Ù.");
+	cm.sendSimple("ì•ˆë…•í•˜ì„¸ìš”, ì €ëŠ” ì¼ë°˜ ê°•í™” ì—”í”¼ì‹œ ì…ë‹ˆë‹¤.\r\n#rí™©ê¸ˆë‹¨í’ì <50ê°œ ì†Œëª¨>#k#l\r\n#b#L0#ì˜¬ìŠ¤í…Ÿì„ ê°•í™”í•˜ê² ìŠµë‹ˆë‹¤.\r\n#L1#ê³µ ë§ˆë¥¼ ê°•í™”í•˜ê² ìŠµë‹ˆë‹¤.");
     } else if (status == 1) {
 	slot = selection;
-	sel = selection == 0 ? "¿Ã½ºÅİ" : "°ø¸¶";
+	sel = selection == 0 ? "ì˜¬ìŠ¤í…Ÿ" : "ê³µë§ˆ";
 	var itemid = 0;
-	var text = "#b#e"+sel+" °­È­#n#k¸¦ ¼±ÅÃ ÇÏ¼Ì½À´Ï´Ù.\r\n°­È­ÇÒ ¾ÆÀÌÅÛÀ» ¼±ÅÃ ÇØ ÁÖ¼¼¿ä.\r\n";
+	var text = "#b#e"+sel+" ê°•í™”#n#kë¥¼ ì„ íƒ í•˜ì…¨ìŠµë‹ˆë‹¤.\r\nê°•í™”í•  ì•„ì´í…œì„ ì„ íƒ í•´ ì£¼ì„¸ìš”.\r\n";
 	for(i = 1; i < 101; i ++) {
 		if(cm.getEquip(i)) {
 			itemid = cm.getEquip(i).getItemId();
@@ -39,38 +39,38 @@ function action(mode, type, selection) {
 	cm.sendSimple(text);
     } else if (status == 2) {
 	if(!cm.haveItem(needitem, num)) {
-		cm.sendOk("°­È­¿¡ ÇÊ¿äÇÑ #b#z"+needitem+"##kÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+		cm.sendOk("ê°•í™”ì— í•„ìš”í•œ #b#z"+needitem+"##kì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		cm.dispose(); return;
 	}
 	eq = cm.getEquip(selection);
 	state = owner(eq);
 	if(check(eq)) {
-		cm.sendYesNo("ÇöÀç °­È­»óÅÂ : #b"+state+"#k\r\n¼±ÅÃÇÑ ½ºÅİ : "+sel+"\r\n´ÙÀ½ °­È­·Î ¿Ã¶ó°¥¶§ ½ÇÆĞÈ®·üÀº ¾øÀ¸¸ç ·£´ıÀ¸·Î ¼öÄ¡°¡ ÁÖ¾îÁı´Ï´Ù. °­È­¸¦ ÁøÇàÇÏ½Ã°Ú½À´Ï±î?");
+		cm.sendYesNo("í˜„ì¬ ê°•í™”ìƒíƒœ : #b"+state+"#k\r\nì„ íƒí•œ ìŠ¤í…Ÿ : "+sel+"\r\në‹¤ìŒ ê°•í™”ë¡œ ì˜¬ë¼ê°ˆë•Œ ì‹¤íŒ¨í™•ë¥ ì€ ì—†ìœ¼ë©° ëœë¤ìœ¼ë¡œ ìˆ˜ì¹˜ê°€ ì£¼ì–´ì§‘ë‹ˆë‹¤. ê°•í™”ë¥¼ ì§„í–‰í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
 	}
     } else if (status == 3) {
 	if(Randomizer.rand(1, 100) > chance(eq)) {
-		cm.sendOk("¾ÆÀÌÅÛ °­È­¿¡ ½ÇÆĞÇß½À´Ï´Ù.");
+		cm.sendOk("ì•„ì´í…œ ê°•í™”ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
 		cm.dispose(); return;
 	}
 	amount = java.lang.Integer.parseInt(stat(eq, sel));
 	level = level(eq);
 		cm.gainItem(needitem, -num);
 		eq.setOwner(level);
-		if(sel.equals("¿Ã½ºÅİ")) {
+		if(sel.equals("ì˜¬ìŠ¤í…Ÿ")) {
 			eq.setStr(eq.getStr() + amount); 
 			eq.setDex(eq.getDex() + amount); 
 			eq.setInt(eq.getInt() + amount); 
 			eq.setLuk(eq.getLuk() + amount);
 			cm.fakeRelog();
 			cm.updateChar();
-			cm.sendOk("°­È­¿¡ ¼º°øÇÏ¿© ¿Ã½ºÅİ "+amount+" ÀÌ Ãß°¡µÇ°í "+level+" ÀÌ µÇ¾ú½À´Ï´Ù.¼·Ã¾ºÎÅ¹µå¸³´Ï´Ù."); 
+			cm.sendOk("ê°•í™”ì— ì„±ê³µí•˜ì—¬ ì˜¬ìŠ¤í…Ÿ "+amount+" ì´ ì¶”ê°€ë˜ê³  "+level+" ì´ ë˜ì—ˆìŠµë‹ˆë‹¤.ì„­ì²¸ë¶€íƒë“œë¦½ë‹ˆë‹¤."); 
 			cm.dispose(); return;
 		} else {
 			eq.setMatk(eq.getMatk() + amount);
 			eq.setWatk(eq.getWatk() + amount);
 			cm.fakeRelog();
 			cm.updateChar();
-			cm.sendOk("°­È­¿¡ ¼º°øÇÏ¿© °ø¸¶ "+amount+" ÀÌ Ãß°¡µÇ°í "+level+" ÀÌ µÇ¾ú½À´Ï´Ù. ¼·Ã¾ºÎÅ¹µå¸³´Ï´Ù."); 
+			cm.sendOk("ê°•í™”ì— ì„±ê³µí•˜ì—¬ ê³µë§ˆ "+amount+" ì´ ì¶”ê°€ë˜ê³  "+level+" ì´ ë˜ì—ˆìŠµë‹ˆë‹¤. ì„­ì²¸ë¶€íƒë“œë¦½ë‹ˆë‹¤."); 
 			cm.dispose(); return;
 		}
     }
@@ -78,76 +78,76 @@ function action(mode, type, selection) {
 
 function chance(eq) {
 var chance;
-	if(eq.getOwner().equals("1¡Ú")) {
- 		chance = 70; // 1°­¿¡¼­ 2°­°¥¶§ È®·ü ex) 10 : 10%
-	} else if(eq.getOwner().equals("2¡Ú")) {
-		chance = 60; // 2°­¿¡¼­ 3°­°¥¶§ È®·ü ex) 10 : 10%
-	} else if(eq.getOwner().equals("3¡Ú")) {
-		chance = 50; // 3°­¿¡¼­ 4°­°¥¶§ È®·ü ex) 10 : 10%
-	} else if(eq.getOwner().equals("4¡Ú")) {
-		chance = 40; // 4°­¿¡¼­ 5°­°¥¶§ È®·ü ex) 10 : 10%
-	} else if(eq.getOwner().equals("5¡Ú")) {
-		chance = 30; // 5°­¿¡¼­ 6°­°¥¶§ È®·ü ex) 10 : 10%
-	} else if(eq.getOwner().equals("6¡Ú")) {
-		chance = 15; // 6°­¿¡¼­ 7°­°¥¶§ È®·ü ex) 10 : 10%
+	if(eq.getOwner().equals("1â˜…")) {
+ 		chance = 70; // 1ê°•ì—ì„œ 2ê°•ê°ˆë•Œ í™•ë¥  ex) 10 : 10%
+	} else if(eq.getOwner().equals("2â˜…")) {
+		chance = 60; // 2ê°•ì—ì„œ 3ê°•ê°ˆë•Œ í™•ë¥  ex) 10 : 10%
+	} else if(eq.getOwner().equals("3â˜…")) {
+		chance = 50; // 3ê°•ì—ì„œ 4ê°•ê°ˆë•Œ í™•ë¥  ex) 10 : 10%
+	} else if(eq.getOwner().equals("4â˜…")) {
+		chance = 40; // 4ê°•ì—ì„œ 5ê°•ê°ˆë•Œ í™•ë¥  ex) 10 : 10%
+	} else if(eq.getOwner().equals("5â˜…")) {
+		chance = 30; // 5ê°•ì—ì„œ 6ê°•ê°ˆë•Œ í™•ë¥  ex) 10 : 10%
+	} else if(eq.getOwner().equals("6â˜…")) {
+		chance = 15; // 6ê°•ì—ì„œ 7ê°•ê°ˆë•Œ í™•ë¥  ex) 10 : 10%
 	} else {
-		chance = 100; // 1°­°¥¶§ È®·ü ex) 10 : 10%
+		chance = 100; // 1ê°•ê°ˆë•Œ í™•ë¥  ex) 10 : 10%
 	}
 	return chance;
 }
 
 function level(eq) {
 var lev;
-	if(eq.getOwner().equals("1¡Ú")) {
-		lev = "2¡Ú";
-	} else if(eq.getOwner().equals("2¡Ú")) {
-		lev = "3¡Ú";
-	} else if(eq.getOwner().equals("3¡Ú")) {
-		lev = "4¡Ú";
-	} else if(eq.getOwner().equals("4¡Ú")) {
-		lev = "5¡Ú";
-	} else if(eq.getOwner().equals("5¡Ú")) {
-		lev = "6¡Ú";
-	} else if(eq.getOwner().equals("6¡Ú")) {
-		lev = "7¡Ú";
+	if(eq.getOwner().equals("1â˜…")) {
+		lev = "2â˜…";
+	} else if(eq.getOwner().equals("2â˜…")) {
+		lev = "3â˜…";
+	} else if(eq.getOwner().equals("3â˜…")) {
+		lev = "4â˜…";
+	} else if(eq.getOwner().equals("4â˜…")) {
+		lev = "5â˜…";
+	} else if(eq.getOwner().equals("5â˜…")) {
+		lev = "6â˜…";
+	} else if(eq.getOwner().equals("6â˜…")) {
+		lev = "7â˜…";
 	} else {
-		lev = "1¡Ú";	
+		lev = "1â˜…";	
 	}
 	return lev;
 }
 function stat(eq, sel) {
 	var stat;
-	if(eq.getOwner().equals("1¡Ú")) { // 1°­ - 2°­ ³Ñ¾î°¥¶§ ½ºÅİ
-		stat = sel == "¿Ã½ºÅİ" ? Randomizer.rand(8, 50) : Randomizer.rand(5, 25);
-						//	¡è¡è¡è ÀÌ°Íµé Ã³·³ ¹Ø¿¡°Åµµ µ¿ÀÏÇÏ°Ô
+	if(eq.getOwner().equals("1â˜…")) { // 1ê°• - 2ê°• ë„˜ì–´ê°ˆë•Œ ìŠ¤í…Ÿ
+		stat = sel == "ì˜¬ìŠ¤í…Ÿ" ? Randomizer.rand(8, 50) : Randomizer.rand(5, 25);
+						//	â†‘â†‘â†‘ ì´ê²ƒë“¤ ì²˜ëŸ¼ ë°‘ì—ê±°ë„ ë™ì¼í•˜ê²Œ
 
-	} else if(eq.getOwner().equals("2¡Ú")) { // 2°­ - 3°­ ³Ñ¾î°¥¶§ ½ºÅİ
-		stat = sel == "¿Ã½ºÅİ" ? Randomizer.rand(8, 50) : Randomizer.rand(5, 25);	
+	} else if(eq.getOwner().equals("2â˜…")) { // 2ê°• - 3ê°• ë„˜ì–´ê°ˆë•Œ ìŠ¤í…Ÿ
+		stat = sel == "ì˜¬ìŠ¤í…Ÿ" ? Randomizer.rand(8, 50) : Randomizer.rand(5, 25);	
 
-	} else if(eq.getOwner().equals("3¡Ú")) { // 3°­ - 4°­ ³Ñ¾î°¥¶§ ½ºÅİ
-		stat = sel == "¿Ã½ºÅİ" ? Randomizer.rand(8, 50) : Randomizer.rand(5, 25);
+	} else if(eq.getOwner().equals("3â˜…")) { // 3ê°• - 4ê°• ë„˜ì–´ê°ˆë•Œ ìŠ¤í…Ÿ
+		stat = sel == "ì˜¬ìŠ¤í…Ÿ" ? Randomizer.rand(8, 50) : Randomizer.rand(5, 25);
 	
-	} else if(eq.getOwner().equals("4¡Ú")) { // 4°­ - 5°­ ³Ñ¾î°¥¶§ ½ºÅİ
-		stat = sel == "¿Ã½ºÅİ" ? Randomizer.rand(8, 50) : Randomizer.rand(5, 25);
+	} else if(eq.getOwner().equals("4â˜…")) { // 4ê°• - 5ê°• ë„˜ì–´ê°ˆë•Œ ìŠ¤í…Ÿ
+		stat = sel == "ì˜¬ìŠ¤í…Ÿ" ? Randomizer.rand(8, 50) : Randomizer.rand(5, 25);
 	
-	} else if(eq.getOwner().equals("5¡Ú")) { // 5°­ - 6°­ ³Ñ¾î°¥¶§ ½ºÅİ
-		stat = sel == "¿Ã½ºÅİ" ? Randomizer.rand(8, 50) : Randomizer.rand(5, 25);	
+	} else if(eq.getOwner().equals("5â˜…")) { // 5ê°• - 6ê°• ë„˜ì–´ê°ˆë•Œ ìŠ¤í…Ÿ
+		stat = sel == "ì˜¬ìŠ¤í…Ÿ" ? Randomizer.rand(8, 50) : Randomizer.rand(5, 25);	
 
-	} else if(eq.getOwner().equals("6¡Ú")) { // 6°­ - 7°­ ³Ñ¾î°¥¶§ ½ºÅİ
-		stat = sel == "¿Ã½ºÅİ" ? Randomizer.rand(8, 50) : Randomizer.rand(5, 25);	
+	} else if(eq.getOwner().equals("6â˜…")) { // 6ê°• - 7ê°• ë„˜ì–´ê°ˆë•Œ ìŠ¤í…Ÿ
+		stat = sel == "ì˜¬ìŠ¤í…Ÿ" ? Randomizer.rand(8, 50) : Randomizer.rand(5, 25);	
 
-	} else { // 1°­À¸·Î °¥¶§ ½ºÅİ
-		stat = sel == "¿Ã½ºÅİ" ? Randomizer.rand(8, 50) : Randomizer.rand(5, 25);	
+	} else { // 1ê°•ìœ¼ë¡œ ê°ˆë•Œ ìŠ¤í…Ÿ
+		stat = sel == "ì˜¬ìŠ¤í…Ÿ" ? Randomizer.rand(8, 50) : Randomizer.rand(5, 25);	
 	}
 	return stat;	
 }
 function check(eq) {
 	if(eq.getUpgradeSlots() > 0) {
-		cm.sendOk("¾÷±×·¹ÀÌµå °¡´É È½¼ö¸¦ ¸ğµÎ ¼ÒÁøÇØ¾ß °­È­¸¦ ÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+		cm.sendOk("ì—…ê·¸ë ˆì´ë“œ ê°€ëŠ¥ íšŸìˆ˜ë¥¼ ëª¨ë‘ ì†Œì§„í•´ì•¼ ê°•í™”ë¥¼ í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
 		cm.dispose(); return;
 	}
-	if(eq.getOwner().equals("7¡Ú")) {
-		cm.sendOk("ÇØ´ç ¾ÆÀÌÅÛÀº °­È­¸¦ ´õÀÌ»ó ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+	if(eq.getOwner().equals("7â˜…")) {
+		cm.sendOk("í•´ë‹¹ ì•„ì´í…œì€ ê°•í™”ë¥¼ ë”ì´ìƒ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		cm.dispose(); return;
 	}
 	return true;
@@ -155,12 +155,12 @@ function check(eq) {
 
 function owner(eq) {
 	for(i = 1; i < 7; i++) {
-		if(eq.getOwner().equals(i+"¡Ú")) {
+		if(eq.getOwner().equals(i+"â˜…")) {
 			return eq.getOwner();
 		}
 	} 
 	if(state == null) {
-		return "#r°­È­¾ÈÇÔ#k";
+		return "#rê°•í™”ì•ˆí•¨#k";
 	}
 }
 

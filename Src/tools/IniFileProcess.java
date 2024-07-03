@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -23,7 +23,7 @@ public class IniFileProcess {
         try {
             String line, section;
             int index;
-            //TODO : ini ÇÑ±Û±úÁü ¼öÁ¤ - ÃÖ¿ëÀç
+            //TODO : ini í•œê¸€ê¹¨ì§ ìˆ˜ì • - ìµœìš©ì¬
             BufferedReader input = new BufferedReader(new InputStreamReader(new FileInputStream(file), "EUC-KR"));
             this.inner = new IniFileProcess.InnerData();
             while ((line = input.readLine()) != null) {
@@ -33,7 +33,7 @@ public class IniFileProcess {
                     section = line.substring(1, line.length() - 1);
                     this.table.put(section, this.inner);
                 } else if (line.startsWith(";")) {
-                    // ÁÖ¼®
+                    // ì£¼ì„
                 } else {
                     index = line.indexOf('=');
                     if (index != -1) {

@@ -12,22 +12,22 @@ function start() {
      } else 
          status++;
      if (status == 0) {
-         cm.sendNext("Àú¸¦ ±¸ÇØÁÖ¼Å¼­ Á¤¸» °¨»çÇÕ´Ï´Ù. ÀÌÁ¦ °¡¿²Àº µµ¶óÁöµéµµ Æ÷¾ÇÇÑ µ¥ºñÁ¸ÀÇ Áö¹è¿¡¼­ ¹ş¾î³ª°Ô µÉ °Å¿¡¿ä. ±×·³ ¹ÛÀ¸·Î ³»º¸³» µå¸®°Ú½À´Ï´Ù. ¹Û¿¡¼­ ´Ù½Ã ¸»À» °É¾î ÁÖ¼¼¿ä.");
+         cm.sendNext("ì €ë¥¼ êµ¬í•´ì£¼ì…”ì„œ ì •ë§ ê°ì‚¬í•©ë‹ˆë‹¤. ì´ì œ ê°€ì—¾ì€ ë„ë¼ì§€ë“¤ë„ í¬ì•…í•œ ë°ë¹„ì¡´ì˜ ì§€ë°°ì—ì„œ ë²—ì–´ë‚˜ê²Œ ë  ê±°ì—ìš”. ê·¸ëŸ¼ ë°–ìœ¼ë¡œ ë‚´ë³´ë‚´ ë“œë¦¬ê² ìŠµë‹ˆë‹¤. ë°–ì—ì„œ ë‹¤ì‹œ ë§ì„ ê±¸ì–´ ì£¼ì„¸ìš”.");
      } else if (status == 1) {
          cm.getEventInstance().unregisterPlayer(cm.getPlayer());
          cm.warp(925100600,0);
          cm.dispose();
      } else if (status == 2) {
-         var gift = "#bµ¥ºñÁ¸#kÀ» ¹°¸®Ä¡°í Àú¸¦ ±¸ÇØÁÖ¼Å¼­ Á¤¸» °¨»çÇÕ´Ï´Ù. ¹«¾ùÀ» µµ¿Íµå¸±±î¿ä?#b\r\n";
-         gift += "\r\n#L0#µ¥ºñÁ¸ÀÇ ¸ğÀÚ Á¶°¢À» ¹Ş´Â´Ù.";
-         gift += "\r\n#L1#ÀÌ°÷¿¡¼­ ÅğÀåÇÑ´Ù.";
+         var gift = "#bë°ë¹„ì¡´#kì„ ë¬¼ë¦¬ì¹˜ê³  ì €ë¥¼ êµ¬í•´ì£¼ì…”ì„œ ì •ë§ ê°ì‚¬í•©ë‹ˆë‹¤. ë¬´ì—‡ì„ ë„ì™€ë“œë¦´ê¹Œìš”?#b\r\n";
+         gift += "\r\n#L0#ë°ë¹„ì¡´ì˜ ëª¨ì ì¡°ê°ì„ ë°›ëŠ”ë‹¤.";
+         gift += "\r\n#L1#ì´ê³³ì—ì„œ í‡´ì¥í•œë‹¤.";
          cm.sendSimple(gift);
      } else if (status == 3) {
          if (selection == 0) {
              if (cm.getPlayer().getKeyValue("DavyzonePQ_Gift") == 0) {
-                 cm.sendNext("ÃÑ" + cm.getPlayer().getKeyValue("DavyzonePQ_KillMonster") + "¸¶¸®ÀÇ ¸ó½ºÅÍ¸¦ Ã³Ä¡ÇÏ¼Ì³×¿ä. µ¥ºñÁ¸ ¸ğÀÚÁ¶°¢" + ((cm.getPlayer().getKeyValue("DavyzonePQ_KillMonster") - (cm.getPlayer().getKeyValue("DavyzonePQ_KillMonster") % 10)) / 10) + "°³¸¦ µå¸®°Ú½À´Ï´Ù.");
+                 cm.sendNext("ì´" + cm.getPlayer().getKeyValue("DavyzonePQ_KillMonster") + "ë§ˆë¦¬ì˜ ëª¬ìŠ¤í„°ë¥¼ ì²˜ì¹˜í•˜ì…¨ë„¤ìš”. ë°ë¹„ì¡´ ëª¨ìì¡°ê°" + ((cm.getPlayer().getKeyValue("DavyzonePQ_KillMonster") - (cm.getPlayer().getKeyValue("DavyzonePQ_KillMonster") % 10)) / 10) + "ê°œë¥¼ ë“œë¦¬ê² ìŠµë‹ˆë‹¤.");
              } else {
-                 cm.sendOk("ÀÌ¹Ì ¸ğÀÚÁ¶°¢À» ¹ŞÀ¸¼Ì³×¿ä.");
+                 cm.sendOk("ì´ë¯¸ ëª¨ìì¡°ê°ì„ ë°›ìœ¼ì…¨ë„¤ìš”.");
                  cm.dispose();
              }
          } else if (selection == 1) {

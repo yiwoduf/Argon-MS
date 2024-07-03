@@ -18,9 +18,9 @@ function action(mode, type, selection) {
         else
             status--;
 	if (status == 0) {
-		var jessica = "#fn³ª´®°íµñ Extrabold#¿ë±âµµ.. ´É·Âµµ ¾ø´ÂÀÚ.. ´Â ³ª°¡µµ·Ï..\r\n";
-		jessica += "#L1##r5 Ãµ¸¸ ¸Ş¼Ò#k - #d´É·ÂÀÇ ÇÏ´ÃÀÇ Èû..#k\r\n"
-		jessica += "#L0##bÁöÇÏÃ¶ Ãâ±¸ °ÔÀÌÆ®..#k\r\n"
+		var jessica = "#fnë‚˜ëˆ”ê³ ë”• Extrabold#ìš©ê¸°ë„.. ëŠ¥ë ¥ë„ ì—†ëŠ”ì.. ëŠ” ë‚˜ê°€ë„ë¡..\r\n";
+		jessica += "#L1##r5 ì²œë§Œ ë©”ì†Œ#k - #dëŠ¥ë ¥ì˜ í•˜ëŠ˜ì˜ í˜..#k\r\n"
+		jessica += "#L0##bì§€í•˜ì²  ì¶œêµ¬ ê²Œì´íŠ¸..#k\r\n"
 		cm.sendSimple(jessica);
 	} else if (status == 1) {
 	if (selection == 0) {
@@ -32,7 +32,7 @@ function action(mode, type, selection) {
                 cm.giveBuff(30021237,1);
                 cm.dispose();
                 }else{
-                cm.sendOk("#fn³ª´®°íµñ Extrabold##r´ç½ÅÀº.. Àç¹°ÀÇ ´É·ÂÀÌ ¾ø´Â ÀÚ..#k");
+                cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• Extrabold##rë‹¹ì‹ ì€.. ì¬ë¬¼ì˜ ëŠ¥ë ¥ì´ ì—†ëŠ” ì..#k");
 		cm.dispose();
 		}
 	}

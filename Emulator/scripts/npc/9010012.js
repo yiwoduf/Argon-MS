@@ -1,5 +1,5 @@
 /*
-@by.ÀÎÇü (m_m_m_m_m_99911111@nate.com) ÀÌ Á¦ÀÛÇß½À´Ï´Ù.
+@by.ì¸í˜• (m_m_m_m_m_99911111@nate.com) ì´ ì œì‘í–ˆìŠµë‹ˆë‹¤.
 
 */
 importPackage(java.sql);
@@ -69,7 +69,7 @@ function action(mode, type, selection) {
 	while (eq.next()) {
 	cm.gainItem(eq.getInt("ItemId"),eq.getInt("quantity"));
 	}
-	cm.sendOk("¸ğµç ¾ÆÀÌÅÛµéÀÌ Á¤»èÀûÀ¸·Î º¹±¸µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("ëª¨ë“  ì•„ì´í…œë“¤ì´ ì •ì‚­ì ìœ¼ë¡œ ë³µêµ¬ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();return;
 	
 	

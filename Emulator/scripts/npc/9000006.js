@@ -23,7 +23,7 @@ function action(mode, type, selection) {
 
     if (status == 0) {
 		cm.showWZEffect("UI/UIWindow1.img/HofMEffect/teleport", 1);
-        cm.sendOk("ÀÌÆåÆ® Å×½ºÆ®");
+        cm.sendOk("ì´í™íŠ¸ í…ŒìŠ¤íŠ¸");
         cm.dispose();
         return;
     }

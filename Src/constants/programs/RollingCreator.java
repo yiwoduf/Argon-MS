@@ -25,7 +25,7 @@ public class RollingCreator extends javax.swing.JFrame {
      * Creates new form RollingCreator
      */
     public RollingCreator() {
-        this.setTitle("µ¹¸²ÆÇ ¾ÆÀÌÅÛ Ãß°¡");
+        this.setTitle("ëŒë¦¼íŒ ì•„ì´í…œ ì¶”ê°€");
         this.setResizable(false);
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation((screenSize.width - this.getWidth()) / 2, (screenSize.height - this.getHeight()) / 2); 
@@ -58,20 +58,20 @@ public class RollingCreator extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("¾ÆÀÌÅÛÄÚµå : ");
+        jLabel1.setText("ì•„ì´í…œì½”ë“œ : ");
 
-        jLabel2.setText("¾ÆÀÌÅÛ°¹¼ö :");
+        jLabel2.setText("ì•„ì´í…œê°¯ìˆ˜ :");
 
-        jButton1.setText("Ãß°¡");
+        jButton1.setText("ì¶”ê°€");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jTextField1.setText("¾ÆÀÌÅÛÄÚµå");
+        jTextField1.setText("ì•„ì´í…œì½”ë“œ");
 
-        jTextField2.setText("¾ÆÀÌÅÛ°¹¼ö");
+        jTextField2.setText("ì•„ì´í…œê°¯ìˆ˜");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -137,7 +137,7 @@ public class RollingCreator extends javax.swing.JFrame {
         } catch (SQLException ex) {
             System.out.println(ex);
         }
-        JOptionPane.showMessageDialog(null, "¾ÆÀÌÅÛÀ» Ãß°¡ ÇÏ¿´½À´Ï´Ù.");
+        JOptionPane.showMessageDialog(null, "ì•„ì´í…œì„ ì¶”ê°€ í•˜ì˜€ìŠµë‹ˆë‹¤.");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

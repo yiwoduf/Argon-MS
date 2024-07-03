@@ -3,19 +3,19 @@
 
 /*
 
-	* �ܹ����ǽ� �ڵ����� ��ũ��Ʈ�� ���� ������� ��ũ��Ʈ �Դϴ�.
+	* 단문엔피시 자동제작 스크립트를 통해 만들어진 스크립트 입니다.
 
 	* (Guardian Project Development Source Script)
 
-	�θ� �� ���� ����� �����ϴ�.
+	로리 에 의해 만들어 졌습니다.
 
-	���ǽþ��̵� : 2120007
+	엔피시아이디 : 2120007
 
-	���ǽ� �̸� : ����
+	엔피시 이름 : 조이
 
-	���ǽð� �ִ� �� : ��Ƽ�� �Ǽ� : �Ǽ� �߾�Ȧ (229000000)
+	엔피시가 있는 맵 : 헌티드 맨션 : 맨션 중앙홀 (229000000)
 
-	���ǽ� ���� : MISSINGNO
+	엔피시 설명 : MISSINGNO
 
 
 */
@@ -41,7 +41,7 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        cm.sendOk("�Ḹ �� �ڿ� �����־�!");
+        cm.sendOk("잠만 너 뒤에 누가있어!");
         cm.dispose();
         return;
     }

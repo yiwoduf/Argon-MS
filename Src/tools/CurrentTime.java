@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -15,7 +15,7 @@ import java.util.TimeZone;
 
 /**
  *
- * @author ¿¡¹ÝÅ×ÀÌ¸£
+ * @author ì—ë°˜í…Œì´ë¥´
  */
 public class CurrentTime {
 
@@ -24,21 +24,21 @@ public class CurrentTime {
         SimpleDateFormat simpleTimeFormat = new SimpleDateFormat("HH:mm:ss");
         String time = simpleTimeFormat.format(calz.getTime());
 //        if (calz.getTime().getHours() >= 12) {
-//            time = "¿ÀÈÄ "+time;
+//            time = "ì˜¤í›„ "+time;
 //        } else {
-//            time = "¿ÀÀü "+time;
+//            time = "ì˜¤ì „ "+time;
 //        }
         return time;
     }
 
     public static String getAllCurrentTime1(long times) {
         Calendar calz = Calendar.getInstance(TimeZone.getTimeZone("KST"), Locale.KOREAN);
-        SimpleDateFormat simpleTimeFormat = new SimpleDateFormat("MM¿ùddÀÏ");
+        SimpleDateFormat simpleTimeFormat = new SimpleDateFormat("MMì›”ddì¼");
         String time = simpleTimeFormat.format(times);
 //        if (calz.getTime().getHours() >= 12) {
-//            time = "¿ÀÈÄ "+time;
+//            time = "ì˜¤í›„ "+time;
 //        } else {
-//            time = "¿ÀÀü "+time;
+//            time = "ì˜¤ì „ "+time;
 //        }
         return time;
     }
@@ -48,9 +48,9 @@ public class CurrentTime {
         SimpleDateFormat simpleTimeFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         String time = simpleTimeFormat.format(calz.getTime());
 //        if (calz.getTime().getHours() >= 12) {
-//            time = "¿ÀÈÄ "+time;
+//            time = "ì˜¤í›„ "+time;
 //        } else {
-//            time = "¿ÀÀü "+time;
+//            time = "ì˜¤ì „ "+time;
 //        }
         return time;
     }

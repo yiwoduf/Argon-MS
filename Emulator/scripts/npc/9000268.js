@@ -16,34 +16,34 @@ function action(mode, type, selection) {
     }
     if (status == 0) {
         if (cm.getPlayer().getKeyValue("maplemon_mobcode") == null) {
-            ¼±ÅÃ = 0;
-            ¸» = "¾ÆÁ÷ ¸ÞÀÌÇÃ¸óÀÌ ¾øÀ¸½Ã±º¿ä! Á¦°¡ ·£´ýÀ¸·Î ÇÑ°³ µå¸®µµ·Ï ÇÏÁÒ! °ú¿¬ ´ç½ÅÀÇ ¸ÞÀÌÇÃ¸óÀº ¹«¾ùÀÏ±î¿ä?\r\n\r\n"
+            ì„ íƒ = 0;
+            ë§ = "ì•„ì§ ë©”ì´í”Œëª¬ì´ ì—†ìœ¼ì‹œêµ°ìš”! ì œê°€ ëžœë¤ìœ¼ë¡œ í•œê°œ ë“œë¦¬ë„ë¡ í•˜ì£ ! ê³¼ì—° ë‹¹ì‹ ì˜ ë©”ì´í”Œëª¬ì€ ë¬´ì—‡ì¼ê¹Œìš”?\r\n\r\n"
             mobarrayrandom = mobarraylist[Math.floor(Math.random() * mobarraylist.length)];
-            ¸»+= "¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡#fMob/"+mobarrayrandom+".img/stand/0#\r\n\r\n"
-            ¸»+= "ÀÌ ¸ÞÀÌÇÃ¸óÀÇ ÀÌ¸§À» Áö¾îÁÖ½Ã°Ú¾î¿ä?\r\n#b(¸ÞÀÌÇÃ¸óÀÇ ÀÌ¸§Àº 4ÀÚ·Î Áö¾îÁÖ¼¼¿ä.)#k"
-            cm.sendGetText(¸»);
+            ë§+= "ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€#fMob/"+mobarrayrandom+".img/stand/0#\r\n\r\n"
+            ë§+= "ì´ ë©”ì´í”Œëª¬ì˜ ì´ë¦„ì„ ì§€ì–´ì£¼ì‹œê² ì–´ìš”?\r\n#b(ë©”ì´í”Œëª¬ì˜ ì´ë¦„ì€ 4ìžë¡œ ì§€ì–´ì£¼ì„¸ìš”.)#k"
+            cm.sendGetText(ë§);
         } else {
-            cm.sendOk("#r#e¡Ø¸ÞÀÌÇÃ¸óÀ» Å°¿ì´Â ¹æ¹ý ¹× ÁÖÀÇ»çÇ×¡Ø#n#k\r\n\r\n"
-                           +"1. ¸ÞÀÌÇÃ¸óÀº #i4032862##z4032862#¸¸ ¼·ÃëÇÕ´Ï´Ù.\r\n" 
-                           +"2. ¸ÞÀÌÇÃ¸óÀÌ #z4032862#À» ¼·ÃëÇÏ¸é, EXP¸¦ ¾ò½À´Ï´Ù.\r\n"
-                           +"3. ¸ÞÀÌÇÃ¸óÀÌ ÀÏÁ¤ EXP¸¦ ´Þ¼ºÇÏ¸é, ·¹º§¾÷À» ÇÕ´Ï´Ù.\r\n"
-                           +"4. ¸ÞÀÌÇÃ¸óÀÌ ÀÏÁ¤ ·¹º§À» ´Þ¼ºÇÏ¸é, ÁøÈ­¸¦ ÇÕ´Ï´Ù.\r\n(ÅÊÄ¿ È¤Àº µô·¯·Î ÁøÈ­¹æÇâÀ» ¼±ÅÃÇÒ ¼ö ÀÖ½À´Ï´Ù.)\r\n"
-                           +"5. ·¹º§¾÷ ¹× ÁøÈ­¸¦ ÇÒ½Ã °ø°Ý·Â ¹× Ã¼·ÂÀÌ Áõ°¡ÇÕ´Ï´Ù.\r\n"
-                           +"6. ÀÚ½ÅÀÇ ¸ÞÀÌÇÃ¸óÀ¸·Î ´Ù¸¥ À¯Àú¿Í ¹èÆ²ÀÌ °¡´ÉÇÕ´Ï´Ù.");
+            cm.sendOk("#r#eâ€»ë©”ì´í”Œëª¬ì„ í‚¤ìš°ëŠ” ë°©ë²• ë° ì£¼ì˜ì‚¬í•­â€»#n#k\r\n\r\n"
+                           +"1. ë©”ì´í”Œëª¬ì€ #i4032862##z4032862#ë§Œ ì„­ì·¨í•©ë‹ˆë‹¤.\r\n" 
+                           +"2. ë©”ì´í”Œëª¬ì´ #z4032862#ì„ ì„­ì·¨í•˜ë©´, EXPë¥¼ ì–»ìŠµë‹ˆë‹¤.\r\n"
+                           +"3. ë©”ì´í”Œëª¬ì´ ì¼ì • EXPë¥¼ ë‹¬ì„±í•˜ë©´, ë ˆë²¨ì—…ì„ í•©ë‹ˆë‹¤.\r\n"
+                           +"4. ë©”ì´í”Œëª¬ì´ ì¼ì • ë ˆë²¨ì„ ë‹¬ì„±í•˜ë©´, ì§„í™”ë¥¼ í•©ë‹ˆë‹¤.\r\n(íƒ±ì»¤ í˜¹ì€ ë”œëŸ¬ë¡œ ì§„í™”ë°©í–¥ì„ ì„ íƒí•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.)\r\n"
+                           +"5. ë ˆë²¨ì—… ë° ì§„í™”ë¥¼ í• ì‹œ ê³µê²©ë ¥ ë° ì²´ë ¥ì´ ì¦ê°€í•©ë‹ˆë‹¤.\r\n"
+                           +"6. ìžì‹ ì˜ ë©”ì´í”Œëª¬ìœ¼ë¡œ ë‹¤ë¥¸ ìœ ì €ì™€ ë°°í‹€ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
             cm.dispose();
         }
     } else if (status == 1) {
-        if (¼±ÅÃ == 0) {
+        if (ì„ íƒ == 0) {
              if (cm.getText().length() == 4) {
-                 cm.sendOk("¿Í! "+cm.getText()+"¶ó´Ï Á¤¸» ÁÁÀº ÀÌ¸§ÀÌ±º¿ä!\r\n"
-                           +"±×·³ Á¦°¡ ÀÌÁ¦ Æ®·¹ÀÌ³Ê¸¦ µå¸±Å×´Ï, ¸ÞÀÌÇÃ¸óÀ» Å°¿ì¼¼¿ä\r\n\r\n"
-                           +"#r#e¡Ø¸ÞÀÌÇÃ¸óÀ» Å°¿ì´Â ¹æ¹ý ¹× ÁÖÀÇ»çÇ×¡Ø#n#k\r\n\r\n"
-                           +"1. ¸ÞÀÌÇÃ¸óÀº #i4032862##z4032862#¸¸ ¼·ÃëÇÕ´Ï´Ù.\r\n" 
-                           +"2. ¸ÞÀÌÇÃ¸óÀÌ #z4032862#À» ¼·ÃëÇÏ¸é, EXP¸¦ ¾ò½À´Ï´Ù.\r\n"
-                           +"3. ¸ÞÀÌÇÃ¸óÀÌ ÀÏÁ¤ EXP¸¦ ´Þ¼ºÇÏ¸é, ·¹º§¾÷À» ÇÕ´Ï´Ù.\r\n"
-                           +"4. ¸ÞÀÌÇÃ¸óÀÌ ÀÏÁ¤ ·¹º§À» ´Þ¼ºÇÏ¸é, ÁøÈ­¸¦ ÇÕ´Ï´Ù.\r\n(ÅÊÄ¿ È¤Àº µô·¯·Î ÁøÈ­¹æÇâÀ» ¼±ÅÃÇÒ ¼ö ÀÖ½À´Ï´Ù.)\r\n"
-                           +"5. ·¹º§¾÷ ¹× ÁøÈ­¸¦ ÇÒ½Ã °ø°Ý·Â ¹× Ã¼·ÂÀÌ Áõ°¡ÇÕ´Ï´Ù.\r\n"
-                           +"6. ÀÚ½ÅÀÇ ¸ÞÀÌÇÃ¸óÀ¸·Î ´Ù¸¥ À¯Àú¿Í ¹èÆ²ÀÌ °¡´ÉÇÕ´Ï´Ù.");
+                 cm.sendOk("ì™€! "+cm.getText()+"ë¼ë‹ˆ ì •ë§ ì¢‹ì€ ì´ë¦„ì´êµ°ìš”!\r\n"
+                           +"ê·¸ëŸ¼ ì œê°€ ì´ì œ íŠ¸ë ˆì´ë„ˆë¥¼ ë“œë¦´í…Œë‹ˆ, ë©”ì´í”Œëª¬ì„ í‚¤ìš°ì„¸ìš”\r\n\r\n"
+                           +"#r#eâ€»ë©”ì´í”Œëª¬ì„ í‚¤ìš°ëŠ” ë°©ë²• ë° ì£¼ì˜ì‚¬í•­â€»#n#k\r\n\r\n"
+                           +"1. ë©”ì´í”Œëª¬ì€ #i4032862##z4032862#ë§Œ ì„­ì·¨í•©ë‹ˆë‹¤.\r\n" 
+                           +"2. ë©”ì´í”Œëª¬ì´ #z4032862#ì„ ì„­ì·¨í•˜ë©´, EXPë¥¼ ì–»ìŠµë‹ˆë‹¤.\r\n"
+                           +"3. ë©”ì´í”Œëª¬ì´ ì¼ì • EXPë¥¼ ë‹¬ì„±í•˜ë©´, ë ˆë²¨ì—…ì„ í•©ë‹ˆë‹¤.\r\n"
+                           +"4. ë©”ì´í”Œëª¬ì´ ì¼ì • ë ˆë²¨ì„ ë‹¬ì„±í•˜ë©´, ì§„í™”ë¥¼ í•©ë‹ˆë‹¤.\r\n(íƒ±ì»¤ í˜¹ì€ ë”œëŸ¬ë¡œ ì§„í™”ë°©í–¥ì„ ì„ íƒí•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.)\r\n"
+                           +"5. ë ˆë²¨ì—… ë° ì§„í™”ë¥¼ í• ì‹œ ê³µê²©ë ¥ ë° ì²´ë ¥ì´ ì¦ê°€í•©ë‹ˆë‹¤.\r\n"
+                           +"6. ìžì‹ ì˜ ë©”ì´í”Œëª¬ìœ¼ë¡œ ë‹¤ë¥¸ ìœ ì €ì™€ ë°°í‹€ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
                  cm.getPlayer().setKeyValue("maplemon_mobname",cm.getText());
                  cm.getPlayer().setKeyValue("maplemon_mobcode",mobarrayrandom);
                  cm.getPlayer().setKeyValue("maplemon_moblevel",1);
@@ -57,7 +57,7 @@ function action(mode, type, selection) {
                  cm.gainItem(2433413, 1);
                  cm.dispose();
              } else {
-                 cm.sendOk("¸ÞÀÌÇÃ¸óÀÇ ÀÌ¸§Àº 4ÀÚ·Î ÇØ ÁÖ¼Å¾ßÇØ¿ä!");
+                 cm.sendOk("ë©”ì´í”Œëª¬ì˜ ì´ë¦„ì€ 4ìžë¡œ í•´ ì£¼ì…”ì•¼í•´ìš”!");
                  cm.dispose();
             }
         }

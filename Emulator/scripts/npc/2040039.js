@@ -1,12 +1,12 @@
 function start() {
 	 if (cm.getPlayer().getEventInstance().getProperty("LudiPQ_Gate") == 0) {
-	cm.sendNext("µÎ¹øÂ° ½ºÅ×ÀÌÁö¿¡ ´ëÇØ ¼³¸íÇØ µå¸®°Ú½À´Ï´Ù. ÀÌ °÷¿¡´Â Â÷¿øÀÇ ±Õ¿­·Î »ı°Ü³­ ¾îµÒÀÇ °ø°£ÀÌ ÀÖ½À´Ï´Ù. ÀÌ ¾îµÒÀÇ °ø°£À¸·Î ¼û¾î¹ö¸° #bÂ÷¿øÀÇ ½¦µµ¿ì¾ÆÀÌ#k¶ó´Â ¸ó½ºÅÍ¸¦ ¸ğµÎ ¾ø¾ÖÁÖ¼¼¿ä. ¸ğµç ¸ó½ºÅÍ¸¦ ¾ø¾Ø ÈÄ¿¡, Àú¿¡°Ô ¸»À» °É¾î ÁÖ½Ã¸é ´ÙÀ½ ½ºÅ×ÀÌÁö·Î °¥ ¼ö ÀÖµµ·Ï ±æÀ» ¿­¾îµå¸®°Ú½À´Ï´Ù.");
+	cm.sendNext("ë‘ë²ˆì§¸ ìŠ¤í…Œì´ì§€ì— ëŒ€í•´ ì„¤ëª…í•´ ë“œë¦¬ê² ìŠµë‹ˆë‹¤. ì´ ê³³ì—ëŠ” ì°¨ì›ì˜ ê· ì—´ë¡œ ìƒê²¨ë‚œ ì–´ë‘ ì˜ ê³µê°„ì´ ìˆìŠµë‹ˆë‹¤. ì´ ì–´ë‘ ì˜ ê³µê°„ìœ¼ë¡œ ìˆ¨ì–´ë²„ë¦° #bì°¨ì›ì˜ ì‰ë„ìš°ì•„ì´#kë¼ëŠ” ëª¬ìŠ¤í„°ë¥¼ ëª¨ë‘ ì—†ì• ì£¼ì„¸ìš”. ëª¨ë“  ëª¬ìŠ¤í„°ë¥¼ ì—†ì•¤ í›„ì—, ì €ì—ê²Œ ë§ì„ ê±¸ì–´ ì£¼ì‹œë©´ ë‹¤ìŒ ìŠ¤í…Œì´ì§€ë¡œ ê°ˆ ìˆ˜ ìˆë„ë¡ ê¸¸ì„ ì—´ì–´ë“œë¦¬ê² ìŠµë‹ˆë‹¤.");
 	cm.dispose();
     } else {
 	cm.getPlayer().getMap().broadcastMessage(Packages.packet.creators.MainPacketCreator.environmentChange("gate",2));
 	cm.getPlayer().getMap().broadcastMessage(Packages.packet.creators.MainPacketCreator.playSound("Party1/Clear"));
             cm.getPlayer().getMap().broadcastMessage(Packages.packet.creators.MainPacketCreator.showEffect("quest/party/clear"));
-	cm.sendNext("´ÙÀ½ ½ºÅ×ÀÌÁö·Î ÀÌµ¿ÇØ ÁÖ¼¼¿ä.");
+	cm.sendNext("ë‹¤ìŒ ìŠ¤í…Œì´ì§€ë¡œ ì´ë™í•´ ì£¼ì„¸ìš”.");
 	cm.dispose();
     }
    }

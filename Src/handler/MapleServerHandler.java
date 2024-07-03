@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  */
 package handler;
@@ -487,7 +487,7 @@ public class MapleServerHandler {
                 CashShopOperation.BuyCashItem(rh, c, c.getPlayer());
                 break;
             case COUPON_CODE:
-                rh.skip(2); //¼±¹°¹ŞÀ» ´ë»ó. (MapleAsciiString)
+                rh.skip(2); //ì„ ë¬¼ë°›ì„ ëŒ€ìƒ. (MapleAsciiString)
                 CashShopOperation.CouponCode(rh.readMapleAsciiString(), c);
                 break;
             case CS_UPDATE:
@@ -673,7 +673,7 @@ public class MapleServerHandler {
                 PlayerHandler.finalAttackRequest(rh, c);
                 break;
             case ZERO_CHAT:
-                ZeroHandler.ZeroChat(rh, c, "³à¼®, »ç½Ç ³Ê¸¦ ²Ï³ª ÁÁ¾ÆÇÏ´Â °Í °°¾Æ. ¾î¶»°Ô ¾Æ´À³Ä°í ? ¿ø·¡ ¿ì¸®´Â ÇÏ³ª¿´À¸´Ï±î ¸»ÇÏÁö ¾Ê¾Æµµ ´Ù ¾ËÁö.");
+                ZeroHandler.ZeroChat(rh, c, "ë…€ì„, ì‚¬ì‹¤ ë„ˆë¥¼ ê½¤ë‚˜ ì¢‹ì•„í•˜ëŠ” ê²ƒ ê°™ì•„. ì–´ë–»ê²Œ ì•„ëŠëƒê³  ? ì›ë˜ ìš°ë¦¬ëŠ” í•˜ë‚˜ì˜€ìœ¼ë‹ˆê¹Œ ë§í•˜ì§€ ì•Šì•„ë„ ë‹¤ ì•Œì§€.");
                 break;
             case ZERO_TAG:
                 ZeroHandler.ZeroTag(rh, c);

@@ -3,17 +3,17 @@
 
 /*
 
-	Ç»¾î ¿Â¶óÀÎ ¼Ò½º ÆÑÀÇ ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	í“¨ì–´ ì˜¨ë¼ì¸ ì†ŒìŠ¤ íŒ©ì˜ ìŠ¤í¬ë¦½íŠ¸ ì…ë‹ˆë‹¤.
 
-        Á¦ÀÛ : ÁÖÅ©ºí·¢
+        ì œì‘ : ì£¼í¬ë¸”ë™
 
-	¿£ÇÇ½Ã¾ÆÀÌµğ : 
+	ì—”í”¼ì‹œì•„ì´ë”” : 
 	
-	¿£ÇÇ½Ã ÀÌ¸§ :
+	ì—”í”¼ì‹œ ì´ë¦„ :
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : 
+	ì—”í”¼ì‹œê°€ ìˆëŠ” ë§µ : 
 
-	¿£ÇÇ½Ã ¼³¸í : 
+	ì—”í”¼ì‹œ ì„¤ëª… : 
 
 
 */
@@ -41,8 +41,8 @@ function action(mode, type, selection) {
             if (cm.haveItem(4001088, 1)) {
                 eim.broadcastPacket(MainPacketCreator.showEffect("quest/party/clear"));
                 eim.broadcastPacket(MainPacketCreator.playSound("Party1/Clear"));
-                eim.broadcastPlayerMsg(6, "µÎ ¹øÂ° ¹Ì·Î¹æÀÇ ¹®ÀÌ ¿­·È½À´Ï´Ù.");
-                cm.sendOk("µÎ ¹øÂ° ¹Ì·Î¹æÀÇ ¹®ÀÌ ¿­·È½À´Ï´Ù.");
+                eim.broadcastPlayerMsg(6, "ë‘ ë²ˆì§¸ ë¯¸ë¡œë°©ì˜ ë¬¸ì´ ì—´ë ¸ìŠµë‹ˆë‹¤.");
+                cm.sendOk("ë‘ ë²ˆì§¸ ë¯¸ë¡œë°©ì˜ ë¬¸ì´ ì—´ë ¸ìŠµë‹ˆë‹¤.");
                 cm.gainItem(4001088, -1);
                 eim.setProperty("Maze02open", "1");
                 eim.addAchievementRatio(5);
@@ -55,8 +55,8 @@ function action(mode, type, selection) {
             if (cm.haveItem(4001089, 1)) {
                 eim.broadcastPacket(MainPacketCreator.showEffect("quest/party/clear"));
                 eim.broadcastPacket(MainPacketCreator.playSound("Party1/Clear"));
-                eim.broadcastPlayerMsg(6, "¼¼ ¹øÂ° ¹Ì·Î¹æÀÇ ¹®ÀÌ ¿­·È½À´Ï´Ù.");
-                cm.sendOk("¼¼ ¹øÂ° ¹Ì·Î¹æÀÇ ¹®ÀÌ ¿­·È½À´Ï´Ù.");
+                eim.broadcastPlayerMsg(6, "ì„¸ ë²ˆì§¸ ë¯¸ë¡œë°©ì˜ ë¬¸ì´ ì—´ë ¸ìŠµë‹ˆë‹¤.");
+                cm.sendOk("ì„¸ ë²ˆì§¸ ë¯¸ë¡œë°©ì˜ ë¬¸ì´ ì—´ë ¸ìŠµë‹ˆë‹¤.");
                 cm.gainItem(4001089, -1);
                 eim.setProperty("Maze03open", "1");
                 eim.addAchievementRatio(5);
@@ -69,8 +69,8 @@ function action(mode, type, selection) {
             if (cm.haveItem(4001090, 1)) {
                 eim.broadcastPacket(MainPacketCreator.showEffect("quest/party/clear"));
                 eim.broadcastPacket(MainPacketCreator.playSound("Party1/Clear"));
-                eim.broadcastPlayerMsg(6, "³× ¹øÂ° ¹Ì·Î¹æÀÇ ¹®ÀÌ ¿­·È½À´Ï´Ù.");
-                cm.sendOk("³× ¹øÂ° ¹Ì·Î¹æÀÇ ¹®ÀÌ ¿­·È½À´Ï´Ù.");
+                eim.broadcastPlayerMsg(6, "ë„¤ ë²ˆì§¸ ë¯¸ë¡œë°©ì˜ ë¬¸ì´ ì—´ë ¸ìŠµë‹ˆë‹¤.");
+                cm.sendOk("ë„¤ ë²ˆì§¸ ë¯¸ë¡œë°©ì˜ ë¬¸ì´ ì—´ë ¸ìŠµë‹ˆë‹¤.");
                 cm.gainItem(4001090, -1);
                 eim.setProperty("Maze04open", "1");
                 eim.addAchievementRatio(5);
@@ -83,8 +83,8 @@ function action(mode, type, selection) {
             if (cm.haveItem(4001091, 1)) {
                 eim.broadcastPacket(MainPacketCreator.showEffect("quest/party/clear"));
                 eim.broadcastPacket(MainPacketCreator.playSound("Party1/Clear"));
-                eim.broadcastPlayerMsg(6, "´Ù¼¸ ¹øÂ° ¹Ì·Î¹æÀÇ ¹®ÀÌ ¿­·È½À´Ï´Ù.");
-                cm.sendOk("´Ù¼¸ ¹øÂ° ¹Ì·Î¹æÀÇ ¹®ÀÌ ¿­·È½À´Ï´Ù.");
+                eim.broadcastPlayerMsg(6, "ë‹¤ì„¯ ë²ˆì§¸ ë¯¸ë¡œë°©ì˜ ë¬¸ì´ ì—´ë ¸ìŠµë‹ˆë‹¤.");
+                cm.sendOk("ë‹¤ì„¯ ë²ˆì§¸ ë¯¸ë¡œë°©ì˜ ë¬¸ì´ ì—´ë ¸ìŠµë‹ˆë‹¤.");
                 cm.gainItem(4001091, -1);
                 eim.setProperty("Maze05open", "1");
                 eim.addAchievementRatio(5);
@@ -94,7 +94,7 @@ function action(mode, type, selection) {
                 cm.dispose();
             }
         } else {
-            cm.sendOk("¹Ì·Î¹æÀ» ¸ğµÎ Å¬¸®¾îÇÏ¼Ì½À´Ï´Ù.");
+            cm.sendOk("ë¯¸ë¡œë°©ì„ ëª¨ë‘ í´ë¦¬ì–´í•˜ì…¨ìŠµë‹ˆë‹¤.");
             cm.dispose();
         }
     }

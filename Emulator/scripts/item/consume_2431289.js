@@ -21,7 +21,7 @@ function action(mode, type, selection) {
             status--;
         if (status == 0) {
 var rand = Randomizer.nextInt(itemid.length);
-		cm.sendOk("ÃàÇÏÇØ~ ½ÃÅ©¸´ »óÀÚ¿¡¼­ #i" + itemid[rand] + "##b#z" + itemid[rand] + "#(" + number[rand] + ")°¡ ³ª¿Ô¾î");
+		cm.sendOk("ì¶•í•˜í•´~ ì‹œí¬ë¦¿ ìƒìì—ì„œ #i" + itemid[rand] + "##b#z" + itemid[rand] + "#(" + number[rand] + ")ê°€ ë‚˜ì™”ì–´");
 		cm.gainItem(itemid[rand], number[rand]);
 		cm.gainItem(2431289, -1);
 		cm.dispose();

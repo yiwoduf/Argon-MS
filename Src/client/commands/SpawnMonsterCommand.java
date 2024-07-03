@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹èÁöÈÆ raccoonfox69@gmail.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°°ì§€í›ˆ raccoonfox69@gmail.com
  * ==================================
  * 
  */
@@ -63,7 +63,7 @@ public class SpawnMonsterCommand implements Command {
 	}
 	final double newExpRatio = ((double) newhp / newexp);
 
-	c.getPlayer().dropMessage(6, "°æÇèÄ¡¿Í Ã¼·Â ºñÀ² : (Á¶Á¤ÈÄ-" + newExpRatio + " : Á¶Á¤Àü-" + oldExpRatio + ")");
+	c.getPlayer().dropMessage(6, "ê²½í—˜ì¹˜ì™€ ì²´ë ¥ ë¹„ìœ¨ : (ì¡°ì •í›„-" + newExpRatio + " : ì¡°ì •ì „-" + oldExpRatio + ")");
 
 	if (c.getPlayer().getGMLevel() <= 5) {
 	    if (mid == 8810018 || mid == 8810118 || mid == 5100001 || mid == 5130106 || mid == 8190001 || mid == 9001009 || mid == 9300256 || mid == 9300257 || mid == 9300280 || mid == 9300281 || mid == 9300282 || mid == 9300283 || mid == 9300284 ) {
@@ -88,7 +88,7 @@ public class SpawnMonsterCommand implements Command {
     @Override
     public CommandDefinition[] getDefinition() {
 	return new CommandDefinition[]{
-		    new CommandDefinition("½ºÆù", "<¸ó½ºÅÍID> (<hp HP¼³Á¤>) (<exp °æÇèÄ¡¼³Á¤>) (<php ÆÛ¼¾Æ®HP¼³Á¤>) (<pexp ÆÛ¼¾Æ®°æÇèÄ¡¼³Á¤>)", "ÇØ´ç °íÀ¯¹øÈ£IDÀÇ ¸ó½ºÅÍ¸¦ ¼ÒÈ¯ÇÕ´Ï´Ù.", 2)
+		    new CommandDefinition("ìŠ¤í°", "<ëª¬ìŠ¤í„°ID> (<hp HPì„¤ì •>) (<exp ê²½í—˜ì¹˜ì„¤ì •>) (<php í¼ì„¼íŠ¸HPì„¤ì •>) (<pexp í¼ì„¼íŠ¸ê²½í—˜ì¹˜ì„¤ì •>)", "í•´ë‹¹ ê³ ìœ ë²ˆí˜¸IDì˜ ëª¬ìŠ¤í„°ë¥¼ ì†Œí™˜í•©ë‹ˆë‹¤.", 2)
 	};
     }
 }

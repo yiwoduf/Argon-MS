@@ -12,7 +12,7 @@ function action(mode, type, selection) {
     else 
 	status--;
     if (status == 0) {
-	cm.sendYesNo("#fn³ª´®°íµñ Extrabold##r[ÀÔÀå Á¦ÇÑ]#k LV.140 ~ LV.180\r\n#b¸ó½ºÅÍ ÆÄÅ© ÀÍ½ºÆ®¸²#k ¿¡ ÀÔÀå ÇÏ½Ã°Ú¾î¿ä?");
+	cm.sendYesNo("#fnë‚˜ëˆ”ê³ ë”• Extrabold##r[ì…ì¥ ì œí•œ]#k LV.140 ~ LV.180\r\n#bëª¬ìŠ¤í„° íŒŒí¬ ìµìŠ¤íŠ¸ë¦¼#k ì— ì…ì¥ í•˜ì‹œê² ì–´ìš”?");
     } else if (status == 1) {
 	var jgys = Math.floor(Math.random() * mapids.length);
 	if (cm.getParty() && cm.isLeader()) {
@@ -26,21 +26,21 @@ function action(mode, type, selection) {
     			em.setProperty("LeaveMap",951000000 + "");
 			em.registerParty(cm.getParty(),cm.getMap());
     	                cm.killAllMob();
-			cm.sendOk("#fn³ª´®°íµñ Extrabold##b¸ó½ºÅÍ ÆÄÅ© ÀÍ½ºÆ®¸²#k ¿¡ ¿À½Å °É È¯¿µÇÕ´Ï´Ù.\r\n\r\n#fs14##r°ğ ¸ó½ºÅÍ ¼ÒÈ¯ÀÌ ½ÃÀÛµË´Ï´Ù.#k");
+			cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• Extrabold##bëª¬ìŠ¤í„° íŒŒí¬ ìµìŠ¤íŠ¸ë¦¼#k ì— ì˜¤ì‹  ê±¸ í™˜ì˜í•©ë‹ˆë‹¤.\r\n\r\n#fs14##rê³§ ëª¬ìŠ¤í„° ì†Œí™˜ì´ ì‹œì‘ë©ë‹ˆë‹¤.#k");
 		    } else {
-			cm.sendOk("#fn³ª´®°íµñ Extrabold##rÀÌ¹Ì ´Ù¸¥ ÆÄÆ¼°¡ ÀÌ¿ëÇÏ°í ÀÖ½À´Ï´Ù.#k");
+			cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• Extrabold##rì´ë¯¸ ë‹¤ë¥¸ íŒŒí‹°ê°€ ì´ìš©í•˜ê³  ìˆìŠµë‹ˆë‹¤.#k");
                         cm.dispose();
                     }
             	} else {
-                    cm.sendOk("#fn³ª´®°íµñ Extrabold##rÆÄÆ¼¿ø Áß ·¹º§ÀÌ ¸ÂÁö ¾Ê´Â ÆÄÆ¼¿øÀÌ ÀÖ½À´Ï´Ù.#k");
+                    cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• Extrabold##ríŒŒí‹°ì› ì¤‘ ë ˆë²¨ì´ ë§ì§€ ì•ŠëŠ” íŒŒí‹°ì›ì´ ìˆìŠµë‹ˆë‹¤.#k");
                     cm.dispose();
             	}
             } else {
-            	cm.sendOk("#fn³ª´®°íµñ Extrabold##i4001760# #dÀÍ½ºÆ®¸² Æ¼ÄÏ#k ÀÌ ÀÖ´ÂÁö È®ÀÎÇØ ÁÖ¼¼¿ä.\r\n\r\n          * #rÆ¼ÄÏ ±¸ÀÔÀº ¿ŞÂÊÀÇ Àú¸¦ Ã£¾Æ ¿À¼¼¿ä.#k");
+            	cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• Extrabold##i4001760# #dìµìŠ¤íŠ¸ë¦¼ í‹°ì¼“#k ì´ ìˆëŠ”ì§€ í™•ì¸í•´ ì£¼ì„¸ìš”.\r\n\r\n          * #rí‹°ì¼“ êµ¬ì…ì€ ì™¼ìª½ì˜ ì €ë¥¼ ì°¾ì•„ ì˜¤ì„¸ìš”.#k");
                 cm.dispose();
             }
     	} else {
-	    cm.sendOk("#fn³ª´®°íµñ Extrabold##rÆÄÆ¼ÀåÀ» ÅëÇØ¼­¸¸ ÀÔÀåÀÌ °¡´ÉÇÕ´Ï´Ù.#k");
+	    cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• Extrabold##ríŒŒí‹°ì¥ì„ í†µí•´ì„œë§Œ ì…ì¥ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.#k");
             cm.dispose();
     	}
 	cm.dispose();

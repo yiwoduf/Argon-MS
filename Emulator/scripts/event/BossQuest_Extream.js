@@ -2,16 +2,16 @@ var eventmapid = 931050800;
 var returnmap = 1000000;
 
 var monster = new Array(
-	9001014, // ÆøÁÖÇÑ ¸¶ÇÏ (200¸¸)
-	8180000, // ¸¶´¨ 375
-	8180001, // ±×¸®ÇÁ 
-	5250004, // Â÷¿ì (637¸¸ 5000)
-	5250007, // ¿¡ÇÇ³×¾Æ (1425¸¸)
-	8140510, // Çª¼Ò (1000)
-	8220011, // ¾Æ¿ìÇÁÇìº¥ (1769¸¸ 7196)
-	8220012, // ¿Àº£·Ğ (2167¸¸ 9692)
-	8870104, // ºíÅõ(520¸¸)
-	9001010 // °ËÀº ¸¶³à (930¸¸)
+	9001014, // í­ì£¼í•œ ë§ˆí•˜ (200ë§Œ)
+	8180000, // ë§ˆë‡½ 375
+	8180001, // ê·¸ë¦¬í”„ 
+	5250004, // ì°¨ìš° (637ë§Œ 5000)
+	5250007, // ì—í”¼ë„¤ì•„ (1425ë§Œ)
+	8140510, // í‘¸ì†Œ (1000)
+	8220011, // ì•„ìš°í”„í—¤ë²¤ (1769ë§Œ 7196)
+	8220012, // ì˜¤ë² ë¡  (2167ë§Œ 9692)
+	8870104, // ë¸”íˆ¬(520ë§Œ)
+	9001010 // ê²€ì€ ë§ˆë…€ (930ë§Œ)
 
     );
 
@@ -47,71 +47,71 @@ function monsterSpawn(eim) { // Custom function
 
     eim.registerMonster(mob);
     switch (monsterid) {
-	case 9001014: // ÆøÁÖÇÑ ¸¶ÇÏ (200¸¸)
+	case 9001014: // í­ì£¼í•œ ë§ˆí•˜ (200ë§Œ)
 	    var modified = em.newMonsterStats();
 	    modified.setOExp(mob.getMobExp() * 15);
 	    modified.setOHp(400000000);
 	    modified.setOMp(mob.getMobMaxMp() * 1);
 	    mob.setOverrideStats(modified);
 	    break;	
-	case 8180000: // ¸¶´¨Â» (375¸¸)
+	case 8180000: // ë§ˆë‡½ì¨© (375ë§Œ)
 	    var modified = em.newMonsterStats();
 	    modified.setOExp(mob.getMobExp() * 15);
 	    modified.setOHp(600000000);
 	    modified.setOMp(mob.getMobMaxMp() * 1);
 	    mob.setOverrideStats(modified);
 	    break;
-	case 8180001: // ±×¸®ÇÁÂ»
+	case 8180001: // ê·¸ë¦¬í”„ì¨©
 	    var modified = em.newMonsterStats();
 	    modified.setOExp(mob.getMobExp() * 15);
 	    modified.setOHp(800000000);
 	    modified.setOMp(mob.getMobMaxMp() * 1);
 	    mob.setOverrideStats(modified);
 	    break;
-	case 9300482: // ÄËÅ¸·Î¿ì½º Å· (515¸¸)
+	case 9300482: // ì¼„íƒ€ë¡œìš°ìŠ¤ í‚¹ (515ë§Œ)
 	    var modified = em.newMonsterStats();
 	    modified.setOExp(mob.getMobExp() * 15);
 	    modified.setOHp(1900000000);
 	    modified.setOMp(mob.getMobMaxMp() * 1);
 	    mob.setOverrideStats(modified);
 	    break;
-	case 5250004: // Â÷¿ì (637¸¸ 5000)
+	case 5250004: // ì°¨ìš° (637ë§Œ 5000)
 	    var modified = em.newMonsterStats();
 	    modified.setOExp(mob.getMobExp() * 15);
 	    modified.setOHp(3200000000);
 	    modified.setOMp(mob.getMobMaxMp() * 1);
 	    mob.setOverrideStats(modified);
 	    break;
-	case 5250007: // ¿¡ÇÇ³×¾Æ (1425¸¸)
+	case 5250007: // ì—í”¼ë„¤ì•„ (1425ë§Œ)
 	    var modified = em.newMonsterStats();
 	    modified.setOExp(mob.getMobExp() * 15);
 	    modified.setOHp(6700000000);
 	    modified.setOMp(mob.getMobMaxMp() * 1);
 	    mob.setOverrideStats(modified);
 	    break;
-	case 8140510: // Çª¼Ò 1545¸¸ 7418)
+	case 8140510: // í‘¸ì†Œ 1545ë§Œ 7418)
 	    var modified = em.newMonsterStats();
 	    modified.setOExp(mob.getMobExp() * 15);
 	    modified.setOHp(12500000000);
 	    modified.setOMp(mob.getMobMaxMp() * 1);
 	    mob.setOverrideStats(modified);
 	    break;
-	case 8220011: // ¾Æ¿ìÇÁÇìº¥ (1769¸¸ 7196)
-	case 8220012: // ¿Àº£·Ğ (2167¸¸ 9692)
+	case 8220011: // ì•„ìš°í”„í—¤ë²¤ (1769ë§Œ 7196)
+	case 8220012: // ì˜¤ë² ë¡  (2167ë§Œ 9692)
 	    var modified = em.newMonsterStats();
 	    modified.setOExp(mob.getMobExp() * 15);
 	    modified.setOHp(32000000000);
 	    modified.setOMp(mob.getMobMaxMp() * 1);
 	    mob.setOverrideStats(modified);
 	    break;
-	case 8870104: // ºí·¯µåÅõ½º (520¸¸)
+	case 8870104: // ë¸”ëŸ¬ë“œíˆ¬ìŠ¤ (520ë§Œ)
 	    var modified = em.newMonsterStats();
 	    modified.setOExp(mob.getMobExp() * 15);
 	    modified.setOHp(64000000000);
 	    modified.setOMp(mob.getMobMaxMp() * 1);
 	    mob.setOverrideStats(modified);
 	    break;	
-	case 9001010: // °ËÀº ¸¶³à (930¸¸)
+	case 9001010: // ê²€ì€ ë§ˆë…€ (930ë§Œ)
 	    var modified = em.newMonsterStats();
 	    modified.setOExp(mob.getMobExp() * 15);
 	    modified.setOHp(90000000000);
@@ -158,19 +158,19 @@ function allMonstersDead(eim) {
     eim.restartEventTimer(11000);
 
     var mobnum = parseInt(eim.getProperty("monster_number"));
-    var num = mobnum * 0; // 0 Æ÷ÀÎÆ®¸¦ »ç³ÉÀ¸·Î È¹µæÇÕ´Ï´Ù.
+    var num = mobnum * 0; // 0 í¬ì¸íŠ¸ë¥¼ ì‚¬ëƒ¥ìœ¼ë¡œ íšë“í•©ë‹ˆë‹¤.
     var totalp = parseInt(eim.getProperty("points")) + num;
 
     eim.setProperty("points", totalp);
 
-    eim.broadcastPlayerMsg(5, "[¾Ë¸²] ½ºÅ×ÀÌÁö¸¦ Å¬¸®¾îÇÏ¼Ì½À´Ï´Ù. ¸ğµç ½ºÅ×ÀÌÁö¸¦ Åë°úÇÏ¸é BP¸¦ ¾òÀ¸½Ç ¼ö ÀÖ½À´Ï´Ù.");
+    eim.broadcastPlayerMsg(5, "[ì•Œë¦¼] ìŠ¤í…Œì´ì§€ë¥¼ í´ë¦¬ì–´í•˜ì…¨ìŠµë‹ˆë‹¤. ëª¨ë“  ìŠ¤í…Œì´ì§€ë¥¼ í†µê³¼í•˜ë©´ BPë¥¼ ì–»ìœ¼ì‹¤ ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
 
     eim.saveBossQuest(num); 
 
     if (mobnum < monster.length) {
 } else {
-	eim.saveBossQuest(15000); // º¸³Ê½º Æ÷ÀÎÆ®
-	eim.broadcastPlayerMsg(2, "[Ch.1] GMº£ÀÎ´Ô : ÃàÇÏÇÕ´Ï´Ù. ÀÍ½ºÆ®¸² ¸ğµå¸¦ Å¬¸®¾îÇÏ¼Ì½À´Ï´Ù. [Å¬¸®¾î BP : 15000] ¹İµå½Ã ÅğÀå ÈÄ Ã¤ÆÃÃ¢¿¡ <@·¢>À» ÀÔ·ÂÇØÁÖ¼¼¿ä!");
+	eim.saveBossQuest(15000); // ë³´ë„ˆìŠ¤ í¬ì¸íŠ¸
+	eim.broadcastPlayerMsg(2, "[Ch.1] GMë² ì¸ë‹˜ : ì¶•í•˜í•©ë‹ˆë‹¤. ìµìŠ¤íŠ¸ë¦¼ ëª¨ë“œë¥¼ í´ë¦¬ì–´í•˜ì…¨ìŠµë‹ˆë‹¤. [í´ë¦¬ì–´ BP : 15000] ë°˜ë“œì‹œ í‡´ì¥ í›„ ì±„íŒ…ì°½ì— <@ë™>ì„ ì…ë ¥í•´ì£¼ì„¸ìš”!");
     }
 // When invoking unregisterMonster(MapleMonster mob) OR killed
 // Happens only when size = 0

@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -45,7 +45,7 @@ public class ByteStream {
             System.arraycopy(arr, pos, now, 0, arr.length - pos);
             nows = HexTool.toString(now);
         }
-        return "¸®½Ãºê µ¥ÀÌÅÍ : " + nows;
+        return "ë¦¬ì‹œë¸Œ ë°ì´í„° : " + nows;
     }
 
     public String toString(final boolean b) {

@@ -1,6 +1,6 @@
 var select = -1;
 
-var º° = "#fUI/FarmUI.img/objectStatus/star/whole#";
+var ë³„ = "#fUI/FarmUI.img/objectStatus/star/whole#";
 
 importPackage(Packages.constants);
 
@@ -19,1042 +19,1042 @@ function action(mode, type, selection) {
     }
     if (status == 0) {
 	if (cm.getPlayer().getMapId() == 680000000) {
-	cm.sendYesNo("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                              ¿øÇÏ½Ã´Â ÁøÇà ¿©ºÎ¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n#fs13#\r\n#bº¸Á¶ ¹«±â#k ´Â ±¸¸Å½Ã ¹Ù·Î #r±³Ã¼ ÀåÂø#k µÇ¹Ç·Î #rÁÖÀÇ#k ¹Ù¶ø´Ï´Ù.\r\n\r\n30 ·¹º§#k : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§#k : #r100 ¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k\r\n\r\n#bº¸Á¶ ¹«±â#k ±¸ÀÔÀ» °è¼Ó ÁøÇà ÇÏ½Ã°Ú½À´Ï±î.?");
+	cm.sendYesNo("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                              ì›í•˜ì‹œëŠ” ì§„í–‰ ì—¬ë¶€ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n#fs13#\r\n#bë³´ì¡° ë¬´ê¸°#k ëŠ” êµ¬ë§¤ì‹œ ë°”ë¡œ #rêµì²´ ì¥ì°©#k ë˜ë¯€ë¡œ #rì£¼ì˜#k ë°”ëë‹ˆë‹¤.\r\n\r\n30 ë ˆë²¨#k : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨#k : #r100 ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k êµ¬ì…ì„ ê³„ì† ì§„í–‰ í•˜ì‹œê² ìŠµë‹ˆê¹Œ.?");
 	} else {
-		cm.sendOk("#fn³ª´®°íµñ Extrabold##rº¸Á¶¹«±â »óÁ¡Àº ±¤Àå¿¡¼­¸¸ ÀÌ¿ëÀÌ °¡´ÉÇÕ´Ï´Ù.#k");
+		cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• Extrabold##rë³´ì¡°ë¬´ê¸° ìƒì ì€ ê´‘ì¥ì—ì„œë§Œ ì´ìš©ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.#k");
 		cm.dispose();
 	}
       } else if (status == 1) {
-	var bojo = "           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n#fs11#";
-	bojo += "#L1##v1352203# #b¸ğÇè°¡#k º¸Á¶ ¹«±â"
-	bojo += "#L2##v1353203# #bÅ°³×½Ã½º#k º¸Á¶ ¹«±â\r\n";
-	bojo += "#L3##v1353103# #b¿µ¿õ#k º¸Á¶ ¹«±â";
-	bojo += "#L4##v1352973# #b½Ã±×³Ê½º#k º¸Á¶ ¹«±â\r\n";
-	bojo += "#L5##v1352503# #b³ë¹Ù#k º¸Á¶ ¹«±â";
-	bojo += "#L6##v1352953# #b·¹Áö½ºÅÁ½º#k º¸Á¶ ¹«±â";
+	var bojo = "           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n#fs11#";
+	bojo += "#L1##v1352203# #bëª¨í—˜ê°€#k ë³´ì¡° ë¬´ê¸°"
+	bojo += "#L2##v1353203# #bí‚¤ë„¤ì‹œìŠ¤#k ë³´ì¡° ë¬´ê¸°\r\n";
+	bojo += "#L3##v1353103# #bì˜ì›…#k ë³´ì¡° ë¬´ê¸°";
+	bojo += "#L4##v1352973# #bì‹œê·¸ë„ˆìŠ¤#k ë³´ì¡° ë¬´ê¸°\r\n";
+	bojo += "#L5##v1352503# #bë…¸ë°”#k ë³´ì¡° ë¬´ê¸°";
+	bojo += "#L6##v1352953# #bë ˆì§€ìŠ¤íƒ•ìŠ¤#k ë³´ì¡° ë¬´ê¸°";
 	cm.sendSimple(bojo);
       } else if (selection == 1) {
-	var Adventurer = "           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n#fs12#";
-	Adventurer += "#L11##v1352202# #bÀü»ç#k º¸Á¶ ¹«±â\r\n"
-	Adventurer += "#L12##v1352251# #b¸¶¹ı»ç#k º¸Á¶ ¹«±â\r\n";
-	Adventurer += "#L13##v1352273# #b±Ã¼ö#k º¸Á¶ ¹«±â\r\n";
-	Adventurer += "#L14##v1352293# #bµµÀû#k º¸Á¶ ¹«±â\r\n#l ";
-	Adventurer += "#L15##v1352913# #bÇØÀû#k º¸Á¶ ¹«±â";
+	var Adventurer = "           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n#fs12#";
+	Adventurer += "#L11##v1352202# #bì „ì‚¬#k ë³´ì¡° ë¬´ê¸°\r\n"
+	Adventurer += "#L12##v1352251# #bë§ˆë²•ì‚¬#k ë³´ì¡° ë¬´ê¸°\r\n";
+	Adventurer += "#L13##v1352273# #bê¶ìˆ˜#k ë³´ì¡° ë¬´ê¸°\r\n";
+	Adventurer += "#L14##v1352293# #bë„ì #k ë³´ì¡° ë¬´ê¸°\r\n#l ";
+	Adventurer += "#L15##v1352913# #bí•´ì #k ë³´ì¡° ë¬´ê¸°";
 	cm.sendSimple(Adventurer);
       } else if (selection == 2) {
-	var Kinesys = "           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n#fs12#";
-	Kinesys += "#L2100##v1353203# #bÅ°³×½Ã½º#k º¸Á¶ ¹«±â\r\n"
+	var Kinesys = "           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n#fs12#";
+	Kinesys += "#L2100##v1353203# #bí‚¤ë„¤ì‹œìŠ¤#k ë³´ì¡° ë¬´ê¸°\r\n"
 	cm.sendSimple(Kinesys);
       } else if (selection == 3) {
-	var Hero = "           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n#fs11#";
-	Hero += "#L31##v1352933# #b¾Æ¶õ#k º¸Á¶ ¹«±â";
-	Hero += "#L32##v1352943# #b¿¡¹İ#k º¸Á¶ ¹«±â\r\n";
-	Hero += "#L33##v1352103# #bÆÒÅÒ#k º¸Á¶ ¹«±â";
-	Hero += "#L34##v1353103# #bÀº¿ù#k º¸Á¶ ¹«±â\r\n";
-	Hero += "#L35##v1352403# #b·ç¹Ì³Ê½º#k º¸Á¶ ¹«±â";
-	Hero += "#L36##v1352003# #b¸Ş¸£¼¼µ¥½º#k º¸Á¶ ¹«±â\r\n";
+	var Hero = "           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n#fs11#";
+	Hero += "#L31##v1352933# #bì•„ë€#k ë³´ì¡° ë¬´ê¸°";
+	Hero += "#L32##v1352943# #bì—ë°˜#k ë³´ì¡° ë¬´ê¸°\r\n";
+	Hero += "#L33##v1352103# #bíŒ¬í…€#k ë³´ì¡° ë¬´ê¸°";
+	Hero += "#L34##v1353103# #bì€ì›”#k ë³´ì¡° ë¬´ê¸°\r\n";
+	Hero += "#L35##v1352403# #bë£¨ë¯¸ë„ˆìŠ¤#k ë³´ì¡° ë¬´ê¸°";
+	Hero += "#L36##v1352003# #bë©”ë¥´ì„¸ë°ìŠ¤#k ë³´ì¡° ë¬´ê¸°\r\n";
 	cm.sendSimple(Hero);
       } else if (selection == 4) {
-	var Cygnus = "           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n#fs12#";
-	Cygnus += "#L41##v1352972# #b½Ã±×³Ê½º#k º¸Á¶ ¹«±â\r\n"
-	Cygnus += "#L4100##v1098002# #b¹ÌÇÏÀÏ#k º¸Á¶ ¹«±â\r\n"
+	var Cygnus = "           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n#fs12#";
+	Cygnus += "#L41##v1352972# #bì‹œê·¸ë„ˆìŠ¤#k ë³´ì¡° ë¬´ê¸°\r\n"
+	Cygnus += "#L4100##v1098002# #bë¯¸í•˜ì¼#k ë³´ì¡° ë¬´ê¸°\r\n"
 	cm.sendSimple(Cygnus);
       }  else if (selection == 5) {
-	var Nova = "           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n#fs12#";
-	Nova += "#L51##v1352503# #bÄ«ÀÌÀú#k º¸Á¶ ¹«±â\r\n#l "
-	Nova += "#L52##v1352604# #b¿£Á©¸¯¹ö½ºÅÍ#k º¸Á¶ ¹«±â\r\n";
+	var Nova = "           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n#fs12#";
+	Nova += "#L51##v1352503# #bì¹´ì´ì €#k ë³´ì¡° ë¬´ê¸°\r\n#l "
+	Nova += "#L52##v1352604# #bì—”ì ¤ë¦­ë²„ìŠ¤í„°#k ë³´ì¡° ë¬´ê¸°\r\n";
 	cm.sendSimple(Nova);
       }  else if (selection == 6) {
-	var Resistance = "           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n#fs12#";
-	Resistance += "#L61##v1099009# #bµ¥¸ó ½½·¹ÀÌ¾î & ¾îº¥Á®#k º¸Á¶ ¹«±â\r\n"
-	Resistance += "#L62##v1352952# #b¹èÆ²¸ŞÀÌÁö#k º¸Á¶ ¹«±â\r\n";
-	Resistance += "#L63##v1352962# #b¿ÍÀÏµåÇåÅÍ#k º¸Á¶ ¹«±â\r\n";
-	Resistance += "#L64##v1352702# #b¸ŞÄ«´Ğ#k º¸Á¶ ¹«±â\r\n#l ";
-	Resistance += "#L65##v1353004# #bÁ¦³í#k º¸Á¶ ¹«±â\r\n#l ";
-	Resistance += "#L66##v1353403# #bºí·¡½ºÅÍ#k º¸Á¶ ¹«±â\r\n#l ";
+	var Resistance = "           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n#fs12#";
+	Resistance += "#L61##v1099009# #bë°ëª¬ ìŠ¬ë ˆì´ì–´ & ì–´ë²¤ì ¸#k ë³´ì¡° ë¬´ê¸°\r\n"
+	Resistance += "#L62##v1352952# #bë°°í‹€ë©”ì´ì§€#k ë³´ì¡° ë¬´ê¸°\r\n";
+	Resistance += "#L63##v1352962# #bì™€ì¼ë“œí—Œí„°#k ë³´ì¡° ë¬´ê¸°\r\n";
+	Resistance += "#L64##v1352702# #bë©”ì¹´ë‹‰#k ë³´ì¡° ë¬´ê¸°\r\n#l ";
+	Resistance += "#L65##v1353004# #bì œë…¼#k ë³´ì¡° ë¬´ê¸°\r\n#l ";
+	Resistance += "#L66##v1353403# #bë¸”ë˜ìŠ¤í„°#k ë³´ì¡° ë¬´ê¸°\r\n#l ";
 	cm.sendSimple(Resistance);
       } else if (selection == 11) {
-	var Warrior = "           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n#fs12#";
-	Warrior += "#L100##v1352202# #bÈ÷¾î·Î#k º¸Á¶ ¹«±â\r\n"
-	Warrior += "#L200##v1352213# #bÆÈ¶óµò#k º¸Á¶ ¹«±â\r\n";
-	Warrior += "#L300##v1352223# #b´ÙÅ©³ªÀÌÆ®#k º¸Á¶ ¹«±â\r\n";
+	var Warrior = "           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n#fs12#";
+	Warrior += "#L100##v1352202# #bíˆì–´ë¡œ#k ë³´ì¡° ë¬´ê¸°\r\n"
+	Warrior += "#L200##v1352213# #bíŒ”ë¼ë”˜#k ë³´ì¡° ë¬´ê¸°\r\n";
+	Warrior += "#L300##v1352223# #bë‹¤í¬ë‚˜ì´íŠ¸#k ë³´ì¡° ë¬´ê¸°\r\n";
 	cm.sendSimple(Warrior);
       } else if (selection == 12) {
-	var Magician = "           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n#fs12#";
-	Magician += "#L400##v1352233# #b¾ÆÅ©¸ŞÀÌÁö(ºÒ,µ¶)#k º¸Á¶ ¹«±â\r\n"
-	Magician += "#L500##v1352243# #b¾ÆÅ©¸ŞÀÌÁö(½ã,Äİ)#k º¸Á¶ ¹«±â\r\n";
-	Magician += "#L600##v1352253# #bºñ¼ó#k º¸Á¶ ¹«±â\r\n";
+	var Magician = "           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n#fs12#";
+	Magician += "#L400##v1352233# #bì•„í¬ë©”ì´ì§€(ë¶ˆ,ë…)#k ë³´ì¡° ë¬´ê¸°\r\n"
+	Magician += "#L500##v1352243# #bì•„í¬ë©”ì´ì§€(ì¬,ì½œ)#k ë³´ì¡° ë¬´ê¸°\r\n";
+	Magician += "#L600##v1352253# #bë¹„ìˆ#k ë³´ì¡° ë¬´ê¸°\r\n";
 	cm.sendSimple(Magician);
       } else if (selection == 13) {
-	var Archer = "           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n#fs12#";
-	Archer += "#L700##v1352262# #bº¸¿ì¸¶½ºÅÍ#k º¸Á¶ ¹«±â\r\n"
-	Archer += "#L800##v1352272# #b½Å±Ã#k º¸Á¶ ¹«±â\r\n";
+	var Archer = "           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n#fs12#";
+	Archer += "#L700##v1352262# #bë³´ìš°ë§ˆìŠ¤í„°#k ë³´ì¡° ë¬´ê¸°\r\n"
+	Archer += "#L800##v1352272# #bì‹ ê¶#k ë³´ì¡° ë¬´ê¸°\r\n";
 	cm.sendSimple(Archer);
       } else if (selection == 14) {
-	var Thief = "           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n#fs12#";
-	Thief += "#L900##v1352292# #b³ªÀÌÆ®·Îµå#k º¸Á¶ ¹«±â\r\n"
-	Thief += "#L1000##v1352283# #b¼¨µµ¾î#k º¸Á¶ ¹«±â\r\n";
+	var Thief = "           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n#fs12#";
+	Thief += "#L900##v1352292# #bë‚˜ì´íŠ¸ë¡œë“œ#k ë³´ì¡° ë¬´ê¸°\r\n"
+	Thief += "#L1000##v1352283# #bì„€ë„ì–´#k ë³´ì¡° ë¬´ê¸°\r\n";
 	cm.sendSimple(Thief);
       } else if (selection == 15) {
-	var Pirate = "           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n#fs12#";
-	Pirate += "#L1100##v1352913# #bÄ¸Æ¾#k º¸Á¶ ¹«±â\r\n"
-	Pirate += "#L1200##v1352902# #b¹ÙÀÌÆÛ#k º¸Á¶ ¹«±â\r\n";
-	Pirate += "#L1300##v1352923# #bÄ³³í½´ÅÍ#k º¸Á¶ ¹«±â\r\n";
+	var Pirate = "           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n#fs12#";
+	Pirate += "#L1100##v1352913# #bìº¡í‹´#k ë³´ì¡° ë¬´ê¸°\r\n"
+	Pirate += "#L1200##v1352902# #bë°”ì´í¼#k ë³´ì¡° ë¬´ê¸°\r\n";
+	Pirate += "#L1300##v1352923# #bìºë…¼ìŠˆí„°#k ë³´ì¡° ë¬´ê¸°\r\n";
 	cm.sendSimple(Pirate);
-      } else if (selection == 100) { //È÷¾î·Î
+      } else if (selection == 100) { //íˆì–´ë¡œ
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 110) {
 	cm.addEquip(-10, 1352200);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 111) {
 	cm.addEquip(-10, 1352201);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 112) {
 	cm.addEquip(-10, 1352202);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       }
-      } else if (selection == 200) { //ÆÈ¶óµò
+      } else if (selection == 200) { //íŒ”ë¼ë”˜
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 120) {
 	cm.addEquip(-10, 1352210);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 121) {
 	cm.addEquip(-10, 1352211);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 122) {
 	cm.addEquip(-10, 1352212);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       }
-      } else if (selection == 300) { //´ÙÅ©³ªÀÌÆ®
+      } else if (selection == 300) { //ë‹¤í¬ë‚˜ì´íŠ¸
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 130) {
 	cm.addEquip(-10, 1352220);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 131) {
 	cm.addEquip(-10, 1352221);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 132) {
 	cm.addEquip(-10, 1352222);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } 
-	//¸ğÇè°¡ : Àü»ç ³¡
-	//¸ğÇè°¡ : ¸¶¹ı»ç ½ÃÀÛ
-      } else if (selection == 400) { //¾ÆÅ©¸ŞÀÌÁö(ºÒ,µ¶)
+	//ëª¨í—˜ê°€ : ì „ì‚¬ ë
+	//ëª¨í—˜ê°€ : ë§ˆë²•ì‚¬ ì‹œì‘
+      } else if (selection == 400) { //ì•„í¬ë©”ì´ì§€(ë¶ˆ,ë…)
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 210) {
 	cm.addEquip(-10, 1352230);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 211) {
 	cm.addEquip(-10, 1352231);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 212) {
 	cm.addEquip(-10, 1352232);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       }
-      } else if (selection == 500) { //¾ÆÅ©¸ŞÀÌÁö(½ã,Äİ)
+      } else if (selection == 500) { //ì•„í¬ë©”ì´ì§€(ì¬,ì½œ)
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 220) {
 	cm.addEquip(-10, 1352240);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 221) {
 	cm.addEquip(-10, 1352241);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 222) {
 	cm.addEquip(-10, 1352242);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       }
-      } else if (selection == 600) { //ºñ¼ó
+      } else if (selection == 600) { //ë¹„ìˆ
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 230) {
 	cm.addEquip(-10, 1352250);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 231) {
 	cm.addEquip(-10, 1352251);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 232) {
 	cm.addEquip(-10, 1352252);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       }
-	//¸ğÇè°¡ : ¸¶¹ı»ç ³¡
-	//¸ğÇè°¡ : ±Ã¼ö ½ÃÀÛ
-      } else if (selection == 700) { //º¸¿ì¸¶½ºÅÍ
+	//ëª¨í—˜ê°€ : ë§ˆë²•ì‚¬ ë
+	//ëª¨í—˜ê°€ : ê¶ìˆ˜ ì‹œì‘
+      } else if (selection == 700) { //ë³´ìš°ë§ˆìŠ¤í„°
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 310) {
 	cm.addEquip(-10, 1352260);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 311) {
 	cm.addEquip(-10, 1352261);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 312) {
 	cm.addEquip(-10, 1352262);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       }
-      } else if (selection == 800) { //½Å±Ã
+      } else if (selection == 800) { //ì‹ ê¶
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 320) {
 	cm.addEquip(-10, 1352270);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 321) {
 	cm.addEquip(-10, 1352271);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 322) {
 	cm.addEquip(-10, 1352272);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       }
-	//¸ğÇè°¡ : ±Ã¼ö ³¡
-	//¸ğÇè°¡ : µµÀû ½ÃÀÛ
-      } else if (selection == 900) { //³ªÀÌÆ®·Îµå
+	//ëª¨í—˜ê°€ : ê¶ìˆ˜ ë
+	//ëª¨í—˜ê°€ : ë„ì  ì‹œì‘
+      } else if (selection == 900) { //ë‚˜ì´íŠ¸ë¡œë“œ
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 410) {
 	cm.addEquip(-10, 1352290);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 411) {
 	cm.addEquip(-10, 1352291);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 412) {
 	cm.addEquip(-10, 1352292);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       }
-      } else if (selection == 1000) { //¼¨µµ¾î
+      } else if (selection == 1000) { //ì„€ë„ì–´
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 420) {
 	cm.addEquip(-10, 1352280);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 421) {
 	cm.addEquip(-10, 1352281);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 422) {
 	cm.addEquip(-10, 1352282);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       }
-	//¸ğÇè°¡ : µµÀû ³¡
-	//¸ğÇè°¡ : ÇØÀû ½ÃÀÛ
-      } else if (selection == 1100) { //Ä¸Æ¾
+	//ëª¨í—˜ê°€ : ë„ì  ë
+	//ëª¨í—˜ê°€ : í•´ì  ì‹œì‘
+      } else if (selection == 1100) { //ìº¡í‹´
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 520) {
 	cm.addEquip(-10, 1352910);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 521) {
 	cm.addEquip(-10, 1352911);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 522) {
 	cm.addEquip(-10, 1352912);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       }
-      } else if (selection == 1200) { //¹ÙÀÌÆÛ
+      } else if (selection == 1200) { //ë°”ì´í¼
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 510) {
 	cm.addEquip(-10, 1352900);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 511) {
 	cm.addEquip(-10, 1352901);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 512) {
 	cm.addEquip(-10, 1352902);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       }
-      } else if (selection == 1300) { //Ä³³í½´ÅÍ
+      } else if (selection == 1300) { //ìºë…¼ìŠˆí„°
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 530) {
 	cm.addEquip(-10, 1352920);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 531) {
 	cm.addEquip(-10, 1352921);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 532) {
 	cm.addEquip(-10, 1352922);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       }
-      } else if (selection == 2100) { //Å°³×½Ã½º
+      } else if (selection == 2100) { //í‚¤ë„¤ì‹œìŠ¤
 	if (cm.getPlayer().getLevel() >= 10 && cm.getPlayer().getLevel() < 30 && cm.getJob() >= 14200) {
    	cm.addEquip(-10, 1353200);
 	cm.getPlayer().fakeRelog();
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#°ÇÀÇ»çÇ×Àº °ÔÀÓ ³» Q&A°Ô½ÃÆÇ ¶Ç´Â Ä«ÆäÀÇ °Ô½ÃÆÇ¿¡ °ÇÀÇ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#k#fs13#               #rº¸Á¶¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#ê±´ì˜ì‚¬í•­ì€ ê²Œì„ ë‚´ Q&Aê²Œì‹œíŒ ë˜ëŠ” ì¹´í˜ì˜ ê²Œì‹œíŒì— ê±´ì˜ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#k#fs13#               #rë³´ì¡°ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 14210) {
 	cm.addEquip(-10, 1353201);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#°ÇÀÇ»çÇ×Àº °ÔÀÓ ³» Q&A°Ô½ÃÆÇ ¶Ç´Â Ä«ÆäÀÇ °Ô½ÃÆÇ¿¡ °ÇÀÇ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#k#fs13#               #rº¸Á¶¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#ê±´ì˜ì‚¬í•­ì€ ê²Œì„ ë‚´ Q&Aê²Œì‹œíŒ ë˜ëŠ” ì¹´í˜ì˜ ê²Œì‹œíŒì— ê±´ì˜ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#k#fs13#               #rë³´ì¡°ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 14211) {
 	cm.addEquip(-10, 1353202);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#°ÇÀÇ»çÇ×Àº °ÔÀÓ ³» Q&A°Ô½ÃÆÇ ¶Ç´Â Ä«ÆäÀÇ °Ô½ÃÆÇ¿¡ °ÇÀÇ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#k#fs13#               #rº¸Á¶¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#ê±´ì˜ì‚¬í•­ì€ ê²Œì„ ë‚´ Q&Aê²Œì‹œíŒ ë˜ëŠ” ì¹´í˜ì˜ ê²Œì‹œíŒì— ê±´ì˜ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#k#fs13#               #rë³´ì¡°ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 14212) {
 	cm.addEquip(-10, 1353203);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#°ÇÀÇ»çÇ×Àº °ÔÀÓ ³» Q&A°Ô½ÃÆÇ ¶Ç´Â Ä«ÆäÀÇ °Ô½ÃÆÇ¿¡ °ÇÀÇ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#k#fs13#               #rº¸Á¶¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#ê±´ì˜ì‚¬í•­ì€ ê²Œì„ ë‚´ Q&Aê²Œì‹œíŒ ë˜ëŠ” ì¹´í˜ì˜ ê²Œì‹œíŒì— ê±´ì˜ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#k#fs13#               #rë³´ì¡°ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#°ÇÀÇ»çÇ×Àº °ÔÀÓ ³» Q&A°Ô½ÃÆÇ ¶Ç´Â Ä«ÆäÀÇ °Ô½ÃÆÇ¿¡ °ÇÀÇ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#k#fs12#ÁË¼ÛÇÏÁö¸¸, #h #´Ô #rÁ÷¾÷#kÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò°¡ ºÎÁ·#kÇÏ½Å °Í °°½À´Ï´Ù, ´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\nº¸Á¶¹«±âÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n#fs13#30·¹º§#k : #b50¸¸#k ¸Ş¼Ò\r\n60·¹º§#k : #b100¸¸#k ¸Ş¼Ò\r\n100·¹º§ : #b200¸¸#k ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#ê±´ì˜ì‚¬í•­ì€ ê²Œì„ ë‚´ Q&Aê²Œì‹œíŒ ë˜ëŠ” ì¹´í˜ì˜ ê²Œì‹œíŒì— ê±´ì˜ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#k#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #h #ë‹˜ #rì§ì—…#kì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œê°€ ë¶€ì¡±#kí•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤, ë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\në³´ì¡°ë¬´ê¸°ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n#fs13#30ë ˆë²¨#k : #b50ë§Œ#k ë©”ì†Œ\r\n60ë ˆë²¨#k : #b100ë§Œ#k ë©”ì†Œ\r\n100ë ˆë²¨ : #b200ë§Œ#k ë©”ì†Œ#k");
 	cm.dispose();
       } 
-	//¿µ¿õ ½ÃÀÛ
-      } else if (selection == 31) { //¾Æ¶õ
+	//ì˜ì›… ì‹œì‘
+      } else if (selection == 31) { //ì•„ë€
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 2110) {
 	cm.addEquip(-10, 1352930);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 2111) {
 	cm.addEquip(1352931,-10);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 2112) {
 	cm.addEquip(-10, 1352932);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       }
-      } else if (selection == 32) { //¿¡¹İ
+      } else if (selection == 32) { //ì—ë°˜
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 2211) {
 	cm.addEquip(-10, 1352940);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 2214) {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.addEquip(-10, 1352941);
 	cm.gainMeso(-1000000);
 	cm.getPlayer().fakeRelog();
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000&& cm.getJob() >= 2217) {
 	cm.addEquip(-10, 1352942);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } 
-      } else if (selection == 33) { //ÆÒÅÒ
+      } else if (selection == 33) { //íŒ¬í…€
 	if (cm.getPlayer().getLevel() >= 10 && cm.getPlayer().getLevel() < 30 && cm.getJob() == 2400) {
    	cm.addEquip(-10, 1352100);
 	cm.getPlayer().fakeRelog();
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 2410) {
 	cm.addEquip(-10, 1352101);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 2411) {
 	cm.addEquip(-10, 1352102);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 2412) {
 	cm.addEquip(-10, 1352103);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } 
-      } else if (selection == 34) { //Àº¿ù
+      } else if (selection == 34) { //ì€ì›”
 	if (cm.getPlayer().getLevel() >= 20 && cm.getPlayer().getLevel() < 30 && cm.getJob() == 2500) {
    	cm.addEquip(-10, 1353100);
 	cm.getPlayer().fakeRelog();
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 2510) {
 	cm.addEquip(-10, 1353101);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 2511) {
 	cm.addEquip(-10, 1353102);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 2512) {
 	cm.addEquip(-10, 1353103);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } 
-      } else if (selection == 35) { //·ç¹Ì³Ê½º
+      } else if (selection == 35) { //ë£¨ë¯¸ë„ˆìŠ¤
 	if (cm.getPlayer().getLevel() >= 10 && cm.getPlayer().getLevel() < 30 && cm.getJob() == 2700) {
    	cm.addEquip(-10, 1352400);
 	cm.getPlayer().fakeRelog();
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose(); 
       } if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 2710) {
 	cm.addEquip(-10, 1352401);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 2711) {
 	cm.addEquip(-10, 1352402);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose(); 
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 2712) {
 	cm.addEquip(-10, 1352403);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } 
-      } else if (selection == 36) { //¸Ş¸£¼¼µ¥½º
+      } else if (selection == 36) { //ë©”ë¥´ì„¸ë°ìŠ¤
 	if (cm.getPlayer().getLevel() >= 10 && cm.getPlayer().getLevel() < 30 && cm.getJob() == 2300) {
    	cm.addEquip(-10, 1352000);
 	cm.getPlayer().fakeRelog();
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 2310) {
 	cm.addEquip(-10, 1352001);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 2311) {
 	cm.addEquip(-10, 1352002);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 2312) {
 	cm.addEquip(-10, 1352003);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } 
-	//½Ã±×³Ê½º ½ÃÀÛ
-      } else if (selection == 41) { //½Ã±×³Ê½º
+	//ì‹œê·¸ë„ˆìŠ¤ ì‹œì‘
+      } else if (selection == 41) { //ì‹œê·¸ë„ˆìŠ¤
         if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getPlayer().getJob() >= 1110 && cm.getPlayer().getJob() <= 1510 && cm.getPlayer().getJob() == 5110) {
 	cm.addEquip(-10, 1352970);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getPlayer().getJob() >= 1111 && cm.getPlayer().getJob() <= 1511 && cm.getPlayer().getJob() <= 5111) {
 	cm.addEquip(-10, 1352971);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getPlayer().getJob() >= 1112 && cm.getPlayer().getJob() <= 1512 && cm.getPlayer().getJob() <= 5112) {
 	cm.addEquip(-10, 1352972);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } 
-      } else if (selection == 4100) { //¹ÌÇÏÀÏ
+      } else if (selection == 4100) { //ë¯¸í•˜ì¼
 	if (cm.getPlayer().getLevel() >= 10 && cm.getPlayer().getLevel() < 30 && cm.getJob() == 5100) {
    	cm.addEquip(-10, 1098000);
 	cm.getPlayer().fakeRelog();
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#°ÇÀÇ»çÇ×Àº °ÔÀÓ ³» Q&A°Ô½ÃÆÇ ¶Ç´Â Ä«ÆäÀÇ °Ô½ÃÆÇ¿¡ °ÇÀÇ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#k#fs13#               #rº¸Á¶¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#ê±´ì˜ì‚¬í•­ì€ ê²Œì„ ë‚´ Q&Aê²Œì‹œíŒ ë˜ëŠ” ì¹´í˜ì˜ ê²Œì‹œíŒì— ê±´ì˜ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#k#fs13#               #rë³´ì¡°ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 5110) {
 	cm.addEquip(-10, 1098001);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#°ÇÀÇ»çÇ×Àº °ÔÀÓ ³» Q&A°Ô½ÃÆÇ ¶Ç´Â Ä«ÆäÀÇ °Ô½ÃÆÇ¿¡ °ÇÀÇ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#k#fs13#               #rº¸Á¶¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#ê±´ì˜ì‚¬í•­ì€ ê²Œì„ ë‚´ Q&Aê²Œì‹œíŒ ë˜ëŠ” ì¹´í˜ì˜ ê²Œì‹œíŒì— ê±´ì˜ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#k#fs13#               #rë³´ì¡°ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 5111) {
 	cm.addEquip(-10, 1098002);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#°ÇÀÇ»çÇ×Àº °ÔÀÓ ³» Q&A°Ô½ÃÆÇ ¶Ç´Â Ä«ÆäÀÇ °Ô½ÃÆÇ¿¡ °ÇÀÇ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#k#fs13#               #rº¸Á¶¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#ê±´ì˜ì‚¬í•­ì€ ê²Œì„ ë‚´ Q&Aê²Œì‹œíŒ ë˜ëŠ” ì¹´í˜ì˜ ê²Œì‹œíŒì— ê±´ì˜ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#k#fs13#               #rë³´ì¡°ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 5112) {
 	cm.addEquip(-10, 1098003);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#°ÇÀÇ»çÇ×Àº °ÔÀÓ ³» Q&A°Ô½ÃÆÇ ¶Ç´Â Ä«ÆäÀÇ °Ô½ÃÆÇ¿¡ °ÇÀÇ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#k#fs13#               #rº¸Á¶¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#ê±´ì˜ì‚¬í•­ì€ ê²Œì„ ë‚´ Q&Aê²Œì‹œíŒ ë˜ëŠ” ì¹´í˜ì˜ ê²Œì‹œíŒì— ê±´ì˜ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#k#fs13#               #rë³´ì¡°ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#°ÇÀÇ»çÇ×Àº °ÔÀÓ ³» Q&A°Ô½ÃÆÇ ¶Ç´Â Ä«ÆäÀÇ °Ô½ÃÆÇ¿¡ °ÇÀÇ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#k#fs12#ÁË¼ÛÇÏÁö¸¸, #h #´Ô #rÁ÷¾÷#kÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò°¡ ºÎÁ·#kÇÏ½Å °Í °°½À´Ï´Ù, ´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\nº¸Á¶¹«±âÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n#fs13#30·¹º§#k : #b50¸¸#k ¸Ş¼Ò\r\n60·¹º§#k : #b100¸¸#k ¸Ş¼Ò\r\n100·¹º§ : #b200¸¸#k ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#ê±´ì˜ì‚¬í•­ì€ ê²Œì„ ë‚´ Q&Aê²Œì‹œíŒ ë˜ëŠ” ì¹´í˜ì˜ ê²Œì‹œíŒì— ê±´ì˜ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#k#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #h #ë‹˜ #rì§ì—…#kì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œê°€ ë¶€ì¡±#kí•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤, ë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\në³´ì¡°ë¬´ê¸°ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n#fs13#30ë ˆë²¨#k : #b50ë§Œ#k ë©”ì†Œ\r\n60ë ˆë²¨#k : #b100ë§Œ#k ë©”ì†Œ\r\n100ë ˆë²¨ : #b200ë§Œ#k ë©”ì†Œ#k");
 	cm.dispose();
       } 
-	//½Ã±×³Ê½º ³¡
-	//³ë¹Ù ½ÃÀÛ
-      } else if (selection == 51) { //Ä«ÀÌÀú
+	//ì‹œê·¸ë„ˆìŠ¤ ë
+	//ë…¸ë°” ì‹œì‘
+      } else if (selection == 51) { //ì¹´ì´ì €
 	if (cm.getPlayer().getLevel() >= 10 && cm.getPlayer().getLevel() < 30 && cm.getJob() == 6100) {
    	cm.addEquip(-10, 1352500);
 	cm.getPlayer().fakeRelog();
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 6110) {
 	cm.addEquip(-10, 1352501);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 6111) {
 	cm.addEquip(-10, 1352502);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 6112) {
 	cm.addEquip(-10, 1352503);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } 
-      } else if (selection == 52) { //¿£Á©¸¯¹ö½ºÅÍ
+      } else if (selection == 52) { //ì—”ì ¤ë¦­ë²„ìŠ¤í„°
 	if (cm.getPlayer().getLevel() >= 10 && cm.getPlayer().getLevel() < 30 && cm.getJob() == 6500) {
    	cm.addEquip(-10, 1352601);
 	cm.getPlayer().fakeRelog();
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose(); 
       } if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 6510) {
 	cm.addEquip(-10, 1352602);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 6511) {
 	cm.addEquip(-10, 1352603);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 6512) {
 	cm.addEquip(-10, 1352604);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } 
-	//³ë¹Ù ³¡
-	//·¹Áö½ºÅÁ½º ½ÃÀÛ
-      } else if (selection == 61) { //µ¥¸ó½½·¹ÀÌ¾î / µ¥¸ó¾îº¥Á®
+	//ë…¸ë°” ë
+	//ë ˆì§€ìŠ¤íƒ•ìŠ¤ ì‹œì‘
+      } else if (selection == 61) { //ë°ëª¬ìŠ¬ë ˆì´ì–´ / ë°ëª¬ì–´ë²¤ì ¸
 	if (cm.getPlayer().getLevel() >= 10 && cm.getPlayer().getLevel() < 30 && cm.getPlayer().getJob() >= 3100 && cm.getPlayer().getJob() <= 3101) {
    	cm.addEquip(-10, 1099001);
 	cm.getPlayer().fakeRelog();
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getPlayer().getJob() >= 3110 && cm.getPlayer().getJob() <= 3120) {
 	cm.addEquip(-10, 1099002);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getPlayer().getJob() >= 3111 && cm.getPlayer().getJob() <= 3121) {
 	cm.addEquip(-10, 1099003);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getPlayer().getJob() >= 3112 && cm.getPlayer().getJob() <= 3122) {
 	cm.addEquip(-10, 1099004);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } 
-      } else if (selection == 62) { //¹èÆ²¸ŞÀÌÁö
+      } else if (selection == 62) { //ë°°í‹€ë©”ì´ì§€
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 3210) {
 	cm.addEquip(-10, 1352950);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 3211) {
 	cm.addEquip(-10, 1352951);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 3212) {
 	cm.addEquip(-10, 1352952);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } 
-      } else if (selection == 63) { //¿ÍÀÏµåÇåÅÍ
+      } else if (selection == 63) { //ì™€ì¼ë“œí—Œí„°
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 3310) {
 	cm.addEquip(-10, 1352960);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 3311) {
 	cm.addEquip(-10, 1352961);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 3312) {
 	cm.addEquip(-10, 1352962);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } 
-      } else if (selection == 64) { //¸ŞÄ«´Ğ
+      } else if (selection == 64) { //ë©”ì¹´ë‹‰
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 3510) {
 	cm.addEquip(-10, 1352701);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 3511) {
 	cm.addEquip(-10, 1352702);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 3512) {
 	cm.addEquip(-10, 1352703);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } 
-      } else if (selection == 65) { //Á¦³í
+      } else if (selection == 65) { //ì œë…¼
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 3610) {
 	cm.addEquip(-10, 1353002);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 3611) {
 	cm.addEquip(-10, 1353003);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 3612) {
 	cm.addEquip(-10, 1353004);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } 
-      } else if (selection == 66) { //ºí·¡½ºÅÍ
+      } else if (selection == 66) { //ë¸”ë˜ìŠ¤í„°
 	if (cm.getPlayer().getLevel() >= 30 && cm.getPlayer().getLevel() < 60 && cm.getMeso() >= 500000 && cm.getJob() == 3710) {
 	cm.addEquip(-10, 1353401);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-500000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 60 && cm.getPlayer().getLevel() < 100 && cm.getMeso() >= 1000000 && cm.getJob() == 3711) {
 	cm.addEquip(-10, 1353402);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-1000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
       } if (cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() < 251 && cm.getMeso() >= 2000000 && cm.getJob() == 3712) {
 	cm.addEquip(-10, 1353403);
 	cm.getPlayer().fakeRelog();
 	cm.gainMeso(-2000000);
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                  ¿øÇÏ½Ã´Â ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.#k\r\n\r\n#fs13#               #rº¸Á¶ ¹«±â#k ±³È¯ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                  ì›í•˜ì‹œëŠ” ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.#k\r\n\r\n#fs13#               #rë³´ì¡° ë¬´ê¸°#k êµí™˜ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 	cm.dispose();
       } else {
-	cm.sendOk("           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" º¸Á¶ ¹«±â »óÁ¡ "+º°+" \r\n#fs10##Cgray#                                ¿øÇÏ½Ã´Â ¿äÃ»ÀÌ Ã³¸® ºÒ°¡ÇÕ´Ï´Ù.#k\r\n\r\n#fs12#ÁË¼ÛÇÏÁö¸¸, #dÁ÷¾÷#k ÀÌ ¸ÂÁö ¾Ê°Å³ª #r¸Ş¼Ò#k °¡ ºÎÁ·ÇÏ½Å °Í °°½À´Ï´Ù.\rn´Ù½Ã È®ÀÎ ÈÄ ±¸ÀÔÀ» ½Ãµµ ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.\r\n\r\n#bº¸Á¶ ¹«±â#k ÀÇ °¡°İÀº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n#fs13#30 ·¹º§ : #r50 ¸¸ ¸Ş¼Ò#k #d(ÀÏºÎ Á÷¾÷ ¹«·á)#k\r\n60 ·¹º§ : #r100¸¸ ¸Ş¼Ò#k\r\n100 ·¹º§ : #r200 ¸¸ ¸Ş¼Ò#k");
+	cm.sendOk("           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ë³´ì¡° ë¬´ê¸° ìƒì  "+ë³„+" \r\n#fs10##Cgray#                                ì›í•˜ì‹œëŠ” ìš”ì²­ì´ ì²˜ë¦¬ ë¶ˆê°€í•©ë‹ˆë‹¤.#k\r\n\r\n#fs12#ì£„ì†¡í•˜ì§€ë§Œ, #dì§ì—…#k ì´ ë§ì§€ ì•Šê±°ë‚˜ #rë©”ì†Œ#k ê°€ ë¶€ì¡±í•˜ì‹  ê²ƒ ê°™ìŠµë‹ˆë‹¤.\rnë‹¤ì‹œ í™•ì¸ í›„ êµ¬ì…ì„ ì‹œë„ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.\r\n\r\n#bë³´ì¡° ë¬´ê¸°#k ì˜ ê°€ê²©ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n#fs13#30 ë ˆë²¨ : #r50 ë§Œ ë©”ì†Œ#k #d(ì¼ë¶€ ì§ì—… ë¬´ë£Œ)#k\r\n60 ë ˆë²¨ : #r100ë§Œ ë©”ì†Œ#k\r\n100 ë ˆë²¨ : #r200 ë§Œ ë©”ì†Œ#k");
 	cm.dispose();
 			
 		} 

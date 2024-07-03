@@ -20,9 +20,9 @@ function action(mode, type, selection) {
         else
             status--;
 	if (status == 0) {
-		var jessica = "#fn³ª´®°íµñ Extrabold#ÀÚ³×´Â.. ¾îµğ·Î °¡°í ½ÍÀº°¡..?\r\n";
-		jessica += "#L0##r³¬½ÃÅÍ #k ·Î ÀÌµ¿ÇÏ±â#k\r\n"
-		jessica += "#L1##b"+ServerConstants.serverName+" ±¤Àå#k À¸·Î ÀÌµ¿ÇÏ±â#k\r\n"
+		var jessica = "#fnë‚˜ëˆ”ê³ ë”• Extrabold#ìë„¤ëŠ”.. ì–´ë””ë¡œ ê°€ê³  ì‹¶ì€ê°€..?\r\n";
+		jessica += "#L0##rë‚šì‹œí„° #k ë¡œ ì´ë™í•˜ê¸°#k\r\n"
+		jessica += "#L1##b"+ServerConstants.serverName+" ê´‘ì¥#k ìœ¼ë¡œ ì´ë™í•˜ê¸°#k\r\n"
 		cm.sendSimple(jessica);
 	} else if (status == 1) {
 	if (selection == 0) {

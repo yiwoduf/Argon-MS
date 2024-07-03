@@ -1,9 +1,9 @@
 var status = 0;
-º°»¡ = "#fUI/GuildMark.img/Mark/Pattern/00004001/1#"
-º°ÆÄ = "#fUI/GuildMark.img/Mark/Pattern/00004001/11#"
-º°º¸ = "#fUI/GuildMark.img/Mark/Pattern/00004001/13#"
-º°È¸ = "#fUI/GuildMark.img/Mark/Pattern/00004001/15#"
-¿Õº° = "#fUI/FarmUI.img/objectStatus/star/whole#"
+ë³„ë¹¨ = "#fUI/GuildMark.img/Mark/Pattern/00004001/1#"
+ë³„íŒŒ = "#fUI/GuildMark.img/Mark/Pattern/00004001/11#"
+ë³„ë³´ = "#fUI/GuildMark.img/Mark/Pattern/00004001/13#"
+ë³„íšŒ = "#fUI/GuildMark.img/Mark/Pattern/00004001/15#"
+ì™•ë³„ = "#fUI/FarmUI.img/objectStatus/star/whole#"
 
 importPackage(Packages.constants);
 
@@ -24,23 +24,23 @@ function action(mode, type, selection) {
      else status--;
 
     if (status == 0) {
-	var chat = "#fn³ª´®°íµñ Extrabold#						"+ServerConstants.serverName+"ÀÇ ¸¸´É¿£ÇÇ½ÃÀÔ´Ï´Ù :) \r\n";
-	chat += "#L1##r¢º "+ServerConstants.serverName+"ÀÇ ¼­¹ö°¡ÀÌµå¸¦ ÀĞ¾îº¸°Ú½À´Ï´Ù.#k\r\n"; 
-	chat += "#L2##b¢º "+ServerConstants.serverName+"ÀÇ ÀÏÀÏÄù½ºÆ®¸¦ º¸°Ú½À´Ï´Ù.#k\r\n\r\n";
-	chat += "#L3#"+º°º¸+"#dÇàÁ¤#k ½Ã½ºÅÛ#l\r\n";
-        chat += "#L4#"+º°»¡+"#rÆÎÇÃ#k ÄÁÅÙÃ÷#l\r\n";
-        chat += "#L5#"+º°ÆÄ+"#bÆÎ#k Æ®·¹ÀÌµå#l\r\n";
-        chat += "#L6#"+º°È¸+"#Cgray#ÈÄ¿ø#k ½Ã½ºÅÛ#l\r\n";
+	var chat = "#fnë‚˜ëˆ”ê³ ë”• Extrabold#						"+ServerConstants.serverName+"ì˜ ë§ŒëŠ¥ì—”í”¼ì‹œì…ë‹ˆë‹¤ :) \r\n";
+	chat += "#L1##râ–¶ "+ServerConstants.serverName+"ì˜ ì„œë²„ê°€ì´ë“œë¥¼ ì½ì–´ë³´ê² ìŠµë‹ˆë‹¤.#k\r\n"; 
+	chat += "#L2##bâ–¶ "+ServerConstants.serverName+"ì˜ ì¼ì¼í€˜ìŠ¤íŠ¸ë¥¼ ë³´ê² ìŠµë‹ˆë‹¤.#k\r\n\r\n";
+	chat += "#L3#"+ë³„ë³´+"#dí–‰ì •#k ì‹œìŠ¤í…œ#l\r\n";
+        chat += "#L4#"+ë³„ë¹¨+"#ríŒ¡í”Œ#k ì»¨í…ì¸ #l\r\n";
+        chat += "#L5#"+ë³„íŒŒ+"#bíŒ¡#k íŠ¸ë ˆì´ë“œ#l\r\n";
+        chat += "#L6#"+ë³„íšŒ+"#Cgray#í›„ì›#k ì‹œìŠ¤í…œ#l\r\n";
 	cm.sendSimple(chat);	
 
    } else if (status == 1) {
 
       if (selection == 1) {
-      var chat = "			#fn³ª´®°íµñ Extrabold##b"+ServerConstants.serverName+"#kÀÇ ¼­¹ö°¡ÀÌµå¸¦ ¾Ë·Áµå¸®°Ú½À´Ï´Ù.\r\n\r\n";
+      var chat = "			#fnë‚˜ëˆ”ê³ ë”• Extrabold##b"+ServerConstants.serverName+"#kì˜ ì„œë²„ê°€ì´ë“œë¥¼ ì•Œë ¤ë“œë¦¬ê² ìŠµë‹ˆë‹¤.\r\n\r\n";
       chat += "---------------------------------------------------------------------------------\r\n";
-      chat += "#d[¾Ë¸² 1]#k - ¹èÀ²Àº °æÇèÄ¡ : "+ServerConstants.defaultExpRate+"  µå·Ó : "+ServerConstants.defaultDropRate+" ¸Ş¼Ò : "+ServerConstants.defaultMesoRate+"ÀÇ ¹èÀ²ÀÔ´Ï´Ù.\r\n";
-      chat += "#d[¾Ë¸² 2]#k - °ø½Äµµ¸ŞÀÎÀº #b["+ServerConstants.serverName+".com]#kÀÔ´Ï´Ù.\r\n";
-      chat += "#d[¾Ë¸² 3]#k - ÈÄ¿øÀº 1´ë1¿ÀÇÂÄ«Åå À¸·Î ¹®ÀÇ ºÎÅ¹µå¸³´Ï´Ù.\r\n\r\n";
+      chat += "#d[ì•Œë¦¼ 1]#k - ë°°ìœ¨ì€ ê²½í—˜ì¹˜ : "+ServerConstants.defaultExpRate+"  ë“œë¡­ : "+ServerConstants.defaultDropRate+" ë©”ì†Œ : "+ServerConstants.defaultMesoRate+"ì˜ ë°°ìœ¨ì…ë‹ˆë‹¤.\r\n";
+      chat += "#d[ì•Œë¦¼ 2]#k - ê³µì‹ë„ë©”ì¸ì€ #b["+ServerConstants.serverName+".com]#kì…ë‹ˆë‹¤.\r\n";
+      chat += "#d[ì•Œë¦¼ 3]#k - í›„ì›ì€ 1ëŒ€1ì˜¤í”ˆì¹´í†¡ ìœ¼ë¡œ ë¬¸ì˜ ë¶€íƒë“œë¦½ë‹ˆë‹¤.\r\n\r\n";
       chat += "										 - "+ServerConstants.serverName+" - #k#l\r\n";
       chat += "---------------------------------------------------------------------------------";
       cm.sendSimple(chat);
