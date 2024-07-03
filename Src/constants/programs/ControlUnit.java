@@ -42,10 +42,10 @@ public class ControlUnit extends javax.swing.JFrame {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation((screenSize.width - 1505) / 2, (screenSize.height - 576) / 2);
         initComponents();
-        ¼­¹öÁ¤º¸ºÒ·¯¿À±â();
-        È¯À²Á¤º¸();
-        Ã¤ÆÃ±İÁö();
-        º¥();
+        ì„œë²„ì •ë³´ë¶ˆëŸ¬ì˜¤ê¸°();
+        í™˜ìœ¨ì •ë³´();
+        ì±„íŒ…ê¸ˆì§€();
+        ë²¤();
         this.setTitle("[ArcStoryDEV]Server_Emulator :: V1.2." + ServerConstants.MAPLE_VERSION);
     }
 
@@ -115,9 +115,9 @@ public class ControlUnit extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
-        µ¿½ÃÁ¢¼ÓÀÚ = new javax.swing.JList();
+        ë™ì‹œì ‘ì†ì = new javax.swing.JList();
         jLabel18 = new javax.swing.JLabel();
-        Á¢¼ÓÀÚ¼ö = new javax.swing.JLabel();
+        ì ‘ì†ììˆ˜ = new javax.swing.JLabel();
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
         jButton21 = new javax.swing.JButton();
@@ -160,13 +160,13 @@ public class ControlUnit extends javax.swing.JFrame {
         getContentPane().add(jTextField2);
         jTextField2.setBounds(304, 67, 154, 14);
 
-        jLabel1.setFont(new java.awt.Font("±¼¸²", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("êµ´ë¦¼", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("<REAL CASH POINT>");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(304, 12, 142, 18);
 
-        jLabel2.setFont(new java.awt.Font("±¼¸²", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("êµ´ë¦¼", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("<Set GM>");
         getContentPane().add(jLabel2);
@@ -191,7 +191,7 @@ public class ControlUnit extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(464, 124, 141, 19);
 
-        jLabel3.setFont(new java.awt.Font("±¼¸²", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("êµ´ë¦¼", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("<Give Item>");
         getContentPane().add(jLabel3);
@@ -223,7 +223,7 @@ public class ControlUnit extends javax.swing.JFrame {
         getContentPane().add(jTextField5);
         jTextField5.setBounds(304, 212, 154, 14);
 
-        jLabel4.setFont(new java.awt.Font("±¼¸²", 1, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("êµ´ë¦¼", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("<Give Meso>");
         getContentPane().add(jLabel4);
@@ -255,7 +255,7 @@ public class ControlUnit extends javax.swing.JFrame {
         getContentPane().add(jButton4);
         jButton4.setBounds(464, 275, 141, 51);
 
-        jLabel5.setFont(new java.awt.Font("±¼¸²", 1, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("êµ´ë¦¼", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("<User Ban>");
         getContentPane().add(jLabel5);
@@ -287,7 +287,7 @@ public class ControlUnit extends javax.swing.JFrame {
         getContentPane().add(jButton5);
         jButton5.setBounds(464, 358, 63, 52);
 
-        jLabel6.setFont(new java.awt.Font("±¼¸²", 1, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("êµ´ë¦¼", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("<Ban Chat>");
         getContentPane().add(jLabel6);
@@ -324,7 +324,7 @@ public class ControlUnit extends javax.swing.JFrame {
         getContentPane().add(jButton7);
         jButton7.setBounds(304, 485, 301, 19);
 
-        jLabel7.setFont(new java.awt.Font("±¼¸²", 1, 12)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("êµ´ë¦¼", 1, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("<Freeze Chat>");
         getContentPane().add(jLabel7);
@@ -342,7 +342,7 @@ public class ControlUnit extends javax.swing.JFrame {
         getContentPane().add(jButton8);
         jButton8.setBounds(304, 535, 301, 34);
 
-        jLabel8.setFont(new java.awt.Font("±¼¸²", 1, 12)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("êµ´ë¦¼", 1, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("<Server Settings>");
         getContentPane().add(jLabel8);
@@ -355,7 +355,7 @@ public class ControlUnit extends javax.swing.JFrame {
 
         exp.setBackground(new java.awt.Color(0, 0, 0));
         exp.setForeground(new java.awt.Color(255, 255, 255));
-        exp.setText("°æÇèÄ¡");
+        exp.setText("ê²½í—˜ì¹˜");
         exp.setBorder(null);
         getContentPane().add(exp);
         exp.setBounds(33, 67, 33, 14);
@@ -367,7 +367,7 @@ public class ControlUnit extends javax.swing.JFrame {
 
         meso.setBackground(new java.awt.Color(0, 0, 0));
         meso.setForeground(new java.awt.Color(255, 255, 255));
-        meso.setText("¸Ş¼Ò");
+        meso.setText("ë©”ì†Œ");
         meso.setBorder(null);
         getContentPane().add(meso);
         meso.setBounds(126, 67, 48, 14);
@@ -379,7 +379,7 @@ public class ControlUnit extends javax.swing.JFrame {
 
         drop.setBackground(new java.awt.Color(0, 0, 0));
         drop.setForeground(new java.awt.Color(255, 255, 255));
-        drop.setText("µå·Ó");
+        drop.setText("ë“œë¡­");
         drop.setBorder(null);
         getContentPane().add(drop);
         drop.setBounds(232, 67, 22, 14);
@@ -389,7 +389,7 @@ public class ControlUnit extends javax.swing.JFrame {
         getContentPane().add(jLabel11);
         jLabel11.setBounds(22, 98, 256, 14);
 
-        jLabel12.setFont(new java.awt.Font("±¼¸²", 1, 12)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("êµ´ë¦¼", 1, 12)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("<Notify>");
         getContentPane().add(jLabel12);
@@ -433,7 +433,7 @@ public class ControlUnit extends javax.swing.JFrame {
         jButton10.setBounds(80, 230, 70, 19);
 
         jButton11.setBackground(new java.awt.Color(0, 0, 0));
-        jButton11.setFont(new java.awt.Font("±¼¸²", 1, 12)); // NOI18N
+        jButton11.setFont(new java.awt.Font("êµ´ë¦¼", 1, 12)); // NOI18N
         jButton11.setForeground(new java.awt.Color(255, 204, 51));
         jButton11.setText("showinfo");
         jButton11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -457,7 +457,7 @@ public class ControlUnit extends javax.swing.JFrame {
         getContentPane().add(jButton12);
         jButton12.setBounds(240, 230, 60, 19);
 
-        jLabel13.setFont(new java.awt.Font("±¼¸²", 1, 12)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("êµ´ë¦¼", 1, 12)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("<Hot Time>");
         getContentPane().add(jLabel13);
@@ -494,7 +494,7 @@ public class ControlUnit extends javax.swing.JFrame {
         getContentPane().add(jButton13);
         jButton13.setBounds(194, 303, 90, 19);
 
-        jLabel14.setFont(new java.awt.Font("±¼¸²", 1, 12)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("êµ´ë¦¼", 1, 12)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("<Server Features>");
         getContentPane().add(jLabel14);
@@ -573,25 +573,25 @@ public class ControlUnit extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(760, 97, 338, 480);
 
-        jLabel16.setFont(new java.awt.Font("±¼¸²", 1, 12)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("êµ´ë¦¼", 1, 12)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("<Live Server Chat Log>");
         getContentPane().add(jLabel16);
         jLabel16.setBounds(820, 70, 171, 15);
 
-        mesos.setFont(new java.awt.Font("±¼¸²", 0, 14)); // NOI18N
+        mesos.setFont(new java.awt.Font("êµ´ë¦¼", 0, 14)); // NOI18N
         mesos.setForeground(new java.awt.Color(255, 204, 0));
         mesos.setText("Server Meso : ");
         getContentPane().add(mesos);
         mesos.setBounds(760, 10, 311, 17);
 
-        realcash.setFont(new java.awt.Font("±¼¸²", 0, 14)); // NOI18N
+        realcash.setFont(new java.awt.Font("êµ´ë¦¼", 0, 14)); // NOI18N
         realcash.setForeground(new java.awt.Color(0, 255, 0));
         realcash.setText("Server Donation Point : ");
         getContentPane().add(realcash);
         realcash.setBounds(760, 30, 311, 17);
 
-        jLabel15.setFont(new java.awt.Font("DS°¡º¯ ±³¾çÀÖ´Â±Û¾¾ M", 1, 48)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("DSê°€ë³€ êµì–‘ìˆëŠ”ê¸€ì”¨ M", 1, 48)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("chiussi");
         jLabel15.setToolTipText("");
@@ -604,36 +604,36 @@ public class ControlUnit extends javax.swing.JFrame {
         jLabel15.setBounds(74, 489, 218, 80);
         jLabel15.getAccessibleContext().setAccessibleName("ARCSTORY");
 
-        jLabel17.setFont(new java.awt.Font("±¼¸²", 1, 12)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("êµ´ë¦¼", 1, 12)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("<Online Users>");
         getContentPane().add(jLabel17);
         jLabel17.setBounds(640, 10, 103, 15);
 
-        µ¿½ÃÁ¢¼ÓÀÚ.setBackground(new java.awt.Color(0, 0, 0));
-        µ¿½ÃÁ¢¼ÓÀÚ.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        µ¿½ÃÁ¢¼ÓÀÚ.setForeground(new java.awt.Color(255, 255, 255));
-        µ¿½ÃÁ¢¼ÓÀÚ.addMouseListener(new java.awt.event.MouseAdapter() {
+        ë™ì‹œì ‘ì†ì.setBackground(new java.awt.Color(0, 0, 0));
+        ë™ì‹œì ‘ì†ì.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        ë™ì‹œì ‘ì†ì.setForeground(new java.awt.Color(255, 255, 255));
+        ë™ì‹œì ‘ì†ì.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                µ¿½ÃÁ¢¼ÓÀÚMouseClicked(evt);
+                ë™ì‹œì ‘ì†ìMouseClicked(evt);
             }
         });
-        jScrollPane5.setViewportView(µ¿½ÃÁ¢¼ÓÀÚ);
+        jScrollPane5.setViewportView(ë™ì‹œì ‘ì†ì);
 
         getContentPane().add(jScrollPane5);
         jScrollPane5.setBounds(610, 90, 144, 483);
 
-        jLabel18.setFont(new java.awt.Font("±¼¸²", 1, 12)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("êµ´ë¦¼", 1, 12)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel18.setText("Á¢¼ÓÀÚ ¼ö : ");
+        jLabel18.setText("ì ‘ì†ì ìˆ˜ : ");
         getContentPane().add(jLabel18);
         jLabel18.setBounds(620, 40, 72, 15);
 
-        Á¢¼ÓÀÚ¼ö.setFont(new java.awt.Font("±¼¸²", 1, 12)); // NOI18N
-        Á¢¼ÓÀÚ¼ö.setForeground(new java.awt.Color(255, 255, 255));
-        Á¢¼ÓÀÚ¼ö.setText("0");
-        getContentPane().add(Á¢¼ÓÀÚ¼ö);
-        Á¢¼ÓÀÚ¼ö.setBounds(720, 40, 25, 15);
+        ì ‘ì†ììˆ˜.setFont(new java.awt.Font("êµ´ë¦¼", 1, 12)); // NOI18N
+        ì ‘ì†ììˆ˜.setForeground(new java.awt.Color(255, 255, 255));
+        ì ‘ì†ììˆ˜.setText("0");
+        getContentPane().add(ì ‘ì†ììˆ˜);
+        ì ‘ì†ììˆ˜.setBounds(720, 40, 25, 15);
 
         jButton19.setBackground(new java.awt.Color(0, 0, 0));
         jButton19.setForeground(new java.awt.Color(255, 255, 255));
@@ -679,7 +679,7 @@ public class ControlUnit extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public void È¯À²Á¤º¸() {
+    public void í™˜ìœ¨ì •ë³´() {
         long meso = 0;
         int realcash = 0;
         try {
@@ -704,7 +704,7 @@ public class ControlUnit extends javax.swing.JFrame {
         }
     }
 
-    public void º¥() {
+    public void ë²¤() {
         try {
             ResultSet ps = MYSQL.getConnection().prepareStatement("SELECT * FROM accounts WHERE gm = 0").executeQuery();
             while (ps.next()) {
@@ -718,7 +718,7 @@ public class ControlUnit extends javax.swing.JFrame {
         }
     }
 
-    public void Ã¤ÆÃ±İÁö() {
+    public void ì±„íŒ…ê¸ˆì§€() {
         String name = "";
         try {
             ResultSet rs = MYSQL.getConnection().prepareStatement("SELECT * FROM characters WHERE gm = 0").executeQuery();
@@ -743,14 +743,14 @@ public class ControlUnit extends javax.swing.JFrame {
             } else if (hp != null) {
                 check = true;
                 hp.gainRC(Integer.parseInt(this.jTextField2.getText()));
-                hp.dropMessage(5, "¼­¹ö·Î ºÎÅÍ [" + Integer.parseInt(this.jTextField2.getText()) + "] ÈÄ¿ø Æ÷ÀÎÆ®¸¦ Áö±Ş ¹ŞÀ¸¼Ì½À´Ï´Ù.");
-                JOptionPane.showMessageDialog(null, jTextField1.getText() + "´Ô¿¡°Ô ÈÄ¿ø Æ÷ÀÎÆ®¸¦ Áö±Ş ÇÏ¿´½À´Ï´Ù.");
-                ÃÊ±âÈ­();
+                hp.dropMessage(5, "ì„œë²„ë¡œ ë¶€í„° [" + Integer.parseInt(this.jTextField2.getText()) + "] í›„ì› í¬ì¸íŠ¸ë¥¼ ì§€ê¸‰ ë°›ìœ¼ì…¨ìŠµë‹ˆë‹¤.");
+                JOptionPane.showMessageDialog(null, jTextField1.getText() + "ë‹˜ì—ê²Œ í›„ì› í¬ì¸íŠ¸ë¥¼ ì§€ê¸‰ í•˜ì˜€ìŠµë‹ˆë‹¤.");
+                ì´ˆê¸°í™”();
                 return;
             }
         }
         if (!check) {
-            JOptionPane.showMessageDialog(null, "ÇÃ·¹ÀÌ¾î°¡ Á¢¼Ó ÁßÀÌÁö ¾Ê½À´Ï´Ù.");
+            JOptionPane.showMessageDialog(null, "í”Œë ˆì´ì–´ê°€ ì ‘ì† ì¤‘ì´ì§€ ì•ŠìŠµë‹ˆë‹¤.");
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -765,14 +765,14 @@ public class ControlUnit extends javax.swing.JFrame {
             } else if (hp != null) {
                 check = true;
                 hp.setGMLevel((byte) 6);
-                hp.dropShowInfo("GM¼³Á¤ÀÌ µÇ¾ú½À´Ï´Ù.");
-                JOptionPane.showMessageDialog(null, "GM¼³Á¤À» ÇÏ¿´½À´Ï´Ù.");
-                ÃÊ±âÈ­();
+                hp.dropShowInfo("GMì„¤ì •ì´ ë˜ì—ˆìŠµë‹ˆë‹¤.");
+                JOptionPane.showMessageDialog(null, "GMì„¤ì •ì„ í•˜ì˜€ìŠµë‹ˆë‹¤.");
+                ì´ˆê¸°í™”();
                 return;
             }
         }
         if (!check) {
-            JOptionPane.showMessageDialog(null, "ÇÃ·¹ÀÌ¾î°¡ Á¢¼Ó ÁßÀÌÁö ¾Ê½À´Ï´Ù.");
+            JOptionPane.showMessageDialog(null, "í”Œë ˆì´ì–´ê°€ ì ‘ì† ì¤‘ì´ì§€ ì•ŠìŠµë‹ˆë‹¤.");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -789,14 +789,14 @@ public class ControlUnit extends javax.swing.JFrame {
                 int itemid = Integer.parseInt(a[0]);
                 short quantity = Short.parseShort(a[1]);
                 hp.gainItem(itemid, quantity, false, -1, null);
-                hp.dropMessage(1, "¾ÆÀÌÅÛÀ» Áö±Ş ¹ŞÀ¸¼Ì½À´Ï´Ù.");
-                JOptionPane.showMessageDialog(null, "¾ÆÀÌÅÛÀ» Áö±Ş ÇÏ¿´½À´Ï´Ù.");
-                ÃÊ±âÈ­();
+                hp.dropMessage(1, "ì•„ì´í…œì„ ì§€ê¸‰ ë°›ìœ¼ì…¨ìŠµë‹ˆë‹¤.");
+                JOptionPane.showMessageDialog(null, "ì•„ì´í…œì„ ì§€ê¸‰ í•˜ì˜€ìŠµë‹ˆë‹¤.");
+                ì´ˆê¸°í™”();
                 return;
             }
         }
         if (!check) {
-            JOptionPane.showMessageDialog(null, "ÇÃ·¹ÀÌ¾î°¡ Á¢¼Ó ÁßÀÌÁö ¾Ê½À´Ï´Ù.");
+            JOptionPane.showMessageDialog(null, "í”Œë ˆì´ì–´ê°€ ì ‘ì† ì¤‘ì´ì§€ ì•ŠìŠµë‹ˆë‹¤.");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -810,18 +810,18 @@ public class ControlUnit extends javax.swing.JFrame {
             } else if (hp != null) {
                 check = true;
                 hp.gainMeso(Long.parseLong(this.jTextField7.getText()), true);
-                hp.dropMessage(1, "¸Ş¼Ò¸¦ Áö±Ş ¹ŞÀ¸¼Ì½À´Ï´Ù.");
-                JOptionPane.showMessageDialog(null, "¸Ş¼Ò¸¦ Áö±Ş ÇÏ¿´½À´Ï´Ù.");
-                ÃÊ±âÈ­();
+                hp.dropMessage(1, "ë©”ì†Œë¥¼ ì§€ê¸‰ ë°›ìœ¼ì…¨ìŠµë‹ˆë‹¤.");
+                JOptionPane.showMessageDialog(null, "ë©”ì†Œë¥¼ ì§€ê¸‰ í•˜ì˜€ìŠµë‹ˆë‹¤.");
+                ì´ˆê¸°í™”();
                 return;
             }
         }
         if (!check) {
-            JOptionPane.showMessageDialog(null, "ÇÃ·¹ÀÌ¾î°¡ Á¢¼Ó ÁßÀÌÁö ¾Ê½À´Ï´Ù.");
+            JOptionPane.showMessageDialog(null, "í”Œë ˆì´ì–´ê°€ ì ‘ì† ì¤‘ì´ì§€ ì•ŠìŠµë‹ˆë‹¤.");
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    public static void ¼­¹öÁ¤º¸ºÒ·¯¿À±â() {
+    public static void ì„œë²„ì •ë³´ë¶ˆëŸ¬ì˜¤ê¸°() {
         for (ChannelServer cserv : ChannelServer.getAllInstances()) {
             exp.setText(cserv.getExpRate() + "");
             drop.setText(cserv.getDropRate() + "");
@@ -842,7 +842,7 @@ public class ControlUnit extends javax.swing.JFrame {
                 final MapleClient c = null;
                 check = true;
                 hp.ban(jTextField8.getText(), true, false);
-                c.getSession().write(MainPacketCreator.getNPCTalk(2007, (byte) 0, "ÇØ´ç °èÁ¤Àº Áö±İºÎÅÍ »ç¿ë ÇÒ ¼ö ¾ø½À´Ï´Ù.\r\n(3ÃÊ µÚ ÀÚµ¿ÀûÀ¸·Î Á¾·á µË´Ï´Ù.)", "00 00 00 00 00 00", (byte) 2));
+                c.getSession().write(MainPacketCreator.getNPCTalk(2007, (byte) 0, "í•´ë‹¹ ê³„ì •ì€ ì§€ê¸ˆë¶€í„° ì‚¬ìš© í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.\r\n(3ì´ˆ ë’¤ ìë™ì ìœ¼ë¡œ ì¢…ë£Œ ë©ë‹ˆë‹¤.)", "00 00 00 00 00 00", (byte) 2));
                 BanList.addElement(hp.getClient().getAccountName());
                 Timer.EtcTimer tMan = Timer.EtcTimer.getInstance();
                 tMan.schedule(new Runnable() {
@@ -853,13 +853,13 @@ public class ControlUnit extends javax.swing.JFrame {
                         c.getSession().close();
                     }
                 }, 3000);
-                JOptionPane.showMessageDialog(null, jTextField8.getText() + "À¯Àú¸¦ ¹ê ÇÏ¿´½À´Ï´Ù.");
-                ÃÊ±âÈ­();
+                JOptionPane.showMessageDialog(null, jTextField8.getText() + "ìœ ì €ë¥¼ ë°´ í•˜ì˜€ìŠµë‹ˆë‹¤.");
+                ì´ˆê¸°í™”();
                 return;
             }
         }
         if (!check) {
-            JOptionPane.showMessageDialog(null, "ÇÃ·¹ÀÌ¾î°¡ Á¢¼Ó ÁßÀÌÁö ¾Ê½À´Ï´Ù.");
+            JOptionPane.showMessageDialog(null, "í”Œë ˆì´ì–´ê°€ ì ‘ì† ì¤‘ì´ì§€ ì•ŠìŠµë‹ˆë‹¤.");
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -873,15 +873,15 @@ public class ControlUnit extends javax.swing.JFrame {
             } else if (hp != null) {
                 check = true;
                 hp.setChatban("true");
-                hp.dropMessage(1, "Ã¤ÆÃ ±İÁö¸¦ ´çÇÏ¿´½À´Ï´Ù.");
-                JOptionPane.showMessageDialog(null, "Ã¤ÆÃ ±İÁö¸¦ ÇÏ¿´½À´Ï´Ù.");
+                hp.dropMessage(1, "ì±„íŒ… ê¸ˆì§€ë¥¼ ë‹¹í•˜ì˜€ìŠµë‹ˆë‹¤.");
+                JOptionPane.showMessageDialog(null, "ì±„íŒ… ê¸ˆì§€ë¥¼ í•˜ì˜€ìŠµë‹ˆë‹¤.");
                 ChatbanList.addElement(hp.getName());
-                ÃÊ±âÈ­();
+                ì´ˆê¸°í™”();
                 return;
             }
         }
         if (!check) {
-            JOptionPane.showMessageDialog(null, "ÇÃ·¹ÀÌ¾î°¡ Á¢¼Ó ÁßÀÌÁö ¾Ê½À´Ï´Ù.");
+            JOptionPane.showMessageDialog(null, "í”Œë ˆì´ì–´ê°€ ì ‘ì† ì¤‘ì´ì§€ ì•ŠìŠµë‹ˆë‹¤.");
         }
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -895,29 +895,29 @@ public class ControlUnit extends javax.swing.JFrame {
             } else if (hp != null) {
                 check = true;
                 hp.setChatban("false");
-                hp.dropMessage(1, "Ã¤ÆÃ ±İÁö°¡ ÇØÁ¦ µÇ¾ú½À´Ï´Ù.");
-                JOptionPane.showMessageDialog(null, "Ã¤ÆÃ ±İÁö¸¦ ÇØÁ¦ ÇÏ¿´½À´Ï´Ù.");
+                hp.dropMessage(1, "ì±„íŒ… ê¸ˆì§€ê°€ í•´ì œ ë˜ì—ˆìŠµë‹ˆë‹¤.");
+                JOptionPane.showMessageDialog(null, "ì±„íŒ… ê¸ˆì§€ë¥¼ í•´ì œ í•˜ì˜€ìŠµë‹ˆë‹¤.");
                 ChatList.removeElement(jTextField10.getText());
-                ÃÊ±âÈ­();
+                ì´ˆê¸°í™”();
                 return;
             }
         }
         if (!check) {
-            JOptionPane.showMessageDialog(null, "ÇÃ·¹ÀÌ¾î°¡ Á¢¼Ó ÁßÀÌÁö ¾Ê½À´Ï´Ù.");
+            JOptionPane.showMessageDialog(null, "í”Œë ˆì´ì–´ê°€ ì ‘ì† ì¤‘ì´ì§€ ì•ŠìŠµë‹ˆë‹¤.");
         }
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         if (!WorldCommunity.isFreeze) {
             WorldCommunity.isFreeze = true;
-            this.jButton8.setText("Ã¤ÆÃ ³ìÀÌ±â");
-            WorldBroadcasting.broadcastMessage(MainPacketCreator.serverNotice(1, "Ã¤ÆÃÀÌ ¾ó¾ú½À´Ï´Ù."));
-            JOptionPane.showMessageDialog(null, "Ã¤ÆÃÀ» ¾ó·È½À´Ï´Ù.");
+            this.jButton8.setText("ì±„íŒ… ë…¹ì´ê¸°");
+            WorldBroadcasting.broadcastMessage(MainPacketCreator.serverNotice(1, "ì±„íŒ…ì´ ì–¼ì—ˆìŠµë‹ˆë‹¤."));
+            JOptionPane.showMessageDialog(null, "ì±„íŒ…ì„ ì–¼ë ¸ìŠµë‹ˆë‹¤.");
         } else {
             WorldCommunity.isFreeze = false;
-            this.jButton8.setText("Ã¤ÆÃ ¾ó¸®±â");
-            WorldBroadcasting.broadcastMessage(MainPacketCreator.serverNotice(1, "Ã¤ÆÃÀÌ ³ì¾Ò½À´Ï´Ù."));
-            JOptionPane.showMessageDialog(null, "Ã¤ÆÃÀ» ³ì¿´½À´Ï´Ù.");
+            this.jButton8.setText("ì±„íŒ… ì–¼ë¦¬ê¸°");
+            WorldBroadcasting.broadcastMessage(MainPacketCreator.serverNotice(1, "ì±„íŒ…ì´ ë…¹ì•˜ìŠµë‹ˆë‹¤."));
+            JOptionPane.showMessageDialog(null, "ì±„íŒ…ì„ ë…¹ì˜€ìŠµë‹ˆë‹¤.");
         }
     }//GEN-LAST:event_jButton8ActionPerformed
 
@@ -930,8 +930,8 @@ public class ControlUnit extends javax.swing.JFrame {
                 chr.gainItem(itemid, quantity, false, -1, null);
             }
         }
-        WorldBroadcasting.broadcastMessage(MainPacketCreator.serverNotice(1, "ÇÖÅ¸ÀÓ ¾ÆÀÌÅÛÀ» Áö±Ş ¹Ş¾Ò½À´Ï´Ù."));
-        JOptionPane.showMessageDialog(null, "ÇÖÅ¸ÀÓ ¾ÆÀÌÅÛÀ» Áö±Ş ÇÏ¿´½À´Ï´Ù.");
+        WorldBroadcasting.broadcastMessage(MainPacketCreator.serverNotice(1, "í•«íƒ€ì„ ì•„ì´í…œì„ ì§€ê¸‰ ë°›ì•˜ìŠµë‹ˆë‹¤."));
+        JOptionPane.showMessageDialog(null, "í•«íƒ€ì„ ì•„ì´í…œì„ ì§€ê¸‰ í•˜ì˜€ìŠµë‹ˆë‹¤.");
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
@@ -941,23 +941,23 @@ public class ControlUnit extends javax.swing.JFrame {
             ChannelServer.getInstance(i).setDropRate(Integer.parseInt(this.drop.getText()));
             ChannelServer.getInstance(i).setServerMessage(this.serverMessage.getText());
         }
-        JOptionPane.showMessageDialog(null, "¼­¹ö Á¤º¸¸¦ º¯°æ ÇÏ¿´½À´Ï´Ù.");
+        JOptionPane.showMessageDialog(null, "ì„œë²„ ì •ë³´ë¥¼ ë³€ê²½ í•˜ì˜€ìŠµë‹ˆë‹¤.");
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        °øÁö»çÇ×(1, this.noticMessage.getText());
+        ê³µì§€ì‚¬í•­(1, this.noticMessage.getText());
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        °øÁö»çÇ×(5, this.noticMessage.getText());
+        ê³µì§€ì‚¬í•­(5, this.noticMessage.getText());
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        °øÁö»çÇ×(-1, this.noticMessage.getText());
+        ê³µì§€ì‚¬í•­(-1, this.noticMessage.getText());
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        °øÁö»çÇ×(-2, this.noticMessage.getText());
+        ê³µì§€ì‚¬í•­(-2, this.noticMessage.getText());
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
@@ -966,14 +966,14 @@ public class ControlUnit extends javax.swing.JFrame {
                 chr.saveToDB(false, false);
             }
         }
-        JOptionPane.showMessageDialog(null, "¸ğµÎ ÀúÀåÀ» ¿Ï·á ÇÏ¿´½À´Ï´Ù.");
+        JOptionPane.showMessageDialog(null, "ëª¨ë‘ ì €ì¥ì„ ì™„ë£Œ í•˜ì˜€ìŠµë‹ˆë‹¤.");
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         for (ChannelServer cserv : ChannelServer.getAllInstances()) {
             cserv.getPlayerStorage().disconnectAll();
         }
-        JOptionPane.showMessageDialog(null, "¸ğµç ÇÃ·¹ÀÌ¾î°¡ ·Î±×ÀÎ ¼­¹ö·Î ÀÌµ¿ µÇ¾ú½À´Ï´Ù.");
+        JOptionPane.showMessageDialog(null, "ëª¨ë“  í”Œë ˆì´ì–´ê°€ ë¡œê·¸ì¸ ì„œë²„ë¡œ ì´ë™ ë˜ì—ˆìŠµë‹ˆë‹¤.");
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
@@ -984,7 +984,7 @@ public class ControlUnit extends javax.swing.JFrame {
             cs.getPlayerStorage().disconnectAll();
             //  LoginServer.getInstance().shutdown();
         }
-        JOptionPane.showMessageDialog(null, "¼­¹ö¸¦ Á¾·á ÇÏ¿´½À´Ï´Ù.");
+        JOptionPane.showMessageDialog(null, "ì„œë²„ë¥¼ ì¢…ë£Œ í•˜ì˜€ìŠµë‹ˆë‹¤.");
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
@@ -993,13 +993,13 @@ public class ControlUnit extends javax.swing.JFrame {
                 hp.warp(ServerConstants.mainMap);
             }
         }
-        JOptionPane.showMessageDialog(null, "¸ğµç ÇÃ·¹ÀÌ¾î¸¦ Çì³×½Ã½º·Î ÀÌµ¿ ½ÃÄ×½À´Ï´Ù.");
+        JOptionPane.showMessageDialog(null, "ëª¨ë“  í”Œë ˆì´ì–´ë¥¼ í—¤ë„¤ì‹œìŠ¤ë¡œ ì´ë™ ì‹œì¼°ìŠµë‹ˆë‹¤.");
     }//GEN-LAST:event_jButton18ActionPerformed
 
-    private void µ¿½ÃÁ¢¼ÓÀÚMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_µ¿½ÃÁ¢¼ÓÀÚMouseClicked
+    private void ë™ì‹œì ‘ì†ìMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ë™ì‹œì ‘ì†ìMouseClicked
         try {
-            if (µ¿½ÃÁ¢¼ÓÀÚ.getModel() != null) {
-                String name = µ¿½ÃÁ¢¼ÓÀÚ.getModel().getElementAt(µ¿½ÃÁ¢¼ÓÀÚ.getSelectedIndex()).toString();
+            if (ë™ì‹œì ‘ì†ì.getModel() != null) {
+                String name = ë™ì‹œì ‘ì†ì.getModel().getElementAt(ë™ì‹œì ‘ì†ì.getSelectedIndex()).toString();
                 jTextField1.setText(name);
                 jTextField3.setText(name);
                 jTextField4.setText(name);
@@ -1010,7 +1010,7 @@ public class ControlUnit extends javax.swing.JFrame {
         } catch (Exception e) {
 
         }
-    }//GEN-LAST:event_µ¿½ÃÁ¢¼ÓÀÚMouseClicked
+    }//GEN-LAST:event_ë™ì‹œì ‘ì†ìMouseClicked
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
         try {
@@ -1025,8 +1025,8 @@ public class ControlUnit extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         BanList.removeElement(jTextField8.getText());
-        JOptionPane.showMessageDialog(null, jTextField8.getText() + "´ÔÀÇ °ÔÀÓÀÌ¿ë Á¦ÇÑÀ» ÇØÁ¦ ÇÏ¿´½À´Ï´Ù.");
-        ÃÊ±âÈ­();
+        JOptionPane.showMessageDialog(null, jTextField8.getText() + "ë‹˜ì˜ ê²Œì„ì´ìš© ì œí•œì„ í•´ì œ í•˜ì˜€ìŠµë‹ˆë‹¤.");
+        ì´ˆê¸°í™”();
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
@@ -1049,23 +1049,23 @@ public class ControlUnit extends javax.swing.JFrame {
         // TODO add your handling code here:
         SendPacketOpcode.loadOpcode();
         RecvPacketOpcode.loadOpcode();
-        System.out.println("[¾Ë¸²] ¿ÉÄÚµå Àç¼³Á¤ÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+        System.out.println("[ì•Œë¦¼] ì˜µì½”ë“œ ì¬ì„¤ì •ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
     }//GEN-LAST:event_jButton20ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         for (ChannelServer cs : ChannelServer.getAllInstances()) {
             for (MapleCharacter player : cs.getPlayerStorage().getAllCharacters().values()) {
-                if (ÇöÀçÁ¢¼ÓÀÚ.contains(player.getName())) {
-                    µ¿Á¢Á¦°Å(player.getName());
-                    Á¢¼ÓÀÚ¼ö.setText(String.valueOf((int) (Integer.parseInt(Á¢¼ÓÀÚ¼ö.getText()) - 1)));
+                if (í˜„ì¬ì ‘ì†ì.contains(player.getName())) {
+                    ë™ì ‘ì œê±°(player.getName());
+                    ì ‘ì†ììˆ˜.setText(String.valueOf((int) (Integer.parseInt(ì ‘ì†ììˆ˜.getText()) - 1)));
                 }
             }
         }
         java.util.Timer timer = new java.util.Timer();
-        timer.schedule(new µ¿Á¢»õ·Î°íÄ§(), 5000);
+        timer.schedule(new ë™ì ‘ìƒˆë¡œê³ ì¹¨(), 5000);
     }//GEN-LAST:event_jButton21ActionPerformed
 
-    public String ¾ÆÀÌÇÇ(String name) throws SQLException {
+    public String ì•„ì´í”¼(String name) throws SQLException {
         String a = "";
         PreparedStatement ps2 = MYSQL.getConnection().prepareStatement("SELECT * FROM accounts WHERE name = ?");
         ps2.setString(1, name);
@@ -1078,17 +1078,17 @@ public class ControlUnit extends javax.swing.JFrame {
         return a;
     }
 
-    public void ÃÊ±âÈ­() {
-        String name = "´Ğ³×ÀÓ";
+    public void ì´ˆê¸°í™”() {
+        String name = "ë‹‰ë„¤ì„";
         jTextField1.setText(name);
         jTextField3.setText(name);
         jTextField4.setText(name);
         jTextField6.setText(name);
-        jTextField8.setText("´Ğ³×ÀÓ(ÇØÁ¦´Â °èÁ¤)");
+        jTextField8.setText("ë‹‰ë„¤ì„(í•´ì œëŠ” ê³„ì •)");
         jTextField10.setText(name);
     }
 
-    public void °øÁö»çÇ×(int i, String text) {
+    public void ê³µì§€ì‚¬í•­(int i, String text) {
         if (i == -1) {
             WorldBroadcasting.broadcastMessage(UIPacket.showInfo(text));
         } else if (i == -2) {
@@ -1096,36 +1096,36 @@ public class ControlUnit extends javax.swing.JFrame {
         } else {
             WorldBroadcasting.broadcastMessage(MainPacketCreator.serverNotice(i, text));
         }
-        JOptionPane.showMessageDialog(null, "[" + text + "] ³»¿ëÀ» ¸ğµç ÇÃ·¹ÀÌ¾î¿¡°Ô ¾Ë·È½À´Ï´Ù.");
+        JOptionPane.showMessageDialog(null, "[" + text + "] ë‚´ìš©ì„ ëª¨ë“  í”Œë ˆì´ì–´ì—ê²Œ ì•Œë ¸ìŠµë‹ˆë‹¤.");
     }
 
-    public static void µ¿Á¢(String a) {
+    public static void ë™ì ‘(String a) {
         try {
-            ÇöÀçÁ¢¼ÓÀÚ.addElement(a);
-            µ¿½ÃÁ¢¼ÓÀÚ.setModel(ÇöÀçÁ¢¼ÓÀÚ);
+            í˜„ì¬ì ‘ì†ì.addElement(a);
+            ë™ì‹œì ‘ì†ì.setModel(í˜„ì¬ì ‘ì†ì);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void µ¿Á¢Á¦°Å(String a) {
-        ÇöÀçÁ¢¼ÓÀÚ.removeElement(a);
-        µ¿½ÃÁ¢¼ÓÀÚ.setModel(ÇöÀçÁ¢¼ÓÀÚ);
+    public static void ë™ì ‘ì œê±°(String a) {
+        í˜„ì¬ì ‘ì†ì.removeElement(a);
+        ë™ì‹œì ‘ì†ì.setModel(í˜„ì¬ì ‘ì†ì);
     }
 
-    public static class µ¿Á¢»õ·Î°íÄ§ extends TimerTask {
+    public static class ë™ì ‘ìƒˆë¡œê³ ì¹¨ extends TimerTask {
 
         @Override
         public void run() {
             for (ChannelServer cs : ChannelServer.getAllInstances()) {
                 for (MapleCharacter player : cs.getPlayerStorage().getAllCharacters().values()) {
-                    if (!ÇöÀçÁ¢¼ÓÀÚ.contains(player.getName())) {
-                        µ¿Á¢(player.getName());
-                        Á¢¼ÓÀÚ¼ö.setText(String.valueOf((int) (Integer.parseInt(Á¢¼ÓÀÚ¼ö.getText()) + 1)));
+                    if (!í˜„ì¬ì ‘ì†ì.contains(player.getName())) {
+                        ë™ì ‘(player.getName());
+                        ì ‘ì†ììˆ˜.setText(String.valueOf((int) (Integer.parseInt(ì ‘ì†ììˆ˜.getText()) + 1)));
                     }
                 }
             }
-            JOptionPane.showMessageDialog(null, "µ¿Á¢ ÃÊ±âÈ­°¡ ¿Ï·á µÇ¾ú½À´Ï´Ù!");
+            JOptionPane.showMessageDialog(null, "ë™ì ‘ ì´ˆê¸°í™”ê°€ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤!");
         }
     }
 
@@ -1175,7 +1175,7 @@ public class ControlUnit extends javax.swing.JFrame {
     }
 
     public static DefaultListModel ChatList = new DefaultListModel();
-    public static DefaultListModel ÇöÀçÁ¢¼ÓÀÚ = new DefaultListModel();
+    public static DefaultListModel í˜„ì¬ì ‘ì†ì = new DefaultListModel();
     private DefaultListModel ChatbanList = new DefaultListModel();
     private DefaultListModel BanList = new DefaultListModel();
     private transient ScheduledFuture<?> chattime;
@@ -1243,7 +1243,7 @@ public class ControlUnit extends javax.swing.JFrame {
     private javax.swing.JTextField noticMessage;
     private javax.swing.JLabel realcash;
     private static javax.swing.JTextField serverMessage;
-    public static javax.swing.JList µ¿½ÃÁ¢¼ÓÀÚ;
-    public static javax.swing.JLabel Á¢¼ÓÀÚ¼ö;
+    public static javax.swing.JList ë™ì‹œì ‘ì†ì;
+    public static javax.swing.JLabel ì ‘ì†ììˆ˜;
     // End of variables declaration//GEN-END:variables
 }

@@ -33,17 +33,17 @@ function action(mode, type, selection, selection2) {
     else
         status--;
     if (status == 0) {
-        var change = "Á»´õ À¯´ÏÅ©ÇÑ ÄÚµğ¸¦ ÇÏ°í½Í´Ù¸é ³ª¿¡°Ô ¸Â°Üº¸´Â°Ç ¾î¶§?#b";
-        change += "#L1##i5150057#¸Ó¸® ¸ğ¾ç#l";
-        change += "#L2##i5151036#¿°»ö#l\r\n";
-        change += "#L4##i5152100#ÄÃ·¯ ·»Áî#l";
-        change += " #L3##i5152057#¾ó±¼#l";
+        var change = "ì¢€ë” ìœ ë‹ˆí¬í•œ ì½”ë””ë¥¼ í•˜ê³ ì‹¶ë‹¤ë©´ ë‚˜ì—ê²Œ ë§ê²¨ë³´ëŠ”ê±´ ì–´ë•Œ?#b";
+        change += "#L1##i5150057#ë¨¸ë¦¬ ëª¨ì–‘#l";
+        change += "#L2##i5151036#ì—¼ìƒ‰#l\r\n";
+        change += "#L4##i5152100#ì»¬ëŸ¬ ë Œì¦ˆ#l";
+        change += " #L3##i5152057#ì–¼êµ´#l";
         cm.sendSpirit(change, true, 0);
     } else if (status == 1) {
         if (cm.getPlayer().getJob() == 10112) {
             if (selection == 0) {
                 beauty = 1;
-                cm.askAvatarZero("Á»´õ À¯´ÏÅ©ÇÑ ÄÚµğ¸¦ ÇÏ°í½Í´Ù¸é ³ª¿¡°Ô ¸Â°Üº¸´Â°Ç ¾î¶§?", skin, skin);
+                cm.askAvatarZero("ì¢€ë” ìœ ë‹ˆí¬í•œ ì½”ë””ë¥¼ í•˜ê³ ì‹¶ë‹¤ë©´ ë‚˜ì—ê²Œ ë§ê²¨ë³´ëŠ”ê±´ ì–´ë•Œ?", skin, skin);
             } else if (selection == 1) {
                 beauty = 2;
                 hairnew = Array();
@@ -56,7 +56,7 @@ function action(mode, type, selection, selection2) {
                     hairnew_.push(fhair[i] + parseInt(cm.getPlayer().getSecondHair() % 10));
                         hairnew_[i] = fhair[i];
                 }
-                cm.askAvatarZero("Á»´õ À¯´ÏÅ©ÇÑ ÄÚµğ¸¦ ÇÏ°í½Í´Ù¸é ³ª¿¡°Ô ¸Â°Üº¸´Â°Ç ¾î¶§?", hairnew, hairnew_);
+                cm.askAvatarZero("ì¢€ë” ìœ ë‹ˆí¬í•œ ì½”ë””ë¥¼ í•˜ê³ ì‹¶ë‹¤ë©´ ë‚˜ì—ê²Œ ë§ê²¨ë³´ëŠ”ê±´ ì–´ë•Œ?", hairnew, hairnew_);
             } else if (selection == 2) {
                 beauty = 3;
                 haircolor = Array();
@@ -69,7 +69,7 @@ function action(mode, type, selection, selection2) {
                 for (var i = 0; i < 8; i++) {
                     haircolor_.push(current_ + i);
                 }
-                cm.askAvatarZero("Á»´õ À¯´ÏÅ©ÇÑ ÄÚµğ¸¦ ÇÏ°í½Í´Ù¸é ³ª¿¡°Ô ¸Â°Üº¸´Â°Ç ¾î¶§?", haircolor, haircolor_);
+                cm.askAvatarZero("ì¢€ë” ìœ ë‹ˆí¬í•œ ì½”ë””ë¥¼ í•˜ê³ ì‹¶ë‹¤ë©´ ë‚˜ì—ê²Œ ë§ê²¨ë³´ëŠ”ê±´ ì–´ë•Œ?", haircolor, haircolor_);
             } else if (selection == 3) {
                 beauty = 4;
                 facenew = Array();
@@ -82,31 +82,31 @@ function action(mode, type, selection, selection2) {
                     facenew_.push(fface[i] + cm.getPlayer().getSecondFace() % 1000 - (cm.getPlayer().getSecondFace() % 100));
                         facenew_[i] = fface[i];
                 }
-                cm.askAvatarZero("Á»´õ À¯´ÏÅ©ÇÑ ÄÚµğ¸¦ ÇÏ°í½Í´Ù¸é ³ª¿¡°Ô ¸Â°Üº¸´Â°Ç ¾î¶§?", facenew, facenew_);
+                cm.askAvatarZero("ì¢€ë” ìœ ë‹ˆí¬í•œ ì½”ë””ë¥¼ í•˜ê³ ì‹¶ë‹¤ë©´ ë‚˜ì—ê²Œ ë§ê²¨ë³´ëŠ”ê±´ ì–´ë•Œ?", facenew, facenew_);
             } else if (selection == 4) {
                 beauty = 5;
-				ÄÃ·¯ = cm.getPlayer().getFace() % 100 + (20000 + ((cm.getPlayer().getFace() % 10000) - (cm.getPlayer().getFace() % 1000)));
-				·»Áî = [ÄÃ·¯, ÄÃ·¯+100, ÄÃ·¯+200, ÄÃ·¯+300, ÄÃ·¯+400, ÄÃ·¯+500, ÄÃ·¯+600, ÄÃ·¯+700];
-				·»ÁîC = [];
-				ÄÃ·¯A = cm.getPlayer().getSecondFace() % 100 + (20000 + ((cm.getPlayer().getSecondFace() % 10000) - (cm.getPlayer().getSecondFace() % 1000)));
-				·»ÁîA = [ÄÃ·¯A, ÄÃ·¯A+100, ÄÃ·¯A+200, ÄÃ·¯A+300, ÄÃ·¯A+400, ÄÃ·¯A+500, ÄÃ·¯A+600, ÄÃ·¯A+700];
-				·»ÁîAC = [];
-			for (i = 0; i < ·»Áî.length; i ++) {
-				if (EHF(·»Áî[i])) {
-					·»ÁîC.push(·»Áî[i]);
+				ì»¬ëŸ¬ = cm.getPlayer().getFace() % 100 + (20000 + ((cm.getPlayer().getFace() % 10000) - (cm.getPlayer().getFace() % 1000)));
+				ë Œì¦ˆ = [ì»¬ëŸ¬, ì»¬ëŸ¬+100, ì»¬ëŸ¬+200, ì»¬ëŸ¬+300, ì»¬ëŸ¬+400, ì»¬ëŸ¬+500, ì»¬ëŸ¬+600, ì»¬ëŸ¬+700];
+				ë Œì¦ˆC = [];
+				ì»¬ëŸ¬A = cm.getPlayer().getSecondFace() % 100 + (20000 + ((cm.getPlayer().getSecondFace() % 10000) - (cm.getPlayer().getSecondFace() % 1000)));
+				ë Œì¦ˆA = [ì»¬ëŸ¬A, ì»¬ëŸ¬A+100, ì»¬ëŸ¬A+200, ì»¬ëŸ¬A+300, ì»¬ëŸ¬A+400, ì»¬ëŸ¬A+500, ì»¬ëŸ¬A+600, ì»¬ëŸ¬A+700];
+				ë Œì¦ˆAC = [];
+			for (i = 0; i < ë Œì¦ˆ.length; i ++) {
+				if (EHF(ë Œì¦ˆ[i])) {
+					ë Œì¦ˆC.push(ë Œì¦ˆ[i]);
 				}
 			}
-			for (i = 0; i < ·»ÁîA.length; i ++) {
-				if (EHF(·»ÁîA[i])) {
-					·»ÁîAC.push(·»ÁîA[i]);
+			for (i = 0; i < ë Œì¦ˆA.length; i ++) {
+				if (EHF(ë Œì¦ˆA[i])) {
+					ë Œì¦ˆAC.push(ë Œì¦ˆA[i]);
 				}
 			}
-                cm.askAvatarZero("Á»´õ À¯´ÏÅ©ÇÑ ÄÚµğ¸¦ ÇÏ°í½Í´Ù¸é ³ª¿¡°Ô ¸Â°Üº¸´Â°Ç ¾î¶§?" + ÄÃ·¯, ·»Áî, ·»ÁîA);
+                cm.askAvatarZero("ì¢€ë” ìœ ë‹ˆí¬í•œ ì½”ë””ë¥¼ í•˜ê³ ì‹¶ë‹¤ë©´ ë‚˜ì—ê²Œ ë§ê²¨ë³´ëŠ”ê±´ ì–´ë•Œ?" + ì»¬ëŸ¬, ë Œì¦ˆ, ë Œì¦ˆA);
             }
         } else if (cm.getPlayer().getGender() == 0) {
             if (selection == 0) {
                 beauty = 1;
-                cm.askAvatar("Á»´õ À¯´ÏÅ©ÇÑ ÄÚµğ¸¦ ÇÏ°í½Í´Ù¸é ³ª¿¡°Ô ¸Â°Üº¸´Â°Ç ¾î¶§?", skin);
+                cm.askAvatar("ì¢€ë” ìœ ë‹ˆí¬í•œ ì½”ë””ë¥¼ í•˜ê³ ì‹¶ë‹¤ë©´ ë‚˜ì—ê²Œ ë§ê²¨ë³´ëŠ”ê±´ ì–´ë•Œ?", skin);
             } else if (selection == 1) {
                 beauty = 2;
                 hairnew = Array();
@@ -114,7 +114,7 @@ function action(mode, type, selection, selection2) {
                     hairnew.push(mhair[i] + parseInt(cm.getPlayer().getHair() % 10));
                         hairnew[i] = mhair[i];
                 }
-                cm.askAvatar("Á»´õ À¯´ÏÅ©ÇÑ ÄÚµğ¸¦ ÇÏ°í½Í´Ù¸é ³ª¿¡°Ô ¸Â°Üº¸´Â°Ç ¾î¶§?", hairnew);
+                cm.askAvatar("ì¢€ë” ìœ ë‹ˆí¬í•œ ì½”ë””ë¥¼ í•˜ê³ ì‹¶ë‹¤ë©´ ë‚˜ì—ê²Œ ë§ê²¨ë³´ëŠ”ê±´ ì–´ë•Œ?", hairnew);
             } else if (selection == 2) {
                 beauty = 3;
                 haircolor = Array();
@@ -123,7 +123,7 @@ function action(mode, type, selection, selection2) {
                     haircolor.push(current + i);
                         haircolor[i] = current;
                 }
-                cm.askAvatar("Á»´õ À¯´ÏÅ©ÇÑ ÄÚµğ¸¦ ÇÏ°í½Í´Ù¸é ³ª¿¡°Ô ¸Â°Üº¸´Â°Ç ¾î¶§?", haircolor);
+                cm.askAvatar("ì¢€ë” ìœ ë‹ˆí¬í•œ ì½”ë””ë¥¼ í•˜ê³ ì‹¶ë‹¤ë©´ ë‚˜ì—ê²Œ ë§ê²¨ë³´ëŠ”ê±´ ì–´ë•Œ?", haircolor);
             } else if (selection == 3) {
                 beauty = 4;
                 facenew = Array();
@@ -131,7 +131,7 @@ function action(mode, type, selection, selection2) {
                     facenew.push(mface[i] + cm.getPlayer().getFace() % 1000 - (cm.getPlayer().getFace() % 100));
                         facenew[i] = mface[i];
                 }
-                cm.askAvatar("Á»´õ À¯´ÏÅ©ÇÑ ÄÚµğ¸¦ ÇÏ°í½Í´Ù¸é ³ª¿¡°Ô ¸Â°Üº¸´Â°Ç ¾î¶§?", facenew);
+                cm.askAvatar("ì¢€ë” ìœ ë‹ˆí¬í•œ ì½”ë””ë¥¼ í•˜ê³ ì‹¶ë‹¤ë©´ ë‚˜ì—ê²Œ ë§ê²¨ë³´ëŠ”ê±´ ì–´ë•Œ?", facenew);
             } else if (selection == 4) {
                 beauty = 5;
                 var current = cm.getPlayer().getFace() % 100 + (20000 + ((cm.getPlayer().getFace() % 10000) - (cm.getPlayer().getFace() % 1000)));
@@ -139,12 +139,12 @@ function action(mode, type, selection, selection2) {
                 for (var i = 0; i < colors.length; i++) {
                         colors[i] = current;
                 }
-                cm.askAvatar("Á»´õ À¯´ÏÅ©ÇÑ ÄÚµğ¸¦ ÇÏ°í½Í´Ù¸é ³ª¿¡°Ô ¸Â°Üº¸´Â°Ç ¾î¶§?", colors);
+                cm.askAvatar("ì¢€ë” ìœ ë‹ˆí¬í•œ ì½”ë””ë¥¼ í•˜ê³ ì‹¶ë‹¤ë©´ ë‚˜ì—ê²Œ ë§ê²¨ë³´ëŠ”ê±´ ì–´ë•Œ?", colors);
             }
         } else {
             if (selection == 0) {
                 beauty = 1;
-                cm.askAvatar("Á»´õ À¯´ÏÅ©ÇÑ ÄÚµğ¸¦ ÇÏ°í½Í´Ù¸é ³ª¿¡°Ô ¸Â°Üº¸´Â°Ç ¾î¶§?", skin);
+                cm.askAvatar("ì¢€ë” ìœ ë‹ˆí¬í•œ ì½”ë””ë¥¼ í•˜ê³ ì‹¶ë‹¤ë©´ ë‚˜ì—ê²Œ ë§ê²¨ë³´ëŠ”ê±´ ì–´ë•Œ?", skin);
             } else if (selection == 1) {
                 beauty = 2;
                 hairnew = Array();
@@ -152,7 +152,7 @@ function action(mode, type, selection, selection2) {
                     hairnew.push(fhair[i] + parseInt(cm.getPlayer().getHair() % 10));
                         hairnew[i] = fhair[i];
                 }
-                cm.askAvatar("Á»´õ À¯´ÏÅ©ÇÑ ÄÚµğ¸¦ ÇÏ°í½Í´Ù¸é ³ª¿¡°Ô ¸Â°Üº¸´Â°Ç ¾î¶§?", hairnew);
+                cm.askAvatar("ì¢€ë” ìœ ë‹ˆí¬í•œ ì½”ë””ë¥¼ í•˜ê³ ì‹¶ë‹¤ë©´ ë‚˜ì—ê²Œ ë§ê²¨ë³´ëŠ”ê±´ ì–´ë•Œ?", hairnew);
             } else if (selection == 2) {
                 beauty = 3;
                 haircolor = Array();
@@ -161,7 +161,7 @@ function action(mode, type, selection, selection2) {
                     haircolor.push(current + i);
                         haircolor[i] = current;
                 }
-                cm.askAvatar("Á»´õ À¯´ÏÅ©ÇÑ ÄÚµğ¸¦ ÇÏ°í½Í´Ù¸é ³ª¿¡°Ô ¸Â°Üº¸´Â°Ç ¾î¶§?", haircolor);
+                cm.askAvatar("ì¢€ë” ìœ ë‹ˆí¬í•œ ì½”ë””ë¥¼ í•˜ê³ ì‹¶ë‹¤ë©´ ë‚˜ì—ê²Œ ë§ê²¨ë³´ëŠ”ê±´ ì–´ë•Œ?", haircolor);
             } else if (selection == 3) {
                 beauty = 4;
                 facenew = Array();
@@ -169,7 +169,7 @@ function action(mode, type, selection, selection2) {
                     facenew.push(fface[i] + cm.getPlayer().getFace() % 1000 - (cm.getPlayer().getFace() % 100));
                         facenew[i] = fface[i];
                 }
-                cm.askAvatar("Á»´õ À¯´ÏÅ©ÇÑ ÄÚµğ¸¦ ÇÏ°í½Í´Ù¸é ³ª¿¡°Ô ¸Â°Üº¸´Â°Ç ¾î¶§?", facenew);
+                cm.askAvatar("ì¢€ë” ìœ ë‹ˆí¬í•œ ì½”ë””ë¥¼ í•˜ê³ ì‹¶ë‹¤ë©´ ë‚˜ì—ê²Œ ë§ê²¨ë³´ëŠ”ê±´ ì–´ë•Œ?", facenew);
             } else if (selection == 4) {
                 beauty = 5;
                 var current = cm.getPlayer().getFace() % 100 + (20000 + ((cm.getPlayer().getFace() % 10000) - (cm.getPlayer().getFace() % 1000)));
@@ -177,7 +177,7 @@ function action(mode, type, selection, selection2) {
                 for (var i = 0; i < colors.length; i++) {
                         colors[i] = current;
                 }
-                cm.askAvatar("Á»´õ À¯´ÏÅ©ÇÑ ÄÚµğ¸¦ ÇÏ°í½Í´Ù¸é ³ª¿¡°Ô ¸Â°Üº¸´Â°Ç ¾î¶§?", colors);
+                cm.askAvatar("ì¢€ë” ìœ ë‹ˆí¬í•œ ì½”ë””ë¥¼ í•˜ê³ ì‹¶ë‹¤ë©´ ë‚˜ì—ê²Œ ë§ê²¨ë³´ëŠ”ê±´ ì–´ë•Œ?", colors);
             }
         }
     } else if (status == 2) {
@@ -193,7 +193,7 @@ function action(mode, type, selection, selection2) {
             else if (beauty == 4 || beauty == 7)
                 cm.setAvatar(4000000, facenew[selection], facenew_[selection2]);
             else if (beauty == 5)
-                cm.setAvatar(4000000, ·»Áî[selection], ·»ÁîA[selection2]);
+                cm.setAvatar(4000000, ë Œì¦ˆ[selection], ë Œì¦ˆA[selection2]);
             //cm.reloadChar();
         } else {
             if (beauty == 1)

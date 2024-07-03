@@ -1,5 +1,5 @@
 /*
-	Ã¢°íÁö±â
+	ì°½ê³ ì§€ê¸°
 */
 
 function action(mode, type, selection) {

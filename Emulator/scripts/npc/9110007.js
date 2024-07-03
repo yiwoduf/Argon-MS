@@ -1,6 +1,6 @@
 /*
 
-±×·£µå½ºÅä¸® ÇÁ·ÎÁ§Æ®
+ê·¸ëœë“œìŠ¤í† ë¦¬ í”„ë¡œì íŠ¸
 
 */
 
@@ -22,22 +22,22 @@ function action(mode, type, selection) {
     }
     if (status == 0) {
         /*
-        »óÁ¡ ¼¿·º¼ÇÀº 0ºÎÅÍ 99±îÁö
-        ÀÌµ¿ ¼¿·º¼ÇÀº 100ºÎÅÍ 199±îÁö
-        ÄÁÅÙÃ÷ ¼¿·º¼ÇÀº 200ºÎÅÍ 299±îÁö
-        ¿î¿µÀÚ ¼³·º¼ÇÀº 300ºÎÅÍ 399±îÁö
+        ìƒì  ì…€ë ‰ì…˜ì€ 0ë¶€í„° 99ê¹Œì§€
+        ì´ë™ ì…€ë ‰ì…˜ì€ 100ë¶€í„° 199ê¹Œì§€
+        ì»¨í…ì¸  ì…€ë ‰ì…˜ì€ 200ë¶€í„° 299ê¹Œì§€
+        ìš´ì˜ì ì„¤ë ‰ì…˜ì€ 300ë¶€í„° 399ê¹Œì§€
         */
-        var choose = "#fn³ª´®°íµñ ExtraBold##fs 16##e< ¿¡ÀÌÇÃ·¯½º ÈÄ¿ø»óÁ¡ >#n#k\r\n";
-        choose += "#L4##fn³ª´®°íµñ ExtraBold##fs 13##e#r[HOT]#k#bÃß°¡µ¥¹ÌÁö#k#n\r\n\r\n";
-		choose += "#L5000003##fn³ª´®°íµñ ExtraBold##fs 13##e#r[HOT]#k#r¹÷¼¦»óÁ¡\r\n\r\n";
-		choose += "#L5##fn³ª´®°íµñ ExtraBold##fs 13##e#r[HOT]#n#e#bÈÄ¿ø °­È­[25¼º]#k#n\r\n\r\n";
-		choose += "#L1032206##fn³ª´®°íµñ ExtraBold##fs 13##e#b½ºÄ®·¿»óÁ¡\r\n\r\n";
-		choose += "#L9000344##fn³ª´®°íµñ ExtraBold##fs 13##e#bÀáÀçº¯°æ\r\n\r\n";
-        choose += "#L1##fn³ª´®°íµñ ExtraBold##fs 13##bÈÄ¿ø »óÁ¡(¼¼Æ®)#k\r\n\r\n";     
-        choose += "#L9##b[New]ÈÄ¿ø »óÁ¡#k\r\n\r\n";    
-        choose += "#L19##b[HOT]°Ë»ö½Ä ÈÄ¿ø »óÁ¡#k\r\n\r\n";    
-        choose += "#L2##b[New]ÈÄ¿ø »óÁ¡ (³²ÀÚ¼¼Æ®)#k\r\n\r\n";
-        choose += "#L3##b[New]ÈÄ¿ø »óÁ¡ (¿©ÀÚ¼¼Æ®)#k\r\n";
+        var choose = "#fnë‚˜ëˆ”ê³ ë”• ExtraBold##fs 16##e< ì—ì´í”ŒëŸ¬ìŠ¤ í›„ì›ìƒì  >#n#k\r\n";
+        choose += "#L4##fnë‚˜ëˆ”ê³ ë”• ExtraBold##fs 13##e#r[HOT]#k#bì¶”ê°€ë°ë¯¸ì§€#k#n\r\n\r\n";
+		choose += "#L5000003##fnë‚˜ëˆ”ê³ ë”• ExtraBold##fs 13##e#r[HOT]#k#rë²…ìƒ·ìƒì \r\n\r\n";
+		choose += "#L5##fnë‚˜ëˆ”ê³ ë”• ExtraBold##fs 13##e#r[HOT]#n#e#bí›„ì› ê°•í™”[25ì„±]#k#n\r\n\r\n";
+		choose += "#L1032206##fnë‚˜ëˆ”ê³ ë”• ExtraBold##fs 13##e#bìŠ¤ì¹¼ë ›ìƒì \r\n\r\n";
+		choose += "#L9000344##fnë‚˜ëˆ”ê³ ë”• ExtraBold##fs 13##e#bì ì¬ë³€ê²½\r\n\r\n";
+        choose += "#L1##fnë‚˜ëˆ”ê³ ë”• ExtraBold##fs 13##bí›„ì› ìƒì (ì„¸íŠ¸)#k\r\n\r\n";     
+        choose += "#L9##b[New]í›„ì› ìƒì #k\r\n\r\n";    
+        choose += "#L19##b[HOT]ê²€ìƒ‰ì‹ í›„ì› ìƒì #k\r\n\r\n";    
+        choose += "#L2##b[New]í›„ì› ìƒì  (ë‚¨ìì„¸íŠ¸)#k\r\n\r\n";
+        choose += "#L3##b[New]í›„ì› ìƒì  (ì—¬ìì„¸íŠ¸)#k\r\n";
 
         if (cm.getPlayer().hasGmLevel(100)){
 

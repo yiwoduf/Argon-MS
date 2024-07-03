@@ -20,8 +20,8 @@ function action(mode, type, selection) {
         else
             status--;
 	if (status == 0) {
-		var jessica = "#fn³ª´®°íµñ Extrabold##b"+ServerConstants.serverName+" ±¤Àå#k À¸·Î ÀÌµ¿ÇÏ°í ½ÍÀ¸¼¼¿ä.?\r\n";
-		jessica += "#L0##b"+ServerConstants.serverName+" ±¤Àå#k À¸·Î ÀÌµ¿ÇÏ±â#k\r\n"
+		var jessica = "#fnë‚˜ëˆ”ê³ ë”• Extrabold##b"+ServerConstants.serverName+" ê´‘ì¥#k ìœ¼ë¡œ ì´ë™í•˜ê³  ì‹¶ìœ¼ì„¸ìš”.?\r\n";
+		jessica += "#L0##b"+ServerConstants.serverName+" ê´‘ì¥#k ìœ¼ë¡œ ì´ë™í•˜ê¸°#k\r\n"
 		cm.sendSimple(jessica);
 	} else if (status == 1) {
 	if (selection == 0) {

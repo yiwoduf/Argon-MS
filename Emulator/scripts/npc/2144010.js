@@ -4,11 +4,11 @@
 	MapleStory 1.2.246 Varon Team Script Maker	Scripted By Varon Team :: MelnoK
 
 
-	SCRIPT MAKER : ¸á·ĞK
+	SCRIPT MAKER : ë©œë¡ K
 
 	NPC ID : 2144010
 
-	NPC NAME : ¾ÆÄ«ÀÌ·³
+	NPC NAME : ì•„ì¹´ì´ëŸ¼
 
 */
 
@@ -33,7 +33,7 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        cm.sendYesNo("³» ¿À·£ °èÈ¹À» ¹°°ÅÇ°À¸·Î ¸¸µç ³à¼®µéÀÌ ÀÌ·¸°Ô Á¦ ¹ß·Î Ã£¾Æ¿ÍÁÖ´Ï Á¤¸» ±â»Ú±â ±×Áö ¾ø±º.\r\n\r\n#r±× ´ñ°¡·Î ¼¼»ó¿¡¼­ Á¦ÀÏ °íÅë½º·¯¿î Á×À½À» ¼±»çÇØ ÁÖ¸¶!");
+        cm.sendYesNo("ë‚´ ì˜¤ëœ ê³„íšì„ ë¬¼ê±°í’ˆìœ¼ë¡œ ë§Œë“  ë…€ì„ë“¤ì´ ì´ë ‡ê²Œ ì œ ë°œë¡œ ì°¾ì•„ì™€ì£¼ë‹ˆ ì •ë§ ê¸°ì˜ê¸° ê·¸ì§€ ì—†êµ°.\r\n\r\n#rê·¸ ëŒ“ê°€ë¡œ ì„¸ìƒì—ì„œ ì œì¼ ê³ í†µìŠ¤ëŸ¬ìš´ ì£½ìŒì„ ì„ ì‚¬í•´ ì£¼ë§ˆ!");
         cm.playSound(false,"Sound/Voice.img/akayrum/3")
     } else if (status == 1) {
         cm.spawnMob(8860007,446,-181);

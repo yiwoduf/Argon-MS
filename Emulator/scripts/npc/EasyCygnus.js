@@ -18,19 +18,19 @@ function action(mode, type, selection) {
 
 	if (status == 0) {
 		if (cm.getPlayer().getMapId() == 271041000) {
-			cm.sendSimple("Å¸¶ôÇÑ ½Ã±×³Ê½º(ÀÌÁö) ¿¡ Âü°¡ÇÒ ÁØºñ´Â µÇ¼Ì½À´Ï±î?\r\n\r\n" + "#L0##b ½Ã±×³Ê½º( ÀÌÁö ) ÀÔÀåÀ» ½ÅÃ»ÇÑ´Ù.");
+			cm.sendSimple("íƒ€ë½í•œ ì‹œê·¸ë„ˆìŠ¤(ì´ì§€) ì— ì°¸ê°€í•  ì¤€ë¹„ëŠ” ë˜ì…¨ìŠµë‹ˆê¹Œ?\r\n\r\n" + "#L0##b ì‹œê·¸ë„ˆìŠ¤( ì´ì§€ ) ì…ì¥ì„ ì‹ ì²­í•œë‹¤.");
 		} else {
-			cm.sendYesNo("½Ã±×³Ê½º ¿øÁ¤À» ±×¸¸ÇÏ°í ³ª°¡½Ã°Ú½À´Ï±î?");
+			cm.sendYesNo("ì‹œê·¸ë„ˆìŠ¤ ì›ì •ì„ ê·¸ë§Œí•˜ê³  ë‚˜ê°€ì‹œê² ìŠµë‹ˆê¹Œ?");
 		}
 	} else if (status == 1) {
 
 		if (cm.getPlayer().getMapId() == 271041000) {
 			if (cm.getPlayer().getParty() == null) {
-				cm.sendOk("1ÀÎ ÀÌ»ó ÆÄÆ¼¸¦ ¸Î¾î¾ß¸¸ ÀÔÀåÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+				cm.sendOk("1ì¸ ì´ìƒ íŒŒí‹°ë¥¼ ë§ºì–´ì•¼ë§Œ ì…ì¥í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
 				cm.dispose();
 				return;
 			} else if (!cm.isLeader()) {
-				cm.sendOk("ÆÄÆ¼Àå¸¸ ÀÔÀå½ÅÃ»ÀÌ °¡´ÉÇÕ´Ï´Ù");
+				cm.sendOk("íŒŒí‹°ì¥ë§Œ ì…ì¥ì‹ ì²­ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤");
 				cm.dispose();
 				return;
 			}
@@ -44,10 +44,10 @@ function action(mode, type, selection) {
 					}
 			}
 			if (!datecheck) {
-				cm.sendOk("¿À´Ã ½Ã±×³Ê½º¸¦ Å¬¸®¾îÇÑ ÆÄÆ¼¿øÀÌ ÀÖ½À´Ï´Ù.\r\n½Ã±×³Ê½º´Â ÇÏ·ç¿¡ 3È¸¸¸ ÀÔÀå °¡´ÉÇÕ´Ï´Ù.\r\n#e#r<Å¬¸®¾î ±â·ÏÀº ¸ÅÀÏ ÀÚÁ¤¿¡ ÀÏ°ı ÃÊ±âÈ­µË´Ï´Ù.>#k#n");
+				cm.sendOk("ì˜¤ëŠ˜ ì‹œê·¸ë„ˆìŠ¤ë¥¼ í´ë¦¬ì–´í•œ íŒŒí‹°ì›ì´ ìˆìŠµë‹ˆë‹¤.\r\nì‹œê·¸ë„ˆìŠ¤ëŠ” í•˜ë£¨ì— 3íšŒë§Œ ì…ì¥ ê°€ëŠ¥í•©ë‹ˆë‹¤.\r\n#e#r<í´ë¦¬ì–´ ê¸°ë¡ì€ ë§¤ì¼ ìì •ì— ì¼ê´„ ì´ˆê¸°í™”ë©ë‹ˆë‹¤.>#k#n");
 
 			} else if (cm.getPlayerCount(271041100) > 0) {
-				cm.sendOk("ÀÌ¹Ì ´Ù¸¥ ÆÄÆ¼°¡ ½Ã±×³Ê½º¸¦ Ã³Ä¡Áß ÀÔ´Ï´Ù.");
+				cm.sendOk("ì´ë¯¸ ë‹¤ë¥¸ íŒŒí‹°ê°€ ì‹œê·¸ë„ˆìŠ¤ë¥¼ ì²˜ì¹˜ì¤‘ ì…ë‹ˆë‹¤.");
 			} else {
 				cm.resetMap(271041100);
 				cm.PartyTimeMove(cm.getPlayer().getMapId(), 271041100, 1800);
@@ -57,7 +57,7 @@ function action(mode, type, selection) {
 						target.setDateKey("EasyCygnus", target.getDateKey("EasyCygnus") - 1);
 						target.setKeyValue("EasyCygnusTime", new Date().getTime());
 				}
-				cm.getPlayer().getMap().startMapEffect("ÀÌ°÷À» Ã£¾Æ ¿Â »ç¶÷À» º¸´Â °ÍÀº Á¤¸» ¿À·£¸¸ÀÌ¿¡¿ä. ÇÏÁö¸¸ ¹«»çÈ÷ µ¹¾Æ°£ ºĞµµ ¾ø¾ú´ä´Ï´Ù.", 5120043);
+				cm.getPlayer().getMap().startMapEffect("ì´ê³³ì„ ì°¾ì•„ ì˜¨ ì‚¬ëŒì„ ë³´ëŠ” ê²ƒì€ ì •ë§ ì˜¤ëœë§Œì´ì—ìš”. í•˜ì§€ë§Œ ë¬´ì‚¬íˆ ëŒì•„ê°„ ë¶„ë„ ì—†ì—ˆë‹µë‹ˆë‹¤.", 5120043);
 				
 			}
 			cm.dispose();

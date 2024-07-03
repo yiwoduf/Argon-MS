@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -46,51 +46,51 @@ public class SearchToCode extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        °Ë»ö¾î = new javax.swing.JTextField();
-        Àåºñ = new javax.swing.JRadioButton();
-        ¾ÆÀÌÅÛ = new javax.swing.JRadioButton();
+        ê²€ìƒ‰ì–´ = new javax.swing.JTextField();
+        ì¥ë¹„ = new javax.swing.JRadioButton();
+        ì•„ì´í…œ = new javax.swing.JRadioButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        Ãâ·ÂL = new javax.swing.JList();
+        ì¶œë ¥L = new javax.swing.JList();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("±¼¸²", 1, 12)); // NOI18N
-        jLabel1.setText("¾ÆÀÌÅÛ ÀÌ¸§");
+        jLabel1.setFont(new java.awt.Font("êµ´ë¦¼", 1, 12)); // NOI18N
+        jLabel1.setText("ì•„ì´í…œ ì´ë¦„");
 
-        Àåºñ.setText("Àåºñ");
-        Àåºñ.addActionListener(new java.awt.event.ActionListener() {
+        ì¥ë¹„.setText("ì¥ë¹„");
+        ì¥ë¹„.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ÀåºñActionPerformed(evt);
+                ì¥ë¹„ActionPerformed(evt);
             }
         });
 
-        ¾ÆÀÌÅÛ.setText("¾ÆÀÌÅÛ");
-        ¾ÆÀÌÅÛ.addActionListener(new java.awt.event.ActionListener() {
+        ì•„ì´í…œ.setText("ì•„ì´í…œ");
+        ì•„ì´í…œ.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ¾ÆÀÌÅÛActionPerformed(evt);
+                ì•„ì´í…œActionPerformed(evt);
             }
         });
 
-        jScrollPane1.setViewportView(Ãâ·ÂL);
+        jScrollPane1.setViewportView(ì¶œë ¥L);
 
-        jButton1.setText(",±¸ºĞ ÇØ¼­ ÀúÀå");
+        jButton1.setText(",êµ¬ë¶„ í•´ì„œ ì €ì¥");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("ÇÑÄ­¾¿ ³»·Á¼­ ÀúÀå");
+        jButton2.setText("í•œì¹¸ì”© ë‚´ë ¤ì„œ ì €ì¥");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
-        jButton3.setText("°Ë»ö");
+        jButton3.setText("ê²€ìƒ‰");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -111,14 +111,14 @@ public class SearchToCode extends javax.swing.JFrame {
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(Àåºñ)
+                        .addComponent(ì¥ë¹„)
                         .addGap(147, 147, 147)
-                        .addComponent(¾ÆÀÌÅÛ)
+                        .addComponent(ì•„ì´í…œ)
                         .addGap(284, 284, 284))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(°Ë»ö¾î, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ê²€ìƒ‰ì–´, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -129,12 +129,12 @@ public class SearchToCode extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(°Ë»ö¾î, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ê²€ìƒ‰ì–´, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Àåºñ)
-                    .addComponent(¾ÆÀÌÅÛ))
+                    .addComponent(ì¥ë¹„)
+                    .addComponent(ì•„ì´í…œ))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -148,49 +148,49 @@ public class SearchToCode extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    String name = JOptionPane.showInputDialog(null, "ÆÄÀÏ¸íÀ» ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À");
+    String name = JOptionPane.showInputDialog(null, "íŒŒì¼ëª…ì„ ì…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤");
     FileOutputStream out = null;
     try {
       out = new FileOutputStream("" + name + ".txt", false);
-      out.write(ÀÓ½Ã1.toString().getBytes());
+      out.write(ì„ì‹œ1.toString().getBytes());
     } catch (Exception ex) {} finally {
-      try {if (out != null) out.close(); } catch (IOException ex){}JOptionPane.showMessageDialog(null, "ÀúÀåÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");}
+      try {if (out != null) out.close(); } catch (IOException ex){}JOptionPane.showMessageDialog(null, "ì €ì¥ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");}
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void ÀåºñActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ÀåºñActionPerformed
-        ¾ÆÀÌÅÛ.setSelected(false);
-        Ã¼Å©[1] = false;
-        Ã¼Å©[0] = true;
-    }//GEN-LAST:event_ÀåºñActionPerformed
+    private void ì¥ë¹„ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ì¥ë¹„ActionPerformed
+        ì•„ì´í…œ.setSelected(false);
+        ì²´í¬[1] = false;
+        ì²´í¬[0] = true;
+    }//GEN-LAST:event_ì¥ë¹„ActionPerformed
 
-    private void ¾ÆÀÌÅÛActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_¾ÆÀÌÅÛActionPerformed
-        Àåºñ.setSelected(false);
-        Ã¼Å©[0] = false;
-        Ã¼Å©[1] = true;
-    }//GEN-LAST:event_¾ÆÀÌÅÛActionPerformed
+    private void ì•„ì´í…œActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ì•„ì´í…œActionPerformed
+        ì¥ë¹„.setSelected(false);
+        ì²´í¬[0] = false;
+        ì²´í¬[1] = true;
+    }//GEN-LAST:event_ì•„ì´í…œActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        if (!Ã¼Å©[0] && !Ã¼Å©[1]) {
-            JOptionPane.showMessageDialog(null, "ºĞ·ù¸¦ ¼±ÅÃÇØ ÁÖ½Ê½Ã¿À.");
+        if (!ì²´í¬[0] && !ì²´í¬[1]) {
+            JOptionPane.showMessageDialog(null, "ë¶„ë¥˜ë¥¼ ì„ íƒí•´ ì£¼ì‹­ì‹œì˜¤.");
             return;
         }
-        Ãâ·Â.clear();
-        Ãâ·ÂL.setModel(Ãâ·Â);
-        ÀÓ½Ã1 = "";
-        ÀÓ½Ã2 = "";
+        ì¶œë ¥.clear();
+        ì¶œë ¥L.setModel(ì¶œë ¥);
+        ì„ì‹œ1 = "";
+        ì„ì‹œ2 = "";
         List<String> retItems = new ArrayList<String>();
 		for (Pair<Integer, String> itemPair : ItemInformation.getInstance().getAllItems()) {
-		    if (itemPair.getRight().toLowerCase().contains(°Ë»ö¾î.getText())) {
-                        if (Ã¼Å©[0]) {
+		    if (itemPair.getRight().toLowerCase().contains(ê²€ìƒ‰ì–´.getText())) {
+                        if (ì²´í¬[0]) {
                                 if (GameConstants.isEquip(itemPair.getLeft())) {
-                                    ÀÓ½Ã1 = ÀÓ½Ã1 + itemPair.getLeft() + ", ";
-                                    ÀÓ½Ã2 = ÀÓ½Ã2 + itemPair.getLeft() + " - " + itemPair.getRight() + "\r\n";
+                                    ì„ì‹œ1 = ì„ì‹œ1 + itemPair.getLeft() + ", ";
+                                    ì„ì‹œ2 = ì„ì‹œ2 + itemPair.getLeft() + " - " + itemPair.getRight() + "\r\n";
                                     retItems.add(itemPair.getLeft() + " - " + itemPair.getRight());
                                 }
-                            } else if (Ã¼Å©[1]) {
+                            } else if (ì²´í¬[1]) {
                                 if (!GameConstants.isEquip(itemPair.getLeft())) {
-                                    ÀÓ½Ã1 = ÀÓ½Ã1 + itemPair.getLeft() + ", ";
-                                    ÀÓ½Ã2 = ÀÓ½Ã2 + itemPair.getLeft() + " - " + itemPair.getRight() + "\r\n";
+                                    ì„ì‹œ1 = ì„ì‹œ1 + itemPair.getLeft() + ", ";
+                                    ì„ì‹œ2 = ì„ì‹œ2 + itemPair.getLeft() + " - " + itemPair.getRight() + "\r\n";
                                     retItems.add(itemPair.getLeft() + " - " + itemPair.getRight());
                                 } 
                             }
@@ -198,23 +198,23 @@ public class SearchToCode extends javax.swing.JFrame {
 		}
 		if (retItems != null && retItems.size() > 0) {
 		    for (String singleRetItem : retItems) {
-			Ãâ·Â.addElement(singleRetItem.toString());
+			ì¶œë ¥.addElement(singleRetItem.toString());
 		    }
-                    Ãâ·ÂL.setModel(Ãâ·Â);
+                    ì¶œë ¥L.setModel(ì¶œë ¥);
 		} else {
-		    JOptionPane.showMessageDialog(null, "¹ß°ßµÈ ¾ÆÀÌÅÛÀÌ ¾ø½À´Ï´Ù.");
+		    JOptionPane.showMessageDialog(null, "ë°œê²¬ëœ ì•„ì´í…œì´ ì—†ìŠµë‹ˆë‹¤.");
 		}
                 
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-    String name = JOptionPane.showInputDialog(null, "ÆÄÀÏ¸íÀ» ÀÔ·ÂÇØ ÁÖ½Ê½Ã¿À");
+    String name = JOptionPane.showInputDialog(null, "íŒŒì¼ëª…ì„ ì…ë ¥í•´ ì£¼ì‹­ì‹œì˜¤");
     FileOutputStream out = null;
     try {
       out = new FileOutputStream("" + name + ".txt", false);
-      out.write(ÀÓ½Ã2.toString().getBytes());
+      out.write(ì„ì‹œ2.toString().getBytes());
     } catch (Exception ex) {} finally {
-      try {if (out != null) out.close(); } catch (IOException ex){}JOptionPane.showMessageDialog(null, "ÀúÀåÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");}
+      try {if (out != null) out.close(); } catch (IOException ex){}JOptionPane.showMessageDialog(null, "ì €ì¥ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");}
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -228,19 +228,19 @@ public class SearchToCode extends javax.swing.JFrame {
             }
         });
     }
-    public static String ÀÓ½Ã2 = "";
-    public static String ÀÓ½Ã1 = "";
-    private boolean Ã¼Å©[] = {false,false};
-    public static DefaultListModel Ãâ·Â = new DefaultListModel();
+    public static String ì„ì‹œ2 = "";
+    public static String ì„ì‹œ1 = "";
+    private boolean ì²´í¬[] = {false,false};
+    public static DefaultListModel ì¶œë ¥ = new DefaultListModel();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField °Ë»ö¾î;
-    private javax.swing.JRadioButton ¾ÆÀÌÅÛ;
-    private javax.swing.JRadioButton Àåºñ;
-    private javax.swing.JList Ãâ·ÂL;
+    private javax.swing.JTextField ê²€ìƒ‰ì–´;
+    private javax.swing.JRadioButton ì•„ì´í…œ;
+    private javax.swing.JRadioButton ì¥ë¹„;
+    private javax.swing.JList ì¶œë ¥L;
     // End of variables declaration//GEN-END:variables
 }

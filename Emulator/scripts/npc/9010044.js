@@ -1,14 +1,14 @@
 /*
 
-	¿Àµò KMS ÆÀ ¼Ò½ºÀÇ ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	ì˜¤ë”˜ KMS íŒ€ ì†ŒìŠ¤ì˜ ìŠ¤í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤.
 
-	¿£ÇÇ½Ã¾ÆÀÌµð : 9900002
+	ì—”í”¼ì‹œì•„ì´ë”” : 9900002
 	
-	¿£ÇÇ½Ã ÀÌ¸§ : ½Å¿ëÇùµ¿Á¶ÇÕ
+	ì—”í”¼ì‹œ ì´ë¦„ : ì‹ ìš©í˜‘ë™ì¡°í•©
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : ¿î¿µÀÚ¸Ê (180000000)
+	ì—”í”¼ì‹œê°€ ìžˆëŠ” ë§µ : ìš´ì˜ìžë§µ (180000000)
 
-	¿£ÇÇ½Ã ¼³¸í : ¼ºÇü, Çì¾î NPC
+	ì—”í”¼ì‹œ ì„¤ëª… : ì„±í˜•, í—¤ì–´ NPC
 
 */
 
@@ -43,7 +43,7 @@ function action(mode, type, selection) {
 			chr.changeMap(cm.getPlayer().getMap(), cm.getPlayer().getMap().getPortal(0));
                     }
 	} else {
-		cm.sendOk("¿î¿µÀÚÀÇ ±ÇÇÑ: ¸ðµç À¯Àú¸¦ ¼ÒÈ¯ÇÕ´Ï´Ù(À¯Àú´Â »ç¿ëÇÏ½Ç¼ö ¾ø½À´Ï´Ù ");
+		cm.sendOk("ìš´ì˜ìžì˜ ê¶Œí•œ: ëª¨ë“  ìœ ì €ë¥¼ ì†Œí™˜í•©ë‹ˆë‹¤(ìœ ì €ëŠ” ì‚¬ìš©í•˜ì‹¤ìˆ˜ ì—†ìŠµë‹ˆë‹¤ ");
 	}
 		cm.dispose();
 	}

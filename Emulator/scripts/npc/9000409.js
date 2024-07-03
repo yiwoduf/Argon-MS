@@ -3,26 +3,26 @@
 
 /*
 
-	È÷³ª ¼Ò½º ÆÑÀÇ ½ºÅ©¸³Æ® ÀÔ´Ï´Ù. (Á¦ÀÛ : Æ¼½ã) - ´Ü¹®¿£ÇÇ½Ã ÀÚµ¿Á¦ÀÛ ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¸¸µé¾îÁø ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	íˆë‚˜ ì†ŒìŠ¤ íŒ©ì˜ ìŠ¤í¬ë¦½íŠ¸ ì…ë‹ˆë‹¤. (ì œì‘ : í‹°ì¬) - ë‹¨ë¬¸ì—”í”¼ì‹œ ìë™ì œì‘ ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ë§Œë“¤ì–´ì§„ ìŠ¤í¬ë¦½íŠ¸ ì…ë‹ˆë‹¤.
 
-	È£¿ËÀÌ ¿¡ ÀÇÇØ ¸¸µé¾î Á³½À´Ï´Ù.
+	í˜¸ì˜¹ì´ ì— ì˜í•´ ë§Œë“¤ì–´ ì¡ŒìŠµë‹ˆë‹¤.
 
-	¿£ÇÇ½Ã¾ÆÀÌµğ : 9900003
+	ì—”í”¼ì‹œì•„ì´ë”” : 9900003
 
-	¿£ÇÇ½Ã ÀÌ¸§ : ½ºÇÇ³Ú
+	ì—”í”¼ì‹œ ì´ë¦„ : ìŠ¤í”¼ë„¬
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : ºòÅä¸®¾Æ·Îµå : ¿¤¸®´Ï¾Æ (180000000)
+	ì—”í”¼ì‹œê°€ ìˆëŠ” ë§µ : ë¹…í† ë¦¬ì•„ë¡œë“œ : ì—˜ë¦¬ë‹ˆì•„ (180000000)
 
-	¿£ÇÇ½Ã ¼³¸í : MISSINGNO
+	ì—”í”¼ì‹œ ì„¤ëª… : MISSINGNO
 
 
 */
 importPackage(Packages.server.maps);
-//»çÅÁ : 5120030
-//¿äÁ¤ : 5120023
-//ÁÙ¸®¿§ : 5120022
-//¶óÄÉ¸®½º : 5120017
-//³îÀå°­ : 5120037
+//ì‚¬íƒ• : 5120030
+//ìš”ì • : 5120023
+//ì¤„ë¦¬ì—£ : 5120022
+//ë¼ì¼€ë¦¬ìŠ¤ : 5120017
+//ë†€ì¥ê°• : 5120037
 //5121000
 var status = -1;
 var select = 0;
@@ -44,9 +44,9 @@ function action(mode, type, selection) {
 
 	if (status == 0) {
             if (cm.getPlayer().getGMLevel()>1) {
-                cm.sendSimple("#L0#È­¸éÁß¾Ó¿¡ ±ÛÀÚ¶ç¿ì±â(¹®Á¦³»±â)#l\r\n#L1#OX½Ã°£Á¦ÇÑ(¹®Á¦³ÂÀ½)#l\r\n\r\n\r\n#L2#(Á¦ÇÑ½Ã°£Áö³µÀ»¶§ »ç¿ë)Á¤´äÀº O#l\r\n\r\n#L3#(Á¦ÇÑ½Ã°£Áö³µÀ»¶§ »ç¿ë)Á¤´äÀº X#l\r\n");
+                cm.sendSimple("#L0#í™”ë©´ì¤‘ì•™ì— ê¸€ìë„ìš°ê¸°(ë¬¸ì œë‚´ê¸°)#l\r\n#L1#OXì‹œê°„ì œí•œ(ë¬¸ì œëƒˆìŒ)#l\r\n\r\n\r\n#L2#(ì œí•œì‹œê°„ì§€ë‚¬ì„ë•Œ ì‚¬ìš©)ì •ë‹µì€ O#l\r\n\r\n#L3#(ì œí•œì‹œê°„ì§€ë‚¬ì„ë•Œ ì‚¬ìš©)ì •ë‹µì€ X#l\r\n");
             } else {
-                cm.sendOk("#e#r¾Æ·î´ÔÀÇ#n#b\r\n´ëº¯ÀÎ ÀÔ´Ï´Ù!");
+                cm.sendOk("#e#rì•„ë£½ë‹˜ì˜#n#b\r\nëŒ€ë³€ì¸ ì…ë‹ˆë‹¤!");
                 cm.dispose();
                 return;
             }
@@ -55,42 +55,42 @@ function action(mode, type, selection) {
         select = selection;
         if (true) {
 	       if (select == 0) {
-                    cm.sendGetText("È­¸é Áß¾Ó¿¡ ¶ç¿ï ±ÛÀÚ?");
+                    cm.sendGetText("í™”ë©´ ì¤‘ì•™ì— ë„ìš¸ ê¸€ì?");
                    } else if (select == 1) {
-                    cm.sendGetNumber("Áö¼Ó½Ã°£Àº ¾ó¸¶³ª? (ÃÊ´ÜÀ§)", 1, 1, 300);
+                    cm.sendGetNumber("ì§€ì†ì‹œê°„ì€ ì–¼ë§ˆë‚˜? (ì´ˆë‹¨ìœ„)", 1, 1, 300);
                 } else if (select == 2) {
                     cm.getPlayer().getMap().broadcastMessage(Packages.packet.creators.MainPacketCreator.removeMapEffect());
-                    cm.getPlayer().getMap().broadcastMessage(Packages.packet.creators.MainPacketCreator.getGMText(5, "Á¤´äÀº O ÀÔ´Ï´Ù!"));
-                    cm.getPlayer().getMap().broadcastMessage(new MapleMapEffect("Á¤´äÀº O ÀÔ´Ï´Ù!", icon).makeStartData());
+                    cm.getPlayer().getMap().broadcastMessage(Packages.packet.creators.MainPacketCreator.getGMText(5, "ì •ë‹µì€ O ì…ë‹ˆë‹¤!"));
+                    cm.getPlayer().getMap().broadcastMessage(new MapleMapEffect("ì •ë‹µì€ O ì…ë‹ˆë‹¤!", icon).makeStartData());
                     var it = cm.getPlayer().getMap().getAllPlayer().iterator();
                     var map = cm.getClient().getChannelServer().getMapFactory().getMap(109050000);
                     while (it.hasNext()) {
                         var chr = it.next();
                         if (!checkPosO(chr.getPosition()) && !chr.isGM()) {
-                            chr.Message("¾ÈÅ¸±õ³×¿ä! Á¤´äÀº O ¿´¾î¿ä!  OX ÄûÁî¿¡¼­ ÅğÃâµÇ¼Ì½À´Ï´Ù. ´ÙÀ½ ÀÌº¥Æ®¿¡ µµÀüÇØ ÁÖ¼¼¿ä!");
+                            chr.Message("ì•ˆíƒ€ê¹ë„¤ìš”! ì •ë‹µì€ O ì˜€ì–´ìš”!  OX í€´ì¦ˆì—ì„œ í‡´ì¶œë˜ì…¨ìŠµë‹ˆë‹¤. ë‹¤ìŒ ì´ë²¤íŠ¸ì— ë„ì „í•´ ì£¼ì„¸ìš”!");
                             chr.changeMap(map, map.getPortal(0));
-                            cm.getPlayer().getMap().broadcastMessage(Packages.packet.creators.MainPacketCreator.getGMText(10, chr.getName() + "´ÔÀÌ OXÄûÁî¿¡¼­ ÅğÀå´çÇß½À´Ï´Ù!"));
+                            cm.getPlayer().getMap().broadcastMessage(Packages.packet.creators.MainPacketCreator.getGMText(10, chr.getName() + "ë‹˜ì´ OXí€´ì¦ˆì—ì„œ í‡´ì¥ë‹¹í–ˆìŠµë‹ˆë‹¤!"));
                         }
                     }
                     cm.dispose();
                 } else if (select == 3) {
                     cm.getPlayer().getMap().broadcastMessage(Packages.packet.creators.MainPacketCreator.removeMapEffect());
-                    cm.getPlayer().getMap().broadcastMessage(Packages.packet.creators.MainPacketCreator.getGMText(5, "Á¤´äÀº X ÀÔ´Ï´Ù!"));
-                    cm.getPlayer().getMap().broadcastMessage(new MapleMapEffect("Á¤´äÀº X ÀÔ´Ï´Ù!", icon).makeStartData());
+                    cm.getPlayer().getMap().broadcastMessage(Packages.packet.creators.MainPacketCreator.getGMText(5, "ì •ë‹µì€ X ì…ë‹ˆë‹¤!"));
+                    cm.getPlayer().getMap().broadcastMessage(new MapleMapEffect("ì •ë‹µì€ X ì…ë‹ˆë‹¤!", icon).makeStartData());
                     var it = cm.getPlayer().getMap().getAllPlayer().iterator();
                     var map = cm.getClient().getChannelServer().getMapFactory().getMap(109050000);
                     while (it.hasNext()) {
                         var chr = it.next();
                         if (!checkPosX(chr.getPosition()) && !chr.isGM()) {
-                            chr.Message("¾ÈÅ¸±õ³×¿ä! Á¤´äÀº X ¿´¾î¿ä!  OX ÄûÁî¿¡¼­ ÅğÃâµÇ¼Ì½À´Ï´Ù. ´ÙÀ½ ÀÌº¥Æ®¿¡ µµÀüÇØ ÁÖ¼¼¿ä!");
+                            chr.Message("ì•ˆíƒ€ê¹ë„¤ìš”! ì •ë‹µì€ X ì˜€ì–´ìš”!  OX í€´ì¦ˆì—ì„œ í‡´ì¶œë˜ì…¨ìŠµë‹ˆë‹¤. ë‹¤ìŒ ì´ë²¤íŠ¸ì— ë„ì „í•´ ì£¼ì„¸ìš”!");
                             chr.changeMap(map, map.getPortal(0));
-                            cm.getPlayer().getMap().broadcastMessage(Packages.packet.creators.MainPacketCreator.getGMText(10, chr.getName() + "´ÔÀÌ OXÄûÁî¿¡¼­ ÅğÀå´çÇß½À´Ï´Ù!"));
+                            cm.getPlayer().getMap().broadcastMessage(Packages.packet.creators.MainPacketCreator.getGMText(10, chr.getName() + "ë‹˜ì´ OXí€´ì¦ˆì—ì„œ í‡´ì¥ë‹¹í–ˆìŠµë‹ˆë‹¤!"));
                         }
                     }
                     cm.dispose();
                 }
 	} else {
-	    cm.sendOk("ÀÌº¥Æ® ¸Ê¿¡ ¿À½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù! ^^");
+	    cm.sendOk("ì´ë²¤íŠ¸ ë§µì— ì˜¤ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤! ^^");
             cm.dispose();
             return;
 	}

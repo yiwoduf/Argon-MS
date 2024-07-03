@@ -1,14 +1,14 @@
 function enter(pi) {
     if (!pi.checkTimeValue("Papulatus_BattleStartTime", 3600 * 2)) {
-        pi.getPlayer().message(5, "½Ã°èÅ¾ÀÇ ±Ù¿ø¿¡´Â 2½Ã°£¸¶´Ù ÇÑ¹ø¾¿¸¸ ÀÔÀåÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+        pi.getPlayer().message(5, "ì‹œê³„íƒ‘ì˜ ê·¼ì›ì—ëŠ” 2ì‹œê°„ë§ˆë‹¤ í•œë²ˆì”©ë§Œ ì…ì¥í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
         return false;
     }
     if (pi.getPlayerCount(230040420) >= 1) {
-           pi.getPlayer().message(5, "ÀÌ¹Ì ´©±º°¡°¡ ÇÇ¾Æ´©½º¸¦ Àâ°íÀÖ½À´Ï´Ù.");
+           pi.getPlayer().message(5, "ì´ë¯¸ ëˆ„êµ°ê°€ê°€ í”¼ì•„ëˆ„ìŠ¤ë¥¼ ì¡ê³ ìˆìŠµë‹ˆë‹¤.");
            return false;
     }
     if (!pi.haveItem(4031179)) {
-	pi.playerMessage(5, "Â÷¿ø ±Õ¿­ÀÇ Á¶°¢À» ¼ÒÁöÇÏ°í ÀÖÁö ¾Ê¾Æ ÆÄÇ®¶óÅõ½º¸¦ ¸¸³¯ ¼ö ¾ø½À´Ï´Ù.");
+	pi.playerMessage(5, "ì°¨ì› ê· ì—´ì˜ ì¡°ê°ì„ ì†Œì§€í•˜ê³  ìˆì§€ ì•Šì•„ íŒŒí’€ë¼íˆ¬ìŠ¤ë¥¼ ë§Œë‚  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 	return false;
     }
     pi.setTimeValueCurrent("Papulatus_BattleStartTime");

@@ -1,6 +1,6 @@
 
 // [time_amd@nate.com]
-// [Å¸ÀÓ.¸ŞÀÎ.ÇÑ±¹]
+// [íƒ€ì„.ë©”ì¸.í•œêµ­]
 
 
 importPackage(Packages.client.items);
@@ -27,12 +27,12 @@ function action(M, T, S) {
             Status--;
 
         if (Status == 0) {
-            cm.sendSimple("#r Àåºñ ´É·ÂÀ» ¿Å°ÜÁÖÁö! ´Ü 1¾ï ¸Ş¼Ò°¡ ÇÊ¿äÇÏ³×! Àü¼Û½Ã ±âÁ¸ ´É·ÂÄ¡´Â »ç¶óÁı´Ï´Ù.\r\n\r\n#b"
-                    + "#L1#1¾ï¸Ş¼Ò¸¦ µé°í¿Ô¾î!\r\n");
+            cm.sendSimple("#r ì¥ë¹„ ëŠ¥ë ¥ì„ ì˜®ê²¨ì£¼ì§€! ë‹¨ 1ì–µ ë©”ì†Œê°€ í•„ìš”í•˜ë„¤! ì „ì†¡ì‹œ ê¸°ì¡´ ëŠ¥ë ¥ì¹˜ëŠ” ì‚¬ë¼ì§‘ë‹ˆë‹¤.\r\n\r\n#b"
+                    + "#L1#1ì–µë©”ì†Œë¥¼ ë“¤ê³ ì™”ì–´!\r\n");
         } else if (Status == 1) {
             switch (S) {
                 case 1:
-                    gT = "¹«½¼ ¾ÆÀÌÅÛÀÇ ´É·ÂÀ» ¿Å±â½Ç ºÎºĞÀÎ°¡¿ä?\r\n#b"
+                    gT = "ë¬´ìŠ¨ ì•„ì´í…œì˜ ëŠ¥ë ¥ì„ ì˜®ê¸°ì‹¤ ë¶€ë¶„ì¸ê°€ìš”?\r\n#b"
                     for (var i = 1; i < cm.getInventory(2).getSlotLimit(); i++) {
                         if (cm.getEquip(i)) {
                             gT += "#L" + i + "# #i" + cm.getEquip(i).getItemId() + "# #z" + cm.getEquip(i).getItemId() + "#\r\n";
@@ -46,11 +46,11 @@ function action(M, T, S) {
                     break;
             }
         } else if (Status == 2) {
-            ¼±ÅÃ = S;
+            ì„ íƒ = S;
             getSpecial = cm.getPlayer().getName();
-            isSpecial = cm.getEquip(¼±ÅÃ).getOwner() == getSpecial ? 1 : 0
-            viewText = isSpecial == 1 ? "#r½ºÆä¼È ¾ÆÀÌÅÛÀÌ ¼±ÅÃµÇ¾ú½À´Ï´Ù. °°Àº ½ºÆä¼È ¾ÆÀÌÅÛ ³¢¸®ÀÇ ´É·ÂÄ¡ ÀÌµ¿¸¸ °¡´ÉÇÕ´Ï´Ù.#k\r\n" : "\r\n";
-            gT = "#e¼±ÅÃµÈ ¾ÆÀÌÅÛ : #b#i" + cm.getEquip(¼±ÅÃ).getItemId() + "##n#k\r\n\r\n¼±ÅÃµÈ ¾ÆÀÌÅÛÀÇ ´É·ÂÄ¡¸¦ Àü¼Û¹ŞÀ» ¾ÆÀÌÅÛÀ» ¼±ÅÃÇØÁÖ¼¼¿ä." + viewText;
+            isSpecial = cm.getEquip(ì„ íƒ).getOwner() == getSpecial ? 1 : 0
+            viewText = isSpecial == 1 ? "#rìŠ¤í˜ì…œ ì•„ì´í…œì´ ì„ íƒë˜ì—ˆìŠµë‹ˆë‹¤. ê°™ì€ ìŠ¤í˜ì…œ ì•„ì´í…œ ë¼ë¦¬ì˜ ëŠ¥ë ¥ì¹˜ ì´ë™ë§Œ ê°€ëŠ¥í•©ë‹ˆë‹¤.#k\r\n" : "\r\n";
+            gT = "#eì„ íƒëœ ì•„ì´í…œ : #b#i" + cm.getEquip(ì„ íƒ).getItemId() + "##n#k\r\n\r\nì„ íƒëœ ì•„ì´í…œì˜ ëŠ¥ë ¥ì¹˜ë¥¼ ì „ì†¡ë°›ì„ ì•„ì´í…œì„ ì„ íƒí•´ì£¼ì„¸ìš”." + viewText;
             for (var i = 1; i < cm.getInventory(2).getSlotLimit(); i++) {
                 if (cm.getEquip(i)) {
                     gT += "#b#L" + i + "# #i" + cm.getEquip(i).getItemId() + "# #z" + cm.getEquip(i).getItemId() + "#\r\n";
@@ -58,102 +58,102 @@ function action(M, T, S) {
             }
             cm.sendSimple(gT);
         } else if (Status == 3) {
-            ´ë»ó = S;
-            giveItem = cm.getEquip(¼±ÅÃ).getItemId();
-            IsSpecial = cm.getEquip(´ë»ó).getOwner() == getSpecial ? 1 : 0
-            if (¼±ÅÃ == ´ë»ó) {
-                cm.sendOk("´É·ÂÄ¡¸¦ Àü¼ÛÇÒ #b#z" + cm.getEquip(¼±ÅÃ).getItemId() + "##k ¾ÆÀÌÅÛÀº ¼±ÅÃÇÒ ¼ö ¾ø½À´Ï´Ù. ´Ù¸¥ ¾ÆÀÌÅÛÀ» ¼±ÅÃÇØÁÖ¼¼¿ä.");
+            ëŒ€ìƒ = S;
+            giveItem = cm.getEquip(ì„ íƒ).getItemId();
+            IsSpecial = cm.getEquip(ëŒ€ìƒ).getOwner() == getSpecial ? 1 : 0
+            if (ì„ íƒ == ëŒ€ìƒ) {
+                cm.sendOk("ëŠ¥ë ¥ì¹˜ë¥¼ ì „ì†¡í•  #b#z" + cm.getEquip(ì„ íƒ).getItemId() + "##k ì•„ì´í…œì€ ì„ íƒí•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤. ë‹¤ë¥¸ ì•„ì´í…œì„ ì„ íƒí•´ì£¼ì„¸ìš”.");
                 cm.dispose();
                 return;
             }
             if (cm.getPlayer().getMeso() < 100000000) {
-                cm.sendOk("1¾ï ¸Ş¼Ò°¡ ºÎÁ·ÇÏ¿© »ç¿ë ÇÏ½Ç ¼ö ¾ø½À´Ï´Ù.");
+                cm.sendOk("1ì–µ ë©”ì†Œê°€ ë¶€ì¡±í•˜ì—¬ ì‚¬ìš© í•˜ì‹¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                 cm.dispose();
                 return;
             }
 
             if (isSpecial != IsSpecial) {
-                cm.sendOk("ÀÏ¹İ ¾ÆÀÌÅÛ°ú ½ºÆä¼È ¾ÆÀÌÅÛ »çÀÌ¿¡ ´É·ÂÄ¡ Àü¼ÛÀº ºÒ°¡´ÉÇÕ´Ï´Ù. ´Ù¸¥ ¾ÆÀÌÅÛÀ» ¼±ÅÃÇØÁÖ¼¼¿ä.");
+                cm.sendOk("ì¼ë°˜ ì•„ì´í…œê³¼ ìŠ¤í˜ì…œ ì•„ì´í…œ ì‚¬ì´ì— ëŠ¥ë ¥ì¹˜ ì „ì†¡ì€ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤. ë‹¤ë¥¸ ì•„ì´í…œì„ ì„ íƒí•´ì£¼ì„¸ìš”.");
                 cm.dispose();
                 return;
             }
 
-            gT = "Á¤¸» #r#z" + cm.getEquip(¼±ÅÃ).getItemId() + "##k ¾ÆÀÌÅÛÀÇ ´É·ÂÄ¡¸¦ #b#z" + cm.getEquip(´ë»ó).getItemId() + "##k ¾ÆÀÌÅÛÀ¸·Î ¿Å±â½Ã°Ú½À´Ï±î? ";
-            gT += "Àü¼ÛµÇ´Â ´É·ÂÄ¡´Â ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n";
+            gT = "ì •ë§ #r#z" + cm.getEquip(ì„ íƒ).getItemId() + "##k ì•„ì´í…œì˜ ëŠ¥ë ¥ì¹˜ë¥¼ #b#z" + cm.getEquip(ëŒ€ìƒ).getItemId() + "##k ì•„ì´í…œìœ¼ë¡œ ì˜®ê¸°ì‹œê² ìŠµë‹ˆê¹Œ? ";
+            gT += "ì „ì†¡ë˜ëŠ” ëŠ¥ë ¥ì¹˜ëŠ” ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\n";
 
-            gT += "Èû¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡   ¦¢ " + cm.getEquip(¼±ÅÃ).getStr() + "\r\n";
-            gT += "µ¦½º¡¡¡¡¡¡¡¡¡¡¡¡¡¡   ¦¢ " + cm.getEquip(¼±ÅÃ).getDex() + "\r\n"
-            gT += "ÀÎÆ®¡¡¡¡¡¡¡¡¡¡¡¡¡¡   ¦¢ " + cm.getEquip(¼±ÅÃ).getInt() + "\r\n"
-            gT += "·°¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡   ¦¢ " + cm.getEquip(¼±ÅÃ).getLuk() + "\r\n"
-            gT += "Ã¼·Â¡¡¡¡¡¡¡¡¡¡¡¡¡¡   ¦¢ " + cm.getEquip(¼±ÅÃ).getHp() + "\r\n"
-            gT += "¸¶³ª¡¡¡¡¡¡¡¡¡¡¡¡¡¡   ¦¢ " + cm.getEquip(¼±ÅÃ).getMp() + "\r\n"
-            gT += "°ø°İ·Â¡¡¡¡¡¡¡¡¡¡¡¡   ¦¢ " + cm.getEquip(¼±ÅÃ).getWatk() + "\r\n"
-            gT += "¸¶·Â¡¡¡¡¡¡¡¡¡¡¡¡¡¡   ¦¢ " + cm.getEquip(¼±ÅÃ).getMatk() + "\r\n"
-            gT += "¹°¸®¹æ¾î·Â¡¡¡¡¡¡¡¡   ¦¢ " + cm.getEquip(¼±ÅÃ).getWdef() + "\r\n"
-            gT += "¸¶¹ı¹æ¾î·Â¡¡¡¡¡¡¡¡   ¦¢ " + cm.getEquip(¼±ÅÃ).getMdef() + "\r\n"
-            gT += "¸íÁß·ü¡¡¡¡¡¡¡¡¡¡¡¡   ¦¢ " + cm.getEquip(¼±ÅÃ).getAcc() + "\r\n"
-            gT += "È¸ÇÇÄ¡¡¡¡¡¡¡¡¡¡¡¡¡   ¦¢ " + cm.getEquip(¼±ÅÃ).getAvoid() + "\r\n"
-            gT += "½ºÇÇµå¡¡¡¡¡¡¡¡¡¡¡¡   ¦¢ " + cm.getEquip(¼±ÅÃ).getSpeed() + "\r\n"
-            gT += "Á¡ÇÁ·Â¡¡¡¡¡¡¡¡¡¡¡¡   ¦¢ " + cm.getEquip(¼±ÅÃ).getJump() + "\r\n"
-            gT += "ÁÖ¹®¼­ ¼º°ø È½¼ö¡¡¡¡ ¦¢ " + cm.getEquip(¼±ÅÃ).getLevel() + "\r\n";
-            gT += "Àåºñ°­È­ ¼º°ø È½¼ö¡¡ ¦¢ " + cm.getEquip(¼±ÅÃ).getEnhance() + "\r\n";
-            gT += "¾÷±×·¹ÀÌµå °¡´É È½¼ö ¦¢ " + cm.getEquip(¼±ÅÃ).getUpgradeSlots() + "\r\n\r\n";
+            gT += "í˜ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€   â”‚ " + cm.getEquip(ì„ íƒ).getStr() + "\r\n";
+            gT += "ë±ìŠ¤ã€€ã€€ã€€ã€€ã€€ã€€ã€€   â”‚ " + cm.getEquip(ì„ íƒ).getDex() + "\r\n"
+            gT += "ì¸íŠ¸ã€€ã€€ã€€ã€€ã€€ã€€ã€€   â”‚ " + cm.getEquip(ì„ íƒ).getInt() + "\r\n"
+            gT += "ëŸ­ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€   â”‚ " + cm.getEquip(ì„ íƒ).getLuk() + "\r\n"
+            gT += "ì²´ë ¥ã€€ã€€ã€€ã€€ã€€ã€€ã€€   â”‚ " + cm.getEquip(ì„ íƒ).getHp() + "\r\n"
+            gT += "ë§ˆë‚˜ã€€ã€€ã€€ã€€ã€€ã€€ã€€   â”‚ " + cm.getEquip(ì„ íƒ).getMp() + "\r\n"
+            gT += "ê³µê²©ë ¥ã€€ã€€ã€€ã€€ã€€ã€€   â”‚ " + cm.getEquip(ì„ íƒ).getWatk() + "\r\n"
+            gT += "ë§ˆë ¥ã€€ã€€ã€€ã€€ã€€ã€€ã€€   â”‚ " + cm.getEquip(ì„ íƒ).getMatk() + "\r\n"
+            gT += "ë¬¼ë¦¬ë°©ì–´ë ¥ã€€ã€€ã€€ã€€   â”‚ " + cm.getEquip(ì„ íƒ).getWdef() + "\r\n"
+            gT += "ë§ˆë²•ë°©ì–´ë ¥ã€€ã€€ã€€ã€€   â”‚ " + cm.getEquip(ì„ íƒ).getMdef() + "\r\n"
+            gT += "ëª…ì¤‘ë¥ ã€€ã€€ã€€ã€€ã€€ã€€   â”‚ " + cm.getEquip(ì„ íƒ).getAcc() + "\r\n"
+            gT += "íšŒí”¼ì¹˜ã€€ã€€ã€€ã€€ã€€ã€€   â”‚ " + cm.getEquip(ì„ íƒ).getAvoid() + "\r\n"
+            gT += "ìŠ¤í”¼ë“œã€€ã€€ã€€ã€€ã€€ã€€   â”‚ " + cm.getEquip(ì„ íƒ).getSpeed() + "\r\n"
+            gT += "ì í”„ë ¥ã€€ã€€ã€€ã€€ã€€ã€€   â”‚ " + cm.getEquip(ì„ íƒ).getJump() + "\r\n"
+            gT += "ì£¼ë¬¸ì„œ ì„±ê³µ íšŸìˆ˜ã€€ã€€ â”‚ " + cm.getEquip(ì„ íƒ).getLevel() + "\r\n";
+            gT += "ì¥ë¹„ê°•í™” ì„±ê³µ íšŸìˆ˜ã€€ â”‚ " + cm.getEquip(ì„ íƒ).getEnhance() + "\r\n";
+            gT += "ì—…ê·¸ë ˆì´ë“œ ê°€ëŠ¥ íšŸìˆ˜ â”‚ " + cm.getEquip(ì„ íƒ).getUpgradeSlots() + "\r\n\r\n";
 
-            gT += "º¸½º °ø°İ ½Ã µ¥¹ÌÁö¡¡¦¢ +" + cm.getEquip(¼±ÅÃ).getBossDamage() + "%\r\n";
-            gT += "¸ó½ºÅÍ ¹æ¾î·Â ¹«½Ã¡¡ ¦¢ +" + cm.getEquip(¼±ÅÃ).getIgnoreWdef() + "%\r\n";
-            gT += "ÃÑ µ¥¹ÌÁö¡¡¡¡¡¡¡¡¡¡  ¦¢ +" + cm.getEquip(¼±ÅÃ).getAllDamageP() + "%\r\n";
-            gT += "¿Ã½ºÅÈ¡¡¡¡¡¡¡¡¡¡¡¡   ¦¢ +" + cm.getEquip(¼±ÅÃ).getAllStatP() + "%\r\n";
-            gT += "Âø¿ë ·¹º§ °¨¼Ò¡¡¡¡¡¡ ¦¢ -" + cm.getEquip(¼±ÅÃ).getDownLevel() + "\r\n\r\n";
+            gT += "ë³´ìŠ¤ ê³µê²© ì‹œ ë°ë¯¸ì§€ã€€â”‚ +" + cm.getEquip(ì„ íƒ).getBossDamage() + "%\r\n";
+            gT += "ëª¬ìŠ¤í„° ë°©ì–´ë ¥ ë¬´ì‹œã€€ â”‚ +" + cm.getEquip(ì„ íƒ).getIgnoreWdef() + "%\r\n";
+            gT += "ì´ ë°ë¯¸ì§€ã€€ã€€ã€€ã€€ã€€  â”‚ +" + cm.getEquip(ì„ íƒ).getAllDamageP() + "%\r\n";
+            gT += "ì˜¬ìŠ¤íƒ¯ã€€ã€€ã€€ã€€ã€€ã€€   â”‚ +" + cm.getEquip(ì„ íƒ).getAllStatP() + "%\r\n";
+            gT += "ì°©ìš© ë ˆë²¨ ê°ì†Œã€€ã€€ã€€ â”‚ -" + cm.getEquip(ì„ íƒ).getDownLevel() + "\r\n\r\n";
 
-            gT += "" + cm.getEquip(¼±ÅÃ).getState() == 17 ? "ÀáÀç´É·Â µî±Ş¡¡¡¡¡¡  ¦¢ ·¹¾î\r\n" :
-                    cm.getEquip(¼±ÅÃ).getState() == 18 ? "ÀáÀç´É·Â µî±Ş¡¡¡¡¡¡  ¦¢ ¿¡ÇÈ\r\n" :
-                    cm.getEquip(¼±ÅÃ).getState() == 19 ? "ÀáÀç´É·Â µî±Ş¡¡¡¡¡¡  ¦¢ À¯´ÏÅ©\r\n" :
-                    cm.getEquip(¼±ÅÃ).getState() == 20 ? "ÀáÀç´É·Â µî±Ş¡¡¡¡¡¡  ¦¢ ·¹Àüµå¸®\r\n" : "ÀáÀç´É·Â µî±Ş¡¡¡¡¡¡  ¦¢ ¾øÀ½" + "\r\n";
-            gT += "Ã¹ ¹øÂ° ÀáÀç´É·Â¡¡¡¡ ¦¢ " + cm.getEquip(¼±ÅÃ).getPotential1() + "\r\n";
-            gT += "µÎ ¹øÂ° ÀáÀç´É·Â¡¡¡¡ ¦¢ " + cm.getEquip(¼±ÅÃ).getPotential2() + "\r\n";
-            gT += "¼¼ ¹øÂ° ÀáÀç´É·Â¡¡¡¡ ¦¢ " + cm.getEquip(¼±ÅÃ).getPotential3() + "\r\n";
-            gT += "³× ¹øÂ° ÀáÀç´É·Â¡¡¡¡ ¦¢ " + cm.getEquip(¼±ÅÃ).getPotential4() + "\r\n";
-            gT += "´Ù¼¸ ¹øÂ° ÀáÀç´É·Â¡¡ ¦¢ " + cm.getEquip(¼±ÅÃ).getPotential5() + "\r\n";
-            gT += "¿©¼¸ ¹øÂ° ÀáÀç´É·Â¡¡ ¦¢ " + cm.getEquip(¼±ÅÃ).getPotential6() + "\r\n";
+            gT += "" + cm.getEquip(ì„ íƒ).getState() == 17 ? "ì ì¬ëŠ¥ë ¥ ë“±ê¸‰ã€€ã€€ã€€  â”‚ ë ˆì–´\r\n" :
+                    cm.getEquip(ì„ íƒ).getState() == 18 ? "ì ì¬ëŠ¥ë ¥ ë“±ê¸‰ã€€ã€€ã€€  â”‚ ì—í”½\r\n" :
+                    cm.getEquip(ì„ íƒ).getState() == 19 ? "ì ì¬ëŠ¥ë ¥ ë“±ê¸‰ã€€ã€€ã€€  â”‚ ìœ ë‹ˆí¬\r\n" :
+                    cm.getEquip(ì„ íƒ).getState() == 20 ? "ì ì¬ëŠ¥ë ¥ ë“±ê¸‰ã€€ã€€ã€€  â”‚ ë ˆì „ë“œë¦¬\r\n" : "ì ì¬ëŠ¥ë ¥ ë“±ê¸‰ã€€ã€€ã€€  â”‚ ì—†ìŒ" + "\r\n";
+            gT += "ì²« ë²ˆì§¸ ì ì¬ëŠ¥ë ¥ã€€ã€€ â”‚ " + cm.getEquip(ì„ íƒ).getPotential1() + "\r\n";
+            gT += "ë‘ ë²ˆì§¸ ì ì¬ëŠ¥ë ¥ã€€ã€€ â”‚ " + cm.getEquip(ì„ íƒ).getPotential2() + "\r\n";
+            gT += "ì„¸ ë²ˆì§¸ ì ì¬ëŠ¥ë ¥ã€€ã€€ â”‚ " + cm.getEquip(ì„ íƒ).getPotential3() + "\r\n";
+            gT += "ë„¤ ë²ˆì§¸ ì ì¬ëŠ¥ë ¥ã€€ã€€ â”‚ " + cm.getEquip(ì„ íƒ).getPotential4() + "\r\n";
+            gT += "ë‹¤ì„¯ ë²ˆì§¸ ì ì¬ëŠ¥ë ¥ã€€ â”‚ " + cm.getEquip(ì„ íƒ).getPotential5() + "\r\n";
+            gT += "ì—¬ì„¯ ë²ˆì§¸ ì ì¬ëŠ¥ë ¥ã€€ â”‚ " + cm.getEquip(ì„ íƒ).getPotential6() + "\r\n";
 
             cm.sendYesNo(gT);
         } else if (Status == 4) {
-            cm.getEquip(´ë»ó).setStr(cm.getEquip(¼±ÅÃ).getStr());
-            cm.getEquip(´ë»ó).setDex(cm.getEquip(¼±ÅÃ).getDex());
-            cm.getEquip(´ë»ó).setInt(cm.getEquip(¼±ÅÃ).getInt());
-            cm.getEquip(´ë»ó).setLuk(cm.getEquip(¼±ÅÃ).getLuk());
-            cm.getEquip(´ë»ó).setHp(cm.getEquip(¼±ÅÃ).getHp());
-            cm.getEquip(´ë»ó).setMp(cm.getEquip(¼±ÅÃ).getMp());
-            cm.getEquip(´ë»ó).setWatk(cm.getEquip(¼±ÅÃ).getWatk());
-            cm.getEquip(´ë»ó).setMatk(cm.getEquip(¼±ÅÃ).getMatk());
-            cm.getEquip(´ë»ó).setWdef(cm.getEquip(¼±ÅÃ).getWdef());
-            cm.getEquip(´ë»ó).setMdef(cm.getEquip(¼±ÅÃ).getMdef());
-            cm.getEquip(´ë»ó).setAcc(cm.getEquip(¼±ÅÃ).getAcc());
-            cm.getEquip(´ë»ó).setAvoid(cm.getEquip(¼±ÅÃ).getAvoid());
-            cm.getEquip(´ë»ó).setSpeed(cm.getEquip(¼±ÅÃ).getSpeed());
-            cm.getEquip(´ë»ó).setJump(cm.getEquip(¼±ÅÃ).getJump());
-            cm.getEquip(´ë»ó).setLevel(cm.getEquip(¼±ÅÃ).getLevel());
-            cm.getEquip(´ë»ó).setEnhance(cm.getEquip(¼±ÅÃ).getEnhance());
-            cm.getEquip(´ë»ó).setUpgradeSlots(cm.getEquip(¼±ÅÃ).getUpgradeSlots());
-            cm.getEquip(´ë»ó).setBossDamage(cm.getEquip(¼±ÅÃ).getBossDamage());
-            cm.getEquip(´ë»ó).setIgnoreWdef(cm.getEquip(¼±ÅÃ).getIgnoreWdef());
-            cm.getEquip(´ë»ó).setAllDamageP(cm.getEquip(¼±ÅÃ).getAllDamageP());
-            cm.getEquip(´ë»ó).setAllStatP(cm.getEquip(¼±ÅÃ).getAllStatP());
-            cm.getEquip(´ë»ó).setDownLevel(cm.getEquip(¼±ÅÃ).getDownLevel());
-            cm.getEquip(´ë»ó).setState(cm.getEquip(¼±ÅÃ).getState());
-            cm.getEquip(´ë»ó).setPotential1(cm.getEquip(¼±ÅÃ).getPotential1());
-            cm.getEquip(´ë»ó).setPotential2(cm.getEquip(¼±ÅÃ).getPotential2());
-            cm.getEquip(´ë»ó).setPotential3(cm.getEquip(¼±ÅÃ).getPotential3());
-            cm.getEquip(´ë»ó).setPotential4(cm.getEquip(¼±ÅÃ).getPotential4());
-            cm.getEquip(´ë»ó).setPotential5(cm.getEquip(¼±ÅÃ).getPotential5());
-            cm.getEquip(´ë»ó).setPotential6(cm.getEquip(¼±ÅÃ).getPotential6());
+            cm.getEquip(ëŒ€ìƒ).setStr(cm.getEquip(ì„ íƒ).getStr());
+            cm.getEquip(ëŒ€ìƒ).setDex(cm.getEquip(ì„ íƒ).getDex());
+            cm.getEquip(ëŒ€ìƒ).setInt(cm.getEquip(ì„ íƒ).getInt());
+            cm.getEquip(ëŒ€ìƒ).setLuk(cm.getEquip(ì„ íƒ).getLuk());
+            cm.getEquip(ëŒ€ìƒ).setHp(cm.getEquip(ì„ íƒ).getHp());
+            cm.getEquip(ëŒ€ìƒ).setMp(cm.getEquip(ì„ íƒ).getMp());
+            cm.getEquip(ëŒ€ìƒ).setWatk(cm.getEquip(ì„ íƒ).getWatk());
+            cm.getEquip(ëŒ€ìƒ).setMatk(cm.getEquip(ì„ íƒ).getMatk());
+            cm.getEquip(ëŒ€ìƒ).setWdef(cm.getEquip(ì„ íƒ).getWdef());
+            cm.getEquip(ëŒ€ìƒ).setMdef(cm.getEquip(ì„ íƒ).getMdef());
+            cm.getEquip(ëŒ€ìƒ).setAcc(cm.getEquip(ì„ íƒ).getAcc());
+            cm.getEquip(ëŒ€ìƒ).setAvoid(cm.getEquip(ì„ íƒ).getAvoid());
+            cm.getEquip(ëŒ€ìƒ).setSpeed(cm.getEquip(ì„ íƒ).getSpeed());
+            cm.getEquip(ëŒ€ìƒ).setJump(cm.getEquip(ì„ íƒ).getJump());
+            cm.getEquip(ëŒ€ìƒ).setLevel(cm.getEquip(ì„ íƒ).getLevel());
+            cm.getEquip(ëŒ€ìƒ).setEnhance(cm.getEquip(ì„ íƒ).getEnhance());
+            cm.getEquip(ëŒ€ìƒ).setUpgradeSlots(cm.getEquip(ì„ íƒ).getUpgradeSlots());
+            cm.getEquip(ëŒ€ìƒ).setBossDamage(cm.getEquip(ì„ íƒ).getBossDamage());
+            cm.getEquip(ëŒ€ìƒ).setIgnoreWdef(cm.getEquip(ì„ íƒ).getIgnoreWdef());
+            cm.getEquip(ëŒ€ìƒ).setAllDamageP(cm.getEquip(ì„ íƒ).getAllDamageP());
+            cm.getEquip(ëŒ€ìƒ).setAllStatP(cm.getEquip(ì„ íƒ).getAllStatP());
+            cm.getEquip(ëŒ€ìƒ).setDownLevel(cm.getEquip(ì„ íƒ).getDownLevel());
+            cm.getEquip(ëŒ€ìƒ).setState(cm.getEquip(ì„ íƒ).getState());
+            cm.getEquip(ëŒ€ìƒ).setPotential1(cm.getEquip(ì„ íƒ).getPotential1());
+            cm.getEquip(ëŒ€ìƒ).setPotential2(cm.getEquip(ì„ íƒ).getPotential2());
+            cm.getEquip(ëŒ€ìƒ).setPotential3(cm.getEquip(ì„ íƒ).getPotential3());
+            cm.getEquip(ëŒ€ìƒ).setPotential4(cm.getEquip(ì„ íƒ).getPotential4());
+            cm.getEquip(ëŒ€ìƒ).setPotential5(cm.getEquip(ì„ íƒ).getPotential5());
+            cm.getEquip(ëŒ€ìƒ).setPotential6(cm.getEquip(ì„ íƒ).getPotential6());
             cm.gainMeso(-100000000);
-            InventoryManipulator.removeFromSlot(cm.getClient(), MapleInventoryType.EQUIP, ¼±ÅÃ, 1, true);
+            InventoryManipulator.removeFromSlot(cm.getClient(), MapleInventoryType.EQUIP, ì„ íƒ, 1, true);
             cm.gainItem(giveItem, 1);
             cm.getChar().saveToDB(false, false);
             cm.fakeRelog();
             cm.updateChar();
-            cm.sendOk("¾ÆÀÌÅÛ ´É·ÂÄ¡ÀÇ Àü¼ÛÀÌ ¼º°øÀûÀ¸·Î ÀÌ·ç¾îÁ³½À´Ï´Ù. Áö±İ ´çÀå ÀÎº¥Åä¸®¸¦ È®ÀÎÇØº¸¼¼¿ä.");
+            cm.sendOk("ì•„ì´í…œ ëŠ¥ë ¥ì¹˜ì˜ ì „ì†¡ì´ ì„±ê³µì ìœ¼ë¡œ ì´ë£¨ì–´ì¡ŒìŠµë‹ˆë‹¤. ì§€ê¸ˆ ë‹¹ì¥ ì¸ë²¤í† ë¦¬ë¥¼ í™•ì¸í•´ë³´ì„¸ìš”.");
             cm.dispose();
         }
 

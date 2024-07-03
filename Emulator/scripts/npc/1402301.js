@@ -21,7 +21,7 @@ if (mode == 1)
 status++;
 
 if (status == 0) {
-cm.sendGetText("#e#d¹öÇÁÄÚµå#k#k¸¦ÀÔ·ÂÇØÁÖ¼¼¿ä");
+cm.sendGetText("#e#dë²„í”„ì½”ë“œ#k#kë¥¼ì…ë ¥í•´ì£¼ì„¸ìš”");
 } 
 else if (status == 1) {
 
@@ -29,7 +29,7 @@ text = cm.getText();
 bluenote = text; 
 
 cm.giveBuff(bluenote,20);
-cm.sendOk("¹öÇÁÁö±Ş ¿Ï·á");
+cm.sendOk("ë²„í”„ì§€ê¸‰ ì™„ë£Œ");
 cm.dispose();
 }
 }

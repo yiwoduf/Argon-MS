@@ -106,7 +106,7 @@ public class HiredMerchant extends AbstractPlayerStore {
             c.getPlayer().saveToDB(false, false);
             saveItems();
         } else {
-            c.getPlayer().dropMessage(1, "ÀÎº¥Åä¸®°¡ ²Ë Ã¡½À´Ï´Ù.");
+            c.getPlayer().dropMessage(1, "ì¸ë²¤í† ë¦¬ê°€ ê½‰ ì°¼ìŠµë‹ˆë‹¤.");
         }
     }
 

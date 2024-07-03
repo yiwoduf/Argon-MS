@@ -11,9 +11,9 @@ function action(mode, type, selection) {
 	status++;
     if (status == 0) {
 	if (cm.getPlayer().getEventInstance().getProperty("LudiPQ_Gate") == 1) {
-	    cm.sendNext("#bÂ÷¿øÀÇ ·Ò¹Ùµå#k ¸¦ ¸ðµÎ ¹°¸®Ä¡½Ã´Ù´Ï~ ´ë´ÜÇØ¿ä!! ´ÙÀ½ ½ºÅ×ÀÌÁö·Î °¡´Â Æ÷Å»À» ¿­µµ·Ï ÇÏ°Ú½À´Ï´Ù.");
+	    cm.sendNext("#bì°¨ì›ì˜ ë¡¬ë°”ë“œ#k ë¥¼ ëª¨ë‘ ë¬¼ë¦¬ì¹˜ì‹œë‹¤ë‹ˆ~ ëŒ€ë‹¨í•´ìš”!! ë‹¤ìŒ ìŠ¤í…Œì´ì§€ë¡œ ê°€ëŠ” í¬íƒˆì„ ì—´ë„ë¡ í•˜ê² ìŠµë‹ˆë‹¤.");
 	} else {
-		cm.sendNext("³×¹øÂ° ½ºÅ×ÀÌÁö¿¡ ¿À½Å °ÍÀ» È¯¿µÇÕ´Ï´Ù. ÀÌ°÷¿¡´Â ¾ÆÁÖ ¾ÆÁÖ °­·ÂÇÑ ¸ó½ºÅÍ°¡ ÀÖ½À´Ï´Ù. ¹Ù·Î #bÂ÷¿øÀÇ ·Ò¹Ùµå#k¶ó´Â ³à¼®ÀÌÁÒ. ÀÌ ³à¼®À» ¾²·¯¶ß¸®°í ³ª¼­ Àú¿¡°Ô ¿À½Ã¸é ´ÙÀ½ ½ºÅ×ÀÌÁö·Î °¡´Â Æ÷Å»À» ¿­¾îµå¸±°Ô¿ä. #bÂ÷¿øÀÇ ·Ò¹Ùµå#k ÀÌ ³à¼®Àº º¸Åë ³à¼®ÀÌ ¾Æ´Ï´Ï±î ÁÖÀÇÇÏ¼Å¾ß µÇ¿ä.");
+		cm.sendNext("ë„¤ë²ˆì§¸ ìŠ¤í…Œì´ì§€ì— ì˜¤ì‹  ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ì´ê³³ì—ëŠ” ì•„ì£¼ ì•„ì£¼ ê°•ë ¥í•œ ëª¬ìŠ¤í„°ê°€ ìžˆìŠµë‹ˆë‹¤. ë°”ë¡œ #bì°¨ì›ì˜ ë¡¬ë°”ë“œ#kë¼ëŠ” ë…€ì„ì´ì£ . ì´ ë…€ì„ì„ ì“°ëŸ¬ëœ¨ë¦¬ê³  ë‚˜ì„œ ì €ì—ê²Œ ì˜¤ì‹œë©´ ë‹¤ìŒ ìŠ¤í…Œì´ì§€ë¡œ ê°€ëŠ” í¬íƒˆì„ ì—´ì–´ë“œë¦´ê²Œìš”. #bì°¨ì›ì˜ ë¡¬ë°”ë“œ#k ì´ ë…€ì„ì€ ë³´í†µ ë…€ì„ì´ ì•„ë‹ˆë‹ˆê¹Œ ì£¼ì˜í•˜ì…”ì•¼ ë˜ìš”.");
 	    
 	    
 	    cm.dispose();
@@ -21,7 +21,7 @@ function action(mode, type, selection) {
     } else if (status == 1) {
 	cm.environmentChange(true,"gate");
 	cm.getEventInstance().setProperty("LudiPQ_Gate","3");
-	cm.sendNextPrev("´ÙÀ½ ½ºÅ×ÀÌÁö·Î ÅëÇÏ´Â Æ÷Å»ÀÌ ¿­·È½À´Ï´Ù.");
+	cm.sendNextPrev("ë‹¤ìŒ ìŠ¤í…Œì´ì§€ë¡œ í†µí•˜ëŠ” í¬íƒˆì´ ì—´ë ¸ìŠµë‹ˆë‹¤.");
 	cm.dispose();
     }
 }

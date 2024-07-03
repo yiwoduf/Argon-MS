@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -15,47 +15,47 @@ public class ExpirationTool {
     private static Calendar cal = Calendar.getInstance();
 
     /**
-     * ÇöÀç ½Ã°£¿¡ <code>minute</code>ºĞ ¸¸Å­ÀÇ ½Ã°£À» ´õÇÕ´Ï´Ù.
+     * í˜„ì¬ ì‹œê°„ì— <code>minute</code>ë¶„ ë§Œí¼ì˜ ì‹œê°„ì„ ë”í•©ë‹ˆë‹¤.
      *
-     * @param minute ´õÇÒ ºĞ
-     * @return ´õÇØÁø ½Ã°£
+     * @param minute ë”í•  ë¶„
+     * @return ë”í•´ì§„ ì‹œê°„
      */
     public static long getExpirationM(long minute) {
         return System.currentTimeMillis() + (minute * 60 * 1000);
     }
 
     /**
-     * ÇöÀç ½Ã°£¿¡ <code>hour</code>½Ã°£ ¸¸Å­ÀÇ ½Ã°£À» ´õÇÕ´Ï´Ù.
+     * í˜„ì¬ ì‹œê°„ì— <code>hour</code>ì‹œê°„ ë§Œí¼ì˜ ì‹œê°„ì„ ë”í•©ë‹ˆë‹¤.
      *
-     * @param hour ´õÇÒ ½Ã°£
-     * @return ´õÇØÁø ½Ã°£
+     * @param hour ë”í•  ì‹œê°„
+     * @return ë”í•´ì§„ ì‹œê°„
      */
     public static long getExpirationH(long hour) {
         return getExpirationH(hour, false);
     }
 
     /**
-     * ÇöÀç ½Ã°£¿¡ <code>hour</code>½Ã°£ ¸¸Å­ÀÇ ½Ã°£À» ´õÇÏ°í <code>deafults</code>°¡ trueÀÏ °æ¿ì
-     * ±× ÀÌÇÏÀÇ ½Ã°£À» ÃÊ±âÈ­ ÇÕ´Ï´Ù.
+     * í˜„ì¬ ì‹œê°„ì— <code>hour</code>ì‹œê°„ ë§Œí¼ì˜ ì‹œê°„ì„ ë”í•˜ê³  <code>deafults</code>ê°€ trueì¼ ê²½ìš°
+     * ê·¸ ì´í•˜ì˜ ì‹œê°„ì„ ì´ˆê¸°í™” í•©ë‹ˆë‹¤.
      * <br>
-     * ¿¹¸¦ µé¾î hour°¡ 2ÀÏ °æ¿ì
-     * ÃÊ±âÈ­ Àü : 2010/2/12 12:52:48
-     * ÃÊ±âÈ­ ÈÄ : 2010/2/12 14:00:00
+     * ì˜ˆë¥¼ ë“¤ì–´ hourê°€ 2ì¼ ê²½ìš°
+     * ì´ˆê¸°í™” ì „ : 2010/2/12 12:52:48
+     * ì´ˆê¸°í™” í›„ : 2010/2/12 14:00:00
      * </br>
      *
-     * @param hour ´õÇÒ ½Ã°£
-     * @param deafults ÃÊ±âÈ­ ¿©ºÎ
-     * @return ´õÇØÁø ½Ã°£
+     * @param hour ë”í•  ì‹œê°„
+     * @param deafults ì´ˆê¸°í™” ì—¬ë¶€
+     * @return ë”í•´ì§„ ì‹œê°„
      */
     public static long getExpirationH(long hour, boolean deafults) {
         return deafults ? (System.currentTimeMillis() + hour * 60 * 60 * 1000) - (((60 * cal.get(Calendar.MINUTE)) + cal.get(Calendar.SECOND)) * 1000) : System.currentTimeMillis() + hour * 60 * 60 * 1000;
     }
 
     /**
-     * ÇöÀç ½Ã°£¿¡ <code>day</code>ÀÏ ¸¸Å­ÀÇ ½Ã°£À» ´õÇÕ´Ï´Ù.
+     * í˜„ì¬ ì‹œê°„ì— <code>day</code>ì¼ ë§Œí¼ì˜ ì‹œê°„ì„ ë”í•©ë‹ˆë‹¤.
      *
-     * @param day ´õÇÒ ÀÏ
-     * @return ´õÇØÁø ½Ã°£
+     * @param day ë”í•  ì¼
+     * @return ë”í•´ì§„ ì‹œê°„
      */
     public static long getExpirationD(long day) {
         return getExpirationD(day, false);
@@ -63,29 +63,29 @@ public class ExpirationTool {
 
 
     /**
-     * ÇöÀç ½Ã°£¿¡ <code>day</code>ÀÏ ¸¸Å­ÀÇ ½Ã°£À» ´õÇÏ°í <code>deafults</code>°¡ trueÀÏ °æ¿ì
-     * ±× ÀÌÇÏÀÇ ½Ã°£À» ÃÊ±âÈ­ ÇÕ´Ï´Ù.
+     * í˜„ì¬ ì‹œê°„ì— <code>day</code>ì¼ ë§Œí¼ì˜ ì‹œê°„ì„ ë”í•˜ê³  <code>deafults</code>ê°€ trueì¼ ê²½ìš°
+     * ê·¸ ì´í•˜ì˜ ì‹œê°„ì„ ì´ˆê¸°í™” í•©ë‹ˆë‹¤.
      * <br>
-     * ¿¹¸¦ µé¾î day°¡ 1ÀÏ °æ¿ì
-     * ÃÊ±âÈ­ Àü : 2010/2/12 12:52:48
-     * ÃÊ±âÈ­ ÈÄ : 2010/2/13 00:00:00
+     * ì˜ˆë¥¼ ë“¤ì–´ dayê°€ 1ì¼ ê²½ìš°
+     * ì´ˆê¸°í™” ì „ : 2010/2/12 12:52:48
+     * ì´ˆê¸°í™” í›„ : 2010/2/13 00:00:00
      * </br>
      *
-     * @param hour ´õÇÒ ½Ã°£
-     * @param deafults ÃÊ±âÈ­ ¿©ºÎ
-     * @return ´õÇØÁø ½Ã°£
+     * @param hour ë”í•  ì‹œê°„
+     * @param deafults ì´ˆê¸°í™” ì—¬ë¶€
+     * @return ë”í•´ì§„ ì‹œê°„
      */
     public static long getExpirationD(long day, boolean deafults) {
         return deafults ? (System.currentTimeMillis() + day * 24 * 60 * 60 * 1000) - (((60 * 60 * cal.get(Calendar.HOUR_OF_DAY)) + (60 * cal.get(Calendar.MINUTE)) + (cal.get(Calendar.SECOND))) * 1000) : System.currentTimeMillis() + (day * (24 * 60 * 60 * 1000));
     }
 
     /**
-     * ÇöÀç ½Ã°£¿¡ <code>hour</code>½Ã°£ <code>minute</code>ºĞ ¸¸Å­ÀÇ ½Ã°£À» ´õÇÕ´Ï´Ù.
-     * ´Ü, ÃÊ±âÈ­´Â ÇÒ ¼ö ¾ø½À´Ï´Ù.
+     * í˜„ì¬ ì‹œê°„ì— <code>hour</code>ì‹œê°„ <code>minute</code>ë¶„ ë§Œí¼ì˜ ì‹œê°„ì„ ë”í•©ë‹ˆë‹¤.
+     * ë‹¨, ì´ˆê¸°í™”ëŠ” í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
      *
-     * @param hour ´õÇÒ ½Ã°£
-     * @param minute ´õÇÒ ºĞ
-     * @return ´õÇØÁø ½Ã°£
+     * @param hour ë”í•  ì‹œê°„
+     * @param minute ë”í•  ë¶„
+     * @return ë”í•´ì§„ ì‹œê°„
      * @see getExpirationH
      */
     public static long getExpirationHM(long hour, long minute) {
@@ -93,12 +93,12 @@ public class ExpirationTool {
     }
 
     /**
-     * ÇöÀç ½Ã°£¿¡ <code>day</code>ÀÏ <code>hour</code>½Ã°£ ¸¸Å­ÀÇ ½Ã°£À» ´õÇÕ´Ï´Ù.
-     * ´Ü, ÃÊ±âÈ­´Â ÇÒ ¼ö ¾ø½À´Ï´Ù.
+     * í˜„ì¬ ì‹œê°„ì— <code>day</code>ì¼ <code>hour</code>ì‹œê°„ ë§Œí¼ì˜ ì‹œê°„ì„ ë”í•©ë‹ˆë‹¤.
+     * ë‹¨, ì´ˆê¸°í™”ëŠ” í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
      *
-     * @param day ´õÇÒ ½Ã°£
-     * @param hour ´õÇÒ ºĞ
-     * @return ´õÇØÁø ½Ã°£
+     * @param day ë”í•  ì‹œê°„
+     * @param hour ë”í•  ë¶„
+     * @return ë”í•´ì§„ ì‹œê°„
      * @see getExpirationD
      */
     public static long getExpirationDH(long day, long hour) {
@@ -106,12 +106,12 @@ public class ExpirationTool {
     }
 
     /**
-     * ÇöÀç ½Ã°£¿¡ <code>day</code>ÀÏ <code>hour</code>½Ã°£ <code>minute</code>ºĞ ¸¸Å­ÀÇ ½Ã°£À» ´õÇÕ´Ï´Ù.
-     * ´Ü, ÃÊ±âÈ­´Â ÇÒ ¼ö ¾ø½À´Ï´Ù.
-     * @param day ´õÇÒ ÀÏ
-     * @param hour ´õÇÒ ½Ã°£
-     * @param minute ´õÇÒ ºĞ
-     * @return ´õÇØÁø ½Ã°£
+     * í˜„ì¬ ì‹œê°„ì— <code>day</code>ì¼ <code>hour</code>ì‹œê°„ <code>minute</code>ë¶„ ë§Œí¼ì˜ ì‹œê°„ì„ ë”í•©ë‹ˆë‹¤.
+     * ë‹¨, ì´ˆê¸°í™”ëŠ” í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
+     * @param day ë”í•  ì¼
+     * @param hour ë”í•  ì‹œê°„
+     * @param minute ë”í•  ë¶„
+     * @return ë”í•´ì§„ ì‹œê°„
      * @see getExpirationD
      */
     public static long getExpirationDHM(long day, long hour, long minute) {

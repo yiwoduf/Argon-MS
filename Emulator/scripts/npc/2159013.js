@@ -21,25 +21,25 @@ function action(mode, type, selection) {
     if (status == 0) {
         if (cm.getPlayer().getKeyValue("mapleWarriorbook_received") == null && cm.getPlayer().getLevel() >= 121) {
             if (!cm.haveItem(4000613, 600)) {
-                cm.sendOk("#b#i4000613##t4000613##k 600°³¸¸ ¸ğ¾Æ´Ù ÁÖ¼¼¿ä..!! ±×·³... Á¦°¡ ... °íÀÌ °£Á÷ÇØ¿Â..¼±¹°À» µå¸±°Ô¿ä..");
+                cm.sendOk("#b#i4000613##t4000613##k 600ê°œë§Œ ëª¨ì•„ë‹¤ ì£¼ì„¸ìš”..!! ê·¸ëŸ¼... ì œê°€ ... ê³ ì´ ê°„ì§í•´ì˜¨..ì„ ë¬¼ì„ ë“œë¦´ê²Œìš”..");
                 cm.dispose();
                 return;
             } else {
                 if (!cm.canHold(2280003)) {
-                    cm.sendOk("ÀÎº¥Åä¸® °ø°£ÀÌ ºÎÁ·ÇØ¿ä...!!");
+                    cm.sendOk("ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ë¶€ì¡±í•´ìš”...!!");
                     cm.dispose();
                     return;
                 }
                 cm.gainItem(4000613, -600);
                 cm.gainItem(2280003, 1);
                 cm.getPlayer().setKeyValue("mapleWarriorbook_received", "1");
-                cm.sendOk("¿©±â... Á¦ ¼±¹°ÀÌ¿¡¿ä. ¼ÒºñÅÇÀ» È®ÀÎÇØÁÖ¼¼¿ä.");
-                WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[ÃàÇÏ] "+cm.getPlayer().getName()+"´ÔÀÌ [¸ŞÀÌÇÃ ¿ë»ç] ½ºÅ³ºÏ Äù½ºÆ®¸¦ ¿Ï¼öÇÏ¼Ì½À´Ï´Ù!"));
+                cm.sendOk("ì—¬ê¸°... ì œ ì„ ë¬¼ì´ì—ìš”. ì†Œë¹„íƒ­ì„ í™•ì¸í•´ì£¼ì„¸ìš”.");
+                WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[ì¶•í•˜] "+cm.getPlayer().getName()+"ë‹˜ì´ [ë©”ì´í”Œ ìš©ì‚¬] ìŠ¤í‚¬ë¶ í€˜ìŠ¤íŠ¸ë¥¼ ì™„ìˆ˜í•˜ì…¨ìŠµë‹ˆë‹¤!"));
                 cm.dispose();
                 return;
             }
         } else {
-            cm.sendOk("....ÈÇÂ½...");
+            cm.sendOk("....í›Œì©...");
         }
         cm.dispose();
         return;

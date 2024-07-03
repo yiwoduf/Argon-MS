@@ -65,7 +65,7 @@ public class EnforceSystem {
             }
             
             if (item.getUpgradeSlots() <= 0) {
-                c.getPlayer().dropMessage(1, "¾÷±×·¹ÀÌµå È½¼ö¸¦ ¸ðµÎ »ç¿ë ÇÏ¿´½À´Ï´Ù.");
+                c.getPlayer().dropMessage(1, "ì—…ê·¸ë ˆì´ë“œ íšŸìˆ˜ë¥¼ ëª¨ë‘ ì‚¬ìš© í•˜ì˜€ìŠµë‹ˆë‹¤.");
                 c.getPlayer().ea();
                 return;
             }
@@ -183,7 +183,7 @@ public class EnforceSystem {
         packet.write(0x34);
         packet.write(downper > 0 ? desper > 0 ? 2 : 1 : 0);
         packet.writeLong(meso);
-        packet.writeLong(0); //MVPÇÒÀÎÀ², 1.2.251+
+        packet.writeLong(0); //MVPí• ì¸ìœ¨, 1.2.251+
         packet.writeInt(sucper * 10);
         packet.writeInt(desper * 10);
         packet.write(0);
@@ -627,7 +627,7 @@ public class EnforceSystem {
                 }
             }
             equip.setEnhance((byte) (equip.getEnhance() > 26 ? equip.getEnhance() - 1 : equip.getEnhance() - 26));
-        } else if (success == 2) {//½ÇÆÐ&Æã
+        } else if (success == 2) {//ì‹¤íŒ¨&íŽ‘
             if (GameConstants.isZero(chr.getJob()) && (equip.getPosition() == -11 || equip.getPosition() == -10)) {
                 Equip wa = (Equip) (chr.getInventory(MapleInventoryType.EQUIPPED).getItem((short) -11));
                 Equip wb = (Equip) (chr.getInventory(MapleInventoryType.EQUIPPED).getItem((short) -10));
@@ -1072,37 +1072,37 @@ public class EnforceSystem {
                 StarSystemUpdate(zeros, 1, chr, true);
             }
             StarSystemUpdate(equip, 1, chr, false);
-        } else {//1 : ¼º°ø 3 : À¯Áö 2 : Æã 0 : ¶³¾îÁüÀ¸·Î ÃßÁ¤
-            int Total = 100 - success;//ÀÏ´Ü 100¿¡¼­ È®·üÀ»»©¼­ ex 3ÆÛ : 97ÆÛ·Î¸¸µç´Ù
-            if (FailAndDown > 0 && FailAndDestroy > 0) { //³»·Á°¥ È®·ü, ÅÍÁú È®·ü ÀüºÎ ÀÖÀ»¶§ //97
-                if (Randomizer.isSuccess(FailAndDown, Total)) {//³»·Á°¥ È®·ü¿¡ °É¸°´Ù¸é
+        } else {//1 : ì„±ê³µ 3 : ìœ ì§€ 2 : íŽ‘ 0 : ë–¨ì–´ì§ìœ¼ë¡œ ì¶”ì •
+            int Total = 100 - success;//ì¼ë‹¨ 100ì—ì„œ í™•ë¥ ì„ë¹¼ì„œ ex 3í¼ : 97í¼ë¡œë§Œë“ ë‹¤
+            if (FailAndDown > 0 && FailAndDestroy > 0) { //ë‚´ë ¤ê°ˆ í™•ë¥ , í„°ì§ˆ í™•ë¥  ì „ë¶€ ìžˆì„ë•Œ //97
+                if (Randomizer.isSuccess(FailAndDown, Total)) {//ë‚´ë ¤ê°ˆ í™•ë¥ ì— ê±¸ë¦°ë‹¤ë©´
                     if (zeros != null) {
                         StarSystemUpdate(zeros, 0, chr, true);
                     }
                     StarSystemUpdate(equip, 0, chr, false);
-                } else {//ÅÍÁú È®·ü¿¡ °É¸°´Ù¸é
+                } else {//í„°ì§ˆ í™•ë¥ ì— ê±¸ë¦°ë‹¤ë©´
                     if (zeros != null) {
                         StarSystemUpdate(equip, 2, chr, true);
                     }
                     StarSystemUpdate(equip, 2, chr, false);
                 }
-            } else if (FailAndDown > 0 && FailAndDestroy == 0) {//³»·Á°¥ È®·ü¸¸ ÀÖ´Ù¸é
+            } else if (FailAndDown > 0 && FailAndDestroy == 0) {//ë‚´ë ¤ê°ˆ í™•ë¥ ë§Œ ìžˆë‹¤ë©´
                 if (zeros != null) {
                     StarSystemUpdate(equip, 0, chr, true);
                 }
                 StarSystemUpdate(equip, 0, chr, false);
-            } else if (FailAndDown == 0 && FailAndDestroy == 0) {//µî±Þ À¯ÁöµÈ´Ù¸é
+            } else if (FailAndDown == 0 && FailAndDestroy == 0) {//ë“±ê¸‰ ìœ ì§€ëœë‹¤ë©´
                 if (zeros != null) {
                     StarSystemUpdate(equip, 3, chr, true);
                 }
                 StarSystemUpdate(equip, 3, chr, false);
-            } else if (FailAndDown == 0 && FailAndDestroy > 0) {//ÅÍÁö´Â È®·ü¸¸ ÀÖ´Ù¸é
-                if (Randomizer.isSuccess(FailAndDestroy, Total)) {//Æã
+            } else if (FailAndDown == 0 && FailAndDestroy > 0) {//í„°ì§€ëŠ” í™•ë¥ ë§Œ ìžˆë‹¤ë©´
+                if (Randomizer.isSuccess(FailAndDestroy, Total)) {//íŽ‘
                     if (zeros != null) {
                         StarSystemUpdate(equip, 2, chr, true);
                     }
                     StarSystemUpdate(equip, 2, chr, false);
-                } else {//À¯Áö
+                } else {//ìœ ì§€
                     if (zeros != null) {
                         StarSystemUpdate(equip, 3, chr, true);
                     }
@@ -1121,53 +1121,53 @@ public class EnforceSystem {
         } else if (c.getPlayer().scrollcount() % 4 == 0 || c.getPlayer().scrollcount() == 12) {
             a = 4;
         }
-        if (((scrollnumber + 1) % a) == 1) {//100%ÀÏ¶§
-            if (itemstring[scrollnumber / a] == "Èû" || itemstring[scrollnumber / a] == "¹ÎÃ¸" || itemstring[scrollnumber / a] == "Áö·Â" || itemstring[scrollnumber / a] == "¿î" || itemstring[scrollnumber / a] == "Ã¼·Â") {
+        if (((scrollnumber + 1) % a) == 1) {//100%ì¼ë•Œ
+            if (itemstring[scrollnumber / a] == "íž˜" || itemstring[scrollnumber / a] == "ë¯¼ì²©" || itemstring[scrollnumber / a] == "ì§€ë ¥" || itemstring[scrollnumber / a] == "ìš´" || itemstring[scrollnumber / a] == "ì²´ë ¥") {
                 juhun = 26;
-            } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Èû)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¹ÎÃ¸)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¿î)" || itemstring[scrollnumber / a] == "¸¶·Â(Áö·Â)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(Ã¼·Â)") {
+            } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(íž˜)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ë¯¼ì²©)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ìš´)" || itemstring[scrollnumber / a] == "ë§ˆë ¥(ì§€ë ¥)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ì²´ë ¥)") {
                 juhun = 160;
-            } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â" || itemstring[scrollnumber / a] == "¸¶·Â") {
+            } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥" || itemstring[scrollnumber / a] == "ë§ˆë ¥") {
                 juhun = 9;
             }
-        } else if (((scrollnumber + 1) % a) == 2) {//70%ÀÏ¶§
-            if (itemstring[scrollnumber / a] == "Èû" || itemstring[scrollnumber / a] == "¹ÎÃ¸" || itemstring[scrollnumber / a] == "Áö·Â" || itemstring[scrollnumber / a] == "¿î" || itemstring[scrollnumber / a] == "Ã¼·Â") {
+        } else if (((scrollnumber + 1) % a) == 2) {//70%ì¼ë•Œ
+            if (itemstring[scrollnumber / a] == "íž˜" || itemstring[scrollnumber / a] == "ë¯¼ì²©" || itemstring[scrollnumber / a] == "ì§€ë ¥" || itemstring[scrollnumber / a] == "ìš´" || itemstring[scrollnumber / a] == "ì²´ë ¥") {
                 juhun = 34;
-            } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Èû)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¹ÎÃ¸)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¿î)" || itemstring[scrollnumber / a] == "¸¶·Â(Áö·Â)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(Ã¼·Â)") {
+            } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(íž˜)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ë¯¼ì²©)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ìš´)" || itemstring[scrollnumber / a] == "ë§ˆë ¥(ì§€ë ¥)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ì²´ë ¥)") {
                 juhun = 200;
-            } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â" || itemstring[scrollnumber / a] == "¸¶·Â") {
+            } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥" || itemstring[scrollnumber / a] == "ë§ˆë ¥") {
                 juhun = 11;
             }
-        } else if ((((scrollnumber + 1)) % a) == 0) {//30%ÀÏ¶§
+        } else if ((((scrollnumber + 1)) % a) == 0) {//30%ì¼ë•Œ
             if (a == 4) {
-                if (itemstring[scrollnumber / a] == "Èû" || itemstring[scrollnumber / a] == "¹ÎÃ¸" || itemstring[scrollnumber / a] == "Áö·Â" || itemstring[scrollnumber / a] == "¿î" || itemstring[scrollnumber / a] == "Ã¼·Â") {
+                if (itemstring[scrollnumber / a] == "íž˜" || itemstring[scrollnumber / a] == "ë¯¼ì²©" || itemstring[scrollnumber / a] == "ì§€ë ¥" || itemstring[scrollnumber / a] == "ìš´" || itemstring[scrollnumber / a] == "ì²´ë ¥") {
                     juhun = 50;
-                } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Èû)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¹ÎÃ¸)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¿î)" || itemstring[scrollnumber / a] == "¸¶·Â(Áö·Â)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(Ã¼·Â)") {
+                } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(íž˜)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ë¯¼ì²©)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ìš´)" || itemstring[scrollnumber / a] == "ë§ˆë ¥(ì§€ë ¥)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ì²´ë ¥)") {
                     juhun = 290;
-                } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â" || itemstring[scrollnumber / a] == "¸¶·Â") {
+                } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥" || itemstring[scrollnumber / a] == "ë§ˆë ¥") {
                     juhun = 20;
                 }
-            } else if (itemstring[scrollnumber / a] == "Èû" || itemstring[scrollnumber / a] == "¹ÎÃ¸" || itemstring[scrollnumber / a] == "Áö·Â" || itemstring[scrollnumber / a] == "¿î" || itemstring[scrollnumber / a] == "Ã¼·Â") {
+            } else if (itemstring[scrollnumber / a] == "íž˜" || itemstring[scrollnumber / a] == "ë¯¼ì²©" || itemstring[scrollnumber / a] == "ì§€ë ¥" || itemstring[scrollnumber / a] == "ìš´" || itemstring[scrollnumber / a] == "ì²´ë ¥") {
                 juhun = 40;
-            } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Èû)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¹ÎÃ¸)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¿î)" || itemstring[scrollnumber / a] == "¸¶·Â(Áö·Â)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(Ã¼·Â)") {
+            } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(íž˜)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ë¯¼ì²©)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ìš´)" || itemstring[scrollnumber / a] == "ë§ˆë ¥(ì§€ë ¥)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ì²´ë ¥)") {
                 juhun = 240;
-            } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â" || itemstring[scrollnumber / a] == "¸¶·Â") {
+            } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥" || itemstring[scrollnumber / a] == "ë§ˆë ¥") {
                 juhun = 14;
             }
         } else if ((((scrollnumber + 1)) % a) == 3) {
-            if (itemstring[scrollnumber / a] == "Èû" || itemstring[scrollnumber / a] == "¹ÎÃ¸" || itemstring[scrollnumber / a] == "Áö·Â" || itemstring[scrollnumber / a] == "¿î" || itemstring[scrollnumber / a] == "Ã¼·Â") {
+            if (itemstring[scrollnumber / a] == "íž˜" || itemstring[scrollnumber / a] == "ë¯¼ì²©" || itemstring[scrollnumber / a] == "ì§€ë ¥" || itemstring[scrollnumber / a] == "ìš´" || itemstring[scrollnumber / a] == "ì²´ë ¥") {
                 juhun = 40;
-            } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Èû)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¹ÎÃ¸)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¿î)" || itemstring[scrollnumber / a] == "¸¶·Â(Áö·Â)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(Ã¼·Â)") {
+            } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(íž˜)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ë¯¼ì²©)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ìš´)" || itemstring[scrollnumber / a] == "ë§ˆë ¥(ì§€ë ¥)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ì²´ë ¥)") {
                 juhun = 240;
-            } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â" || itemstring[scrollnumber / a] == "¸¶·Â") {
+            } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥" || itemstring[scrollnumber / a] == "ë§ˆë ¥") {
                 juhun = 14;
             }
         }
         return juhun;
     }
 
-    public static void Itemupgrade(MapleClient c, Equip item, int scrollnumber, boolean success, MapleCharacter chr, boolean zeroWeapon) {//¼ýÀÚº°·Î
+    public static void Itemupgrade(MapleClient c, Equip item, int scrollnumber, boolean success, MapleCharacter chr, boolean zeroWeapon) {//ìˆ«ìžë³„ë¡œ
         int juhun = ItemJuhun(c, scrollnumber);
-        int ÁÖÈçÄÚµå = 4001832;
+        int ì£¼í”ì½”ë“œ = 4001832;
         if (success) {
             String itemstring[] = {c.getPlayer().scrollstring1(), c.getPlayer().scrollstring2(), c.getPlayer().scrollstring3(), c.getPlayer().scrollstring4(), c.getPlayer().scrollstring5()};
             int a = 0;
@@ -1176,182 +1176,182 @@ public class EnforceSystem {
             } else if (c.getPlayer().scrollcount() % 4 == 0 || c.getPlayer().scrollcount() == 12) {
                 a = 4;
             }
-            if (((scrollnumber + 1) % a) == 1) {//100%ÀÏ¶§
-                if (itemstring[scrollnumber / a] == "Èû") {
+            if (((scrollnumber + 1) % a) == 1) {//100%ì¼ë•Œ
+                if (itemstring[scrollnumber / a] == "íž˜") {
                     item.setStr((short) (item.getStr() + 2));
-                } else if (itemstring[scrollnumber / a] == "¹ÎÃ¸") {
+                } else if (itemstring[scrollnumber / a] == "ë¯¼ì²©") {
                     item.setDex((short) (item.getDex() + 2));
-                } else if (itemstring[scrollnumber / a] == "Áö·Â") {
+                } else if (itemstring[scrollnumber / a] == "ì§€ë ¥") {
                     item.setInt((short) (item.getInt() + 2));
-                } else if (itemstring[scrollnumber / a] == "¿î") {
+                } else if (itemstring[scrollnumber / a] == "ìš´") {
                     item.setLuk((short) (item.getLuk() + 2));
-                } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Èû)") {
+                } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(íž˜)") {
                     item.setStr((short) (item.getStr() + 1));
-                } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(¹ÎÃ¸)") {
+                } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ë¯¼ì²©)") {
                     item.setDex((short) (item.getDex() + 1));
-                } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(¿î)") {
+                } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ìš´)") {
                     item.setLuk((short) (item.getLuk() + 1));
-                } else if (itemstring[scrollnumber / a] == "¸¶·Â(Áö·Â)") {
+                } else if (itemstring[scrollnumber / a] == "ë§ˆë ¥(ì§€ë ¥)") {
                     item.setInt((short) (item.getInt() + 1));
-                } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Ã¼·Â)" || itemstring[scrollnumber / a] == "Ã¼·Â") {
+                } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ì²´ë ¥)" || itemstring[scrollnumber / a] == "ì²´ë ¥") {
                     item.setHp((short) (item.getHp() + 55));
                 }
-                if (itemstring[scrollnumber / a] == "Èû" || itemstring[scrollnumber / a] == "¹ÎÃ¸" || itemstring[scrollnumber / a] == "Áö·Â" || itemstring[scrollnumber / a] == "¿î") {
+                if (itemstring[scrollnumber / a] == "íž˜" || itemstring[scrollnumber / a] == "ë¯¼ì²©" || itemstring[scrollnumber / a] == "ì§€ë ¥" || itemstring[scrollnumber / a] == "ìš´") {
                     item.setHp((short) (item.getHp() + 20));
                     item.setWdef((short) (item.getWdef() + 2));
                     item.setMdef((short) (item.getMdef() + 2));
                 }
-                if (itemstring[scrollnumber / a] == "°ø°Ý·Â") {
+                if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥") {
                     item.setWatk((short) (item.getWatk() + 1));
-                } else if (itemstring[scrollnumber / a] == "¸¶·Â") {
+                } else if (itemstring[scrollnumber / a] == "ë§ˆë ¥") {
                     item.setMatk((short) (item.getMatk() + 1));
                 }
-                if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Èû)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¹ÎÃ¸)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¿î)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(Ã¼·Â)") {
+                if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(íž˜)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ë¯¼ì²©)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ìš´)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ì²´ë ¥)") {
                     item.setWatk((short) (item.getWatk() + 3));
-                } else if (itemstring[scrollnumber / a] == "¸¶·Â(Áö·Â)") {
+                } else if (itemstring[scrollnumber / a] == "ë§ˆë ¥(ì§€ë ¥)") {
                     item.setMatk((short) (item.getMatk() + 3));
                 }
 
-            } else if (((scrollnumber + 1) % a) == 2) {//70%ÀÏ¶§
-                if (itemstring[scrollnumber / a] == "Èû") {
+            } else if (((scrollnumber + 1) % a) == 2) {//70%ì¼ë•Œ
+                if (itemstring[scrollnumber / a] == "íž˜") {
                     item.setStr((short) (item.getStr() + 3));
-                } else if (itemstring[scrollnumber / a] == "¹ÎÃ¸") {
+                } else if (itemstring[scrollnumber / a] == "ë¯¼ì²©") {
                     item.setDex((short) (item.getDex() + 3));
-                } else if (itemstring[scrollnumber / a] == "Áö·Â") {
+                } else if (itemstring[scrollnumber / a] == "ì§€ë ¥") {
                     item.setInt((short) (item.getInt() + 3));
-                } else if (itemstring[scrollnumber / a] == "¿î") {
+                } else if (itemstring[scrollnumber / a] == "ìš´") {
                     item.setLuk((short) (item.getLuk() + 3));
-                } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Èû)") {
+                } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(íž˜)") {
                     item.setStr((short) (item.getStr() + 2));
-                } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(¹ÎÃ¸)") {
+                } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ë¯¼ì²©)") {
                     item.setDex((short) (item.getDex() + 2));
-                } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(¿î)") {
+                } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ìš´)") {
                     item.setLuk((short) (item.getLuk() + 2));
-                } else if (itemstring[scrollnumber / a] == "¸¶·Â(Áö·Â)") {
+                } else if (itemstring[scrollnumber / a] == "ë§ˆë ¥(ì§€ë ¥)") {
                     item.setInt((short) (item.getInt() + 2));
-                } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Ã¼·Â)" || itemstring[scrollnumber / a] == "Ã¼·Â") {
+                } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ì²´ë ¥)" || itemstring[scrollnumber / a] == "ì²´ë ¥") {
                     item.setHp((short) (item.getHp() + 110));
                 }
-                if (itemstring[scrollnumber / a] == "Èû" || itemstring[scrollnumber / a] == "¹ÎÃ¸" || itemstring[scrollnumber / a] == "Áö·Â" || itemstring[scrollnumber / a] == "¿î") {
+                if (itemstring[scrollnumber / a] == "íž˜" || itemstring[scrollnumber / a] == "ë¯¼ì²©" || itemstring[scrollnumber / a] == "ì§€ë ¥" || itemstring[scrollnumber / a] == "ìš´") {
                     item.setHp((short) (item.getHp() + 40));
                     item.setWdef((short) (item.getWdef() + 4));
                     item.setMdef((short) (item.getMdef() + 4));
                 }
-                if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Èû)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¹ÎÃ¸)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¿î)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(Ã¼·Â)") {
+                if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(íž˜)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ë¯¼ì²©)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ìš´)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ì²´ë ¥)") {
                     item.setWatk((short) (item.getWatk() + 5));
-                } else if (itemstring[scrollnumber / a] == "¸¶·Â(Áö·Â)") {
+                } else if (itemstring[scrollnumber / a] == "ë§ˆë ¥(ì§€ë ¥)") {
                     item.setMatk((short) (item.getMatk() + 5));
                 }
-                if (itemstring[scrollnumber / a] == "°ø°Ý·Â") {
+                if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥") {
                     item.setWatk((short) (item.getWatk() + 2));
-                } else if (itemstring[scrollnumber / a] == "¸¶·Â") {
+                } else if (itemstring[scrollnumber / a] == "ë§ˆë ¥") {
                     item.setMatk((short) (item.getMatk() + 2));
                 }
-            } else if ((((scrollnumber + 1)) % a) == 0) {//30%ÀÏ¶§
+            } else if ((((scrollnumber + 1)) % a) == 0) {//30%ì¼ë•Œ
                 if (a == 4) {
-                    if (itemstring[scrollnumber / a] == "Èû") {
+                    if (itemstring[scrollnumber / a] == "íž˜") {
                         item.setStr((short) (item.getStr() + 7));
-                    } else if (itemstring[scrollnumber / a] == "¹ÎÃ¸") {
+                    } else if (itemstring[scrollnumber / a] == "ë¯¼ì²©") {
                         item.setDex((short) (item.getDex() + 7));
-                    } else if (itemstring[scrollnumber / a] == "Áö·Â") {
+                    } else if (itemstring[scrollnumber / a] == "ì§€ë ¥") {
                         item.setInt((short) (item.getInt() + 7));
-                    } else if (itemstring[scrollnumber / a] == "¿î") {
+                    } else if (itemstring[scrollnumber / a] == "ìš´") {
                         item.setLuk((short) (item.getLuk() + 7));
-                    } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Èû)") {
+                    } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(íž˜)") {
                         item.setStr((short) (item.getStr() + 4));
-                    } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(¹ÎÃ¸)") {
+                    } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ë¯¼ì²©)") {
                         item.setDex((short) (item.getDex() + 4));
-                    } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(¿î)") {
+                    } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ìš´)") {
                         item.setLuk((short) (item.getLuk() + 4));
-                    } else if (itemstring[scrollnumber / a] == "¸¶·Â(Áö·Â)") {
+                    } else if (itemstring[scrollnumber / a] == "ë§ˆë ¥(ì§€ë ¥)") {
                         item.setInt((short) (item.getInt() + 4));
-                    } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Ã¼·Â)" || itemstring[scrollnumber / a] == "Ã¼·Â") {
+                    } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ì²´ë ¥)" || itemstring[scrollnumber / a] == "ì²´ë ¥") {
                         item.setHp((short) (item.getHp() + 255));
                     }
-                    if (itemstring[scrollnumber / a] == "Èû" || itemstring[scrollnumber / a] == "¹ÎÃ¸" || itemstring[scrollnumber / a] == "Áö·Â" || itemstring[scrollnumber / a] == "¿î") {
+                    if (itemstring[scrollnumber / a] == "íž˜" || itemstring[scrollnumber / a] == "ë¯¼ì²©" || itemstring[scrollnumber / a] == "ì§€ë ¥" || itemstring[scrollnumber / a] == "ìš´") {
                         item.setHp((short) (item.getHp() + 90));
                         item.setWdef((short) (item.getWdef() + 9));
                         item.setMdef((short) (item.getMdef() + 9));
                     }
-                    if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Èû)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¹ÎÃ¸)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¿î)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(Ã¼·Â)") {
+                    if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(íž˜)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ë¯¼ì²©)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ìš´)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ì²´ë ¥)") {
                         item.setWatk((short) (item.getWatk() + 9));
-                    } else if (itemstring[scrollnumber / a] == "¸¶·Â(Áö·Â)") {
+                    } else if (itemstring[scrollnumber / a] == "ë§ˆë ¥(ì§€ë ¥)") {
                         item.setMatk((short) (item.getMatk() + 9));
                     }
-                    if (itemstring[scrollnumber / a] == "°ø°Ý·Â") {
+                    if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥") {
                         item.setWatk((short) (item.getWatk() + 4));
-                    } else if (itemstring[scrollnumber / a] == "¸¶·Â") {
+                    } else if (itemstring[scrollnumber / a] == "ë§ˆë ¥") {
                         item.setMatk((short) (item.getMatk() + 4));
                     }
                 } else {
-                    if (itemstring[scrollnumber / a] == "Èû") {
+                    if (itemstring[scrollnumber / a] == "íž˜") {
                         item.setStr((short) (item.getStr() + 5));
-                    } else if (itemstring[scrollnumber / a] == "¹ÎÃ¸") {
+                    } else if (itemstring[scrollnumber / a] == "ë¯¼ì²©") {
                         item.setDex((short) (item.getDex() + 5));
-                    } else if (itemstring[scrollnumber / a] == "Áö·Â") {
+                    } else if (itemstring[scrollnumber / a] == "ì§€ë ¥") {
                         item.setInt((short) (item.getInt() + 5));
-                    } else if (itemstring[scrollnumber / a] == "¿î") {
+                    } else if (itemstring[scrollnumber / a] == "ìš´") {
                         item.setLuk((short) (item.getLuk() + 5));
-                    } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(¹ÎÃ¸)") {
+                    } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ë¯¼ì²©)") {
                         item.setDex((short) (item.getDex() + 3));
-                    } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(¿î)") {
+                    } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ìš´)") {
                         item.setLuk((short) (item.getLuk() + 3));
-                    } else if (itemstring[scrollnumber / a] == "¸¶·Â(Áö·Â)") {
+                    } else if (itemstring[scrollnumber / a] == "ë§ˆë ¥(ì§€ë ¥)") {
                         item.setInt((short) (item.getInt() + 3));
-                    } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Ã¼·Â)" || itemstring[scrollnumber / a] == "Ã¼·Â") {
+                    } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ì²´ë ¥)" || itemstring[scrollnumber / a] == "ì²´ë ¥") {
                         item.setHp((short) (item.getHp() + 180));
-                    } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Èû)") {
+                    } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(íž˜)") {
                         item.setStr((short) (item.getStr() + 3));
                     }
-                    if (itemstring[scrollnumber / a] == "Èû" || itemstring[scrollnumber / a] == "¹ÎÃ¸" || itemstring[scrollnumber / a] == "Áö·Â" || itemstring[scrollnumber / a] == "¿î") {
+                    if (itemstring[scrollnumber / a] == "íž˜" || itemstring[scrollnumber / a] == "ë¯¼ì²©" || itemstring[scrollnumber / a] == "ì§€ë ¥" || itemstring[scrollnumber / a] == "ìš´") {
                         item.setHp((short) (item.getHp() + 70));
                         item.setWdef((short) (item.getWdef() + 7));
                         item.setMdef((short) (item.getMdef() + 7));
                     }
-                    if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Èû)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¹ÎÃ¸)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¿î)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(Ã¼·Â)") {
+                    if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(íž˜)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ë¯¼ì²©)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ìš´)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ì²´ë ¥)") {
                         item.setWatk((short) (item.getWatk() + 7));
-                    } else if (itemstring[scrollnumber / a] == "¸¶·Â(Áö·Â)") {
+                    } else if (itemstring[scrollnumber / a] == "ë§ˆë ¥(ì§€ë ¥)") {
                         item.setMatk((short) (item.getMatk() + 7));
                     }
-                    if (itemstring[scrollnumber / a] == "°ø°Ý·Â") {
+                    if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥") {
                         item.setWatk((short) (item.getWatk() + 3));
-                    } else if (itemstring[scrollnumber / a] == "¸¶·Â") {
+                    } else if (itemstring[scrollnumber / a] == "ë§ˆë ¥") {
                         item.setMatk((short) (item.getMatk() + 3));
                     }
                 }
             } else if ((((scrollnumber + 1)) % a) == 3) {
-                if (itemstring[scrollnumber / a] == "Èû") {
+                if (itemstring[scrollnumber / a] == "íž˜") {
                     item.setStr((short) (item.getStr() + 5));
-                } else if (itemstring[scrollnumber / a] == "¹ÎÃ¸") {
+                } else if (itemstring[scrollnumber / a] == "ë¯¼ì²©") {
                     item.setDex((short) (item.getDex() + 5));
-                } else if (itemstring[scrollnumber / a] == "Áö·Â") {
+                } else if (itemstring[scrollnumber / a] == "ì§€ë ¥") {
                     item.setInt((short) (item.getInt() + 5));
-                } else if (itemstring[scrollnumber / a] == "¿î") {
+                } else if (itemstring[scrollnumber / a] == "ìš´") {
                     item.setLuk((short) (item.getLuk() + 5));
-                } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(¹ÎÃ¸)") {
+                } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ë¯¼ì²©)") {
                     item.setDex((short) (item.getDex() + 3));
-                } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(¿î)") {
+                } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ìš´)") {
                     item.setLuk((short) (item.getLuk() + 3));
-                } else if (itemstring[scrollnumber / a] == "¸¶·Â(Áö·Â)") {
+                } else if (itemstring[scrollnumber / a] == "ë§ˆë ¥(ì§€ë ¥)") {
                     item.setInt((short) (item.getInt() + 3));
-                } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Ã¼·Â)" || itemstring[scrollnumber / a] == "Ã¼·Â") {
+                } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ì²´ë ¥)" || itemstring[scrollnumber / a] == "ì²´ë ¥") {
                     item.setHp((short) (item.getHp() + 180));
-                } else if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Èû)") {
+                } else if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(íž˜)") {
                     item.setStr((short) (item.getStr() + 3));
                 }
-                if (itemstring[scrollnumber / a] == "Èû" || itemstring[scrollnumber / a] == "¹ÎÃ¸" || itemstring[scrollnumber / a] == "Áö·Â" || itemstring[scrollnumber / a] == "¿î") {
+                if (itemstring[scrollnumber / a] == "íž˜" || itemstring[scrollnumber / a] == "ë¯¼ì²©" || itemstring[scrollnumber / a] == "ì§€ë ¥" || itemstring[scrollnumber / a] == "ìš´") {
                     item.setHp((short) (item.getHp() + 70));
                     item.setWdef((short) (item.getWdef() + 7));
                     item.setMdef((short) (item.getMdef() + 7));
                 }
-                if (itemstring[scrollnumber / a] == "°ø°Ý·Â(Èû)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¹ÎÃ¸)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(¿î)" || itemstring[scrollnumber / a] == "°ø°Ý·Â(Ã¼·Â)") {
+                if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥(íž˜)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ë¯¼ì²©)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ìš´)" || itemstring[scrollnumber / a] == "ê³µê²©ë ¥(ì²´ë ¥)") {
                     item.setWatk((short) (item.getWatk() + 7));
-                } else if (itemstring[scrollnumber / a] == "¸¶·Â(Áö·Â)") {
+                } else if (itemstring[scrollnumber / a] == "ë§ˆë ¥(ì§€ë ¥)") {
                     item.setMatk((short) (item.getMatk() + 7));
                 }
-                if (itemstring[scrollnumber / a] == "°ø°Ý·Â") {
+                if (itemstring[scrollnumber / a] == "ê³µê²©ë ¥") {
                     item.setWatk((short) (item.getWatk() + 3));
-                } else if (itemstring[scrollnumber / a] == "¸¶·Â") {
+                } else if (itemstring[scrollnumber / a] == "ë§ˆë ¥") {
                     item.setMatk((short) (item.getMatk() + 3));
                 }
             }
@@ -1364,7 +1364,7 @@ public class EnforceSystem {
             item.setFlag((short) (item.getFlag() - ItemFlag.SAFETY.getValue()));
         }
         if (!zeroWeapon) {
-            chr.gainItem(ÁÖÈçÄÚµå, (short) -juhun, false, 0, null);
+            chr.gainItem(ì£¼í”ì½”ë“œ, (short) -juhun, false, 0, null);
         }
     }
 
@@ -1403,7 +1403,7 @@ public class EnforceSystem {
         } else if (chr.scrollcount() % 4 == 0 || chr.scrollcount() == 12) {
             a = 4;
         }
-        return persent[(scrollnumber + 1) % 4] + " " + itemstring[scrollnumber / a] + " ÁÖ¹®¼­";
+        return persent[(scrollnumber + 1) % 4] + " " + itemstring[scrollnumber / a] + " ì£¼ë¬¸ì„œ";
     }
 
     public static byte[] UpdateItemResult(Equip item, boolean success, int scrollnumber, MapleCharacter chr) {
@@ -1435,11 +1435,11 @@ public class EnforceSystem {
         boolean a = false;
         boolean b = false;
         boolean c = false;
-        if (itemtype > 120 && itemtype < 172) {//a = ¹«±â
+        if (itemtype > 120 && itemtype < 172) {//a = ë¬´ê¸°
             a = true;
-        } else if (itemtype == 108) {//b = Àå°©
+        } else if (itemtype == 108) {//b = ìž¥ê°‘
             b = true;
-        } else {//c = ´Ù¸¥°Íµé
+        } else {//c = ë‹¤ë¥¸ê²ƒë“¤
             c = true;
         }
         if (a) {
@@ -1447,61 +1447,61 @@ public class EnforceSystem {
                 case 0:
                     cc.getPlayer().itemstaticcounts(5);
                     cc.getPlayer().scrollacounts(4);
-                    cc.getPlayer().itemstatic1s(5); //Èû
-                    cc.getPlayer().itemstatic2s(18); //Áö·Â
-                    cc.getPlayer().itemstatic3s(9); //¹ÎÃ¸
-                    cc.getPlayer().itemstatic4s(33); //¿î
-                    cc.getPlayer().itemstatic5s(257); //Ã¼·Â
-                    cc.getPlayer().scrollstring1s("°ø°Ý·Â(Èû)");
-                    cc.getPlayer().scrollstring2s("¸¶·Â(Áö·Â)");
-                    cc.getPlayer().scrollstring3s("°ø°Ý·Â(¹ÎÃ¸)");
-                    cc.getPlayer().scrollstring4s("°ø°Ý·Â(¿î)");
-                    cc.getPlayer().scrollstring5s("°ø°Ý·Â(Ã¼·Â)");
+                    cc.getPlayer().itemstatic1s(5); //íž˜
+                    cc.getPlayer().itemstatic2s(18); //ì§€ë ¥
+                    cc.getPlayer().itemstatic3s(9); //ë¯¼ì²©
+                    cc.getPlayer().itemstatic4s(33); //ìš´
+                    cc.getPlayer().itemstatic5s(257); //ì²´ë ¥
+                    cc.getPlayer().scrollstring1s("ê³µê²©ë ¥(íž˜)");
+                    cc.getPlayer().scrollstring2s("ë§ˆë ¥(ì§€ë ¥)");
+                    cc.getPlayer().scrollstring3s("ê³µê²©ë ¥(ë¯¼ì²©)");
+                    cc.getPlayer().scrollstring4s("ê³µê²©ë ¥(ìš´)");
+                    cc.getPlayer().scrollstring5s("ê³µê²©ë ¥(ì²´ë ¥)");
                     cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());
                     break;
                 case 1:
                     cc.getPlayer().itemstaticcounts(2);
-                    cc.getPlayer().itemstatic1s(5); //°ø°Ý·Â(Èû)
-                    cc.getPlayer().itemstatic2s(257); //Ã¼·Â
-                    cc.getPlayer().scrollstring1s("°ø°Ý·Â(Èû)");
-                    cc.getPlayer().scrollstring2s("°ø°Ý·Â(Ã¼·Â)");
+                    cc.getPlayer().itemstatic1s(5); //ê³µê²©ë ¥(íž˜)
+                    cc.getPlayer().itemstatic2s(257); //ì²´ë ¥
+                    cc.getPlayer().scrollstring1s("ê³µê²©ë ¥(íž˜)");
+                    cc.getPlayer().scrollstring2s("ê³µê²©ë ¥(ì²´ë ¥)");
                     cc.getPlayer().scrollacounts(4);
                     cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());
                     break;
                 case 2:
                     cc.getPlayer().itemstaticcounts(1);
-                    cc.getPlayer().itemstatic1s(18); //¸¶·Â(Áö·Â)
-                    cc.getPlayer().scrollstring1s("¸¶·Â(Áö·Â)");
+                    cc.getPlayer().itemstatic1s(18); //ë§ˆë ¥(ì§€ë ¥)
+                    cc.getPlayer().scrollstring1s("ë§ˆë ¥(ì§€ë ¥)");
                     cc.getPlayer().scrollacounts(4);
                     cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());
                     break;
                 case 4:
                     cc.getPlayer().itemstaticcounts(2);
-                    cc.getPlayer().itemstatic1s(9); //°ø°Ý·Â(¹ÎÃ¸)
-                    cc.getPlayer().itemstatic2s(257); //Ã¼·Â
-                    cc.getPlayer().scrollstring1s("°ø°Ý·Â(¹ÎÃ¸)");
-                    cc.getPlayer().scrollstring2s("°ø°Ý·Â(Ã¼·Â)");
+                    cc.getPlayer().itemstatic1s(9); //ê³µê²©ë ¥(ë¯¼ì²©)
+                    cc.getPlayer().itemstatic2s(257); //ì²´ë ¥
+                    cc.getPlayer().scrollstring1s("ê³µê²©ë ¥(ë¯¼ì²©)");
+                    cc.getPlayer().scrollstring2s("ê³µê²©ë ¥(ì²´ë ¥)");
                     cc.getPlayer().scrollacounts(4);
                     cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());
                     break;
                 case 8:
                     cc.getPlayer().itemstaticcounts(2);
-                    cc.getPlayer().itemstatic1s(33); //°ø°Ý·Â(¿î)
-                    cc.getPlayer().itemstatic2s(257); //Ã¼·Â
-                    cc.getPlayer().scrollstring1s("°ø°Ý·Â(¿î)");
-                    cc.getPlayer().scrollstring2s("°ø°Ý·Â(Ã¼·Â)");
+                    cc.getPlayer().itemstatic1s(33); //ê³µê²©ë ¥(ìš´)
+                    cc.getPlayer().itemstatic2s(257); //ì²´ë ¥
+                    cc.getPlayer().scrollstring1s("ê³µê²©ë ¥(ìš´)");
+                    cc.getPlayer().scrollstring2s("ê³µê²©ë ¥(ì²´ë ¥)");
                     cc.getPlayer().scrollacounts(4);
                     cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());
                     break;
                 case 16:
                 case 24:
                     cc.getPlayer().itemstaticcounts(3);
-                    cc.getPlayer().itemstatic1s(5); //°ø°Ý·Â(Èû)
-                    cc.getPlayer().itemstatic2s(9); //°ø°Ý·Â(¹ÎÃ¸)
-                    cc.getPlayer().itemstatic3s(257); //Ã¼·Â
-                    cc.getPlayer().scrollstring1s("°ø°Ý·Â(Èû)");
-                    cc.getPlayer().scrollstring2s("°ø°Ý·Â(¹ÎÃ¸)");
-                    cc.getPlayer().scrollstring3s("°ø°Ý·Â(Ã¼·Â)");
+                    cc.getPlayer().itemstatic1s(5); //ê³µê²©ë ¥(íž˜)
+                    cc.getPlayer().itemstatic2s(9); //ê³µê²©ë ¥(ë¯¼ì²©)
+                    cc.getPlayer().itemstatic3s(257); //ì²´ë ¥
+                    cc.getPlayer().scrollstring1s("ê³µê²©ë ¥(íž˜)");
+                    cc.getPlayer().scrollstring2s("ê³µê²©ë ¥(ë¯¼ì²©)");
+                    cc.getPlayer().scrollstring3s("ê³µê²©ë ¥(ì²´ë ¥)");
                     cc.getPlayer().scrollacounts(4);
                     cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());
                     break;
@@ -1510,47 +1510,47 @@ public class EnforceSystem {
             switch (job) {
                 case 0:
                     cc.getPlayer().itemstaticcounts(2);
-                    cc.getPlayer().itemstatic1s(1); //°ø°Ý·Â
-                    cc.getPlayer().itemstatic2s(2); //¸¶·Â
-                    cc.getPlayer().scrollstring1s("°ø°Ý·Â");
-                    cc.getPlayer().scrollstring2s("¸¶·Â");
+                    cc.getPlayer().itemstatic1s(1); //ê³µê²©ë ¥
+                    cc.getPlayer().itemstatic2s(2); //ë§ˆë ¥
+                    cc.getPlayer().scrollstring1s("ê³µê²©ë ¥");
+                    cc.getPlayer().scrollstring2s("ë§ˆë ¥");
                     cc.getPlayer().scrollacounts(3);
                     cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());
                     break;
                 case 1:
                     cc.getPlayer().itemstaticcounts(1);
                     cc.getPlayer().itemstatic1s(1);
-                    cc.getPlayer().scrollstring1s("°ø°Ý·Â");
+                    cc.getPlayer().scrollstring1s("ê³µê²©ë ¥");
                     cc.getPlayer().scrollacounts(3);
                     cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());
                     break;
                 case 2:
                     cc.getPlayer().itemstaticcounts(2);
-                    cc.getPlayer().itemstatic1s(1); //°ø°Ý·Â
-                    cc.getPlayer().itemstatic2s(2); //¸¶·Â
-                    cc.getPlayer().scrollstring1s("°ø°Ý·Â");
-                    cc.getPlayer().scrollstring2s("¸¶·Â");
+                    cc.getPlayer().itemstatic1s(1); //ê³µê²©ë ¥
+                    cc.getPlayer().itemstatic2s(2); //ë§ˆë ¥
+                    cc.getPlayer().scrollstring1s("ê³µê²©ë ¥");
+                    cc.getPlayer().scrollstring2s("ë§ˆë ¥");
                     cc.getPlayer().scrollacounts(3);
                     cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());
                     break;
                 case 4:
                     cc.getPlayer().itemstaticcounts(1);
                     cc.getPlayer().itemstatic1s(1);
-                    cc.getPlayer().scrollstring1s("°ø°Ý·Â");
+                    cc.getPlayer().scrollstring1s("ê³µê²©ë ¥");
                     cc.getPlayer().scrollacounts(3);
                     cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());
                     break;
                 case 8:
                     cc.getPlayer().itemstaticcounts(1);
                     cc.getPlayer().itemstatic1s(1);
-                    cc.getPlayer().scrollstring1s("°ø°Ý·Â");
+                    cc.getPlayer().scrollstring1s("ê³µê²©ë ¥");
                     cc.getPlayer().scrollacounts(3);
                     cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());
                     break;
                 case 16:
                     cc.getPlayer().itemstaticcounts(1);
                     cc.getPlayer().itemstatic1s(1);
-                    cc.getPlayer().scrollstring1s("°ø°Ý·Â");
+                    cc.getPlayer().scrollstring1s("ê³µê²©ë ¥");
                     cc.getPlayer().scrollacounts(3);
                     cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());
                     break;
@@ -1564,11 +1564,11 @@ public class EnforceSystem {
                     cc.getPlayer().itemstatic3s(456);
                     cc.getPlayer().itemstatic4s(480);
                     cc.getPlayer().itemstatic5s(448);
-                    cc.getPlayer().scrollstring1s("Èû");
-                    cc.getPlayer().scrollstring2s("Áö·Â");
-                    cc.getPlayer().scrollstring3s("¹ÎÃ¸");
-                    cc.getPlayer().scrollstring4s("¿î");
-                    cc.getPlayer().scrollstring5s("Ã¼·Â");
+                    cc.getPlayer().scrollstring1s("íž˜");
+                    cc.getPlayer().scrollstring2s("ì§€ë ¥");
+                    cc.getPlayer().scrollstring3s("ë¯¼ì²©");
+                    cc.getPlayer().scrollstring4s("ìš´");
+                    cc.getPlayer().scrollstring5s("ì²´ë ¥");
                     cc.getPlayer().scrollacounts(3);
                     cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());
                     break;
@@ -1576,26 +1576,26 @@ public class EnforceSystem {
                     cc.getPlayer().itemstaticcounts(2);
                     cc.getPlayer().itemstatic1s(452);
                     cc.getPlayer().itemstatic2s(448);
-                    cc.getPlayer().scrollstring1s("Èû");
-                    cc.getPlayer().scrollstring2s("Ã¼·Â");
+                    cc.getPlayer().scrollstring1s("íž˜");
+                    cc.getPlayer().scrollstring2s("ì²´ë ¥");
                     cc.getPlayer().scrollacounts(3);
                     cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());
                     break;
                 case 2:
-                    cc.getPlayer().itemstaticcounts(2);//ÁÖ¹®¼­ Á¾·ùÀÇ °¹¼ö
-                    cc.getPlayer().itemstatic1s(464);//ÁÖ¹®¼­Á¾·ùº° °íÀ¯¹øÈ£1
+                    cc.getPlayer().itemstaticcounts(2);//ì£¼ë¬¸ì„œ ì¢…ë¥˜ì˜ ê°¯ìˆ˜
+                    cc.getPlayer().itemstatic1s(464);//ì£¼ë¬¸ì„œì¢…ë¥˜ë³„ ê³ ìœ ë²ˆí˜¸1
                     cc.getPlayer().itemstatic2s(448);//2
-                    cc.getPlayer().scrollstring1s("Áö·Â");//ÁÖ¹®¼­ Á¾·ùº° ÀÌ¸§
-                    cc.getPlayer().scrollstring2s("Ã¼·Â");
-                    cc.getPlayer().scrollacounts(3);//ÁÖ¹®¼­ Á¾·ùº° ÁÖ¹®¼­ÀÇ °¹¼ö
-                    cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());//ÃÑ ÁÖ¹®¼­ÀÇ °¹¼ö(ÁÖ¹®¼­Á¾·ù * Á¾·ùº°ÁÖ¹®¼­ÀÇ°¹¼ö)
+                    cc.getPlayer().scrollstring1s("ì§€ë ¥");//ì£¼ë¬¸ì„œ ì¢…ë¥˜ë³„ ì´ë¦„
+                    cc.getPlayer().scrollstring2s("ì²´ë ¥");
+                    cc.getPlayer().scrollacounts(3);//ì£¼ë¬¸ì„œ ì¢…ë¥˜ë³„ ì£¼ë¬¸ì„œì˜ ê°¯ìˆ˜
+                    cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());//ì´ ì£¼ë¬¸ì„œì˜ ê°¯ìˆ˜(ì£¼ë¬¸ì„œì¢…ë¥˜ * ì¢…ë¥˜ë³„ì£¼ë¬¸ì„œì˜ê°¯ìˆ˜)
                     break;
                 case 4:
                     cc.getPlayer().itemstaticcounts(2);
                     cc.getPlayer().itemstatic1s(456);
                     cc.getPlayer().itemstatic2s(448);
-                    cc.getPlayer().scrollstring1s("¹ÎÃ¸");
-                    cc.getPlayer().scrollstring2s("Ã¼·Â");
+                    cc.getPlayer().scrollstring1s("ë¯¼ì²©");
+                    cc.getPlayer().scrollstring2s("ì²´ë ¥");
                     cc.getPlayer().scrollacounts(3);
                     cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());
                     break;
@@ -1604,9 +1604,9 @@ public class EnforceSystem {
                     cc.getPlayer().itemstatic1s(452);
                     cc.getPlayer().itemstatic2s(456);
                     cc.getPlayer().itemstatic3s(480);
-                    cc.getPlayer().scrollstring1s("Èû");
-                    cc.getPlayer().scrollstring2s("¹ÎÃ¸");
-                    cc.getPlayer().scrollstring3s("¿î");
+                    cc.getPlayer().scrollstring1s("íž˜");
+                    cc.getPlayer().scrollstring2s("ë¯¼ì²©");
+                    cc.getPlayer().scrollstring3s("ìš´");
                     cc.getPlayer().scrollacounts(3);
                     cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());
                     break;
@@ -1615,9 +1615,9 @@ public class EnforceSystem {
                     cc.getPlayer().itemstatic1s(452);
                     cc.getPlayer().itemstatic2s(456);
                     cc.getPlayer().itemstatic3s(448);
-                    cc.getPlayer().scrollstring1s("Èû");
-                    cc.getPlayer().scrollstring2s("¹ÎÃ¸");
-                    cc.getPlayer().scrollstring3s("Ã¼·Â");
+                    cc.getPlayer().scrollstring1s("íž˜");
+                    cc.getPlayer().scrollstring2s("ë¯¼ì²©");
+                    cc.getPlayer().scrollstring3s("ì²´ë ¥");
                     cc.getPlayer().scrollacounts(3);
                     cc.getPlayer().scrollcounts(cc.getPlayer().itemstaticcount() * cc.getPlayer().scrollacount());
                     break;
@@ -1654,8 +1654,8 @@ public class EnforceSystem {
         for (int j = 0; j < c.getPlayer().itemstaticcount(); j++) {
             for (int i = 0; i < c.getPlayer().scrollacount(); i++) {
                 packet.writeInt(i);
-                packet.writeMapleAsciiString(Persent[i] + itemstring[j] + " ÁÖ¹®¼­");
-                packet.writeLong(0); //1.2.251+, MVP Ãß°¡È®·ü.
+                packet.writeMapleAsciiString(Persent[i] + itemstring[j] + " ì£¼ë¬¸ì„œ");
+                packet.writeLong(0); //1.2.251+, MVP ì¶”ê°€í™•ë¥ .
                 packet.writeInt(itemstatic[j]);
                 if (itemstatic[j] > 448 && itemstatic[j] <= 480) {
                     packet.writeInt(statdefence1[i]);

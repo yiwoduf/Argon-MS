@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -15,7 +15,7 @@ import tools.RandomStream.Randomizer;
 
 /**
  *
- * @author ¿¡¹İÅ×ÀÌ¸£
+ * @author ì—ë°˜í…Œì´ë¥´
  */
 public class InnerAbillity {
     private static InnerAbillity instance = null;
@@ -30,7 +30,7 @@ public class InnerAbillity {
     }
     
     public InnerSkillValueHolder renewSkill(int rank, int circulator, boolean ultimateCirculatorPos) {
-        if (ultimateCirculatorPos && circulator == 2701000) { //±Ã±ØÀÇ ¼­Å§·¹ÀÌÅÍ
+        if (ultimateCirculatorPos && circulator == 2701000) { //ê¶ê·¹ì˜ ì„œí˜ë ˆì´í„°
             int randomSkill = GameConstants.getInnerSkillbyRank(3)[(int) Math.floor(Math.random()*GameConstants.getInnerSkillbyRank(rank).length)];
             int random = Randomizer.nextInt(100);
             int skillLevel = 0;

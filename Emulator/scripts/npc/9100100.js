@@ -4,9 +4,9 @@ var Modes = [
     //MAX COL = 7
     //MAX ROW = 7 (Without scrolling)
     //Difficulty Name, Rows, Cols, Number of Mines
-    ["#g½¬¿ò                 #k", 5, 5, 4],
-    ["#bÁß°£                 #k", 6, 6, 8],
-    ["#r¾î·Á¿ò             #k", 7, 7, 15]
+    ["#gì‰¬ì›€                 #k", 5, 5, 4],
+    ["#bì¤‘ê°„                 #k", 6, 6, 8],
+    ["#rì–´ë ¤ì›€             #k", 7, 7, 15]
 ];
 
 /* Don't touch these variables below unless you know what you're doing */
@@ -31,12 +31,12 @@ function start() {
     action(1, 0, 0);
 }
 function Header() {
-    return "#d============ Áö·ÚÃ£±â ============#k\r\n\r\n";
+    return "#d============ ì§€ë¢°ì°¾ê¸° ============#k\r\n\r\n";
 }
 function ConstructModeSelectionString() {
     var ret = "";
     for (var i = 0;i < Modes.length;i++) {
-        ret += "#L"+i+"#"+Modes[i][0]+" ("+Modes[i][1]+"x"+Modes[i][2]+") ÆøÅº: "+Modes[i][3]+"#l\r\n";
+        ret += "#L"+i+"#"+Modes[i][0]+" ("+Modes[i][1]+"x"+Modes[i][2]+") í­íƒ„: "+Modes[i][3]+"#l\r\n";
     }
     return ret;
 }
@@ -100,7 +100,7 @@ function InitializeBlankSpaces() {
     }
 }
 function ConstructBoardString() {
-    var ret = "#dÃ£¾Æ¾ßÇÒ ¼ıÀÚ °³¼ö->#k#e#k " + LeftToBeRevealed + "\r\n";
+    var ret = "#dì°¾ì•„ì•¼í•  ìˆ«ì ê°œìˆ˜->#k#e#k " + LeftToBeRevealed + "\r\n";
     var num = 0;
     for (var i = 0;i < NumCols;i++) {
         for (var j = 0;j < NumRows;j++) {
@@ -182,7 +182,7 @@ function action(mode, type, selection) {
             status++;
 
         if (status == 0) {
-            cm.sendSimple(Header()+"³­ÀÌµµ¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä.\r\n"+ConstructModeSelectionString())
+            cm.sendSimple(Header()+"ë‚œì´ë„ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”.\r\n"+ConstructModeSelectionString())
         } else if (status == 1) {
             if (selection < 0 || selection > Modes.length) { //Packet Edits
                 cm.dispose();
@@ -211,11 +211,11 @@ function action(mode, type, selection) {
             SendStr += ConstructBoardString();
             if (Board[Move[0]][Move[1]] == MINE_ITEM) {
                 //Lose
-                cm.sendOk(Header() + ConstructEndBoardString() + "\r\n°ÔÀÓ¿¡¼­ ÆĞ¹èÇÏ¿´½À´Ï´Ù!\r\n°ÔÀÓÁøÇà½Ã°£ : " + GetGameTime((new Date()).getTime()));
+                cm.sendOk(Header() + ConstructEndBoardString() + "\r\nê²Œì„ì—ì„œ íŒ¨ë°°í•˜ì˜€ìŠµë‹ˆë‹¤!\r\nê²Œì„ì§„í–‰ì‹œê°„ : " + GetGameTime((new Date()).getTime()));
                 cm.dispose();
             } else {
                 if (IsGameOver()) {
-                    cm.sendOk(Header() + ConstructEndBoardString() + "\r\n°ÔÀÓ¿¡¼­ ½Â¸®ÇÏ¿´½À´Ï´Ù!\r\n°ÔÀÓÁøÇà½Ã°£ : " + GetGameTime((new Date()).getTime()));
+                    cm.sendOk(Header() + ConstructEndBoardString() + "\r\nê²Œì„ì—ì„œ ìŠ¹ë¦¬í•˜ì˜€ìŠµë‹ˆë‹¤!\r\nê²Œì„ì§„í–‰ì‹œê°„ : " + GetGameTime((new Date()).getTime()));
 		    cm.gainMeso(500000);
                     cm.dispose();
                 } else {

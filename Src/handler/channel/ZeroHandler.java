@@ -76,7 +76,7 @@ public class ZeroHandler {
             case 1562009:
                 action = 0;
                 type = 9;
-                level = 200; // Ä¡¿ì¾¾ :: Á¦·Î ÅÂµµ ±¸Çö
+                level = 200; // ì¹˜ìš°ì”¨ :: ì œë¡œ íƒœë„ êµ¬í˜„
                 break;
         }
         if (player.getLevel() < level) {
@@ -164,7 +164,7 @@ public class ZeroHandler {
             nbetatype.addAcc((short) 20); // 120
             nbetatype.addBossDamage((byte) 30); // 30
             nbetatype.addIgnoreWdef((short) 10); // 10
-        } else if (nbetatype.getItemId() == 1562008) { // Ä¡¿ì½Î :: Á¦·Î ÅÂµµ ±¸Çö / º»¼·È­ ÇØ¾ßÇÔ
+        } else if (nbetatype.getItemId() == 1562008) { // ì¹˜ìš°ì‹¸ :: ì œë¡œ íƒœë„ êµ¬í˜„ / ë³¸ì„­í™” í•´ì•¼í•¨
             nalphatype.addStr((short) 5); // 40
             nalphatype.addDex((short) 20); // 40
             nalphatype.addWatk((short) 34); // 169
@@ -223,7 +223,7 @@ public class ZeroHandler {
         Equip nEquip2 = (Equip) equip2;
         if ((type == 2)
                 && (equip1.getItemId() != 1560000)
-                && (equip2.getItemId() % 1572000 >= 0) && (equip2.getItemId() % 1572000 <= 9)) { // Ä¡¿ì¾¾ :: Á¦·Î ÅÂµµ ±¸Çö
+                && (equip2.getItemId() % 1572000 >= 0) && (equip2.getItemId() % 1572000 <= 9)) { // ì¹˜ìš°ì”¨ :: ì œë¡œ íƒœë„ êµ¬í˜„
             InventoryHandler.UseUpgradeScroll((byte) position, (byte) nEquip2.getPosition(), c, chr);
         }
     }
@@ -249,10 +249,10 @@ public class ZeroHandler {
         int q, w, e, r, t, y, u, i, o;
         if (action == 0) {
             if (c.getPlayer().getWP() < 500) {
-                c.send(MainPacketCreator.getGMText(11, "wp °¡ ºÎÁ·ÇÕ´Ï´Ù"));
+                c.send(MainPacketCreator.getGMText(11, "wp ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤"));
             }
             c.send(ZeroSkill.WeaponUpgradeSuccess());
-            c.send(MainPacketCreator.getGMText(11, "Ãß°¡¿É¼ÇÀÌ ºÎ¿©µÇ¾ú½À´Ï´Ù."));
+            c.send(MainPacketCreator.getGMText(11, "ì¶”ê°€ì˜µì…˜ì´ ë¶€ì—¬ë˜ì—ˆìŠµë‹ˆë‹¤."));
             c.getPlayer().loseWP(500);
             c.getPlayer().gainMeso(-50000, false);
             c.send(MainPacketCreator.ZeroWP(c.getPlayer().getWP()));
@@ -308,7 +308,7 @@ public class ZeroHandler {
                         nEquip2.setMp((short) (equip2.getMp() + 100));
                         break;
                 }
-            }//2¹ø ¹İº¹
+            }//2ë²ˆ ë°˜ë³µ
             c.send(MainPacketCreator.updateEquipSlot(equip1));
             c.send(MainPacketCreator.updateEquipSlot(equip2));
         } else if (action == 1) {
@@ -349,7 +349,7 @@ public class ZeroHandler {
             c.send(ZeroSkill.WeaponUpgradeSuccess());
             c.send(MainPacketCreator.ZeroWP(c.getPlayer().getWP()));
             c.send(ZeroSkill.onZeroWP(chr));
-            c.send(MainPacketCreator.getGMText(11, "ÀáÀç´É·ÂÀÌ º¯°æµÇ¾ú½À´Ï´Ù."));
+            c.send(MainPacketCreator.getGMText(11, "ì ì¬ëŠ¥ë ¥ì´ ë³€ê²½ë˜ì—ˆìŠµë‹ˆë‹¤."));
         }
     }
 
@@ -359,7 +359,7 @@ public class ZeroHandler {
         final int ChangeTF = rh.readInt();
         final byte gender = (byte) c.getPlayer().getGender();
         final byte gender2 = (byte) c.getPlayer().getSecondGender();
-        /* ÇØ´ç Á¶°ÇÀ» À§¿¡¼­ Ã³¸®ÇÏ´Â ÀÌÀ¯ : SpawnPlayerMapObjectÀÇ È¥µ¿À» ¸·±â À§ÇØ¼­. */
+        /* í•´ë‹¹ ì¡°ê±´ì„ ìœ„ì—ì„œ ì²˜ë¦¬í•˜ëŠ” ì´ìœ  : SpawnPlayerMapObjectì˜ í˜¼ë™ì„ ë§‰ê¸° ìœ„í•´ì„œ. */
         player.setGender(gender2);
         player.setSecondGender(gender);
         player.getMap().broadcastMessage(ZeroSkill.MultiTag(player));
@@ -367,9 +367,9 @@ public class ZeroHandler {
 
         player.getStat().recalcLocalStats(player);
         if (gender == 0 && gender2 == 1) {
-            player.Message("[SYSTEM] º£Å¸¿¡¼­ ¾ËÆÄ·Î ÅÂ±×¸¦ ÁøÇà ÇÏ¿´½À´Ï´Ù.");
+            player.Message("[SYSTEM] ë² íƒ€ì—ì„œ ì•ŒíŒŒë¡œ íƒœê·¸ë¥¼ ì§„í–‰ í•˜ì˜€ìŠµë‹ˆë‹¤.");
         } else if (gender == 1 && gender2 == 0) {
-            player.Message("[SYSTEM] ¾ËÆÄ¿¡¼­ º£Å¸·Î ÅÂ±×¸¦ ÁøÇà ÇÏ¿´½À´Ï´Ù.");
+            player.Message("[SYSTEM] ì•ŒíŒŒì—ì„œ ë² íƒ€ë¡œ íƒœê·¸ë¥¼ ì§„í–‰ í•˜ì˜€ìŠµë‹ˆë‹¤.");
         }
     }
 
@@ -387,7 +387,7 @@ public class ZeroHandler {
         } else if (check == 0 && (bc & value) != 0) {
             c.getPlayer().mBetaClothes(value);
         } else {
-            //System.out.println("Á¦·Î °øÅë ¿Ê Ã³¸® ¿À·ù" + check + " " + bc + " " + value);
+            //System.out.println("ì œë¡œ ê³µí†µ ì˜· ì²˜ë¦¬ ì˜¤ë¥˜" + check + " " + bc + " " + value);
         }
         c.send(ZeroSkill.Clothes(c.getPlayer().getBetaClothes()));
         c.send(ZeroSkill.Reaction());

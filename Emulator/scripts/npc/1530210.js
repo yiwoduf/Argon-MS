@@ -1,6 +1,6 @@
 /*
 
-Á¦ÀÛÀÚ : Å¸ÀÓ (time_amd@nate.com)
+ì œì‘ì : íƒ€ì„ (time_amd@nate.com)
 
 */
 
@@ -21,28 +21,28 @@ function action(mode, type, selection) {
         status++;
     }
     if (status == 0) {
-        var str = "#b#h0##k´Ô ¾È³çÇÏ¼¼¿ä ¿¡ÀÌÇÃ·¯½º ÀÇÀÚ »óÁ¡ÀÔ´Ï´Ù.\r\n±¸¸Å¸¦ ¿øÇÏ½Ã´Â ÀÇÀÚ¸¦ ¼±ÅÃÇØÁÖ¼¼¿©.\r\n";
-        str += "#r¼ÒÁöÁßÀÎ È²±İ´ÜÇ³ÀÙ °¹¼ö : "+cm.Comma(cm.itemQuantity(4033247))+"°³#k\r\n\r\n";
-        str += "#L0##b#i3015873#(#z3015873#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L1##b#i3015788#(#z3015788#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L2##b#i3015564#(#z3015564#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L3##b#i3016200#(#z3016200#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L4##b#i3015646#(#z3015646#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L5##b#i3015643#(#z3015643#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L6##b#i3015705#(#z3015705#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L7##b#i3015844#(#z3015844#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L8##b#i3015387#(#z3015387#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L9##b#i3015388#(#z3015388#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L10##b#i3015389#(#z3015389#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L11##b#i3015390#(#z3015390#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L12##b#i3015391#(#z3015391#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L13##b#i3015392#(#z3015392#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L14##b#i3017011#(#z3017011#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L15##b#i3017012#(#z3017012#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L16##b#i3017013#(#z3017013#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L17##b#i3017014#(#z3017014#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L18##b#i3017015#(#z3017015#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
-        str += "#L19##b#i3017016#(#z3017016#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000°³)\r\n";
+        var str = "#b#h0##kë‹˜ ì•ˆë…•í•˜ì„¸ìš” ì—ì´í”ŒëŸ¬ìŠ¤ ì˜ì ìƒì ì…ë‹ˆë‹¤.\r\nêµ¬ë§¤ë¥¼ ì›í•˜ì‹œëŠ” ì˜ìë¥¼ ì„ íƒí•´ì£¼ì„¸ì—¬.\r\n";
+        str += "#rì†Œì§€ì¤‘ì¸ í™©ê¸ˆë‹¨í’ì ê°¯ìˆ˜ : "+cm.Comma(cm.itemQuantity(4033247))+"ê°œ#k\r\n\r\n";
+        str += "#L0##b#i3015873#(#z3015873#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L1##b#i3015788#(#z3015788#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L2##b#i3015564#(#z3015564#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L3##b#i3016200#(#z3016200#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L4##b#i3015646#(#z3015646#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L5##b#i3015643#(#z3015643#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L6##b#i3015705#(#z3015705#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L7##b#i3015844#(#z3015844#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L8##b#i3015387#(#z3015387#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L9##b#i3015388#(#z3015388#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L10##b#i3015389#(#z3015389#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L11##b#i3015390#(#z3015390#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L12##b#i3015391#(#z3015391#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L13##b#i3015392#(#z3015392#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L14##b#i3017011#(#z3017011#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L15##b#i3017012#(#z3017012#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L16##b#i3017013#(#z3017013#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L17##b#i3017014#(#z3017014#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L18##b#i3017015#(#z3017015#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
+        str += "#L19##b#i3017016#(#z3017016#)#k (#r"+cm.Comma(cm.itemQuantity(4033247))+" / 1000ê°œ)\r\n";
 
         cm.sendSimple(str);
     } else if (status == 1) {

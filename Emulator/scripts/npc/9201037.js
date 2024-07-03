@@ -1,5 +1,5 @@
-/*¸¸µçÀÌ : ÅÂÇ³¾¾
-  ÀÇ·ÚÀÚ : À¯Å¬¸®½º*/
+/*ë§Œë“ ì´ : íƒœí’ì”¨
+  ì˜ë¢°ì : ìœ í´ë¦¬ìŠ¤*/
 importPackage(Packages.client.items);
 importPackage(Packages.constants);
 importPackage(Packages.tools.RandomStream);
@@ -26,7 +26,7 @@ function action(mode, type, selection) {
     }
     if (mode == 1 && status == 2 && selection == 2) {
 	if(!cm.haveItem(need)) {
-	cm.sendOk("#t"+need+"# (ÀÌ)°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+	cm.sendOk("#t"+need+"# (ì´)ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 	cm.dispose(); return;
 	} else {
 	status = 2;
@@ -36,17 +36,17 @@ function action(mode, type, selection) {
     }
     if (status == 0) {
 	if(!cm.haveItem(need)) {
-	cm.sendOk("#t"+need+"# (ÀÌ)°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+	cm.sendOk("#t"+need+"# (ì´)ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 	cm.dispose(); return;
 	} else {
-	cm.sendSimple("¿¡µğ¼Å³Î ÀáÀç¸¦ º¯°æÇÏ½Ç ¾ÆÀÌÅÛÀ» ¼±ÅÃ ÇØ ÁÖ¼¼¿ä.\r\n "+cm.getAllEquip());
+	cm.sendSimple("ì—ë””ì…”ë„ ì ì¬ë¥¼ ë³€ê²½í•˜ì‹¤ ì•„ì´í…œì„ ì„ íƒ í•´ ì£¼ì„¸ìš”.\r\n "+cm.getAllEquip());
 	}
     } else if (status == 1) {
 	eq = cm.getEquip(selection);
 	if(eq.getPotential6 () != 0) {
-		cm.sendYesNo("Á¤¸» ¿¡µğ¼Å³Î ÀáÀç´É·ÂÄ¡¸¦ º¯°æÇÏ½Ã°Ú½À´Ï±î?");
+		cm.sendYesNo("ì •ë§ ì—ë””ì…”ë„ ì ì¬ëŠ¥ë ¥ì¹˜ë¥¼ ë³€ê²½í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
 	} else {
-		cm.sendOk("ÇØ´ç ¾ÆÀÌÅÛÀº ¿¡µğ¼Å³Î ÀáÀç´É·ÂÀÌ ºÎ¿©µÇÁö ¾Ê¾Ò°Å³ª, ¿¡µğ¼Å³Î ÀáÀç´É·ÂÀÌ 3ÁÙÀÌ ¾Æ´Õ´Ï´Ù.");
+		cm.sendOk("í•´ë‹¹ ì•„ì´í…œì€ ì—ë””ì…”ë„ ì ì¬ëŠ¥ë ¥ì´ ë¶€ì—¬ë˜ì§€ ì•Šì•˜ê±°ë‚˜, ì—ë””ì…”ë„ ì ì¬ëŠ¥ë ¥ì´ 3ì¤„ì´ ì•„ë‹™ë‹ˆë‹¤.");
 		cm.dispose();
 	}
     } else if (status == 2) {
@@ -58,13 +58,13 @@ function action(mode, type, selection) {
 	option1 = eq.getPotential1();
 	option12 = eq.getPotential2();
 	option123 = eq.getPotential3();
-	var text = "#e#b#t"+eq.getItemId()+"##k ¾ÆÀÌÅÛ :\r\n#L0##r#e< Before >#n#k#fs11#\r\n1¹øÂ° ¿¡µğ¼Å³Î : "+name(eq.getPotential4())+"\r\n2¹øÂ° ¿¡µğ¼Å³Î : "+name(eq.getPotential5())+"\r\n3¹øÂ° ¿¡µğ¼Å³Î : "+name(eq.getPotential6());
-		text += "#l\r\n\r\n#L1##fs13##r#e< After >#n#k #fs11##e#r\r\n1¹øÂ° ¿¡µğ¼Å³Î : "+name(option)+"\r\n2¹øÂ° ¿¡µğ¼Å³Î : "+name(option2)+"\r\n3¹øÂ° ¿¡µğ¼Å³Î : "+name(option3_sbal);
-		text += "#e#l\r\n\r\n#L2#ÇÑ¹ø ´õ µ¹¸®±â"+option+","+option2+","+option3_sbal;
+	var text = "#e#b#t"+eq.getItemId()+"##k ì•„ì´í…œ :\r\n#L0##r#e< Before >#n#k#fs11#\r\n1ë²ˆì§¸ ì—ë””ì…”ë„ : "+name(eq.getPotential4())+"\r\n2ë²ˆì§¸ ì—ë””ì…”ë„ : "+name(eq.getPotential5())+"\r\n3ë²ˆì§¸ ì—ë””ì…”ë„ : "+name(eq.getPotential6());
+		text += "#l\r\n\r\n#L1##fs13##r#e< After >#n#k #fs11##e#r\r\n1ë²ˆì§¸ ì—ë””ì…”ë„ : "+name(option)+"\r\n2ë²ˆì§¸ ì—ë””ì…”ë„ : "+name(option2)+"\r\n3ë²ˆì§¸ ì—ë””ì…”ë„ : "+name(option3_sbal);
+		text += "#e#l\r\n\r\n#L2#í•œë²ˆ ë” ëŒë¦¬ê¸°"+option+","+option2+","+option3_sbal;
 	cm.sendSimple(text);
     } else if (status == 3) {
 	if(selection == 0) {
-		cm.sendOk("ÀáÀç´É·ÂÀÌ À¯ÁöµÇ¾ú½À´Ï´Ù.");
+		cm.sendOk("ì ì¬ëŠ¥ë ¥ì´ ìœ ì§€ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		cm.dispose(); return;
 	} else if(selection == 1) {
 		eq.setPotential1(option1);
@@ -76,7 +76,7 @@ function action(mode, type, selection) {
                cm.fakeRelog();
                cm.updateChar();
                cm.dispose();
-		cm.sendOk("ÀáÀç´É·ÂÀÌ º¯°æµÇ¾ú½À´Ï´Ù.");
+		cm.sendOk("ì ì¬ëŠ¥ë ¥ì´ ë³€ê²½ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		cm.dispose(); 
 		return;
 	}
@@ -86,16 +86,16 @@ function action(mode, type, selection) {
 function name(code) {
 	switch(code) {
 case 40356:
-return "ÇÇ°İ ½Ã 10% È®·ü·Î µ¥¹ÌÁöÀÇ 20% ¹«½Ã";
+return "í”¼ê²© ì‹œ 10% í™•ë¥ ë¡œ ë°ë¯¸ì§€ì˜ 20% ë¬´ì‹œ";
 break;
 case 40357:
-return "ÇÇ°İ ½Ã 10% È®·ü·Î µ¥¹ÌÁöÀÇ 40% ¹«½Ã";
+return "í”¼ê²© ì‹œ 10% í™•ë¥ ë¡œ ë°ë¯¸ì§€ì˜ 40% ë¬´ì‹œ";
 break;
 case 42060:
-return "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö : 2%";
+return "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ : 2%";
 break;
 case 42062:
-return "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö : 2%";
+return "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ : 2%";
 break;
 		case 42041:
 			return "STR : 7%";
@@ -104,41 +104,41 @@ case 60068:
 return "STR : 6%";
 break;
 case 60047:
-return "ÇÇ°İ ½Ã 5% È®·ü·Î µ¥¹ÌÁöÀÇ 4% ¹«½Ã";
+return "í”¼ê²© ì‹œ 5% í™•ë¥ ë¡œ ë°ë¯¸ì§€ì˜ 4% ë¬´ì‹œ";
 break;
 case 60057:
-return "º¸½º ¸ó½ºÅÍ °ø°İ ½Ã µ¥¹ÌÁö : 35%";
+return "ë³´ìŠ¤ ëª¬ìŠ¤í„° ê³µê²© ì‹œ ë°ë¯¸ì§€ : 35%";
 break;
 case 60067:
-return "¿Ã½ºÅÈ : 6%";
+return "ì˜¬ìŠ¤íƒ¯ : 6%";
 break;
 case 60070:
 return "INT : 6%";
 break;
 
 case 60035:
-return "¸¶·Â : 4%";
+return "ë§ˆë ¥ : 4%";
 break;
 case 60065:
-return "Å©¸®Æ¼ÄÃ È®·ü : 6%";
+return "í¬ë¦¬í‹°ì»¬ í™•ë¥  : 6%";
 break;
 case 60038:
-return "¿Ã½ºÅÈ : 3%";
+return "ì˜¬ìŠ¤íƒ¯ : 3%";
 break;
 case 60044:
-return "ÇÇ°İ ½Ã 5% È®·ü·Î µ¥¹ÌÁöÀÇ 1% ¹«½Ã";
+return "í”¼ê²© ì‹œ 5% í™•ë¥ ë¡œ ë°ë¯¸ì§€ì˜ 1% ë¬´ì‹œ";
 break;
 case 60037:
-return "ÃÑ µ¥¹ÌÁö : 3%";
+return "ì´ ë°ë¯¸ì§€ : 3%";
 break;
 case 60045:
-return "ÇÇ°İ ½Ã 5% È®·ü·Î µ¥¹ÌÁöÀÇ 2% ¹«½Ã";
+return "í”¼ê²© ì‹œ 5% í™•ë¥ ë¡œ ë°ë¯¸ì§€ì˜ 2% ë¬´ì‹œ";
 break;
 case 60062:
 			return "INT : 9%";
 			break;
 		case 60051:
-			return "¸ó½ºÅÍ ¹æ¾îÀ² ¹«½Ã : 4%";
+			return "ëª¬ìŠ¤í„° ë°©ì–´ìœ¨ ë¬´ì‹œ : 4%";
 			break;
 		case 42042:
 			return "DEX : 7%";
@@ -156,85 +156,85 @@ case 60060:
 			return "LUK : 7%";
 			break;
 		case 60018:
-			return "°ø°İ ½Ã 10% È®·ü·Î 2·¹º§ ºÀÀÎÈ¿°ú Àû¿ë";
+			return "ê³µê²© ì‹œ 10% í™•ë¥ ë¡œ 2ë ˆë²¨ ë´‰ì¸íš¨ê³¼ ì ìš©";
 			break;
 		case 40086:
-			return "¿Ã½ºÅİ : 9%";
+			return "ì˜¬ìŠ¤í…Ÿ : 9%";
 			break;	
 		case 42065:
 			return "INT : 12%";
 			break;
 	case 60039:
-			return "º¸½º ¸ó½ºÅÍ °ø°İ ½Ã µ¥¹ÌÁö : 3%";
+			return "ë³´ìŠ¤ ëª¬ìŠ¤í„° ê³µê²© ì‹œ ë°ë¯¸ì§€ : 3%";
 			break;
 		case 40292:
-			return "°ø°İ ½Ã ¸ó½ºÅÍÀÇ ¹æ¾îÀ² : + 40%";
+			return "ê³µê²© ì‹œ ëª¬ìŠ¤í„°ì˜ ë°©ì–´ìœ¨ : + 40%";
 			break;
 		case 42087://32087 //3208622070
-			return "¿Ã½ºÅİ : 9%";
+			return "ì˜¬ìŠ¤í…Ÿ : 9%";
 			break;
               case 22087:
-			return "¿Ã½ºÅİ : 3%";
+			return "ì˜¬ìŠ¤í…Ÿ : 3%";
 			break;
               case 22070:
-			return "ÃÑ µ¥¹ÌÁö : 6%";
+			return "ì´ ë°ë¯¸ì§€ : 6%";
 			break;
               case 22201:
-			return "°ø°İ ½Ã 3% È®·ü·Î 53ÀÇ HP È¸º¹";
+			return "ê³µê²© ì‹œ 3% í™•ë¥ ë¡œ 53ì˜ HP íšŒë³µ";
 			break;
 		case 60021:
-			return "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö : + 10%";
+			return "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ : + 10%";
 			break;
 		case 40092:
-			return "Ä³¸¯ÅÍ ±âÁØ 10·¹º§ ´ç ¸¶·Â :+ 1";
+			return "ìºë¦­í„° ê¸°ì¤€ 10ë ˆë²¨ ë‹¹ ë§ˆë ¥ :+ 1";
 			break;	
 		case 40052:
-			return "¸¶·Â : 12%";
+			return "ë§ˆë ¥ : 12%";
 			break;	
 		case 60026:
-			return "¸¶·Â : 12%";
+			return "ë§ˆë ¥ : 12%";
 			break;	
 		case 60033:
-			return "Ä³¸¯ÅÍ ±âÁØ 10·¹º§ ´ç ¿Ã½ºÅİ : + 2";
+			return "ìºë¦­í„° ê¸°ì¤€ 10ë ˆë²¨ ë‹¹ ì˜¬ìŠ¤í…Ÿ : + 2";
 			break;
                 case 60061:
                         return "DEX : 9%";	
                         break;		
 		case 42054:
-			return "¸¶·Â 1% ~ 2%";
+			return "ë§ˆë ¥ 1% ~ 2%";
 			break;
 		case 42551:
-			return "HP È¸º¹ ¾ÆÀÌÅÛ ¹× È¸º¹ ½ºÅ³ È¿À² 10% ~ 30%";
+			return "HP íšŒë³µ ì•„ì´í…œ ë° íšŒë³µ ìŠ¤í‚¬ íš¨ìœ¨ 10% ~ 30%";
 			break;
 		case 42066:
 			return "LUK : 12 %";
 			break;
-	case 60053://ÇÇ°İ ½Ã 5% È®·ü·Î µ¥¹ÌÁöÀÇ 3% ¹«½Ã
-			return "Å©¸®Æ¼ÄÃ È®·ü : 3%";
+	case 60053://í”¼ê²© ì‹œ 5% í™•ë¥ ë¡œ ë°ë¯¸ì§€ì˜ 3% ë¬´ì‹œ
+			return "í¬ë¦¬í‹°ì»¬ í™•ë¥  : 3%";
 			break;
-	case 60046://ÇÇ°İ ½Ã 5% È®·ü·Î µ¥¹ÌÁöÀÇ 3% ¹«½Ã
-			return "ÇÇ°İ ½Ã 5% È®·ü·Î µ¥¹ÌÁöÀÇ 3% ¹«½Ã";
+	case 60046://í”¼ê²© ì‹œ 5% í™•ë¥ ë¡œ ë°ë¯¸ì§€ì˜ 3% ë¬´ì‹œ
+			return "í”¼ê²© ì‹œ 5% í™•ë¥ ë¡œ ë°ë¯¸ì§€ì˜ 3% ë¬´ì‹œ";
 			break;
 	case 60036:
-			return "Å©¸®Æ¼ÄÃ È®·ü : 8%";
+			return "í¬ë¦¬í‹°ì»¬ í™•ë¥  : 8%";
 			break;
 	case 60048:
-			return "¸ó½ºÅÍ ¹æ¾îÀ² ¹«½Ã : 1% ";
+			return "ëª¬ìŠ¤í„° ë°©ì–´ìœ¨ ë¬´ì‹œ : 1% ";
 			break;
 	case 60056:
-			return "ÃÑ µ¥¹ÌÁö : 9% ";
+			return "ì´ ë°ë¯¸ì§€ : 9% ";
 			break;
 	case 60052:
-			return "Å©¸®Æ¼ÄÃ È®·ü : 1% ";
+			return "í¬ë¦¬í‹°ì»¬ í™•ë¥  : 1% ";
 			break;
 	case 60055:
-			return "Å©¸®Æ¼ÄÃ È®·ü : 4% ";
+			return "í¬ë¦¬í‹°ì»¬ í™•ë¥  : 4% ";
 			break;
 	case 60058:
-			return "Å©¸®Æ¼ÄÃ È®·ü : 10% ";
+			return "í¬ë¦¬í‹°ì»¬ í™•ë¥  : 10% ";
 			break;
 	case 60073:
-			return "¿Ã½ºÅÈ : 3% ";
+			return "ì˜¬ìŠ¤íƒ¯ : 3% ";
 			break;
 	case 60071:
 			return "LUK : 6% ";
@@ -246,19 +246,19 @@ case 60060:
 			return "LUK : 9% ";
 			break;
 	case 60050:
-			return "¸ó½ºÅÍ ¹æ¾îÀ² ¹«½Ã : 3% ";
+			return "ëª¬ìŠ¤í„° ë°©ì–´ìœ¨ ë¬´ì‹œ : 3% ";
 			break;
 	case 60049:
-			return "¸ó½ºÅÍ ¹æ¾îÀ² ¹«½Ã : 2% ";
+			return "ëª¬ìŠ¤í„° ë°©ì–´ìœ¨ ë¬´ì‹œ : 2% ";
 			break;
 	case 60054:
-			return "Å©¸®Æ¼ÄÃ È®·ü : 3% ";
+			return "í¬ë¦¬í‹°ì»¬ í™•ë¥  : 3% ";
 			break;
 	case 60059:
-			return "ÃÖ´ë HP : 20%";
+			return "ìµœëŒ€ HP : 20%";
 			break;
 		case 60034:
-			return "°ø°İ·Â : 4%";
+			return "ê³µê²©ë ¥ : 4%";
 			break;
 		case 40041:
 			return "STR : 12%";
@@ -270,55 +270,55 @@ case 60060:
 			return "DEX : 12%"
 			break;
 		case 40042:
-			return "µ¦½º : 12%";
+			return "ë±ìŠ¤ : 12%";
 			break;
 		case 40603:
-			return "º¸½º °ø°İ ½Ã µ¥¹ÌÁö  :+ 40%";
+			return "ë³´ìŠ¤ ê³µê²© ì‹œ ë°ë¯¸ì§€  :+ 40%";
 			break;
 		case 60024:
-			return "º¸½º °ø°İ ½Ã µ¥¹ÌÁö : + 10%";
+			return "ë³´ìŠ¤ ê³µê²© ì‹œ ë°ë¯¸ì§€ : + 10%";
 			break;
 		case 60022:
-			return "»óÅÂ ÀÌ»ó ³»¼º : 10%";
+			return "ìƒíƒœ ì´ìƒ ë‚´ì„± : 10%";
 			break;
 		case 40601:
-			return "º¸½º °ø°İ ½Ã µ¥¹ÌÁö : 30%";
+			return "ë³´ìŠ¤ ê³µê²© ì‹œ ë°ë¯¸ì§€ : 30%";
 			break;
 		case 42096:
-			return "Ä³¸¯ÅÍ ±âÁØ 10·¹º§ ´ç ¸¶·Â : + 1";
+			return "ìºë¦­í„° ê¸°ì¤€ 10ë ˆë²¨ ë‹¹ ë§ˆë ¥ : + 1";
 			break;
 		case 40055:
-			return "Å©¸®Æ¼ÄÃ È®·ü : 12%";
+			return "í¬ë¦¬í‹°ì»¬ í™•ë¥  : 12%";
 			break;
 		case 42093:
-			return "Ä³¸¯ÅÍ ±âÁØ 10·¹º§ ´ç INT : + 2";
+			return "ìºë¦­í„° ê¸°ì¤€ 10ë ˆë²¨ ë‹¹ INT : + 2";
 			break;
 		case 60015:
-			return "°ø°İ ½Ã 20% È®·ü·Î 2·¹º§ ½½·Î¿ìÈ¿°ú Àû¿ë";
+			return "ê³µê²© ì‹œ 20% í™•ë¥ ë¡œ 2ë ˆë²¨ ìŠ¬ë¡œìš°íš¨ê³¼ ì ìš©";
 			break;
 		case 60010:
-			return "°ø°İ ½Ã ¸ó½ºÅÍÀÇ ¹æ¾îÀ² : 30%";
+			return "ê³µê²© ì‹œ ëª¬ìŠ¤í„°ì˜ ë°©ì–´ìœ¨ : 30%";
 			break;
 		case 42601:
-			return "º¸½º °ø°İ ½Ã µ¥¹ÌÁö : + 3%";
+			return "ë³´ìŠ¤ ê³µê²© ì‹œ ë°ë¯¸ì§€ : + 3%";
 			break;
 		case 60028:
-			return "Ä³¸¯ÅÍ ±âÁØ 10·¹º§ ´ç STR : + 4";
+			return "ìºë¦­í„° ê¸°ì¤€ 10ë ˆë²¨ ë‹¹ STR : + 4";
 			break;
 		case 40291:
-			return "°ø°İ ½Ã ¸ó½ºÅÍÀÇ ¹æ¾îÀ² : + 35";
+			return "ê³µê²© ì‹œ ëª¬ìŠ¤í„°ì˜ ë°©ì–´ìœ¨ : + 35";
 			break;
 		case 60020:
-			return "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö : + 10%";
+			return "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ : + 10%";
 			break;
 		case 42011:
-			return "°ø°İ·Â : + 14";
+			return "ê³µê²©ë ¥ : + 14";
 			break;
 		case 42656:
-			return "¾ÆÀÌÅÛ È¹µæÈ®·ü : + 5%";
+			return "ì•„ì´í…œ íšë“í™•ë¥  : + 5%";
 			break;
 		case 42650:
-			return "¸Ş¼Ò È¹µæ·® : + 5%";
+			return "ë©”ì†Œ íšë“ëŸ‰ : + 5%";
 			break;
 		case 42004:
 			return "LUK : + 18";
@@ -330,205 +330,205 @@ case 60060:
 			return "STR : + 18";
 			break;
 		case 42012:
-			return "¸¶·Â : + 14";
+			return "ë§ˆë ¥ : + 14";
 			break;
 		case 42007:
-			return "¸íÁßÄ¡ : + 96";
+			return "ëª…ì¤‘ì¹˜ : + 96";
 			break;
 		case 42014:
-			return "¸¶¹ı¹æ¾î·Â : + 200";
+			return "ë§ˆë²•ë°©ì–´ë ¥ : + 200";
 			break;
 		case 42086:
-			return "¿Ã½ºÅÈ : + 5%";
+			return "ì˜¬ìŠ¤íƒ¯ : + 5%";
 			break;
 		case 42058:
-			return "Å©¸®Æ¼ÄÃ È®·ü : + 2%";
+			return "í¬ë¦¬í‹°ì»¬ í™•ë¥  : + 2%";
 			break;
 		case 40107:
-			return "¸ğµç ½ºÅ³·¹º§ : + 3";
+			return "ëª¨ë“  ìŠ¤í‚¬ë ˆë²¨ : + 3";
 			break;
 		case 40048:
-			return "È¸ÇÇÄ¡ : + 12%";
+			return "íšŒí”¼ì¹˜ : + 12%";
 			break;
 		case 60009:
-			return "ÃÑ µ¥¹ÌÁö : + 5%";
+			return "ì´ ë°ë¯¸ì§€ : + 5%";
 			break;
 		case 60003:
-			return "º¸½º °ø°İ ½Ã µ¥¹ÌÁö : + 30%";
+			return "ë³´ìŠ¤ ê³µê²© ì‹œ ë°ë¯¸ì§€ : + 30%";
 			break;
 		case 42116:
-			return "»óÅÂ ÀÌ»ó ³»¼º : + 5%";
+			return "ìƒíƒœ ì´ìƒ ë‚´ì„± : + 5%";
 			break;
 		case 60019:
-			return "Å©¸®Æ¼ÄÃ È®·ü : + 10%";
+			return "í¬ë¦¬í‹°ì»¬ í™•ë¥  : + 10%";
 			break;
 		case 60004:
-			return "¿Ã½ºÅÈ : + 5%";
+			return "ì˜¬ìŠ¤íƒ¯ : + 5%";
 			break;
 		case 60014:
-			return "°ø°İ ½Ã 10% È®·ü·Î 2·¹º§ ½ºÅÏÈ¿°ú Àû¿ë";
+			return "ê³µê²© ì‹œ 10% í™•ë¥ ë¡œ 2ë ˆë²¨ ìŠ¤í„´íš¨ê³¼ ì ìš©";
 			break;
 		case 60011:
-			return "º¸½º °ø°İ ½Ã µ¥¹ÌÁö : + 30%";
+			return "ë³´ìŠ¤ ê³µê²© ì‹œ ë°ë¯¸ì§€ : + 30%";
 			break;
 		case 42095:
-			return "Ä³¸¯ÅÍ ±âÁØ 10·¹º§ ´ç °ø°İ·Â : + 1";
+			return "ìºë¦­í„° ê¸°ì¤€ 10ë ˆë²¨ ë‹¹ ê³µê²©ë ¥ : + 1";
 			break;
 		case 42292:
-			return "°ø°İ ½Ã ¸ó½ºÅÍÀÇ ¹æ¾îÀ² + 5";
+			return "ê³µê²© ì‹œ ëª¬ìŠ¤í„°ì˜ ë°©ì–´ìœ¨ + 5";
 			break;
 		case 60029:
-			return "Ä³¸¯ÅÍ ±âÁØ 10·¹º§ ´ç DEX : + 4";
+			return "ìºë¦­í„° ê¸°ì¤€ 10ë ˆë²¨ ë‹¹ DEX : + 4";
 			break;
 		case 60031:
-			return "Ä³¸¯ÅÍ ±âÁØ 10·¹º§ ´ç LUK : + 3";
+			return "ìºë¦­í„° ê¸°ì¤€ 10ë ˆë²¨ ë‹¹ LUK : + 3";
 			break;
 		case 60023:
-			return "°ø°İ ½Ã ¸ó½ºÅÍÀÇ ¹æ¾îÀ² : + 10";
+			return "ê³µê²© ì‹œ ëª¬ìŠ¤í„°ì˜ ë°©ì–´ìœ¨ : + 10";
 			break;
 		case 60007:
 			return "MaxHP : + 10%";
 			break;
 		case 60002:
-			return "¿Ã½ºÅÈ : + 20%";
+			return "ì˜¬ìŠ¤íƒ¯ : + 20%";
 			break;
 		case 42046:
 			return "MaxMP : + 10%";
 			break;
 		case 60012:
-			return "Å©¸®Æ¼ÄÃ È®·ü : + 10%";
+			return "í¬ë¦¬í‹°ì»¬ í™•ë¥  : + 10%";
 			break;
 		case 42602:
-			return "º¸½º °ø°İ ½Ã µ¥¹ÌÁö : + 18%";
+			return "ë³´ìŠ¤ ê³µê²© ì‹œ ë°ë¯¸ì§€ : + 18%";
 			break;
 		case 40091:
-			return "Ä³¸¯ÅÍ ±âÁØ 10·¹º§ ´ç °ø°İ·Â : + 1";
+			return "ìºë¦­í„° ê¸°ì¤€ 10ë ˆë²¨ ë‹¹ ê³µê²©ë ¥ : + 1";
 			break;
 		case 42053:
-			return "¸¶·Â : + 12%";
+			return "ë§ˆë ¥ : + 12%";
 			break;
 		case 60001:
-			return "ÃÑ µ¥¹ÌÁö : + 12%";
+			return "ì´ ë°ë¯¸ì§€ : + 12%";
 			break;
 		case 60016:
-			return "°ø°İ ½Ã 20% È®·ü·Î 3·¹º§ ¾ÏÈæÈ¿°ú Àû¿ë";
+			return "ê³µê²© ì‹œ 20% í™•ë¥ ë¡œ 3ë ˆë²¨ ì•”í‘íš¨ê³¼ ì ìš©";
 			break;
 		case 60008:
-			return "°ø°İ·Â/¸¶·Â : + 10";
+			return "ê³µê²©ë ¥/ë§ˆë ¥ : + 10";
 			break;
 		case 60005:
-			return "¿Ã½ºÅÈ : 10%";
+			return "ì˜¬ìŠ¤íƒ¯ : 10%";
 			break;
 		case 60017:
-			return "»óÅÂ ½Ã 10% È®·ü¤©·Î 2·¹º§ ºù°áÈ¿°ú Àû¿ë";
+			return "ìƒíƒœ ì‹œ 10% í™•ë¥ ã„¹ë¡œ 2ë ˆë²¨ ë¹™ê²°íš¨ê³¼ ì ìš©";
 			break;
 		case 60027:
-			return "°ø°İ ½Ã ¸ó½ºÅÍÀÇ ¹æ¾îÀ² : + 40";
+			return "ê³µê²© ì‹œ ëª¬ìŠ¤í„°ì˜ ë°©ì–´ìœ¨ : + 40";
 			break;
 		case 60006:
 			return "MaxHP : 5%";
 			break;
 		case 60025:
-			return "°ø°İ·Â : 12%";
+			return "ê³µê²©ë ¥ : 12%";
 			break;
 		case 42057:
-			return "Å©¸®Æ¼ÄÃ È®·ü : + 12%";
+			return "í¬ë¦¬í‹°ì»¬ í™•ë¥  : + 12%";
 			break;
 		case 40070:
-			return "ÃÑ µ¥¹ÌÁö : 12%";
+			return "ì´ ë°ë¯¸ì§€ : 12%";
 			break;
 		case 40051:
-			return "°ø°İ·Â : 12%";
+			return "ê³µê²©ë ¥ : 12%";
 			break;
 		case 40044:
 			return "LUK : 12%";
 			break;
 		case 40048:
-			return "È¸ÇÇÄ¡ 12%";
+			return "íšŒí”¼ì¹˜ 12%";
 			break;
 		case 42006:
 			return "MaxMP 300";
 			break;
 		case 41006:
-			return "¾µ¸¸ÇÑ ¾îµå¹ê½ºµå ºí·¹½º";
+			return "ì“¸ë§Œí•œ ì–´ë“œë°´ìŠ¤ë“œ ë¸”ë ˆìŠ¤";
 			break;
 		case 42048:
-			return "È¸ÇÇÄ¡ 12%";
+			return "íšŒí”¼ì¹˜ 12%";
 			break;
 		case 42106:
-			return "¸ğµç ½ºÅ³·¹º§ + 2";
+			return "ëª¨ë“  ìŠ¤í‚¬ë ˆë²¨ + 2";
 			break;
 		case 40053:
-			return "¹°¸®¹æ¾î·Â 12%";
+			return "ë¬¼ë¦¬ë°©ì–´ë ¥ 12%";
 			break;
 		case 42661:
-			return "°æÇèÄ¡ È¹µæ 5%";
+			return "ê²½í—˜ì¹˜ íšë“ 5%";
 			break;
 		case 40081:
-			return "¿Ã½ºÅİ 12%";
+			return "ì˜¬ìŠ¤í…Ÿ 12%";
 			break;
 		case 40557:
-			return "¸ğµç ½ºÅ³ÀÇ Àç»ç¿ë ´ë±â½Ã°£ : - 2ÃÊ";
+			return "ëª¨ë“  ìŠ¤í‚¬ì˜ ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ : - 2ì´ˆ";
 			break;
 		case 40556:
-			return "¸ğµç ½ºÅ³ÀÇ Àç»ç¿ë ´ë±â½Ã°£ : - 1ÃÊ";
+			return "ëª¨ë“  ìŠ¤í‚¬ì˜ ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ : - 1ì´ˆ";
 			break;
 		case 42091:
-			return "Ä³¸¯ÅÍ ±âÁØ 10·¹º§ ´ç STR + 2";
+			return "ìºë¦­í„° ê¸°ì¤€ 10ë ˆë²¨ ë‹¹ STR + 2";
 			break;
 		case 42005:
 			return "MaxHP + 300";
 			break;
 		case 42556:
-			return "¸ğµç ½ºÅ³ÀÇ Àç»ç¿ë ´ë±â½Ã°£ : - 1ÃÊ";
+			return "ëª¨ë“  ìŠ¤í‚¬ì˜ ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ : - 1ì´ˆ";
 			break;
 		case 40046:
 			return "MaxMP + 12%";
 			break;
 		case 42055:
-			return "¹°¸®¹æ¾î·Â + 10%";
+			return "ë¬¼ë¦¬ë°©ì–´ë ¥ + 10%";
 			break;
 		case 40551:
-			return "HP È¸º¹ ¾ÆÀÌÅÛ ¹× È¸º¹ ½ºÅ³ È¿À² + 40%";
+			return "HP íšŒë³µ ì•„ì´í…œ ë° íšŒë³µ ìŠ¤í‚¬ íš¨ìœ¨ + 40%";
 			break;
 		case 42094:
-			return "Ä³¸¯ÅÍ ±âÁØ 10·¹º§ ´ç LUK + 2";
+			return "ìºë¦­í„° ê¸°ì¤€ 10ë ˆë²¨ ë‹¹ LUK + 2";
 			break;
 		case 42013:
-			return "¹°¸®¹æ¾î·Â + 200%";
+			return "ë¬¼ë¦¬ë°©ì–´ë ¥ + 200%";
 			break;
 		case 42092:
-			return "Ä³¸¯ÅÍ ±âÁØ 10·¹º§ ´ç DEX : + 2";
+			return "ìºë¦­í„° ê¸°ì¤€ 10ë ˆë²¨ ë‹¹ DEX : + 2";
 			break;
 		case 40106:
-			return "¸ğµç ½ºÅ³·¹º§ : +2";
+			return "ëª¨ë“  ìŠ¤í‚¬ë ˆë²¨ : +2";
 			break;
 		case 42094:
-			return "Ä³¸¯ÅÍ ±âÁØ 10·¹º§ ´ç LUK : + 20";
+			return "ìºë¦­í„° ê¸°ì¤€ 10ë ˆë²¨ ë‹¹ LUK : + 20";
 			break;
 		case 42802:
-			return "ÃÖ´ë µ¥¹ÌÁö Á¦ÇÑ »ó½Â : + 10000"
+			return "ìµœëŒ€ ë°ë¯¸ì§€ ì œí•œ ìƒìŠ¹ : + 10000"
 			break;
 		case 42052:
-			return "°ø°İ·Â : 2% "
+			return "ê³µê²©ë ¥ : 2% "
 			break;
 		case 42111:
-			return "¸ğµç ¼Ó¼º ³»¼º : + 5%"
+			return "ëª¨ë“  ì†ì„± ë‚´ì„± : + 5%"
 			break;
 		case 40045:
 			return "MaxHP : 12% "
 			break;
 		case 40047:
-			return "¸íÁßÄ¡ : 12% "
+			return "ëª…ì¤‘ì¹˜ : 12% "
 			break;
 		case 42056:
-			return "¸¶¹ı¹æ¾î·Â : 10% "
+			return "ë§ˆë²•ë°©ì–´ë ¥ : 10% "
 			break;
 		case 42047:
-			return "¸íÁßÄ¡ : 10% "
+			return "ëª…ì¤‘ì¹˜ : 10% "
 			break;
 		case 40054:
-			return "¸¶¹ı¹æ¾î·Â : 12% "
+			return "ë§ˆë²•ë°©ì–´ë ¥ : 12% "
 			break;
 		case 40043:
 			return "INT : 12% "
@@ -540,37 +540,37 @@ case 60060:
 			return "MaxHP + 10% "
 			break;
 		case 42010:
-			return "Á¡ÇÁ·Â : + 14 "
+			return "ì í”„ë ¥ : + 14 "
 			break;
 		case 42070:
-			return "ÃÑ µ¥¹ÌÁö : + 12% "
+			return "ì´ ë°ë¯¸ì§€ : + 12% "
 			break;
 		case 60032:
-			return "Ä³¸¯ÅÍ ±âÁØ 10·¹º§ ´ç Ã¼·Â : + 200"
+			return "ìºë¦­í„° ê¸°ì¤€ 10ë ˆë²¨ ë‹¹ ì²´ë ¥ : + 200"
 			break;
 		case 60030:
-			return "Ä³¸¯ÅÍ ±âÁØ 10·¹º§ ´ç INT : + + 4"
+			return "ìºë¦­í„° ê¸°ì¤€ 10ë ˆë²¨ ë‹¹ INT : + + 4"
 			break;
 		case 42051:
-			return "°ø°İ·Â : 12%";
+			return "ê³µê²©ë ¥ : 12%";
 			break;
 		case 60013:
-			return "°ø°İ ½Ã 10% È®·ü·Î 2·¹º§ ºÀÀÎÈ¿°ú Àû¿ë ÄÉ¸¯ÅÍ±âÁØ 10·¹º§ ´çINT : +4"
+			return "ê³µê²© ì‹œ 10% í™•ë¥ ë¡œ 2ë ˆë²¨ ë´‰ì¸íš¨ê³¼ ì ìš© ì¼€ë¦­í„°ê¸°ì¤€ 10ë ˆë²¨ ë‹¹INT : +4"
 			break;
 		case 42291:
-			return "°ø°İ ½Ã ¸ó½ºÅÍÀÇ ¹æ¾îÀ² : 3%";
+			return "ê³µê²© ì‹œ ëª¬ìŠ¤í„°ì˜ ë°©ì–´ìœ¨ : 3%";
 			break
 		case 42801:
-			return "ÃÖ´ë µ¥¹ÌÁö Á¦ÇÑ »ó½Â : + 50000";
+			return "ìµœëŒ€ ë°ë¯¸ì§€ ì œí•œ ìƒìŠ¹ : + 50000";
 			break;		
 		case 40602:
-			return "º¸½º °ø°İ ½Ã µ¥¹ÌÁö : +35%"
+			return "ë³´ìŠ¤ ê³µê²© ì‹œ ë°ë¯¸ì§€ : +35%"
 			break;
 		case 42008:
-			return "È¸ÇÇÄ¡ : + 96 "
+			return "íšŒí”¼ì¹˜ : + 96 "
 			break;	
 		case 42009:
-			return "ÀÌµ¿¼Óµµ : + 14 "
+			return "ì´ë™ì†ë„ : + 14 "
 			break;		
 		default:
 			return "null";

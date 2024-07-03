@@ -15,12 +15,12 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-            //cm.gainSponserItem(1112943,'[Å¸ÀÓ]',300,50,0);
-	    //cm.gainRC(100000); //ÈÄ¿øÆ÷ÀÎÆ®
-	    //cm.gainItem(4032101, 15); //ÇØ¿ÜÀÇÀÚ »óÀÚ
-            //cm.gainItem(4310198, 120); //ÇØ¿ÜÄ³½Ã »óÀÚ[ÇÑ¹ú,¹«±â]
-	    //cm.gainItem(2434981, 3); //°Ë»öÄ³½Ã À¯·á ÄÚÀÎ
-	    //cm.gainItem(2430143, 10); //¿µ¿øÇÑ È¯»ıÀÇ ºÒ²É
+            //cm.gainSponserItem(1112943,'[íƒ€ì„]',300,50,0);
+	    //cm.gainRC(100000); //í›„ì›í¬ì¸íŠ¸
+	    //cm.gainItem(4032101, 15); //í•´ì™¸ì˜ì ìƒì
+            //cm.gainItem(4310198, 120); //í•´ì™¸ìºì‹œ ìƒì[í•œë²Œ,ë¬´ê¸°]
+	    //cm.gainItem(2434981, 3); //ê²€ìƒ‰ìºì‹œ ìœ ë£Œ ì½”ì¸
+	    //cm.gainItem(2430143, 10); //ì˜ì›í•œ í™˜ìƒì˜ ë¶ˆê½ƒ
 	    //cm.gainItem(2433424,-1);
 	    cm.dispose();
         } else { 

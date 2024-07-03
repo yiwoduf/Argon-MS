@@ -3,19 +3,19 @@
 
 /*
 
-	* ´Ü¹®¿£ÇÇ½Ã ÀÚµ¿Á¦ÀÛ ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¸¸µé¾îÁø ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	* ë‹¨ë¬¸ì—”í”¼ì‹œ ìžë™ì œìž‘ ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ë§Œë“¤ì–´ì§„ ìŠ¤í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤.
 
 	* (Guardian Project Development Source Script)
 
-	·çµ¹ÀÌ ¿¡ ÀÇÇØ ¸¸µé¾î Á³½À´Ï´Ù.
+	ë£¨ëŒì´ ì— ì˜í•´ ë§Œë“¤ì–´ ì¡ŒìŠµë‹ˆë‹¤.
 
-	¿£ÇÇ½Ã¾ÆÀÌµð : 9001050
+	ì—”í”¼ì‹œì•„ì´ë”” : 9001050
 
-	¿£ÇÇ½Ã ÀÌ¸§ : ½ºÇÇ³Ú ¿þ°Ç
+	ì—”í”¼ì‹œ ì´ë¦„ : ìŠ¤í”¼ë„¬ ì›¨ê±´
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê :  :  (0)
+	ì—”í”¼ì‹œê°€ ìžˆëŠ” ë§µ :  :  (0)
 
-	¿£ÇÇ½Ã ¼³¸í : MISSINGNO
+	ì—”í”¼ì‹œ ì„¤ëª… : MISSINGNO
 
 
 */
@@ -41,7 +41,7 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        cm.sendOk("ÀÛ»óÁ¡");
+        cm.sendOk("ìž‘ìƒì ");
         cm.dispose();
         return;
     }

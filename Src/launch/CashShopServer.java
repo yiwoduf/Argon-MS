@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -60,7 +60,7 @@ public class CashShopServer {
             ChannelFuture f = bootstrap.bind(PORT).sync(); // (7)
             Start.println("[ARGON] Cash Shop Server " + PORT + " Port successfully opened.", 36);
         } catch (InterruptedException e) {
-            Start.println("[¿À·ù] Ä³½Ã¼¥¼­¹ö°¡ " + PORT + " Æ÷Æ®¸¦ °³¹æÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.", 36);
+            Start.println("[ì˜¤ë¥˜] ìºì‹œìƒµì„œë²„ê°€ " + PORT + " í¬íŠ¸ë¥¼ ê°œë°©í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.", 36);
         }
         Runtime.getRuntime().addShutdownHook(new Thread(new ShutDownListener()));
     }

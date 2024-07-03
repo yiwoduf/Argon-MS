@@ -9,7 +9,7 @@ function start(mode, type, selection) {
     } else {
         status++;
         if (status == 0) {
-qm.sendOk("±×·³ ºÎÅ¹µå¸±°Ô¿ä. µµ´ëÃ¼ ÀÌ·± ¾Ç¸ùÀ» ¸ÞÀÌÇÃ ¿ùµå¿¡ Èê·Áº¸³»´Â #rÀû#kÀÇ ¸ñÀûÀº ¹«¾ùÀÏ±î¿ä...?\r\n\r\n#e#b(¹Ì·¡ÀÇ ¹® ³Ê¸Ó, È²È¥ÀÇ Æä¸®¿ÂÀ¸·Î °¡º¸ÀÚ)");
+qm.sendOk("ê·¸ëŸ¼ ë¶€íƒë“œë¦´ê²Œìš”. ë„ëŒ€ì²´ ì´ëŸ° ì•…ëª½ì„ ë©”ì´í”Œ ì›”ë“œì— í˜ë ¤ë³´ë‚´ëŠ” #rì #kì˜ ëª©ì ì€ ë¬´ì—‡ì¼ê¹Œìš”...?\r\n\r\n#e#b(ë¯¸ëž˜ì˜ ë¬¸ ë„ˆë¨¸, í™©í˜¼ì˜ íŽ˜ë¦¬ì˜¨ìœ¼ë¡œ ê°€ë³´ìž)");
 qm.dispose();
 }
 }
@@ -24,7 +24,7 @@ function end(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-qm.sendOk("Àß ¿Ô³×, ¾ÆÁÖ Àß ¿Ô¾î. ¾îµð¼­ºÎÅÍ ÀÌ¾ß±âÇÏ¸é ÁÁÀ»±î... »ý°¢À» Á¤¸®ÇÒ Å×´Ï ´Ù½Ã ÇÑ ¹ø ¸»À» °É¾îÁÖ°Ô.");
+qm.sendOk("ìž˜ ì™”ë„¤, ì•„ì£¼ ìž˜ ì™”ì–´. ì–´ë””ì„œë¶€í„° ì´ì•¼ê¸°í•˜ë©´ ì¢‹ì„ê¹Œ... ìƒê°ì„ ì •ë¦¬í•  í…Œë‹ˆ ë‹¤ì‹œ í•œ ë²ˆ ë§ì„ ê±¸ì–´ì£¼ê²Œ.");
 qm.dispose();
 }
 }

@@ -27,23 +27,23 @@ function action(mode, type, selection) {
     }
 	if (status == 0) {
 
-	cm.sendGetText("»ı¼ºÀ» ¿øÇÏ´Â ¾ÆÀÌÅÛ ÄÚµå¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+	cm.sendGetText("ìƒì„±ì„ ì›í•˜ëŠ” ì•„ì´í…œ ì½”ë“œë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 	}else if(status == 1){
 	text = cm.getText();
 	want = text;
 	if (GameConstants.isEquip(want) == true){
-	cm.sendGetText("#rÀÔ·ÂµÈ ¾ÆÀÌÅÛ#k\r\n#i"+want+"#\r\n¿Ã½ºÅİ ¼³Á¤.");
+	cm.sendGetText("#rì…ë ¥ëœ ì•„ì´í…œ#k\r\n#i"+want+"#\r\nì˜¬ìŠ¤í…Ÿ ì„¤ì •.");
 	}else{
-	cm.sendOk("À§Á¬¿¡ Á¸ÀçÇÏÁö ¾Ê´Â ¾ÆÀÌÅÛÀ» ÀÔ·ÂÇß½À´Ï´Ù.");
+	cm.sendOk("ìœ„ì ¯ì— ì¡´ì¬í•˜ì§€ ì•ŠëŠ” ì•„ì´í…œì„ ì…ë ¥í–ˆìŠµë‹ˆë‹¤.");
 	}
 	}else if(status == 2){
 	text = cm.getText();
 	allstat = text;
-	cm.sendGetText("#rÀÔ·ÂµÈ ¾ÆÀÌÅÛ#k\r\n#i"+want+"#\r\n°ø°İ·Â ¼³Á¤.");
+	cm.sendGetText("#rì…ë ¥ëœ ì•„ì´í…œ#k\r\n#i"+want+"#\r\nê³µê²©ë ¥ ì„¤ì •.");
 	}else if(status == 3){
 	text = cm.getText();
 	damage = text;
-	cm.sendGetText("#rÀÔ·ÂµÈ ¾ÆÀÌÅÛ#k\r\n#i"+want+"#\r\n¾÷±×·¹ÀÌµå °¡´É È½¼ö ¼³Á¤ #r(ÃÖ´ë 125)#k");
+	cm.sendGetText("#rì…ë ¥ëœ ì•„ì´í…œ#k\r\n#i"+want+"#\r\nì—…ê·¸ë ˆì´ë“œ ê°€ëŠ¥ íšŸìˆ˜ ì„¤ì • #r(ìµœëŒ€ 125)#k");
 	}else if(status == 4){	
 	text = cm.getText();
 	upgrade = text;
@@ -52,12 +52,12 @@ function action(mode, type, selection) {
 	}
 	i > 5;
 	if (cm.getPlayer().hasGmLevel(i)){
-	cm.sendOk("#fUI/UIWindow.img/QuestIcon/4/0#\r\n#i"+want+"#\r\n¿Ã½ºÅİ : #r"+allstat+"#k\r\n°ø°İ·Â : #r"+damage+"#k\r\n¾÷±×·¹ÀÌµå °¡´É È½¼ö : #r"+upgrade+"")
-	cm.gainSponserItem(want,'[AURORA ÈÄ¿ø]',allstat,damage,upgrade);
+	cm.sendOk("#fUI/UIWindow.img/QuestIcon/4/0#\r\n#i"+want+"#\r\nì˜¬ìŠ¤í…Ÿ : #r"+allstat+"#k\r\nê³µê²©ë ¥ : #r"+damage+"#k\r\nì—…ê·¸ë ˆì´ë“œ ê°€ëŠ¥ íšŸìˆ˜ : #r"+upgrade+"")
+	cm.gainSponserItem(want,'[AURORA í›„ì›]',allstat,damage,upgrade);
 	cm.dispose();
 
 	}else {
-	cm.sendOk("´ç½ÅÀº GMÀÌ ¾Æ´Õ´Ï´Ù.");
+	cm.sendOk("ë‹¹ì‹ ì€ GMì´ ì•„ë‹™ë‹ˆë‹¤.");
 	cm.dispose();
 	}
 	}

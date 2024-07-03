@@ -1,5 +1,5 @@
 
-/* ÀÌ ¿£ÇÇ½Ã´Â ¾ÆÄ§¸Ê Àü¿ë ¿£ÇÇ½Ã ÀÔ´Ï´Ù. */
+/* ì´ ì—”í”¼ì‹œëŠ” ì•„ì¹¨ë§µ ì „ìš© ì—”í”¼ì‹œ ì…ë‹ˆë‹¤. */
 
 importPackage(Packages.launch.world);
 importPackage(Packages.packet.creators);
@@ -34,7 +34,7 @@ function action(mode, type, selection) {
 	}
 	map = cm.getClient().getChannelServer().getMapFactory().getMap(234567899);
 	if(map.nightnumber == 0) {
-		cm.sendOk("Ã¹³¯¿£ ÅõÇ¥¸¦ ÇÒ ¼ö°¡ ¾ø³×..");
+		cm.sendOk("ì²«ë‚ ì—” íˆ¬í‘œë¥¼ í•  ìˆ˜ê°€ ì—†ë„¤..");
 		cm.dispose(); return;
 	}
 		if(cm.getPlayer().isDead) {
@@ -42,12 +42,12 @@ function action(mode, type, selection) {
 		}
 			if(cm.getPlayer().isVoting) {
 			names = map.names.split(",");
-				var text = "Ã³Çü ½ÃÅ°°í ½ÍÀº »ç¶÷À» ¼±ÅÃÇØ º¸°Ô³ª...\r\n";
+				var text = "ì²˜í˜• ì‹œí‚¤ê³  ì‹¶ì€ ì‚¬ëŒì„ ì„ íƒí•´ ë³´ê²Œë‚˜...\r\n";
 					for(i=0;i< names.length; i++) {
 						text += "#L"+i+"##b"+names[i]+"#k";
 					try { 
 						if(cm.getClient().getChannelServer().getPlayerStorage().getCharacterByName(names[i]).isDead) {
-							text += "[»ç¸Á]#l\r\n";
+							text += "[ì‚¬ë§]#l\r\n";
 						} else {
 							text += "#l\r\n";
 						}
@@ -55,26 +55,26 @@ function action(mode, type, selection) {
 					}
 					}
 			} else {
-				cm.sendOk("ÇöÀç´Â ÅõÇ¥½Ã°£ÀÌ ¾Æ´Ï¶ó ÅõÇ¥ÇÒ ¼ö°¡ ¾ø´Ù³×.");
+				cm.sendOk("í˜„ì¬ëŠ” íˆ¬í‘œì‹œê°„ì´ ì•„ë‹ˆë¼ íˆ¬í‘œí•  ìˆ˜ê°€ ì—†ë‹¤ë„¤.");
 				cm.dispose(); return;
 			}
 			cm.sendSimple(text);
     } else if(status == 1) {
 	sel = selection;
 	if(cm.getClient().getChannelServer().getPlayerStorage().getCharacterByName(names[sel]).isDead) {
-		cm.sendOk("»ç¸ÁÇÑ »ç¶÷À» ¼±ÅÃÇÒ¼ö´Â ¾ø³×."); cm.dispose(); return;
+		cm.sendOk("ì‚¬ë§í•œ ì‚¬ëŒì„ ì„ íƒí• ìˆ˜ëŠ” ì—†ë„¤."); cm.dispose(); return;
 	} else {
-		cm.sendYesNo("Á¤¸» #b"+names[sel]+"#k À»(¸¦) ¼±ÅÃÇÏ°Ú³ª? È¤½Ã ¹«°íÇÑ ÀÚ¸¦ Á×À½À¸·Î ³»¸ô¾Æ°¡´Â°Ç ¾Æ´ÑÁö Àß »ı°¢ÇØº¸°Ô.");
+		cm.sendYesNo("ì •ë§ #b"+names[sel]+"#k ì„(ë¥¼) ì„ íƒí•˜ê² ë‚˜? í˜¹ì‹œ ë¬´ê³ í•œ ìë¥¼ ì£½ìŒìœ¼ë¡œ ë‚´ëª°ì•„ê°€ëŠ”ê±´ ì•„ë‹Œì§€ ì˜ ìƒê°í•´ë³´ê²Œ.");
 	}
     } else if(status == 2) {
 	if(cm.getPlayer().isVoting) {
 		cm.getClient().getChannelServer().getPlayerStorage().getCharacterByName(names[sel]).voteamount += 1;
 		cm.getPlayer().isVoting = false;
-		map.broadcastMessage(MainPacketCreator.serverNotice(5, names[sel]+"´ÔÀÌ ÇÑÇ¥¸¦ ¹ŞÀ¸¼Ì½À´Ï´Ù."));
-		cm.sendOk("Á¤»óÀûÀ¸·Î Ã³¸®µÇ¾ú³×.");
+		map.broadcastMessage(MainPacketCreator.serverNotice(5, names[sel]+"ë‹˜ì´ í•œí‘œë¥¼ ë°›ìœ¼ì…¨ìŠµë‹ˆë‹¤."));
+		cm.sendOk("ì •ìƒì ìœ¼ë¡œ ì²˜ë¦¬ë˜ì—ˆë„¤.");
 		cm.dispose(); return;
 	} else {
-		cm.sendOk("ÀÚ³Ù ÅõÇ¥±ÇÀÌ ¾ø³×¸¸..");
+		cm.sendOk("ìë„¨ íˆ¬í‘œê¶Œì´ ì—†ë„¤ë§Œ..");
 		cm.dispose(); return;
 	}
     }

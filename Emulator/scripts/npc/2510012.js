@@ -20,7 +20,7 @@ function action(M, T, S)
 
 	if(St == 0)
 	{
-		selStr = "¾îµÒÀÇ ÈûÀÌ ´ã°ÜÀÖ´Â Å©¸®½ºÅ»·Î ´ç½ÅÀÇ ÇÏÀÌÆÛ ½ºÅÈÀ» Áõ°¡ ½ÃÄÑµå¸®°Ú½À´Ï´Ù.\r\n";
+		selStr = "ì–´ë‘ ì˜ íž˜ì´ ë‹´ê²¨ìžˆëŠ” í¬ë¦¬ìŠ¤íƒˆë¡œ ë‹¹ì‹ ì˜ í•˜ì´í¼ ìŠ¤íƒ¯ì„ ì¦ê°€ ì‹œì¼œë“œë¦¬ê² ìŠµë‹ˆë‹¤.\r\n";
 		for(i = 80000400; i < 80000417; i++)
 		{
 			selStr += "#L"+ i + "##b#e#q" + i + "##k#n (" + cm.getPlayer().getSkillLevel(i) + " / #r"+SkillFactory.getSkill(i).getMaxLevel()+"#k)\r\n";
@@ -34,12 +34,12 @@ function action(M, T, S)
 		needCrs = [1, 2, 4, 8, 10, 15, 20, 25, 30, 35];
 		selType = S;
 
-		cm.sendSimple("¡¡- ¼±ÅÃÇÑ ÇÏÀÌÆÛ ½ºÅÈ : #e#r#q"+selType+"##k#n\r\n"
-			    + "¡¡- È°¼ºµÈ ÇÏÀÌÆÛ ½ºÅÈ : #e#r"+cm.getPlayer().getSkillLevel(selType)+"#k#n (ÃÖ´ë "+SkillFactory.getSkill(selType).getMaxLevel()+" ½ºÅÈ)\r\n"
-			    + "¡¡- È°¼º½Ã ÇÊ¿äÇÑ ºñ¿ë : #t"+itemCrs+"# "+needCrs[cm.getPlayer().getSkillLevel(selType)]+"°³\r\n\r\n"
-			    + "¡¡°è¼ÓÇØ¼­ ÁøÇàÇÒ ÀÛ¾÷À» ¼±ÅÃÇÏ¼¼¿ä. ¾Æ¹«°Íµµ ¿øÇÏÁö ¾ÊÀ¸¸é ESC¸¦ ´­·¯ ÇÏÀÌÆÛ ½ºÅÈ ºÐ¹è¸¦ Á¾·áÇÕ´Ï´Ù.\r\n"
-			    + "#L1##b¼±ÅÃÇÑ ÇÏÀÌÆÛ½ºÅÈ ¿Ã¸®±â#l\r\n"
-			    + "#L2##e#rÀÌ ÇÏÀÌÆÛ ½ºÅÈ ÃÊ±âÈ­ÇÏ±â (10,000,000 ¸Þ¼Ò ÇÊ¿ä)#l\r\n");
+		cm.sendSimple("ã€€- ì„ íƒí•œ í•˜ì´í¼ ìŠ¤íƒ¯ : #e#r#q"+selType+"##k#n\r\n"
+			    + "ã€€- í™œì„±ëœ í•˜ì´í¼ ìŠ¤íƒ¯ : #e#r"+cm.getPlayer().getSkillLevel(selType)+"#k#n (ìµœëŒ€ "+SkillFactory.getSkill(selType).getMaxLevel()+" ìŠ¤íƒ¯)\r\n"
+			    + "ã€€- í™œì„±ì‹œ í•„ìš”í•œ ë¹„ìš© : #t"+itemCrs+"# "+needCrs[cm.getPlayer().getSkillLevel(selType)]+"ê°œ\r\n\r\n"
+			    + "ã€€ê³„ì†í•´ì„œ ì§„í–‰í•  ìž‘ì—…ì„ ì„ íƒí•˜ì„¸ìš”. ì•„ë¬´ê²ƒë„ ì›í•˜ì§€ ì•Šìœ¼ë©´ ESCë¥¼ ëˆŒëŸ¬ í•˜ì´í¼ ìŠ¤íƒ¯ ë¶„ë°°ë¥¼ ì¢…ë£Œí•©ë‹ˆë‹¤.\r\n"
+			    + "#L1##bì„ íƒí•œ í•˜ì´í¼ìŠ¤íƒ¯ ì˜¬ë¦¬ê¸°#l\r\n"
+			    + "#L2##e#rì´ í•˜ì´í¼ ìŠ¤íƒ¯ ì´ˆê¸°í™”í•˜ê¸° (10,000,000 ë©”ì†Œ í•„ìš”)#l\r\n");
 	}
 
 	else if(St == 2)
@@ -47,13 +47,13 @@ function action(M, T, S)
             if (S == 1) {
 		if(!checkMaster(selType))
 		{
-			cm.sendOk("¼±ÅÃÇÑ ½ºÅÈ¿¡´Â #e#r´õ ÀÌ»ó ÅõÀÚÇÒ ¼ö ¾ø½À´Ï´Ù.#k#n ÀÌ ½ºÅÈÀº #e#rÃÖ´ë "+SkillFactory.getSkill(selType).getMaxLevel()+"±îÁö ÅõÀÚ#k#nÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+			cm.sendOk("ì„ íƒí•œ ìŠ¤íƒ¯ì—ëŠ” #e#rë” ì´ìƒ íˆ¬ìží•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.#k#n ì´ ìŠ¤íƒ¯ì€ #e#rìµœëŒ€ "+SkillFactory.getSkill(selType).getMaxLevel()+"ê¹Œì§€ íˆ¬ìž#k#ní•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.");
 			cm.dispose();
 			return;
 		}
 		if(!cm.haveItem(itemCrs, needCrs[cm.getPlayer().getSkillLevel(selType)]))
 		{
-			cm.sendOk("#t"+itemCrs+"#ÀÌ #e#rºÎÁ·ÇÕ´Ï´Ù.#k#n ÀÌ ½ºÅÈ¿¡ ÅõÀÚÇÏ·Á¸é Àû¾îµµ #e#r#t"+itemCrs+"# "+needCrs[cm.getPlayer().getSkillLevel(selType)]+"°³°¡ ÇÊ¿ä#k#nÇÕ´Ï´Ù.");
+			cm.sendOk("#t"+itemCrs+"#ì´ #e#rë¶€ì¡±í•©ë‹ˆë‹¤.#k#n ì´ ìŠ¤íƒ¯ì— íˆ¬ìží•˜ë ¤ë©´ ì ì–´ë„ #e#r#t"+itemCrs+"# "+needCrs[cm.getPlayer().getSkillLevel(selType)]+"ê°œê°€ í•„ìš”#k#ní•©ë‹ˆë‹¤.");
 			cm.dispose();
 			return;
 		}
@@ -63,7 +63,7 @@ function action(M, T, S)
 		cm.openNpc(2510012);
 		return;
             } else if (S == 2) {
-                cm.sendOk("ÁØºñÁßÀÔ´Ï´Ù.");
+                cm.sendOk("ì¤€ë¹„ì¤‘ìž…ë‹ˆë‹¤.");
                 cm.dispose();
             }
 	}

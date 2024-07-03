@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -322,8 +322,8 @@ public class EventInstanceManager {
 		    dispose();
 		}
 	    } else {
-                //retÀÌ 0º¸´Ù Å¬¶§ retº¸´Ù ÀÎ¿ø¼ö°¡ ÀÛÀ¸¸é -> ´Ù³ª°¡
-                //retÀÌ 0º¸´Ù ÀÛÀ»¶§ ÆÄÀåÀÌ°Å³ª retº¸´Ù ÀÎ¿ø¼ö°¡ ÀÛÀ¸¸é -> ´Ù³ª°¡
+                //retì´ 0ë³´ë‹¤ í´ë•Œ retë³´ë‹¤ ì¸ì›ìˆ˜ê°€ ì‘ìœ¼ë©´ -> ë‹¤ë‚˜ê°€
+                //retì´ 0ë³´ë‹¤ ì‘ì„ë•Œ íŒŒì¥ì´ê±°ë‚˜ retë³´ë‹¤ ì¸ì›ìˆ˜ê°€ ì‘ìœ¼ë©´ -> ë‹¤ë‚˜ê°€
 		mutex.lock();
 		try {
                     if (ret > 0) {
@@ -335,7 +335,7 @@ public class EventInstanceManager {
                             while (it.hasNext()) {
                                 MapleCharacter chra = it.next();
                                 chra.changeMap(exit, exit.getPortal(0));
-                                chra.Message("ÆÄÆ¼¿øÀÌ ºÎÁ·ÇÏ¿© ´õÀÌ»ó Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ¾ø½À´Ï´Ù.");
+                                chra.Message("íŒŒí‹°ì›ì´ ë¶€ì¡±í•˜ì—¬ ë”ì´ìƒ í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                             }
                             unregisterAll();
                             if (this != null) {
@@ -352,7 +352,7 @@ public class EventInstanceManager {
                             while (it.hasNext()) {
                                 MapleCharacter chra = it.next();
                                 chra.changeMap(exit, exit.getPortal(0));
-                                chra.Message("ÆÄÆ¼¿øÀÌ ºÎÁ·ÇÏ¿© ´õÀÌ»ó Äù½ºÆ®¸¦ ÁøÇàÇÒ ¼ö ¾ø½À´Ï´Ù.");
+                                chra.Message("íŒŒí‹°ì›ì´ ë¶€ì¡±í•˜ì—¬ ë”ì´ìƒ í€˜ìŠ¤íŠ¸ë¥¼ ì§„í–‰í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                             }
                             unregisterAll();
                             if (this != null) {

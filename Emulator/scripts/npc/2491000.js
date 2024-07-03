@@ -21,9 +21,9 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-	cm.sendSimple_("Áö±Ý ºÎÅÍ Á¡·ÉÀü¿¡ ´ëÇÑ ¼³¸íÀ» ÇØ µå¸±Å×´Ï Àß µé¾îÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.\r\n#L0##b#e¼³¸íÀ» µè´Â´Ù#l");
+	cm.sendSimple_("ì§€ê¸ˆ ë¶€í„° ì ë ¹ì „ì— ëŒ€í•œ ì„¤ëª…ì„ í•´ ë“œë¦´í…Œë‹ˆ ìž˜ ë“¤ì–´ì£¼ì‹œê¸° ë°”ëžë‹ˆë‹¤.\r\n#L0##b#eì„¤ëª…ì„ ë“£ëŠ”ë‹¤#l");
     } else if (status == 1) {
-	cm.sendSimple_("Á¡·ÉÀüÀº ÇÊµåÀÇ ¸ó½ºÅÍ¸¦ ¸ðµÎ Ã³Ä¡ÇÏ°í³ª¸é °Å´ëÇÑ ¸ñ¸¶°¡ ³ªÅ¸³³´Ï´Ù. ¸ñ¸¶¸¦ Ã³Ä¡ÇÏ°í³ª¸é ´ÙÀ½ ½ºÅ×ÀÌÁö·Î ÀÌµ¿ÀÌ°¡´É ÇÏ¸ç ÆÄÀÌ³Î ½ºÅ×ÀÌÁö±îÁö Å¬¸®¾î ÇÏ°ÔµÇ¸é Á¡·ÉÀüÀÌ Á¾·áµË´Ï´Ù.\r\n#L0##b#eÁ¡·ÉÀüÀ» ½ÃÀÛÇÑ´Ù.#l");
+	cm.sendSimple_("ì ë ¹ì „ì€ í•„ë“œì˜ ëª¬ìŠ¤í„°ë¥¼ ëª¨ë‘ ì²˜ì¹˜í•˜ê³ ë‚˜ë©´ ê±°ëŒ€í•œ ëª©ë§ˆê°€ ë‚˜íƒ€ë‚©ë‹ˆë‹¤. ëª©ë§ˆë¥¼ ì²˜ì¹˜í•˜ê³ ë‚˜ë©´ ë‹¤ìŒ ìŠ¤í…Œì´ì§€ë¡œ ì´ë™ì´ê°€ëŠ¥ í•˜ë©° íŒŒì´ë„ ìŠ¤í…Œì´ì§€ê¹Œì§€ í´ë¦¬ì–´ í•˜ê²Œë˜ë©´ ì ë ¹ì „ì´ ì¢…ë£Œë©ë‹ˆë‹¤.\r\n#L0##b#eì ë ¹ì „ì„ ì‹œìž‘í•œë‹¤.#l");
     } else if (status == 2) {
 	cm.getPlayer().getMap().respawn(true);
 	cm.getPlayer().getMap().broadcastMessage(UIPacket.clearMidMsg());

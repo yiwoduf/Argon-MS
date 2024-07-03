@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹èÁöÈÆ raccoonfox69@gmail.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°°ì§€í›ˆ raccoonfox69@gmail.com
  * ==================================
  * 
  */
@@ -18,17 +18,17 @@ import tools.StringUtil;
 public class NoticeCommand implements Command {
 
     private int getNoticeType(String typestring) {
-        if (typestring.equals("°øÁö")) {
+        if (typestring.equals("ê³µì§€")) {
             return 0;
-        } else if (typestring.equals("ÆË¾÷")) {
+        } else if (typestring.equals("íŒì—…")) {
             return 1;
-        } else if (typestring.equals("¿¬ÆÄ¶û")) {
+        } else if (typestring.equals("ì—°íŒŒë‘")) {
             return 2;
-        } else if (typestring.equals("ºĞÈ«")) {
+        } else if (typestring.equals("ë¶„í™")) {
             return 5;
-        } else if (typestring.equals("°øÁöºĞÈ«")) {
+        } else if (typestring.equals("ê³µì§€ë¶„í™")) {
             return 5;
-        } else if (typestring.equals("ÆÄ¶û")) {
+        } else if (typestring.equals("íŒŒë‘")) {
             return 6;
         }
         return -1;
@@ -37,14 +37,14 @@ public class NoticeCommand implements Command {
     @Override
     public void execute(MapleClient c, String[] splitted) throws Exception, IllegalCommandSyntaxException {
 
-        if (splitted[0].equals("!°øÁö")) {
+        if (splitted[0].equals("!ê³µì§€")) {
             int joinmod = 1;
             int range = -1;
-            if (splitted[1].equals("¸Ê")) {
+            if (splitted[1].equals("ë§µ")) {
                 range = 0;
-            } else if (splitted[1].equals("Ã¤³Î")) {
+            } else if (splitted[1].equals("ì±„ë„")) {
                 range = 1;
-            } else if (splitted[1].equals("¼­¹ö")) {
+            } else if (splitted[1].equals("ì„œë²„")) {
                 range = 2;
             }
 
@@ -59,8 +59,8 @@ public class NoticeCommand implements Command {
                 joinmod = 0;
             }
             StringBuilder sb = new StringBuilder();
-            if (splitted[tfrom].equals("°øÁöºĞÈ«")) {
-                sb.append("[°øÁö]");
+            if (splitted[tfrom].equals("ê³µì§€ë¶„í™")) {
+                sb.append("[ê³µì§€]");
             } else {
                 sb.append("");
             }
@@ -81,7 +81,7 @@ public class NoticeCommand implements Command {
     @Override
     public CommandDefinition[] getDefinition() {
         return new CommandDefinition[]{
-            new CommandDefinition("°øÁö", "[¸Ê Ã¤³Î ¼­¹ö] [°øÁö/ÆË¾÷/¿¬ÆÄ¶û/°øÁöºĞÈ«/ºĞÈ«/ÆÄ¶û] ¸Ş½ÃÁö", "ÇØ´ç ¿É¼Ç´ë·Î ¸Ş½ÃÁö¸¦ Ãâ·ÂÇÕ´Ï´Ù.", 2)
+            new CommandDefinition("ê³µì§€", "[ë§µ ì±„ë„ ì„œë²„] [ê³µì§€/íŒì—…/ì—°íŒŒë‘/ê³µì§€ë¶„í™/ë¶„í™/íŒŒë‘] ë©”ì‹œì§€", "í•´ë‹¹ ì˜µì…˜ëŒ€ë¡œ ë©”ì‹œì§€ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.", 2)
         };
     }
 }

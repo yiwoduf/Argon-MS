@@ -316,7 +316,7 @@ public class CashPacket {
     public static byte[] payBackItem(int point, int id) {
         WritingPacket packet = new WritingPacket();
         packet.writeShort(SendPacketOpcode.CS_OPERATION.getValue());
-        packet.write(0x89); // 9A ¡æ 83
+        packet.write(0x89); // 9A â†’ 83
         packet.writeLong(id);
         packet.writeInt(point);
         packet.writeInt(0);

@@ -16,7 +16,7 @@ function action(mode, type, selection) {
             status--;
         if (status == 0) {
 cm.setDamageSkin("3");
-cm.sendOk("µ¥¹ÌÁö ½ºÅ²ÀÌ ¼³Á¤ µÇ¾ú½À´Ï´Ù.");
+cm.sendOk("ë°ë¯¸ì§€ ìŠ¤í‚¨ì´ ì„¤ì • ë˜ì—ˆìŠµë‹ˆë‹¤.");
 cm.gainItem(2432131, -1);
 cm.dispose();
 }

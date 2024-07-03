@@ -1,5 +1,5 @@
 /*
-  Á¦ÀÛÀÚ ¿ìºñ
+  ì œì‘ì ìš°ë¹„
 */
 
 function start() {
@@ -22,8 +22,8 @@ function action(mode, type, selection) {
         if (status == 0) {
             
 	       var chat = "";
-	       chat += "#L1#[¸ğµçÁ÷¾÷]½ºÅ³ÇĞ½À";	       
-               chat += "\r\n#L402#[½Ã±×³Ê½º]½ºÅ³ÇĞ½À";
+	       chat += "#L1#[ëª¨ë“ ì§ì—…]ìŠ¤í‚¬í•™ìŠµ";	       
+               chat += "\r\n#L402#[ì‹œê·¸ë„ˆìŠ¤]ìŠ¤í‚¬í•™ìŠµ";
 
 	       cm.sendSimple(chat);
 

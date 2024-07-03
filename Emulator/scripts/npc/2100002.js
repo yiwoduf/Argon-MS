@@ -1,6 +1,6 @@
 /*
  
-  ÃÖ¼º¿ì
+  ìµœì„±ìš°
   sqlstyle...
 
 */
@@ -44,10 +44,10 @@ function action(mode, type, selection) {
             if (cm.getPlayer().haveItem(4310153, 5000, false, true)) {
                 cm.gainItem(4310153,-5000);
                 cm.gainItem(selection, 10);
-                cm.sendOk("±³È¯ÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+                cm.sendOk("êµí™˜ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
                 cm.dispose();
             } else {
-                cm.sendOk("MIB ÄÚÀÎÀÌ 5Ãµ°³°¡ ÇÊ¿äÇÕ´Ï´Ù.");
+                cm.sendOk("MIB ì½”ì¸ì´ 5ì²œê°œê°€ í•„ìš”í•©ë‹ˆë‹¤.");
                 cm.dispose();
             }
         }

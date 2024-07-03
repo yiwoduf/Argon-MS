@@ -1,12 +1,12 @@
 
 /*
-����:�� ����:����
+제작:모름 수정:에덴
 */
 importPackage(java.lang);
 importPackage(Packages.launch.world);
 importPackage(Packages.packet.creators);
 
-var cost = 50000; // ��ȯ����
+var cost = 50000; // 소환가격
 var status = -1;
 
 function start() {
@@ -16,11 +16,11 @@ function start() {
 function action(mode, type, selection) {
  status++;
  if (status == 0) {
-  cm.sendSpirit("ĳ�� ������ ����͸� �̿��Ͻðڽ��ϱ�? ���ѽð��� 5�� �Դϴ�.\r\n#i4310014# #z4310014# 10�� �ʿ� \r\n #g#L2#ĳ�� ������ �����#l#k#l#k#r#L3#��ȭ�� �׸��Ѵ�.",true,0);
+  cm.sendSpirit("캐시 아이템 사냥터를 이용하시겠습니까? 제한시간은 5분 입니다.\r\n#i4310014# #z4310014# 10개 필요 \r\n #g#L2#캐시 아이템 사냥터#l#k#l#k#r#L3#대화를 그만한다.",true,0);
  } else if(status == 1) {
   if(selection == 10) {
   if (cm.getPlayer().getLevel() >= 11) {
-  cm.sendOk("#fn�������� Extrabold##fs16#11 �̻��̶�ϱ�?.");
+  cm.sendOk("#fn나눔고딕 Extrabold##fs16#11 이상이라니까?.");
   cm.dispose();
  } else {    
 cm.warp(910160000, 0);
@@ -29,17 +29,17 @@ cm.warp(910160000, 0);
 }
   } else if (selection == 2) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(910160000).getCharactersSize() > 0) {
-             cm.sendOk("#fn�������� Extrabold##fs16#�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("#fn나눔고딕 Extrabold##fs16#이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 	     }
         if (cm.getPlayerStat("LVL") <= 29) {
-	cm.sendOk("#fn�������� Extrabold##fs16#30�̻� �����ϽǼ� �ֽ��ϴ�.");
+	cm.sendOk("#fn나눔고딕 Extrabold##fs16#30이상만 도전하실수 있습니다.");
         cm.dispose();
         return;
         }
         if (cm.getPlayerStat("LVL") >= 220) {
-	cm.sendOk("#fn�������� Extrabold##fs16#220�̻��� �����ϽǼ� �����ϴ�.");
+	cm.sendOk("#fn나눔고딕 Extrabold##fs16#220이상은 도전하실수 없습니다.");
         cm.dispose();
         return;
         }
@@ -48,22 +48,22 @@ cm.warp(910160000, 0);
             cm.gainItem(4310014, -10);
             cm.dispose();
             } else {
-            cm.sendSpirit("\r\n#fn�������� Extrabold##fs16##i4310014,##b#z4310014,##k �����ѰŰ�������?",false,2008);
+            cm.sendSpirit("\r\n#fn나눔고딕 Extrabold##fs16##i4310014,##b#z4310014,##k 부족한거같은데요?",false,2008);
             cm.dispose();
 }
   } else if (selection == 4) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(910160000).getCharactersSize() > 0) {
-             cm.sendOk("�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 	     }
         if (cm.getPlayerStat("LVL") <= 220) {
-	cm.sendOk("120 �̻� �����ϽǼ� �ֽ��ϴ�.");
+	cm.sendOk("120 이상만 도전하실수 있습니다.");
         cm.dispose();
         return;
         }
         if (cm.getPlayerStat("LVL") >= 200) {
-	cm.sendOk("200�̻��� �����ϽǼ� �����ϴ�.");
+	cm.sendOk("200이상은 도전하실수 없습니다.");
         cm.dispose();
         return;
         }
@@ -72,17 +72,17 @@ cm.warp(910160000, 0);
             cm.gainItem(4310016, -150);
             cm.dispose();
             } else {
-            cm.sendSpirit("\r\n#fn�������� Extrabold##fs16##i4310016##b#z4310016##k �����ѰŰ�������?",false,2008);
+            cm.sendSpirit("\r\n#fn나눔고딕 Extrabold##fs16##i4310016##b#z4310016##k 부족한거같은데요?",false,2008);
             cm.dispose();
 }
   } else if (selection == 5) {
              if (cm.getClient().getChannelServer().getMapFactory().getMap(951000270).getCharactersSize() > 0) {
-             cm.sendOk("#fn�������� Extrabold##fs16#�̹� �ٸ� ���谡�� �����Ͽ����ϴ�. �ٸ�ä���� �̿����ֽðų� ����Ŀ� �ٽ� ã�ƿ� �ֽʽÿ�.");
+             cm.sendOk("#fn나눔고딕 Extrabold##fs16#이미 다른 모험가가 입장하였습니다. 다른채널을 이용해주시거나 잠시후에 다시 찾아와 주십시오.");
              cm.dispose();
              return;
 	     }
         if (cm.getPlayerStat("LVL") <= 199) {
-	cm.sendOk("200 �̻� �����ϽǼ� �ֽ��ϴ�.");
+	cm.sendOk("200 이상만 도전하실수 있습니다.");
         cm.dispose();
         return;
         }
@@ -91,11 +91,11 @@ cm.warp(910160000, 0);
             cm.gainItem(4310016, -200);
             cm.dispose();
             } else {
-            cm.sendSpirit("\r\n#fn�������� Extrabold##fs16##i4310016##b#z4310016##k �����ѰŰ�������?",false,2008);
+            cm.sendSpirit("\r\n#fn나눔고딕 Extrabold##fs16##i4310016##b#z4310016##k 부족한거같은데요?",false,2008);
             cm.dispose();
 }
   } else if (selection == 3) {
-cm.sendOk("#fn�������� Extrabold##fs17#�̿��� �׸��ϰ��ͳ�����. �׷� ��������~");
+cm.sendOk("#fn나눔고딕 Extrabold##fs17#이용을 그만하고싶나보군. 그럼 다음에봐~");
 cm.dispose();
   } else {
    cm.dispose();

@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -17,7 +17,7 @@ import java.util.*;
 
 /**
 *
-* @author ¿Â¶óÀÎ¿ùµå
+* @author ì˜¨ë¼ì¸ì›”ë“œ
 */
 public class ShopMaker {
     private static List<Integer> EXCPET_ITEMS = Arrays.asList(1082392, 1082393, 1082394, 1003142, 1402037, 1002140, 1042003, 1062007, 1322013, 1142249);
@@ -36,18 +36,18 @@ public class ShopMaker {
         Console c = System.console();
         System.out.println();
 
-        while (NPC == -1) { //ÆÇ¸Å°¡ ¼³Á¤
+        while (NPC == -1) { //íŒë§¤ê°€ ì„¤ì •
             try {
-                NPC = Integer.parseInt(c.readLine("ÆÇ¸Å¿¡ »ç¿ëÇÒ NPC ÄÚµå¸¦ ÀÔ·ÂÇØÁÖ½Ê½Ã¿À. : "));
+                NPC = Integer.parseInt(c.readLine("íŒë§¤ì— ì‚¬ìš©í•  NPC ì½”ë“œë¥¼ ì…ë ¥í•´ì£¼ì‹­ì‹œì˜¤. : "));
             } catch (NumberFormatException nfe) {
-                System.out.println("¼ıÀÚ°¡ ¾Æ´Õ´Ï´Ù.");
+                System.out.println("ìˆ«ìê°€ ì•„ë‹™ë‹ˆë‹¤.");
             } catch (Exception e) {
-                System.out.println("¾Ë ¼ö ¾ø´Â ¿À·ùÀÔ´Ï´Ù. : " + e);
+                System.out.println("ì•Œ ìˆ˜ ì—†ëŠ” ì˜¤ë¥˜ì…ë‹ˆë‹¤. : " + e);
             }
         }
         System.out.println();
 
-        System.out.println("¸ğµç ¾ÆÀÌÅÛ »óÁ¡ ÆÄÀÏ ¸¸µé±â¸¦ ½ÃÀÛÇÕ´Ï´Ù.");
+        System.out.println("ëª¨ë“  ì•„ì´í…œ ìƒì  íŒŒì¼ ë§Œë“¤ê¸°ë¥¼ ì‹œì‘í•©ë‹ˆë‹¤.");
         long start = System.currentTimeMillis();
         boolean isLast;
         try {
@@ -75,7 +75,7 @@ public class ShopMaker {
             out.close();
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("¾ÆÀÌÅÛÀ» ºÒ·¯¿À´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù. : " + e);
+            System.out.println("ì•„ì´í…œì„ ë¶ˆëŸ¬ì˜¤ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤. : " + e);
             return;
         }
         List<Integer> common = new ArrayList<Integer>();
@@ -109,30 +109,30 @@ public class ShopMaker {
             }
             sql.close();
             PrintWriter name = getCreateFile("desc.txt");
-            name.println("±âÅ¸ »óÁ¡ :");
+            name.println("ê¸°íƒ€ ìƒì  :");
             dropInfo(common, name);
-            name.println("Àü»ç »óÁ¡ :");
+            name.println("ì „ì‚¬ ìƒì  :");
             dropInfo(warrior, name);
-            name.println("¸¶¹ı»ç »óÁ¡ :");
+            name.println("ë§ˆë²•ì‚¬ ìƒì  :");
             dropInfo(mage, name);
-            name.println("±Ã¼ö »óÁ¡ :");
+            name.println("ê¶ìˆ˜ ìƒì  :");
             dropInfo(archer, name);
-            name.println("µµÀû »óÁ¡ :");
+            name.println("ë„ì  ìƒì  :");
             dropInfo(thief, name);
-            name.println("ÇØÀû »óÁ¡ :");
+            name.println("í•´ì  ìƒì  :");
             dropInfo(pirate, name);
-            name.println("Ä³½Ã »óÁ¡ :");
+            name.println("ìºì‹œ ìƒì  :");
             dropInfo(cash, name);
             name.println("\r\n");
-            name.println("Á¦¿ÜµÈ ¾ÆÀÌÅÛ ÄÚµå :");
+            name.println("ì œì™¸ëœ ì•„ì´í…œ ì½”ë“œ :");
             for (int id : EXCPET_ITEMS) name.print(id + ", ");
             name.close();
         } catch (Exception e) {
-            System.out.println("¾Ë ¼ö ¾ø´Â ¿À·ùÀÔ´Ï´Ù.");
+            System.out.println("ì•Œ ìˆ˜ ì—†ëŠ” ì˜¤ë¥˜ì…ë‹ˆë‹¤.");
         }
         long end = System.currentTimeMillis();
-        System.out.println("¿Ï·áµÇ¾ú½À´Ï´Ù.");
-        System.out.println("AShopItems.sql, AShop.sql, desc.txt ÆÄÀÏÀ» È®ÀÎÇØÁÖ½Ê½Ã¿À.");
+        System.out.println("ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
+        System.out.println("AShopItems.sql, AShop.sql, desc.txt íŒŒì¼ì„ í™•ì¸í•´ì£¼ì‹­ì‹œì˜¤.");
         System.exit(0);
         return;
     }
@@ -152,17 +152,17 @@ public class ShopMaker {
             int value = Int.intValue() % 100;
             ShopMaker.EquipType et = ShopMaker.EquipType.getEquipTypeByID(value);
             String shopname;
-            if (et == null) shopname = ShopMaker.MapleWeaponType.getMapleWeaponTypeById(value - ShopMaker.EquipType.¹«±â.shopIdAlter()).name();
+            if (et == null) shopname = ShopMaker.MapleWeaponType.getMapleWeaponTypeById(value - ShopMaker.EquipType.ë¬´ê¸°.shopIdAlter()).name();
             else shopname = et.name();
             String a = "    ";
             a += shopname;
-            a += " »óÁ¡ : " + Int.intValue();
+            a += " ìƒì  : " + Int.intValue();
             name.println(a);
         }
         name.println();
     }
 
-    private static List<Triple<Integer, Integer, Integer>> getAllItems() { //¾ÆÀÌÅÛ, »óÁ¡, °¡°İ
+    private static List<Triple<Integer, Integer, Integer>> getAllItems() { //ì•„ì´í…œ, ìƒì , ê°€ê²©
         File source = new File("property/Wz/Character.wz");
         MapleDataProvider sourceData;// = MapleDataProviderFactory.getDataProvider(source);
         List<Triple<Integer, Integer, Integer>> list = new ArrayList<Triple<Integer, Integer,Integer>>();
@@ -181,15 +181,15 @@ public class ShopMaker {
 
                 String filename = file.getName().replace(".img.xml", "");
                 int id = Integer.parseInt(filename);
-                if (EXCPET_ITEMS.contains(id)) continue; //TODO Á¦¿ÜµÈ ¾ÆÀÌÅÛ »óÁ¡ »ı¼º..?
+                if (EXCPET_ITEMS.contains(id)) continue; //TODO ì œì™¸ëœ ì•„ì´í…œ ìƒì  ìƒì„±..?
                 
                 //if (MapleDataTool.getInt("reqLevel", info, 0) > 100) continue;
               //  if (MapleDataTool.getInt("tradeBlock", info, -1) != -1) continue;
                 String name = ItemInformation.getInstance().getName(id);
                 
                 if (name != null) {
-                if (!name.contains("·¯ºê¸®½º") /*&& !name.contains("µå·¡°ïÅ×ÀÏ") && !name.contains("ÆÈÄÜÀ®")
-                        && !name.contains("·¹ÀÌºìÈ¥") && !name.contains("»şÅ©Åõ½º")*/) {
+                if (!name.contains("ëŸ¬ë¸Œë¦¬ìŠ¤") /*&& !name.contains("ë“œë˜ê³¤í…Œì¼") && !name.contains("íŒ”ì½˜ìœ™")
+                        && !name.contains("ë ˆì´ë¸í˜¼") && !name.contains("ìƒ¤í¬íˆ¬ìŠ¤")*/) {
                      continue;
                 } else {
                     System.out.println(name);
@@ -198,8 +198,8 @@ public class ShopMaker {
                 
                  
                 islot = MapleDataTool.getString("islot", info, "gbg");
-                job = MapleDataTool.getInt("reqJob", info, 0); //Á÷¾÷ ºĞ·ù
-                isCash = MapleDataTool.getInt("cash", info, 0) == 1; //Ä³½Ã ¾ÆÀÌÅÛ ¿©ºÎ È®ÀÎ
+                job = MapleDataTool.getInt("reqJob", info, 0); //ì§ì—… ë¶„ë¥˜
+                isCash = MapleDataTool.getInt("cash", info, 0) == 1; //ìºì‹œ ì•„ì´í…œ ì—¬ë¶€ í™•ì¸
                 level = MapleDataTool.getInt("reqLevel", info, 0);
                 /*
                 if (level >= 10 && level < 20) {
@@ -223,7 +223,7 @@ public class ShopMaker {
                 price = 4310027;
                 ShopMaker.EquipType type = ShopMaker.EquipType.getEquipType(islot);
                 if (type == null){
-                    System.out.println("¾Ë ¼ö ¾ø´Â ¾ÆÀÌÅÛÀÔ´Ï´Ù.");
+                    System.out.println("ì•Œ ìˆ˜ ì—†ëŠ” ì•„ì´í…œì…ë‹ˆë‹¤.");
                     continue;
                 }
 
@@ -239,7 +239,7 @@ public class ShopMaker {
                             shopId = COMMON;
                         }
                      //   shopId += type.shopIdAlter;
-                       // if (ShopMaker.MapleWeaponType.getWeaponType(id) == ShopMaker.MapleWeaponType.ºí·¹ÀÌµå) System.out.println(id);
+                       // if (ShopMaker.MapleWeaponType.getWeaponType(id) == ShopMaker.MapleWeaponType.ë¸”ë ˆì´ë“œ) System.out.println(id);
                       //  if (isWeapon(id)) shopId += ShopMaker.MapleWeaponType.getWeaponType(id).getShopIdAlter();
                         shopId = 20121125;
                         list.add(new Triple<Integer, Integer, Integer>(id, shopId, price));
@@ -251,7 +251,7 @@ public class ShopMaker {
                  //       list.add(new Triple<Integer, Integer, Integer>(id, shopId, price));
                 //    }
                 } catch (Exception e) {
-                    System.out.println("Æ÷ÀÎÅÍ°¡ ¾ø½À´Ï´Ù.");
+                    System.out.println("í¬ì¸í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");
                 }
             }
         }
@@ -259,30 +259,30 @@ public class ShopMaker {
     }
 
     private static boolean isWeapon(int itemId) {
-        return !ShopMaker.MapleWeaponType.getWeaponType(itemId).equals(ShopMaker.MapleWeaponType.¹«±â¾Æ´Ô);
+        return !ShopMaker.MapleWeaponType.getWeaponType(itemId).equals(ShopMaker.MapleWeaponType.ë¬´ê¸°ì•„ë‹˜);
     }
 
     private static enum EquipType {
-        ¸ğÀÚ("cp", 1),
-        °¡¹ß("hrcp", 1),
-        ¾ó±¼Àå½Ä("af", 2),
-        ´«Àå½Ä("ay", 3),
-        ±Í°í¸®("ae", 4),
-        ½Å¹ß("so", 5),
-        ¸ÁÅä("sr", 6),
-        »óÀÇ("ma", 7),
-        Àå°©("gv", 8),
-        ÇÑ¹ú¿Ê("mapn", 9),
-        ÇÏÀÇ("pn", 10),
-        ¹İÁö("ri", 11),
-        ¹æÆĞ("si", 12),
-        Ææ´øÆ®("pe", 13),
-        Çã¸®¶ì("be", 13),
-        ¾î±úÀå½Ä("sh", 13),
-        ÈÆÀå("me", 14),
-        ¹«±â("wp", 15),
-        º¸Á¶¹«±â("wpsi", 15),
-        ¾²·¹±â("gbg", 0),
+        ëª¨ì("cp", 1),
+        ê°€ë°œ("hrcp", 1),
+        ì–¼êµ´ì¥ì‹("af", 2),
+        ëˆˆì¥ì‹("ay", 3),
+        ê·€ê³ ë¦¬("ae", 4),
+        ì‹ ë°œ("so", 5),
+        ë§í† ("sr", 6),
+        ìƒì˜("ma", 7),
+        ì¥ê°‘("gv", 8),
+        í•œë²Œì˜·("mapn", 9),
+        í•˜ì˜("pn", 10),
+        ë°˜ì§€("ri", 11),
+        ë°©íŒ¨("si", 12),
+        íœë˜íŠ¸("pe", 13),
+        í—ˆë¦¬ë ("be", 13),
+        ì–´ê¹¨ì¥ì‹("sh", 13),
+        í›ˆì¥("me", 14),
+        ë¬´ê¸°("wp", 15),
+        ë³´ì¡°ë¬´ê¸°("wpsi", 15),
+        ì“°ë ˆê¸°("gbg", 0),
         ;
 
         private String tag;
@@ -309,29 +309,29 @@ public class ShopMaker {
     }
 
     private enum MapleWeaponType {
-        ¹«±â¾Æ´Ô(0),
-        ÇÑ¼Õµµ³¢(1),
-        µÎ¼Õµµ³¢(2),
-        ÇÑ¼ÕµĞ±â(3),
-        µÎ¼ÕµĞ±â(4),
-        È°(5),
-        ¾Æ´ë(6),
-        ¼®±Ã(7),
-        ´Ü°Ë(8),
-        ÃÑ(9),
-        ³ÊÅ¬(10),
-        Æú¾Ï(11),
-        Ã¢(12),
-        ½ºÅÂÇÁ(13),
-        ÇÑ¼Õ°Ë(14),
-        µÎ¼Õ°Ë(15),
-        ¿Ïµå(16),
-        »şÀÌ´×·Îµå(17),
-        ¼Ò¿ï½´ÅÍ(18),
-        ºí·¹ÀÌµå(19),
-        º¸Á¶¹«±â(20),
-        ÄÉÀÎ(21),
-        µà¾óº¸¿ì°Ç(22),
+        ë¬´ê¸°ì•„ë‹˜(0),
+        í•œì†ë„ë¼(1),
+        ë‘ì†ë„ë¼(2),
+        í•œì†ë‘”ê¸°(3),
+        ë‘ì†ë‘”ê¸°(4),
+        í™œ(5),
+        ì•„ëŒ€(6),
+        ì„ê¶(7),
+        ë‹¨ê²€(8),
+        ì´(9),
+        ë„ˆí´(10),
+        í´ì•”(11),
+        ì°½(12),
+        ìŠ¤íƒœí”„(13),
+        í•œì†ê²€(14),
+        ë‘ì†ê²€(15),
+        ì™„ë“œ(16),
+        ìƒ¤ì´ë‹ë¡œë“œ(17),
+        ì†Œìš¸ìŠˆí„°(18),
+        ë¸”ë ˆì´ë“œ(19),
+        ë³´ì¡°ë¬´ê¸°(20),
+        ì¼€ì¸(21),
+        ë“€ì–¼ë³´ìš°ê±´(22),
         ;
 
         private int shopIdAlter;
@@ -346,8 +346,8 @@ public class ShopMaker {
 
         private static ShopMaker.MapleWeaponType getWeaponType(int itemId) {
             int cat = (itemId / 10000) % 100;
-            ShopMaker.MapleWeaponType[] type = {¹«±â¾Æ´Ô, »şÀÌ´×·Îµå, ¼Ò¿ï½´ÅÍ, ¹«±â¾Æ´Ô, ¹«±â¾Æ´Ô, ¹«±â¾Æ´Ô, ¹«±â¾Æ´Ô, ¹«±â¾Æ´Ô, ¹«±â¾Æ´Ô, ¹«±â¾Æ´Ô, ÇÑ¼Õ°Ë, ÇÑ¼Õµµ³¢, ÇÑ¼ÕµĞ±â, ´Ü°Ë, ºí·¹ÀÌµå, º¸Á¶¹«±â, ÄÉÀÎ, ¿Ïµå, ½ºÅÂÇÁ, ¹«±â¾Æ´Ô, µÎ¼Õ°Ë, µÎ¼Õµµ³¢, µÎ¼ÕµĞ±â, Ã¢, Æú¾Ï, È°, ¼®±Ã, ¾Æ´ë, ³ÊÅ¬, ÃÑ, ¹«±â¾Æ´Ô, ¹«±â¾Æ´Ô, µà¾óº¸¿ì°Ç};
-            if (0 > cat - 20 || type.length <= cat - 20) return ¹«±â¾Æ´Ô;
+            ShopMaker.MapleWeaponType[] type = {ë¬´ê¸°ì•„ë‹˜, ìƒ¤ì´ë‹ë¡œë“œ, ì†Œìš¸ìŠˆí„°, ë¬´ê¸°ì•„ë‹˜, ë¬´ê¸°ì•„ë‹˜, ë¬´ê¸°ì•„ë‹˜, ë¬´ê¸°ì•„ë‹˜, ë¬´ê¸°ì•„ë‹˜, ë¬´ê¸°ì•„ë‹˜, ë¬´ê¸°ì•„ë‹˜, í•œì†ê²€, í•œì†ë„ë¼, í•œì†ë‘”ê¸°, ë‹¨ê²€, ë¸”ë ˆì´ë“œ, ë³´ì¡°ë¬´ê¸°, ì¼€ì¸, ì™„ë“œ, ìŠ¤íƒœí”„, ë¬´ê¸°ì•„ë‹˜, ë‘ì†ê²€, ë‘ì†ë„ë¼, ë‘ì†ë‘”ê¸°, ì°½, í´ì•”, í™œ, ì„ê¶, ì•„ëŒ€, ë„ˆí´, ì´, ë¬´ê¸°ì•„ë‹˜, ë¬´ê¸°ì•„ë‹˜, ë“€ì–¼ë³´ìš°ê±´};
+            if (0 > cat - 20 || type.length <= cat - 20) return ë¬´ê¸°ì•„ë‹˜;
             return type[cat - 20];
         }
 

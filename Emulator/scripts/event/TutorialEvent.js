@@ -2,9 +2,9 @@
 
      [ PlatinumMS ]
 
-     ÀÌ ½ºÅ©¸³Æ®´Â PlatinumMS ¿¡¼­ Á¦ÀÛÇÑ ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+     ì´ ìŠ¤í¬ë¦½íŠ¸ëŠ” PlatinumMS ì—ì„œ ì œì‘í•œ ìŠ¤í¬ë¦½íŠ¸ ì…ë‹ˆë‹¤.
 
-     ½ºÅ©¸³Æ® ¿ëµµ : Æ©Åä¸®¾ó ÁøÇà ÀÌº¥Æ®
+     ìŠ¤í¬ë¦½íŠ¸ ìš©ë„ : íŠœí† ë¦¬ì–¼ ì§„í–‰ ì´ë²¤íŠ¸
 
 */
 
@@ -28,8 +28,8 @@ function setup(eim) {
 }
 
 function playerEntry(eim, player) {
-    player.send(UIPacket.showInfo("[¾Ë¸²] Æ©Åä¸®¾óÀ» ½ÃÀÛÇÏµµ·Ï ÇÏ°Ú½À´Ï´Ù."));
-    player.send(MainPacketCreator.getGMText(7, "[¾Ë¸²] Æ©Åä¸®¾óÀ» ½ÃÀÛÇÏµµ·Ï ÇÏ°Ú½À´Ï´Ù."));
+    player.send(UIPacket.showInfo("[ì•Œë¦¼] íŠœí† ë¦¬ì–¼ì„ ì‹œì‘í•˜ë„ë¡ í•˜ê² ìŠµë‹ˆë‹¤."));
+    player.send(MainPacketCreator.getGMText(7, "[ì•Œë¦¼] íŠœí† ë¦¬ì–¼ì„ ì‹œì‘í•˜ë„ë¡ í•˜ê² ìŠµë‹ˆë‹¤."));
     eim.schedule("announce", 5000);
     var mapzz = eim.getMapFactory().getMap(209000013);
     player.changeMap(mapzz, mapzz.getPortal("sp"));
@@ -37,7 +37,7 @@ function playerEntry(eim, player) {
 }
 
 function announce(eim) {
-    var text = "[¾Ë¸²] Àá½ÃÈÄ¿¡ ¸ó½ºÅÍ°¡ ¼ÒÈ¯µË´Ï´Ù.";
+    var text = "[ì•Œë¦¼] ì ì‹œí›„ì— ëª¬ìŠ¤í„°ê°€ ì†Œí™˜ë©ë‹ˆë‹¤.";
     eim.getMapFactory().getMap(209000013).broadcastMessage(UIPacket.showInfo(text));
     eim.getMapFactory().getMap(209000013).broadcastMessage(MainPacketCreator.getGMText(7, text));
     var level = Integer.parseInt(eim.getProperty("level"));
@@ -49,7 +49,7 @@ function announce(eim) {
 }
 
 function summon(eim) {
-    var text = "[¾Ë¸²] ¸ó½ºÅÍ°¡ ¼ÒÈ¯µÇ¾ú½À´Ï´Ù.";
+    var text = "[ì•Œë¦¼] ëª¬ìŠ¤í„°ê°€ ì†Œí™˜ë˜ì—ˆìŠµë‹ˆë‹¤.";
     eim.getMapFactory().getMap(209000013).broadcastMessage(UIPacket.showInfo(text));
     eim.getMapFactory().getMap(209000013).broadcastMessage(MainPacketCreator.getGMText(5, text)); //-109,154
     var mobid = 0;
@@ -77,7 +77,7 @@ function scheduledTimeout(eim) {
     var exit = em.getChannelServer().getMapFactory().getMap(209000013);
     var chr = eim.getPlayers().iterator().next();
     chr.changeMap(exit, exit.getPortal(0));
-    chr.Message(8, "[¾Ë¸²] Æ©Åä¸®¾ó ÁøÇà½Ã°£ÀÌ ÃÊ°úµÇ¾ú½À´Ï´Ù. ´Ù½Ã ÁøÇàÇØÁÖ¼¼¿ä.");
+    chr.Message(8, "[ì•Œë¦¼] íŠœí† ë¦¬ì–¼ ì§„í–‰ì‹œê°„ì´ ì´ˆê³¼ë˜ì—ˆìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì§„í–‰í•´ì£¼ì„¸ìš”.");
     chr.setKeyValue("Tutorial", null);
     eim.unregisterPlayer(chr);
     eim.dispose();
@@ -86,7 +86,7 @@ function scheduledTimeout(eim) {
 function allMonstersDead(eim) {
     var level = Integer.parseInt(eim.getProperty("level"));
     if (level == 1) {
-        var text = "[¾Ë¸²] 2´Ü°èÀÇ ¸ó½ºÅÍ¸¦ ÀüºÎ ÀâÀ¸¼Ì½À´Ï´Ù. Àá½Ã¸¸ ±â´Ù·ÁÁÖ¼¼¿ä.";
+        var text = "[ì•Œë¦¼] 2ë‹¨ê³„ì˜ ëª¬ìŠ¤í„°ë¥¼ ì „ë¶€ ì¡ìœ¼ì…¨ìŠµë‹ˆë‹¤. ì ì‹œë§Œ ê¸°ë‹¤ë ¤ì£¼ì„¸ìš”.";
         eim.getMapFactory().getMap(209000013).broadcastMessage(UIPacket.showInfo(text));
         eim.getMapFactory().getMap(209000013).broadcastMessage(MainPacketCreator.showEffect("monsterPark/clear"));
         eim.getMapFactory().getMap(209000013).broadcastMessage(MainPacketCreator.playSound("Party1/Clear"));
@@ -97,7 +97,7 @@ function allMonstersDead(eim) {
         chr.gainExp(level * 330, true, true, true);
     }
     if (level == 2) {
-        var text = "[¾Ë¸²] Æ©Åä¸®¾ó ÁøÇàÀÌ ¸ğµÎ ³¡³µ½À´Ï´Ù. ¸ñµµ¸®´«»ç¶÷¿¡°Ô ¸»À»°É¾îÁÖ¼¼¿ä.";
+        var text = "[ì•Œë¦¼] íŠœí† ë¦¬ì–¼ ì§„í–‰ì´ ëª¨ë‘ ëë‚¬ìŠµë‹ˆë‹¤. ëª©ë„ë¦¬ëˆˆì‚¬ëŒì—ê²Œ ë§ì„ê±¸ì–´ì£¼ì„¸ìš”.";
         var chr = eim.getPlayers().iterator().next();
         eim.getMapFactory().getMap(209000013).broadcastMessage(UIPacket.showInfo(text));
         eim.getMapFactory().getMap(209000013).broadcastMessage(MainPacketCreator.getClock(20));
@@ -110,8 +110,8 @@ function allMonstersDead(eim) {
         chr.setKeyValue2("1stJobTrialCompleteTime", ((System.currentTimeMillis() / 1000) - startTime));
         chr.gainExp(3000, true, true, true);
         chr.gainExp(10, true, true, true);
-        chr.gainItem(2000000, 50, false, -1, "Æ©Åä¸®¾ó ¾ÆÀÌÅÛ");
-        chr.gainItem(2000003, 50, false, -1, "Æ©Åä¸®¾ó ¾ÆÀÌÅÛ");
+        chr.gainItem(2000000, 50, false, -1, "íŠœí† ë¦¬ì–¼ ì•„ì´í…œ");
+        chr.gainItem(2000003, 50, false, -1, "íŠœí† ë¦¬ì–¼ ì•„ì´í…œ");
         chr.setKeyValue("Tutorial_Complete", "1");
         eim.unregisterPlayer(chr);
         eim.dispose();

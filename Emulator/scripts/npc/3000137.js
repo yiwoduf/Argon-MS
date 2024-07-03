@@ -1,14 +1,14 @@
 /*
 
-	Á¦ÀÛ Àè½¼¿Â¶óÀÎ
-	2Â÷¼öÁ¤ Ä¡ ¿ì ¾¾ : projectchiu16@nate.com
-	3Â÷¼öÁ¤ »ç ¶ó ¼¾ : saracen_dev@nate.com
+	ì œì‘ ì­ìŠ¨ì˜¨ë¼ì¸
+	2ì°¨ìˆ˜ì • ì¹˜ ìš° ì”¨ : projectchiu16@nate.com
+	3ì°¨ìˆ˜ì • ì‚¬ ë¼ ì„¼ : saracen_dev@nate.com
 
 */
 function start() {
  if (true) {
-	    var chat = "#fs20##r    #eÈ«º¸Àü¿ë#k ¾ÆÄÉÀÎ »óÁ¡#fs11#\r\n";
-            chat += "#b#e#L1#¢½¾ÆÄÉÀÎ ¹«±â#l#L2#¢½¾ÆÄÉÀÎ¹æ¾î±¸#l#n\r\n\r\n";
+	    var chat = "#fs20##r    #eí™ë³´ì „ìš©#k ì•„ì¼€ì¸ ìƒì #fs11#\r\n";
+            chat += "#b#e#L1#â™¡ì•„ì¼€ì¸ ë¬´ê¸°#l#L2#â™¡ì•„ì¼€ì¸ë°©ì–´êµ¬#l#n\r\n\r\n";
     	    cm.sendSimple(chat);
 }
 }

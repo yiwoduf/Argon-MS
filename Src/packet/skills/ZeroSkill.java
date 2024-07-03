@@ -1,7 +1,7 @@
 /*
  * Tespia Project
  * ==================================
- * ¾îºñ½º abyss_min@nate.com
+ * ì–´ë¹„ìŠ¤ abyss_min@nate.com
  * ==================================
  * 
  */
@@ -17,7 +17,7 @@ import tools.HexTool;
 
 /**
  *
- * @author È£¾ß
+ * @author í˜¸ì•¼
  */
 public class ZeroSkill {
 
@@ -42,7 +42,7 @@ public class ZeroSkill {
             case 1:
                 packet.writeInt(100000);
                 packet.writeInt(600);
-                packet.write(spirit); //1Àº ÀáÀçÃ¢
+                packet.write(spirit); //1ì€ ì ì¬ì°½
                 break;
         }
         packet.write(1);
@@ -113,7 +113,7 @@ public class ZeroSkill {
         packet.writeInt(0);
         packet.writeShort(0);
         packet.writeShort(0x24);
-        packet.writeInt(2400010); // 2400009 ³²ÀÚ, 2400010 ¿©ÀÚ
+        packet.writeInt(2400010); // 2400009 ë‚¨ì, 2400010 ì—¬ì
         packet.writeMapleAsciiString(txt);
         packet.write(HexTool.getByteArrayFromHexString("00 01"));
         packet.writeInt(0); //1.2.239+

@@ -1,0 +1,18 @@
+var status = -1;
+itemlist = [[2450042,1000],[2049153,5000],[1122076,10000],[1702737,20000],[1112148,50000],[4032101,50000],[4001254,100000],[2433955,100000],[1142139,100000],[2432068,250000]];
+function start() {
+    status = -1;
+    action (1, 0, 0);
+}
+
+function action(mode, type, selection) {
+    if (mode == -1 || mode == 0) {
+        cm.dispose();
+        return;
+    }
+    if (mode == 1) {
+        status++;
+    }
+    
+    if (status == 0) {
+		留

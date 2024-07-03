@@ -21,14 +21,14 @@ function action(M, T, S)
 
 	if(St == 0)
 	{
-		cm.sendYesNo("ÀÌ °÷¿¡¼­ ³ª°¡°Ú´Â°¡? ´ÙÀ½¹ø¿¡ µé¾î¿Ã ¶§´Â Ã³À½ºÎÅÍ ´Ù½Ã µµÀüÇØ¾ß ÇÑ´Ù³×.");
+		cm.sendYesNo("ì´ ê³³ì—ì„œ ë‚˜ê°€ê² ëŠ”ê°€? ë‹¤ìŒë²ˆì— ë“¤ì–´ì˜¬ ë•ŒëŠ” ì²˜ìŒë¶€í„° ë‹¤ì‹œ ë„ì „í•´ì•¼ í•œë‹¤ë„¤.");
 	}
 
 	else if(St == 1)
 	{
 		if(!cm.getParty() || !cm.isLeader())
 		{
-			cm.sendOK("ÆÄÆ¼Àå¸¸ÀÌ ÇÒ ¼ö ÀÖ´Ù³×. ÆÄÆ¼Àå°ú ÇÑ ¹ø »óÀÇÇØº¸°Ô³ª.");
+			cm.sendOK("íŒŒí‹°ìž¥ë§Œì´ í•  ìˆ˜ ìžˆë‹¤ë„¤. íŒŒí‹°ìž¥ê³¼ í•œ ë²ˆ ìƒì˜í•´ë³´ê²Œë‚˜.");
 			cm.dispose();
 			return;
 		}

@@ -1,5 +1,5 @@
 /*
-ÆÄ¶õµ¹·û±º
+íŒŒë€ëŒë¥œêµ°
 */
 importPackage(Packages.server.quest);
 
@@ -12,7 +12,7 @@ function start(mode, type, selection) {
     } else {
         status++;
         if (status == 0) {
-            qm.sendNextS("\r\n\r\n#b(ÇÏÀÎÁî¿¡°Ô ÀÌ°÷¿¡¼­ º¸°í µéÀº °ÍÀ» ÀüÇØÁÖ¾ú´Ù.)", 2);
+            qm.sendNextS("\r\n\r\n#b(í•˜ì¸ì¦ˆì—ê²Œ ì´ê³³ì—ì„œ ë³´ê³  ë“¤ì€ ê²ƒì„ ì „í•´ì£¼ì—ˆë‹¤.)", 2);
         } else if (status == 1) {
             qm.forceStartQuest();
             qm.dispose();

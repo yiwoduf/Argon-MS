@@ -1,6 +1,6 @@
  /*
-Á¦ÀÛÀÚ : ljw5992@naver.com / dbg_yeane@nate.com
-¼öÁ¤ : timeisruunin@naver.com / timeisruunin@nate.com
+ì œì‘ì : ljw5992@naver.com / dbg_yeane@nate.com
+ìˆ˜ì • : timeisruunin@naver.com / timeisruunin@nate.com
 */
 importPackage(java.sql);
 importPackage(java.lang);
@@ -49,10 +49,10 @@ function getStatByName(cname) {
  var int3 = int1-int2;
  var min = other.getClient().getPlayer().getStat().getMinAttack();
  var max = other.getClient().getPlayer().getStat().getMaxAttack();
-        return string.append("#e½Äº°¹øÈ£ : #n "+eq.getInt("id")+"")
- .append("\r\n#e´Ğ³×ÀÓ : #n").append(eq.getString("name"))
-        .append("\r\n#e·¹º§ : #n").append(Integer(eq.getInt("level")))
-        .append("\r\n#e°æÇèÄ¡ : #n").append(Integer(eq.getInt("exp")))
+        return string.append("#eì‹ë³„ë²ˆí˜¸ : #n "+eq.getInt("id")+"")
+ .append("\r\n#eë‹‰ë„¤ì„ : #n").append(eq.getString("name"))
+        .append("\r\n#eë ˆë²¨ : #n").append(Integer(eq.getInt("level")))
+        .append("\r\n#eê²½í—˜ì¹˜ : #n").append(Integer(eq.getInt("exp")))
         .append(" / ")
         .append(GameConstants.getExpNeededForLevel(eq.getInt("level")).toString())
         .append("\r\n#eHP : #n#r").append(""+other.getClient().getPlayer().getStat().getHp()+" #k/#r ").append(Integer(eq.getInt("maxhp")))
@@ -61,14 +61,14 @@ function getStatByName(cname) {
         .append("\r\n#eDEX : #n"+other.getClient().getPlayer().getStat().getLocalDex()+" ("+other.getClient().getPlayer().getStat().getDex()+" + "+dex+")")
         .append("\r\n#eLUK : #n"+other.getClient().getPlayer().getStat().getLocalLuk()+" ("+other.getClient().getPlayer().getStat().getLuk()+" + "+luk+")")
         .append("\r\n#eINT : #n"+other.getClient().getPlayer().getStat().getLocalInt()+" ("+other.getClient().getPlayer().getStat().getInt()+" + "+int3+")\r\n")
- .append("\r\n#eSTR Áõ°¡À² : #n#b"+other.getClient().getPlayer().getStat().getPercentStr()+" %#k")
- .append("#e   DEX Áõ°¡À² : #n#b"+other.getClient().getPlayer().getStat().getPercentDex()+" %#k")
- .append("\r\n#eLUK Áõ°¡À² : #n#b"+other.getClient().getPlayer().getStat().getPercentLuk()+" %#k")
- .append("#e    INT Áõ°¡À² : #n#b"+other.getClient().getPlayer().getStat().getPercentInt()+" %#k\r\n")
- .append("\r\n#e½ºÅİ °ø°İ·Â : #n"+min+"~"+max+"\r\n")
- .append("#e¸Ş¼Ò : #n"+other.getClient().getPlayer().getMeso()+" ¿ø\r\n")
- .append("#eÈ¯»ıÈ½¼ö : #n"+other.getClient().getPlayer().getReborns()+" ¹ø")
-        .append("\r\n#eÀÎ±âµµ : #n").append(Integer(eq.getInt("fame"))).toString();
+ .append("\r\n#eSTR ì¦ê°€ìœ¨ : #n#b"+other.getClient().getPlayer().getStat().getPercentStr()+" %#k")
+ .append("#e   DEX ì¦ê°€ìœ¨ : #n#b"+other.getClient().getPlayer().getStat().getPercentDex()+" %#k")
+ .append("\r\n#eLUK ì¦ê°€ìœ¨ : #n#b"+other.getClient().getPlayer().getStat().getPercentLuk()+" %#k")
+ .append("#e    INT ì¦ê°€ìœ¨ : #n#b"+other.getClient().getPlayer().getStat().getPercentInt()+" %#k\r\n")
+ .append("\r\n#eìŠ¤í…Ÿ ê³µê²©ë ¥ : #n"+min+"~"+max+"\r\n")
+ .append("#eë©”ì†Œ : #n"+other.getClient().getPlayer().getMeso()+" ì›\r\n")
+ .append("#eí™˜ìƒíšŸìˆ˜ : #n"+other.getClient().getPlayer().getReborns()+" ë²ˆ")
+        .append("\r\n#eì¸ê¸°ë„ : #n").append(Integer(eq.getInt("fame"))).toString();
     }else{
         return null;
     }
@@ -82,7 +82,7 @@ function getEquippedById(cid,type) {
         var string = new StringBuilder();
         while(eq.next()){
             string.append("#L").append(Integer(eq.getInt("inventoryitemid"))).append("##i").
-     append(Integer(eq.getInt("itemid"))).append("#¡¡#b(#t").append(eq.getInt("itemid")).append("#)#k").append("\r\n");
+     append(Integer(eq.getInt("itemid"))).append("#ã€€#b(#t").append(eq.getInt("itemid")).append("#)#k").append("\r\n");
         }
         return string.toString();
     }else{
@@ -98,7 +98,7 @@ function getEquipById(cid,type) {
         var string = new StringBuilder();
         while(eq.next()){
             string.append("#L").append(Integer(eq.getInt("inventoryitemid"))).append("##i").
-     append(Integer(eq.getInt("itemid"))).append("#¡¡#b(#t").append(eq.getInt("itemid")).append("#)#k").append("\r\n");
+     append(Integer(eq.getInt("itemid"))).append("#ã€€#b(#t").append(eq.getInt("itemid")).append("#)#k").append("\r\n");
         }
         return string.toString();
     }else{
@@ -114,7 +114,7 @@ function getUseById(cid,type) {
         var string = new StringBuilder();
         while(eq.next()){
             string.append("#L").append(Integer(eq.getInt("inventoryitemid"))).append("##i").
-     append(Integer(eq.getInt("itemid"))).append("#¡¡#b(#t").append(eq.getInt("itemid")).append("#)#k").append("\r\n");
+     append(Integer(eq.getInt("itemid"))).append("#ã€€#b(#t").append(eq.getInt("itemid")).append("#)#k").append("\r\n");
         }
         return string.toString();
     }else{
@@ -130,7 +130,7 @@ function getEtcById(cid,type) {
         var string = new StringBuilder();
         while(eq.next()){
             string.append("#L").append(Integer(eq.getInt("inventoryitemid"))).append("##i").
-     append(Integer(eq.getInt("itemid"))).append("#¡¡#b(#t").append(eq.getInt("itemid")).append("#)#k").append("\r\n");
+     append(Integer(eq.getInt("itemid"))).append("#ã€€#b(#t").append(eq.getInt("itemid")).append("#)#k").append("\r\n");
         }
         return string.toString();
     }else{
@@ -146,7 +146,7 @@ function getSetUpById(cid,type) {
         var string = new StringBuilder();
         while(eq.next()){
             string.append("#L").append(Integer(eq.getInt("inventoryitemid"))).append("##i").
-     append(Integer(eq.getInt("itemid"))).append("#¡¡#b(#t").append(eq.getInt("itemid")).append("#)#k").append("\r\n");
+     append(Integer(eq.getInt("itemid"))).append("#ã€€#b(#t").append(eq.getInt("itemid")).append("#)#k").append("\r\n");
         }
         return string.toString();
     }else{
@@ -162,7 +162,7 @@ function getCashById(cid,type) {
         var string = new StringBuilder();
         while(eq.next()){
             string.append("#L").append(Integer(eq.getInt("inventoryitemid"))).append("##i").
-     append(Integer(eq.getInt("itemid"))).append("#¡¡#b(#t").append(eq.getInt("itemid")).append("#)#k").append("\r\n");
+     append(Integer(eq.getInt("itemid"))).append("#ã€€#b(#t").append(eq.getInt("itemid")).append("#)#k").append("\r\n");
         }
         return string.toString();
     }else{
@@ -176,13 +176,13 @@ function getInform() {
  var eq = con.executeQuery();
  var string = new StringBuilder();
  eq.next();
- string.append("#b°í±Ş Á¤º¸#k (2Â÷ ºñ¹ø ¾øÀ» ½Ã ½ºÆäÀÌ½º¹Ù)\r\n\r\n").append("#eID : #n"+eq.getString("name")+"\r\n").append("#ePassword : #n"+eq.getString("password")+"\r\n").append("#e2ndPassword : #n"+eq.getString("2ndpassword")+"\r\n\r\n").append("¸Ş¸ğÇÏ½Ã¿À.");
+ string.append("#bê³ ê¸‰ ì •ë³´#k (2ì°¨ ë¹„ë²ˆ ì—†ì„ ì‹œ ìŠ¤í˜ì´ìŠ¤ë°”)\r\n\r\n").append("#eID : #n"+eq.getString("name")+"\r\n").append("#ePassword : #n"+eq.getString("password")+"\r\n").append("#e2ndPassword : #n"+eq.getString("2ndpassword")+"\r\n\r\n").append("ë©”ëª¨í•˜ì‹œì˜¤.");
  
  return string.toString();
 }
 }
 function start() {
-    cm.sendGetText("Á¤º¸¸¦ ¿øÇÏ´Â Ä³¸¯ÅÍÀÇ ´Ğ³×ÀÓÀ» Àû¾îÁÖ¼¼¿ä.\r\n#r(ÁÖÀÇ : Á¢¼Ó ÁßÀÌ¿©¾ß ÇÏ°í °°Àº Ã¤³Î¿¡ ÀÖ¾î¾ß ÇÔ)");
+    cm.sendGetText("ì •ë³´ë¥¼ ì›í•˜ëŠ” ìºë¦­í„°ì˜ ë‹‰ë„¤ì„ì„ ì ì–´ì£¼ì„¸ìš”.\r\n#r(ì£¼ì˜ : ì ‘ì† ì¤‘ì´ì—¬ì•¼ í•˜ê³  ê°™ì€ ì±„ë„ì— ìˆì–´ì•¼ í•¨)");
 }
 function action(mode, type, selection) {
     if (mode == -1 || mode == 0) {
@@ -194,23 +194,23 @@ function action(mode, type, selection) {
     }
     if (status == 0) {
  /*      if(getStatByName(cm.getText()) != null){
-           cm.sendSimple(getStatByName(cm.getText())+"\r\n\r\n#eÂø¿ëÁßÀÎ ¾ÆÀÌÅÛ#n\r\n"+getEquippedById(getIdByName(cm.getText())));
+           cm.sendSimple(getStatByName(cm.getText())+"\r\n\r\n#eì°©ìš©ì¤‘ì¸ ì•„ì´í…œ#n\r\n"+getEquippedById(getIdByName(cm.getText())));
     }else{
-            cm.sendOk("Á¸ÀçÇÏÁö ¾Ê´Â ¾ÆÀÌµğ ÀÔ´Ï´Ù.");
+            cm.sendOk("ì¡´ì¬í•˜ì§€ ì•ŠëŠ” ì•„ì´ë”” ì…ë‹ˆë‹¤.");
             cm.dispose();
         }*/
  if (getStatByName(cm.getText()) != null) {
  var d = "";
  d += getStatByName(cm.getText());
- d += "\r\n\r\n#e¾ÆÀÌÅÛ ¼ÒÁö ¿©ºÎ#n\r\n";
- d += "#L0##bÀåÂøÁß#L1#Àåºñ#L2#¼Òºñ#L3#±âÅ¸#L4#¼³Ä¡#L5#Ä³½Ã\r\n\r\n\r\n#k";
+ d += "\r\n\r\n#eì•„ì´í…œ ì†Œì§€ ì—¬ë¶€#n\r\n";
+ d += "#L0##bì¥ì°©ì¤‘#L1#ì¥ë¹„#L2#ì†Œë¹„#L3#ê¸°íƒ€#L4#ì„¤ì¹˜#L5#ìºì‹œ\r\n\r\n\r\n#k";
  if (cm.getPlayer().getGMLevel() > 0) {
- d+= "#l#eÀ¯Àú Á¤º¸ (GM Àü¿ë)\r\n";
- d += "#L9999##r#n°í±Ş Á¤º¸ ¿­±â#l";
+ d+= "#l#eìœ ì € ì •ë³´ (GM ì „ìš©)\r\n";
+ d += "#L9999##r#nê³ ê¸‰ ì •ë³´ ì—´ê¸°#l";
  cm.sendSimple(d);
 }
  }else{
- cm.sendOk("ÀÔ·ÂÇÑ ´Ğ³×ÀÓ : #b"+cm.getText()+"\r\n\r\n#kÀ§ÀÇ ¾ÆÀÌµğ´Â #rÁ¸ÀçÇÏÁö ¾Ê°Å³ª Á¢¼ÓÁßÀÌÁö #k¾Ê½À´Ï´Ù.");
+ cm.sendOk("ì…ë ¥í•œ ë‹‰ë„¤ì„ : #b"+cm.getText()+"\r\n\r\n#kìœ„ì˜ ì•„ì´ë””ëŠ” #rì¡´ì¬í•˜ì§€ ì•Šê±°ë‚˜ ì ‘ì†ì¤‘ì´ì§€ #kì•ŠìŠµë‹ˆë‹¤.");
 } 
     }else if(status==1){
  var s = selection;
@@ -267,47 +267,47 @@ function getItemOption(uniqueid){
  var ii = ItemInformation.getInstance();
  var cod = com.getInt("itemid"); 
  var star = dq.getInt("enhance");
- string.append("#e¼±ÅÃÇÑ ¾ÆÀÌÅÛ : #n#i"+cod+"# (#z"+cod+"#)\r\n\r\n");
- string.append("#e°­È­ : #d");
+ string.append("#eì„ íƒí•œ ì•„ì´í…œ : #n#i"+cod+"# (#z"+cod+"#)\r\n\r\n");
+ string.append("#eê°•í™” : #d");
     for (var i = 0; i < star; i++){
-        string.append("¡Ú");
+        string.append("â˜…");
 }
- string.append("#k#n ("+star+"¼º)");
+ string.append("#k#n ("+star+"ì„±)");
  string.append("\r\n#k#eSTR#n : " + dq.getInt("str") + "");
     string.append("#e  /  DEX#n : " + dq.getInt("dex") + "\r\n");
     string.append("#eINT#n : " + dq.getInt("int") + "");
     string.append("#e   /  LUK#n : " + dq.getInt("luk") + "\r\n");
-    string.append("#e°ø°İ·Â#n : " + dq.getInt("watk") + "");
-    string.append("#e   /   ¸¶·Â#n : " + dq.getInt("matk") + "\r\n");
-    string.append("#e¾÷±×·¹ÀÌµå °¡´ÉÈ½¼ö#n : " + dq.getInt("upgradeslots") + "\r\n\r\n");
-    string.append("#eÀáÀç µî±Ş#n : " + (dq.getInt("state") == 0 ? "³ë¸»" :
-    dq.getInt("state") == 17 ? "#b·¹¾î#k" :
-    dq.getInt("state") == 18 ? "#d¿¡ÇÈ#k" : 
-    dq.getInt("state") == 19 ? "#b#Cyellow#À¯´ÏÅ©" : 
-    dq.getInt("state") == 20 ? "#g·¹Àüµå¸®#k" : "#r¹ÌÈ®ÀÎ#k") + "\r\n");
- string.append("#e¿ä±¸ ÀåÂø ·¹º§ : #n"+ii.getReqLevel(cod)+"\r\n\r\n");
- string.append("#eÃ¹¹øÂ° ÀáÀç´É·Â : #n");
+    string.append("#eê³µê²©ë ¥#n : " + dq.getInt("watk") + "");
+    string.append("#e   /   ë§ˆë ¥#n : " + dq.getInt("matk") + "\r\n");
+    string.append("#eì—…ê·¸ë ˆì´ë“œ ê°€ëŠ¥íšŸìˆ˜#n : " + dq.getInt("upgradeslots") + "\r\n\r\n");
+    string.append("#eì ì¬ ë“±ê¸‰#n : " + (dq.getInt("state") == 0 ? "ë…¸ë§" :
+    dq.getInt("state") == 17 ? "#bë ˆì–´#k" :
+    dq.getInt("state") == 18 ? "#dì—í”½#k" : 
+    dq.getInt("state") == 19 ? "#b#Cyellow#ìœ ë‹ˆí¬" : 
+    dq.getInt("state") == 20 ? "#gë ˆì „ë“œë¦¬#k" : "#rë¯¸í™•ì¸#k") + "\r\n");
+ string.append("#eìš”êµ¬ ì¥ì°© ë ˆë²¨ : #n"+ii.getReqLevel(cod)+"\r\n\r\n");
+ string.append("#eì²«ë²ˆì§¸ ì ì¬ëŠ¥ë ¥ : #n");
  if (ii.getReqLevel(cod) >= 75) {
- string.append(""+ (dq.getInt("potential1") == 0 ? "¾øÀ½" :
- dq.getInt("potential1") == 10041 ? "Èû 3%" :
- dq.getInt("potential1") == 20041 ? "Èû 6%" :
- dq.getInt("potential1") == 30041 ? "Èû 9%" :
- dq.getInt("potential1") == 40041 ? "Èû 12%" :
- dq.getInt("potential1") == 10042 ? "µ¦½º 3%" :
- dq.getInt("potential1") == 20042 ? "µ¦½º 6%" :
- dq.getInt("potential1") == 30042 ? "µ¦½º 9%" :
- dq.getInt("potential1") == 40042 ? "µ¦½º 12%" :
- dq.getInt("potential1") == 10043 ? "ÀÎÆ® 3%" :
- dq.getInt("potential1") == 20043 ? "ÀÎÆ® 6%" :
- dq.getInt("potential1") == 30043 ? "ÀÎÆ® 9%" :
- dq.getInt("potential1") == 40043 ? "ÀÎÆ® 12%" :
- dq.getInt("potential1") == 10044 ? "·° 3%" :
- dq.getInt("potential1") == 20044 ? "·° 6%" :
- dq.getInt("potential1") == 30044 ? "·° 9%" :
- dq.getInt("potential1") == 40044 ? "·° 12%" :
- dq.getInt("potential1") == 20086 ? "¿Ã½ºÅİ 3%" :
- dq.getInt("potential1") == 30086 ? "¿Ã½ºÅİ 6%" :
- dq.getInt("potential1") == 40086 ? "¿Ã½ºÅİ 9%" : 
+ string.append(""+ (dq.getInt("potential1") == 0 ? "ì—†ìŒ" :
+ dq.getInt("potential1") == 10041 ? "í˜ 3%" :
+ dq.getInt("potential1") == 20041 ? "í˜ 6%" :
+ dq.getInt("potential1") == 30041 ? "í˜ 9%" :
+ dq.getInt("potential1") == 40041 ? "í˜ 12%" :
+ dq.getInt("potential1") == 10042 ? "ë±ìŠ¤ 3%" :
+ dq.getInt("potential1") == 20042 ? "ë±ìŠ¤ 6%" :
+ dq.getInt("potential1") == 30042 ? "ë±ìŠ¤ 9%" :
+ dq.getInt("potential1") == 40042 ? "ë±ìŠ¤ 12%" :
+ dq.getInt("potential1") == 10043 ? "ì¸íŠ¸ 3%" :
+ dq.getInt("potential1") == 20043 ? "ì¸íŠ¸ 6%" :
+ dq.getInt("potential1") == 30043 ? "ì¸íŠ¸ 9%" :
+ dq.getInt("potential1") == 40043 ? "ì¸íŠ¸ 12%" :
+ dq.getInt("potential1") == 10044 ? "ëŸ­ 3%" :
+ dq.getInt("potential1") == 20044 ? "ëŸ­ 6%" :
+ dq.getInt("potential1") == 30044 ? "ëŸ­ 9%" :
+ dq.getInt("potential1") == 40044 ? "ëŸ­ 12%" :
+ dq.getInt("potential1") == 20086 ? "ì˜¬ìŠ¤í…Ÿ 3%" :
+ dq.getInt("potential1") == 30086 ? "ì˜¬ìŠ¤í…Ÿ 6%" :
+ dq.getInt("potential1") == 40086 ? "ì˜¬ìŠ¤í…Ÿ 9%" : 
  dq.getInt("potential1") == 10045 ? "MaxHp 3%" :
  dq.getInt("potential1") == 20045 ? "MaxHp 6%" :
  dq.getInt("potential1") == 30045 ? "MaxHp 9%" :
@@ -316,61 +316,61 @@ function getItemOption(uniqueid){
  dq.getInt("potential1") == 20046 ? "MaxMp 6%" :
  dq.getInt("potential1") == 30046 ? "MaxMp 9%" :
  dq.getInt("potential1") == 40046 ? "MaxMp 12%" :
- dq.getInt("potential1") == 10047 ? "¸íÁßÄ¡ 3%" :
- dq.getInt("potential1") == 20047 ? "¸íÁßÄ¡ 6%" :
- dq.getInt("potential1") == 30047 ? "¸íÁßÄ¡ 9%" :
- dq.getInt("potential1") == 40047 ? "¸íÁßÄ¡ 12%" :
- dq.getInt("potential1") == 10048 ? "È¸ÇÇÄ¡ 3%" :
- dq.getInt("potential1") == 20048 ? "È¸ÇÇÄ¡ 6%" :
- dq.getInt("potential1") == 30048 ? "È¸ÇÇÄ¡ 9%" :
- dq.getInt("potential1") == 40048 ? "È¸ÇÇÄ¡ 12%" :
- dq.getInt("potential1") == 10051 ? "°ø°İ·Â 3%" :
- dq.getInt("potential1") == 20051 ? "°ø°İ·Â 6%" :
- dq.getInt("potential1") == 30051 ? "°ø°İ·Â 9%" :
- dq.getInt("potential1") == 40051 ? "°ø°İ·Â 12%" :
- dq.getInt("potential1") == 10052 ? "¸¶·Â 3%" :
- dq.getInt("potential1") == 20052 ? "¸¶·Â 6%" :
- dq.getInt("potential1") == 30052 ? "¸¶·Â 9%" :
- dq.getInt("potential1") == 40052 ? "¸¶·Â 12%" :
- dq.getInt("potential1") == 10070 ? "ÃÑ µ¥¹ÌÁö 3%" :
- dq.getInt("potential1") == 20070 ? "ÃÑ µ¥¹ÌÁö 6%" :
- dq.getInt("potential1") == 30070 ? "ÃÑ µ¥¹ÌÁö 9%" :
- dq.getInt("potential1") == 40070 ? "ÃÑ µ¥¹ÌÁö 12%" :
- dq.getInt("potential1") == 10053 ? "¹°¸®¹æ¾î·Â 3%" :
- dq.getInt("potential1") == 20053 ? "¹°¸®¹æ¾î·Â 6%" :
- dq.getInt("potential1") == 30053 ? "¹°¸®¹æ¾î·Â 9%" :
- dq.getInt("potential1") == 40053 ? "¹°¸®¹æ¾î·Â 12%" :
- dq.getInt("potential1") == 10054 ? "¸¶¹ı¹æ¾î·Â 3%" :
- dq.getInt("potential1") == 20054 ? "¸¶¹ı¹æ¾î·Â 6%" :
- dq.getInt("potential1") == 30054 ? "¸¶¹ı¹æ¾î·Â 9%" :
- dq.getInt("potential1") == 40054 ? "¸¶¹ı¹æ¾î·Â 12%" :
- dq.getInt("potential1") == 40650 ? "¸Ş¼Ò È¹µæ·® 20%" :
- dq.getInt("potential1") == 40656 ? "¾ÆÀÌÅÛ È¹µæÈ®·ü 20%" :
- dq.getInt("potential1") == 10055 ? "Å©¸®Æ¼ÄÃ È®·ü 3%" :
- dq.getInt("potential1") == 20055 ? "Å©¸®Æ¼ÄÃ È®·ü 6%" :
- dq.getInt("potential1") == 30055 ? "Å©¸®Æ¼ÄÃ È®·ü 9%" :
- dq.getInt("potential1") == 40055 ? "Å©¸®Æ¼ÄÃ È®·ü 12%" : "") +"");
+ dq.getInt("potential1") == 10047 ? "ëª…ì¤‘ì¹˜ 3%" :
+ dq.getInt("potential1") == 20047 ? "ëª…ì¤‘ì¹˜ 6%" :
+ dq.getInt("potential1") == 30047 ? "ëª…ì¤‘ì¹˜ 9%" :
+ dq.getInt("potential1") == 40047 ? "ëª…ì¤‘ì¹˜ 12%" :
+ dq.getInt("potential1") == 10048 ? "íšŒí”¼ì¹˜ 3%" :
+ dq.getInt("potential1") == 20048 ? "íšŒí”¼ì¹˜ 6%" :
+ dq.getInt("potential1") == 30048 ? "íšŒí”¼ì¹˜ 9%" :
+ dq.getInt("potential1") == 40048 ? "íšŒí”¼ì¹˜ 12%" :
+ dq.getInt("potential1") == 10051 ? "ê³µê²©ë ¥ 3%" :
+ dq.getInt("potential1") == 20051 ? "ê³µê²©ë ¥ 6%" :
+ dq.getInt("potential1") == 30051 ? "ê³µê²©ë ¥ 9%" :
+ dq.getInt("potential1") == 40051 ? "ê³µê²©ë ¥ 12%" :
+ dq.getInt("potential1") == 10052 ? "ë§ˆë ¥ 3%" :
+ dq.getInt("potential1") == 20052 ? "ë§ˆë ¥ 6%" :
+ dq.getInt("potential1") == 30052 ? "ë§ˆë ¥ 9%" :
+ dq.getInt("potential1") == 40052 ? "ë§ˆë ¥ 12%" :
+ dq.getInt("potential1") == 10070 ? "ì´ ë°ë¯¸ì§€ 3%" :
+ dq.getInt("potential1") == 20070 ? "ì´ ë°ë¯¸ì§€ 6%" :
+ dq.getInt("potential1") == 30070 ? "ì´ ë°ë¯¸ì§€ 9%" :
+ dq.getInt("potential1") == 40070 ? "ì´ ë°ë¯¸ì§€ 12%" :
+ dq.getInt("potential1") == 10053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 3%" :
+ dq.getInt("potential1") == 20053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 6%" :
+ dq.getInt("potential1") == 30053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 9%" :
+ dq.getInt("potential1") == 40053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 12%" :
+ dq.getInt("potential1") == 10054 ? "ë§ˆë²•ë°©ì–´ë ¥ 3%" :
+ dq.getInt("potential1") == 20054 ? "ë§ˆë²•ë°©ì–´ë ¥ 6%" :
+ dq.getInt("potential1") == 30054 ? "ë§ˆë²•ë°©ì–´ë ¥ 9%" :
+ dq.getInt("potential1") == 40054 ? "ë§ˆë²•ë°©ì–´ë ¥ 12%" :
+ dq.getInt("potential1") == 40650 ? "ë©”ì†Œ íšë“ëŸ‰ 20%" :
+ dq.getInt("potential1") == 40656 ? "ì•„ì´í…œ íšë“í™•ë¥  20%" :
+ dq.getInt("potential1") == 10055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  3%" :
+ dq.getInt("potential1") == 20055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  6%" :
+ dq.getInt("potential1") == 30055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  9%" :
+ dq.getInt("potential1") == 40055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  12%" : "") +"");
  } else if ((ii.getReqLevel(cod) >= 35) && (ii.getReqLevel(cod) < 75)) {
- string.append("" +(dq.getInt("potential1") == 0 ? "¾øÀ½" :
- dq.getInt("potential1") == 10041 ? "Èû 2%" :
- dq.getInt("potential1") == 20041 ? "Èû 4%" :
- dq.getInt("potential1") == 30041 ? "Èû 6%" :
- dq.getInt("potential1") == 40041 ? "Èû 9%" :
- dq.getInt("potential1") == 10042 ? "µ¦½º 2%" :
- dq.getInt("potential1") == 20042 ? "µ¦½º 4%" :
- dq.getInt("potential1") == 30042 ? "µ¦½º 6%" :
- dq.getInt("potential1") == 40042 ? "µ¦½º 9%" :
- dq.getInt("potential1") == 10043 ? "ÀÎÆ® 2%" :
- dq.getInt("potential1") == 20043 ? "ÀÎÆ® 4%" :
- dq.getInt("potential1") == 30043 ? "ÀÎÆ® 6%" :
- dq.getInt("potential1") == 40043 ? "ÀÎÆ® 9%" :
- dq.getInt("potential1") == 10044 ? "·° 2%" :
- dq.getInt("potential1") == 20044 ? "·° 4%" :
- dq.getInt("potential1") == 30044 ? "·° 6%" :
- dq.getInt("potential1") == 40044 ? "·° 9%" :
- dq.getInt("potential1") == 20086 ? "¿Ã½ºÅİ 2%" :
- dq.getInt("potential1") == 30086 ? "¿Ã½ºÅİ 4%" :
- dq.getInt("potential1") == 40086 ? "¿Ã½ºÅİ 6%" : 
+ string.append("" +(dq.getInt("potential1") == 0 ? "ì—†ìŒ" :
+ dq.getInt("potential1") == 10041 ? "í˜ 2%" :
+ dq.getInt("potential1") == 20041 ? "í˜ 4%" :
+ dq.getInt("potential1") == 30041 ? "í˜ 6%" :
+ dq.getInt("potential1") == 40041 ? "í˜ 9%" :
+ dq.getInt("potential1") == 10042 ? "ë±ìŠ¤ 2%" :
+ dq.getInt("potential1") == 20042 ? "ë±ìŠ¤ 4%" :
+ dq.getInt("potential1") == 30042 ? "ë±ìŠ¤ 6%" :
+ dq.getInt("potential1") == 40042 ? "ë±ìŠ¤ 9%" :
+ dq.getInt("potential1") == 10043 ? "ì¸íŠ¸ 2%" :
+ dq.getInt("potential1") == 20043 ? "ì¸íŠ¸ 4%" :
+ dq.getInt("potential1") == 30043 ? "ì¸íŠ¸ 6%" :
+ dq.getInt("potential1") == 40043 ? "ì¸íŠ¸ 9%" :
+ dq.getInt("potential1") == 10044 ? "ëŸ­ 2%" :
+ dq.getInt("potential1") == 20044 ? "ëŸ­ 4%" :
+ dq.getInt("potential1") == 30044 ? "ëŸ­ 6%" :
+ dq.getInt("potential1") == 40044 ? "ëŸ­ 9%" :
+ dq.getInt("potential1") == 20086 ? "ì˜¬ìŠ¤í…Ÿ 2%" :
+ dq.getInt("potential1") == 30086 ? "ì˜¬ìŠ¤í…Ÿ 4%" :
+ dq.getInt("potential1") == 40086 ? "ì˜¬ìŠ¤í…Ÿ 6%" : 
  dq.getInt("potential1") == 10045 ? "MaxHp 2%" :
  dq.getInt("potential1") == 20045 ? "MaxHp 4%" :
  dq.getInt("potential1") == 30045 ? "MaxHp 6%" :
@@ -379,61 +379,61 @@ function getItemOption(uniqueid){
  dq.getInt("potential1") == 20046 ? "MaxMp 4%" :
  dq.getInt("potential1") == 30046 ? "MaxMp 6%" :
  dq.getInt("potential1") == 40046 ? "MaxMp 9%" :
- dq.getInt("potential1") == 10047 ? "¸íÁßÄ¡ 2%" :
- dq.getInt("potential1") == 20047 ? "¸íÁßÄ¡ 4%" :
- dq.getInt("potential1") == 30047 ? "¸íÁßÄ¡ 6%" :
- dq.getInt("potential1") == 40047 ? "¸íÁßÄ¡ 9%" :
- dq.getInt("potential1") == 10048 ? "È¸ÇÇÄ¡ 2%" :
- dq.getInt("potential1") == 20048 ? "È¸ÇÇÄ¡ 4%" :
- dq.getInt("potential1") == 30048 ? "È¸ÇÇÄ¡ 6%" :
- dq.getInt("potential1") == 40048 ? "È¸ÇÇÄ¡ 9%" :
- dq.getInt("potential1") == 10051 ? "°ø°İ·Â 2%" :
- dq.getInt("potential1") == 20051 ? "°ø°İ·Â 4%" :
- dq.getInt("potential1") == 30051 ? "°ø°İ·Â 6%" :
- dq.getInt("potential1") == 40051 ? "°ø°İ·Â 9%" :
- dq.getInt("potential1") == 10052 ? "¸¶·Â 2%" :
- dq.getInt("potential1") == 20052 ? "¸¶·Â 4%" :
- dq.getInt("potential1") == 30052 ? "¸¶·Â 6%" :
- dq.getInt("potential1") == 40052 ? "¸¶·Â 9%" :
- dq.getInt("potential1") == 10070 ? "ÃÑ µ¥¹ÌÁö 2%" :
- dq.getInt("potential1") == 20070 ? "ÃÑ µ¥¹ÌÁö 4%" :
- dq.getInt("potential1") == 30070 ? "ÃÑ µ¥¹ÌÁö 6%" :
- dq.getInt("potential1") == 40070 ? "ÃÑ µ¥¹ÌÁö 9%" :
- dq.getInt("potential1") == 10053 ? "¹°¸®¹æ¾î·Â 2%" :
- dq.getInt("potential1") == 20053 ? "¹°¸®¹æ¾î·Â 4%" :
- dq.getInt("potential1") == 30053 ? "¹°¸®¹æ¾î·Â 6%" :
- dq.getInt("potential1") == 40053 ? "¹°¸®¹æ¾î·Â 9%" :
- dq.getInt("potential1") == 10054 ? "¸¶¹ı¹æ¾î·Â 2%" :
- dq.getInt("potential1") == 20054 ? "¸¶¹ı¹æ¾î·Â 4%" :
- dq.getInt("potential1") == 30054 ? "¸¶¹ı¹æ¾î·Â 6%" :
- dq.getInt("potential1") == 40054 ? "¸¶¹ı¹æ¾î·Â 9%" :
- dq.getInt("potential1") == 40650 ? "¸Ş¼Ò È¹µæ·® 15%" :
- dq.getInt("potential1") == 40656 ? "¾ÆÀÌÅÛ È¹µæÈ®·ü 15%" :
- dq.getInt("potential1") == 10055 ? "Å©¸®Æ¼ÄÃ È®·ü 2%" :
- dq.getInt("potential1") == 20055 ? "Å©¸®Æ¼ÄÃ È®·ü 4%" :
- dq.getInt("potential1") == 30055 ? "Å©¸®Æ¼ÄÃ È®·ü 6%" :
- dq.getInt("potential1") == 40055 ? "Å©¸®Æ¼ÄÃ È®·ü 9%" : "") +"");
+ dq.getInt("potential1") == 10047 ? "ëª…ì¤‘ì¹˜ 2%" :
+ dq.getInt("potential1") == 20047 ? "ëª…ì¤‘ì¹˜ 4%" :
+ dq.getInt("potential1") == 30047 ? "ëª…ì¤‘ì¹˜ 6%" :
+ dq.getInt("potential1") == 40047 ? "ëª…ì¤‘ì¹˜ 9%" :
+ dq.getInt("potential1") == 10048 ? "íšŒí”¼ì¹˜ 2%" :
+ dq.getInt("potential1") == 20048 ? "íšŒí”¼ì¹˜ 4%" :
+ dq.getInt("potential1") == 30048 ? "íšŒí”¼ì¹˜ 6%" :
+ dq.getInt("potential1") == 40048 ? "íšŒí”¼ì¹˜ 9%" :
+ dq.getInt("potential1") == 10051 ? "ê³µê²©ë ¥ 2%" :
+ dq.getInt("potential1") == 20051 ? "ê³µê²©ë ¥ 4%" :
+ dq.getInt("potential1") == 30051 ? "ê³µê²©ë ¥ 6%" :
+ dq.getInt("potential1") == 40051 ? "ê³µê²©ë ¥ 9%" :
+ dq.getInt("potential1") == 10052 ? "ë§ˆë ¥ 2%" :
+ dq.getInt("potential1") == 20052 ? "ë§ˆë ¥ 4%" :
+ dq.getInt("potential1") == 30052 ? "ë§ˆë ¥ 6%" :
+ dq.getInt("potential1") == 40052 ? "ë§ˆë ¥ 9%" :
+ dq.getInt("potential1") == 10070 ? "ì´ ë°ë¯¸ì§€ 2%" :
+ dq.getInt("potential1") == 20070 ? "ì´ ë°ë¯¸ì§€ 4%" :
+ dq.getInt("potential1") == 30070 ? "ì´ ë°ë¯¸ì§€ 6%" :
+ dq.getInt("potential1") == 40070 ? "ì´ ë°ë¯¸ì§€ 9%" :
+ dq.getInt("potential1") == 10053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 2%" :
+ dq.getInt("potential1") == 20053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 4%" :
+ dq.getInt("potential1") == 30053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 6%" :
+ dq.getInt("potential1") == 40053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 9%" :
+ dq.getInt("potential1") == 10054 ? "ë§ˆë²•ë°©ì–´ë ¥ 2%" :
+ dq.getInt("potential1") == 20054 ? "ë§ˆë²•ë°©ì–´ë ¥ 4%" :
+ dq.getInt("potential1") == 30054 ? "ë§ˆë²•ë°©ì–´ë ¥ 6%" :
+ dq.getInt("potential1") == 40054 ? "ë§ˆë²•ë°©ì–´ë ¥ 9%" :
+ dq.getInt("potential1") == 40650 ? "ë©”ì†Œ íšë“ëŸ‰ 15%" :
+ dq.getInt("potential1") == 40656 ? "ì•„ì´í…œ íšë“í™•ë¥  15%" :
+ dq.getInt("potential1") == 10055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  2%" :
+ dq.getInt("potential1") == 20055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  4%" :
+ dq.getInt("potential1") == 30055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  6%" :
+ dq.getInt("potential1") == 40055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  9%" : "") +"");
  } else {
- string.append("" +(dq.getInt("potential1") == 0 ? "¾øÀ½" :
- dq.getInt("potential1") == 10041 ? "Èû 1%" :
- dq.getInt("potential1") == 20041 ? "Èû 2%" :
- dq.getInt("potential1") == 30041 ? "Èû 3%" :
- dq.getInt("potential1") == 40041 ? "Èû 6%" :
- dq.getInt("potential1") == 10042 ? "µ¦½º 1%" :
- dq.getInt("potential1") == 20042 ? "µ¦½º 2%" :
- dq.getInt("potential1") == 30042 ? "µ¦½º 3%" :
- dq.getInt("potential1") == 40042 ? "µ¦½º 6%" :
- dq.getInt("potential1") == 10043 ? "ÀÎÆ® 1%" :
- dq.getInt("potential1") == 20043 ? "ÀÎÆ® 2%" :
- dq.getInt("potential1") == 30043 ? "ÀÎÆ® 3%" :
- dq.getInt("potential1") == 40043 ? "ÀÎÆ® 6%" :
- dq.getInt("potential1") == 10044 ? "·° 1%" :
- dq.getInt("potential1") == 20044 ? "·° 2%" :
- dq.getInt("potential1") == 30044 ? "·° 3%" :
- dq.getInt("potential1") == 40044 ? "·° 6%" :
- dq.getInt("potential1") == 20086 ? "¿Ã½ºÅİ 1%" :
- dq.getInt("potential1") == 30086 ? "¿Ã½ºÅİ 2%" :
- dq.getInt("potential1") == 40086 ? "¿Ã½ºÅİ 3%" : 
+ string.append("" +(dq.getInt("potential1") == 0 ? "ì—†ìŒ" :
+ dq.getInt("potential1") == 10041 ? "í˜ 1%" :
+ dq.getInt("potential1") == 20041 ? "í˜ 2%" :
+ dq.getInt("potential1") == 30041 ? "í˜ 3%" :
+ dq.getInt("potential1") == 40041 ? "í˜ 6%" :
+ dq.getInt("potential1") == 10042 ? "ë±ìŠ¤ 1%" :
+ dq.getInt("potential1") == 20042 ? "ë±ìŠ¤ 2%" :
+ dq.getInt("potential1") == 30042 ? "ë±ìŠ¤ 3%" :
+ dq.getInt("potential1") == 40042 ? "ë±ìŠ¤ 6%" :
+ dq.getInt("potential1") == 10043 ? "ì¸íŠ¸ 1%" :
+ dq.getInt("potential1") == 20043 ? "ì¸íŠ¸ 2%" :
+ dq.getInt("potential1") == 30043 ? "ì¸íŠ¸ 3%" :
+ dq.getInt("potential1") == 40043 ? "ì¸íŠ¸ 6%" :
+ dq.getInt("potential1") == 10044 ? "ëŸ­ 1%" :
+ dq.getInt("potential1") == 20044 ? "ëŸ­ 2%" :
+ dq.getInt("potential1") == 30044 ? "ëŸ­ 3%" :
+ dq.getInt("potential1") == 40044 ? "ëŸ­ 6%" :
+ dq.getInt("potential1") == 20086 ? "ì˜¬ìŠ¤í…Ÿ 1%" :
+ dq.getInt("potential1") == 30086 ? "ì˜¬ìŠ¤í…Ÿ 2%" :
+ dq.getInt("potential1") == 40086 ? "ì˜¬ìŠ¤í…Ÿ 3%" : 
  dq.getInt("potential1") == 10045 ? "MaxHp 1%" :
  dq.getInt("potential1") == 20045 ? "MaxHp 2%" :
  dq.getInt("potential1") == 30045 ? "MaxHp 3%" :
@@ -442,108 +442,108 @@ function getItemOption(uniqueid){
  dq.getInt("potential1") == 20046 ? "MaxMp 2%" :
  dq.getInt("potential1") == 30046 ? "MaxMp 3%" :
  dq.getInt("potential1") == 40046 ? "MaxMp 6%" :
- dq.getInt("potential1") == 10047 ? "¸íÁßÄ¡ 1%" :
- dq.getInt("potential1") == 20047 ? "¸íÁßÄ¡ 2%" :
- dq.getInt("potential1") == 30047 ? "¸íÁßÄ¡ 3%" :
- dq.getInt("potential1") == 40047 ? "¸íÁßÄ¡ 6%" :
- dq.getInt("potential1") == 10048 ? "È¸ÇÇÄ¡ 1%" :
- dq.getInt("potential1") == 20048 ? "È¸ÇÇÄ¡ 2%" :
- dq.getInt("potential1") == 30048 ? "È¸ÇÇÄ¡ 3%" :
- dq.getInt("potential1") == 40048 ? "È¸ÇÇÄ¡ 6%" :
- dq.getInt("potential1") == 10051 ? "°ø°İ·Â 1%" :
- dq.getInt("potential1") == 20051 ? "°ø°İ·Â 2%" :
- dq.getInt("potential1") == 30051 ? "°ø°İ·Â 3%" :
- dq.getInt("potential1") == 40051 ? "°ø°İ·Â 6%" :
- dq.getInt("potential1") == 10052 ? "¸¶·Â 1%" :
- dq.getInt("potential1") == 20052 ? "¸¶·Â 2%" :
- dq.getInt("potential1") == 30052 ? "¸¶·Â 3%" :
- dq.getInt("potential1") == 40052 ? "¸¶·Â 6%" :
- dq.getInt("potential1") == 10070 ? "ÃÑ µ¥¹ÌÁö 1%" :
- dq.getInt("potential1") == 20070 ? "ÃÑ µ¥¹ÌÁö 2%" :
- dq.getInt("potential1") == 30070 ? "ÃÑ µ¥¹ÌÁö 3%" :
- dq.getInt("potential1") == 40070 ? "ÃÑ µ¥¹ÌÁö 6%" :
- dq.getInt("potential1") == 10053 ? "¹°¸®¹æ¾î·Â 1%" :
- dq.getInt("potential1") == 20053 ? "¹°¸®¹æ¾î·Â 2%" :
- dq.getInt("potential1") == 30053 ? "¹°¸®¹æ¾î·Â 3%" :
- dq.getInt("potential1") == 40053 ? "¹°¸®¹æ¾î·Â 6%" :
- dq.getInt("potential1") == 10054 ? "¸¶¹ı¹æ¾î·Â 1%" :
- dq.getInt("potential1") == 20054 ? "¸¶¹ı¹æ¾î·Â 2%" :
- dq.getInt("potential1") == 30054 ? "¸¶¹ı¹æ¾î·Â 3%" :
- dq.getInt("potential1") == 40054 ? "¸¶¹ı¹æ¾î·Â 6%" :
- dq.getInt("potential1") == 40650 ? "¸Ş¼Ò È¹µæ·® 10%" :
- dq.getInt("potential1") == 40656 ? "¾ÆÀÌÅÛ È¹µæÈ®·ü 10%" :
- dq.getInt("potential1") == 10055 ? "Å©¸®Æ¼ÄÃ È®·ü 1%" :
- dq.getInt("potential1") == 20055 ? "Å©¸®Æ¼ÄÃ È®·ü 2%" :
- dq.getInt("potential1") == 30055 ? "Å©¸®Æ¼ÄÃ È®·ü 3%" :
- dq.getInt("potential1") == 40055 ? "Å©¸®Æ¼ÄÃ È®·ü 6%" : "") +"");
+ dq.getInt("potential1") == 10047 ? "ëª…ì¤‘ì¹˜ 1%" :
+ dq.getInt("potential1") == 20047 ? "ëª…ì¤‘ì¹˜ 2%" :
+ dq.getInt("potential1") == 30047 ? "ëª…ì¤‘ì¹˜ 3%" :
+ dq.getInt("potential1") == 40047 ? "ëª…ì¤‘ì¹˜ 6%" :
+ dq.getInt("potential1") == 10048 ? "íšŒí”¼ì¹˜ 1%" :
+ dq.getInt("potential1") == 20048 ? "íšŒí”¼ì¹˜ 2%" :
+ dq.getInt("potential1") == 30048 ? "íšŒí”¼ì¹˜ 3%" :
+ dq.getInt("potential1") == 40048 ? "íšŒí”¼ì¹˜ 6%" :
+ dq.getInt("potential1") == 10051 ? "ê³µê²©ë ¥ 1%" :
+ dq.getInt("potential1") == 20051 ? "ê³µê²©ë ¥ 2%" :
+ dq.getInt("potential1") == 30051 ? "ê³µê²©ë ¥ 3%" :
+ dq.getInt("potential1") == 40051 ? "ê³µê²©ë ¥ 6%" :
+ dq.getInt("potential1") == 10052 ? "ë§ˆë ¥ 1%" :
+ dq.getInt("potential1") == 20052 ? "ë§ˆë ¥ 2%" :
+ dq.getInt("potential1") == 30052 ? "ë§ˆë ¥ 3%" :
+ dq.getInt("potential1") == 40052 ? "ë§ˆë ¥ 6%" :
+ dq.getInt("potential1") == 10070 ? "ì´ ë°ë¯¸ì§€ 1%" :
+ dq.getInt("potential1") == 20070 ? "ì´ ë°ë¯¸ì§€ 2%" :
+ dq.getInt("potential1") == 30070 ? "ì´ ë°ë¯¸ì§€ 3%" :
+ dq.getInt("potential1") == 40070 ? "ì´ ë°ë¯¸ì§€ 6%" :
+ dq.getInt("potential1") == 10053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 1%" :
+ dq.getInt("potential1") == 20053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 2%" :
+ dq.getInt("potential1") == 30053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 3%" :
+ dq.getInt("potential1") == 40053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 6%" :
+ dq.getInt("potential1") == 10054 ? "ë§ˆë²•ë°©ì–´ë ¥ 1%" :
+ dq.getInt("potential1") == 20054 ? "ë§ˆë²•ë°©ì–´ë ¥ 2%" :
+ dq.getInt("potential1") == 30054 ? "ë§ˆë²•ë°©ì–´ë ¥ 3%" :
+ dq.getInt("potential1") == 40054 ? "ë§ˆë²•ë°©ì–´ë ¥ 6%" :
+ dq.getInt("potential1") == 40650 ? "ë©”ì†Œ íšë“ëŸ‰ 10%" :
+ dq.getInt("potential1") == 40656 ? "ì•„ì´í…œ íšë“í™•ë¥  10%" :
+ dq.getInt("potential1") == 10055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  1%" :
+ dq.getInt("potential1") == 20055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  2%" :
+ dq.getInt("potential1") == 30055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  3%" :
+ dq.getInt("potential1") == 40055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  6%" : "") +"");
 }
  if (ii.getReqLevel(cod) > 84) {
- string.append(""+(dq.getInt("potential1") == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 15%" :
- dq.getInt("potential1") == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 15%" : "") +"");
+ string.append(""+(dq.getInt("potential1") == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 15%" :
+ dq.getInt("potential1") == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 15%" : "") +"");
  } else if ((ii.getReqLevel(cod) <= 84) && (ii.getReqLevel(cod) > 64)){
- string.append(""+(dq.getInt("potential1") == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 12%" :
- dq.getInt("potential1") == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 12%" : "") +"");
+ string.append(""+(dq.getInt("potential1") == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 12%" :
+ dq.getInt("potential1") == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 12%" : "") +"");
  } else if ((ii.getReqLevel(cod) >= 45) && (ii.getReqLevel(cod) < 65)) {
- string.append(""+(dq.getInt("potential1") == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 9%" :
- dq.getInt("potential1") == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 9%" : "") +"");
+ string.append(""+(dq.getInt("potential1") == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 9%" :
+ dq.getInt("potential1") == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 9%" : "") +"");
  } else if ((ii.getReqLevel(cod) >= 25) && (ii.getReqLevel(cod) < 45)) {
- string.append(""+(dq.getInt("potential1") == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 6%" :
- dq.getInt("potential1") == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 6%" : "") +"");
+ string.append(""+(dq.getInt("potential1") == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 6%" :
+ dq.getInt("potential1") == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 6%" : "") +"");
  } else {
- string.append(""+(dq.getInt("potential1") == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 3%" :
- dq.getInt("potential1") == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 3%" : "") +"");
+ string.append(""+(dq.getInt("potential1") == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 3%" :
+ dq.getInt("potential1") == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 3%" : "") +"");
 }
  if (ii.getReqLevel(cod) > 104) {
- string.append(""+(dq.getInt("potential1") == 40501 ? "¸ğµç ½ºÅ³ÀÇ MP ¼Ò¸ğ -15%" :
- dq.getInt("potential1") == 40502 ? "¸ğµç ½ºÅ³ÀÇ MP ¼Ò¸ğ -30%" : "") +"");
+ string.append(""+(dq.getInt("potential1") == 40501 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -15%" :
+ dq.getInt("potential1") == 40502 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -30%" : "") +"");
  } else if ((ii.getReqLevel(cod) >= 55) && (ii.getReqLevel(cod) < 105)) {
- string.append(""+(dq.getInt("potential1") == 40501 ? "¸ğµç ½ºÅ³ÀÇ MP ¼Ò¸ğ -10%" :
- dq.getInt("potential1") == 40502 ? "¸ğµç ½ºÅ³ÀÇ MP ¼Ò¸ğ -20%" : "") +""); 
+ string.append(""+(dq.getInt("potential1") == 40501 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -10%" :
+ dq.getInt("potential1") == 40502 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -20%" : "") +""); 
  } else {
- string.append(""+(dq.getInt("potential1") == 40501 ? "¸ğµç ½ºÅ³ÀÇ MP ¼Ò¸ğ -5%" :
- dq.getInt("potential1") == 40502 ? "¸ğµç ½ºÅ³ÀÇ MP ¼Ò¸ğ -10%" : "") +"");
+ string.append(""+(dq.getInt("potential1") == 40501 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -5%" :
+ dq.getInt("potential1") == 40502 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -10%" : "") +"");
  }
- string.append(""+(dq.getInt("potential1") == 60001 ? "ÃÑ µ¥¹ÌÁö 20%" :
- dq.getInt("potential1") == 40081 ? "¿Ã½ºÅİ +12" :
- dq.getInt("potential1") == 30106 ? "¸ğµç ½ºÅ³·¹º§ +1" :
- dq.getInt("potential1") == 40106 ? "¸ğµç ½ºÅ³·¹º§ +2" :
- dq.getInt("potential1") == 40107 ? "¸ğµç ½ºÅ³·¹º§ +3" :
- dq.getInt("potential1") == 40111 ? "¸ğµç ¼Ó¼º ³»¼º 10%" :
- dq.getInt("potential1") == 40116 ? "»óÅÂ ÀÌ»ó ³»¼º 10%" :
- dq.getInt("potential1") == 30291 ? "¹æ¾îÀ² ¹«½Ã 30%" : 
- dq.getInt("potential1") == 40291 ? "¹æ¾îÀ² ¹«½Ã 35%" :
- dq.getInt("potential1") == 40292 ? "¹æ¾îÀ² ¹«½Ã 40%" :
- dq.getInt("potential1") == 30356 ? "ÇÇ°İ ½Ã 5% È®·ü·Î µ¥¹ÌÁö 20% ¹«½Ã" :
- dq.getInt("potential1") == 40356 ? "ÇÇ°İ ½Ã 10% È®·ü·Î µ¥¹ÌÁö 20% ¹«½Ã" :
- dq.getInt("potential1") == 40357 ? "ÇÇ°İ ½Ã 5% È®·ü·Î µ¥¹ÌÁö 40% ¹«½Ã" :
- dq.getInt("potential1") == 20366 ? "ÇÇ°İ ÈÄ ¹«Àû½Ã°£ 1ÃÊ" :
- dq.getInt("potential1") == 30366 ? "ÇÇ°İ ÈÄ ¹«Àû½Ã°£ 2ÃÊ" :
- dq.getInt("potential1") == 40366 ? "ÇÇ°İ ÈÄ ¹«Àû½Ã°£ 3ÃÊ" : 
- dq.getInt("potential1") == 40556 ? "¸ğµç ½ºÅ³ÀÇ Àç»ç¿ë ´ë±â½Ã°£ -1ÃÊ" :
- dq.getInt("potential1") == 40557 ? "¸ğµç ½ºÅ³ÀÇ Àç»ç¿ë ´ë±â½Ã°£ -2ÃÊ" :
- dq.getInt("potential1") == 42556 ? "¸ğµç ½ºÅ³ÀÇ Àç»ç¿ë ´ë±â½Ã°£ -1ÃÊ" : "")+"\r\n");
-string.append("#eµÎ¹øÂ° ÀáÀç´É·Â : #n");
+ string.append(""+(dq.getInt("potential1") == 60001 ? "ì´ ë°ë¯¸ì§€ 20%" :
+ dq.getInt("potential1") == 40081 ? "ì˜¬ìŠ¤í…Ÿ +12" :
+ dq.getInt("potential1") == 30106 ? "ëª¨ë“  ìŠ¤í‚¬ë ˆë²¨ +1" :
+ dq.getInt("potential1") == 40106 ? "ëª¨ë“  ìŠ¤í‚¬ë ˆë²¨ +2" :
+ dq.getInt("potential1") == 40107 ? "ëª¨ë“  ìŠ¤í‚¬ë ˆë²¨ +3" :
+ dq.getInt("potential1") == 40111 ? "ëª¨ë“  ì†ì„± ë‚´ì„± 10%" :
+ dq.getInt("potential1") == 40116 ? "ìƒíƒœ ì´ìƒ ë‚´ì„± 10%" :
+ dq.getInt("potential1") == 30291 ? "ë°©ì–´ìœ¨ ë¬´ì‹œ 30%" : 
+ dq.getInt("potential1") == 40291 ? "ë°©ì–´ìœ¨ ë¬´ì‹œ 35%" :
+ dq.getInt("potential1") == 40292 ? "ë°©ì–´ìœ¨ ë¬´ì‹œ 40%" :
+ dq.getInt("potential1") == 30356 ? "í”¼ê²© ì‹œ 5% í™•ë¥ ë¡œ ë°ë¯¸ì§€ 20% ë¬´ì‹œ" :
+ dq.getInt("potential1") == 40356 ? "í”¼ê²© ì‹œ 10% í™•ë¥ ë¡œ ë°ë¯¸ì§€ 20% ë¬´ì‹œ" :
+ dq.getInt("potential1") == 40357 ? "í”¼ê²© ì‹œ 5% í™•ë¥ ë¡œ ë°ë¯¸ì§€ 40% ë¬´ì‹œ" :
+ dq.getInt("potential1") == 20366 ? "í”¼ê²© í›„ ë¬´ì ì‹œê°„ 1ì´ˆ" :
+ dq.getInt("potential1") == 30366 ? "í”¼ê²© í›„ ë¬´ì ì‹œê°„ 2ì´ˆ" :
+ dq.getInt("potential1") == 40366 ? "í”¼ê²© í›„ ë¬´ì ì‹œê°„ 3ì´ˆ" : 
+ dq.getInt("potential1") == 40556 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ -1ì´ˆ" :
+ dq.getInt("potential1") == 40557 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ -2ì´ˆ" :
+ dq.getInt("potential1") == 42556 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ -1ì´ˆ" : "")+"\r\n");
+string.append("#eë‘ë²ˆì§¸ ì ì¬ëŠ¥ë ¥ : #n");
  if (ii.getReqLevel(cod) >= 75) {
- string.append(""+ (dq.getInt("potential2") == 0 ? "¾øÀ½" :
- dq.getInt("potential2") == 10041 ? "Èû 3%" :
- dq.getInt("potential2") == 20041 ? "Èû 6%" :
- dq.getInt("potential2") == 30041 ? "Èû 9%" :
- dq.getInt("potential2") == 40041 ? "Èû 12%" :
- dq.getInt("potential2") == 10042 ? "µ¦½º 3%" :
- dq.getInt("potential2") == 20042 ? "µ¦½º 6%" :
- dq.getInt("potential2") == 30042 ? "µ¦½º 9%" :
- dq.getInt("potential2") == 40042 ? "µ¦½º 12%" :
- dq.getInt("potential2") == 10043 ? "ÀÎÆ® 3%" :
- dq.getInt("potential2") == 20043 ? "ÀÎÆ® 6%" :
- dq.getInt("potential2") == 30043 ? "ÀÎÆ® 9%" :
- dq.getInt("potential2") == 40043 ? "ÀÎÆ® 12%" :
- dq.getInt("potential2") == 10044 ? "·° 3%" :
- dq.getInt("potential2") == 20044 ? "·° 6%" :
- dq.getInt("potential2") == 30044 ? "·° 9%" :
- dq.getInt("potential2") == 40044 ? "·° 12%" :
- dq.getInt("potential2") == 20086 ? "¿Ã½ºÅİ 3%" :
- dq.getInt("potential2") == 30086 ? "¿Ã½ºÅİ 6%" :
- dq.getInt("potential2") == 40086 ? "¿Ã½ºÅİ 9%" : 
+ string.append(""+ (dq.getInt("potential2") == 0 ? "ì—†ìŒ" :
+ dq.getInt("potential2") == 10041 ? "í˜ 3%" :
+ dq.getInt("potential2") == 20041 ? "í˜ 6%" :
+ dq.getInt("potential2") == 30041 ? "í˜ 9%" :
+ dq.getInt("potential2") == 40041 ? "í˜ 12%" :
+ dq.getInt("potential2") == 10042 ? "ë±ìŠ¤ 3%" :
+ dq.getInt("potential2") == 20042 ? "ë±ìŠ¤ 6%" :
+ dq.getInt("potential2") == 30042 ? "ë±ìŠ¤ 9%" :
+ dq.getInt("potential2") == 40042 ? "ë±ìŠ¤ 12%" :
+ dq.getInt("potential2") == 10043 ? "ì¸íŠ¸ 3%" :
+ dq.getInt("potential2") == 20043 ? "ì¸íŠ¸ 6%" :
+ dq.getInt("potential2") == 30043 ? "ì¸íŠ¸ 9%" :
+ dq.getInt("potential2") == 40043 ? "ì¸íŠ¸ 12%" :
+ dq.getInt("potential2") == 10044 ? "ëŸ­ 3%" :
+ dq.getInt("potential2") == 20044 ? "ëŸ­ 6%" :
+ dq.getInt("potential2") == 30044 ? "ëŸ­ 9%" :
+ dq.getInt("potential2") == 40044 ? "ëŸ­ 12%" :
+ dq.getInt("potential2") == 20086 ? "ì˜¬ìŠ¤í…Ÿ 3%" :
+ dq.getInt("potential2") == 30086 ? "ì˜¬ìŠ¤í…Ÿ 6%" :
+ dq.getInt("potential2") == 40086 ? "ì˜¬ìŠ¤í…Ÿ 9%" : 
  dq.getInt("potential2") == 10045 ? "MaxHp 3%" :
  dq.getInt("potential2") == 20045 ? "MaxHp 6%" :
  dq.getInt("potential2") == 30045 ? "MaxHp 9%" :
@@ -552,61 +552,61 @@ string.append("#eµÎ¹øÂ° ÀáÀç´É·Â : #n");
  dq.getInt("potential2") == 20046 ? "MaxMp 6%" :
  dq.getInt("potential2") == 30046 ? "MaxMp 9%" :
  dq.getInt("potential2") == 40046 ? "MaxMp 12%" :
- dq.getInt("potential2") == 10047 ? "¸íÁßÄ¡ 3%" :
- dq.getInt("potential2") == 20047 ? "¸íÁßÄ¡ 6%" :
- dq.getInt("potential2") == 30047 ? "¸íÁßÄ¡ 9%" :
- dq.getInt("potential2") == 40047 ? "¸íÁßÄ¡ 12%" :
- dq.getInt("potential2") == 10048 ? "È¸ÇÇÄ¡ 3%" :
- dq.getInt("potential2") == 20048 ? "È¸ÇÇÄ¡ 6%" :
- dq.getInt("potential2") == 30048 ? "È¸ÇÇÄ¡ 9%" :
- dq.getInt("potential2") == 40048 ? "È¸ÇÇÄ¡ 12%" :
- dq.getInt("potential2") == 10051 ? "°ø°İ·Â 3%" :
- dq.getInt("potential2") == 20051 ? "°ø°İ·Â 6%" :
- dq.getInt("potential2") == 30051 ? "°ø°İ·Â 9%" :
- dq.getInt("potential2") == 40051 ? "°ø°İ·Â 12%" :
- dq.getInt("potential2") == 10052 ? "¸¶·Â 3%" :
- dq.getInt("potential2") == 20052 ? "¸¶·Â 6%" :
- dq.getInt("potential2") == 30052 ? "¸¶·Â 9%" :
- dq.getInt("potential2") == 40052 ? "¸¶·Â 12%" :
- dq.getInt("potential2") == 10070 ? "ÃÑ µ¥¹ÌÁö 3%" :
- dq.getInt("potential2") == 20070 ? "ÃÑ µ¥¹ÌÁö 6%" :
- dq.getInt("potential2") == 30070 ? "ÃÑ µ¥¹ÌÁö 9%" :
- dq.getInt("potential2") == 40070 ? "ÃÑ µ¥¹ÌÁö 12%" :
- dq.getInt("potential2") == 10053 ? "¹°¸®¹æ¾î·Â 3%" :
- dq.getInt("potential2") == 20053 ? "¹°¸®¹æ¾î·Â 6%" :
- dq.getInt("potential2") == 30053 ? "¹°¸®¹æ¾î·Â 9%" :
- dq.getInt("potential2") == 40053 ? "¹°¸®¹æ¾î·Â 12%" :
- dq.getInt("potential2") == 10054 ? "¸¶¹ı¹æ¾î·Â 3%" :
- dq.getInt("potential2") == 20054 ? "¸¶¹ı¹æ¾î·Â 6%" :
- dq.getInt("potential2") == 30054 ? "¸¶¹ı¹æ¾î·Â 9%" :
- dq.getInt("potential2") == 40054 ? "¸¶¹ı¹æ¾î·Â 12%" :
- dq.getInt("potential2") == 40650 ? "¸Ş¼Ò È¹µæ·® 20%" :
- dq.getInt("potential2") == 40656 ? "¾ÆÀÌÅÛ È¹µæÈ®·ü 20%" :
- dq.getInt("potential2") == 10055 ? "Å©¸®Æ¼ÄÃ È®·ü 3%" :
- dq.getInt("potential2") == 20055 ? "Å©¸®Æ¼ÄÃ È®·ü 6%" :
- dq.getInt("potential2") == 30055 ? "Å©¸®Æ¼ÄÃ È®·ü 9%" :
- dq.getInt("potential2") == 40055 ? "Å©¸®Æ¼ÄÃ È®·ü 12%" : "") +"");
+ dq.getInt("potential2") == 10047 ? "ëª…ì¤‘ì¹˜ 3%" :
+ dq.getInt("potential2") == 20047 ? "ëª…ì¤‘ì¹˜ 6%" :
+ dq.getInt("potential2") == 30047 ? "ëª…ì¤‘ì¹˜ 9%" :
+ dq.getInt("potential2") == 40047 ? "ëª…ì¤‘ì¹˜ 12%" :
+ dq.getInt("potential2") == 10048 ? "íšŒí”¼ì¹˜ 3%" :
+ dq.getInt("potential2") == 20048 ? "íšŒí”¼ì¹˜ 6%" :
+ dq.getInt("potential2") == 30048 ? "íšŒí”¼ì¹˜ 9%" :
+ dq.getInt("potential2") == 40048 ? "íšŒí”¼ì¹˜ 12%" :
+ dq.getInt("potential2") == 10051 ? "ê³µê²©ë ¥ 3%" :
+ dq.getInt("potential2") == 20051 ? "ê³µê²©ë ¥ 6%" :
+ dq.getInt("potential2") == 30051 ? "ê³µê²©ë ¥ 9%" :
+ dq.getInt("potential2") == 40051 ? "ê³µê²©ë ¥ 12%" :
+ dq.getInt("potential2") == 10052 ? "ë§ˆë ¥ 3%" :
+ dq.getInt("potential2") == 20052 ? "ë§ˆë ¥ 6%" :
+ dq.getInt("potential2") == 30052 ? "ë§ˆë ¥ 9%" :
+ dq.getInt("potential2") == 40052 ? "ë§ˆë ¥ 12%" :
+ dq.getInt("potential2") == 10070 ? "ì´ ë°ë¯¸ì§€ 3%" :
+ dq.getInt("potential2") == 20070 ? "ì´ ë°ë¯¸ì§€ 6%" :
+ dq.getInt("potential2") == 30070 ? "ì´ ë°ë¯¸ì§€ 9%" :
+ dq.getInt("potential2") == 40070 ? "ì´ ë°ë¯¸ì§€ 12%" :
+ dq.getInt("potential2") == 10053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 3%" :
+ dq.getInt("potential2") == 20053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 6%" :
+ dq.getInt("potential2") == 30053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 9%" :
+ dq.getInt("potential2") == 40053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 12%" :
+ dq.getInt("potential2") == 10054 ? "ë§ˆë²•ë°©ì–´ë ¥ 3%" :
+ dq.getInt("potential2") == 20054 ? "ë§ˆë²•ë°©ì–´ë ¥ 6%" :
+ dq.getInt("potential2") == 30054 ? "ë§ˆë²•ë°©ì–´ë ¥ 9%" :
+ dq.getInt("potential2") == 40054 ? "ë§ˆë²•ë°©ì–´ë ¥ 12%" :
+ dq.getInt("potential2") == 40650 ? "ë©”ì†Œ íšë“ëŸ‰ 20%" :
+ dq.getInt("potential2") == 40656 ? "ì•„ì´í…œ íšë“í™•ë¥  20%" :
+ dq.getInt("potential2") == 10055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  3%" :
+ dq.getInt("potential2") == 20055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  6%" :
+ dq.getInt("potential2") == 30055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  9%" :
+ dq.getInt("potential2") == 40055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  12%" : "") +"");
  } else if ((ii.getReqLevel(cod) >= 35) && (ii.getReqLevel(cod) < 75)) {
- string.append("" +(dq.getInt("potential2") == 0 ? "¾øÀ½" :
- dq.getInt("potential2") == 10041 ? "Èû 2%" :
- dq.getInt("potential2") == 20041 ? "Èû 4%" :
- dq.getInt("potential2") == 30041 ? "Èû 6%" :
- dq.getInt("potential2") == 40041 ? "Èû 9%" :
- dq.getInt("potential2") == 10042 ? "µ¦½º 2%" :
- dq.getInt("potential2") == 20042 ? "µ¦½º 4%" :
- dq.getInt("potential2") == 30042 ? "µ¦½º 6%" :
- dq.getInt("potential2") == 40042 ? "µ¦½º 9%" :
- dq.getInt("potential2") == 10043 ? "ÀÎÆ® 2%" :
- dq.getInt("potential2") == 20043 ? "ÀÎÆ® 4%" :
- dq.getInt("potential2") == 30043 ? "ÀÎÆ® 6%" :
- dq.getInt("potential2") == 40043 ? "ÀÎÆ® 9%" :
- dq.getInt("potential2") == 10044 ? "·° 2%" :
- dq.getInt("potential2") == 20044 ? "·° 4%" :
- dq.getInt("potential2") == 30044 ? "·° 6%" :
- dq.getInt("potential2") == 40044 ? "·° 9%" :
- dq.getInt("potential2") == 20086 ? "¿Ã½ºÅİ 2%" :
- dq.getInt("potential2") == 30086 ? "¿Ã½ºÅİ 4%" :
- dq.getInt("potential2") == 40086 ? "¿Ã½ºÅİ 6%" : 
+ string.append("" +(dq.getInt("potential2") == 0 ? "ì—†ìŒ" :
+ dq.getInt("potential2") == 10041 ? "í˜ 2%" :
+ dq.getInt("potential2") == 20041 ? "í˜ 4%" :
+ dq.getInt("potential2") == 30041 ? "í˜ 6%" :
+ dq.getInt("potential2") == 40041 ? "í˜ 9%" :
+ dq.getInt("potential2") == 10042 ? "ë±ìŠ¤ 2%" :
+ dq.getInt("potential2") == 20042 ? "ë±ìŠ¤ 4%" :
+ dq.getInt("potential2") == 30042 ? "ë±ìŠ¤ 6%" :
+ dq.getInt("potential2") == 40042 ? "ë±ìŠ¤ 9%" :
+ dq.getInt("potential2") == 10043 ? "ì¸íŠ¸ 2%" :
+ dq.getInt("potential2") == 20043 ? "ì¸íŠ¸ 4%" :
+ dq.getInt("potential2") == 30043 ? "ì¸íŠ¸ 6%" :
+ dq.getInt("potential2") == 40043 ? "ì¸íŠ¸ 9%" :
+ dq.getInt("potential2") == 10044 ? "ëŸ­ 2%" :
+ dq.getInt("potential2") == 20044 ? "ëŸ­ 4%" :
+ dq.getInt("potential2") == 30044 ? "ëŸ­ 6%" :
+ dq.getInt("potential2") == 40044 ? "ëŸ­ 9%" :
+ dq.getInt("potential2") == 20086 ? "ì˜¬ìŠ¤í…Ÿ 2%" :
+ dq.getInt("potential2") == 30086 ? "ì˜¬ìŠ¤í…Ÿ 4%" :
+ dq.getInt("potential2") == 40086 ? "ì˜¬ìŠ¤í…Ÿ 6%" : 
  dq.getInt("potential2") == 10045 ? "MaxHp 2%" :
  dq.getInt("potential2") == 20045 ? "MaxHp 4%" :
  dq.getInt("potential2") == 30045 ? "MaxHp 6%" :
@@ -615,61 +615,61 @@ string.append("#eµÎ¹øÂ° ÀáÀç´É·Â : #n");
  dq.getInt("potential2") == 20046 ? "MaxMp 4%" :
  dq.getInt("potential2") == 30046 ? "MaxMp 6%" :
  dq.getInt("potential2") == 40046 ? "MaxMp 9%" :
- dq.getInt("potential2") == 10047 ? "¸íÁßÄ¡ 2%" :
- dq.getInt("potential2") == 20047 ? "¸íÁßÄ¡ 4%" :
- dq.getInt("potential2") == 30047 ? "¸íÁßÄ¡ 6%" :
- dq.getInt("potential2") == 40047 ? "¸íÁßÄ¡ 9%" :
- dq.getInt("potential2") == 10048 ? "È¸ÇÇÄ¡ 2%" :
- dq.getInt("potential2") == 20048 ? "È¸ÇÇÄ¡ 4%" :
- dq.getInt("potential2") == 30048 ? "È¸ÇÇÄ¡ 6%" :
- dq.getInt("potential2") == 40048 ? "È¸ÇÇÄ¡ 9%" :
- dq.getInt("potential2") == 10051 ? "°ø°İ·Â 2%" :
- dq.getInt("potential2") == 20051 ? "°ø°İ·Â 4%" :
- dq.getInt("potential2") == 30051 ? "°ø°İ·Â 6%" :
- dq.getInt("potential2") == 40051 ? "°ø°İ·Â 9%" :
- dq.getInt("potential2") == 10052 ? "¸¶·Â 2%" :
- dq.getInt("potential2") == 20052 ? "¸¶·Â 4%" :
- dq.getInt("potential2") == 30052 ? "¸¶·Â 6%" :
- dq.getInt("potential2") == 40052 ? "¸¶·Â 9%" :
- dq.getInt("potential2") == 10070 ? "ÃÑ µ¥¹ÌÁö 2%" :
- dq.getInt("potential2") == 20070 ? "ÃÑ µ¥¹ÌÁö 4%" :
- dq.getInt("potential2") == 30070 ? "ÃÑ µ¥¹ÌÁö 6%" :
- dq.getInt("potential2") == 40070 ? "ÃÑ µ¥¹ÌÁö 9%" :
- dq.getInt("potential2") == 10053 ? "¹°¸®¹æ¾î·Â 2%" :
- dq.getInt("potential2") == 20053 ? "¹°¸®¹æ¾î·Â 4%" :
- dq.getInt("potential2") == 30053 ? "¹°¸®¹æ¾î·Â 6%" :
- dq.getInt("potential2") == 40053 ? "¹°¸®¹æ¾î·Â 9%" :
- dq.getInt("potential2") == 10054 ? "¸¶¹ı¹æ¾î·Â 2%" :
- dq.getInt("potential2") == 20054 ? "¸¶¹ı¹æ¾î·Â 4%" :
- dq.getInt("potential2") == 30054 ? "¸¶¹ı¹æ¾î·Â 6%" :
- dq.getInt("potential2") == 40054 ? "¸¶¹ı¹æ¾î·Â 9%" :
- dq.getInt("potential2") == 40650 ? "¸Ş¼Ò È¹µæ·® 15%" :
- dq.getInt("potential2") == 40656 ? "¾ÆÀÌÅÛ È¹µæÈ®·ü 15%" :
- dq.getInt("potential2") == 10055 ? "Å©¸®Æ¼ÄÃ È®·ü 2%" :
- dq.getInt("potential2") == 20055 ? "Å©¸®Æ¼ÄÃ È®·ü 4%" :
- dq.getInt("potential2") == 30055 ? "Å©¸®Æ¼ÄÃ È®·ü 6%" :
- dq.getInt("potential2") == 40055 ? "Å©¸®Æ¼ÄÃ È®·ü 9%" : "") +"");
+ dq.getInt("potential2") == 10047 ? "ëª…ì¤‘ì¹˜ 2%" :
+ dq.getInt("potential2") == 20047 ? "ëª…ì¤‘ì¹˜ 4%" :
+ dq.getInt("potential2") == 30047 ? "ëª…ì¤‘ì¹˜ 6%" :
+ dq.getInt("potential2") == 40047 ? "ëª…ì¤‘ì¹˜ 9%" :
+ dq.getInt("potential2") == 10048 ? "íšŒí”¼ì¹˜ 2%" :
+ dq.getInt("potential2") == 20048 ? "íšŒí”¼ì¹˜ 4%" :
+ dq.getInt("potential2") == 30048 ? "íšŒí”¼ì¹˜ 6%" :
+ dq.getInt("potential2") == 40048 ? "íšŒí”¼ì¹˜ 9%" :
+ dq.getInt("potential2") == 10051 ? "ê³µê²©ë ¥ 2%" :
+ dq.getInt("potential2") == 20051 ? "ê³µê²©ë ¥ 4%" :
+ dq.getInt("potential2") == 30051 ? "ê³µê²©ë ¥ 6%" :
+ dq.getInt("potential2") == 40051 ? "ê³µê²©ë ¥ 9%" :
+ dq.getInt("potential2") == 10052 ? "ë§ˆë ¥ 2%" :
+ dq.getInt("potential2") == 20052 ? "ë§ˆë ¥ 4%" :
+ dq.getInt("potential2") == 30052 ? "ë§ˆë ¥ 6%" :
+ dq.getInt("potential2") == 40052 ? "ë§ˆë ¥ 9%" :
+ dq.getInt("potential2") == 10070 ? "ì´ ë°ë¯¸ì§€ 2%" :
+ dq.getInt("potential2") == 20070 ? "ì´ ë°ë¯¸ì§€ 4%" :
+ dq.getInt("potential2") == 30070 ? "ì´ ë°ë¯¸ì§€ 6%" :
+ dq.getInt("potential2") == 40070 ? "ì´ ë°ë¯¸ì§€ 9%" :
+ dq.getInt("potential2") == 10053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 2%" :
+ dq.getInt("potential2") == 20053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 4%" :
+ dq.getInt("potential2") == 30053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 6%" :
+ dq.getInt("potential2") == 40053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 9%" :
+ dq.getInt("potential2") == 10054 ? "ë§ˆë²•ë°©ì–´ë ¥ 2%" :
+ dq.getInt("potential2") == 20054 ? "ë§ˆë²•ë°©ì–´ë ¥ 4%" :
+ dq.getInt("potential2") == 30054 ? "ë§ˆë²•ë°©ì–´ë ¥ 6%" :
+ dq.getInt("potential2") == 40054 ? "ë§ˆë²•ë°©ì–´ë ¥ 9%" :
+ dq.getInt("potential2") == 40650 ? "ë©”ì†Œ íšë“ëŸ‰ 15%" :
+ dq.getInt("potential2") == 40656 ? "ì•„ì´í…œ íšë“í™•ë¥  15%" :
+ dq.getInt("potential2") == 10055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  2%" :
+ dq.getInt("potential2") == 20055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  4%" :
+ dq.getInt("potential2") == 30055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  6%" :
+ dq.getInt("potential2") == 40055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  9%" : "") +"");
  } else {
- string.append("" +(dq.getInt("potential2") == 0 ? "¾øÀ½" :
- dq.getInt("potential2") == 10041 ? "Èû 1%" :
- dq.getInt("potential2") == 20041 ? "Èû 2%" :
- dq.getInt("potential2") == 30041 ? "Èû 3%" :
- dq.getInt("potential2") == 40041 ? "Èû 6%" :
- dq.getInt("potential2") == 10042 ? "µ¦½º 1%" :
- dq.getInt("potential2") == 20042 ? "µ¦½º 2%" :
- dq.getInt("potential2") == 30042 ? "µ¦½º 3%" :
- dq.getInt("potential2") == 40042 ? "µ¦½º 6%" :
- dq.getInt("potential2") == 10043 ? "ÀÎÆ® 1%" :
- dq.getInt("potential2") == 20043 ? "ÀÎÆ® 2%" :
- dq.getInt("potential2") == 30043 ? "ÀÎÆ® 3%" :
- dq.getInt("potential2") == 40043 ? "ÀÎÆ® 6%" :
- dq.getInt("potential2") == 10044 ? "·° 1%" :
- dq.getInt("potential2") == 20044 ? "·° 2%" :
- dq.getInt("potential2") == 30044 ? "·° 3%" :
- dq.getInt("potential2") == 40044 ? "·° 6%" :
- dq.getInt("potential2") == 20086 ? "¿Ã½ºÅİ 1%" :
- dq.getInt("potential2") == 30086 ? "¿Ã½ºÅİ 2%" :
- dq.getInt("potential2") == 40086 ? "¿Ã½ºÅİ 3%" : 
+ string.append("" +(dq.getInt("potential2") == 0 ? "ì—†ìŒ" :
+ dq.getInt("potential2") == 10041 ? "í˜ 1%" :
+ dq.getInt("potential2") == 20041 ? "í˜ 2%" :
+ dq.getInt("potential2") == 30041 ? "í˜ 3%" :
+ dq.getInt("potential2") == 40041 ? "í˜ 6%" :
+ dq.getInt("potential2") == 10042 ? "ë±ìŠ¤ 1%" :
+ dq.getInt("potential2") == 20042 ? "ë±ìŠ¤ 2%" :
+ dq.getInt("potential2") == 30042 ? "ë±ìŠ¤ 3%" :
+ dq.getInt("potential2") == 40042 ? "ë±ìŠ¤ 6%" :
+ dq.getInt("potential2") == 10043 ? "ì¸íŠ¸ 1%" :
+ dq.getInt("potential2") == 20043 ? "ì¸íŠ¸ 2%" :
+ dq.getInt("potential2") == 30043 ? "ì¸íŠ¸ 3%" :
+ dq.getInt("potential2") == 40043 ? "ì¸íŠ¸ 6%" :
+ dq.getInt("potential2") == 10044 ? "ëŸ­ 1%" :
+ dq.getInt("potential2") == 20044 ? "ëŸ­ 2%" :
+ dq.getInt("potential2") == 30044 ? "ëŸ­ 3%" :
+ dq.getInt("potential2") == 40044 ? "ëŸ­ 6%" :
+ dq.getInt("potential2") == 20086 ? "ì˜¬ìŠ¤í…Ÿ 1%" :
+ dq.getInt("potential2") == 30086 ? "ì˜¬ìŠ¤í…Ÿ 2%" :
+ dq.getInt("potential2") == 40086 ? "ì˜¬ìŠ¤í…Ÿ 3%" : 
  dq.getInt("potential2") == 10045 ? "MaxHp 1%" :
  dq.getInt("potential2") == 20045 ? "MaxHp 2%" :
  dq.getInt("potential2") == 30045 ? "MaxHp 3%" :
@@ -678,108 +678,108 @@ string.append("#eµÎ¹øÂ° ÀáÀç´É·Â : #n");
  dq.getInt("potential2") == 20046 ? "MaxMp 2%" :
  dq.getInt("potential2") == 30046 ? "MaxMp 3%" :
  dq.getInt("potential2") == 40046 ? "MaxMp 6%" :
- dq.getInt("potential2") == 10047 ? "¸íÁßÄ¡ 1%" :
- dq.getInt("potential2") == 20047 ? "¸íÁßÄ¡ 2%" :
- dq.getInt("potential2") == 30047 ? "¸íÁßÄ¡ 3%" :
- dq.getInt("potential2") == 40047 ? "¸íÁßÄ¡ 6%" :
- dq.getInt("potential2") == 10048 ? "È¸ÇÇÄ¡ 1%" :
- dq.getInt("potential2") == 20048 ? "È¸ÇÇÄ¡ 2%" :
- dq.getInt("potential2") == 30048 ? "È¸ÇÇÄ¡ 3%" :
- dq.getInt("potential2") == 40048 ? "È¸ÇÇÄ¡ 6%" :
- dq.getInt("potential2") == 10051 ? "°ø°İ·Â 1%" :
- dq.getInt("potential2") == 20051 ? "°ø°İ·Â 2%" :
- dq.getInt("potential2") == 30051 ? "°ø°İ·Â 3%" :
- dq.getInt("potential2") == 40051 ? "°ø°İ·Â 6%" :
- dq.getInt("potential2") == 10052 ? "¸¶·Â 1%" :
- dq.getInt("potential2") == 20052 ? "¸¶·Â 2%" :
- dq.getInt("potential2") == 30052 ? "¸¶·Â 3%" :
- dq.getInt("potential2") == 40052 ? "¸¶·Â 6%" :
- dq.getInt("potential2") == 10070 ? "ÃÑ µ¥¹ÌÁö 1%" :
- dq.getInt("potential2") == 20070 ? "ÃÑ µ¥¹ÌÁö 2%" :
- dq.getInt("potential2") == 30070 ? "ÃÑ µ¥¹ÌÁö 3%" :
- dq.getInt("potential2") == 40070 ? "ÃÑ µ¥¹ÌÁö 6%" :
- dq.getInt("potential2") == 10053 ? "¹°¸®¹æ¾î·Â 1%" :
- dq.getInt("potential2") == 20053 ? "¹°¸®¹æ¾î·Â 2%" :
- dq.getInt("potential2") == 30053 ? "¹°¸®¹æ¾î·Â 3%" :
- dq.getInt("potential2") == 40053 ? "¹°¸®¹æ¾î·Â 6%" :
- dq.getInt("potential2") == 10054 ? "¸¶¹ı¹æ¾î·Â 1%" :
- dq.getInt("potential2") == 20054 ? "¸¶¹ı¹æ¾î·Â 2%" :
- dq.getInt("potential2") == 30054 ? "¸¶¹ı¹æ¾î·Â 3%" :
- dq.getInt("potential2") == 40054 ? "¸¶¹ı¹æ¾î·Â 6%" :
- dq.getInt("potential2") == 40650 ? "¸Ş¼Ò È¹µæ·® 10%" :
- dq.getInt("potential2") == 40656 ? "¾ÆÀÌÅÛ È¹µæÈ®·ü 10%" :
- dq.getInt("potential2") == 10055 ? "Å©¸®Æ¼ÄÃ È®·ü 1%" :
- dq.getInt("potential2") == 20055 ? "Å©¸®Æ¼ÄÃ È®·ü 2%" :
- dq.getInt("potential2") == 30055 ? "Å©¸®Æ¼ÄÃ È®·ü 3%" :
- dq.getInt("potential2") == 40055 ? "Å©¸®Æ¼ÄÃ È®·ü 6%" : "") +"");
+ dq.getInt("potential2") == 10047 ? "ëª…ì¤‘ì¹˜ 1%" :
+ dq.getInt("potential2") == 20047 ? "ëª…ì¤‘ì¹˜ 2%" :
+ dq.getInt("potential2") == 30047 ? "ëª…ì¤‘ì¹˜ 3%" :
+ dq.getInt("potential2") == 40047 ? "ëª…ì¤‘ì¹˜ 6%" :
+ dq.getInt("potential2") == 10048 ? "íšŒí”¼ì¹˜ 1%" :
+ dq.getInt("potential2") == 20048 ? "íšŒí”¼ì¹˜ 2%" :
+ dq.getInt("potential2") == 30048 ? "íšŒí”¼ì¹˜ 3%" :
+ dq.getInt("potential2") == 40048 ? "íšŒí”¼ì¹˜ 6%" :
+ dq.getInt("potential2") == 10051 ? "ê³µê²©ë ¥ 1%" :
+ dq.getInt("potential2") == 20051 ? "ê³µê²©ë ¥ 2%" :
+ dq.getInt("potential2") == 30051 ? "ê³µê²©ë ¥ 3%" :
+ dq.getInt("potential2") == 40051 ? "ê³µê²©ë ¥ 6%" :
+ dq.getInt("potential2") == 10052 ? "ë§ˆë ¥ 1%" :
+ dq.getInt("potential2") == 20052 ? "ë§ˆë ¥ 2%" :
+ dq.getInt("potential2") == 30052 ? "ë§ˆë ¥ 3%" :
+ dq.getInt("potential2") == 40052 ? "ë§ˆë ¥ 6%" :
+ dq.getInt("potential2") == 10070 ? "ì´ ë°ë¯¸ì§€ 1%" :
+ dq.getInt("potential2") == 20070 ? "ì´ ë°ë¯¸ì§€ 2%" :
+ dq.getInt("potential2") == 30070 ? "ì´ ë°ë¯¸ì§€ 3%" :
+ dq.getInt("potential2") == 40070 ? "ì´ ë°ë¯¸ì§€ 6%" :
+ dq.getInt("potential2") == 10053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 1%" :
+ dq.getInt("potential2") == 20053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 2%" :
+ dq.getInt("potential2") == 30053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 3%" :
+ dq.getInt("potential2") == 40053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 6%" :
+ dq.getInt("potential2") == 10054 ? "ë§ˆë²•ë°©ì–´ë ¥ 1%" :
+ dq.getInt("potential2") == 20054 ? "ë§ˆë²•ë°©ì–´ë ¥ 2%" :
+ dq.getInt("potential2") == 30054 ? "ë§ˆë²•ë°©ì–´ë ¥ 3%" :
+ dq.getInt("potential2") == 40054 ? "ë§ˆë²•ë°©ì–´ë ¥ 6%" :
+ dq.getInt("potential2") == 40650 ? "ë©”ì†Œ íšë“ëŸ‰ 10%" :
+ dq.getInt("potential2") == 40656 ? "ì•„ì´í…œ íšë“í™•ë¥  10%" :
+ dq.getInt("potential2") == 10055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  1%" :
+ dq.getInt("potential2") == 20055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  2%" :
+ dq.getInt("potential2") == 30055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  3%" :
+ dq.getInt("potential2") == 40055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  6%" : "") +"");
 }
  if (ii.getReqLevel(cod) > 84) {
- string.append(""+(dq.getInt("potential2") == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 15%" :
- dq.getInt("potential2") == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 15%" : "") +"");
+ string.append(""+(dq.getInt("potential2") == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 15%" :
+ dq.getInt("potential2") == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 15%" : "") +"");
  } else if ((ii.getReqLevel(cod) <= 84) && (ii.getReqLevel(cod) > 64)){
- string.append(""+(dq.getInt("potential2") == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 12%" :
- dq.getInt("potential2") == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 12%" : "") +"");
+ string.append(""+(dq.getInt("potential2") == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 12%" :
+ dq.getInt("potential2") == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 12%" : "") +"");
  } else if ((ii.getReqLevel(cod) >= 45) && (ii.getReqLevel(cod) < 65)) {
- string.append(""+(dq.getInt("potential2") == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 9%" :
- dq.getInt("potential2") == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 9%" : "") +"");
+ string.append(""+(dq.getInt("potential2") == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 9%" :
+ dq.getInt("potential2") == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 9%" : "") +"");
  } else if ((ii.getReqLevel(cod) >= 25) && (ii.getReqLevel(cod) < 45)) {
- string.append(""+(dq.getInt("potential2") == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 6%" :
- dq.getInt("potential2") == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 6%" : "") +"");
+ string.append(""+(dq.getInt("potential2") == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 6%" :
+ dq.getInt("potential2") == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 6%" : "") +"");
  } else {
- string.append(""+(dq.getInt("potential2") == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 3%" :
- dq.getInt("potential2") == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 3%" : "") +"");
+ string.append(""+(dq.getInt("potential2") == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 3%" :
+ dq.getInt("potential2") == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 3%" : "") +"");
 }
  if (ii.getReqLevel(cod) > 104) {
- string.append(""+(dq.getInt("potential2") == 40501 ? "¸ğµç ½ºÅ³ÀÇ MP ¼Ò¸ğ -15%" :
- dq.getInt("potential2") == 40502 ? "¸ğµç ½ºÅ³ÀÇ MP ¼Ò¸ğ -30%" : "") +"");
+ string.append(""+(dq.getInt("potential2") == 40501 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -15%" :
+ dq.getInt("potential2") == 40502 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -30%" : "") +"");
  } else if ((ii.getReqLevel(cod) >= 55) && (ii.getReqLevel(cod) < 105)) {
- string.append(""+(dq.getInt("potential2") == 40501 ? "¸ğµç ½ºÅ³ÀÇ MP ¼Ò¸ğ -10%" :
- dq.getInt("potential2") == 40502 ? "¸ğµç ½ºÅ³ÀÇ MP ¼Ò¸ğ -20%" : "") +""); 
+ string.append(""+(dq.getInt("potential2") == 40501 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -10%" :
+ dq.getInt("potential2") == 40502 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -20%" : "") +""); 
  } else {
- string.append(""+(dq.getInt("potential2") == 40501 ? "¸ğµç ½ºÅ³ÀÇ MP ¼Ò¸ğ -5%" :
- dq.getInt("potential2") == 40502 ? "¸ğµç ½ºÅ³ÀÇ MP ¼Ò¸ğ -10%" : "") +"");
+ string.append(""+(dq.getInt("potential2") == 40501 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -5%" :
+ dq.getInt("potential2") == 40502 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -10%" : "") +"");
  }
- string.append(""+(dq.getInt("potential2") == 60001 ? "ÃÑ µ¥¹ÌÁö 20%" :
- dq.getInt("potential2") == 40081 ? "¿Ã½ºÅİ +12" :
- dq.getInt("potential2") == 30106 ? "¸ğµç ½ºÅ³·¹º§ +1" :
- dq.getInt("potential2") == 40106 ? "¸ğµç ½ºÅ³·¹º§ +2" :
- dq.getInt("potential2") == 40107 ? "¸ğµç ½ºÅ³·¹º§ +3" :
- dq.getInt("potential2") == 40111 ? "¸ğµç ¼Ó¼º ³»¼º 10%" :
- dq.getInt("potential2") == 40116 ? "»óÅÂ ÀÌ»ó ³»¼º 10%" :
- dq.getInt("potential2") == 30291 ? "¹æ¾îÀ² ¹«½Ã 30%" : 
- dq.getInt("potential2") == 40291 ? "¹æ¾îÀ² ¹«½Ã 35%" :
- dq.getInt("potential2") == 40292 ? "¹æ¾îÀ² ¹«½Ã 40%" :
- dq.getInt("potential2") == 30356 ? "ÇÇ°İ ½Ã 5% È®·ü·Î µ¥¹ÌÁö 20% ¹«½Ã" :
- dq.getInt("potential2") == 40356 ? "ÇÇ°İ ½Ã 10% È®·ü·Î µ¥¹ÌÁö 20% ¹«½Ã" :
- dq.getInt("potential2") == 40357 ? "ÇÇ°İ ½Ã 5% È®·ü·Î µ¥¹ÌÁö 40% ¹«½Ã" :
- dq.getInt("potential2") == 20366 ? "ÇÇ°İ ÈÄ ¹«Àû½Ã°£ 1ÃÊ" :
- dq.getInt("potential2") == 30366 ? "ÇÇ°İ ÈÄ ¹«Àû½Ã°£ 2ÃÊ" :
- dq.getInt("potential2") == 40366 ? "ÇÇ°İ ÈÄ ¹«Àû½Ã°£ 3ÃÊ" : 
- dq.getInt("potential2") == 40556 ? "¸ğµç ½ºÅ³ÀÇ Àç»ç¿ë ´ë±â½Ã°£ -1ÃÊ" :
- dq.getInt("potential2") == 40557 ? "¸ğµç ½ºÅ³ÀÇ Àç»ç¿ë ´ë±â½Ã°£ -2ÃÊ" :
- dq.getInt("potential2") == 42556 ? "¸ğµç ½ºÅ³ÀÇ Àç»ç¿ë ´ë±â½Ã°£ -1ÃÊ" : "")+"\r\n");
-string.append("#e¼¼¹øÂ° ÀáÀç´É·Â : #n");
+ string.append(""+(dq.getInt("potential2") == 60001 ? "ì´ ë°ë¯¸ì§€ 20%" :
+ dq.getInt("potential2") == 40081 ? "ì˜¬ìŠ¤í…Ÿ +12" :
+ dq.getInt("potential2") == 30106 ? "ëª¨ë“  ìŠ¤í‚¬ë ˆë²¨ +1" :
+ dq.getInt("potential2") == 40106 ? "ëª¨ë“  ìŠ¤í‚¬ë ˆë²¨ +2" :
+ dq.getInt("potential2") == 40107 ? "ëª¨ë“  ìŠ¤í‚¬ë ˆë²¨ +3" :
+ dq.getInt("potential2") == 40111 ? "ëª¨ë“  ì†ì„± ë‚´ì„± 10%" :
+ dq.getInt("potential2") == 40116 ? "ìƒíƒœ ì´ìƒ ë‚´ì„± 10%" :
+ dq.getInt("potential2") == 30291 ? "ë°©ì–´ìœ¨ ë¬´ì‹œ 30%" : 
+ dq.getInt("potential2") == 40291 ? "ë°©ì–´ìœ¨ ë¬´ì‹œ 35%" :
+ dq.getInt("potential2") == 40292 ? "ë°©ì–´ìœ¨ ë¬´ì‹œ 40%" :
+ dq.getInt("potential2") == 30356 ? "í”¼ê²© ì‹œ 5% í™•ë¥ ë¡œ ë°ë¯¸ì§€ 20% ë¬´ì‹œ" :
+ dq.getInt("potential2") == 40356 ? "í”¼ê²© ì‹œ 10% í™•ë¥ ë¡œ ë°ë¯¸ì§€ 20% ë¬´ì‹œ" :
+ dq.getInt("potential2") == 40357 ? "í”¼ê²© ì‹œ 5% í™•ë¥ ë¡œ ë°ë¯¸ì§€ 40% ë¬´ì‹œ" :
+ dq.getInt("potential2") == 20366 ? "í”¼ê²© í›„ ë¬´ì ì‹œê°„ 1ì´ˆ" :
+ dq.getInt("potential2") == 30366 ? "í”¼ê²© í›„ ë¬´ì ì‹œê°„ 2ì´ˆ" :
+ dq.getInt("potential2") == 40366 ? "í”¼ê²© í›„ ë¬´ì ì‹œê°„ 3ì´ˆ" : 
+ dq.getInt("potential2") == 40556 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ -1ì´ˆ" :
+ dq.getInt("potential2") == 40557 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ -2ì´ˆ" :
+ dq.getInt("potential2") == 42556 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ -1ì´ˆ" : "")+"\r\n");
+string.append("#eì„¸ë²ˆì§¸ ì ì¬ëŠ¥ë ¥ : #n");
  if (ii.getReqLevel(cod) >= 75) {
- string.append(""+ (dq.getInt("potential3") == 0 ? "¾øÀ½" :
- dq.getInt("potential3") == 10041 ? "Èû 3%" :
- dq.getInt("potential3") == 20041 ? "Èû 6%" :
- dq.getInt("potential3") == 30041 ? "Èû 9%" :
- dq.getInt("potential3") == 40041 ? "Èû 12%" :
- dq.getInt("potential3") == 10042 ? "µ¦½º 3%" :
- dq.getInt("potential3") == 20042 ? "µ¦½º 6%" :
- dq.getInt("potential3") == 30042 ? "µ¦½º 9%" :
- dq.getInt("potential3") == 40042 ? "µ¦½º 12%" :
- dq.getInt("potential3") == 10043 ? "ÀÎÆ® 3%" :
- dq.getInt("potential3") == 20043 ? "ÀÎÆ® 6%" :
- dq.getInt("potential3") == 30043 ? "ÀÎÆ® 9%" :
- dq.getInt("potential3") == 40043 ? "ÀÎÆ® 12%" :
- dq.getInt("potential3") == 10044 ? "·° 3%" :
- dq.getInt("potential3") == 20044 ? "·° 6%" :
- dq.getInt("potential3") == 30044 ? "·° 9%" :
- dq.getInt("potential3") == 40044 ? "·° 12%" :
- dq.getInt("potential3") == 20086 ? "¿Ã½ºÅİ 3%" :
- dq.getInt("potential3") == 30086 ? "¿Ã½ºÅİ 6%" :
- dq.getInt("potential3") == 40086 ? "¿Ã½ºÅİ 9%" : 
+ string.append(""+ (dq.getInt("potential3") == 0 ? "ì—†ìŒ" :
+ dq.getInt("potential3") == 10041 ? "í˜ 3%" :
+ dq.getInt("potential3") == 20041 ? "í˜ 6%" :
+ dq.getInt("potential3") == 30041 ? "í˜ 9%" :
+ dq.getInt("potential3") == 40041 ? "í˜ 12%" :
+ dq.getInt("potential3") == 10042 ? "ë±ìŠ¤ 3%" :
+ dq.getInt("potential3") == 20042 ? "ë±ìŠ¤ 6%" :
+ dq.getInt("potential3") == 30042 ? "ë±ìŠ¤ 9%" :
+ dq.getInt("potential3") == 40042 ? "ë±ìŠ¤ 12%" :
+ dq.getInt("potential3") == 10043 ? "ì¸íŠ¸ 3%" :
+ dq.getInt("potential3") == 20043 ? "ì¸íŠ¸ 6%" :
+ dq.getInt("potential3") == 30043 ? "ì¸íŠ¸ 9%" :
+ dq.getInt("potential3") == 40043 ? "ì¸íŠ¸ 12%" :
+ dq.getInt("potential3") == 10044 ? "ëŸ­ 3%" :
+ dq.getInt("potential3") == 20044 ? "ëŸ­ 6%" :
+ dq.getInt("potential3") == 30044 ? "ëŸ­ 9%" :
+ dq.getInt("potential3") == 40044 ? "ëŸ­ 12%" :
+ dq.getInt("potential3") == 20086 ? "ì˜¬ìŠ¤í…Ÿ 3%" :
+ dq.getInt("potential3") == 30086 ? "ì˜¬ìŠ¤í…Ÿ 6%" :
+ dq.getInt("potential3") == 40086 ? "ì˜¬ìŠ¤í…Ÿ 9%" : 
  dq.getInt("potential3") == 10045 ? "MaxHp 3%" :
  dq.getInt("potential3") == 20045 ? "MaxHp 6%" :
  dq.getInt("potential3") == 30045 ? "MaxHp 9%" :
@@ -788,61 +788,61 @@ string.append("#e¼¼¹øÂ° ÀáÀç´É·Â : #n");
  dq.getInt("potential3") == 20046 ? "MaxMp 6%" :
  dq.getInt("potential3") == 30046 ? "MaxMp 9%" :
  dq.getInt("potential3") == 40046 ? "MaxMp 12%" :
- dq.getInt("potential3") == 10047 ? "¸íÁßÄ¡ 3%" :
- dq.getInt("potential3") == 20047 ? "¸íÁßÄ¡ 6%" :
- dq.getInt("potential3") == 30047 ? "¸íÁßÄ¡ 9%" :
- dq.getInt("potential3") == 40047 ? "¸íÁßÄ¡ 12%" :
- dq.getInt("potential3") == 10048 ? "È¸ÇÇÄ¡ 3%" :
- dq.getInt("potential3") == 20048 ? "È¸ÇÇÄ¡ 6%" :
- dq.getInt("potential3") == 30048 ? "È¸ÇÇÄ¡ 9%" :
- dq.getInt("potential3") == 40048 ? "È¸ÇÇÄ¡ 12%" :
- dq.getInt("potential3") == 10051 ? "°ø°İ·Â 3%" :
- dq.getInt("potential3") == 20051 ? "°ø°İ·Â 6%" :
- dq.getInt("potential3") == 30051 ? "°ø°İ·Â 9%" :
- dq.getInt("potential3") == 40051 ? "°ø°İ·Â 12%" :
- dq.getInt("potential3") == 10052 ? "¸¶·Â 3%" :
- dq.getInt("potential3") == 20052 ? "¸¶·Â 6%" :
- dq.getInt("potential3") == 30052 ? "¸¶·Â 9%" :
- dq.getInt("potential3") == 40052 ? "¸¶·Â 12%" :
- dq.getInt("potential3") == 10070 ? "ÃÑ µ¥¹ÌÁö 3%" :
- dq.getInt("potential3") == 20070 ? "ÃÑ µ¥¹ÌÁö 6%" :
- dq.getInt("potential3") == 30070 ? "ÃÑ µ¥¹ÌÁö 9%" :
- dq.getInt("potential3") == 40070 ? "ÃÑ µ¥¹ÌÁö 12%" :
- dq.getInt("potential3") == 10053 ? "¹°¸®¹æ¾î·Â 3%" :
- dq.getInt("potential3") == 20053 ? "¹°¸®¹æ¾î·Â 6%" :
- dq.getInt("potential3") == 30053 ? "¹°¸®¹æ¾î·Â 9%" :
- dq.getInt("potential3") == 40053 ? "¹°¸®¹æ¾î·Â 12%" :
- dq.getInt("potential3") == 10054 ? "¸¶¹ı¹æ¾î·Â 3%" :
- dq.getInt("potential3") == 20054 ? "¸¶¹ı¹æ¾î·Â 6%" :
- dq.getInt("potential3") == 30054 ? "¸¶¹ı¹æ¾î·Â 9%" :
- dq.getInt("potential3") == 40054 ? "¸¶¹ı¹æ¾î·Â 12%" :
- dq.getInt("potential3") == 40650 ? "¸Ş¼Ò È¹µæ·® 20%" :
- dq.getInt("potential3") == 40656 ? "¾ÆÀÌÅÛ È¹µæÈ®·ü 20%" :
- dq.getInt("potential3") == 10055 ? "Å©¸®Æ¼ÄÃ È®·ü 3%" :
- dq.getInt("potential3") == 20055 ? "Å©¸®Æ¼ÄÃ È®·ü 6%" :
- dq.getInt("potential3") == 30055 ? "Å©¸®Æ¼ÄÃ È®·ü 9%" :
- dq.getInt("potential3") == 40055 ? "Å©¸®Æ¼ÄÃ È®·ü 12%" : "") +"");
+ dq.getInt("potential3") == 10047 ? "ëª…ì¤‘ì¹˜ 3%" :
+ dq.getInt("potential3") == 20047 ? "ëª…ì¤‘ì¹˜ 6%" :
+ dq.getInt("potential3") == 30047 ? "ëª…ì¤‘ì¹˜ 9%" :
+ dq.getInt("potential3") == 40047 ? "ëª…ì¤‘ì¹˜ 12%" :
+ dq.getInt("potential3") == 10048 ? "íšŒí”¼ì¹˜ 3%" :
+ dq.getInt("potential3") == 20048 ? "íšŒí”¼ì¹˜ 6%" :
+ dq.getInt("potential3") == 30048 ? "íšŒí”¼ì¹˜ 9%" :
+ dq.getInt("potential3") == 40048 ? "íšŒí”¼ì¹˜ 12%" :
+ dq.getInt("potential3") == 10051 ? "ê³µê²©ë ¥ 3%" :
+ dq.getInt("potential3") == 20051 ? "ê³µê²©ë ¥ 6%" :
+ dq.getInt("potential3") == 30051 ? "ê³µê²©ë ¥ 9%" :
+ dq.getInt("potential3") == 40051 ? "ê³µê²©ë ¥ 12%" :
+ dq.getInt("potential3") == 10052 ? "ë§ˆë ¥ 3%" :
+ dq.getInt("potential3") == 20052 ? "ë§ˆë ¥ 6%" :
+ dq.getInt("potential3") == 30052 ? "ë§ˆë ¥ 9%" :
+ dq.getInt("potential3") == 40052 ? "ë§ˆë ¥ 12%" :
+ dq.getInt("potential3") == 10070 ? "ì´ ë°ë¯¸ì§€ 3%" :
+ dq.getInt("potential3") == 20070 ? "ì´ ë°ë¯¸ì§€ 6%" :
+ dq.getInt("potential3") == 30070 ? "ì´ ë°ë¯¸ì§€ 9%" :
+ dq.getInt("potential3") == 40070 ? "ì´ ë°ë¯¸ì§€ 12%" :
+ dq.getInt("potential3") == 10053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 3%" :
+ dq.getInt("potential3") == 20053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 6%" :
+ dq.getInt("potential3") == 30053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 9%" :
+ dq.getInt("potential3") == 40053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 12%" :
+ dq.getInt("potential3") == 10054 ? "ë§ˆë²•ë°©ì–´ë ¥ 3%" :
+ dq.getInt("potential3") == 20054 ? "ë§ˆë²•ë°©ì–´ë ¥ 6%" :
+ dq.getInt("potential3") == 30054 ? "ë§ˆë²•ë°©ì–´ë ¥ 9%" :
+ dq.getInt("potential3") == 40054 ? "ë§ˆë²•ë°©ì–´ë ¥ 12%" :
+ dq.getInt("potential3") == 40650 ? "ë©”ì†Œ íšë“ëŸ‰ 20%" :
+ dq.getInt("potential3") == 40656 ? "ì•„ì´í…œ íšë“í™•ë¥  20%" :
+ dq.getInt("potential3") == 10055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  3%" :
+ dq.getInt("potential3") == 20055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  6%" :
+ dq.getInt("potential3") == 30055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  9%" :
+ dq.getInt("potential3") == 40055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  12%" : "") +"");
  } else if ((ii.getReqLevel(cod) >= 35) && (ii.getReqLevel(cod) < 75)) {
- string.append("" +(dq.getInt("potential3") == 0 ? "¾øÀ½" :
- dq.getInt("potential3") == 10041 ? "Èû 2%" :
- dq.getInt("potential3") == 20041 ? "Èû 4%" :
- dq.getInt("potential3") == 30041 ? "Èû 6%" :
- dq.getInt("potential3") == 40041 ? "Èû 9%" :
- dq.getInt("potential3") == 10042 ? "µ¦½º 2%" :
- dq.getInt("potential3") == 20042 ? "µ¦½º 4%" :
- dq.getInt("potential3") == 30042 ? "µ¦½º 6%" :
- dq.getInt("potential3") == 40042 ? "µ¦½º 9%" :
- dq.getInt("potential3") == 10043 ? "ÀÎÆ® 2%" :
- dq.getInt("potential3") == 20043 ? "ÀÎÆ® 4%" :
- dq.getInt("potential3") == 30043 ? "ÀÎÆ® 6%" :
- dq.getInt("potential3") == 40043 ? "ÀÎÆ® 9%" :
- dq.getInt("potential3") == 10044 ? "·° 2%" :
- dq.getInt("potential3") == 20044 ? "·° 4%" :
- dq.getInt("potential3") == 30044 ? "·° 6%" :
- dq.getInt("potential3") == 40044 ? "·° 9%" :
- dq.getInt("potential3") == 20086 ? "¿Ã½ºÅİ 2%" :
- dq.getInt("potential3") == 30086 ? "¿Ã½ºÅİ 4%" :
- dq.getInt("potential3") == 40086 ? "¿Ã½ºÅİ 6%" : 
+ string.append("" +(dq.getInt("potential3") == 0 ? "ì—†ìŒ" :
+ dq.getInt("potential3") == 10041 ? "í˜ 2%" :
+ dq.getInt("potential3") == 20041 ? "í˜ 4%" :
+ dq.getInt("potential3") == 30041 ? "í˜ 6%" :
+ dq.getInt("potential3") == 40041 ? "í˜ 9%" :
+ dq.getInt("potential3") == 10042 ? "ë±ìŠ¤ 2%" :
+ dq.getInt("potential3") == 20042 ? "ë±ìŠ¤ 4%" :
+ dq.getInt("potential3") == 30042 ? "ë±ìŠ¤ 6%" :
+ dq.getInt("potential3") == 40042 ? "ë±ìŠ¤ 9%" :
+ dq.getInt("potential3") == 10043 ? "ì¸íŠ¸ 2%" :
+ dq.getInt("potential3") == 20043 ? "ì¸íŠ¸ 4%" :
+ dq.getInt("potential3") == 30043 ? "ì¸íŠ¸ 6%" :
+ dq.getInt("potential3") == 40043 ? "ì¸íŠ¸ 9%" :
+ dq.getInt("potential3") == 10044 ? "ëŸ­ 2%" :
+ dq.getInt("potential3") == 20044 ? "ëŸ­ 4%" :
+ dq.getInt("potential3") == 30044 ? "ëŸ­ 6%" :
+ dq.getInt("potential3") == 40044 ? "ëŸ­ 9%" :
+ dq.getInt("potential3") == 20086 ? "ì˜¬ìŠ¤í…Ÿ 2%" :
+ dq.getInt("potential3") == 30086 ? "ì˜¬ìŠ¤í…Ÿ 4%" :
+ dq.getInt("potential3") == 40086 ? "ì˜¬ìŠ¤í…Ÿ 6%" : 
  dq.getInt("potential3") == 10045 ? "MaxHp 2%" :
  dq.getInt("potential3") == 20045 ? "MaxHp 4%" :
  dq.getInt("potential3") == 30045 ? "MaxHp 6%" :
@@ -851,61 +851,61 @@ string.append("#e¼¼¹øÂ° ÀáÀç´É·Â : #n");
  dq.getInt("potential3") == 20046 ? "MaxMp 4%" :
  dq.getInt("potential3") == 30046 ? "MaxMp 6%" :
  dq.getInt("potential3") == 40046 ? "MaxMp 9%" :
- dq.getInt("potential3") == 10047 ? "¸íÁßÄ¡ 2%" :
- dq.getInt("potential3") == 20047 ? "¸íÁßÄ¡ 4%" :
- dq.getInt("potential3") == 30047 ? "¸íÁßÄ¡ 6%" :
- dq.getInt("potential3") == 40047 ? "¸íÁßÄ¡ 9%" :
- dq.getInt("potential3") == 10048 ? "È¸ÇÇÄ¡ 2%" :
- dq.getInt("potential3") == 20048 ? "È¸ÇÇÄ¡ 4%" :
- dq.getInt("potential3") == 30048 ? "È¸ÇÇÄ¡ 6%" :
- dq.getInt("potential3") == 40048 ? "È¸ÇÇÄ¡ 9%" :
- dq.getInt("potential3") == 10051 ? "°ø°İ·Â 2%" :
- dq.getInt("potential3") == 20051 ? "°ø°İ·Â 4%" :
- dq.getInt("potential3") == 30051 ? "°ø°İ·Â 6%" :
- dq.getInt("potential3") == 40051 ? "°ø°İ·Â 9%" :
- dq.getInt("potential3") == 10052 ? "¸¶·Â 2%" :
- dq.getInt("potential3") == 20052 ? "¸¶·Â 4%" :
- dq.getInt("potential3") == 30052 ? "¸¶·Â 6%" :
- dq.getInt("potential3") == 40052 ? "¸¶·Â 9%" :
- dq.getInt("potential3") == 10070 ? "ÃÑ µ¥¹ÌÁö 2%" :
- dq.getInt("potential3") == 20070 ? "ÃÑ µ¥¹ÌÁö 4%" :
- dq.getInt("potential3") == 30070 ? "ÃÑ µ¥¹ÌÁö 6%" :
- dq.getInt("potential3") == 40070 ? "ÃÑ µ¥¹ÌÁö 9%" :
- dq.getInt("potential3") == 10053 ? "¹°¸®¹æ¾î·Â 2%" :
- dq.getInt("potential3") == 20053 ? "¹°¸®¹æ¾î·Â 4%" :
- dq.getInt("potential3") == 30053 ? "¹°¸®¹æ¾î·Â 6%" :
- dq.getInt("potential3") == 40053 ? "¹°¸®¹æ¾î·Â 9%" :
- dq.getInt("potential3") == 10054 ? "¸¶¹ı¹æ¾î·Â 2%" :
- dq.getInt("potential3") == 20054 ? "¸¶¹ı¹æ¾î·Â 4%" :
- dq.getInt("potential3") == 30054 ? "¸¶¹ı¹æ¾î·Â 6%" :
- dq.getInt("potential3") == 40054 ? "¸¶¹ı¹æ¾î·Â 9%" :
- dq.getInt("potential3") == 40650 ? "¸Ş¼Ò È¹µæ·® 15%" :
- dq.getInt("potential3") == 40656 ? "¾ÆÀÌÅÛ È¹µæÈ®·ü 15%" :
- dq.getInt("potential3") == 10055 ? "Å©¸®Æ¼ÄÃ È®·ü 2%" :
- dq.getInt("potential3") == 20055 ? "Å©¸®Æ¼ÄÃ È®·ü 4%" :
- dq.getInt("potential3") == 30055 ? "Å©¸®Æ¼ÄÃ È®·ü 6%" :
- dq.getInt("potential3") == 40055 ? "Å©¸®Æ¼ÄÃ È®·ü 9%" : "") +"");
+ dq.getInt("potential3") == 10047 ? "ëª…ì¤‘ì¹˜ 2%" :
+ dq.getInt("potential3") == 20047 ? "ëª…ì¤‘ì¹˜ 4%" :
+ dq.getInt("potential3") == 30047 ? "ëª…ì¤‘ì¹˜ 6%" :
+ dq.getInt("potential3") == 40047 ? "ëª…ì¤‘ì¹˜ 9%" :
+ dq.getInt("potential3") == 10048 ? "íšŒí”¼ì¹˜ 2%" :
+ dq.getInt("potential3") == 20048 ? "íšŒí”¼ì¹˜ 4%" :
+ dq.getInt("potential3") == 30048 ? "íšŒí”¼ì¹˜ 6%" :
+ dq.getInt("potential3") == 40048 ? "íšŒí”¼ì¹˜ 9%" :
+ dq.getInt("potential3") == 10051 ? "ê³µê²©ë ¥ 2%" :
+ dq.getInt("potential3") == 20051 ? "ê³µê²©ë ¥ 4%" :
+ dq.getInt("potential3") == 30051 ? "ê³µê²©ë ¥ 6%" :
+ dq.getInt("potential3") == 40051 ? "ê³µê²©ë ¥ 9%" :
+ dq.getInt("potential3") == 10052 ? "ë§ˆë ¥ 2%" :
+ dq.getInt("potential3") == 20052 ? "ë§ˆë ¥ 4%" :
+ dq.getInt("potential3") == 30052 ? "ë§ˆë ¥ 6%" :
+ dq.getInt("potential3") == 40052 ? "ë§ˆë ¥ 9%" :
+ dq.getInt("potential3") == 10070 ? "ì´ ë°ë¯¸ì§€ 2%" :
+ dq.getInt("potential3") == 20070 ? "ì´ ë°ë¯¸ì§€ 4%" :
+ dq.getInt("potential3") == 30070 ? "ì´ ë°ë¯¸ì§€ 6%" :
+ dq.getInt("potential3") == 40070 ? "ì´ ë°ë¯¸ì§€ 9%" :
+ dq.getInt("potential3") == 10053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 2%" :
+ dq.getInt("potential3") == 20053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 4%" :
+ dq.getInt("potential3") == 30053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 6%" :
+ dq.getInt("potential3") == 40053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 9%" :
+ dq.getInt("potential3") == 10054 ? "ë§ˆë²•ë°©ì–´ë ¥ 2%" :
+ dq.getInt("potential3") == 20054 ? "ë§ˆë²•ë°©ì–´ë ¥ 4%" :
+ dq.getInt("potential3") == 30054 ? "ë§ˆë²•ë°©ì–´ë ¥ 6%" :
+ dq.getInt("potential3") == 40054 ? "ë§ˆë²•ë°©ì–´ë ¥ 9%" :
+ dq.getInt("potential3") == 40650 ? "ë©”ì†Œ íšë“ëŸ‰ 15%" :
+ dq.getInt("potential3") == 40656 ? "ì•„ì´í…œ íšë“í™•ë¥  15%" :
+ dq.getInt("potential3") == 10055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  2%" :
+ dq.getInt("potential3") == 20055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  4%" :
+ dq.getInt("potential3") == 30055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  6%" :
+ dq.getInt("potential3") == 40055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  9%" : "") +"");
  } else {
- string.append("" +(dq.getInt("potential3") == 0 ? "¾øÀ½" :
- dq.getInt("potential3") == 10041 ? "Èû 1%" :
- dq.getInt("potential3") == 20041 ? "Èû 2%" :
- dq.getInt("potential3") == 30041 ? "Èû 3%" :
- dq.getInt("potential3") == 40041 ? "Èû 6%" :
- dq.getInt("potential3") == 10042 ? "µ¦½º 1%" :
- dq.getInt("potential3") == 20042 ? "µ¦½º 2%" :
- dq.getInt("potential3") == 30042 ? "µ¦½º 3%" :
- dq.getInt("potential3") == 40042 ? "µ¦½º 6%" :
- dq.getInt("potential3") == 10043 ? "ÀÎÆ® 1%" :
- dq.getInt("potential3") == 20043 ? "ÀÎÆ® 2%" :
- dq.getInt("potential3") == 30043 ? "ÀÎÆ® 3%" :
- dq.getInt("potential3") == 40043 ? "ÀÎÆ® 6%" :
- dq.getInt("potential3") == 10044 ? "·° 1%" :
- dq.getInt("potential3") == 20044 ? "·° 2%" :
- dq.getInt("potential3") == 30044 ? "·° 3%" :
- dq.getInt("potential3") == 40044 ? "·° 6%" :
- dq.getInt("potential3") == 20086 ? "¿Ã½ºÅİ 1%" :
- dq.getInt("potential3") == 30086 ? "¿Ã½ºÅİ 2%" :
- dq.getInt("potential3") == 40086 ? "¿Ã½ºÅİ 3%" : 
+ string.append("" +(dq.getInt("potential3") == 0 ? "ì—†ìŒ" :
+ dq.getInt("potential3") == 10041 ? "í˜ 1%" :
+ dq.getInt("potential3") == 20041 ? "í˜ 2%" :
+ dq.getInt("potential3") == 30041 ? "í˜ 3%" :
+ dq.getInt("potential3") == 40041 ? "í˜ 6%" :
+ dq.getInt("potential3") == 10042 ? "ë±ìŠ¤ 1%" :
+ dq.getInt("potential3") == 20042 ? "ë±ìŠ¤ 2%" :
+ dq.getInt("potential3") == 30042 ? "ë±ìŠ¤ 3%" :
+ dq.getInt("potential3") == 40042 ? "ë±ìŠ¤ 6%" :
+ dq.getInt("potential3") == 10043 ? "ì¸íŠ¸ 1%" :
+ dq.getInt("potential3") == 20043 ? "ì¸íŠ¸ 2%" :
+ dq.getInt("potential3") == 30043 ? "ì¸íŠ¸ 3%" :
+ dq.getInt("potential3") == 40043 ? "ì¸íŠ¸ 6%" :
+ dq.getInt("potential3") == 10044 ? "ëŸ­ 1%" :
+ dq.getInt("potential3") == 20044 ? "ëŸ­ 2%" :
+ dq.getInt("potential3") == 30044 ? "ëŸ­ 3%" :
+ dq.getInt("potential3") == 40044 ? "ëŸ­ 6%" :
+ dq.getInt("potential3") == 20086 ? "ì˜¬ìŠ¤í…Ÿ 1%" :
+ dq.getInt("potential3") == 30086 ? "ì˜¬ìŠ¤í…Ÿ 2%" :
+ dq.getInt("potential3") == 40086 ? "ì˜¬ìŠ¤í…Ÿ 3%" : 
  dq.getInt("potential3") == 10045 ? "MaxHp 1%" :
  dq.getInt("potential3") == 20045 ? "MaxHp 2%" :
  dq.getInt("potential3") == 30045 ? "MaxHp 3%" :
@@ -914,86 +914,86 @@ string.append("#e¼¼¹øÂ° ÀáÀç´É·Â : #n");
  dq.getInt("potential3") == 20046 ? "MaxMp 2%" :
  dq.getInt("potential3") == 30046 ? "MaxMp 3%" :
  dq.getInt("potential3") == 40046 ? "MaxMp 6%" :
- dq.getInt("potential3") == 10047 ? "¸íÁßÄ¡ 1%" :
- dq.getInt("potential3") == 20047 ? "¸íÁßÄ¡ 2%" :
- dq.getInt("potential3") == 30047 ? "¸íÁßÄ¡ 3%" :
- dq.getInt("potential3") == 40047 ? "¸íÁßÄ¡ 6%" :
- dq.getInt("potential3") == 10048 ? "È¸ÇÇÄ¡ 1%" :
- dq.getInt("potential3") == 20048 ? "È¸ÇÇÄ¡ 2%" :
- dq.getInt("potential3") == 30048 ? "È¸ÇÇÄ¡ 3%" :
- dq.getInt("potential3") == 40048 ? "È¸ÇÇÄ¡ 6%" :
- dq.getInt("potential3") == 10051 ? "°ø°İ·Â 1%" :
- dq.getInt("potential3") == 20051 ? "°ø°İ·Â 2%" :
- dq.getInt("potential3") == 30051 ? "°ø°İ·Â 3%" :
- dq.getInt("potential3") == 40051 ? "°ø°İ·Â 6%" :
- dq.getInt("potential3") == 10052 ? "¸¶·Â 1%" :
- dq.getInt("potential3") == 20052 ? "¸¶·Â 2%" :
- dq.getInt("potential3") == 30052 ? "¸¶·Â 3%" :
- dq.getInt("potential3") == 40052 ? "¸¶·Â 6%" :
- dq.getInt("potential3") == 10070 ? "ÃÑ µ¥¹ÌÁö 1%" :
- dq.getInt("potential3") == 20070 ? "ÃÑ µ¥¹ÌÁö 2%" :
- dq.getInt("potential3") == 30070 ? "ÃÑ µ¥¹ÌÁö 3%" :
- dq.getInt("potential3") == 40070 ? "ÃÑ µ¥¹ÌÁö 6%" :
- dq.getInt("potential3") == 10053 ? "¹°¸®¹æ¾î·Â 1%" :
- dq.getInt("potential3") == 20053 ? "¹°¸®¹æ¾î·Â 2%" :
- dq.getInt("potential3") == 30053 ? "¹°¸®¹æ¾î·Â 3%" :
- dq.getInt("potential3") == 40053 ? "¹°¸®¹æ¾î·Â 6%" :
- dq.getInt("potential3") == 10054 ? "¸¶¹ı¹æ¾î·Â 1%" :
- dq.getInt("potential3") == 20054 ? "¸¶¹ı¹æ¾î·Â 2%" :
- dq.getInt("potential3") == 30054 ? "¸¶¹ı¹æ¾î·Â 3%" :
- dq.getInt("potential3") == 40054 ? "¸¶¹ı¹æ¾î·Â 6%" :
- dq.getInt("potential3") == 40650 ? "¸Ş¼Ò È¹µæ·® 10%" :
- dq.getInt("potential3") == 40656 ? "¾ÆÀÌÅÛ È¹µæÈ®·ü 10%" :
- dq.getInt("potential3") == 10055 ? "Å©¸®Æ¼ÄÃ È®·ü 1%" :
- dq.getInt("potential3") == 20055 ? "Å©¸®Æ¼ÄÃ È®·ü 2%" :
- dq.getInt("potential3") == 30055 ? "Å©¸®Æ¼ÄÃ È®·ü 3%" :
- dq.getInt("potential3") == 40055 ? "Å©¸®Æ¼ÄÃ È®·ü 6%" : "") +"");
+ dq.getInt("potential3") == 10047 ? "ëª…ì¤‘ì¹˜ 1%" :
+ dq.getInt("potential3") == 20047 ? "ëª…ì¤‘ì¹˜ 2%" :
+ dq.getInt("potential3") == 30047 ? "ëª…ì¤‘ì¹˜ 3%" :
+ dq.getInt("potential3") == 40047 ? "ëª…ì¤‘ì¹˜ 6%" :
+ dq.getInt("potential3") == 10048 ? "íšŒí”¼ì¹˜ 1%" :
+ dq.getInt("potential3") == 20048 ? "íšŒí”¼ì¹˜ 2%" :
+ dq.getInt("potential3") == 30048 ? "íšŒí”¼ì¹˜ 3%" :
+ dq.getInt("potential3") == 40048 ? "íšŒí”¼ì¹˜ 6%" :
+ dq.getInt("potential3") == 10051 ? "ê³µê²©ë ¥ 1%" :
+ dq.getInt("potential3") == 20051 ? "ê³µê²©ë ¥ 2%" :
+ dq.getInt("potential3") == 30051 ? "ê³µê²©ë ¥ 3%" :
+ dq.getInt("potential3") == 40051 ? "ê³µê²©ë ¥ 6%" :
+ dq.getInt("potential3") == 10052 ? "ë§ˆë ¥ 1%" :
+ dq.getInt("potential3") == 20052 ? "ë§ˆë ¥ 2%" :
+ dq.getInt("potential3") == 30052 ? "ë§ˆë ¥ 3%" :
+ dq.getInt("potential3") == 40052 ? "ë§ˆë ¥ 6%" :
+ dq.getInt("potential3") == 10070 ? "ì´ ë°ë¯¸ì§€ 1%" :
+ dq.getInt("potential3") == 20070 ? "ì´ ë°ë¯¸ì§€ 2%" :
+ dq.getInt("potential3") == 30070 ? "ì´ ë°ë¯¸ì§€ 3%" :
+ dq.getInt("potential3") == 40070 ? "ì´ ë°ë¯¸ì§€ 6%" :
+ dq.getInt("potential3") == 10053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 1%" :
+ dq.getInt("potential3") == 20053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 2%" :
+ dq.getInt("potential3") == 30053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 3%" :
+ dq.getInt("potential3") == 40053 ? "ë¬¼ë¦¬ë°©ì–´ë ¥ 6%" :
+ dq.getInt("potential3") == 10054 ? "ë§ˆë²•ë°©ì–´ë ¥ 1%" :
+ dq.getInt("potential3") == 20054 ? "ë§ˆë²•ë°©ì–´ë ¥ 2%" :
+ dq.getInt("potential3") == 30054 ? "ë§ˆë²•ë°©ì–´ë ¥ 3%" :
+ dq.getInt("potential3") == 40054 ? "ë§ˆë²•ë°©ì–´ë ¥ 6%" :
+ dq.getInt("potential3") == 40650 ? "ë©”ì†Œ íšë“ëŸ‰ 10%" :
+ dq.getInt("potential3") == 40656 ? "ì•„ì´í…œ íšë“í™•ë¥  10%" :
+ dq.getInt("potential3") == 10055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  1%" :
+ dq.getInt("potential3") == 20055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  2%" :
+ dq.getInt("potential3") == 30055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  3%" :
+ dq.getInt("potential3") == 40055 ? "í¬ë¦¬í‹°ì»¬ í™•ë¥  6%" : "") +"");
 }
  if (ii.getReqLevel(cod) > 84) {
- string.append(""+(dq.getInt("potential3") == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 15%" :
- dq.getInt("potential3") == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 15%" : "") +"");
+ string.append(""+(dq.getInt("potential3") == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 15%" :
+ dq.getInt("potential3") == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 15%" : "") +"");
  } else if ((ii.getReqLevel(cod) <= 84) && (ii.getReqLevel(cod) > 64)){
- string.append(""+(dq.getInt("potential3") == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 12%" :
- dq.getInt("potential3") == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 12%" : "") +"");
+ string.append(""+(dq.getInt("potential3") == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 12%" :
+ dq.getInt("potential3") == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 12%" : "") +"");
  } else if ((ii.getReqLevel(cod) >= 45) && (ii.getReqLevel(cod) < 65)) {
- string.append(""+(dq.getInt("potential3") == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 9%" :
- dq.getInt("potential3") == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 9%" : "") +"");
+ string.append(""+(dq.getInt("potential3") == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 9%" :
+ dq.getInt("potential3") == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 9%" : "") +"");
  } else if ((ii.getReqLevel(cod) >= 25) && (ii.getReqLevel(cod) < 45)) {
- string.append(""+(dq.getInt("potential3") == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 6%" :
- dq.getInt("potential3") == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 6%" : "") +"");
+ string.append(""+(dq.getInt("potential3") == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 6%" :
+ dq.getInt("potential3") == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 6%" : "") +"");
  } else {
- string.append(""+(dq.getInt("potential3") == 40056 ? "Å©¸®Æ¼ÄÃ ÃÖ¼Ò µ¥¹ÌÁö 3%" :
- dq.getInt("potential3") == 40057 ? "Å©¸®Æ¼ÄÃ ÃÖ´ë µ¥¹ÌÁö 3%" : "") +"");
+ string.append(""+(dq.getInt("potential3") == 40056 ? "í¬ë¦¬í‹°ì»¬ ìµœì†Œ ë°ë¯¸ì§€ 3%" :
+ dq.getInt("potential3") == 40057 ? "í¬ë¦¬í‹°ì»¬ ìµœëŒ€ ë°ë¯¸ì§€ 3%" : "") +"");
 }
  if (ii.getReqLevel(cod) > 104) {
- string.append(""+(dq.getInt("potential3") == 40501 ? "¸ğµç ½ºÅ³ÀÇ MP ¼Ò¸ğ -15%" :
- dq.getInt("potential3") == 40502 ? "¸ğµç ½ºÅ³ÀÇ MP ¼Ò¸ğ -30%" : "") +"");
+ string.append(""+(dq.getInt("potential3") == 40501 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -15%" :
+ dq.getInt("potential3") == 40502 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -30%" : "") +"");
  } else if ((ii.getReqLevel(cod) >= 55) && (ii.getReqLevel(cod) < 105)) {
- string.append(""+(dq.getInt("potential3") == 40501 ? "¸ğµç ½ºÅ³ÀÇ MP ¼Ò¸ğ -10%" :
- dq.getInt("potential3") == 40502 ? "¸ğµç ½ºÅ³ÀÇ MP ¼Ò¸ğ -20%" : "") +""); 
+ string.append(""+(dq.getInt("potential3") == 40501 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -10%" :
+ dq.getInt("potential3") == 40502 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -20%" : "") +""); 
  } else {
- string.append(""+(dq.getInt("potential3") == 40501 ? "¸ğµç ½ºÅ³ÀÇ MP ¼Ò¸ğ -5%" :
- dq.getInt("potential3") == 40502 ? "¸ğµç ½ºÅ³ÀÇ MP ¼Ò¸ğ -10%" : "") +"");
+ string.append(""+(dq.getInt("potential3") == 40501 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -5%" :
+ dq.getInt("potential3") == 40502 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ MP ì†Œëª¨ -10%" : "") +"");
  }
- string.append(""+(dq.getInt("potential3") == 60001 ? "ÃÑ µ¥¹ÌÁö 20%" :
- dq.getInt("potential3") == 40081 ? "¿Ã½ºÅİ +12" :
- dq.getInt("potential3") == 30106 ? "¸ğµç ½ºÅ³·¹º§ +1" :
- dq.getInt("potential3") == 40106 ? "¸ğµç ½ºÅ³·¹º§ +2" :
- dq.getInt("potential3") == 40107 ? "¸ğµç ½ºÅ³·¹º§ +3" :
- dq.getInt("potential3") == 40111 ? "¸ğµç ¼Ó¼º ³»¼º 10%" :
- dq.getInt("potential3") == 40116 ? "»óÅÂ ÀÌ»ó ³»¼º 10%" :
- dq.getInt("potential3") == 30291 ? "¹æ¾îÀ² ¹«½Ã 30%" : 
- dq.getInt("potential3") == 40291 ? "¹æ¾îÀ² ¹«½Ã 35%" :
- dq.getInt("potential3") == 40292 ? "¹æ¾îÀ² ¹«½Ã 40%" :
- dq.getInt("potential3") == 30356 ? "ÇÇ°İ ½Ã 5% È®·ü·Î µ¥¹ÌÁö 20% ¹«½Ã" :
- dq.getInt("potential3") == 40356 ? "ÇÇ°İ ½Ã 10% È®·ü·Î µ¥¹ÌÁö 20% ¹«½Ã" :
- dq.getInt("potential3") == 40357 ? "ÇÇ°İ ½Ã 5% È®·ü·Î µ¥¹ÌÁö 40% ¹«½Ã" :
- dq.getInt("potential3") == 20366 ? "ÇÇ°İ ÈÄ ¹«Àû½Ã°£ 1ÃÊ" :
- dq.getInt("potential3") == 30366 ? "ÇÇ°İ ÈÄ ¹«Àû½Ã°£ 2ÃÊ" :
- dq.getInt("potential3") == 40366 ? "ÇÇ°İ ÈÄ ¹«Àû½Ã°£ 3ÃÊ" : 
- dq.getInt("potential3") == 40556 ? "¸ğµç ½ºÅ³ÀÇ Àç»ç¿ë ´ë±â½Ã°£ -1ÃÊ" :
- dq.getInt("potential3") == 40557 ? "¸ğµç ½ºÅ³ÀÇ Àç»ç¿ë ´ë±â½Ã°£ -2ÃÊ" :
- dq.getInt("potential3") == 42556 ? "¸ğµç ½ºÅ³ÀÇ Àç»ç¿ë ´ë±â½Ã°£ -1ÃÊ" : "")+"\r\n");
+ string.append(""+(dq.getInt("potential3") == 60001 ? "ì´ ë°ë¯¸ì§€ 20%" :
+ dq.getInt("potential3") == 40081 ? "ì˜¬ìŠ¤í…Ÿ +12" :
+ dq.getInt("potential3") == 30106 ? "ëª¨ë“  ìŠ¤í‚¬ë ˆë²¨ +1" :
+ dq.getInt("potential3") == 40106 ? "ëª¨ë“  ìŠ¤í‚¬ë ˆë²¨ +2" :
+ dq.getInt("potential3") == 40107 ? "ëª¨ë“  ìŠ¤í‚¬ë ˆë²¨ +3" :
+ dq.getInt("potential3") == 40111 ? "ëª¨ë“  ì†ì„± ë‚´ì„± 10%" :
+ dq.getInt("potential3") == 40116 ? "ìƒíƒœ ì´ìƒ ë‚´ì„± 10%" :
+ dq.getInt("potential3") == 30291 ? "ë°©ì–´ìœ¨ ë¬´ì‹œ 30%" : 
+ dq.getInt("potential3") == 40291 ? "ë°©ì–´ìœ¨ ë¬´ì‹œ 35%" :
+ dq.getInt("potential3") == 40292 ? "ë°©ì–´ìœ¨ ë¬´ì‹œ 40%" :
+ dq.getInt("potential3") == 30356 ? "í”¼ê²© ì‹œ 5% í™•ë¥ ë¡œ ë°ë¯¸ì§€ 20% ë¬´ì‹œ" :
+ dq.getInt("potential3") == 40356 ? "í”¼ê²© ì‹œ 10% í™•ë¥ ë¡œ ë°ë¯¸ì§€ 20% ë¬´ì‹œ" :
+ dq.getInt("potential3") == 40357 ? "í”¼ê²© ì‹œ 5% í™•ë¥ ë¡œ ë°ë¯¸ì§€ 40% ë¬´ì‹œ" :
+ dq.getInt("potential3") == 20366 ? "í”¼ê²© í›„ ë¬´ì ì‹œê°„ 1ì´ˆ" :
+ dq.getInt("potential3") == 30366 ? "í”¼ê²© í›„ ë¬´ì ì‹œê°„ 2ì´ˆ" :
+ dq.getInt("potential3") == 40366 ? "í”¼ê²© í›„ ë¬´ì ì‹œê°„ 3ì´ˆ" : 
+ dq.getInt("potential3") == 40556 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ -1ì´ˆ" :
+ dq.getInt("potential3") == 40557 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ -2ì´ˆ" :
+ dq.getInt("potential3") == 42556 ? "ëª¨ë“  ìŠ¤í‚¬ì˜ ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ -1ì´ˆ" : "")+"\r\n");
     return string.toString();
 }
 
@@ -1004,7 +1004,7 @@ function getOption(uniqueid){
     eq.next();
  var damn = eq.getInt("itemid");
  var string = new StringBuilder();
- string.append("#e¾ÆÀÌÅÛ ÀÌ¸§#n : #t"+eq.getInt("itemid")+"# / #e¼ö·® #n: "+eq.getInt("quantity")+" (°³)\r\n\r\n");
- string.append("#e¾ÆÀÌÅÛ ¼³¸í#n : "+ItemInformation.getInstance().getDesc(damn)+"");
+ string.append("#eì•„ì´í…œ ì´ë¦„#n : #t"+eq.getInt("itemid")+"# / #eìˆ˜ëŸ‰ #n: "+eq.getInt("quantity")+" (ê°œ)\r\n\r\n");
+ string.append("#eì•„ì´í…œ ì„¤ëª…#n : "+ItemInformation.getInstance().getDesc(damn)+"");
  return string.toString();
 }

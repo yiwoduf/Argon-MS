@@ -59,7 +59,7 @@ public class MaplePet {
             ret.setExpireDate(rs.getLong("expireDate"));
             ret.setBuffSkillId(rs.getInt("pet_buff"));
             String[] skillid = rs.getString("pet_skill").split(",");
-            for (int next = 0; next < skillid.length; ++next) { //Æê ½ºÅ³À» ºÒ·¯¿Â´Ù.
+            for (int next = 0; next < skillid.length; ++next) { //íŽ« ìŠ¤í‚¬ì„ ë¶ˆëŸ¬ì˜¨ë‹¤.
                 ret.addSkillId(Integer.parseInt(skillid[next]));
                 ret.addSkillValue(Integer.parseInt(skillid[next]));
             }

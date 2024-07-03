@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -47,7 +47,7 @@ public class PetPacket {
             mplew.writeShort(hunger ? 0x100 : 0); 
 	} else {
             mplew.write(1);
-            mplew.write(1); //Å¬·ÎÀÌ°¡ ¶ßÁö ¾Êµµ·Ï ¼³Á¤.
+            mplew.write(1); //í´ë¡œì´ê°€ ëœ¨ì§€ ì•Šë„ë¡ ì„¤ì •.
 	    mplew.writeInt(pet.getPetItemId());
 	    mplew.writeMapleAsciiString(pet.getName());
 	    mplew.writeLong(pet.getUniqueId());

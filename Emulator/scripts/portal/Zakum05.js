@@ -1,10 +1,10 @@
 function enter(pi) {
     if (!pi.getPlayer().getMap().isExpiredMapTimer() && !pi.getPlayer().hasGmLevel(6)) {
-	pi.playerMessage(5, "Áö±İÀº ÀÚÄñÀÇ Á¦´Ü¿¡ ÀÔÀåÇÒ ¼ö ¾ø½À´Ï´Ù.");
+	pi.playerMessage(5, "ì§€ê¸ˆì€ ìì¿°ì˜ ì œë‹¨ì— ì…ì¥í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 	return false;
     }
     if (!pi.haveItem(4001017)) {
-	pi.playerMessage(5, "ºÒÀÇ ´«À» ¼ÒÁöÇÏ°í ÀÖÁö ¾Ê¾Æ ÀÚÄñÀ» ¸¸³¯ ¼ö ¾ø½À´Ï´Ù.");
+	pi.playerMessage(5, "ë¶ˆì˜ ëˆˆì„ ì†Œì§€í•˜ê³  ìˆì§€ ì•Šì•„ ìì¿°ì„ ë§Œë‚  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 	return false;
     }
     pi.playPortalSE();

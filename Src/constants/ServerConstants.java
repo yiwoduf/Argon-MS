@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -21,10 +21,10 @@ import packet.creators.MainPacketCreator;
 public class ServerConstants {
 
 
-    /* ¼­¹ö ¼³Á¤ */
+    /* ì„œë²„ ì„¤ì • */
     public static String Host;
     public static int startMap;
-    public static int mainMap; // Ä¡¿ì¾¾ :: ±¤Àå µû·Î Ãß°¡
+    public static int mainMap; // ì¹˜ìš°ì”¨ :: ê´‘ì¥ ë”°ë¡œ ì¶”ê°€
     public static byte defaultFlag;
     public static int serverCount;
     public static int LoginPort;
@@ -53,13 +53,13 @@ public class ServerConstants {
     public static int cshopNpc = 0;
     public static int chatlimit = 0;
 
-    /* DB ¼³Á¤ */
+    /* DB ì„¤ì • */
     public static int dbPort;
     public static String dbHost;
     public static String dbUser;
     public static String dbPassword;
 
-    /* Message ¼³Á¤ ¹× ÀÌº¥Æ® ¼³Á¤*/
+    /* Message ì„¤ì • ë° ì´ë²¤íŠ¸ ì„¤ì •*/
     public static String recommendMessage = "";
     public static String serverName = "";
     public static String serverMessage = "";
@@ -72,12 +72,12 @@ public class ServerConstants {
     public static String serverNotification = "";
     public static String events = "";
     public static String real_face_hair = "";
-    public static String serverCheckMessage = "ÇöÀç " + serverName + " ¼­¹ö Á¡°Ë ÁßÀÔ´Ï´Ù.\r\n ÀÚ¼¼ÇÑ ³»¿ëÀº È¨ÆäÀÌÁö¸¦ Âü°íÇÏ¿© ÁÖ½Ê½Ã¿À.\r\n [»çÀ¯ : ½Ã½ºÅÛ ¾ÈÁ¤È­]";
+    public static String serverCheckMessage = "í˜„ì¬ " + serverName + " ì„œë²„ ì ê²€ ì¤‘ì…ë‹ˆë‹¤.\r\n ìì„¸í•œ ë‚´ìš©ì€ í™ˆí˜ì´ì§€ë¥¼ ì°¸ê³ í•˜ì—¬ ì£¼ì‹­ì‹œì˜¤.\r\n [ì‚¬ìœ  : ì‹œìŠ¤í…œ ì•ˆì •í™”]";
 
-    /* °³¹ß ¼³Á¤ */
+    /* ê°œë°œ ì„¤ì • */
     public static boolean serverCheck;
 
-    /* ±âÅ¸ ¼³Á¤ */
+    /* ê¸°íƒ€ ì„¤ì • */
     public static boolean UnlockMaxDamage = true;
     public static boolean feverTime = false;
     public static boolean useMaxDrop;
@@ -89,12 +89,12 @@ public class ServerConstants {
     public static String path = "";
     public static String windowsDumpPath = "";
 
-    /* ¹öÀü ¼³Á¤ */
+    /* ë²„ì „ ì„¤ì • */
     public static short MAPLE_VERSION;
     public static byte subVersion;
     public static final byte check = 1;
 
-    /* ±âÅ¸ ¼³Á¤ 2 */
+    /* ê¸°íƒ€ ì„¤ì • 2 */
     public static String hp_skillid_dummy = "";
     public static String hp_skillid_real[];
 
@@ -135,67 +135,67 @@ public class ServerConstants {
             setting_.load(setting);
             setting.close();
             defaultFlag = Byte.parseByte(setting_.getProperty(toUni("Flag")));
-            Host = new String(setting_.getProperty(toUni("¾ÆÀÌÇÇ")).getBytes("ISO-8859-1"), "euc-kr");
+            Host = new String(setting_.getProperty(toUni("ì•„ì´í”¼")).getBytes("ISO-8859-1"), "euc-kr");
             if (!Host.isEmpty()) {
                 String v1 = Host.replace('.', '@');
                 String[] split = v1.split("@");
                 MainPacketCreator.Host = new byte[]{(byte) Integer.parseInt(split[0]), (byte) Integer.parseInt(split[1]), (byte) Integer.parseInt(split[2]), (byte) Integer.parseInt(split[3])};
             }
-            serverCount = Integer.parseInt(setting_.getProperty(toUni("¼­¹ö°³¼ö")));
-            LoginPort = Integer.parseInt(setting_.getProperty(toUni("·Î±×ÀÎÆ÷Æ®")));
-            ChannelPort = Integer.parseInt(setting_.getProperty(toUni("Ã¤³ÎÆ÷Æ®")));
-            CashShopPort = Integer.parseInt(setting_.getProperty(toUni("Ä³½Ã¼¥Æ÷Æ®")));
-            BuddyChatPort = Integer.parseInt(setting_.getProperty(toUni("Ä£±¸¼­¹öÆ÷Æ®")));
+            serverCount = Integer.parseInt(setting_.getProperty(toUni("ì„œë²„ê°œìˆ˜")));
+            LoginPort = Integer.parseInt(setting_.getProperty(toUni("ë¡œê·¸ì¸í¬íŠ¸")));
+            ChannelPort = Integer.parseInt(setting_.getProperty(toUni("ì±„ë„í¬íŠ¸")));
+            CashShopPort = Integer.parseInt(setting_.getProperty(toUni("ìºì‹œìƒµí¬íŠ¸")));
+            BuddyChatPort = Integer.parseInt(setting_.getProperty(toUni("ì¹œêµ¬ì„œë²„í¬íŠ¸")));
 
-            defaultExpRate = Integer.parseInt(setting_.getProperty(toUni("°æÇèÄ¡¹èÀ²")));
-            defaultDropRate = Integer.parseInt(setting_.getProperty(toUni("µå·Ó¹èÀ²")));
-            defaultMesoRate = Integer.parseInt(setting_.getProperty(toUni("¸Ş¼Ò¹èÀ²")));
-            defaultCashRate = Integer.parseInt(setting_.getProperty(toUni("Ä³½Ã¹èÀ²")));
-            defaultBossCashRate = Integer.parseInt(setting_.getProperty(toUni("º¸½ºÄ³½Ã¹èÀ²")));
+            defaultExpRate = Integer.parseInt(setting_.getProperty(toUni("ê²½í—˜ì¹˜ë°°ìœ¨")));
+            defaultDropRate = Integer.parseInt(setting_.getProperty(toUni("ë“œë¡­ë°°ìœ¨")));
+            defaultMesoRate = Integer.parseInt(setting_.getProperty(toUni("ë©”ì†Œë°°ìœ¨")));
+            defaultCashRate = Integer.parseInt(setting_.getProperty(toUni("ìºì‹œë°°ìœ¨")));
+            defaultBossCashRate = Integer.parseInt(setting_.getProperty(toUni("ë³´ìŠ¤ìºì‹œë°°ìœ¨")));
 
-            cshopNpc = Integer.parseInt(setting_.getProperty(toUni("Ä³½Ã¼¥NPC")));
+            cshopNpc = Integer.parseInt(setting_.getProperty(toUni("ìºì‹œìƒµNPC")));
 
-            serverName = new String(setting_.getProperty(toUni("¼­¹öÀÌ¸§")).getBytes("ISO-8859-1"), "euc-kr");
-            serverMessage = new String(setting_.getProperty(toUni("¼­¹ö¸Ş¼¼Áö")).getBytes("ISO-8859-1"), "euc-kr");
-            serverWelcome = new String(setting_.getProperty(toUni("¼­¹öÈ¯¿µ¸Ş¼¼Áö")).getBytes("ISO-8859-1"), "euc-kr");
-            eventMessage = new String(setting_.getProperty(toUni("ÀÌº¥Æ®¸Ş¼¼Áö")).getBytes("ISO-8859-1"), "euc-kr");
-            beginner = new String(setting_.getProperty(toUni("Ã³À½½ÃÀÛ°øÁö")).getBytes("ISO-8859-1"), "euc-kr");
-            serverNotititle = new String(setting_.getProperty(toUni("¼­¹ö°øÁöÁ¦¸ñ")).getBytes("ISO-8859-1"), "euc-kr");
-            serverNotification = new String(setting_.getProperty(toUni("¼­¹ö°øÁö³»¿ë")).getBytes("ISO-8859-1"), "euc-kr");
-            recommendMessage = new String(setting_.getProperty(toUni("ÃßÃµ¸Ş¼¼Áö")).getBytes("ISO-8859-1"), "euc-kr");
-            serverHint = new String(setting_.getProperty(toUni("¼­¹öÈùÆ®")).getBytes("ISO-8859-1"), "euc-kr");
+            serverName = new String(setting_.getProperty(toUni("ì„œë²„ì´ë¦„")).getBytes("ISO-8859-1"), "euc-kr");
+            serverMessage = new String(setting_.getProperty(toUni("ì„œë²„ë©”ì„¸ì§€")).getBytes("ISO-8859-1"), "euc-kr");
+            serverWelcome = new String(setting_.getProperty(toUni("ì„œë²„í™˜ì˜ë©”ì„¸ì§€")).getBytes("ISO-8859-1"), "euc-kr");
+            eventMessage = new String(setting_.getProperty(toUni("ì´ë²¤íŠ¸ë©”ì„¸ì§€")).getBytes("ISO-8859-1"), "euc-kr");
+            beginner = new String(setting_.getProperty(toUni("ì²˜ìŒì‹œì‘ê³µì§€")).getBytes("ISO-8859-1"), "euc-kr");
+            serverNotititle = new String(setting_.getProperty(toUni("ì„œë²„ê³µì§€ì œëª©")).getBytes("ISO-8859-1"), "euc-kr");
+            serverNotification = new String(setting_.getProperty(toUni("ì„œë²„ê³µì§€ë‚´ìš©")).getBytes("ISO-8859-1"), "euc-kr");
+            recommendMessage = new String(setting_.getProperty(toUni("ì¶”ì²œë©”ì„¸ì§€")).getBytes("ISO-8859-1"), "euc-kr");
+            serverHint = new String(setting_.getProperty(toUni("ì„œë²„íŒíŠ¸")).getBytes("ISO-8859-1"), "euc-kr");
 
             dbHost = new String(setting_.getProperty(toUni("Arc.dbHost")).getBytes("ISO-8859-1"), "euc-kr");
             dbPort = Integer.parseInt(setting_.getProperty(toUni("Arc.dbPort")));
             dbUser = new String(setting_.getProperty(toUni("Arc.dbUser")).getBytes("ISO-8859-1"), "euc-kr");
             dbPassword = new String(setting_.getProperty(toUni("Arc.dbPassword")).getBytes("ISO-8859-1"), "euc-kr");
 
-            events = new String(setting_.getProperty(toUni("ÀÌº¥Æ®")).getBytes("ISO-8859-1"), "euc-kr");
+            events = new String(setting_.getProperty(toUni("ì´ë²¤íŠ¸")).getBytes("ISO-8859-1"), "euc-kr");
 
-            startMap = Integer.parseInt(setting_.getProperty(toUni("½ÃÀÛ¸Ê")));
-            mainMap = Integer.parseInt(setting_.getProperty(toUni("¸¶À»¸Ê")));
-            serverHint = new String(setting_.getProperty(toUni("¼­¹öÈùÆ®")).getBytes("ISO-8859-1"), "euc-kr");
+            startMap = Integer.parseInt(setting_.getProperty(toUni("ì‹œì‘ë§µ")));
+            mainMap = Integer.parseInt(setting_.getProperty(toUni("ë§ˆì„ë§µ")));
+            serverHint = new String(setting_.getProperty(toUni("ì„œë²„íŒíŠ¸")).getBytes("ISO-8859-1"), "euc-kr");
 
-            MAPLE_VERSION = Short.parseShort(setting_.getProperty(toUni("Å¬¶óÀÌ¾ğÆ®¹öÀü")));
-            subVersion = Byte.parseByte(setting_.getProperty(toUni("¸¶ÀÌ³Ê¹öÀü")));
+            MAPLE_VERSION = Short.parseShort(setting_.getProperty(toUni("í´ë¼ì´ì–¸íŠ¸ë²„ì „")));
+            subVersion = Byte.parseByte(setting_.getProperty(toUni("ë§ˆì´ë„ˆë²„ì „")));
 
-            path = new String(setting_.getProperty(toUni("¿É¼Ç°æ·ÎÁöÁ¤")).getBytes("ISO-8859-1"), "euc-kr");
-            windowsDumpPath = new String(setting_.getProperty(toUni("´ıÇÁ°æ·ÎÁöÁ¤")).getBytes("ISO-8859-1"), "euc-kr");
+            path = new String(setting_.getProperty(toUni("ì˜µì…˜ê²½ë¡œì§€ì •")).getBytes("ISO-8859-1"), "euc-kr");
+            windowsDumpPath = new String(setting_.getProperty(toUni("ë¤í”„ê²½ë¡œì§€ì •")).getBytes("ISO-8859-1"), "euc-kr");
 
-            serverCheck = Boolean.parseBoolean(setting_.getProperty(toUni("¼­¹öÁ¡°Ë")));
-            showPackets = Boolean.parseBoolean(setting_.getProperty(toUni("ÆĞÅ¶Ãâ·Â")));
-            useMaxDrop = Boolean.parseBoolean(setting_.getProperty(toUni("ÃÖ´ëµå¶ø»ç¿ë")));
-            useBossMaxDrop = Boolean.parseBoolean(setting_.getProperty(toUni("ÃÖ´ëº¸½ºµå¶ø»ç¿ë")));
-            AutoHotTimeSystem = Boolean.parseBoolean(setting_.getProperty(toUni("ÀÚµ¿ÇÖÅ¸ÀÓ»ç¿ë")));
+            serverCheck = Boolean.parseBoolean(setting_.getProperty(toUni("ì„œë²„ì ê²€")));
+            showPackets = Boolean.parseBoolean(setting_.getProperty(toUni("íŒ¨í‚·ì¶œë ¥")));
+            useMaxDrop = Boolean.parseBoolean(setting_.getProperty(toUni("ìµœëŒ€ë“œëì‚¬ìš©")));
+            useBossMaxDrop = Boolean.parseBoolean(setting_.getProperty(toUni("ìµœëŒ€ë³´ìŠ¤ë“œëì‚¬ìš©")));
+            AutoHotTimeSystem = Boolean.parseBoolean(setting_.getProperty(toUni("ìë™í•«íƒ€ì„ì‚¬ìš©")));
 
-            bossMaxDrop = Integer.parseInt(setting_.getProperty(toUni("ÃÖ´ëº¸½ºµå¶ø¾ÆÀÌÅÛ°³¼ö")));
-            maxDrop = Integer.parseInt(setting_.getProperty(toUni("ÃÖ´ëµå¶ø¾ÆÀÌÅÛ°³¼ö")));
+            bossMaxDrop = Integer.parseInt(setting_.getProperty(toUni("ìµœëŒ€ë³´ìŠ¤ë“œëì•„ì´í…œê°œìˆ˜")));
+            maxDrop = Integer.parseInt(setting_.getProperty(toUni("ìµœëŒ€ë“œëì•„ì´í…œê°œìˆ˜")));
 
-            AutoHotTimeSystemHour = Integer.parseInt(setting_.getProperty(toUni("ÀÚµ¿ÇÖÅ¸ÀÓ½Ã°£")));
-            AutoHotTimeSystemMinute = Integer.parseInt(setting_.getProperty(toUni("ÀÚµ¿ÇÖÅ¸ÀÓºĞ")));
-            AutoHotTimeSystemSecond = Integer.parseInt(setting_.getProperty(toUni("ÀÚµ¿ÇÖÅ¸ÀÓÃÊ")));
+            AutoHotTimeSystemHour = Integer.parseInt(setting_.getProperty(toUni("ìë™í•«íƒ€ì„ì‹œê°„")));
+            AutoHotTimeSystemMinute = Integer.parseInt(setting_.getProperty(toUni("ìë™í•«íƒ€ì„ë¶„")));
+            AutoHotTimeSystemSecond = Integer.parseInt(setting_.getProperty(toUni("ìë™í•«íƒ€ì„ì´ˆ")));
 
-            String AutoHotTimeSundayItemCodes = setting_.getProperty(toUni("ÀÏ¿äÀÏÇÖÅ¸ÀÓ¾ÆÀÌÅÛ"));
+            String AutoHotTimeSundayItemCodes = setting_.getProperty(toUni("ì¼ìš”ì¼í•«íƒ€ì„ì•„ì´í…œ"));
             if (!AutoHotTimeSundayItemCodes.isEmpty()) {
                 String AutoHotTimeSundayItemCodess[] = AutoHotTimeSundayItemCodes.split(",");
                 for (int i = 0; i < AutoHotTimeSundayItemCodess.length; i++) {
@@ -203,7 +203,7 @@ public class ServerConstants {
                 }
             }
 
-            String AutoHotTimeMondayItemCodes = setting_.getProperty(toUni("¿ù¿äÀÏÇÖÅ¸ÀÓ¾ÆÀÌÅÛ"));
+            String AutoHotTimeMondayItemCodes = setting_.getProperty(toUni("ì›”ìš”ì¼í•«íƒ€ì„ì•„ì´í…œ"));
             if (!AutoHotTimeMondayItemCodes.isEmpty()) {
                 String AutoHotTimeMondayItemCodess[] = AutoHotTimeMondayItemCodes.split(",");
                 for (int i = 0; i < AutoHotTimeMondayItemCodess.length; i++) {
@@ -211,7 +211,7 @@ public class ServerConstants {
                 }
             }
 
-            String AutoHotTimeTuesdayItemCodes = setting_.getProperty(toUni("È­¿äÀÏÇÖÅ¸ÀÓ¾ÆÀÌÅÛ"));
+            String AutoHotTimeTuesdayItemCodes = setting_.getProperty(toUni("í™”ìš”ì¼í•«íƒ€ì„ì•„ì´í…œ"));
             if (!AutoHotTimeTuesdayItemCodes.isEmpty()) {
                 String AutoHotTimeTuesdayItemCodess[] = AutoHotTimeTuesdayItemCodes.split(",");
                 for (int i = 0; i < AutoHotTimeTuesdayItemCodess.length; i++) {
@@ -219,7 +219,7 @@ public class ServerConstants {
                 }
             }
 
-            String AutoHotTimeWednesdayItemCodes = setting_.getProperty(toUni("¼ö¿äÀÏÇÖÅ¸ÀÓ¾ÆÀÌÅÛ"));
+            String AutoHotTimeWednesdayItemCodes = setting_.getProperty(toUni("ìˆ˜ìš”ì¼í•«íƒ€ì„ì•„ì´í…œ"));
             if (!AutoHotTimeWednesdayItemCodes.isEmpty()) {
                 String AutoHotTimeWednesdayItemCodess[] = AutoHotTimeWednesdayItemCodes.split(",");
                 for (int i = 0; i < AutoHotTimeWednesdayItemCodess.length; i++) {
@@ -227,7 +227,7 @@ public class ServerConstants {
                 }
             }
 
-            String AutoHotTimeThursdayItemCodes = setting_.getProperty(toUni("¸ñ¿äÀÏÇÖÅ¸ÀÓ¾ÆÀÌÅÛ"));
+            String AutoHotTimeThursdayItemCodes = setting_.getProperty(toUni("ëª©ìš”ì¼í•«íƒ€ì„ì•„ì´í…œ"));
             if (!AutoHotTimeThursdayItemCodes.isEmpty()) {
                 String AutoHotTimeThursdayItemCodess[] = AutoHotTimeThursdayItemCodes.split(",");
                 for (int i = 0; i < AutoHotTimeThursdayItemCodess.length; i++) {
@@ -235,7 +235,7 @@ public class ServerConstants {
                 }
             }
 
-            String AutoHotTimeFridayItemCodes = setting_.getProperty(toUni("±İ¿äÀÏÇÖÅ¸ÀÓ¾ÆÀÌÅÛ"));
+            String AutoHotTimeFridayItemCodes = setting_.getProperty(toUni("ê¸ˆìš”ì¼í•«íƒ€ì„ì•„ì´í…œ"));
             if (!AutoHotTimeFridayItemCodes.isEmpty()) {
                 String AutoHotTimeFridayItemCodess[] = AutoHotTimeFridayItemCodes.split(",");
                 for (int i = 0; i < AutoHotTimeFridayItemCodess.length; i++) {
@@ -243,14 +243,14 @@ public class ServerConstants {
                 }
             }
 
-            String AutoHotTimeSaturdayItemCodes = setting_.getProperty(toUni("Åä¿äÀÏÇÖÅ¸ÀÓ¾ÆÀÌÅÛ"));
+            String AutoHotTimeSaturdayItemCodes = setting_.getProperty(toUni("í† ìš”ì¼í•«íƒ€ì„ì•„ì´í…œ"));
             if (!AutoHotTimeSaturdayItemCodes.isEmpty()) {
                 String AutoHotTimeSaturdayItemCodess[] = AutoHotTimeSaturdayItemCodes.split(",");
                 for (int i = 0; i < AutoHotTimeSaturdayItemCodess.length; i++) {
                     AutoHotTimeSaturdayItemCode.add(Integer.parseInt(AutoHotTimeSaturdayItemCodess[i]));
                 }
             }
-            String AutoHotTimeSundayItemCounts = setting_.getProperty(toUni("ÀÏ¿äÀÏÇÖÅ¸ÀÓ¾ÆÀÌÅÛ°¹¼ö"));
+            String AutoHotTimeSundayItemCounts = setting_.getProperty(toUni("ì¼ìš”ì¼í•«íƒ€ì„ì•„ì´í…œê°¯ìˆ˜"));
             if (!AutoHotTimeSundayItemCounts.isEmpty()) {
                 String AutoHotTimeSundayItemCountss[] = AutoHotTimeSundayItemCounts.split(",");
                 for (int i = 0; i < AutoHotTimeSundayItemCountss.length; i++) {
@@ -258,7 +258,7 @@ public class ServerConstants {
                 }
             }
 
-            String AutoHotTimeMondayItemCounts = setting_.getProperty(toUni("¿ù¿äÀÏÇÖÅ¸ÀÓ¾ÆÀÌÅÛ°¹¼ö"));
+            String AutoHotTimeMondayItemCounts = setting_.getProperty(toUni("ì›”ìš”ì¼í•«íƒ€ì„ì•„ì´í…œê°¯ìˆ˜"));
             if (!AutoHotTimeMondayItemCounts.isEmpty()) {
                 String AutoHotTimeMondayItemCountss[] = AutoHotTimeMondayItemCounts.split(",");
                 for (int i = 0; i < AutoHotTimeMondayItemCountss.length; i++) {
@@ -266,7 +266,7 @@ public class ServerConstants {
                 }
             }
 
-            String AutoHotTimeTuesdayItemCounts = setting_.getProperty(toUni("È­¿äÀÏÇÖÅ¸ÀÓ¾ÆÀÌÅÛ°¹¼ö"));
+            String AutoHotTimeTuesdayItemCounts = setting_.getProperty(toUni("í™”ìš”ì¼í•«íƒ€ì„ì•„ì´í…œê°¯ìˆ˜"));
             if (!AutoHotTimeTuesdayItemCounts.isEmpty()) {
                 String AutoHotTimeTuesdayItemCountss[] = AutoHotTimeTuesdayItemCounts.split(",");
                 for (int i = 0; i < AutoHotTimeTuesdayItemCountss.length; i++) {
@@ -274,7 +274,7 @@ public class ServerConstants {
                 }
             }
 
-            String AutoHotTimeWednesdayItemCounts = setting_.getProperty(toUni("¼ö¿äÀÏÇÖÅ¸ÀÓ¾ÆÀÌÅÛ°¹¼ö"));
+            String AutoHotTimeWednesdayItemCounts = setting_.getProperty(toUni("ìˆ˜ìš”ì¼í•«íƒ€ì„ì•„ì´í…œê°¯ìˆ˜"));
             if (!AutoHotTimeWednesdayItemCounts.isEmpty()) {
                 String AutoHotTimeWednesdayItemCountss[] = AutoHotTimeWednesdayItemCounts.split(",");
                 for (int i = 0; i < AutoHotTimeWednesdayItemCountss.length; i++) {
@@ -282,7 +282,7 @@ public class ServerConstants {
                 }
             }
 
-            String AutoHotTimeThursdayItemCounts = setting_.getProperty(toUni("¸ñ¿äÀÏÇÖÅ¸ÀÓ¾ÆÀÌÅÛ°¹¼ö"));
+            String AutoHotTimeThursdayItemCounts = setting_.getProperty(toUni("ëª©ìš”ì¼í•«íƒ€ì„ì•„ì´í…œê°¯ìˆ˜"));
             if (!AutoHotTimeThursdayItemCounts.isEmpty()) {
                 String AutoHotTimeThursdayItemCountss[] = AutoHotTimeThursdayItemCounts.split(",");
                 for (int i = 0; i < AutoHotTimeThursdayItemCountss.length; i++) {
@@ -290,7 +290,7 @@ public class ServerConstants {
                 }
             }
 
-            String AutoHotTimeFridayItemCounts = setting_.getProperty(toUni("±İ¿äÀÏÇÖÅ¸ÀÓ¾ÆÀÌÅÛ°¹¼ö"));
+            String AutoHotTimeFridayItemCounts = setting_.getProperty(toUni("ê¸ˆìš”ì¼í•«íƒ€ì„ì•„ì´í…œê°¯ìˆ˜"));
             if (!AutoHotTimeFridayItemCounts.isEmpty()) {
                 String AutoHotTimeFridayItemCountss[] = AutoHotTimeFridayItemCounts.split(",");
                 for (int i = 0; i < AutoHotTimeFridayItemCountss.length; i++) {
@@ -298,7 +298,7 @@ public class ServerConstants {
                 }
             }
 
-            String AutoHotTimeSaturdayItemCounts = setting_.getProperty(toUni("Åä¿äÀÏÇÖÅ¸ÀÓ¾ÆÀÌÅÛ°¹¼ö"));
+            String AutoHotTimeSaturdayItemCounts = setting_.getProperty(toUni("í† ìš”ì¼í•«íƒ€ì„ì•„ì´í…œê°¯ìˆ˜"));
             if (!AutoHotTimeSaturdayItemCounts.isEmpty()) {
                 String AutoHotTimeSaturdayItemCountss[] = AutoHotTimeSaturdayItemCounts.split(",");
                 for (int i = 0; i < AutoHotTimeSaturdayItemCountss.length; i++) {
@@ -306,7 +306,7 @@ public class ServerConstants {
                 }
             }
         } catch (Exception e) {
-            System.err.println("[¿À·ù] ¼­¹ö ¼¼ÆÃÆÄÀÏÀ» ºÒ·¯¿À´Âµ¥ ½ÇÆĞÇÏ¿´½À´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] ì„œë²„ ì„¸íŒ…íŒŒì¼ì„ ë¶ˆëŸ¬ì˜¤ëŠ”ë° ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.");
             if (!realese) {
                 e.printStackTrace();
             }

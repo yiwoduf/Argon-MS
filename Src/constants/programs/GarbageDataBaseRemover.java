@@ -294,7 +294,7 @@ public class GarbageDataBaseRemover {
             p.close();
             r.close();
             
-            // °°Àº guilds Å×ÀÌºí
+            // ê°™ì€ guilds í…Œì´ë¸”
             p = c.prepareStatement("SELECT * FROM characters");
             r = p.executeQuery();
             while (r.next()) {

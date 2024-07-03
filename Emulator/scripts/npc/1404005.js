@@ -1,5 +1,5 @@
 /*
-	°õ°í(leehodud302@naver.com)´ÔÀÇ  ½ºÅ©¸³Æ® ÆÄÀÏÀÔ´Ï´Ù.
+	ê³°ê³ (leehodud302@naver.com)ë‹˜ì˜  ìŠ¤í¬ë¦½íŠ¸ íŒŒì¼ì…ë‹ˆë‹¤.
 */
 var status = -1;
 function start() {
@@ -15,14 +15,14 @@ function action(mode, type, selection) {
         cm.dispose();
     }
     if (status == 0) {
-        var chat = "#r#e" + cm.getPlayer().getName() + "#n#k, °­ÇØÁö°í ½Í³ª?#l\r\n";
-        chat += "#b#L1##eÄÚ¾î Áª½ºÅæÀ» »ç¿ëÇØ º¸½º°ø°İ·ÂÀ» °­È­ÇÑ´Ù.#k#l\r\n";        
+        var chat = "#r#e" + cm.getPlayer().getName() + "#n#k, ê°•í•´ì§€ê³  ì‹¶ë‚˜?#l\r\n";
+        chat += "#b#L1##eì½”ì–´ ì ¬ìŠ¤í†¤ì„ ì‚¬ìš©í•´ ë³´ìŠ¤ê³µê²©ë ¥ì„ ê°•í™”í•œë‹¤.#k#l\r\n";        
         cm.sendSimple(chat);
     } else if (status == 1) {
         slot = selection;
-        sel = selection == 0 ? "¿Ã½ºÅİ" : "°ø°İ·Â/¸¶·Â";
+        sel = selection == 0 ? "ì˜¬ìŠ¤í…Ÿ" : "ê³µê²©ë ¥/ë§ˆë ¥";
         var itemid = 0;
-        text = "#b#eº¸°ø°­È­#n#k¸¦ ¼±ÅÃ ÇÏ¼Ë½À´Ï´Ù.\r\n°­È­ÇÒ ¾ÆÀÌÅÛÀ» ¼±ÅÃ ÇØ ÁÖ¼¼¿ä.\r\n";
+        text = "#b#eë³´ê³µê°•í™”#n#kë¥¼ ì„ íƒ í•˜ì…§ìŠµë‹ˆë‹¤.\r\nê°•í™”í•  ì•„ì´í…œì„ ì„ íƒ í•´ ì£¼ì„¸ìš”.\r\n";
         for (i = 0; i < 101; i++) {
             if (cm.getEquip(i)) {
                 itemid = cm.getEquip(i).getItemId();
@@ -33,17 +33,17 @@ function action(mode, type, selection) {
     } else if (status == 2) {
         eq = cm.getEquip(selection);
         if (!cm.haveItem(2435719, 1)) {
-            cm.sendOk("°­È­¿¡ ÇÊ¿äÇÑ ÄÚ¾î Áª½ºÅæÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+            cm.sendOk("ê°•í™”ì— í•„ìš”í•œ ì½”ì–´ ì ¬ìŠ¤í†¤ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
             cm.dispose();
             return;
         }
-        cm.sendYesNo("¼±ÅÃÇÑ ½ºÅÈ : º¸½º°ø°İ·Â\r\n´ÙÀ½ °­È­·Î ¿Ã¶ó°¥¶§ ½ÇÆĞÈ®·üÀº ¾øÀ¸¸ç\r\n¼öÄ¡´Â º¸°ø +5% ¾¿ Ãß°¡µË´Ï´Ù.\r\n°­È­¸¦ ÁøÇà ÇÏ½Ã°Ú½À´Ï±î?");
+        cm.sendYesNo("ì„ íƒí•œ ìŠ¤íƒ¯ : ë³´ìŠ¤ê³µê²©ë ¥\r\në‹¤ìŒ ê°•í™”ë¡œ ì˜¬ë¼ê°ˆë•Œ ì‹¤íŒ¨í™•ë¥ ì€ ì—†ìœ¼ë©°\r\nìˆ˜ì¹˜ëŠ” ë³´ê³µ +5% ì”© ì¶”ê°€ë©ë‹ˆë‹¤.\r\nê°•í™”ë¥¼ ì§„í–‰ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
     } else if (status == 3) {
         cm.gainItem(2435719, -1);
         eq.setBossDamage(eq.getBossDamage() + 5);
 	cm.fakeRelog();
 	cm.updateChar();
-	cm.sendOk("°­È­¿¡ ¼º°øÇÏ¿© º¸°ø 5%°¡ Ãß°¡µÇ¾ú½À´Ï´Ù."); 
+	cm.sendOk("ê°•í™”ì— ì„±ê³µí•˜ì—¬ ë³´ê³µ 5%ê°€ ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤."); 
         cm.dispose();
     }
 }

@@ -27,8 +27,8 @@ function setup(eim) {
 }
 
 function playerEntry(eim, player) {
-    player.send(UIPacket.showInfo("µå·¡°í´ÏÄ« : ¿©±â¿¡ µé¾î¿Â ¹«·ÊÇÑÀÚ´Â ´©±¸³Ä!"));
-    player.send(MainPacketCreator.getGMText(7, "µå·¡°í´ÏÄ« : ¿©±â¿¡ µé¾î¿Â ¹«·ÊÇÑÀÚ´Â ´©±¸³Ä!"));
+    player.send(UIPacket.showInfo("ë“œë˜ê³ ë‹ˆì¹´ : ì—¬ê¸°ì— ë“¤ì–´ì˜¨ ë¬´ë¡€í•œìëŠ” ëˆ„êµ¬ëƒ!"));
+    player.send(MainPacketCreator.getGMText(7, "ë“œë˜ê³ ë‹ˆì¹´ : ì—¬ê¸°ì— ë“¤ì–´ì˜¨ ë¬´ë¡€í•œìëŠ” ëˆ„êµ¬ëƒ!"));
     eim.schedule("announce", 5000);
     var mapzz = eim.getMapFactory().getMap(240080500);
     player.changeMap(mapzz, mapzz.getPortal("sp"));
@@ -84,7 +84,7 @@ function scheduledTimeout(eim) {
     var exit = em.getChannelServer().getMapFactory().getMap(100000000);
     var chr = eim.getPlayers().iterator().next();
     chr.changeMap(exit, exit.getPortal(0));
-    chr.Message(8, "[¸ó½ºÅÍ ¾Æ·¹³ª] ¸ó½ºÅÍ ¾Æ·¹³ª ÁøÇà½Ã°£ÀÌ ÃÊ°úµÇ¾ú½À´Ï´Ù. ´Ù½Ã ÁøÇàÇØÁÖ¼¼¿ä.");
+    chr.Message(8, "[ëª¬ìŠ¤í„° ì•„ë ˆë‚˜] ëª¬ìŠ¤í„° ì•„ë ˆë‚˜ ì§„í–‰ì‹œê°„ì´ ì´ˆê³¼ë˜ì—ˆìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì§„í–‰í•´ì£¼ì„¸ìš”.");
     chr.setKeyValue("Tutorial1", null);
     eim.unregisterPlayer(chr);
     eim.dispose();
@@ -93,7 +93,7 @@ function scheduledTimeout(eim) {
 function allMonstersDead(eim) {
     var level = Integer.parseInt(eim.getProperty("level"));
     if (level == 0 || level == 1) {
-        var text = "Àá½Ã ÈÄ µå·¡°ï¶óÀÌ´õ°¡ ³ªÅ¸³³´Ï´Ù.";
+        var text = "ì ì‹œ í›„ ë“œë˜ê³¤ë¼ì´ë”ê°€ ë‚˜íƒ€ë‚©ë‹ˆë‹¤.";
         eim.getMapFactory().getMap(240080500).broadcastMessage(UIPacket.showInfo(text));
         eim.getMapFactory().getMap(240080500).broadcastMessage(MainPacketCreator.showEffect("monsterPark/clear"));
         eim.getMapFactory().getMap(240080500).broadcastMessage(MainPacketCreator.playSound("Party1/Clear"));
@@ -102,7 +102,7 @@ function allMonstersDead(eim) {
         var chr = eim.getPlayers().iterator().next();
     }
     if (level == 2) {
-        var text = "µå·¡°í´ÏÄ«°¡ ºÀÀÎµÇ¾ú½À´Ï´Ù.";
+        var text = "ë“œë˜ê³ ë‹ˆì¹´ê°€ ë´‰ì¸ë˜ì—ˆìŠµë‹ˆë‹¤.";
         var chr = eim.getPlayers().iterator().next();
         var exit = em.getChannelServer().getMapFactory().getMap(100000000);
         eim.getMapFactory().getMap(240080500).broadcastMessage(UIPacket.showInfo(text));
@@ -112,7 +112,7 @@ function allMonstersDead(eim) {
         eim.getMapFactory().getMap(240080500).broadcastMessage(MainPacketCreator.serverNotice(6, text));
  	var party1 = eim.getPlayers();
 	for (var i = 0; i < party1.size(); i++) {
-		party1.get(i).gainItem(2431582, 1, false, -1, "¸ó½ºÅÍ ¾Æ·¹³ªÈ¹µæ");
+		party1.get(i).gainItem(2431582, 1, false, -1, "ëª¬ìŠ¤í„° ì•„ë ˆë‚˜íšë“");
                 party1.get(i).changeMap(exit, exit.getPortal(0));
 	}
         
@@ -152,7 +152,7 @@ var chr = eim.getPlayers().iterator().next();
      var itemid = scroll[Math.floor(Math.random() * scroll.length)];
      var party = chr.getParty();
      if (party == null) {
-     chr.gainItem(2431582, 1, false, -1, "¸ó½ºÅÍ ¾Æ·¹³ª");      
+     chr.gainItem(2431582, 1, false, -1, "ëª¬ìŠ¤í„° ì•„ë ˆë‚˜");      
      var exit = em.getChannelServer().getMapFactory().getMap(100000000);
      eim.removePlayer(chr);
      chr.changeMap(exit, exit.getPortal(0));
@@ -160,7 +160,7 @@ var chr = eim.getPlayers().iterator().next();
  } else {
      var toRem = chr.getClient().getChannelServer().getPartyMembers(chr.getParty()).iterator();
      var chr1 = toRem.next();
-     chr1.gainItem(2431582, 1, true, -1, "¸ó½ºÅÍ ¾Æ·¹³ª");      
+     chr1.gainItem(2431582, 1, true, -1, "ëª¬ìŠ¤í„° ì•„ë ˆë‚˜");      
      eim.unregisterPlayer(chr);
      var exit = em.getChannelServer().getMapFactory().getMap(100000000);
      eim.removePlayer(chr1);

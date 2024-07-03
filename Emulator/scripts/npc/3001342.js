@@ -14,9 +14,9 @@ function action(mode, type, selection) {
 	return;
     }
     if (status == 0) {
-	var chat = "¾È³çÇÏ¼¼¿ä µå¸²ÇÃ·¡´ÖÀÇ #bÈÄ¿ø»óÁ¡#kÀ»´ã´çÇÏ°í ÀÖ´Â ·çµð¶ó°íÇÕ´Ï´Ù.#b";
-	chat += "\r\n#L4##i1004808# ¾ÆÄÉÀÎ¿þÆù#l #Cyellow##L3##i4310070# ÈÄ¿ø»óÁ¡#l  #d#L9##s5321054# ÈÄ¿ø¹öÇÁ#l#L10##b#i1702445# °Ë»öÄ³½Ã#l";
-	chat += "\r\n#b#L11##i2450064# Æø¾÷»ç³ÉÆÐÅ°Áö#l  #L12##r#i1142840# ÇÎÅ©ºóÄÚÀÎ#l            #k#L5# ´ëÈ­¸¦ ±×¸¸ ÇÑ´Ù.#l";
+	var chat = "ì•ˆë…•í•˜ì„¸ìš” ë“œë¦¼í”Œëž˜ë‹›ì˜ #bí›„ì›ìƒì #kì„ë‹´ë‹¹í•˜ê³  ìžˆëŠ” ë£¨ë””ë¼ê³ í•©ë‹ˆë‹¤.#b";
+	chat += "\r\n#L4##i1004808# ì•„ì¼€ì¸ì›¨í°#l #Cyellow##L3##i4310070# í›„ì›ìƒì #l  #d#L9##s5321054# í›„ì›ë²„í”„#l#L10##b#i1702445# ê²€ìƒ‰ìºì‹œ#l";
+	chat += "\r\n#b#L11##i2450064# í­ì—…ì‚¬ëƒ¥íŒ¨í‚¤ì§€#l  #L12##r#i1142840# í•‘í¬ë¹ˆì½”ì¸#l            #k#L5# ëŒ€í™”ë¥¼ ê·¸ë§Œ í•œë‹¤.#l";
 
 
 

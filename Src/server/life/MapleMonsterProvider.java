@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -132,7 +132,7 @@ public class MapleMonsterProvider {
 
     public final void FinalMaxHpMonster() {
         try {
-            File file = new File("property/Setting/ÆÄÀÌ³Î¸ó½ºÅÍ¿¡ÀÌÄ¡ÇÇ.ini");
+            File file = new File("property/Setting/íŒŒì´ë„ëª¬ìŠ¤í„°ì—ì´ì¹˜í”¼.ini");
             FileInputStream in = new FileInputStream(file);
             BufferedReader reader = new BufferedReader(new InputStreamReader(in, "UTF-8"));
             String line;

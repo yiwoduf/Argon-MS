@@ -1,5 +1,5 @@
 function enter(pi) {
-        pi.playerMessage("¹°¿¡ ºüÁ® ÀÔ±¸·Î µ¹¾Æ°©´Ï´Ù.");
+        pi.playerMessage("ë¬¼ì— ë¹ ì ¸ ì…êµ¬ë¡œ ëŒì•„ê°‘ë‹ˆë‹¤.");
         pi.warp(pi.getPlayer().getMapId(), "st00");
         //pi.dispose();
         return false;

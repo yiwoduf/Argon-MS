@@ -3,19 +3,19 @@
 
 /*
 
-	* ´Ü¹®¿£ÇÇ½Ã ÀÚµ¿Á¦ÀÛ ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¸¸µé¾îÁø ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	* ë‹¨ë¬¸ì—”í”¼ì‹œ ìžë™ì œìž‘ ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ë§Œë“¤ì–´ì§„ ìŠ¤í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤.
 
 	* (Guardian Project Development Source Script)
 
-	ÆäÀÌ ¿¡ ÀÇÇØ ¸¸µé¾î Á³½À´Ï´Ù.
+	íŽ˜ì´ ì— ì˜í•´ ë§Œë“¤ì–´ ì¡ŒìŠµë‹ˆë‹¤.
 
-	¿£ÇÇ½Ã¾ÆÀÌµð : 1022102
+	ì—”í”¼ì‹œì•„ì´ë”” : 1022102
 
-	¿£ÇÇ½Ã ÀÌ¸§ : À¯Àû¹ß±¼´Ü °Ô½ÃÆÇ
+	ì—”í”¼ì‹œ ì´ë¦„ : ìœ ì ë°œêµ´ë‹¨ ê²Œì‹œíŒ
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : È÷µç½ºÆ®¸®Æ® : ¾ç¶¼¸ñÀå ´ë±â½Ç (109090000)
+	ì—”í”¼ì‹œê°€ ìžˆëŠ” ë§µ : ížˆë“ ìŠ¤íŠ¸ë¦¬íŠ¸ : ì–‘ë–¼ëª©ìž¥ ëŒ€ê¸°ì‹¤ (109090000)
 
-	¿£ÇÇ½Ã ¼³¸í : MISSINGNO
+	ì—”í”¼ì‹œ ì„¤ëª… : MISSINGNO
 
 
 */
@@ -41,7 +41,7 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        cm.sendOk("ÇöÀç ÁøÇàÁßÀÎ ÀÌº¥Æ®°¡ ¾ø½À´Ï´Ù.");
+        cm.sendOk("í˜„ìž¬ ì§„í–‰ì¤‘ì¸ ì´ë²¤íŠ¸ê°€ ì—†ìŠµë‹ˆë‹¤.");
         cm.dispose();
         return;
     }

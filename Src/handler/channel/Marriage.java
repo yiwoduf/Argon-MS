@@ -21,15 +21,15 @@ public class Marriage extends Thread {
     private MapleCharacter male = null;
     private MapleCharacter fmale = null;
     private int rate = 0;
-    private String msg[] = {"¿À´Ã ¿ì¸®´Â µÎ ÀşÀºÀÌ¸¦ Ãàº¹ÇÏ±â À§ÇØ ¸ğ¿´½À´Ï´Ù.",
-            "ÈçÈ÷ ÇÏ´ÃÀÌ ³»¸° ÀÎ¿¬Àº ¸®º»µÅÁöÀÇ ºÓÀº ¸®º»À¸·Î ÀÌ¾îÁ® ÀÖ´Ù°í ÇÕ´Ï´Ù.",
-            "Á¦°¡ º¸±â¿¡´Â ÀÌ µÎ »ç¶÷Àº ±× ¸®º»ÀÇ ³¡¿¡ ÀÖ´Â ¼­·Î¸¦ Ã£¾Æ³½ °Í °°½À´Ï´Ù.",
-            "¼ö ¸¹Àº ¿©ÇàÀÚµé Áß¿¡¼­ ¼­·Î¸¦ Ã£¾Æ³½ µÎ »ç¶÷ÀÌ¾ß¸»·Î ÁøÁ¤ÇÑ Çà¿î¾Æ ÀÏ°Ì´Ï´Ù.",
-            "¼­·Î¿¡°Ô Ã£¾Æ ¿Â ÀÌ Çà¿îÀ» Çàº¹À¸·Î ¸¸µé¾î°¡´Â °ÍÀÌ ¾ÕÀ¸·Î µÎ »ç¶÷¿¡°Ô ÁÖ¾îÁø ¾à¼ÓÀÔ´Ï´Ù.",
-            "½Å¶û, °ËÀº ¸Ó¸®°¡ ¿¹Æ¼ÀÇ ÅĞÃ³·³ ÇÏ¾é°Ô º¯ÇÒ¶§±îÁö ½ÅºÎ¸¦ »ç¶ûÇÏ½Ã°Ú½À´Ï±î?",
-            "½ÅºÎ, ¿¤³ª½º»êÀÇ ¸¸³â¼³ÀÌ ¸ğµÎ ³ì¾Æ ´ÏÇÒ»ç¸·Ã³·³ µÉ ¶§±îÁö ½Å¶ûÀ» »ç¶ûÇÏ½Ã°Ú½À´Ï±î?",
-            "¿À´Ã ¸ğÀÎ ÇÏ°´ºĞµéÀÌ µÎ »ç¶÷ÀÇ ¸Í¼¼¿¡ ´ëÇÑ ÁõÀÎÀÌ µÇ¾î ÁÖ½Ê½Ã¿À.",
-            "¸ğµÎÀÇ Ãàº¹ ¼Ó¿¡ µÎ ÀşÀºÀÌ°¡ ºÎºÎ°¡ µÇ¾úÀ½À» ¼±Æ÷ÇÕ´Ï´Ù."};
+    private String msg[] = {"ì˜¤ëŠ˜ ìš°ë¦¬ëŠ” ë‘ ì Šì€ì´ë¥¼ ì¶•ë³µí•˜ê¸° ìœ„í•´ ëª¨ì˜€ìŠµë‹ˆë‹¤.",
+            "í”íˆ í•˜ëŠ˜ì´ ë‚´ë¦° ì¸ì—°ì€ ë¦¬ë³¸ë¼ì§€ì˜ ë¶‰ì€ ë¦¬ë³¸ìœ¼ë¡œ ì´ì–´ì ¸ ìˆë‹¤ê³  í•©ë‹ˆë‹¤.",
+            "ì œê°€ ë³´ê¸°ì—ëŠ” ì´ ë‘ ì‚¬ëŒì€ ê·¸ ë¦¬ë³¸ì˜ ëì— ìˆëŠ” ì„œë¡œë¥¼ ì°¾ì•„ë‚¸ ê²ƒ ê°™ìŠµë‹ˆë‹¤.",
+            "ìˆ˜ ë§ì€ ì—¬í–‰ìë“¤ ì¤‘ì—ì„œ ì„œë¡œë¥¼ ì°¾ì•„ë‚¸ ë‘ ì‚¬ëŒì´ì•¼ë§ë¡œ ì§„ì •í•œ í–‰ìš´ì•„ ì¼ê²ë‹ˆë‹¤.",
+            "ì„œë¡œì—ê²Œ ì°¾ì•„ ì˜¨ ì´ í–‰ìš´ì„ í–‰ë³µìœ¼ë¡œ ë§Œë“¤ì–´ê°€ëŠ” ê²ƒì´ ì•ìœ¼ë¡œ ë‘ ì‚¬ëŒì—ê²Œ ì£¼ì–´ì§„ ì•½ì†ì…ë‹ˆë‹¤.",
+            "ì‹ ë‘, ê²€ì€ ë¨¸ë¦¬ê°€ ì˜ˆí‹°ì˜ í„¸ì²˜ëŸ¼ í•˜ì–—ê²Œ ë³€í• ë•Œê¹Œì§€ ì‹ ë¶€ë¥¼ ì‚¬ë‘í•˜ì‹œê² ìŠµë‹ˆê¹Œ?",
+            "ì‹ ë¶€, ì—˜ë‚˜ìŠ¤ì‚°ì˜ ë§Œë…„ì„¤ì´ ëª¨ë‘ ë…¹ì•„ ë‹ˆí• ì‚¬ë§‰ì²˜ëŸ¼ ë  ë•Œê¹Œì§€ ì‹ ë‘ì„ ì‚¬ë‘í•˜ì‹œê² ìŠµë‹ˆê¹Œ?",
+            "ì˜¤ëŠ˜ ëª¨ì¸ í•˜ê°ë¶„ë“¤ì´ ë‘ ì‚¬ëŒì˜ ë§¹ì„¸ì— ëŒ€í•œ ì¦ì¸ì´ ë˜ì–´ ì£¼ì‹­ì‹œì˜¤.",
+            "ëª¨ë‘ì˜ ì¶•ë³µ ì†ì— ë‘ ì Šì€ì´ê°€ ë¶€ë¶€ê°€ ë˜ì—ˆìŒì„ ì„ í¬í•©ë‹ˆë‹¤."};
 
     public Marriage(final MapleCharacter male, final MapleCharacter fmale) {
         this.male = male;
@@ -39,7 +39,7 @@ public class Marriage extends Thread {
     @Override
     public void run() {
         try {
-            WorldBroadcasting.broadcastMessage(MainPacketCreator.serverNotice(5, "[°áÈ¥] " + male.getName() + "´Ô °ú " + fmale.getName() + "´Ô ÀÇ °áÈ¥½ÄÀ» ½ÃÀÛ ÇÕ´Ï´Ù."));
+            WorldBroadcasting.broadcastMessage(MainPacketCreator.serverNotice(5, "[ê²°í˜¼] " + male.getName() + "ë‹˜ ê³¼ " + fmale.getName() + "ë‹˜ ì˜ ê²°í˜¼ì‹ì„ ì‹œì‘ í•©ë‹ˆë‹¤."));
             Thread.sleep(3000);
             while (true) {
                 male.getMap().broadcastMessage(UIPacket.showInfo(msg[rate]));
@@ -56,7 +56,7 @@ public class Marriage extends Thread {
                     Thread.sleep(5000);
                     male.warp(ServerConstants.mainMap);
                     fmale.warp(ServerConstants.mainMap);
-                    WorldBroadcasting.broadcastMessage(MainPacketCreator.serverNotice(5, "[°áÈ¥] " + male.getName() + "´Ô °ú " + fmale.getName() + "´Ô ÀÌ ¸ğµÎÀÇ Ãàº¹ ¼Ó¿¡¼­ °áÈ¥À» ÇÏ¿´½À´Ï´Ù."));
+                    WorldBroadcasting.broadcastMessage(MainPacketCreator.serverNotice(5, "[ê²°í˜¼] " + male.getName() + "ë‹˜ ê³¼ " + fmale.getName() + "ë‹˜ ì´ ëª¨ë‘ì˜ ì¶•ë³µ ì†ì—ì„œ ê²°í˜¼ì„ í•˜ì˜€ìŠµë‹ˆë‹¤."));
                     ServerConstants.isMarri = false;
                     this.stop();
                     return;

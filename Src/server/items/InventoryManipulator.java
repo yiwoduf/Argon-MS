@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  *
  */
@@ -50,9 +50,9 @@ public class InventoryManipulator {
         if (item.getItemId() == 5000312) {
             return false;
         }
-        if (GameConstants.È¯»ıÀÇºÒ²É¾ÆÀÌÅÛ(item.getItemId())) {
+        if (GameConstants.í™˜ìƒì˜ë¶ˆê½ƒì•„ì´í…œ(item.getItemId())) {
             if (item.getOwner() == "" || item.getOwner() == null) {
-                item = (IItem) InventoryHandler.È¯»ıÀÇºÒ²É((Equip) item);
+                item = (IItem) InventoryHandler.í™˜ìƒì˜ë¶ˆê½ƒ((Equip) item);
             }
         }
         final MapleInventoryType type = GameConstants.getInventoryType(item.getItemId());
@@ -190,9 +190,9 @@ public class InventoryManipulator {
         } else {
             if (quantity == 1) {
                 IItem nEquip = ii.getEquipById(itemId);
-                if (GameConstants.È¯»ıÀÇºÒ²É¾ÆÀÌÅÛ(nEquip.getItemId())) {
+                if (GameConstants.í™˜ìƒì˜ë¶ˆê½ƒì•„ì´í…œ(nEquip.getItemId())) {
                     if (nEquip.getOwner() == "" || nEquip.getOwner() == null) {
-                        nEquip = (Item) InventoryHandler.È¯»ıÀÇºÒ²É((Equip) nEquip);
+                        nEquip = (Item) InventoryHandler.í™˜ìƒì˜ë¶ˆê½ƒ((Equip) nEquip);
                     }
                 }
                 if (owner != null) {
@@ -262,9 +262,9 @@ public class InventoryManipulator {
                     while (quantity > 0) {
                         if (i.hasNext()) {
                             Item eItem = (Item) i.next();
-                            if (GameConstants.È¯»ıÀÇºÒ²É¾ÆÀÌÅÛ(eItem.getItemId())) {
+                            if (GameConstants.í™˜ìƒì˜ë¶ˆê½ƒì•„ì´í…œ(eItem.getItemId())) {
                                 if (eItem.getOwner() == "" || eItem.getOwner() == null) {
-                                    eItem = InventoryHandler.È¯»ıÀÇºÒ²É((Equip) eItem);
+                                    eItem = InventoryHandler.í™˜ìƒì˜ë¶ˆê½ƒ((Equip) eItem);
                                 }
                             }
                             final short oldQ = eItem.getQuantity();
@@ -469,7 +469,7 @@ public class InventoryManipulator {
                 if (eSlot > 0) {
                     final SkillStatEffect ee = ii.getItemEffect(eSlot);
                     if (dst % 100 > ee.getSkillStats().getStats("slotCount") || ee.getSkillStats().getStats("type") != ii.getBagType(source.getItemId()) || ee.getSkillStats().getStats("type") <= 0) {
-                        c.getPlayer().dropMessage(1, "°¡¹æ¿¡ ³ÖÀ» ¼ö ¾ø´Â ¾ÆÀÌÅÛ ÀÔ´Ï´Ù. " + ee.getSkillStats().getStats("type") + " != " + ii.getBagType(source.getItemId()));
+                        c.getPlayer().dropMessage(1, "ê°€ë°©ì— ë„£ì„ ìˆ˜ ì—†ëŠ” ì•„ì´í…œ ì…ë‹ˆë‹¤. " + ee.getSkillStats().getStats("type") + " != " + ii.getBagType(source.getItemId()));
                         c.getSession().writeAndFlush(MainPacketCreator.resetActions());
                         return;
                     } else {
@@ -477,12 +477,12 @@ public class InventoryManipulator {
                         bag = true;
                     }
                 } else {
-                    c.getPlayer().dropMessage(1, "°¡¹æ¿¡ ³ÖÀ» ¼ö ¾ø½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(1, "ê°€ë°©ì— ë„£ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                     c.getSession().writeAndFlush(MainPacketCreator.resetActions());
                     return;
                 }
             } else {
-                c.getPlayer().dropMessage(1, "°¡¹æ¿¡ ³ÖÀ» ¼ö ¾ø½À´Ï´Ù.");
+                c.getPlayer().dropMessage(1, "ê°€ë°©ì— ë„£ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                 c.getSession().writeAndFlush(MainPacketCreator.resetActions());
                 return;
             }
@@ -510,7 +510,7 @@ public class InventoryManipulator {
                 && initialTarget.getExpiration() == source.getExpiration()
                 && !GameConstants.isThrowingStar(source.getItemId())
                 && !GameConstants.isBullet(source.getItemId())
-                && initialTarget.getOwner().equals(source.getOwner())) { //¾ÆÀÌÅÛ Áõ¹ß ¹ö±× ¼öÁ¤
+                && initialTarget.getOwner().equals(source.getOwner())) { //ì•„ì´í…œ ì¦ë°œ ë²„ê·¸ ìˆ˜ì •
             if ((olddstQ + oldsrcQ) > slotMax) {
                 c.getSession().writeAndFlush(MainPacketCreator.moveAndMergeWithRestInventoryItem(type, src, dst, (short) ((olddstQ + oldsrcQ) - slotMax), slotMax, bag, switchSrcDst, bothBag));
             } else {
@@ -562,7 +562,7 @@ public class InventoryManipulator {
         int weaponPos = -11;
         int shieldPos = -10;
         switch (dst) {
-            case -105: //Ä³½Ã¾ÆÀÌÅÛ;;
+            case -105: //ìºì‹œì•„ì´í…œ;;
                 topPos = -105;
                 bottomPos = -106;
             case -5:
@@ -573,7 +573,7 @@ public class InventoryManipulator {
                 }
                 final IItem equippedTop = chr.getInventory(MapleInventoryType.EQUIPPED).getItem((short) topPos);
                 final IItem bottom = chr.getInventory(MapleInventoryType.EQUIPPED).getItem((short) bottomPos);
-                if (bottom != null && GameConstants.isOverall(source.getItemId())) { //ÇÏÀÇ¸¦ ³¤Ã¤·Î »óÀÇ¸¦ ÀÔÀ»¶§
+                if (bottom != null && GameConstants.isOverall(source.getItemId())) { //í•˜ì˜ë¥¼ ë‚€ì±„ë¡œ ìƒì˜ë¥¼ ì…ì„ë•Œ
                     if (chr.getInventory(MapleInventoryType.EQUIP).isFull()) {
                         c.getSession().writeAndFlush(MainPacketCreator.getInventoryFull());
                         c.getSession().writeAndFlush(MainPacketCreator.getShowInventoryFull());
@@ -583,7 +583,7 @@ public class InventoryManipulator {
                 }
                 break;
             }
-            case -106:  //Ä³½Ã¾ÆÀÌÅÛ;;
+            case -106:  //ìºì‹œì•„ì´í…œ;;
                 topPos = -105;
                 bottomPos = -106;
             case -6:
@@ -594,8 +594,8 @@ public class InventoryManipulator {
                 }
                 final IItem top = chr.getInventory(MapleInventoryType.EQUIPPED).getItem((short) topPos);
                 final IItem bottom = chr.getInventory(MapleInventoryType.EQUIPPED).getItem((short) bottomPos);
-                if (top != null && GameConstants.isOverall(top.getItemId())) { //ÇÑ¹ú¿ÊÀ» ³¤Ã¤·Î ÇÏÀÇ¸¦ ÀÔÀ»¶§
-                    if (chr.getInventory(MapleInventoryType.EQUIP).isFull(bottom != null && GameConstants.isOverall(top.getItemId()) ? 1 : 0)) { //³¤ »óÀÇ°¡ ÇÑ¹ú¿ÊÀÌ¸é ¿©À¯°ø°£ÀÌ µÎÄ­Àº ÇÊ¿ä.
+                if (top != null && GameConstants.isOverall(top.getItemId())) { //í•œë²Œì˜·ì„ ë‚€ì±„ë¡œ í•˜ì˜ë¥¼ ì…ì„ë•Œ
+                    if (chr.getInventory(MapleInventoryType.EQUIP).isFull(bottom != null && GameConstants.isOverall(top.getItemId()) ? 1 : 0)) { //ë‚€ ìƒì˜ê°€ í•œë²Œì˜·ì´ë©´ ì—¬ìœ ê³µê°„ì´ ë‘ì¹¸ì€ í•„ìš”.
                         c.getSession().writeAndFlush(MainPacketCreator.getInventoryFull());
                         c.getSession().writeAndFlush(MainPacketCreator.getShowInventoryFull());
                         return;
@@ -696,7 +696,7 @@ public class InventoryManipulator {
                     if (android.getAndroid() != null) {
                         chr.setAndroid(android.getAndroid());
                     } else {
-                        chr.dropMessage(1, "¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù!");
+                        chr.dropMessage(1, "ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤!");
                         return;
                     }
                 } else {
@@ -713,7 +713,7 @@ public class InventoryManipulator {
         }
         if (source.getItemId() == 1142145) {
             c.getPlayer().setPC(true);
-            c.getPlayer().dropMessage(5, "ÇÁ¸®¹Ì¾ö PC¹æ ÈÆÀå Âø¿ëÀ¸·Î ÀÎÇØ ¸ó½ºÅÍ »ç³É½Ã º¸³Ê½º °æÇèÄ¡ 50%¸¦ Ãß°¡·Î È¹µæÇÏ°Ô µË´Ï´Ù.");
+            c.getPlayer().dropMessage(5, "í”„ë¦¬ë¯¸ì—„ PCë°© í›ˆì¥ ì°©ìš©ìœ¼ë¡œ ì¸í•´ ëª¬ìŠ¤í„° ì‚¬ëƒ¥ì‹œ ë³´ë„ˆìŠ¤ ê²½í—˜ì¹˜ 50%ë¥¼ ì¶”ê°€ë¡œ íšë“í•˜ê²Œ ë©ë‹ˆë‹¤.");
         }
 
         if (source.getItemId() / 10000 == 166) { //Android
@@ -725,7 +725,7 @@ public class InventoryManipulator {
                     if (source.getAndroid() != null) {
                         chr.setAndroid(source.getAndroid());
                     } else {
-                        chr.dropMessage(1, "¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù!");
+                        chr.dropMessage(1, "ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤!");
                         return;
                     }
                 } else {
@@ -926,6 +926,6 @@ public class InventoryManipulator {
     }
 
     public static IItem BuyMonsterLifeWeapon(int boxid) {
-        return InventoryHandler.È¯»ıÀÇºÒ²É((Equip) ItemInformation.getInstance().getEquipById(boxid));
+        return InventoryHandler.í™˜ìƒì˜ë¶ˆê½ƒ((Equip) ItemInformation.getInstance().getEquipById(boxid));
     }
 }

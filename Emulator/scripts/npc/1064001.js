@@ -22,53 +22,53 @@ function action(mode, type, selection) {
 if(cm.getPlayer().getQuestStatus(30008) == 1) {
 cm.dispose();
 } else if(cm.getPlayer().getKeyValue("ba") == "attack") {
-cm.sendSimple("ÇÑ½Ã¶óµµ »¡¸® ÀÌ°÷¿¡¼­ ³ª°¡°í ½Í¾î!\r\n\r\n#fUI/UIWindow2.img/UtilDlgEx/list3#\r\n#L0##d[·çÅ¸ºñ½º] ºÀÀÎ ´çÇÑ ¼¼°è¼ö (¿Ï·á°¡´É)#l");
+cm.sendSimple("í•œì‹œë¼ë„ ë¹¨ë¦¬ ì´ê³³ì—ì„œ ë‚˜ê°€ê³  ì‹¶ì–´!\r\n\r\n#fUI/UIWindow2.img/UtilDlgEx/list3#\r\n#L0##d[ë£¨íƒ€ë¹„ìŠ¤] ë´‰ì¸ ë‹¹í•œ ì„¸ê³„ìˆ˜ (ì™„ë£Œê°€ëŠ¥)#l");
 } else if(cm.getPlayer().getKeyValue("lutas") == "start") {
-cm.sendSimple("ÇÑ½Ã¶óµµ »¡¸® ÀÌ°÷¿¡¼­ ³ª°¡°í ½Í¾î!\r\n\r\n#fUI/UIWindow2.img/UtilDlgEx/list3#\r\n#L0##d[·çÅ¸ºñ½º] °Å´ëÇÑ »Ñ¸® Å»Ãâ2 (¿Ï·á°¡´É)#l");
+cm.sendSimple("í•œì‹œë¼ë„ ë¹¨ë¦¬ ì´ê³³ì—ì„œ ë‚˜ê°€ê³  ì‹¶ì–´!\r\n\r\n#fUI/UIWindow2.img/UtilDlgEx/list3#\r\n#L0##d[ë£¨íƒ€ë¹„ìŠ¤] ê±°ëŒ€í•œ ë¿Œë¦¬ íƒˆì¶œ2 (ì™„ë£Œê°€ëŠ¥)#l");
 } else if(cm.getPlayer().getKeyValue("lutat") == "start" && cm.getPlayer().getMapId() == 105010200) {
-cm.sendNextS("¹¹¾ß Ãâ±¸´Â ¾Æ¹« ¹®Á¦µµ ¾øÀİ¾Æ? ´Ù½Ã µ¹¾Æ°¡¾ß°Ú´Ù.",2);
+cm.sendNextS("ë­ì•¼ ì¶œêµ¬ëŠ” ì•„ë¬´ ë¬¸ì œë„ ì—†ì–ì•„? ë‹¤ì‹œ ëŒì•„ê°€ì•¼ê² ë‹¤.",2);
 cm.dispose();
 } else if(cm.getPlayer().getKeyValue("lutat") == "start" && cm.getPlayer().getMapId() != 105010200) {
-cm.sendSimple("ÇÑ½Ã¶óµµ »¡¸® ÀÌ°÷¿¡¼­ ³ª°¡°í ½Í¾î!\r\n\r\n#fUI/UIWindow2.img/UtilDlgEx/list3#\r\n#L0##d[·çÅ¸ºñ½º] °Å´ëÇÑ »Ñ¸® Å»Ãâ1 (¿Ï·á°¡´É)#l");
+cm.sendSimple("í•œì‹œë¼ë„ ë¹¨ë¦¬ ì´ê³³ì—ì„œ ë‚˜ê°€ê³  ì‹¶ì–´!\r\n\r\n#fUI/UIWindow2.img/UtilDlgEx/list3#\r\n#L0##d[ë£¨íƒ€ë¹„ìŠ¤] ê±°ëŒ€í•œ ë¿Œë¦¬ íƒˆì¶œ1 (ì™„ë£Œê°€ëŠ¥)#l");
 } else if(cm.getPlayer().getKeyValue("luta") == "start" && cm.getQuestStatus(30002) == 0) {
-cm.sendOk("ÀÏ¾î³ª... ÀÏ¾î³ª......");
+cm.sendOk("ì¼ì–´ë‚˜... ì¼ì–´ë‚˜......");
 cm.dispose();
 } else if (cm.getQuestStatus(30002) == 1) {
-cm.sendNextS("¿ª½Ã Ãâ±¸°¡ ÀÖ¾ú¾î, ¼Ò³à¿¡°Ô Ãâ±¸°¡ ÀÖ´Ù°í ¸»ÇØÁà¾ß°Ú´Ù.",2);
+cm.sendNextS("ì—­ì‹œ ì¶œêµ¬ê°€ ìˆì—ˆì–´, ì†Œë…€ì—ê²Œ ì¶œêµ¬ê°€ ìˆë‹¤ê³  ë§í•´ì¤˜ì•¼ê² ë‹¤.",2);
 } else {
 cm.dispose();
 }
 } else if (status == 1) {
 if(cm.getPlayer().getKeyValue("ba") == "attack") {
-cm.sendOk("¾Ñ,#b" + cm.getPlayer().getName() + "#k! ´Ù½Ã µ¹¾Æ¿Ô±¸³ª!\r\n\r\n#fUI/UIWindow2.img/QuestIcon/4/0#\r\n\r\n#fUI/UIWindow2.img/QuestIcon/8/0#143000 + 4290(°¨¼º Ãß°¡ °æÇèÄ¡) exp");
+cm.sendOk("ì•—,#b" + cm.getPlayer().getName() + "#k! ë‹¤ì‹œ ëŒì•„ì™”êµ¬ë‚˜!\r\n\r\n#fUI/UIWindow2.img/QuestIcon/4/0#\r\n\r\n#fUI/UIWindow2.img/QuestIcon/8/0#143000 + 4290(ê°ì„± ì¶”ê°€ ê²½í—˜ì¹˜) exp");
 cm.completeQuest(30006);
 cm.dispose();
 } else if(cm.getPlayer().getKeyValue("lutas") == "start") {
-cm.sendNext("È®ÀÎÇØºÃ¾î?");
+cm.sendNext("í™•ì¸í•´ë´¤ì–´?");
 } else if(cm.getPlayer().getKeyValue("lutat") == "start") {
-cm.sendNext("È®ÀÎÇØºÃ¾î?");
+cm.sendNext("í™•ì¸í•´ë´¤ì–´?");
 } else {
-cm.sendSimple("ÇÑ½Ã¶óµµ »¡¸® ÀÌ°÷¿¡¼­ ³ª°¡°í ½Í¾î!\r\n\r\n#fUI/UIWindow2.img/UtilDlgEx/list3#\r\n#L0##d[·çÅ¸ºñ½º] ÀÇ¹®ÀÇ ¼Ò³à (¿Ï·á°¡´É)#l");
+cm.sendSimple("í•œì‹œë¼ë„ ë¹¨ë¦¬ ì´ê³³ì—ì„œ ë‚˜ê°€ê³  ì‹¶ì–´!\r\n\r\n#fUI/UIWindow2.img/UtilDlgEx/list3#\r\n#L0##d[ë£¨íƒ€ë¹„ìŠ¤] ì˜ë¬¸ì˜ ì†Œë…€ (ì™„ë£Œê°€ëŠ¥)#l");
 }
 } else if (status == 2) {
 if(cm.getPlayer().getKeyValue("lutas") == "start") {
-cm.sendNextS("ÀÌ¹ø¿¡µµ ÁÖ¹®¼­¿¡´Â ¾Æ¹«·± ¹®Á¦µµ ¾ø¾ú¾î.",2);
+cm.sendNextS("ì´ë²ˆì—ë„ ì£¼ë¬¸ì„œì—ëŠ” ì•„ë¬´ëŸ° ë¬¸ì œë„ ì—†ì—ˆì–´.",2);
 } else if(cm.getPlayer().getKeyValue("lutat") == "start") {
-cm.sendNextS("ÀÀ. Ãâ±¸´Â ¹ÛÀ¸·Î ¹®Á¦¾øÀÌ ÀÌ¾îÁ® ÀÖ´ø°É.",2);
+cm.sendNextS("ì‘. ì¶œêµ¬ëŠ” ë°–ìœ¼ë¡œ ë¬¸ì œì—†ì´ ì´ì–´ì ¸ ìˆë˜ê±¸.",2);
 } else {
 if(selection == 0) {
-cm.sendOk("¿©±â¼­ ³ª°¥ ¼ö ÀÖ´Â ¹æ¹ıÀ» Ã£¾Ò¾î?\r\n\r\n#fUI/UIWindow2.img/QuestIcon/8/0#135000 + 4050(°¨¼º Ãß°¡ °æÇèÄ¡) exp");
+cm.sendOk("ì—¬ê¸°ì„œ ë‚˜ê°ˆ ìˆ˜ ìˆëŠ” ë°©ë²•ì„ ì°¾ì•˜ì–´?\r\n\r\n#fUI/UIWindow2.img/QuestIcon/8/0#135000 + 4050(ê°ì„± ì¶”ê°€ ê²½í—˜ì¹˜) exp");
 cm.completeQuest(30002);
 cm.dispose();
 }
 } 
 } else if (status == 3) {
 if(cm.getPlayer().getKeyValue("lutas") == "start") {
-cm.sendNext("±×·³ ÀÌ¹ø¿¡µµ ½ÇÆĞ³×... ³­ Á¤¸» ¹ÛÀ¸·Î ³ª°¥ ¼ö ¾ø´Â °É±î...?");
+cm.sendNext("ê·¸ëŸ¼ ì´ë²ˆì—ë„ ì‹¤íŒ¨ë„¤... ë‚œ ì •ë§ ë°–ìœ¼ë¡œ ë‚˜ê°ˆ ìˆ˜ ì—†ëŠ” ê±¸ê¹Œ...?");
 cm.completeQuest(30004);
 cm.dispose();
 } else if (cm.getPlayer().getKeyValue("lutat") == "start") {
-cm.sendNext("Á¤¸»? ±×·³ ÁøÂ¥ ³ª¸¸ ¸ø ³ª°¡´Â °Ç°¡ º¸³×.....");
+cm.sendNext("ì •ë§? ê·¸ëŸ¼ ì§„ì§œ ë‚˜ë§Œ ëª» ë‚˜ê°€ëŠ” ê±´ê°€ ë³´ë„¤.....");
 cm.completeQuest(30003);
 cm.dispose();
 } 

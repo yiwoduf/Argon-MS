@@ -3,19 +3,19 @@
 
 /*
 
-	* �ܹ����ǽ� �ڵ����� ��ũ��Ʈ�� ���� ������� ��ũ��Ʈ �Դϴ�.
+	* 단문엔피시 자동제작 스크립트를 통해 만들어진 스크립트 입니다.
 
 	* (Guardian Project Development Source Script)
 
-	�絹�� �� ���� ����� �����ϴ�.
+	루돌이 에 의해 만들어 졌습니다.
 
-	���ǽþ��̵� : 9000294
+	엔피시아이디 : 9000294
 
-	���ǽ� �̸� : �ȳ� ����
+	엔피시 이름 : 안내 월묘
 
-	���ǽð� �ִ� �� : ���罺Ʈ��Ʈ : �޳��� (910196001)
+	엔피시가 있는 맵 : 히든스트리트 : 달나라 (910196001)
 
-	���ǽ� ���� : MISSINGNO
+	엔피시 설명 : MISSINGNO
 
 
 */
@@ -41,7 +41,7 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        cm.sendOk("�غ����Դϴ�");
+        cm.sendOk("준비중입니당");
         cm.dispose();
         return;
     }

@@ -1,7 +1,7 @@
 /*
  * Tespia Project
  * ==================================
- * Ω∫∏∂¿Ã∆Æ smite_demolition@nate.com
+ * Ïä§ÎßàÏù¥Ìä∏ smite_demolition@nate.com
  * ==================================
  *
  */
@@ -90,8 +90,8 @@ public enum MonsterStatus implements GlobalBuffStat {
     WEAPON_DEFENSE_UP       ("20000"),
     MAGIC_DEFENSE_UP        ("10000"),
 
-    WEAPON_IMMUNITY         ("8000"), //π´∑¬
-    MAGIC_IMMUNITY          ("4000"), //π´∑¬
+    WEAPON_IMMUNITY         ("8000"), //Î¨¥Î†•
+    MAGIC_IMMUNITY          ("4000"), //Î¨¥Î†•
     SHADOW_WEB              ("2000"),
     MS_HardSkin             ("1000"),
     
@@ -101,8 +101,8 @@ public enum MonsterStatus implements GlobalBuffStat {
     MS_SealSkill            ("100"),
 
     MS_Dazzle               ("80"),
-    WEAPON_DAMAGE_REFLECT   ("40"), //π›ªÁ
-    MAGIC_DAMAGE_REFLECT    ("20"), //π›ªÁ
+    WEAPON_DAMAGE_REFLECT   ("40"), //Î∞òÏÇ¨
+    MAGIC_DAMAGE_REFLECT    ("20"), //Î∞òÏÇ¨
     MS_RiseByToss           ("10"),
 
     BodyPressure            ("8"),

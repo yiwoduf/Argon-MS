@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹èÁöÈÆ raccoonfox69@gmail.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°°ì§€í›ˆ raccoonfox69@gmail.com
  * ==================================
  * 
  */
@@ -26,8 +26,8 @@ public class HelpCommand implements Command {
     @Override
     public CommandDefinition[] getDefinition() {
 	return new CommandDefinition[]{
-            new CommandDefinition("GM¸í·É¾î", "[ÆäÀÌÁö - ±âº»°ª : 1]", "¸í·É¾î µµ¿ò¸»À» Ç¥½ÃÇÕ´Ï´Ù.", 1),
-            new CommandDefinition("GMµµ¿ò¸»", "[ÆäÀÌÁö - ±âº»°ª : 1]", "¸í·É¾î µµ¿ò¸»À» Ç¥½ÃÇÕ´Ï´Ù.", 1)
+            new CommandDefinition("GMëª…ë ¹ì–´", "[í˜ì´ì§€ - ê¸°ë³¸ê°’ : 1]", "ëª…ë ¹ì–´ ë„ì›€ë§ì„ í‘œì‹œí•©ë‹ˆë‹¤.", 1),
+            new CommandDefinition("GMë„ì›€ë§", "[í˜ì´ì§€ - ê¸°ë³¸ê°’ : 1]", "ëª…ë ¹ì–´ ë„ì›€ë§ì„ í‘œì‹œí•©ë‹ˆë‹¤.", 1)
 	};
     }
 }

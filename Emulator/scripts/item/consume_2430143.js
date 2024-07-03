@@ -16,7 +16,7 @@ function action(mode, type, selection) {
             status--;
         if (status == 0) {
 	    if (!cm.canHold(2430143)) {
-                cm.sendOk("ÀÎº¥Åä¸® °ø°£ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+                cm.sendOk("ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		cm.dispose();
 		return;
 	    }
@@ -24,7 +24,7 @@ function action(mode, type, selection) {
 		cm.getPlayer().addFame(10);
                 cm.fakeRelog();
                 cm.updateChar();
-	    cm.getPlayer().dropMessage(1, "´©±º°¡°¡ "+cm.getPlayer().getName()+"´ÔÀ»À§ÇØ ¾´ ·¯ºê·¹ÅÍ ´öºĞ¿¡ ÀÎ±âµµ°¡ »ó½ÂÇÏ¿´½À´Ï´Ù.");
+	    cm.getPlayer().dropMessage(1, "ëˆ„êµ°ê°€ê°€ "+cm.getPlayer().getName()+"ë‹˜ì„ìœ„í•´ ì“´ ëŸ¬ë¸Œë ˆí„° ë•ë¶„ì— ì¸ê¸°ë„ê°€ ìƒìŠ¹í•˜ì˜€ìŠµë‹ˆë‹¤.");
 	    cm.dispose();
             
         } else { 

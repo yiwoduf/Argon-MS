@@ -18,31 +18,31 @@ function action(mode, type, selection) {
         }
     }
     if (status === 0) {
-        cm.sendSimple("#b¾È³çÇÏ¼¼¿ä ½º¸¶Æ®  #r±æµå, ¹İÁö´ëÇ×Àü#r À» ¸Ã°íÀÖ´Â#l\r\n #b¿£ÇÇ½Ã#b ÀÔ´Ï´Ù#l\r\n #d¹İÁö´ëÇ×ÀüÀÌ¶õ ¼­·Î´Ù¸¥ ±æ¿ø 1VS1À¸·Î ¿ù¹¦¸¦ °¡Àå»¡¸® Àâ´ÂÆÀÀÌ ½Â¸®ÇÕ´Ï´Ù#l\r\n #rº¸»ó #i1112260# ¿ÃÅİ 1000 °ø¸¶ 800#r #l\r\n  #rÁÖÀÇ ! ´Ù¸¥±æµå°¡ ¿ù¹¦¸¦ÀâÀ¸¸é °®°íÀÖ´ø ¹İÁö¸¦ »©¾Ñ±é´Ï´Ù#r #l\r\n  #rÁÖÀÇ ! ¿ù¹¦ ÇÇ 10Á¶¸¦´Ù ±ğÀ¸¸é ¸÷ÀÌ ¾ÈÁ×½À´Ï´Ù 10Á¶´Ù±ğÀ¸¸é ¸Ê¿¡¼­ ³ª¿À½Ã¸éµË´Ï´Ù#d #l\r\n #fnµ¸¿ò# #L0##g¹İÁö´ëÇ×Àü#g½ÅÃ»ÇÏ±â#l\r\n");
+        cm.sendSimple("#bì•ˆë…•í•˜ì„¸ìš” ìŠ¤ë§ˆíŠ¸  #rê¸¸ë“œ, ë°˜ì§€ëŒ€í•­ì „#r ì„ ë§¡ê³ ìˆëŠ”#l\r\n #bì—”í”¼ì‹œ#b ì…ë‹ˆë‹¤#l\r\n #dë°˜ì§€ëŒ€í•­ì „ì´ë€ ì„œë¡œë‹¤ë¥¸ ê¸¸ì› 1VS1ìœ¼ë¡œ ì›”ë¬˜ë¥¼ ê°€ì¥ë¹¨ë¦¬ ì¡ëŠ”íŒ€ì´ ìŠ¹ë¦¬í•©ë‹ˆë‹¤#l\r\n #rë³´ìƒ #i1112260# ì˜¬í…Ÿ 1000 ê³µë§ˆ 800#r #l\r\n  #rì£¼ì˜ ! ë‹¤ë¥¸ê¸¸ë“œê°€ ì›”ë¬˜ë¥¼ì¡ìœ¼ë©´ ê°–ê³ ìˆë˜ ë°˜ì§€ë¥¼ ë¹¼ì•—ê¹ë‹ˆë‹¤#r #l\r\n  #rì£¼ì˜ ! ì›”ë¬˜ í”¼ 10ì¡°ë¥¼ë‹¤ ê¹ìœ¼ë©´ ëª¹ì´ ì•ˆì£½ìŠµë‹ˆë‹¤ 10ì¡°ë‹¤ê¹ìœ¼ë©´ ë§µì—ì„œ ë‚˜ì˜¤ì‹œë©´ë©ë‹ˆë‹¤#d #l\r\n #fnë‹ì›€# #L0##gë°˜ì§€ëŒ€í•­ì „#gì‹ ì²­í•˜ê¸°#l\r\n");
     } else if (status === 1) {
         if (cm.getPlayer().getParty() === null)
-            cm.sendOk("#rÆÄÆ¼¸¦ ¸¸µé¾îÁÖ¼¼¿ä.");
+            cm.sendOk("#ríŒŒí‹°ë¥¼ ë§Œë“¤ì–´ì£¼ì„¸ìš”.");
         else if (!cm.isLeader())
-            cm.sendOk("¸®´õ¸¸ ´ëÈ­ °¡´ÉÇÕ´Ï´Ù.");
+            cm.sendOk("ë¦¬ë”ë§Œ ëŒ€í™” ê°€ëŠ¥í•©ë‹ˆë‹¤.");
         else if (cm.getPlayer().getParty().getMembers().size() !== 1)
-            cm.sendOk("#r3¸íÀÌ ¸ğ¿©¾ß ÇÕ´Ï´Ù.");
+            cm.sendOk("#r3ëª…ì´ ëª¨ì—¬ì•¼ í•©ë‹ˆë‹¤.");
         else if (!cm.allMembersHere())
-            cm.sendOk("#r¸ğµÎ ÀÌ ¸Ê¿¡ ¸ğ¿©¾ßÇÕ´Ï´Ù,");
+            cm.sendOk("#rëª¨ë‘ ì´ ë§µì— ëª¨ì—¬ì•¼í•©ë‹ˆë‹¤,");
         else if (cm.getPlayer().getClient().getChannel() !== 0)
-            cm.sendOk("#r1Ã¤³Î¸¸ °¡´ÉÇÕ´Ï´Ù.");
+            cm.sendOk("#r1ì±„ë„ë§Œ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
         else {
             guildid = cm.getPlayer().getGuildId();
             h = cm.getC().getChannelServer().getPartyMembers(cm.getParty()).iterator();
             while (h.hasNext()) {
                 if (h.next().getGuildId() !== guildid) {
-                    cm.sendOk("#r±æµå´Â ´Ù °°¾Æ¾ßµÊ.");
+                    cm.sendOk("#rê¸¸ë“œëŠ” ë‹¤ ê°™ì•„ì•¼ë¨.");
                     cm.dispose();
                     return;
                 }
             }
             if (Packages.launch.Start.guildpvp.size() === 0) {
                 cm.allPartyWarp(980000100, true);
-                cm.sendOk("#r´ë±â¹æÀ¸·Î ÀÔÀå ´Ù¸¥±æµå°¡ ÀÔÀåÇÒ¶§±îÁö ±â´Ù·ÁÁÖ¼¼¿ä.");
+                cm.sendOk("#rëŒ€ê¸°ë°©ìœ¼ë¡œ ì…ì¥ ë‹¤ë¥¸ê¸¸ë“œê°€ ì…ì¥í• ë•Œê¹Œì§€ ê¸°ë‹¤ë ¤ì£¼ì„¸ìš”.");
             } else {
                 if (cm.getPlayer().getClient().getChannelServer().getMapFactory().getMap(980000100).getCharacters().size() === 0) {
                     f = cm.getPlayer().getClient().getChannelServer().getMapFactory().getMap(980000100).getCharacters().iterator();
@@ -51,7 +51,7 @@ function action(mode, type, selection) {
                         b.warp(100000000);
                     }
                     cm.allPartyWarp(980000100, true);
-                    cm.sendOk("#r´ë±â¹æÀ¸·Î ÀÔÀå ´Ù¸¥±æµå°¡ ÀÔÀåÇÒ¶§±îÁö ±â´Ù·ÁÁÖ¼¼¿ä.");
+                    cm.sendOk("#rëŒ€ê¸°ë°©ìœ¼ë¡œ ì…ì¥ ë‹¤ë¥¸ê¸¸ë“œê°€ ì…ì¥í• ë•Œê¹Œì§€ ê¸°ë‹¤ë ¤ì£¼ì„¸ìš”.");
                 } else {
                     
                     cm.allPartyWarp(980000100, true);

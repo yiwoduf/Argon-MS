@@ -1,6 +1,6 @@
 /*
-À§ ½ºÅ©¸³Æ®ÀÇ ÀúÀÛ±ÇÀº FoxDevelopTeam ÆÀÀå Fox¿¡°Ô ÀÖ½À´Ï´Ù.
-¹®ÀÇ : rinus_alt / fox_devel@nate.com / opharks (skype)
+ìœ„ ìŠ¤í¬ë¦½íŠ¸ì˜ ì €ì‘ê¶Œì€ FoxDevelopTeam íŒ€ì¥ Foxì—ê²Œ ìˆìŠµë‹ˆë‹¤.
+ë¬¸ì˜ : rinus_alt / fox_devel@nate.com / opharks (skype)
 */
 
 importPackage(Packages.client);
@@ -28,40 +28,40 @@ function action(mode, type, selection) {
             status--;
         if (status == 0) {
 			//cm.showWZEffect("UI/SoulUI.img/DungeonEffect/start", 1);
-			var raid = "#r#e[ÄÁÅÙÃ÷ : º¸½º·¹ÀÌµå]\r\n";
-			raid += "#n#kÁÖ¾î½Å ½Ã°£ ³», ¸ğµç º¸½º¸¦ ¹«Âî¸£´Â ÄÁÅÙÃ÷ÀÔ´Ï´Ù.\r\n\r\n"
-			raid += "#e[³­ÀÌµµ ¼±ÅÃ]\r\n"
+			var raid = "#r#e[ì»¨í…ì¸  : ë³´ìŠ¤ë ˆì´ë“œ]\r\n";
+			raid += "#n#kì£¼ì–´ì‹  ì‹œê°„ ë‚´, ëª¨ë“  ë³´ìŠ¤ë¥¼ ë¬´ì°Œë¥´ëŠ” ì»¨í…ì¸ ì…ë‹ˆë‹¤.\r\n\r\n"
+			raid += "#e[ë‚œì´ë„ ì„ íƒ]\r\n"
 			raid += "#L1##fUI/UIToolTip/Item/Equip/Star/Star0##l"
 			raid += "#L2##fUI/UIToolTip/Item/Equip/Star/Star##fUI/UIToolTip/Item/Equip/Star/Star##l"
 			raid += "#L3##fUI/UIToolTip/Item/Equip/Star/Star##fUI/UIToolTip/Item/Equip/Star/Star##fUI/UIToolTip/Item/Equip/Star/Star##l"
 			raid += "#L4##fUI/UIToolTip/Item/Equip/Star/Star1##fUI/UIToolTip/Item/Equip/Star/Star1##fUI/UIToolTip/Item/Equip/Star/Star1##fUI/UIToolTip/Item/Equip/Star/Star1##l"
 			cm.sendSimple(raid);
 		} else if (status == 1) {
-			var easy = "#r#e[º¸½º·¹ÀÌµå : ";
+			var easy = "#r#e[ë³´ìŠ¤ë ˆì´ë“œ : ";
 			if (selection == 1) {
-				easy += "ÀÌÁö]#k#n\r\n"
-				easy += "#fUI/UIToolTip/Item/Equip/Star/Star0#(½¬¿ò) ³­ÀÌµµ¿¡ µµÀüÇÏ½Ã°Ú½À´Ï±î?\r\n"
-				easy += "º¸½º·¹ÀÌµå´Â #r³­ÀÌµµ¿¡ »ó°ü¾øÀÌ 1ÀÏ 3È¸#k·Î Á¦ÇÑµË´Ï´Ù.\r\n"
-				easy += "#L1##bµµÀüÇÑ´Ù"
-				easy += "#L99#µµÀüÇÏÁö¾Ê´Â´Ù"
+				easy += "ì´ì§€]#k#n\r\n"
+				easy += "#fUI/UIToolTip/Item/Equip/Star/Star0#(ì‰¬ì›€) ë‚œì´ë„ì— ë„ì „í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\r\n"
+				easy += "ë³´ìŠ¤ë ˆì´ë“œëŠ” #rë‚œì´ë„ì— ìƒê´€ì—†ì´ 1ì¼ 3íšŒ#kë¡œ ì œí•œë©ë‹ˆë‹¤.\r\n"
+				easy += "#L1##bë„ì „í•œë‹¤"
+				easy += "#L99#ë„ì „í•˜ì§€ì•ŠëŠ”ë‹¤"
 			} else if (selection == 2) {
-				easy += "³ë¸Ö]#k#n\r\n"
-				easy += "#fUI/UIToolTip/Item/Equip/Star/Star##fUI/UIToolTip/Item/Equip/Star/Star#(º¸Åë) ³­ÀÌµµ¿¡ µµÀüÇÏ½Ã°Ú½À´Ï±î?\r\n"
-				easy += "º¸½º·¹ÀÌµå´Â #r³­ÀÌµµ¿¡ »ó°ü¾øÀÌ 1ÀÏ 3È¸#k·Î Á¦ÇÑµË´Ï´Ù.\r\n"
-				easy += "#L2##bµµÀüÇÑ´Ù"
-				easy += "#L99#µµÀüÇÏÁö¾Ê´Â´Ù"
+				easy += "ë…¸ë©€]#k#n\r\n"
+				easy += "#fUI/UIToolTip/Item/Equip/Star/Star##fUI/UIToolTip/Item/Equip/Star/Star#(ë³´í†µ) ë‚œì´ë„ì— ë„ì „í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\r\n"
+				easy += "ë³´ìŠ¤ë ˆì´ë“œëŠ” #rë‚œì´ë„ì— ìƒê´€ì—†ì´ 1ì¼ 3íšŒ#kë¡œ ì œí•œë©ë‹ˆë‹¤.\r\n"
+				easy += "#L2##bë„ì „í•œë‹¤"
+				easy += "#L99#ë„ì „í•˜ì§€ì•ŠëŠ”ë‹¤"
 			} else if (selection == 3){
-				easy += "ÇÏµå]#k#n\r\n"
-				easy += "#fUI/UIToolTip/Item/Equip/Star/Star##fUI/UIToolTip/Item/Equip/Star/Star##fUI/UIToolTip/Item/Equip/Star/Star#(¾î·Á¿ò) ³­ÀÌµµ¿¡ µµÀüÇÏ½Ã°Ú½À´Ï±î?\r\n"
-				easy += "º¸½º·¹ÀÌµå´Â #r³­ÀÌµµ¿¡ »ó°ü¾øÀÌ 1ÀÏ 3È¸#k·Î Á¦ÇÑµË´Ï´Ù.\r\n"
-				easy += "#L3##bµµÀüÇÑ´Ù"
-				easy += "#L99#µµÀüÇÏÁö¾Ê´Â´Ù"
+				easy += "í•˜ë“œ]#k#n\r\n"
+				easy += "#fUI/UIToolTip/Item/Equip/Star/Star##fUI/UIToolTip/Item/Equip/Star/Star##fUI/UIToolTip/Item/Equip/Star/Star#(ì–´ë ¤ì›€) ë‚œì´ë„ì— ë„ì „í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\r\n"
+				easy += "ë³´ìŠ¤ë ˆì´ë“œëŠ” #rë‚œì´ë„ì— ìƒê´€ì—†ì´ 1ì¼ 3íšŒ#kë¡œ ì œí•œë©ë‹ˆë‹¤.\r\n"
+				easy += "#L3##bë„ì „í•œë‹¤"
+				easy += "#L99#ë„ì „í•˜ì§€ì•ŠëŠ”ë‹¤"
 			} else if (selection == 4) {
-				easy += "³ªÀÌÆ®¸Ş¾î]#k#n\r\n"
-				easy += "#fUI/UIToolTip/Item/Equip/Star/Star1##fUI/UIToolTip/Item/Equip/Star/Star1##fUI/UIToolTip/Item/Equip/Star/Star1##fUI/UIToolTip/Item/Equip/Star/Star1#(¸Å¿ì ¾î·Á¿ò) ³­ÀÌµµ¿¡ µµÀüÇÏ½Ã°Ú½À´Ï±î?\r\n"
-				easy += "º¸½º·¹ÀÌµå´Â #r³­ÀÌµµ¿¡ »ó°ü¾øÀÌ 1ÀÏ 3È¸#k·Î Á¦ÇÑµË´Ï´Ù.\r\n"
-				easy += "#L4##bµµÀüÇÑ´Ù"
-				easy += "#L99#µµÀüÇÏÁö¾Ê´Â´Ù"
+				easy += "ë‚˜ì´íŠ¸ë©”ì–´]#k#n\r\n"
+				easy += "#fUI/UIToolTip/Item/Equip/Star/Star1##fUI/UIToolTip/Item/Equip/Star/Star1##fUI/UIToolTip/Item/Equip/Star/Star1##fUI/UIToolTip/Item/Equip/Star/Star1#(ë§¤ìš° ì–´ë ¤ì›€) ë‚œì´ë„ì— ë„ì „í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\r\n"
+				easy += "ë³´ìŠ¤ë ˆì´ë“œëŠ” #rë‚œì´ë„ì— ìƒê´€ì—†ì´ 1ì¼ 3íšŒ#kë¡œ ì œí•œë©ë‹ˆë‹¤.\r\n"
+				easy += "#L4##bë„ì „í•œë‹¤"
+				easy += "#L99#ë„ì „í•˜ì§€ì•ŠëŠ”ë‹¤"
 			}
 				cm.sendSimple(easy);
 		} else if (status == 2) {

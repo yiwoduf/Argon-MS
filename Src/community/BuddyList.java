@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -111,7 +111,7 @@ public class BuddyList {
 	    if (!pair) {
 		pendingRequests.push(buddyid);
 	    } else {
-		put(new BuddylistEntry(buddyid.getName(), buddyid.getId(), "±×·ì ¹ÌÁöÁ¤", -1, true, buddyid.getLevel(), buddyid.getJob()));
+		put(new BuddylistEntry(buddyid.getName(), buddyid.getId(), "ê·¸ë£¹ ë¯¸ì§€ì •", -1, true, buddyid.getLevel(), buddyid.getJob()));
 	    }
 	}
     }

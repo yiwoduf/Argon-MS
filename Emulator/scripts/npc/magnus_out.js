@@ -19,7 +19,7 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        cm.sendYesNo("ÀüÅõ¸¦ ¸¶Ä¡°í ÀÌµ¿ÇÕ´Ï´Ù.");
+        cm.sendYesNo("ì „íˆ¬ë¥¼ ë§ˆì¹˜ê³  ì´ë™í•©ë‹ˆë‹¤.");
     } else if (status == 1) {
         if (cm.getPlayer().getMapId() == 401060300) {
             cm.warp(401060399, "out_magnusDoor");

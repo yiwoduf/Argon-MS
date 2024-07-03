@@ -936,17 +936,17 @@ public class SecondaryStat {
             MapleInventory equip = chr.getInventory(MapleInventoryType.EQUIPPED);
             IItem weapon = equip.getItem((byte) -11);
             if (skillid != 61101002 && skillid != 61110211) {
-                packet.writeInt(skillid == 61121217 ? 4 : 2); // ½ºÅ³±¸ºĞ
-                packet.writeInt(5); // ¸Ó¸®À§¿¡ ¶ß´Â ¹«±âÀÇ °¹¼ö
-                packet.writeInt(weapon.getItemId()); // Âø¿ëÁßÀÎ µÎ¼Õ°Ë
+                packet.writeInt(skillid == 61121217 ? 4 : 2); // ìŠ¤í‚¬êµ¬ë¶„
+                packet.writeInt(5); // ë¨¸ë¦¬ìœ„ì— ëœ¨ëŠ” ë¬´ê¸°ì˜ ê°¯ìˆ˜
+                packet.writeInt(weapon.getItemId()); // ì°©ìš©ì¤‘ì¸ ë‘ì†ê²€
                 packet.writeInt(5); // AttackCount
                 for (int j = 0; j < 5; j ++) {
                     packet.writeInt(0);
                 }
             } else {
-                packet.writeInt(skillid == 61110211 ? 3 : 1); // ½ºÅ³±¸ºĞ
-                packet.writeInt(3); // ¸Ó¸®À§¿¡ ¶ß´Â ¹«±âÀÇ °¹¼ö
-                packet.writeInt(weapon.getItemId()); // Âø¿ëÁßÀÎ µÎ¼Õ°Ë
+                packet.writeInt(skillid == 61110211 ? 3 : 1); // ìŠ¤í‚¬êµ¬ë¶„
+                packet.writeInt(3); // ë¨¸ë¦¬ìœ„ì— ëœ¨ëŠ” ë¬´ê¸°ì˜ ê°¯ìˆ˜
+                packet.writeInt(weapon.getItemId()); // ì°©ìš©ì¤‘ì¸ ë‘ì†ê²€
                 packet.writeInt(3); // AttackCount
                 for (int j = 0; j < 3; j ++) {
                     packet.writeInt(0);
@@ -5782,17 +5782,17 @@ public class SecondaryStat {
             MapleInventory equip = chr.getInventory(MapleInventoryType.EQUIPPED);
             IItem weapon = equip.getItem((byte) -11);
             if (buffid != 61101002 && buffid != 61110211) {
-                p.writeInt(buffid == 61121217 ? 4 : 2); // ½ºÅ³±¸ºĞ
-                p.writeInt(5); // ¸Ó¸®À§¿¡ ¶ß´Â ¹«±âÀÇ °¹¼ö
-                p.writeInt(weapon.getItemId()); // Âø¿ëÁßÀÎ µÎ¼Õ°Ë
+                p.writeInt(buffid == 61121217 ? 4 : 2); // ìŠ¤í‚¬êµ¬ë¶„
+                p.writeInt(5); // ë¨¸ë¦¬ìœ„ì— ëœ¨ëŠ” ë¬´ê¸°ì˜ ê°¯ìˆ˜
+                p.writeInt(weapon.getItemId()); // ì°©ìš©ì¤‘ì¸ ë‘ì†ê²€
                 p.writeInt(5); // AttackCount
                 for (int i = 0; i < 5; i++) {
                     p.writeInt(0);
                 }
             } else {
-                p.writeInt(buffid == 61110211 ? 3 : 1); // ½ºÅ³±¸ºĞ
-                p.writeInt(3); // ¸Ó¸®À§¿¡ ¶ß´Â ¹«±âÀÇ °¹¼ö
-                p.writeInt(weapon.getItemId()); // Âø¿ëÁßÀÎ µÎ¼Õ°Ë
+                p.writeInt(buffid == 61110211 ? 3 : 1); // ìŠ¤í‚¬êµ¬ë¶„
+                p.writeInt(3); // ë¨¸ë¦¬ìœ„ì— ëœ¨ëŠ” ë¬´ê¸°ì˜ ê°¯ìˆ˜
+                p.writeInt(weapon.getItemId()); // ì°©ìš©ì¤‘ì¸ ë‘ì†ê²€
                 p.writeInt(3); // AttackCount
                 for (int i = 0; i < 3; i++) {
                     p.writeInt(0);

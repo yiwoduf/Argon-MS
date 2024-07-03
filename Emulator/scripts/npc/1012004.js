@@ -1,6 +1,6 @@
-/* ÀÌ ÁÖ¼®Àº Áö¿ìÁö ¸¶¼ÌÀ¸¸é ÇÕ´Ï´Ù.
+/* ì´ ì£¼ì„ì€ ì§€ìš°ì§€ ë§ˆì…¨ìœ¼ë©´ í•©ë‹ˆë‹¤.
 
-ÃâÃ³ : ÀÚÀ¯ÀÎ (timeisruunin) by Miracle CMNT
+ì¶œì²˜ : ììœ ì¸ (timeisruunin) by Miracle CMNT
 
 */
 
@@ -36,39 +36,39 @@ function action(mode, type, selection) {
     if (status == 0) {
 	slot = cm.getPlayer().getInventory(MapleInventoryType.CASH).getNumFreeSlot();
 	meso = cm.getPlayer().getMeso();
-	var a ="#b#h ##k´Ô, ±¸¸ÅÇÏ½Ç ¾ÆÀÌÅÛÀ» ¼±ÅÃÇØÁÖ¼¼¿ä. \r\n\r\n#b"
+	var a ="#b#h ##kë‹˜, êµ¬ë§¤í•˜ì‹¤ ì•„ì´í…œì„ ì„ íƒí•´ì£¼ì„¸ìš”. \r\n\r\n#b"
 
-/* ¾ÆÀÌÅÛ ±¸¸Å ½ÃÀÛ */
-        a += "#r#e[Æê°ü·Ã¾ÆÀÌÅÛ]#k\r\n";
+/* ì•„ì´í…œ êµ¬ë§¤ ì‹œì‘ */
+        a += "#r#e[í«ê´€ë ¨ì•„ì´í…œ]#k\r\n";
     for (var i = 0; i < 70; i++) {
-        a += "#L"+i+"##i"+item[i][0]+"# #z"+item[i][0]+"# #n("+ ( item[i][1] / 10000 ) +"¸¸ ¸Ş¼Ò)\r\n#e";
+        a += "#L"+i+"##i"+item[i][0]+"# #z"+item[i][0]+"# #n("+ ( item[i][1] / 10000 ) +"ë§Œ ë©”ì†Œ)\r\n#e";
     }
   cm.sendSimple(a);
 	} else if (status == 1) {
             if (selection == 4) {
-            cm.sendGetNumber("#e¼±ÅÃÇÑ ¾ÆÀÌÅÛ : #n#i"+item[4][0]+"# #b#z"+item[4][0]+"\r\n\r\n\r\n#k±¸¸Å¸¦ ¿øÇÏ½Ã´Â ¾ÆÀÌÅÛÀÇ °³¼ö¸¦ Àû¾îÁÖ¼¼¿ä.\r\n#Cgray##eÀÎº¥Åä¸®ÀÇ ¿©À¯°ø°£¡¿100°³ ÀÌ»ó#nÀº ±¸¸ÅÇÒ ¼ö ¾ø½À´Ï´Ù.",1,1,cm.getPlayer().getInventory(MapleInventoryType.USE).getNumFreeSlot()*100);            itemmeso = item[4][1];
+            cm.sendGetNumber("#eì„ íƒí•œ ì•„ì´í…œ : #n#i"+item[4][0]+"# #b#z"+item[4][0]+"\r\n\r\n\r\n#kêµ¬ë§¤ë¥¼ ì›í•˜ì‹œëŠ” ì•„ì´í…œì˜ ê°œìˆ˜ë¥¼ ì ì–´ì£¼ì„¸ìš”.\r\n#Cgray##eì¸ë²¤í† ë¦¬ì˜ ì—¬ìœ ê³µê°„Ã—100ê°œ ì´ìƒ#nì€ êµ¬ë§¤í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.",1,1,cm.getPlayer().getInventory(MapleInventoryType.USE).getNumFreeSlot()*100);            itemmeso = item[4][1];
             item = item[4][0];
 
             } else {
-            cm.sendGetNumber("#e¼±ÅÃÇÑ ¾ÆÀÌÅÛ : #n#i"+item[selection][0]+"# #b#z"+item[selection][0]+"\r\n\r\n\r\n#k±¸¸Å¸¦ ¿øÇÏ½Ã´Â ¾ÆÀÌÅÛÀÇ °³¼ö¸¦ Àû¾îÁÖ¼¼¿ä.\r\n#Cgray##eÀÎº¥Åä¸®ÀÇ ¿©À¯°ø°£¡¿100°³ ÀÌ»ó#nÀº ±¸¸ÅÇÒ ¼ö ¾ø½À´Ï´Ù.",1,1,slot*100);
+            cm.sendGetNumber("#eì„ íƒí•œ ì•„ì´í…œ : #n#i"+item[selection][0]+"# #b#z"+item[selection][0]+"\r\n\r\n\r\n#kêµ¬ë§¤ë¥¼ ì›í•˜ì‹œëŠ” ì•„ì´í…œì˜ ê°œìˆ˜ë¥¼ ì ì–´ì£¼ì„¸ìš”.\r\n#Cgray##eì¸ë²¤í† ë¦¬ì˜ ì—¬ìœ ê³µê°„Ã—100ê°œ ì´ìƒ#nì€ êµ¬ë§¤í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.",1,1,slot*100);
             itemmeso = item[selection][1];
             item = item[selection][0];
         }           
 
 	} else if (status == 2) {
 //	    var prise = total/100000000 < 0.1 ? total/10000 : total/100000000 < 1 ? total/10000000 : total/100000000
-//	    var currency = total/100000000 < 0.1 ? "¸¸" : total/100000000 < 1? "Ãµ ¸¸" : "¾ï"
+//	    var currency = total/100000000 < 0.1 ? "ë§Œ" : total/100000000 < 1? "ì²œ ë§Œ" : "ì–µ"
 	    name = Packages.server.items.ItemInformation.getInstance().getName(item);
             total = selection * itemmeso;
             if (meso < total) {
-                cm.sendOk("#h #´ÔÀÌ º¸À¯ÇÏ½Å ¸Ş¼ÒÀÇ ¾çÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+                cm.sendOk("#h #ë‹˜ì´ ë³´ìœ í•˜ì‹  ë©”ì†Œì˜ ì–‘ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 	    } else if (total > 2147483647) {
-		cm.sendOk("ÃÑ ¾ÆÀÌÅÛÀÇ ±¸¸Å ±İ¾×ÀÌ #b21¾ï 4748¸¸ 3647 ¸Ş¼Ò#k¸¦ ³Ñ¾ú½À´Ï´Ù. #h #´ÔÀÌ ±¸¸ÅÇÏ·Á´Â ¾ÆÀÌÅÛÀÇ ÃÑ °¡°İÀº #r"+total/100000000+"¾ï ¸Ş¼Ò#k ÀÔ´Ï´Ù. ´Ù½Ã ÇÑ ¹ø È®ÀÎ ÈÄ ±¸¸Å¸¦ ½ÃµµÇØÁÖ¼¼¿ä.")
+		cm.sendOk("ì´ ì•„ì´í…œì˜ êµ¬ë§¤ ê¸ˆì•¡ì´ #b21ì–µ 4748ë§Œ 3647 ë©”ì†Œ#kë¥¼ ë„˜ì—ˆìŠµë‹ˆë‹¤. #h #ë‹˜ì´ êµ¬ë§¤í•˜ë ¤ëŠ” ì•„ì´í…œì˜ ì´ ê°€ê²©ì€ #r"+total/100000000+"ì–µ ë©”ì†Œ#k ì…ë‹ˆë‹¤. ë‹¤ì‹œ í•œ ë²ˆ í™•ì¸ í›„ êµ¬ë§¤ë¥¼ ì‹œë„í•´ì£¼ì„¸ìš”.")
             } else {
-	    cm.getPlayer().dropMessage(6, "½ºÆ¼ºê Àâ»ó : "+name+" "+selection+"°³¸¦ ±¸¸ÅÇÏ¿´½À´Ï´Ù. ÀÎº¥Åä¸®¸¦ È®ÀÎÇØÁÖ¼¼¿ä.");
+	    cm.getPlayer().dropMessage(6, "ìŠ¤í‹°ë¸Œ ì¡ìƒ : "+name+" "+selection+"ê°œë¥¼ êµ¬ë§¤í•˜ì˜€ìŠµë‹ˆë‹¤. ì¸ë²¤í† ë¦¬ë¥¼ í™•ì¸í•´ì£¼ì„¸ìš”.");
                 cm.gainItem(item, selection);
                 cm.gainMeso(-total);
-                cm.getPlayer().getClient().getSession().write(Packages.packet.creators.MainPacketCreator.sendHint("#e#b#z"+item+"# #r"+selection+"°³#k ±¸¸Å¿¡ ¼º°øÇÏ¿´½À´Ï´Ù!",400,20));
+                cm.getPlayer().getClient().getSession().write(Packages.packet.creators.MainPacketCreator.sendHint("#e#b#z"+item+"# #r"+selection+"ê°œ#k êµ¬ë§¤ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤!",400,20));
             }
             cm.dispose();
 	

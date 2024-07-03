@@ -86,7 +86,7 @@ public class BattleHandler {
         player.getMap().broadcastMessage(player, UIPacket.broadcastWZEffect(player.getId(), "Effect/PvPEff.img/GradeUp", 1), false);
         attackedPlayers.getClient().send(UIPacket.showWZEffect("Effect/PvPEff.img/GradeDown", 1));
         attackedPlayers.getMap().broadcastMessage(attackedPlayers, UIPacket.broadcastWZEffect(attackedPlayers.getId(), "Effect/PvPEff.img/GradeDown", 1), false);
-        player.getMap().broadcastMessage(MainPacketCreator.getGMText(5, "[PVP] " + player.getName() + "´ÔÀÌ " + attackedPlayers.getName() + "´ÔÀ» ¾²·¯Æ®·Á 50¹èÆ² Æ÷ÀÎÆ®¸¦ È¹µæ ÇÏ¿´½À´Ï´Ù."));
+        player.getMap().broadcastMessage(MainPacketCreator.getGMText(5, "[PVP] " + player.getName() + "ë‹˜ì´ " + attackedPlayers.getName() + "ë‹˜ì„ ì“°ëŸ¬íŠ¸ë ¤ 50ë°°í‹€ í¬ì¸íŠ¸ë¥¼ íšë“ í•˜ì˜€ìŠµë‹ˆë‹¤."));
         if (attackedPlayers.getMeso() > 200000) {
             attackedPlayers.gainMeso(-200000, true);
         } else {
@@ -94,7 +94,7 @@ public class BattleHandler {
             Runnable r = new Runnable() {
                 @Override
                 public void run() {
-                    player.getMap().broadcastMessage(UIPacket.detailShowInfo("»ó´ë¹æÀÇ ¸Ş¼Ò°¡ 20¸¸¿ø ÀÌÇÏÀÌ¹Ç·Î 10ÃÊµÚ ¸¶À»·Î ÀÌµ¿µË´Ï´Ù", false));
+                    player.getMap().broadcastMessage(UIPacket.detailShowInfo("ìƒëŒ€ë°©ì˜ ë©”ì†Œê°€ 20ë§Œì› ì´í•˜ì´ë¯€ë¡œ 10ì´ˆë’¤ ë§ˆì„ë¡œ ì´ë™ë©ë‹ˆë‹¤", false));
                     player.warp(100000001);
                     attackedPlayers.warp(100000001);
                 }

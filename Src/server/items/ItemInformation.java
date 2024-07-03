@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ¾îºñ½º abyss_min@nate.com
- * ¾îºñ½º abyss_min@nate.com
+ * ì–´ë¹„ìŠ¤ abyss_min@nate.com
+ * ì–´ë¹„ìŠ¤ abyss_min@nate.com
  * ==================================
  * 
  */
@@ -115,16 +115,16 @@ public class ItemInformation {
 
     /*
      * type -
-     * 0 : ÀüÃ¼
-     * 10 : ¹«±â
-     * 11 : ¹«±â Á¦¿Ü
-     * 20 : ¹æÆĞ
-     * 40 : ¾Ç¼¼»ç¸®
-     * 51 : Åõ±¸
-     * 52 : »óÀÇ, ÇÑ¹ú¿Ê
-     * 53 : ÇÏÀÇ
-     * 54 : Àå°©
-     * 55 : ½Å¹ß
+     * 0 : ì „ì²´
+     * 10 : ë¬´ê¸°
+     * 11 : ë¬´ê¸° ì œì™¸
+     * 20 : ë°©íŒ¨
+     * 40 : ì•…ì„¸ì‚¬ë¦¬
+     * 51 : íˆ¬êµ¬
+     * 52 : ìƒì˜, í•œë²Œì˜·
+     * 53 : í•˜ì˜
+     * 54 : ì¥ê°‘
+     * 55 : ì‹ ë°œ
      */
     public void cachePotentialOption() {
         final MapleData potsData = itemData.getData("ItemOption.img");
@@ -142,16 +142,16 @@ public class ItemInformation {
                 case 60002:
                     continue;
             }
-            if (potentialID > 0 && potentialID < 906) { //1´Ü°è ¿É¼Ç
+            if (potentialID > 0 && potentialID < 906) { //1ë‹¨ê³„ ì˜µì…˜
                 level = 1;
             } else if ((potentialID > 10000 && potentialID < 10292) || (potentialID > 20000 && potentialID < 20015)
-                    || (potentialID > 30000 && potentialID < 30015) || (potentialID > 40000 && potentialID < 40015)) { //2´Ü°è ¿É¼Ç
+                    || (potentialID > 30000 && potentialID < 30015) || (potentialID > 40000 && potentialID < 40015)) { //2ë‹¨ê³„ ì˜µì…˜
                 level = 2;
-            } else if (potentialID > 20040 && potentialID < 20407) { //3´Ü°è ¿É¼Ç
+            } else if (potentialID > 20040 && potentialID < 20407) { //3ë‹¨ê³„ ì˜µì…˜
                 level = 3;
-            } else if (potentialID > 30040 && potentialID < 31005) { //4´Ü°è ¿É¼Ç
+            } else if (potentialID > 30040 && potentialID < 31005) { //4ë‹¨ê³„ ì˜µì…˜
                 level = 4;
-            } else if (potentialID > 40040 && potentialID < 60004) { //5´Ü°è ¿É¼Ç
+            } else if (potentialID > 40040 && potentialID < 60004) { //5ë‹¨ê³„ ì˜µì…˜
                 level = 5;
             }
             if (potentialOpCache.containsKey(level)) {
@@ -547,12 +547,12 @@ public class ItemInformation {
         List<Integer> newId = new ArrayList<Integer>();
         int rand = 0;
         for (Integer type_ : option.keySet()) {
-            if ((type != 10 && type_ == 11) || type_ == type || (type != 0 && type_ == 0)) { //¹«±âÁ¦¿Ü, ÀÚ½ÅÅ¸ÀÔ, ÀüÃ¼
+            if ((type != 10 && type_ == 11) || type_ == type || (type != 0 && type_ == 0)) { //ë¬´ê¸°ì œì™¸, ìì‹ íƒ€ì…, ì „ì²´
                 for (Integer id : option.get(type_)) {
                     if (type != 10 && (id % 1000 == 70 || id % 1000 == 71 || id % 1000 == 291 || id % 1000 == 292 || id % 1000 == 601 || id % 1000 == 602 || id % 1000 == 603 || id >= 60000)) {
                         continue;
                     }
-                    //¹æ¾î±¸¿¡ º¸°ø,ÃÑµ© ºÙ´Â°Å »èÁ¦
+                    //ë°©ì–´êµ¬ì— ë³´ê³µ,ì´ë€ ë¶™ëŠ”ê±° ì‚­ì œ
                     newId.add(id);
                 }
             }
@@ -647,12 +647,12 @@ public class ItemInformation {
         }
         if (player.getInventory(MapleInventoryType.ETC).countById(4001136) >= 1) {
             player.gainItem(4001136, (short) -1, false, -1L, "The jewel of legend");
-            player.message(5, "ÁÖ¹®¼­ÀÇ Á¶°¢ÀÌ ºÒÅ¸¿Ã¶ó ÁÖ¹®¼­°¡ 100%È®·ü·Î ¼º°øÇÕ´Ï´Ù!");
+            player.message(5, "ì£¼ë¬¸ì„œì˜ ì¡°ê°ì´ ë¶ˆíƒ€ì˜¬ë¼ ì£¼ë¬¸ì„œê°€ 100%í™•ë¥ ë¡œ ì„±ê³µí•©ë‹ˆë‹¤!");
             return 100;
         }
         if (player.getInventory(MapleInventoryType.ETC).countById(4031034) >= 1) {
             player.gainItem(4031034, (short) -1, false, -1L, "The jewel of legend");
-            player.message(5, "¸¶¹ıÀÇ µÎ·ç¸¶¸®¸¦ ÆîÄ¡ÀÚ 70%È®·ü·Î ¼º°øÇßÀ»±î? ¾ÈÇßÀ»±î?? Á÷Á¢ È®ÀÎÇØºÁ!");
+            player.message(5, "ë§ˆë²•ì˜ ë‘ë£¨ë§ˆë¦¬ë¥¼ í¼ì¹˜ì 70%í™•ë¥ ë¡œ ì„±ê³µí–ˆì„ê¹Œ? ì•ˆí–ˆì„ê¹Œ?? ì§ì ‘ í™•ì¸í•´ë´!");
             return 70;
         }
         Equip t = (Equip) equip.copy();
@@ -726,9 +726,9 @@ public class ItemInformation {
             }
         }
         if (equip == null) {
-            System.err.println("[¿À·ù] ÁÖ¹®¼­ÀÇ ¼º°øÈ®·üÀ» ±¸ÇÏ´ø Áß, Àåºñ ¾ÆÀÌÅÛ °ª¿¡ ³Î °ªÀÌ ÀÔ·ÂµÇ¾ú½À´Ï´Ù." + itemId);
-            player.message(5, "[¿À·ù] ÇöÀç ÁÖ¹®¼­ÀÇ ¼º°øÈ®·üÀ» ±¸ÇÏ´Âµ¥ ½ÇÆĞÇÏ¿´½À´Ï´Ù.");
-            player.gainItem(itemId, (short) 1, false, -1, "ÁÖ¹®¼­ ¼º°øÈ®·ü ¾ò±â ½ÇÆĞ·Î ¾òÀº ÁÖ¹®¼­");
+            System.err.println("[ì˜¤ë¥˜] ì£¼ë¬¸ì„œì˜ ì„±ê³µí™•ë¥ ì„ êµ¬í•˜ë˜ ì¤‘, ì¥ë¹„ ì•„ì´í…œ ê°’ì— ë„ ê°’ì´ ì…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤." + itemId);
+            player.message(5, "[ì˜¤ë¥˜] í˜„ì¬ ì£¼ë¬¸ì„œì˜ ì„±ê³µí™•ë¥ ì„ êµ¬í•˜ëŠ”ë° ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.");
+            player.gainItem(itemId, (short) 1, false, -1, "ì£¼ë¬¸ì„œ ì„±ê³µí™•ë¥  ì–»ê¸° ì‹¤íŒ¨ë¡œ ì–»ì€ ì£¼ë¬¸ì„œ");
             player.ea();
             return 0;
         }
@@ -738,9 +738,9 @@ public class ItemInformation {
 
         final MapleData item = getItemData(itemId);
         if (item == null) {
-            System.err.println("[¿À·ù] ÁÖ¹®¼­ÀÇ ¼º°øÈ®·üÀ» ±¸ÇÏ´ø Áß, ÁÖ¹®¼­ µ¥ÀÌÅÍ °ª¿¡ ³Î °ªÀÌ ÀÔ·ÂµÇ¾ú½À´Ï´Ù." + itemId);
-            player.message(5, "[¿À·ù] ÇöÀç ÁÖ¹®¼­ÀÇ ¼º°øÈ®·üÀ» ±¸ÇÏ´Âµ¥ ½ÇÆĞÇÏ¿´½À´Ï´Ù.");
-            player.gainItem(itemId, (short) 1, false, -1, "ÁÖ¹®¼­ ¼º°øÈ®·ü ¾ò±â ½ÇÆĞ·Î ¾òÀº ÁÖ¹®¼­");
+            System.err.println("[ì˜¤ë¥˜] ì£¼ë¬¸ì„œì˜ ì„±ê³µí™•ë¥ ì„ êµ¬í•˜ë˜ ì¤‘, ì£¼ë¬¸ì„œ ë°ì´í„° ê°’ì— ë„ ê°’ì´ ì…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤." + itemId);
+            player.message(5, "[ì˜¤ë¥˜] í˜„ì¬ ì£¼ë¬¸ì„œì˜ ì„±ê³µí™•ë¥ ì„ êµ¬í•˜ëŠ”ë° ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.");
+            player.gainItem(itemId, (short) 1, false, -1, "ì£¼ë¬¸ì„œ ì„±ê³µí™•ë¥  ì–»ê¸° ì‹¤íŒ¨ë¡œ ì–»ì€ ì£¼ë¬¸ì„œ");
             player.ea();
             return 0;
         }
@@ -818,7 +818,7 @@ public class ItemInformation {
         String name = StringUtil.getLeftPaddedStr(android + "", '0', 4) + ".img";
         MapleData root = etcData.getData("Android/" + name);
         if (root == null) {
-            System.err.println("[¿À·ù] ¼­¹öÀÇ Etc.wz¿¡¼­ ¾Èµå·ÎÀÌµå ±âº» ¼ÂÆÃÀÌ ÀúÀåµÈ " + name + " ÆÄÀÏÀ» ¹ß°ßÇÏÁö ¸øÇß½À´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] ì„œë²„ì˜ Etc.wzì—ì„œ ì•ˆë“œë¡œì´ë“œ ê¸°ë³¸ ì…‹íŒ…ì´ ì €ì¥ëœ " + name + " íŒŒì¼ì„ ë°œê²¬í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
             return null;
         }
         MapleData costume = root.getChildByPath("costume");
@@ -1065,11 +1065,11 @@ public class ItemInformation {
             final Map<String, Integer> eqstats = getEquipStats(equip.getItemId());
             boolean failed = false;
             switch (scrollId.getItemId()) {
-                case 2049000: //¹éÀÇ ÁÖ¹®¼­ 1%
-                case 2049001: //¹éÀÇ ÁÖ¹®¼­ 3%
-                case 2049002: //¹éÀÇ ÁÖ¹®¼­ 5%
-                case 2049004: //¹éÀÇ ÁÖ¹®¼­ 10%
-                case 2049005: //¹éÀÇ ÁÖ¹®¼­ 20%
+                case 2049000: //ë°±ì˜ ì£¼ë¬¸ì„œ 1%
+                case 2049001: //ë°±ì˜ ì£¼ë¬¸ì„œ 3%
+                case 2049002: //ë°±ì˜ ì£¼ë¬¸ì„œ 5%
+                case 2049004: //ë°±ì˜ ì£¼ë¬¸ì„œ 10%
+                case 2049005: //ë°±ì˜ ì£¼ë¬¸ì„œ 20%
                 case 2049009:
                 case 2049010:
                 case 2049011:
@@ -1106,50 +1106,50 @@ public class ItemInformation {
                         nEquip.setUpgradeSlots((byte) (nEquip.getUpgradeSlots() + 1));
                         chr.dropMessage(6, getCursed(scrollId.getItemId(), chr) + "");
                     } else {
-                        chr.dropMessage(5, "ÁÖ¹®¼­ ½ÇÆĞ°¡ ¹ß°ßµÇÁö ¾Ê¾Æ ÁÖ¹®¼­°¡ È¿°ú¸¦ ¹ßÈÖÇÏÁö ¸øÇÏ¿´½À´Ï´Ù.");
+                        chr.dropMessage(5, "ì£¼ë¬¸ì„œ ì‹¤íŒ¨ê°€ ë°œê²¬ë˜ì§€ ì•Šì•„ ì£¼ë¬¸ì„œê°€ íš¨ê³¼ë¥¼ ë°œíœ˜í•˜ì§€ ëª»í•˜ì˜€ìŠµë‹ˆë‹¤.");
                     }
-                    break;*/ //È²±İ¸ÁÄ¡ ¾Æ·¡²¨¶û °íÃ¼ ¹Ù¶÷ ¿À·ù¶ß¸é
+                    break;*/ //í™©ê¸ˆë§ì¹˜ ì•„ë˜êº¼ë‘ ê³ ì²´ ë°”ëŒ ì˜¤ë¥˜ëœ¨ë©´
                         if (!Randomizer.isSuccess(getSuccess(scrollId.getItemId(), chr, nEquip))) {
                         if (Randomizer.isSuccess(getCursed(scrollId.getItemId(), chr))) {
                             if (ItemFlag.PROTECT.check(nEquip.getFlag()) || nEquip.isAmazing()) {
-                                chr.dropMessage(5, "ÁÖ¹®¼­ÀÇ È¿°ú·Î ¾ÆÀÌÅÛÀÌ ÆÄ±«µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+                                chr.dropMessage(5, "ì£¼ë¬¸ì„œì˜ íš¨ê³¼ë¡œ ì•„ì´í…œì´ íŒŒê´´ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
                                 nEquip.setAmazing(false);
                             } else {
-                                return null; //Æã
+                                return null; //í‘
                             }
                         }
                         failed = true;
                     } else if (nEquip.getLevel() + nEquip.getUpgradeSlots() < (eqstats.get("tuc") + (nEquip.getViciousHammer() > 0 ? 1 : 0))) {
                         nEquip.setUpgradeSlots((byte) (nEquip.getUpgradeSlots() + 1));
                     } else {
-                        chr.dropMessage(5, "ÁÖ¹®¼­ ½ÇÆĞ°¡ ¹ß°ßµÇÁö ¾Ê¾Æ ÁÖ¹®¼­°¡ È¿°ú¸¦ ¹ßÈÖÇÏÁö ¸øÇÏ¿´½À´Ï´Ù.");
+                        chr.dropMessage(5, "ì£¼ë¬¸ì„œ ì‹¤íŒ¨ê°€ ë°œê²¬ë˜ì§€ ì•Šì•„ ì£¼ë¬¸ì„œê°€ íš¨ê³¼ë¥¼ ë°œíœ˜í•˜ì§€ ëª»í•˜ì˜€ìŠµë‹ˆë‹¤.");
                     }
                     break;
                 }
-                case 2049006: //ÀúÁÖ¹ŞÀº ¹éÀÇ ÁÖ¹®¼­ 1%
-                case 2049007: //ÀúÁÖ¹ŞÀº ¹éÀÇ ÁÖ¹®¼­ 3%
-                case 2049008: //ÀúÁÖ¹ŞÀº ¹éÀÇ ÁÖ¹®¼­ 5%
+                case 2049006: //ì €ì£¼ë°›ì€ ë°±ì˜ ì£¼ë¬¸ì„œ 1%
+                case 2049007: //ì €ì£¼ë°›ì€ ë°±ì˜ ì£¼ë¬¸ì„œ 3%
+                case 2049008: //ì €ì£¼ë°›ì€ ë°±ì˜ ì£¼ë¬¸ì„œ 5%
                 {
                     if (nEquip.getLevel() + nEquip.getUpgradeSlots() < eqstats.get("tuc")) {
                         nEquip.setUpgradeSlots((byte) (nEquip.getUpgradeSlots() + 2));
                     }
                     break;
                 }
-                case 2040727: // ½Å¹ß ½ºÆÄÀÌÅ© ÁÖ¹®¼­ 10% - ½Å¹ß¿¡ ¹Ì²ô·³ ¹æÁö ¿É¼Ç Ãß°¡. ¼º°ø·ü:10%, ¾÷±×·¹ÀÌµå °¡´É È½¼ö¿¡ ¿µÇâ ¾øÀ½
+                case 2040727: // ì‹ ë°œ ìŠ¤íŒŒì´í¬ ì£¼ë¬¸ì„œ 10% - ì‹ ë°œì— ë¯¸ë„ëŸ¼ ë°©ì§€ ì˜µì…˜ ì¶”ê°€. ì„±ê³µë¥ :10%, ì—…ê·¸ë ˆì´ë“œ ê°€ëŠ¥ íšŸìˆ˜ì— ì˜í–¥ ì—†ìŒ
                 {
                     short flag = nEquip.getFlag();
                     flag |= ItemFlag.SPIKES.getValue();
                     nEquip.setFlag(flag);
                     break;
                 }
-                case 2041058: // ¸ÁÅä ¹æÇÑ ÁÖ¹®¼­ 10% - ¸ÁÅä¿¡ ¹æÇÑ ¿É¼Ç Ãß°¡.
+                case 2041058: // ë§í†  ë°©í•œ ì£¼ë¬¸ì„œ 10% - ë§í† ì— ë°©í•œ ì˜µì…˜ ì¶”ê°€.
                 {
                     short flag = nEquip.getFlag();
                     flag |= ItemFlag.COLD.getValue();
                     nEquip.setFlag(flag);
                     break;
                 }
-                /* 8Õ¥ ÁÖ¹®¼­, Àú½ºÆ¼½º ÁÖ¹®¼­ */
+                /* 8ï¥œ ì£¼ë¬¸ì„œ, ì €ìŠ¤í‹°ìŠ¤ ì£¼ë¬¸ì„œ */
                 case 2046025:
                 case 2046026:
                 case 2046340:
@@ -1175,45 +1175,45 @@ public class ItemInformation {
                     if (!Randomizer.isSuccess(getSuccess(scrollId.getItemId(), chr, nEquip))) {
                         if (Randomizer.isSuccess(getCursed(scrollId.getItemId(), chr))) {
                             if (ItemFlag.PROTECT.check(nEquip.getFlag()) || nEquip.isAmazing()) {
-                                chr.dropMessage(5, "ÁÖ¹®¼­ÀÇ È¿°ú·Î ¾ÆÀÌÅÛÀÌ ÆÄ±«µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+                                chr.dropMessage(5, "ì£¼ë¬¸ì„œì˜ íš¨ê³¼ë¡œ ì•„ì´í…œì´ íŒŒê´´ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
                                 nEquip.setAmazing(false);
                             } else {
-                                return null; //Æã
+                                return null; //í‘
                             }
                         }
                         failed = true;
                     } else {
                         switch (scrollId.getItemId()) {
-                            case 2046025: // 8Õ¥ ÇÑ¼Õ ¹«±â °ø°İ·Â ÁÖ¹®¼­ 20%
+                            case 2046025: // 8ï¥œ í•œì† ë¬´ê¸° ê³µê²©ë ¥ ì£¼ë¬¸ì„œ 20%
                                 nEquip.setWatk((short) (nEquip.getWatk() + Randomizer.rand(7, 8)));
                                 break;
-                            case 2046026: // 8Õ¥ ÇÑ¼Õ ¹«±â ¸¶·Â ÁÖ¹®¼­ 20%
+                            case 2046026: // 8ï¥œ í•œì† ë¬´ê¸° ë§ˆë ¥ ì£¼ë¬¸ì„œ 20%
                                 nEquip.setMatk((short) (nEquip.getMatk() + Randomizer.rand(7, 8)));
                                 break;
-                            case 2046340: // 8Õ¥ ¾Ç¼¼¼­¸® °ø°İ·Â ÁÖ¹®¼­ 20%
+                            case 2046340: // 8ï¥œ ì•…ì„¸ì„œë¦¬ ê³µê²©ë ¥ ì£¼ë¬¸ì„œ 20%
                                 nEquip.setWatk((short) (nEquip.getWatk() + 1));
                                 break;
-                            case 2046341: // 8Õ¥ ¾Ç¼¼¼­¸® ¸¶·Â ÁÖ¹®¼­ 20%
+                            case 2046341: // 8ï¥œ ì•…ì„¸ì„œë¦¬ ë§ˆë ¥ ì£¼ë¬¸ì„œ 20%
                                 nEquip.setMatk((short) (nEquip.getMatk() + 1));
                                 break;
-                            case 2046119: // 8Õ¥ µÎ¼Õ¹«±â °ø°İ·Â ÁÖ¹®¼­ 20%
+                            case 2046119: // 8ï¥œ ë‘ì†ë¬´ê¸° ê³µê²©ë ¥ ì£¼ë¬¸ì„œ 20%
                                 nEquip.setWatk((short) (nEquip.getWatk() + Randomizer.rand(7, 8)));
                                 break;
-                            case 2046120: // 8Õ¥ µÎ¼Õ¹«±â ¸¶·Â ÁÖ¹®¼­ 20%
+                            case 2046120: // 8ï¥œ ë‘ì†ë¬´ê¸° ë§ˆë ¥ ì£¼ë¬¸ì„œ 20%
                                 nEquip.setMatk((short) (nEquip.getMatk() + Randomizer.rand(7, 8)));
                                 break;
-                            case 2046251: // 8Õ¥ ¹æ¾î±¸ °­È­ ÁÖ¹®¼­ 20%
+                            case 2046251: // 8ï¥œ ë°©ì–´êµ¬ ê°•í™” ì£¼ë¬¸ì„œ 20%
                                 nEquip.setStr((short) (nEquip.getStr() + 3));
                                 nEquip.setInt((short) (nEquip.getInt() + 3));
                                 nEquip.setDex((short) (nEquip.getDex() + 3));
                                 nEquip.setLuk((short) (nEquip.getLuk() + 3));
                                 break;
-                            case 2046054: // Àú½ºÆ¼½º ÇÑ¼Õ¹«±â °ø°İ·Â ÁÖ¹®¼­ 20%
-                            case 2046055: // Àú½ºÆ¼½º ÇÑ¼Õ ¹«±â ¸¶·Â ÁÖ¹®¼­ 20%
-                            case 2046056: // Àú½ºÆ¼½º ÇÑ¼Õ ¹«±â °ø°İ·Â ÁÖ¹®¼­ 40%
-                            case 2046057: // Àú½ºÆ¼½º ÇÑ¼Õ ¹«±â ¸¶·Â ÁÖ¹®¼­ 40%
-                            case 2046138: // Àú½ºÆ¼½º µÎ¼Õ¹«±â °ø°İ·Â ÁÖ¹®¼­ 20%
-                            case 2046139: // Àú½ºÆ¼½º µÎ¼Õ¹«±â °ø°İ·Â ÁÖ¹®¼­ 40%
+                            case 2046054: // ì €ìŠ¤í‹°ìŠ¤ í•œì†ë¬´ê¸° ê³µê²©ë ¥ ì£¼ë¬¸ì„œ 20%
+                            case 2046055: // ì €ìŠ¤í‹°ìŠ¤ í•œì† ë¬´ê¸° ë§ˆë ¥ ì£¼ë¬¸ì„œ 20%
+                            case 2046056: // ì €ìŠ¤í‹°ìŠ¤ í•œì† ë¬´ê¸° ê³µê²©ë ¥ ì£¼ë¬¸ì„œ 40%
+                            case 2046057: // ì €ìŠ¤í‹°ìŠ¤ í•œì† ë¬´ê¸° ë§ˆë ¥ ì£¼ë¬¸ì„œ 40%
+                            case 2046138: // ì €ìŠ¤í‹°ìŠ¤ ë‘ì†ë¬´ê¸° ê³µê²©ë ¥ ì£¼ë¬¸ì„œ 20%
+                            case 2046139: // ì €ìŠ¤í‹°ìŠ¤ ë‘ì†ë¬´ê¸° ê³µê²©ë ¥ ì£¼ë¬¸ì„œ 40%
                                 if (scrollId.getItemId() == 2046055 || scrollId.getItemId() == 2046057) {
                                     nEquip.setMatk((short) (nEquip.getMatk() + 5));
                                 } else {
@@ -1225,9 +1225,9 @@ public class ItemInformation {
                                 nEquip.setLuk((short) (nEquip.getLuk() + 3));
                                 nEquip.setAcc((short) (nEquip.getAcc() + 15));
                                 break;
-                            case 2046058: // Àú½ºÆ¼½º ÇÑ¼Õ ¹«±â °ø°İ·Â ÁÖ¹®¼­ 70%
-                            case 2046059: // Àú½ºÆ¼½º ÇÑ¼Õ ¹«±â ¸¶·Â ÁÖ¹®¼­ 70%
-                            case 2046140: // Àú½ºÆ¼½º µÎ¼Õ¹«±â °ø°İ·Â ÁÖ¹®¼­ 70%
+                            case 2046058: // ì €ìŠ¤í‹°ìŠ¤ í•œì† ë¬´ê¸° ê³µê²©ë ¥ ì£¼ë¬¸ì„œ 70%
+                            case 2046059: // ì €ìŠ¤í‹°ìŠ¤ í•œì† ë¬´ê¸° ë§ˆë ¥ ì£¼ë¬¸ì„œ 70%
+                            case 2046140: // ì €ìŠ¤í‹°ìŠ¤ ë‘ì†ë¬´ê¸° ê³µê²©ë ¥ ì£¼ë¬¸ì„œ 70%
                                 if (scrollId.getItemId() == 2046059) {
                                     nEquip.setMatk((short) (nEquip.getMatk() + 2));
                                 } else {
@@ -1239,7 +1239,7 @@ public class ItemInformation {
                                 nEquip.setLuk((short) (nEquip.getLuk() + 1));
                                 nEquip.setAcc((short) (nEquip.getAcc() + 5));
                                 break;
-                            case 2046374: //ºñÆ²¸° ½Ã°£ÀÇ ÆÄÆí
+                            case 2046374: //ë¹„í‹€ë¦° ì‹œê°„ì˜ íŒŒí¸
                                 nEquip.setWatk((short) (nEquip.getWatk() + 3));
                                 nEquip.setMatk((short) (nEquip.getMatk() + 3));
                                 nEquip.setWdef((short) (nEquip.getWdef() + 25));
@@ -1255,53 +1255,53 @@ public class ItemInformation {
                                 nEquip.setMp((short) (nEquip.getMp() + 25));
                                 nEquip.setHp((short) (nEquip.getHp() + 25));
                                 break;
-                            case 2046094: // 9ÁÖ³â ÇÑ¼Õ ¹«±â °ø°İ·Â ÁÖ¹®¼­ 10%
+                            case 2046094: // 9ì£¼ë…„ í•œì† ë¬´ê¸° ê³µê²©ë ¥ ì£¼ë¬¸ì„œ 10%
                                 nEquip.setWatk((short) (nEquip.getWatk() + Randomizer.ScrollRand(7, 9)));
                                 break;
-                            case 2046095: // 9ÁÖ³â ÇÑ¼Õ ¹«±â ¸¶·Â ÁÖ¹®¼­ 10%
+                            case 2046095: // 9ì£¼ë…„ í•œì† ë¬´ê¸° ë§ˆë ¥ ì£¼ë¬¸ì„œ 10%
                                 nEquip.setMatk((short) (nEquip.getMatk() + Randomizer.ScrollRand(7, 9)));
                                 break;
-                            case 2046162: // 9ÁÖ³â µÎ¼Õ ¹«±â °ø°İ·Â ÁÖ¹®¼­ 10%
+                            case 2046162: // 9ì£¼ë…„ ë‘ì† ë¬´ê¸° ê³µê²©ë ¥ ì£¼ë¬¸ì„œ 10%
                                 nEquip.setWatk((short) (nEquip.getWatk() + Randomizer.ScrollRand(7, 9)));
                                 break;
-                            case 2046163: // 9ÁÖ³â µÎ¼Õ ¹«±â ¸¶·Â ÁÖ¹®¼­ 10%
+                            case 2046163: // 9ì£¼ë…„ ë‘ì† ë¬´ê¸° ë§ˆë ¥ ì£¼ë¬¸ì„œ 10%
                                 nEquip.setMatk((short) (nEquip.getMatk() + Randomizer.ScrollRand(7, 9)));
                                 break;
-                            case 5530336: // ¾Ç¼¼¼­¸® °ø°İ·Â ½ºÅ©·Ñ 100%
+                            case 5530336: // ì•…ì„¸ì„œë¦¬ ê³µê²©ë ¥ ìŠ¤í¬ë¡¤ 100%
                                 nEquip.setWatk((short) (nEquip.getWatk() + Randomizer.ScrollRand(2, 4)));
                                 break;
-                            case 5530337: // ¾Ç¼¼¼­¸® ¸¶·Â ½ºÅ©·Ñ 100%
+                            case 5530337: // ì•…ì„¸ì„œë¦¬ ë§ˆë ¥ ìŠ¤í¬ë¡¤ 100%
                                 nEquip.setMatk((short) (nEquip.getMatk() + Randomizer.ScrollRand(2, 4)));
                                 break;
-                            case 5530338: // ÆêÀåºñ °ø°İ·Â ½ºÅ©·Ñ 100%
+                            case 5530338: // í«ì¥ë¹„ ê³µê²©ë ¥ ìŠ¤í¬ë¡¤ 100%
                                 nEquip.setWatk((short) (nEquip.getWatk() + Randomizer.ScrollRand(2, 4)));
                                 break;
-                            case 5530339: // ÆêÀåºñ ¸¶·Â ½ºÅ©·Ñ 100%
+                            case 5530339: // í«ì¥ë¹„ ë§ˆë ¥ ìŠ¤í¬ë¡¤ 100%
                                 nEquip.setMatk((short) (nEquip.getMatk() + Randomizer.ScrollRand(2, 4)));
                                 break;
-                            case 2048094: //ÇÁ¸®¹Ì¾ö ÆêÀåºñ °ø°İ·Â ÁÖ¹®¼­ 100%
-                            case 2046856: //ÇÁ¸®¹Ì¾ö ¾Ç¼¼¼­¸® °ø°İ·Â ÁÖ¹®¼­ 100%
+                            case 2048094: //í”„ë¦¬ë¯¸ì—„ í«ì¥ë¹„ ê³µê²©ë ¥ ì£¼ë¬¸ì„œ 100%
+                            case 2046856: //í”„ë¦¬ë¯¸ì—„ ì•…ì„¸ì„œë¦¬ ê³µê²©ë ¥ ì£¼ë¬¸ì„œ 100%
                                 nEquip.setWatk((short) (nEquip.getWatk() + Randomizer.ScrollRand(4, 5)));
                                 break;
-                            case 2048095: //ÇÁ¸®¹Ì¾ö ÆêÀåºñ ¸¶·Â ÁÖ¹®¼­ 100%
-                            case 2046857: //ÇÁ¸®¹Ì¾ö ¾Ç¼¼¼­¸® ¸¶·Â ÁÖ¹®¼­ 100%
+                            case 2048095: //í”„ë¦¬ë¯¸ì—„ í«ì¥ë¹„ ë§ˆë ¥ ì£¼ë¬¸ì„œ 100%
+                            case 2046857: //í”„ë¦¬ë¯¸ì—„ ì•…ì„¸ì„œë¦¬ ë§ˆë ¥ ì£¼ë¬¸ì„œ 100%
                                 nEquip.setMatk((short) (nEquip.getMatk() + Randomizer.ScrollRand(4, 5)));
                                 break;
-                            case 2046991: //¸ÅÁöÄÃ ÇÑ¼Õ¹«±â °ø°İ·Â ÁÖ¹®¼­
-                            case 2047814: //¸ÅÁöÄÃ µÎ¼Õ¹«±â °ø°İ·Â ÁÖ¹®¼­
+                            case 2046991: //ë§¤ì§€ì»¬ í•œì†ë¬´ê¸° ê³µê²©ë ¥ ì£¼ë¬¸ì„œ
+                            case 2047814: //ë§¤ì§€ì»¬ ë‘ì†ë¬´ê¸° ê³µê²©ë ¥ ì£¼ë¬¸ì„œ
                                 nEquip.setStr((short) (nEquip.getStr() + 3));
                                 nEquip.setInt((short) (nEquip.getInt() + 3));
                                 nEquip.setDex((short) (nEquip.getDex() + 3));
                                 nEquip.setLuk((short) (nEquip.getLuk() + 3));
                                 nEquip.setWatk((short) (nEquip.getMatk() + Randomizer.ScrollRand(9, 11)));
                                 break;
-                            case 2046992: //¸ÅÁöÄÃ ÇÑ¼Õ¹«±â ¸¶·Â ÁÖ¹®¼­
+                            case 2046992: //ë§¤ì§€ì»¬ í•œì†ë¬´ê¸° ë§ˆë ¥ ì£¼ë¬¸ì„œ
                                 nEquip.setStr((short) (nEquip.getStr() + 3));
                                 nEquip.setInt((short) (nEquip.getInt() + 3));
                                 nEquip.setDex((short) (nEquip.getDex() + 3));
                                 nEquip.setLuk((short) (nEquip.getLuk() + 3));
                                 nEquip.setMatk((short) (nEquip.getMatk() + Randomizer.ScrollRand(9, 11)));
-                            case 2046564: // 9ÁÖ³â ¹æ¾î±¸ °­È­ ÁÖ¹®¼­ 10%
+                            case 2046564: // 9ì£¼ë…„ ë°©ì–´êµ¬ ê°•í™” ì£¼ë¬¸ì„œ 10%
                                 nEquip.setStr((short) (nEquip.getStr() + 5));
                                 nEquip.setInt((short) (nEquip.getInt() + 5));
                                 nEquip.setDex((short) (nEquip.getDex() + 5));
@@ -1319,10 +1319,10 @@ public class ItemInformation {
                     if (!Randomizer.isSuccess(getSuccess(scrollId.getItemId(), chr, nEquip))) {
                         if (Randomizer.isSuccess(getCursed(scrollId.getItemId(), chr))) {
                             if (ItemFlag.PROTECT.check(nEquip.getFlag()) || nEquip.isAmazing()) {
-                                chr.dropMessage(5, "ÁÖ¹®¼­ÀÇ È¿°ú·Î ¾ÆÀÌÅÛÀÌ ÆÄ±«µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+                                chr.dropMessage(5, "ì£¼ë¬¸ì„œì˜ íš¨ê³¼ë¡œ ì•„ì´í…œì´ íŒŒê´´ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
                                 nEquip.setAmazing(false);
                             } else {
-                                return null; //Æã
+                                return null; //í‘
                             }
                         }
                         failed = true;
@@ -1371,10 +1371,10 @@ public class ItemInformation {
                     if (!Randomizer.isSuccess(getSuccess(scrollId.getItemId(), chr, nEquip), chr)) {
                         if (Randomizer.isSuccess(getCursed(scrollId.getItemId(), chr))) {
                             if (ItemFlag.PROTECT.check(nEquip.getFlag()) || nEquip.isAmazing()) {
-                                chr.dropMessage(5, "ÁÖ¹®¼­ÀÇ È¿°ú·Î ¾ÆÀÌÅÛÀÌ ÆÄ±«µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+                                chr.dropMessage(5, "ì£¼ë¬¸ì„œì˜ íš¨ê³¼ë¡œ ì•„ì´í…œì´ íŒŒê´´ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
                                 nEquip.setAmazing(false);
                             } else {
-                                return null; //Æã
+                                return null; //í‘
                             }
                         }
                         failed = true;
@@ -1393,10 +1393,10 @@ public class ItemInformation {
                     if (!Randomizer.isSuccess(getSuccess(scrollId.getItemId(), chr, nEquip), chr)) {
                         if (Randomizer.isSuccess(getCursed(scrollId.getItemId(), chr))) {
                             if (ItemFlag.PROTECT.check(nEquip.getFlag()) || nEquip.isAmazing()) {
-                                chr.dropMessage(5, "ÁÖ¹®¼­ÀÇ È¿°ú·Î ¾ÆÀÌÅÛÀÌ ÆÄ±«µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+                                chr.dropMessage(5, "ì£¼ë¬¸ì„œì˜ íš¨ê³¼ë¡œ ì•„ì´í…œì´ íŒŒê´´ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
                                 nEquip.setAmazing(false);
                             } else {
-                                return null; //Æã
+                                return null; //í‘
                             }
                         }
                         failed = true;
@@ -1409,14 +1409,14 @@ public class ItemInformation {
                         }
                     }
                     break;
-                case 2531000: // ÇÁ·ÎÅØÆ®
+                case 2531000: // í”„ë¡œí…íŠ¸
                 {
                     short flag = nEquip.getFlag();
                     flag |= ItemFlag.PROTECT.getValue();
                     nEquip.setFlag(flag);
                     break;
                 }
-                case 2532000: // ¼¼ÀÌÇÁÆ¼
+                case 2532000: // ì„¸ì´í”„í‹°
                 {
                     short flag = nEquip.getFlag();
                     flag |= ItemFlag.SAFETY.getValue();
@@ -1424,7 +1424,7 @@ public class ItemInformation {
                     break;
                 }
 
-                case 5064300: // ¸®Ä¿¹ö¸®
+                case 5064300: // ë¦¬ì»¤ë²„ë¦¬
                 {
                     short flag = nEquip.getFlag();
                     flag |= ItemFlag.RECOVERY.getValue();
@@ -1432,7 +1432,7 @@ public class ItemInformation {
                     break;
                 }
                 case 5063000:
-                case 2049704: {// ·¹Àüµå¸® ÀáÀç ÁÖ¹®¼­/¿¡ÇÈ 40%¿¡ Àû¿ë - 120705 Ãß°¡
+                case 2049704: {// ë ˆì „ë“œë¦¬ ì ì¬ ì£¼ë¬¸ì„œ/ì—í”½ 40%ì— ì ìš© - 120705 ì¶”ê°€
                     if (!Randomizer.isSuccess(getSuccess(scrollId.getItemId(), chr, nEquip), chr)) {
                         failed = true;
                     } else if (nEquip.getState() <= 17) {
@@ -1447,7 +1447,7 @@ public class ItemInformation {
                 }
                 case 2530000:
                 case 2530001:
-                case 2530002: // ·°Å°µ¥ÀÌ
+                case 2530002: // ëŸ­í‚¤ë°ì´
                 {
                     short flag = nEquip.getFlag();
                     flag |= ItemFlag.LUKCYDAY.getValue();
@@ -1491,16 +1491,16 @@ public class ItemInformation {
                         if (!Randomizer.isSuccess(getSuccess(scrollId.getItemId(), chr, nEquip), chr)) {
                             if (Randomizer.isSuccess(getCursed(scrollId.getItemId(), chr, nEquip))) {
                                 if (ItemFlag.PROTECT.check(nEquip.getFlag()) || nEquip.isAmazing()) {
-                                    chr.dropMessage(5, "ÁÖ¹®¼­ÀÇ È¿°ú·Î ¾ÆÀÌÅÛÀÌ ÆÄ±«µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+                                    chr.dropMessage(5, "ì£¼ë¬¸ì„œì˜ íš¨ê³¼ë¡œ ì•„ì´í…œì´ íŒŒê´´ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
                                     nEquip.setAmazing(false);
                                 } else {
-                                    return null; //Æã
+                                    return null; //í‘
                                 }
                             }
                             failed = true;
                         } else {
                             final int z = GameConstants.getChaosNumber(scrollId.getItemId());
-                            final boolean a = scrollId.getItemId() == 2049122 || scrollId.getItemId() == 2049153; //±àÁ¤ÀÇ È¥µ·ÀÇ ÁÖ¹®¼­
+                            final boolean a = scrollId.getItemId() == 2049122 || scrollId.getItemId() == 2049153; //ê¸ì •ì˜ í˜¼ëˆì˜ ì£¼ë¬¸ì„œ
                             if (nEquip.getStr() > 0) {
                                 nEquip.setStr((short) (nEquip.getStr() + Randomizer.nextInt(z) * (a ? 1 : Randomizer.nextBoolean() ? 1 : -1)));
                             }
@@ -1545,7 +1545,7 @@ public class ItemInformation {
                             }
                         }
                         break;
-                    } else if (scrollId.getItemId() == 2049100) { // ·£´ı ÁÖ¹®¼­ ³ªÁß¿¡ ÄÚµå Ã£¾Æ º¼ °Í
+                    } else if (scrollId.getItemId() == 2049100) { // ëœë¤ ì£¼ë¬¸ì„œ ë‚˜ì¤‘ì— ì½”ë“œ ì°¾ì•„ ë³¼ ê²ƒ
                         int chance = Randomizer.nextInt(50);
                         int option = Randomizer.nextInt(50);
                         int wmoption = (option / 2);
@@ -1569,19 +1569,19 @@ public class ItemInformation {
                                 nEquip.setMatk((short) (nEquip.getMatk() + wmoption));
                                 break;
                             } else {
-                                System.out.println("¿¹¿Ü»óÈ² ¹ß»ı");
+                                System.out.println("ì˜ˆì™¸ìƒí™© ë°œìƒ");
                             }
                         } else if (chance <= 50) {
                             break;
                         } else {
-                            System.out.println("¿¹¿Ü»óÈ² ¹ß»ı");
+                            System.out.println("ì˜ˆì™¸ìƒí™© ë°œìƒ");
                         }
                     } else if (scrollId.getItemId() == 2049370) {
                         for (int i = 0; i < 12; i++) {
                             int at = 0;
                             int aps = 0;
                             boolean weapon = GameConstants.isWeapon(nEquip.getItemId());
-                            switch (nEquip.getEnhance()) {// ¼º´ç °­È­ È®·ü
+                            switch (nEquip.getEnhance()) {// ì„±ë‹¹ ê°•í™” í™•ë¥ 
                                 case 0:
                                     at = 19;
                                     aps = weapon ? 6 : 0;
@@ -1632,7 +1632,7 @@ public class ItemInformation {
                                 case 14:
                                     aps = weapon ? 27 : 17;
                                     break;
-                                default: //13¼º ÀÌ»ó
+                                default: //13ì„± ì´ìƒ
                                     break;
                             }
                             if (ItemInformation.getInstance().getReqLevel(nEquip.getItemId()) < 150) {
@@ -1660,10 +1660,10 @@ public class ItemInformation {
                     } else if (GameConstants.isEquipScroll(scrollId.getItemId())) {
                         if (!Randomizer.isSuccess(getSuccess(scrollId.getItemId(), chr, nEquip), chr)) {
                             if (ItemFlag.PROTECT.check(nEquip.getFlag()) || nEquip.isAmazing() || nEquip.isAmazing()) {
-                                chr.dropMessage(5, "ÁÖ¹®¼­ÀÇ È¿°ú·Î ¾ÆÀÌÅÛÀÌ ÆÄ±«µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+                                chr.dropMessage(5, "ì£¼ë¬¸ì„œì˜ íš¨ê³¼ë¡œ ì•„ì´í…œì´ íŒŒê´´ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
                                 nEquip.setAmazing(false);
                             } else if (scrollId.getItemId() != 2049323) {
-                                return null; //Æã
+                                return null; //í‘
                             }
                             failed = true;
                         } else {
@@ -1742,13 +1742,13 @@ public class ItemInformation {
                                         nEquip.setLuk((short) (nEquip.getLuk() + getEquipLevel(getReqLevel(nEquip.getItemId()) + Randomizer.rand(0, 1))));
                                     }
                                     if (nEquip.getWatk() > 0) {
-                                        nEquip.setWatk((short) (nEquip.getWatk() + (GameConstants.isWeapon(nEquip.getItemId()) ? ¹«±â¸¶°ø°ø½Ä(nEquip.getWatk()) : ¹æ¾î±¸¸¶°ø°ø½Ä(nEquip.getWatk()))));
+                                        nEquip.setWatk((short) (nEquip.getWatk() + (GameConstants.isWeapon(nEquip.getItemId()) ? ë¬´ê¸°ë§ˆê³µê³µì‹(nEquip.getWatk()) : ë°©ì–´êµ¬ë§ˆê³µê³µì‹(nEquip.getWatk()))));
                                     }
                                     if (nEquip.getWdef() > 0) {
                                         nEquip.setWdef((short) (nEquip.getWdef() + getEquipLevel(getReqLevel(nEquip.getItemId()) + Randomizer.rand(1, 2))));
                                     }
                                     if (nEquip.getMatk() > 0) {
-                                        nEquip.setMatk((short) (nEquip.getMatk() + (GameConstants.isWeapon(nEquip.getItemId()) ? ¹«±â¸¶°ø°ø½Ä(nEquip.getMatk()) : ¹æ¾î±¸¸¶°ø°ø½Ä(nEquip.getMatk()))));
+                                        nEquip.setMatk((short) (nEquip.getMatk() + (GameConstants.isWeapon(nEquip.getItemId()) ? ë¬´ê¸°ë§ˆê³µê³µì‹(nEquip.getMatk()) : ë°©ì–´êµ¬ë§ˆê³µê³µì‹(nEquip.getMatk()))));
                                     }
                                     if (nEquip.getMdef() > 0) {
                                         nEquip.setMdef((short) (nEquip.getMdef() + getEquipLevel(getReqLevel(nEquip.getItemId()) + Randomizer.rand(1, 2))));
@@ -1765,20 +1765,20 @@ public class ItemInformation {
                                     if (nEquip.getMp() > 0) {
                                         nEquip.setMp((short) (nEquip.getMp() + getEquipLevel(getReqLevel(nEquip.getItemId()) + Randomizer.rand(1, 2))));
                                     }
-                                    nEquip.setEnhance((byte) (nEquip.getEnhance() + 1)); //ÀÌ°Ô º°ºÙ´Â ºÎºĞ
+                                    nEquip.setEnhance((byte) (nEquip.getEnhance() + 1)); //ì´ê²Œ ë³„ë¶™ëŠ” ë¶€ë¶„
                                     if (nEquip.getEnhance() >= 8) {
-                                        WorldBroadcasting.broadcastMessage(UIPacket.enforceMSG(chr.getName() + "´ÔÀÇ " + ItemInformation.getInstance().getName(nEquip.getItemId()) + " ÀÌ(°¡) " + nEquip.getEnhance() + "¼º °­È­¿¡ ¼º°ø ÇÏ¿´½À´Ï´Ù.", 48, 5000));
+                                        WorldBroadcasting.broadcastMessage(UIPacket.enforceMSG(chr.getName() + "ë‹˜ì˜ " + ItemInformation.getInstance().getName(nEquip.getItemId()) + " ì´(ê°€) " + nEquip.getEnhance() + "ì„± ê°•í™”ì— ì„±ê³µ í•˜ì˜€ìŠµë‹ˆë‹¤.", 48, 5000));
                                     }
                                 }
                             }
                         }
                         break;
-                    } else if ((scrollId.getItemId() == 2049360) || (scrollId.getItemId() == 2049361)) {//¾ÆÀÌÅÛ
+                    } else if ((scrollId.getItemId() == 2049360) || (scrollId.getItemId() == 2049361)) {//ì•„ì´í…œ
                         int at = 0;
                         int aps = 0;
                         int suc = 10;
                         boolean weapon = GameConstants.isWeapon(nEquip.getItemId());
-                        switch (nEquip.getEnhance()) {// ¼º´ç °­È­ È®·ü
+                        switch (nEquip.getEnhance()) {// ì„±ë‹¹ ê°•í™” í™•ë¥ 
                             case 0:
                                 at = 19;
                                 aps = weapon ? 6 : 0;
@@ -1841,7 +1841,7 @@ public class ItemInformation {
                             case 14:
                                 aps = weapon ? 27 : 17;
                                 break;
-                            default: //13¼º ÀÌ»ó
+                            default: //13ì„± ì´ìƒ
                                 break;
                         }
                         if (chr.isGM()) {
@@ -1850,10 +1850,10 @@ public class ItemInformation {
                         if (!Randomizer.isSuccess(suc)) {
                             if (Randomizer.isSuccess(100)) {
                                 if (ItemFlag.PROTECT.check(nEquip.getFlag()) || nEquip.isAmazing()) {
-                                    chr.dropMessage(5, "ÁÖ¹®¼­ÀÇ È¿°ú·Î ¾ÆÀÌÅÛÀÌ ÆÄ±«µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+                                    chr.dropMessage(5, "ì£¼ë¬¸ì„œì˜ íš¨ê³¼ë¡œ ì•„ì´í…œì´ íŒŒê´´ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
                                     nEquip.setAmazing(false);
                                 } else {
-                                    return null; //Æã
+                                    return null; //í‘
                                 }
                             }
                             failed = true;
@@ -1880,10 +1880,10 @@ public class ItemInformation {
                             if (!Randomizer.isSuccess(getSuccess(scrollId.getItemId(), chr, nEquip))) {
                                 if (Randomizer.isSuccess(getCursed(scrollId.getItemId(), chr))) {
                                     if (ItemFlag.PROTECT.check(nEquip.getFlag()) || nEquip.isAmazing()) {
-                                        chr.dropMessage(5, "ÁÖ¹®¼­ÀÇ È¿°ú·Î ¾ÆÀÌÅÛÀÌ ÆÄ±«µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+                                        chr.dropMessage(5, "ì£¼ë¬¸ì„œì˜ íš¨ê³¼ë¡œ ì•„ì´í…œì´ íŒŒê´´ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
                                         nEquip.setAmazing(false);
                                     } else {
-                                        return null; //Æã
+                                        return null; //í‘
                                     }
                                 }
                                 failed = true;
@@ -1912,10 +1912,10 @@ public class ItemInformation {
                         if (!Randomizer.isSuccess(getSuccess(scrollId.getItemId(), chr, nEquip), chr)) {
                             if (Randomizer.isSuccess(getCursed(scrollId.getItemId(), chr))) {
                                 if (ItemFlag.PROTECT.check(nEquip.getFlag()) || nEquip.isAmazing()) {
-                                    chr.dropMessage(5, "ÁÖ¹®¼­ÀÇ È¿°ú·Î ¾ÆÀÌÅÛÀÌ ÆÄ±«µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+                                    chr.dropMessage(5, "ì£¼ë¬¸ì„œì˜ íš¨ê³¼ë¡œ ì•„ì´í…œì´ íŒŒê´´ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
                                     nEquip.setAmazing(false);
                                 } else {
-                                    return null; //Æã
+                                    return null; //í‘
                                 }
                             }
                             failed = true;
@@ -1964,7 +1964,7 @@ public class ItemInformation {
             }
             if (!GameConstants.isCleanSlate(scrollId.getItemId()) && !GameConstants.isSpecialScroll(scrollId.getItemId()) && !GameConstants.isEquipScroll(scrollId.getItemId()) && !GameConstants.isPotentialScroll(scrollId.getItemId()) && !GameConstants.isRebirhFireScroll(scrollId.getItemId()) && !GameConstants.isEpicScroll(scrollId.getItemId()) && scrollId.getItemId() != 2049360 && scrollId.getItemId() != 2049361) {
                 if (ItemFlag.SAFETY.check(nEquip.getFlag()) && failed) {
-                    chr.dropMessage(5, "ÁÖ¹®¼­ÀÇ È¿°ú·Î ¾÷±×·¹ÀÌµå °¡´É È½¼ö°¡ Â÷°¨µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+                    chr.dropMessage(5, "ì£¼ë¬¸ì„œì˜ íš¨ê³¼ë¡œ ì—…ê·¸ë ˆì´ë“œ ê°€ëŠ¥ íšŸìˆ˜ê°€ ì°¨ê°ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
                 } else {
                     nEquip.setUpgradeSlots((byte) (nEquip.getUpgradeSlots() - getUpgradeScrollUseSlot(scrollId.getItemId())));
                 }
@@ -2049,7 +2049,7 @@ public class ItemInformation {
         return nEquip.copy();
     }
 
-    private final int ¹æ¾î±¸¸¶°ø°ø½Ä(int i) {
+    private final int ë°©ì–´êµ¬ë§ˆê³µê³µì‹(int i) {
         if (i >= 25) {
             return 6;
         } else if (i >= 20) {
@@ -2065,7 +2065,7 @@ public class ItemInformation {
         }
     }
 
-    private final int ¹«±â¸¶°ø°ø½Ä(int i) {
+    private final int ë¬´ê¸°ë§ˆê³µê³µì‹(int i) {
         if (i >= 250) {
             return 6;
         } else if (i >= 200) {
@@ -2534,21 +2534,21 @@ public class ItemInformation {
         }
         int id = equip.getItemId() / 10000;
         if (GameConstants.isWeapon(equip.getItemId())) {
-            return 60; //¹«±â
+            return 60; //ë¬´ê¸°
         } else if (id == 109 || id == 110 || id == 113) {
-            return 10; //¹æÆĞ & ¸ÁÅä & º§Æ®
+            return 10; //ë°©íŒ¨ & ë§í†  & ë²¨íŠ¸
         } else if (GameConstants.isAccessory(equip.getItemId())) {
-            return 40; //¾Ç¼¼»ç¸®
+            return 40; //ì•…ì„¸ì‚¬ë¦¬
         } else if (id == 100) {
-            return 50; //Åõ±¸
+            return 50; //íˆ¬êµ¬
         } else if (id == 104 || id == 106) {
-            return 30; //»óÀÇ, ÇÏÀÇ
+            return 30; //ìƒì˜, í•˜ì˜
         } else if (id == 105) {
-            return 60; //ÇÑ¹ú¿Ê
+            return 60; //í•œë²Œì˜·
         } else if (id == 108) {
-            return 40; //Àå°©
+            return 40; //ì¥ê°‘
         } else if (id == 107) {
-            return 40; //½Å¹ß
+            return 40; //ì‹ ë°œ
         }
         return 0;
     }

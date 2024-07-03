@@ -7,7 +7,7 @@ package client;
 
 /**
  *
- * @author ¸ùÅ°ÇÁ
+ * @author ëª½í‚¤í”„
  */
 public class CRand32 {
     private long seed1;

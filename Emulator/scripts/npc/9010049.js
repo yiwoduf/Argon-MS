@@ -1,5 +1,5 @@
 /*
-Á¦ÀÛÀÚ : ljw5992@naver.com / dbg_yeane@nate.com
+ì œì‘ì : ljw5992@naver.com / dbg_yeane@nate.com
 */
 
 importPackage(java.sql);
@@ -28,10 +28,10 @@ function getStatByName(cname) {
         var eq = con.executeQuery();
         eq.next();
         var string = new StringBuilder();
-        return string.append("#e½Äº°¹øÈ£ : #n").append(Integer(eq.getInt("id")))
-        .append("\r\n#e´Ğ³×ÀÓ : #n").append(eq.getString("name"))
-        .append("\r\n#e·¹º§ : #n").append(Integer(eq.getInt("level")))
-        .append("\r\n#e°æÇèÄ¡ : #n").append(Integer(eq.getInt("exp")))
+        return string.append("#eì‹ë³„ë²ˆí˜¸ : #n").append(Integer(eq.getInt("id")))
+        .append("\r\n#eë‹‰ë„¤ì„ : #n").append(eq.getString("name"))
+        .append("\r\n#eë ˆë²¨ : #n").append(Integer(eq.getInt("level")))
+        .append("\r\n#eê²½í—˜ì¹˜ : #n").append(Integer(eq.getInt("exp")))
         .append(" / ")
         .append(GameConstants.getExpNeededForLevel(eq.getInt("level")).toString())
         .append("\r\n#eHP : #n").append(Integer(eq.getInt("maxhp")))
@@ -40,7 +40,7 @@ function getStatByName(cname) {
         .append("\r\n#eDEX : #n").append(Integer(eq.getInt("dex")))
         .append("\r\n#eLUK : #n").append(Integer(eq.getInt("luk")))
         .append("\r\n#eINT : #n").append(Integer(eq.getInt("int")))
-        .append("\r\n#eÀÎ±âµµ : #n").append(Integer(eq.getInt("fame"))).toString();
+        .append("\r\n#eì¸ê¸°ë„ : #n").append(Integer(eq.getInt("fame"))).toString();
     }else{
         return null;
     }
@@ -55,7 +55,7 @@ function getEquippedById(cid,type) {
         var string = new StringBuilder();
         while(eq.next()){
             string.append("#L").append(Integer(eq.getInt("inventoryitemid"))).append("##i").
-	    append(Integer(eq.getInt("itemid"))).append("#¡¡#b(#t").append(eq.getInt("itemid")).append("#)#k").append("\r\n");
+	    append(Integer(eq.getInt("itemid"))).append("#ã€€#b(#t").append(eq.getInt("itemid")).append("#)#k").append("\r\n");
         }
         return string.toString();
     }else{
@@ -63,8 +63,8 @@ function getEquippedById(cid,type) {
     }
 }
 
-function start() { //#e50¸¸¸Ş¼Ò¸¦ »ç¿ëÇÏ¼Ì½À´Ï´Ù.\r\n //Lilin_ c
-    cm.sendGetText("Á¤º¸Á¶È¸¸¦ ¿øÇÏ´Â Ä³¸¯ÅÍÀÇ ´Ğ³×ÀÓÀ» Àû¾îÁÖ¼¼¿ä.#n");
+function start() { //#e50ë§Œë©”ì†Œë¥¼ ì‚¬ìš©í•˜ì…¨ìŠµë‹ˆë‹¤.\r\n //Lilin_ c
+    cm.sendGetText("ì •ë³´ì¡°íšŒë¥¼ ì›í•˜ëŠ” ìºë¦­í„°ì˜ ë‹‰ë„¤ì„ì„ ì ì–´ì£¼ì„¸ìš”.#n");
     
 }
 
@@ -80,13 +80,13 @@ function action(mode, type, selection) {
         if(getStatByName(cm.getText()) != null){
             if(cm.getMeso() >= 500000) {//Lilin_ s
                 cm.gainMeso(-500000);
-                cm.sendSimple(getStatByName(cm.getText())+"\r\n\r\n#eÂø¿ëÁßÀÎ ¾ÆÀÌÅÛ#n\r\n"+getEquippedById(getIdByName(cm.getText())));
+                cm.sendSimple(getStatByName(cm.getText())+"\r\n\r\n#eì°©ìš©ì¤‘ì¸ ì•„ì´í…œ#n\r\n"+getEquippedById(getIdByName(cm.getText())));
             }else{
-                cm.sendOk("¸Ş¼Ò°¡ ºÎÁ·ÇÕ´Ï´Ù");
+                cm.sendOk("ë©”ì†Œê°€ ë¶€ì¡±í•©ë‹ˆë‹¤");
                 cm.dispose();
             }
         }else{
-            cm.sendOk("Á¸ÀçÇÏÁö ¾Ê´Â ¾ÆÀÌµğ ÀÔ´Ï´Ù.");
+            cm.sendOk("ì¡´ì¬í•˜ì§€ ì•ŠëŠ” ì•„ì´ë”” ì…ë‹ˆë‹¤.");
             cm.dispose();
         }//Lilin e
     }else if(status==1){
@@ -110,7 +110,7 @@ function getItemOption(uniqueid){
     eq.next();
     var string = new StringBuilder();
     for (var i = 0; i < eq.getInt("enhance"); i++){
-        string.append("¡Ú");
+        string.append("â˜…");
     }
     string.append("\r\n#eSTR#n : " + eq.getInt("str") + "\r\n");
     string.append("#eDEX#n : " + eq.getInt("dex") + "\r\n");
@@ -118,16 +118,16 @@ function getItemOption(uniqueid){
     string.append("#eLUK#n : " + eq.getInt("luk") + "\r\n");
     string.append("#eHP#n : " + eq.getInt("hp") + "\r\n");
     string.append("#eMP#n : " + eq.getInt("mp") + "\r\n");
-    string.append("#e°ø°İ·Â#n : " + eq.getInt("watk") + "\r\n");
-    string.append("#e¸¶·Â#n : " + eq.getInt("matk") + "\r\n");
-    string.append("#e¹°¸®¹æ¾î·Â#n : " + eq.getInt("wdef") + "\r\n");
-    string.append("#e¸¶¹ı¹æ¾î·Â#n : " + eq.getInt("mdef") + "\r\n");
-    string.append("#e¾÷±×·¹ÀÌµå ¼º°øÈ½¼ö#n : " + eq.getInt("level") + "\r\n");
-    string.append("#e¾÷±×·¹ÀÌµå °¡´ÉÈ½¼ö#n : " + eq.getInt("upgradeslots") + "\r\n");
-    string.append("#eÀáÀç µî±Ş#n : " + (eq.getInt("state") == 0 ? "³ë¸»" :
-    eq.getInt("state") == 17 ? "·¹¾î" :
-    eq.getInt("state") == 18 ? "¿¡ÇÈ" : 
-    eq.getInt("state") == 19 ? "À¯´ÏÅ©" : 
-    eq.getInt("state") == 20 ? "·¹Àüµå¸®" : "¹ÌÈ®ÀÎ") + "\r\n");
+    string.append("#eê³µê²©ë ¥#n : " + eq.getInt("watk") + "\r\n");
+    string.append("#eë§ˆë ¥#n : " + eq.getInt("matk") + "\r\n");
+    string.append("#eë¬¼ë¦¬ë°©ì–´ë ¥#n : " + eq.getInt("wdef") + "\r\n");
+    string.append("#eë§ˆë²•ë°©ì–´ë ¥#n : " + eq.getInt("mdef") + "\r\n");
+    string.append("#eì—…ê·¸ë ˆì´ë“œ ì„±ê³µíšŸìˆ˜#n : " + eq.getInt("level") + "\r\n");
+    string.append("#eì—…ê·¸ë ˆì´ë“œ ê°€ëŠ¥íšŸìˆ˜#n : " + eq.getInt("upgradeslots") + "\r\n");
+    string.append("#eì ì¬ ë“±ê¸‰#n : " + (eq.getInt("state") == 0 ? "ë…¸ë§" :
+    eq.getInt("state") == 17 ? "ë ˆì–´" :
+    eq.getInt("state") == 18 ? "ì—í”½" : 
+    eq.getInt("state") == 19 ? "ìœ ë‹ˆí¬" : 
+    eq.getInt("state") == 20 ? "ë ˆì „ë“œë¦¬" : "ë¯¸í™•ì¸") + "\r\n");
     return string.toString();
 }

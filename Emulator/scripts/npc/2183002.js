@@ -1,4 +1,4 @@
-// ¾Æ½º¿Ï Äª·î ½ºÅ©¸³Æ®
+// ì•„ìŠ¤ì™„ ì¹­ë£½ ìŠ¤í¬ë¦½íŠ¸
 var status = -1;
 var select = -1;
 
@@ -19,6 +19,6 @@ function action(mode, type, selection) {
     if (status == 0) {
         
         cm.dispose();
-        cm.sendOk("Âù¶õÇß´ø ¾Æ½º¿ÏÀÇ ¿ª»ç°¡ ÀÌ¸® ºñÂüÇÑ ³¡À» º¸°Ô µÉ ÁÙ ´©°¡ ¾Ë¾Ò°Ú´Â°¡? ¿ª»ç´Â ³¡³µÁö¸¸ ¹é¼ºµéÀÇ °íÅëÀº ³¡³ªÁö ¾Ê¾ÒÀ¸´Ï...");
+        cm.sendOk("ì°¬ëž€í–ˆë˜ ì•„ìŠ¤ì™„ì˜ ì—­ì‚¬ê°€ ì´ë¦¬ ë¹„ì°¸í•œ ëì„ ë³´ê²Œ ë  ì¤„ ëˆ„ê°€ ì•Œì•˜ê² ëŠ”ê°€? ì—­ì‚¬ëŠ” ëë‚¬ì§€ë§Œ ë°±ì„±ë“¤ì˜ ê³ í†µì€ ëë‚˜ì§€ ì•Šì•˜ìœ¼ë‹ˆ...");
     }
 }

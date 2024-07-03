@@ -10,7 +10,7 @@ function start(mode, type, selection) {
         status++;
         if (status == 0) {
 
-qm.sendOk("ÀÚ, ¿©±â ÁÖ¹®¼­!");
+qm.sendOk("ì, ì—¬ê¸° ì£¼ë¬¸ì„œ!");
 qm.gainItem(2431151,1)
 
 qm.dispose();
@@ -30,7 +30,7 @@ function end(mode, type, selection) {
             status--;
         if (status == 0) {
 
-qm.sendOk("ÀÚ, ¿©±â ÁÖ¹®¼­!");
+qm.sendOk("ì, ì—¬ê¸° ì£¼ë¬¸ì„œ!");
 if(qm.haveItem(2431151,1)) {
 qm.gainItem(2431151,-1);
 }

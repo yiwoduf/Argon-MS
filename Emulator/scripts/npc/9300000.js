@@ -14,16 +14,16 @@ function action(mode, type, selection) {
 }
 
 	if (status == 0) {
-	var chat =  "#r #fs13##fn�������� Extrabold#AURORA ONLINE ���� �ý����Դϴ�\r\n";
-	chat += "#r  #fs13##fn�������� Extrabold#���� ������ ����� �̿��غ�����\r\n";
-	chat += "#fn ����ü##b#L1#���ζ�¶����� ���������� �ްڽ��ϴ�.\r\n";
-	chat += "#b#L2#���ζ�¶����� �⼮üũ�� �ϰڽ��ϴ�.\r\n";
-	chat += "#b#L4#���� �˻�ĳ�ø� �̿��ϰڽ��ϴ�.\r\n";
-	chat += "#b#L5#���ζ�¶��� �̱⼥�� �̿��ϰڽ��ϴ�.\r\n";
-	chat += "#b#L6#���ζ�¶��� �������� �̿��ϰڽ��ϴ�.\r\n";
-	chat += "#b#L7#��Ÿ�� ������ ���޹ްڽ��ϴ�.\r\n";
-	chat += "#b#L9#�밡���� �ִ� ������ ����ڽ��ϴ� .\r\n";
-	//chat += "#b#L8#���̵���ų�� ��ι��ڽ��ϴ�.\r\n";
+	var chat =  "#r #fs13##fn나눔고딕 Extrabold#AURORA ONLINE 도움 시스템입니다\r\n";
+	chat += "#r  #fs13##fn나눔고딕 Extrabold#각종 편리한 기능을 이용해보세요\r\n";
+	chat += "#fn 굴림체##b#L1#오로라온라인의 뉴비지원을 받겠습니다.\r\n";
+	chat += "#b#L2#오로라온라인의 출석체크를 하겠습니다.\r\n";
+	chat += "#b#L4#무료 검색캐시를 이용하겠습니다.\r\n";
+	chat += "#b#L5#오로라온라인 뽑기샵을 이용하겠습니다.\r\n";
+	chat += "#b#L6#오로라온라인 돌림판을 이용하겠습니다.\r\n";
+	chat += "#b#L7#핫타임 보상을 지급받겠습니다.\r\n";
+	chat += "#b#L9#대가리에 있는 전구를 지우겠습니다 .\r\n";
+	//chat += "#b#L8#라이딩스킬을 모두배우겠습니다.\r\n";
          
 	cm.sendSimpleS(chat,2);
 

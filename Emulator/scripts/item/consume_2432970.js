@@ -20,9 +20,9 @@ function action(mode, type, selection) {
     }
     
     if (status == 0) {
-            ¸í¼ºÄ¡·£´ı = Randomizer.rand(100, 500);
-            cm.getPlayer().addInnerExp(¸í¼ºÄ¡·£´ı);
-            cm.getPlayer().message("¸í¼ºÄ¡°¡ "+inner+"¸¸Å­ »ó½Â ÇÏ¿´½À´Ï´Ù.");
+            ëª…ì„±ì¹˜ëœë¤ = Randomizer.rand(100, 500);
+            cm.getPlayer().addInnerExp(ëª…ì„±ì¹˜ëœë¤);
+            cm.getPlayer().message("ëª…ì„±ì¹˜ê°€ "+inner+"ë§Œí¼ ìƒìŠ¹ í•˜ì˜€ìŠµë‹ˆë‹¤.");
             cm.gainItem(2432970, -1);
  cm.dispose();
     }

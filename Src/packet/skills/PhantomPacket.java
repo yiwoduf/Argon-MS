@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -42,10 +42,10 @@ public class PhantomPacket {
         packet.writeShort(SendPacketOpcode.STEEL_SKILL.getValue());
         packet.write(1);
         
-        /* 0 : µî·Ï
-         * 1 : ½ÇÆĞ
+        /* 0 : ë“±ë¡
+         * 1 : ì‹¤íŒ¨
          * 2 : ?
-         * 3 : »èÁ¦ */
+         * 3 : ì‚­ì œ */
         
         if (!success) {
             packet.write(1);
@@ -59,7 +59,7 @@ public class PhantomPacket {
                 packet.writeInt(sse.getSlot() - 1);
                 packet.writeInt(sse.getSkillId());
                 packet.writeInt(sse.getSkillLevel());
-                packet.writeInt(0); //¸¶½ºÅÍ·¹º§?
+                packet.writeInt(0); //ë§ˆìŠ¤í„°ë ˆë²¨?
             }
         }
       
@@ -103,7 +103,7 @@ public class PhantomPacket {
         packet.write(v1 ? 1 : 0);
         packet.write(equipped ? 1 : 0);
         packet.writeInt(baseSkillId);
-        if (equipped) { //ÀåÂø
+        if (equipped) { //ì¥ì°©
             packet.writeInt(skillId);
         }
         return packet.getPacket();

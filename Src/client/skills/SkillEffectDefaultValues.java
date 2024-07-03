@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -34,7 +34,7 @@ public class SkillEffectDefaultValues {
         defvalues.put("mobCount", 1);
         defvalues.put("slotCount", 0);
         defvalues.put("type", 0);
-        defvalues.put("onActive", -1); //¸®Â÷Áö
+        defvalues.put("onActive", -1); //ë¦¬ì°¨ì§€
     }
     
     public static int getDef(String key) {

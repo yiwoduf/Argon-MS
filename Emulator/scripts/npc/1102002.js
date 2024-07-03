@@ -3,19 +3,19 @@
 
 /*
 
-	* ´Ü¹®¿£ÇÇ½Ã ÀÚµ¿Á¦ÀÛ ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¸¸µé¾îÁø ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	* ë‹¨ë¬¸ì—”í”¼ì‹œ ìžë™ì œìž‘ ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ë§Œë“¤ì–´ì§„ ìŠ¤í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤.
 
 	* (Guardian Project Development Source Script)
 
-	ÁëÂ» ¿¡ ÀÇÇØ ¸¸µé¾î Á³½À´Ï´Ù.
+	ì¥°ì¨© ì— ì˜í•´ ë§Œë“¤ì–´ ì¡ŒìŠµë‹ˆë‹¤.
 
-	¿£ÇÇ½Ã¾ÆÀÌµð : 9901003
+	ì—”í”¼ì‹œì•„ì´ë”” : 9901003
 
-	¿£ÇÇ½Ã ÀÌ¸§ : MISSINGNO
+	ì—”í”¼ì‹œ ì´ë¦„ : MISSINGNO
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê :  : ¸ÅÁ÷Å¸¿î (100050001)
+	ì—”í”¼ì‹œê°€ ìžˆëŠ” ë§µ :  : ë§¤ì§íƒ€ìš´ (100050001)
 
-	¿£ÇÇ½Ã ¼³¸í : MISSINGNO
+	ì—”í”¼ì‹œ ì„¤ëª… : MISSINGNO
 
 
 */
@@ -39,26 +39,26 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-	var chat = "#e(±ÜÀû ±ÜÀû)#n »ç°í½ÍÀº ¶óÀÌµùÀ» ¼±ÅÃÇØºÁ";
+	var chat = "#e(ê¸ì  ê¸ì )#n ì‚¬ê³ ì‹¶ì€ ë¼ì´ë”©ì„ ì„ íƒí•´ë´";
 	for (var i = 0; i < skillid.length; i ++) {
-		chat += "\r\n#L" + i + "##b#s" + skillid[i] + "# #q" + skillid[i] + "# : #r#e10,000,000 ¸Þ¼Ò#n#l";
+		chat += "\r\n#L" + i + "##b#s" + skillid[i] + "# #q" + skillid[i] + "# : #r#e10,000,000 ë©”ì†Œ#n#l";
 	}
 	cm.sendSimple(chat);
     } else if (status == 1) {
 	sel = selection;
-	cm.sendYesNo("Á¤¸»·Î #b#q" + skillid[sel] + "##k(À»)¸¦ ±¸¸Å ÇÏ°Ú¾î?");
+	cm.sendYesNo("ì •ë§ë¡œ #b#q" + skillid[sel] + "##k(ì„)ë¥¼ êµ¬ë§¤ í•˜ê² ì–´?");
     } else if (status == 2) {
 	if (cm.getMeso() < 1000000000000) {
-		cm.sendOk("¶óÀÌµùÀ» »ç±â¿¡´Â ¸Þ¼Ò°¡ ºÎÁ·ÇÏ´Ù°í »ý°¢ÇÏÁö ¾Ê¾Æ?");
+		cm.sendOk("ë¼ì´ë”©ì„ ì‚¬ê¸°ì—ëŠ” ë©”ì†Œê°€ ë¶€ì¡±í•˜ë‹¤ê³  ìƒê°í•˜ì§€ ì•Šì•„?");
 		cm.dispose();
 		return;
 	}
 	if (cm.getPlayer().getSkillLevel(skillid[sel]) > 0) {
-		cm.sendOk("ÀÌ¹Ì º¸À¯ÁßÀÎ ¶óÀÌµùÀº Áßº¹±¸¸Å°¡ ºÒ°¡´ÉÇØ");
+		cm.sendOk("ì´ë¯¸ ë³´ìœ ì¤‘ì¸ ë¼ì´ë”©ì€ ì¤‘ë³µêµ¬ë§¤ê°€ ë¶ˆê°€ëŠ¥í•´");
 		cm.dispose();
 		return;
 	}
-	cm.sendOk("½ºÅ³Ã¢¿¡ #b#q" + skillid[sel] + "##k(À»)¸¦ Áö±ÞÇßÀ¸´Ï È®ÀÎÇØºÁ");
+	cm.sendOk("ìŠ¤í‚¬ì°½ì— #b#q" + skillid[sel] + "##k(ì„)ë¥¼ ì§€ê¸‰í–ˆìœ¼ë‹ˆ í™•ì¸í•´ë´");
 	cm.teachSkill(skillid[sel],1,1);
 	cm.gainMeso(-10000000);
 	cm.dispose();

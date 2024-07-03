@@ -3,19 +3,19 @@
 
 /*
 
-	* �ܹ����ǽ� �ڵ����� ��ũ��Ʈ�� ���� ������� ��ũ��Ʈ �Դϴ�.
+	* 단문엔피시 자동제작 스크립트를 통해 만들어진 스크립트 입니다.
 
 	* (Guardian Project Development Source Script)
 
-	Ǯ��� �� ���� ����� �����ϴ�.
+	풀기용 에 의해 만들어 졌습니다.
 
-	���ǽþ��̵� : 9050006
+	엔피시아이디 : 9050006
 
-	���ǽ� �̸� : ��ȯ�� �Ǳ׹�
+	엔피시 이름 : 소환수 피그미
 
-	���ǽð� �ִ� �� : ���罺Ʈ��Ʈ : �������� ���� (109090204)
+	엔피시가 있는 맵 : 히든스트리트 : 늑대진영 대기실 (109090204)
 
-	���ǽ� ���� : MISSINGNO
+	엔피시 설명 : MISSINGNO
 
 
 */
@@ -41,7 +41,7 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        cm.sendOk("ĳ��->��õ��->SMī������ �����ֽø� �����ϰٽ��ϴ�.");
+        cm.sendOk("캐샵->추천인->SM카이져를 적어주시면 감사하겟습니다.");
         cm.dispose();
         return;
     }

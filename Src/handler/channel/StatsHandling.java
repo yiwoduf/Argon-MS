@@ -170,7 +170,7 @@ public class StatsHandling {
         int sid = skillid;
         if (sid == 80001044 || sid == 80001137 || sid == 80001144 || (sid >= 80001000 && sid <= 80001033)
                 || (sid >= 80001037 && sid <= 80001039) || (sid >= 80001082 && sid <= 80001090)) {
-            chr.dropMessage(1, "ÀÌ ½ºÅ³Àº ¿Ã¸± ¼ö ¾ø½À´Ï´Ù.");
+            chr.dropMessage(1, "ì´ ìŠ¤í‚¬ì€ ì˜¬ë¦´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
             chr.ea();
             return;
         }

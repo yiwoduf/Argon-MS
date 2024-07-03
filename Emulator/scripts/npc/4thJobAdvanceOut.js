@@ -3,15 +3,15 @@
 
 /*
 
-	���� KMS �� �ҽ��� ��ũ��Ʈ �Դϴ�.
+	오딘 KMS 팀 소스의 스크립트 입니다.
 
-	���ǽþ��̵� : 4thJobAdvanceOut
+	엔피시아이디 : 4thJobAdvanceOut
 	
-	���ǽ� �̸� :
+	엔피시 이름 :
 
-	���ǽð� �ִ� �� : 
+	엔피시가 있는 맵 : 
 
-	���ǽ� ���� : 
+	엔피시 설명 : 
 
 
 */
@@ -35,7 +35,7 @@ function action(mode, type, selection) {
     
     if (status == 0) {
         if (cm.getEventInstance() != null) {
-            cm.sendYesNo("���� �̰����� �����ðڽ��ϱ�? �̰����� ������ ó������ �ٽ� �����ؾ� �մϴ�.");
+            cm.sendYesNo("정말 이곳에서 나가시겠습니까? 이곳에서 나가면 처음부터 다시 시작해야 합니다.");
         } else {
             cm.warp(100000000);
             cm.dispose();

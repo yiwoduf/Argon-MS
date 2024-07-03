@@ -4,7 +4,7 @@
 var items = new Array(new Array(1190100,1,100), new Array(1190101,1,100), new Array(1190300,1,100), new Array(1190301,1,100), new Array(1190302,1,100), new Array(1190400,1,100));
 
 function start() {
- var txt = "¾î¶² ¿¥ºí·½À» ±¸¸ÅÇÏ½Ã°Ú½À´Ï±î?  (°³´ç1000¸¸¿ø)\r\n";
+ var txt = "ì–´ë–¤ ì— ë¸”ë ˜ì„ êµ¬ë§¤í•˜ì‹œê² ìŠµë‹ˆê¹Œ?  (ê°œë‹¹1000ë§Œì›)\r\n";
  for (var i = 0; i < items.length; i++) {
  txt += "#L"+i+"# #i"+items[i][0]+"# #z"+items[i][0]+"# (x "+items[i][1]+")\r\n";
  }
@@ -16,9 +16,9 @@ function action(m,t,s) {
  if (cm.getMeso() >= meso) {
  cm.gainMeso(-meso);
  cm.gainItem(items[s][0], items[s][1]);
- cm.sendOk("¼º°øÀûÀ¸·Î ±¸¸ÅÇÏ¿´½À´Ï´Ù.");
+ cm.sendOk("ì„±ê³µì ìœ¼ë¡œ êµ¬ë§¤í•˜ì˜€ìŠµë‹ˆë‹¤.");
  } else {
- cm.sendOk("¸Ş¼Ò°¡ ºÎÁ·ÇÕ´Ï´Ù.\r\n#b(¾ÆÀÌÅÛ °¡°İ : "+meso+")");
+ cm.sendOk("ë©”ì†Œê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.\r\n#b(ì•„ì´í…œ ê°€ê²© : "+meso+")");
  }
  cm.dispose();
 }

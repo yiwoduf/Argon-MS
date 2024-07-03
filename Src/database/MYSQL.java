@@ -57,7 +57,7 @@ public class MYSQL {
     private static String databaseProductVersion;
 
     /**
-     * µ¥ÀÌÅÍº£ÀÌ½º ¿¬°á ÇÔ¼ö. Apache commonÀÇ dbcp api¸¦ »ç¿ëÇÏ¿© Ä¿³Ø¼Ç Ç®À» »ı¼º.
+     * ë°ì´í„°ë² ì´ìŠ¤ ì—°ê²° í•¨ìˆ˜. Apache commonì˜ dbcp apië¥¼ ì‚¬ìš©í•˜ì—¬ ì»¤ë„¥ì…˜ í’€ì„ ìƒì„±.
      */
     public synchronized static void init() {
         if (dataSource != null) {

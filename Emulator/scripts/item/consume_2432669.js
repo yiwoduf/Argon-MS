@@ -15,8 +15,8 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-            cm.gainSponserItem(1102873,'[¿¡ÇÃ]',500,100,0);
-            cm.gainSponserItem(1115124,'[¿¡ÇÃ]',500,100,0);
+            cm.gainSponserItem(1102873,'[ì—í”Œ]',500,100,0);
+            cm.gainSponserItem(1115124,'[ì—í”Œ]',500,100,0);
 	    cm.gainItem(4001832, 1000);
             cm.gainMeso(100000000);
 	    cm.gainItem(2432669,-1);

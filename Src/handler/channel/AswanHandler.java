@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -20,7 +20,7 @@ import server.maps.MapleMap;
 
 /**
  *
- * @author 4Â÷¿ø
+ * @author 4ì°¨ì›
  */
 public class AswanHandler {
     private static EventInstanceManager eim;
@@ -31,7 +31,7 @@ public class AswanHandler {
     
     public static void EnterAswanField(final ReadingMaple rm, final MapleClient c) {
         em = c.getChannelServer().getEventSM().getEventManager("AswanEvent");
-        byte type; // Á¡·É=0 , °ø°İ=1, ¹æ¾î=2, º¸±Ş=3
+        byte type; // ì ë ¹=0 , ê³µê²©=1, ë°©ì–´=2, ë³´ê¸‰=3
         byte mode; // EASY=0, NORMAL=1, HARD=2, HELL=3
         byte count; // SOLO=0, PARTY=1
         type = rm.readByte();
@@ -40,7 +40,7 @@ public class AswanHandler {
         //final List<Integer> maps = new ArrayList<Integer>();
         
         switch (type) {
-            case 0: // Á¡·É
+            case 0: // ì ë ¹
                 if (mode == 0) { // EASY
                     if (count == 0) { // SOLO
                         eim = em.readyInstance();
@@ -53,42 +53,42 @@ public class AswanHandler {
                         eim.registerPlayer(c.getPlayer());
                         //prepareAswanMob(c, 955000100, eim);
                     } else { // PARTY
-                        c.send(MainPacketCreator.getGMText(7, "ÁË¼ÛÇÕ´Ï´Ù. ÇöÀç ±¸ÇöÁßÀÔ´Ï´Ù."));
+                        c.send(MainPacketCreator.getGMText(7, "ì£„ì†¡í•©ë‹ˆë‹¤. í˜„ì¬ êµ¬í˜„ì¤‘ì…ë‹ˆë‹¤."));
                         c.send(MainPacketCreator.resetActions());
                     }
                 } else if (mode == 1) { // NORMAL
                     if (count == 0) { // SOLO
-                        c.send(MainPacketCreator.getGMText(7, "ÁË¼ÛÇÕ´Ï´Ù. ÇöÀç ±¸ÇöÁßÀÔ´Ï´Ù."));
+                        c.send(MainPacketCreator.getGMText(7, "ì£„ì†¡í•©ë‹ˆë‹¤. í˜„ì¬ êµ¬í˜„ì¤‘ì…ë‹ˆë‹¤."));
                         c.send(MainPacketCreator.resetActions());
                     } else { // PARTY
-                        c.send(MainPacketCreator.getGMText(7, "ÁË¼ÛÇÕ´Ï´Ù. ÇöÀç ±¸ÇöÁßÀÔ´Ï´Ù."));
+                        c.send(MainPacketCreator.getGMText(7, "ì£„ì†¡í•©ë‹ˆë‹¤. í˜„ì¬ êµ¬í˜„ì¤‘ì…ë‹ˆë‹¤."));
                         c.send(MainPacketCreator.resetActions());
                     }
                 } else if (mode == 2) { // HARD
                     if (count == 0) { // SOLO
-                        c.send(MainPacketCreator.getGMText(7, "ÁË¼ÛÇÕ´Ï´Ù. ÇöÀç ±¸ÇöÁßÀÔ´Ï´Ù."));
+                        c.send(MainPacketCreator.getGMText(7, "ì£„ì†¡í•©ë‹ˆë‹¤. í˜„ì¬ êµ¬í˜„ì¤‘ì…ë‹ˆë‹¤."));
                         c.send(MainPacketCreator.resetActions());
                     } else { // PARTY
-                        c.send(MainPacketCreator.getGMText(7, "ÁË¼ÛÇÕ´Ï´Ù. ÇöÀç ±¸ÇöÁßÀÔ´Ï´Ù."));
+                        c.send(MainPacketCreator.getGMText(7, "ì£„ì†¡í•©ë‹ˆë‹¤. í˜„ì¬ êµ¬í˜„ì¤‘ì…ë‹ˆë‹¤."));
                         c.send(MainPacketCreator.resetActions());
                     }
                 } else if (mode == 3) { // HELL
                     if (count == 0) { // SOLO
-                        c.send(MainPacketCreator.getGMText(7, "ÁË¼ÛÇÕ´Ï´Ù. ÇöÀç ±¸ÇöÁßÀÔ´Ï´Ù."));
+                        c.send(MainPacketCreator.getGMText(7, "ì£„ì†¡í•©ë‹ˆë‹¤. í˜„ì¬ êµ¬í˜„ì¤‘ì…ë‹ˆë‹¤."));
                         c.send(MainPacketCreator.resetActions());
                     } else { // PARTY
-                        c.send(MainPacketCreator.getGMText(7, "ÁË¼ÛÇÕ´Ï´Ù. ÇöÀç ±¸ÇöÁßÀÔ´Ï´Ù."));
+                        c.send(MainPacketCreator.getGMText(7, "ì£„ì†¡í•©ë‹ˆë‹¤. í˜„ì¬ êµ¬í˜„ì¤‘ì…ë‹ˆë‹¤."));
                         c.send(MainPacketCreator.resetActions());
                     }
                 }
                 break;
-            case 1: // °ø°İ
+            case 1: // ê³µê²©
                 break;
-            case 2: // ¹æ¾î
+            case 2: // ë°©ì–´
                 break;
-            case 3: // º¸±Ş
+            case 3: // ë³´ê¸‰
                 break;
-            default: // ±× ¿ÜÀÇ °æ¿ì
+            default: // ê·¸ ì™¸ì˜ ê²½ìš°
                 break;
         }
     }

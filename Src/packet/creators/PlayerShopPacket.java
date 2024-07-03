@@ -1,10 +1,10 @@
 /*
  * ArcStory Project
- * ÃÖÁÖ¿ø sch2307@naver.com
- * ÀÌÁØ junny_adm@naver.com
- * ¿ìÁöÈÆ raccoonfox69@gmail.com
- * °­Á¤±Ô ku3135@nate.com
- * ±èÁøÈ« designer@inerve.kr
+ * ìµœì£¼ì› sch2307@naver.com
+ * ì´ì¤€ junny_adm@naver.com
+ * ìš°ì§€í›ˆ raccoonfox69@gmail.com
+ * ê°•ì •ê·œ ku3135@nate.com
+ * ê¹€ì§„í™ designer@inerve.kr
  */
 package packet.creators;
 
@@ -104,7 +104,7 @@ public class PlayerShopPacket {
         packet.write(7);
         packet.writeShort(merch.getVisitorSlot(chr));
         packet.writeInt(merch.getItemId());
-        packet.writeMapleAsciiString("°í¿ë»óÀÎ");
+        packet.writeMapleAsciiString("ê³ ìš©ìƒì¸");
         for (final Pair<Byte, MapleCharacter> storechr : merch.getVisitors()) {
             packet.write(storechr.left);
             PacketProvider.addPlayerLooks(packet, storechr.right, false);
@@ -268,7 +268,7 @@ public class PlayerShopPacket {
         final WritingPacket packet = new WritingPacket();
 
         packet.writeShort(SendPacketOpcode.PLAYER_INTERACTION.getValue());
-        packet.write(28); //1.2.220+ ÆĞÅ¶ ¼öÁ¤¿ä¸Á.
+        packet.write(28); //1.2.220+ íŒ¨í‚· ìˆ˜ì •ìš”ë§.
         packet.write(slot);
         return packet.getPacket();
     }

@@ -1,4 +1,4 @@
-/* È­ÀÌÆ®¸Å´ÏÀúÀÇ ½ºÅ©¸³Æ® */
+/* í™”ì´íŠ¸ë§¤ë‹ˆì €ì˜ ìŠ¤í¬ë¦½íŠ¸ */
 
 importPackage(java.lang);
 importPackage(Packages.handling.world);
@@ -26,21 +26,21 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-                var chat= "#fn¸¼Àº°íµñ##e#r¿À·Î¶ó¿Â¶óÀÎ º¸½ºÀå½Å±¸»Ì±âÀÔ´Ï´Ù.\r\n#rº¸½ºÀå½Å±¸ »Ì±â#k¿¡¼­´Â #b¿©·¯°¡Áö ¾ó±¼Àå½Ä ¾ÆÀÌÅÛ ÀÌ ³ª¿É´Ï´Ù. \r\n\r\n#r#e»Ì±â ºñ¿ë#n#kÀ¸·Î´Â ÈçÇÑ»ç³ÉÄÚÀÎ 30000°³°¡ ÇÊ¿äÇÕ´Ï´Ù.\r\n";
-	    chat += "#fn¸¼Àº°íµñ##L0##bº¸½ºÀå½Å±¸¸¦ »Ì°Ú½À´Ï´Ù.#k#n\r\n#L2##r¿©±â¿¡´Â ¹«½¼¾ÆÀÌÅÛÀÌ ³ª¿À³ª¿ä?";
+                var chat= "#fnë§‘ì€ê³ ë”•##e#rì˜¤ë¡œë¼ì˜¨ë¼ì¸ ë³´ìŠ¤ì¥ì‹ êµ¬ë½‘ê¸°ì…ë‹ˆë‹¤.\r\n#rë³´ìŠ¤ì¥ì‹ êµ¬ ë½‘ê¸°#kì—ì„œëŠ” #bì—¬ëŸ¬ê°€ì§€ ì–¼êµ´ì¥ì‹ ì•„ì´í…œ ì´ ë‚˜ì˜µë‹ˆë‹¤. \r\n\r\n#r#eë½‘ê¸° ë¹„ìš©#n#kìœ¼ë¡œëŠ” í”í•œì‚¬ëƒ¥ì½”ì¸ 30000ê°œê°€ í•„ìš”í•©ë‹ˆë‹¤.\r\n";
+	    chat += "#fnë§‘ì€ê³ ë”•##L0##bë³´ìŠ¤ì¥ì‹ êµ¬ë¥¼ ë½‘ê² ìŠµë‹ˆë‹¤.#k#n\r\n#L2##rì—¬ê¸°ì—ëŠ” ë¬´ìŠ¨ì•„ì´í…œì´ ë‚˜ì˜¤ë‚˜ìš”?";
 	    cm.sendSimple(chat);
 		  } else if ( selection == 2) { 
 	cm.dispose();
 	cm.openNpc(2000);
 	} else if (selection == 0) {
 	if (cm.haveItem(4310153, 30000)) {
-			cm.sendOk("Àå½Å±¸ »Ì±â¿¡¼­ ¾Æ·¡ÀÇ ¾ÆÀÌÅÛÀÌ ³ª¿Ô½À´Ï´Ù.\r\n #rÀåºñÄ­#k#l È®ÀÎºÎÅ¹µå¸³´Ï´Ù.");
-//			WorldBroadcasting.broadcast(MainPacketCreator.serverNotice(5, cm.getPlayer().getName() + " ´ÔÀÌ Àå½Å±¸ »Ì±â¸¦ ÇÏ¼Ì½À´Ï´Ù."));
+			cm.sendOk("ì¥ì‹ êµ¬ ë½‘ê¸°ì—ì„œ ì•„ë˜ì˜ ì•„ì´í…œì´ ë‚˜ì™”ìŠµë‹ˆë‹¤.\r\n #rì¥ë¹„ì¹¸#k#l í™•ì¸ë¶€íƒë“œë¦½ë‹ˆë‹¤.");
+//			WorldBroadcasting.broadcast(MainPacketCreator.serverNotice(5, cm.getPlayer().getName() + " ë‹˜ì´ ì¥ì‹ êµ¬ ë½‘ê¸°ë¥¼ í•˜ì…¨ìŠµë‹ˆë‹¤."));
 			makeSponserItem(items[Math.floor(Math.random() * items.length)], 100,50,0);
                 	cm.gainItem(4310153, -30000);
                 	cm.dispose();
 	} else {
-		cm.sendOk("ÈçÇÑ»ç³ÉÄÚÀÎÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+		cm.sendOk("í”í•œì‚¬ëƒ¥ì½”ì¸ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		cm.dispose();
 	}
         }
@@ -57,7 +57,7 @@ function action(mode, type, selection) {
 	item.setWatk(atk);
 	item.setMatk(atk);
 	
-	item.setOwner("[»Ì±â¼ÅÆ²]");
+	item.setOwner("[ë½‘ê¸°ì…”í‹€]");
 	Packages.server.items.InventoryManipulator.addFromDrop(cm.getC(),item,false);
 }
     

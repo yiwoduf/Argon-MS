@@ -36,7 +36,7 @@ function action(mode, type, selection) {
             status--;
         if (status == 0) {
 		
-		cm.sendYesNo("¹è¿¡¼­ ³»·Á¼­ Á¤°ÅÀåÀ¸·Î µ¹¾Æ°¡½Ã°Ú½À´Ï±î?");
+		cm.sendYesNo("ë°°ì—ì„œ ë‚´ë ¤ì„œ ì •ê±°ì¥ìœ¼ë¡œ ëŒì•„ê°€ì‹œê² ìŠµë‹ˆê¹Œ?");
 
 		} else { 
 			cm.warp(200000121);

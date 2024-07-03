@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -33,7 +33,7 @@ public class SteelSkillEntry implements Serializable {
     
     public void setSlot(int slot) {
         if (slot < 1 && slot > 4) {
-            throw new RuntimeException("[¿À·ù] Àß¸øµÈ ½½·ÔÀÌ ¼³Á¤µÇ¾ú½À´Ï´Ù.");
+            throw new RuntimeException("[ì˜¤ë¥˜] ì˜ëª»ëœ ìŠ¬ë¡¯ì´ ì„¤ì •ë˜ì—ˆìŠµë‹ˆë‹¤.");
         }
         this.slot = slot;
     }
@@ -108,7 +108,7 @@ public class SteelSkillEntry implements Serializable {
         } else if (baseSkillId == 24121001) {
             return 4;
         }
-        System.err.println("[¿À·ù] ½ºÆ¿ ½ºÅ³ Á¤º¸ Á÷¾÷°è»ê ½ÇÆĞ. º£ÀÌ½º ½ºÅ³¾ÆÀÌµğ : " + baseSkillId);
+        System.err.println("[ì˜¤ë¥˜] ìŠ¤í‹¸ ìŠ¤í‚¬ ì •ë³´ ì§ì—…ê³„ì‚° ì‹¤íŒ¨. ë² ì´ìŠ¤ ìŠ¤í‚¬ì•„ì´ë”” : " + baseSkillId);
         return 0;
     }
 }

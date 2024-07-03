@@ -19,7 +19,7 @@ function action(mode, type, selection) {
         if (cm.getPlayer().isGM()) {
             cm.getPlayer().gainGP(0);
         }
-        var chat = "°­ÇÔ¿¡´Â ³¡ÀÌ ÀÖ´Ù°í »ı°¢ÇÏ½Ã³ª¿ä?... Àü ±×·¸°Ô »ı°¢ÇÏÁö ¾Ê½À´Ï´Ù.\r\n\r\n#e#r<SPECIAL QUEST È¯»ı>\r\n#b#n#L0#È¯»ıÀ» ÇÏ°í½Í½À´Ï´Ù.#l #L0##gÁ÷¾÷ º¯°æÇÏ±â#l #r#L2##r´ëÈ­ ±×¸¸ÇÏ±â#l";
+        var chat = "ê°•í•¨ì—ëŠ” ëì´ ìˆë‹¤ê³  ìƒê°í•˜ì‹œë‚˜ìš”?... ì „ ê·¸ë ‡ê²Œ ìƒê°í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.\r\n\r\n#e#r<SPECIAL QUEST í™˜ìƒ>\r\n#b#n#L0#í™˜ìƒì„ í•˜ê³ ì‹¶ìŠµë‹ˆë‹¤.#l #L0##gì§ì—… ë³€ê²½í•˜ê¸°#l #r#L2##rëŒ€í™” ê·¸ë§Œí•˜ê¸°#l";
         cm.sendSpirit(chat, true, 0);
     } else if (status == 1) {
         sel = selection;
@@ -29,19 +29,19 @@ function action(mode, type, selection) {
                 limit = 220;
             }
             if (cm.getPlayer().getLevel() < limit) {
-                var text = limit == 220 ? " ·¹º§ 220ÀÌ»ó °¡´ÉÇÕ´Ï´Ù..\r\n#L0##r´ëÈ­ ±×¸¸ÇÏ±â#l" : "·¹º§ 220 ÀÌÈÄ È¯»ı °¡´ÉÇÕ´Ï´Ù\r\n#L0##r´ëÈ­ ±×¸¸ÇÏ±â#l";
+                var text = limit == 220 ? " ë ˆë²¨ 220ì´ìƒ ê°€ëŠ¥í•©ë‹ˆë‹¤..\r\n#L0##rëŒ€í™” ê·¸ë§Œí•˜ê¸°#l" : "ë ˆë²¨ 220 ì´í›„ í™˜ìƒ ê°€ëŠ¥í•©ë‹ˆë‹¤\r\n#L0##rëŒ€í™” ê·¸ë§Œí•˜ê¸°#l";
                 cm.sendSpirit(text, true, 0);
                 cm.dispose();
                 return;
             }
-            cm.sendSpirit("È¯»ıÀ» ÇÏ°ÔµÇ¸é ÇöÀçÀÇ »óÅÂ ±×´ë·Î ·¹º§ÀÌ #r160#k#lÀ¸·Î ³»·Á°¡°ÔµË´Ï´Ù. Á¤¸»·Î È¯»ıÀ» ÇÏ½Ã°Ú½À´Ï±î?\r\n#L0##b³×#l\r\n#L1##r¾Æ´Ï¿À#l", true, 0);
+            cm.sendSpirit("í™˜ìƒì„ í•˜ê²Œë˜ë©´ í˜„ì¬ì˜ ìƒíƒœ ê·¸ëŒ€ë¡œ ë ˆë²¨ì´ #r160#k#lìœ¼ë¡œ ë‚´ë ¤ê°€ê²Œë©ë‹ˆë‹¤. ì •ë§ë¡œ í™˜ìƒì„ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\r\n#L0##bë„¤#l\r\n#L1##rì•„ë‹ˆì˜¤#l", true, 0);
         } else if (selection == 1) {
             var jobi = getJI(cm.getPlayer().getJob());
             if (jobi == -1) {
-                cm.sendSpirit("º¯°æ °¡´ÉÇÑ Á÷¾÷À» Ã£À»¼ö ¾ø½À´Ï´Ù.\r\n#L0##r´ëÈ­ ±×¸¸ÇÏ±â#l", true, 0);
+                cm.sendSpirit("ë³€ê²½ ê°€ëŠ¥í•œ ì§ì—…ì„ ì°¾ì„ìˆ˜ ì—†ìŠµë‹ˆë‹¤.\r\n#L0##rëŒ€í™” ê·¸ë§Œí•˜ê¸°#l", true, 0);
                 cm.dispose();
             }
-            var text = "Á÷¾÷À» º¯°æÇÏ±â À§ÇØ¼± È¯»ıÆ÷ÀÎÆ® #g10,000#kÆ÷ÀÎÆ®°¡ ÇÊ¿äÇÕ´Ï´Ù.\r\n#Cgray#º¸À¯ÁßÀÎ È¯»ı Æ÷ÀÎÆ® : " + cm.getPlayer().getGP() + "\r\n#kº¯°æÇÏ½Ç Á÷¾÷À» ¼±ÅÃÇØ ÁÖ¼¼¿ä.(º¯»ıÀ¸·Î ÀÎÇÑ ¿À·ù´Â À¯Àú Ã¥ÀÓ ÀÔ´Ï´Ù.)\r\n#fs15#";
+            var text = "ì§ì—…ì„ ë³€ê²½í•˜ê¸° ìœ„í•´ì„  í™˜ìƒí¬ì¸íŠ¸ #g10,000#kí¬ì¸íŠ¸ê°€ í•„ìš”í•©ë‹ˆë‹¤.\r\n#Cgray#ë³´ìœ ì¤‘ì¸ í™˜ìƒ í¬ì¸íŠ¸ : " + cm.getPlayer().getGP() + "\r\n#kë³€ê²½í•˜ì‹¤ ì§ì—…ì„ ì„ íƒí•´ ì£¼ì„¸ìš”.(ë³€ìƒìœ¼ë¡œ ì¸í•œ ì˜¤ë¥˜ëŠ” ìœ ì € ì±…ì„ ì…ë‹ˆë‹¤.)\r\n#fs15#";
             for (var i = 0; i < jobs[jobi].length; i++) {
                 if (jobs[jobi][i] == cm.getPlayer().getJob()) {
                     continue;
@@ -49,7 +49,7 @@ function action(mode, type, selection) {
                 getPlayerJobs(jobs[jobi][i]);
                 text += "#L" + jobs[jobi][i] + "# #e#b" + job + "#n#l       ";
             }
-            text += "#L999##r ´ëÈ­ ±×¸¸ÇÏ±â#l";
+            text += "#L999##r ëŒ€í™” ê·¸ë§Œí•˜ê¸°#l";
             cm.sendSpirit(text, true, 0);
         } else if (selection == 2) {
             cm.dispose();
@@ -66,8 +66,8 @@ function action(mode, type, selection) {
             cm.getPlayer().levelUp();
 	    cm.getPlayer().setExp(0);
 	    cm.getPlayer().setAp(0);
-            cm.sendSpirit("#b" + cm.getPlayer().getReborns() + "#k¹øÂ° È¯»ıÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù. ÇöÀç º¸À¯ÁßÀÎ È¯»ı Æ÷ÀÎÆ®´Â #r" + (cm.getPlayer().getGP() - 200) + " + 100#k Æ÷ÀÎÆ® ÀÔ´Ï´Ù.\r\n#L0##b´ëÈ­ ±×¸¸ÇÏ±â#l", true, 0);
-            WorldBroadcasting.broadcastMessage(MainPacketCreator.getGMText(23, "[È¯»ı] " + cm.getPlayer().getName() + "´ÔÀÌ " + cm.getPlayer().getReborns() + "¹øÂ° È¯»ıÀ» ÇÏ¿´½À´Ï´Ù."));
+            cm.sendSpirit("#b" + cm.getPlayer().getReborns() + "#kë²ˆì§¸ í™˜ìƒì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤. í˜„ì¬ ë³´ìœ ì¤‘ì¸ í™˜ìƒ í¬ì¸íŠ¸ëŠ” #r" + (cm.getPlayer().getGP() - 200) + " + 100#k í¬ì¸íŠ¸ ì…ë‹ˆë‹¤.\r\n#L0##bëŒ€í™” ê·¸ë§Œí•˜ê¸°#l", true, 0);
+            WorldBroadcasting.broadcastMessage(MainPacketCreator.getGMText(23, "[í™˜ìƒ] " + cm.getPlayer().getName() + "ë‹˜ì´ " + cm.getPlayer().getReborns() + "ë²ˆì§¸ í™˜ìƒì„ í•˜ì˜€ìŠµë‹ˆë‹¤."));
             cm.dispose();
         } else if (sel == 1) {
             if (selection == 999) {
@@ -76,11 +76,11 @@ function action(mode, type, selection) {
             }
             jobsel = selection;
             getPlayerJobs(selection);
-            cm.sendSpirit("¼±ÅÃÇÏ½Å Á÷¾÷ #g" + job + "#k(À¸)·Î Á÷¾÷À» º¯°æ ÇÏ½Ã°Ú½À´Ï±î?\r\n#b#L0#¿¹#l\r\n#L1##rÅ¬¸¯½Ã Á÷¾÷º¯°æµË´Ï´Ù#l", true, 0);
+            cm.sendSpirit("ì„ íƒí•˜ì‹  ì§ì—… #g" + job + "#k(ìœ¼)ë¡œ ì§ì—…ì„ ë³€ê²½ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\r\n#b#L0#ì˜ˆ#l\r\n#L1##rí´ë¦­ì‹œ ì§ì—…ë³€ê²½ë©ë‹ˆë‹¤#l", true, 0);
         }
     } else if (status == 3) {
         if (cm.getPlayer().getGP() < 10000) {
-            cm.sendSpirit("Á÷¾÷À» º¯°æÇÏ±â À§ÇØ¼± È¯»ıÆ÷ÀÎÆ® #g10,000#kÆ÷ÀÎÆ®°¡ ÇÊ¿äÇÕ´Ï´Ù.\r\n#L0##r´ëÈ­ ±×¸¸ÇÏ±â#l", true, 0);
+            cm.sendSpirit("ì§ì—…ì„ ë³€ê²½í•˜ê¸° ìœ„í•´ì„  í™˜ìƒí¬ì¸íŠ¸ #g10,000#kí¬ì¸íŠ¸ê°€ í•„ìš”í•©ë‹ˆë‹¤.\r\n#L0##rëŒ€í™” ê·¸ë§Œí•˜ê¸°#l", true, 0);
             cm.dispose();
             return;
         }
@@ -172,7 +172,7 @@ function action(mode, type, selection) {
             cm.teachSkill(60011222, 1, 1);
         }
         cm.getPlayer().gainGP(-10000);
-        cm.sendSpirit("¼±ÅÃÇÏ½Å Á÷¾÷ #g" + job + "#k(À¸)·Î Á÷¾÷ÀÌ º¯°æ µÇ¾ú½À´Ï´Ù. #Cgray#@½ºÅ³¸¶½ºÅÍ#k¸í·É¾î·Î ½ºÅ³À» ¸¶½ºÅÍ ÇÒ¼ö ÀÖ½À´Ï´Ù.\r\n#L0##r´ëÈ­ ±×¸¸ÇÏ±â#l", true, 0);
+        cm.sendSpirit("ì„ íƒí•˜ì‹  ì§ì—… #g" + job + "#k(ìœ¼)ë¡œ ì§ì—…ì´ ë³€ê²½ ë˜ì—ˆìŠµë‹ˆë‹¤. #Cgray#@ìŠ¤í‚¬ë§ˆìŠ¤í„°#këª…ë ¹ì–´ë¡œ ìŠ¤í‚¬ì„ ë§ˆìŠ¤í„° í• ìˆ˜ ìˆìŠµë‹ˆë‹¤.\r\n#L0##rëŒ€í™” ê·¸ë§Œí•˜ê¸°#l", true, 0);
         cm.dispose();
     }
 }
@@ -194,189 +194,189 @@ function getPlayerJobs(i)
     switch (i)
     {
         case 100:
-            job = "°Ë»ç";
+            job = "ê²€ì‚¬";
             break;
         case 200:
-            job = "¸¶¹ı»ç";
+            job = "ë§ˆë²•ì‚¬";
             break;
         case 300:
-            job = "±Ã¼ö";
+            job = "ê¶ìˆ˜";
             break;
         case 400:
-            job = "µµÀû";
+            job = "ë„ì ";
             break;
         case 500:
-            job = "ÇØÀû";
+            job = "í•´ì ";
             break;
         case 110:
-            job = "ÆÄÀÌÅÍ";
+            job = "íŒŒì´í„°";
             break;
         case 111:
-            job = "Å©·ç¼¼ÀÌ´õ";
+            job = "í¬ë£¨ì„¸ì´ë”";
             break;
         case 112:
-            job = "È÷¾î·Î";
+            job = "íˆì–´ë¡œ";
             break;
         case 120:
-            job = "ÆäÀÌÁö";
+            job = "í˜ì´ì§€";
             break;
         case 121:
-            job = "³ªÀÌÆ®";
+            job = "ë‚˜ì´íŠ¸";
             break;
         case 122:
-            job = "ÆÈ¶óµò";
+            job = "íŒ”ë¼ë”˜";
             break;
         case 130:
-            job = "½ºÇÇ¾î¸Ç";
+            job = "ìŠ¤í”¼ì–´ë§¨";
             break;
         case 131:
-            job = "¹ö¼­Ä¿";
+            job = "ë²„ì„œì»¤";
             break;
         case 132:
-            job = "´ÙÅ©³ªÀÌÆ®";
+            job = "ë‹¤í¬ë‚˜ì´íŠ¸";
             break;
         case 210:
-            job = "À§ÀÚµå(ºÒ, µ¶)";
+            job = "ìœ„ìë“œ(ë¶ˆ, ë…)";
             break;
         case 211:
-            job = "¸ŞÀÌÁö(ºÒ, µ¶)";
+            job = "ë©”ì´ì§€(ë¶ˆ, ë…)";
             break;
         case 212:
-            job = "¾ÆÅ©¸ŞÀÌÁö(ºÒ,µ¶)";
+            job = "ì•„í¬ë©”ì´ì§€(ë¶ˆ,ë…)";
             break;
         case 220:
-            job = "À§ÀÚµå(½ã, Äİ)";
+            job = "ìœ„ìë“œ(ì¬, ì½œ)";
             break;
         case 221:
-            job = "¸ŞÀÌÁö(½ã, Äİ)";
+            job = "ë©”ì´ì§€(ì¬, ì½œ)";
             break;
         case 222:
-            job = "¾ÆÅ©¸ŞÀÌÁö(½ã,Äİ)";
+            job = "ì•„í¬ë©”ì´ì§€(ì¬,ì½œ)";
             break;
         case 230:
-            job = "Å¬·¹¸¯";
+            job = "í´ë ˆë¦­";
             break;
         case 231:
-            job = "ÇÁ¸®½ºÆ®";
+            job = "í”„ë¦¬ìŠ¤íŠ¸";
             break;
         case 232:
-            job = "ºñ¼ó";
+            job = "ë¹„ìˆ";
             break;
         case 310:
-            job = "ÇåÅÍ";
+            job = "í—Œí„°";
             break;
         case 311:
-            job = "·¹ÀÎÀú";
+            job = "ë ˆì¸ì €";
             break;
         case 312:
-            job = "º¸¿ì¸¶½ºÅÍ";
+            job = "ë³´ìš°ë§ˆìŠ¤í„°";
             break;
         case 320:
-            job = "»ç¼ö";
+            job = "ì‚¬ìˆ˜";
             break;
         case 321:
-            job = "Àú°İ¼ö";
+            job = "ì €ê²©ìˆ˜";
             break;
         case 322:
-            job = "½Å±Ã";
+            job = "ì‹ ê¶";
             break;
         case 410:
-            job = "¾î½Ø½Å";
+            job = "ì–´ìŒ”ì‹ ";
             break;
         case 411:
-            job = "Çã¹Ô";
+            job = "í—ˆë°‹";
             break;
         case 412:
-            job = "³ªÀÌÆ®·Îµå";
+            job = "ë‚˜ì´íŠ¸ë¡œë“œ";
             break;
         case 420:
-            job = "½ÃÇÁ";
+            job = "ì‹œí”„";
             break;
         case 421:
-            job = "½ÃÇÁ¸¶½ºÅÍ";
+            job = "ì‹œí”„ë§ˆìŠ¤í„°";
             break;
         case 422:
-            job = "¼¨µµ¾î";
+            job = "ì„€ë„ì–´";
             break;
         case 430:
-            job = "¼¼¹Ìµà¾î·¯";
+            job = "ì„¸ë¯¸ë“€ì–´ëŸ¬";
             break;
         case 431:
-            job = "µà¾î·¯";
+            job = "ë“€ì–´ëŸ¬";
             break;
         case 432:
-            job = "µà¾ó¸¶½ºÅÍ";
+            job = "ë“€ì–¼ë§ˆìŠ¤í„°";
             break;
         case 433:
-            job = "½½·¹¼Å";
+            job = "ìŠ¬ë ˆì…”";
             break;
         case 434:
-            job = "µà¾óºí·¹ÀÌ´õ";
+            job = "ë“€ì–¼ë¸”ë ˆì´ë”";
             break;
         case 510:
-            job = "ÀÎÆÄÀÌÅÍ";
+            job = "ì¸íŒŒì´í„°";
             break;
         case 511:
-            job = "¹öÄ¿´Ï¾î";
+            job = "ë²„ì»¤ë‹ˆì–´";
             break;
         case 512:
-            job = "¹ÙÀÌÆÛ";
+            job = "ë°”ì´í¼";
             break;
         case 520:
-            job = "°Ç½½¸µ°Å";
+            job = "ê±´ìŠ¬ë§ê±°";
             break;
         case 521:
-            job = "¹ßÅ°¸®";
+            job = "ë°œí‚¤ë¦¬";
             break;
         case 522:
-            job = "Ä¸Æ¾";
+            job = "ìº¡í‹´";
             break;
         case 530:
-            job = "Ä³³í½´ÅÍ";
+            job = "ìºë…¼ìŠˆí„°";
             break;
         case 531:
-            job = "Ä³³íºí·¡½ºÅÍ";
+            job = "ìºë…¼ë¸”ë˜ìŠ¤í„°";
             break;
         case 532:
-            job = "Ä³³í¸¶½ºÅÍ";
+            job = "ìºë…¼ë§ˆìŠ¤í„°";
             break;
 
         case 1100:
         case 1110:
         case 1111:
         case 1112:
-            job = "¼Ò¿ï¸¶½ºÅÍ";
+            job = "ì†Œìš¸ë§ˆìŠ¤í„°";
             break;
         case 1200:
         case 1210:
         case 1211:
         case 1212:
-            job = "ÇÃ·¹ÀÓÀ§ÀÚµå";
+            job = "í”Œë ˆì„ìœ„ìë“œ";
             break;
         case 1300:
         case 1310:
         case 1311:
         case 1312:
-            job = "À©µåºê·¹ÀÌÄ¿";
+            job = "ìœˆë“œë¸Œë ˆì´ì»¤";
             break;
         case 1400:
         case 1410:
         case 1411:
         case 1412:
-            job = "³ªÀÌÆ®¿öÄ¿";
+            job = "ë‚˜ì´íŠ¸ì›Œì»¤";
             break;
         case 1500:
         case 1510:
         case 1511:
         case 1512:
-            job = "½ºÆ®¶óÀÌÄ¿";
+            job = "ìŠ¤íŠ¸ë¼ì´ì»¤";
             break;
 
         case 2100:
         case 2110:
         case 2111:
         case 2112:
-            job = "¾Æ¶õ";
+            job = "ì•„ë€";
             break;
         case 2200:
         case 2210:
@@ -388,96 +388,96 @@ function getPlayerJobs(i)
         case 2216:
         case 2217:
         case 2218:
-            job = "¿¡¹İ";
+            job = "ì—ë°˜";
             break;
         case 2300:
         case 2310:
         case 2311:
         case 2312:
-            job = "¸Ş¸£¼¼µ¥½º";
+            job = "ë©”ë¥´ì„¸ë°ìŠ¤";
             break;
         case 2400:
         case 2410:
         case 2411:
         case 2412:
-            job = "ÆÒÅÒ";
+            job = "íŒ¬í…€";
             break;
         case 2700:
         case 2710:
         case 2711:
         case 2712:
-            job = "·ç¹Ì³Ê½º";
+            job = "ë£¨ë¯¸ë„ˆìŠ¤";
             break;
         case 2500:
         case 2510:
         case 2511:
         case 2512:
-            job = "Àº¿ù";
+            job = "ì€ì›”";
             break;
 
         case 3100:
         case 3110:
         case 3111:
         case 3112:
-            job = "µ¥¸ó½½·¹ÀÌ¾î";
+            job = "ë°ëª¬ìŠ¬ë ˆì´ì–´";
             break;
         case 3101:
         case 3120:
         case 3121:
         case 3122:
-            job = "µ¥¸ó¾îº¥Á®";
+            job = "ë°ëª¬ì–´ë²¤ì ¸";
             break;
         case 3200:
         case 3210:
         case 3211:
         case 3212:
-            job = "¹èÆ²¸ŞÀÌÁö";
+            job = "ë°°í‹€ë©”ì´ì§€";
             break;
         case 3300:
         case 3310:
         case 3311:
         case 3312:
-            job = "¿ÍÀÏµåÇåÅÍ";
+            job = "ì™€ì¼ë“œí—Œí„°";
             break;
         case 3500:
         case 3512:
         case 3511:
         case 3512:
-            job = "¸ŞÄ«´Ğ";
+            job = "ë©”ì¹´ë‹‰";
             break;
         case 3600:
         case 3610:
         case 3611:
         case 3612:
-            job = "Á¦³í";
+            job = "ì œë…¼";
             break;
         case 3700:
         case 3710:
         case 3711:
         case 3712:
-            job = "ºí·¡½ºÅÍ";
+            job = "ë¸”ë˜ìŠ¤í„°";
             break;
         case 6100:
         case 6110:
         case 6111:
         case 6112:
-            job = "Ä«ÀÌÀú";
+            job = "ì¹´ì´ì €";
             break;
         case 6500:
         case 6510:
         case 6511:
         case 6512:
-            job = "¿£Á©¸¯¹ö½ºÅÍ";
+            job = "ì—”ì ¤ë¦­ë²„ìŠ¤í„°";
             break;
 
         case 14200:
         case 14210:
         case 14211:
         case 14212:
-            job = "Å°³×½Ã½º";
+            job = "í‚¤ë„¤ì‹œìŠ¤";
             break;
         default:
-            "ÃÊº¸ÀÚ";
+            "ì´ˆë³´ì";
             break;
     }
 }

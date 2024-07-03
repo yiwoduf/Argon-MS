@@ -1,6 +1,6 @@
 /*
  
-  ÃÖ¼º¿ì
+  ìµœì„±ìš°
   sqlstyle...
 
 */
@@ -39,38 +39,38 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-            var chat= "#fn³ª´®°íµñ EXtrabold#  ¾È³çÇÏ¼¼¿ä. Àú´Â #bAURORA ONLINE#k¿¡¼­ Æê»óÁ¡À» °ü¸®ÁßÀÎ ¿À¸£Ä« ÀÔ´Ï´Ù.\r\n\r\n";
-	    chat += "#L0##r#e[Guide]#k#dÆê »ç¿ë¹ý#kÀ» ¾Ë°í½Í½À´Ï´Ù.\r\n";
-	    chat += "#L1##r#e[HOT]#k#dÆê »óÁ¡#k À» ÀÌ¿ëÇÏ°Ú½À´Ï´Ù.\r\n";
-	    chat += "#L7##r#e[HOT]#k#dÆê °Ë»ö#k À» ÀÌ¿ëÇÏ°Ú½À´Ï´Ù.\r\n";
-	    chat += "#L6##r#e[HOT]#k#dÆê °ü·Ã ¿ëÇ°»óÁ¡#k À» ÀÌ¿ëÇÏ°Ú½À´Ï´Ù.\r\n";
-	    chat += "#L2##r#e[HOT]#k#dÆê ½ºÅ³ »óÁ¡#k À» ÀÌ¿ëÇÏ°Ú½À´Ï´Ù.\r\n";
+            var chat= "#fnë‚˜ëˆ”ê³ ë”• EXtrabold#  ì•ˆë…•í•˜ì„¸ìš”. ì €ëŠ” #bAURORA ONLINE#kì—ì„œ íŽ«ìƒì ì„ ê´€ë¦¬ì¤‘ì¸ ì˜¤ë¥´ì¹´ ìž…ë‹ˆë‹¤.\r\n\r\n";
+	    chat += "#L0##r#e[Guide]#k#díŽ« ì‚¬ìš©ë²•#kì„ ì•Œê³ ì‹¶ìŠµë‹ˆë‹¤.\r\n";
+	    chat += "#L1##r#e[HOT]#k#díŽ« ìƒì #k ì„ ì´ìš©í•˜ê² ìŠµë‹ˆë‹¤.\r\n";
+	    chat += "#L7##r#e[HOT]#k#díŽ« ê²€ìƒ‰#k ì„ ì´ìš©í•˜ê² ìŠµë‹ˆë‹¤.\r\n";
+	    chat += "#L6##r#e[HOT]#k#díŽ« ê´€ë ¨ ìš©í’ˆìƒì #k ì„ ì´ìš©í•˜ê² ìŠµë‹ˆë‹¤.\r\n";
+	    chat += "#L2##r#e[HOT]#k#díŽ« ìŠ¤í‚¬ ìƒì #k ì„ ì´ìš©í•˜ê² ìŠµë‹ˆë‹¤.\r\n";
 	    cm.sendSimple(chat);
 
 	      }  else if (selection == 0) {
-                var abc1 = "#r#e#fn³ª´®°íµñ EXtrabold# Æê »ç¿ë¹ýÀ» ¸ð¸£½Ã´ÂºÐµéÀ» À§ÇÑ ¼³¸í¼­#n#k\r\n\r\n";
-                abc1 += "#L3#Æê ¾ÆÀÌÅÛÁÝ±â ¼³¸í\r\n";
-	        abc1 += "#L4#Æê ÀÚµ¿¹°¾à ¸Ô±â ¼³¸í\r\n";
-	        abc1 += "#L5#Æê ÀÚµ¿¹öÇÁ ¼³¸í\r\n";
+                var abc1 = "#r#e#fnë‚˜ëˆ”ê³ ë”• EXtrabold# íŽ« ì‚¬ìš©ë²•ì„ ëª¨ë¥´ì‹œëŠ”ë¶„ë“¤ì„ ìœ„í•œ ì„¤ëª…ì„œ#n#k\r\n\r\n";
+                abc1 += "#L3#íŽ« ì•„ì´í…œì¤ê¸° ì„¤ëª…\r\n";
+	        abc1 += "#L4#íŽ« ìžë™ë¬¼ì•½ ë¨¹ê¸° ì„¤ëª…\r\n";
+	        abc1 += "#L5#íŽ« ìžë™ë²„í”„ ì„¤ëª…\r\n";
 		cm.sendSimple(abc1);
 	      }  else if (selection == 3) {
-                var a1 = "#r#e1.Ã¹¹øÂ°°­ÀÇ Æê ¾ÆÀÌÅÛ°ú ¸Þ¼ÒÁÝ±â Àû¿ë#n#k\r\n";
-                a1 += "\r\n#r1.#k#bÆê°ú Æê½ºÅ³À» ±¸ÀÔÇÏ½Ê´Ï´Ù.#k\r\n#r2.#k#bÆêÀ» ÀåÂøÇÏ½ÅÈÄ ¹Ø¿¡ÀÖ´Â¼ø¼­´ë·Î ½ºÅ³À» Àû¿ëÇØÁÖ¼¼¿ä.#k\r\n #rÃ¹Â°#k·Î #i5190000##r¾ÆÀÌÅÛ ÁÝ±â ½ºÅ³#k#bÀ» ¿øÇÏ´Â Æê¿¡ Àû¿ëÇØÁØ´Ù.#k\r\n#rµÑÂ°#k·Î#i5190003##rÀÚµ¿ ÁÝ±â ½ºÅ³#k#bÀ» ¿øÇÏ´Â Æê¿¡ Àû¿ëÇØÁØ´Ù.#k\r\n#r¸¶Áö¸·À¸·Î#k#bEÅ°¸¦ ´©¸£½Ã°í ÆêÂÊÀ» ¼±ÅÃÇØÁÖ½Ã°í ¾ÆÀÌÅÛ ÀÚµ¿ÁÝ±â¸¦ Ã¼Å©ÇØÁÖ¼¼¿ä. ±×·¯½Ã¸é ÆêÀÌ ¾ÆÀÌÅÛ°ú ¸Þ¼Ò¸¦ ÁÝ½À´Ï´Ù.#k\r\n";
+                var a1 = "#r#e1.ì²«ë²ˆì§¸ê°•ì˜ íŽ« ì•„ì´í…œê³¼ ë©”ì†Œì¤ê¸° ì ìš©#n#k\r\n";
+                a1 += "\r\n#r1.#k#bíŽ«ê³¼ íŽ«ìŠ¤í‚¬ì„ êµ¬ìž…í•˜ì‹­ë‹ˆë‹¤.#k\r\n#r2.#k#bíŽ«ì„ ìž¥ì°©í•˜ì‹ í›„ ë°‘ì—ìžˆëŠ”ìˆœì„œëŒ€ë¡œ ìŠ¤í‚¬ì„ ì ìš©í•´ì£¼ì„¸ìš”.#k\r\n #rì²«ì§¸#kë¡œ #i5190000##rì•„ì´í…œ ì¤ê¸° ìŠ¤í‚¬#k#bì„ ì›í•˜ëŠ” íŽ«ì— ì ìš©í•´ì¤€ë‹¤.#k\r\n#rë‘˜ì§¸#kë¡œ#i5190003##rìžë™ ì¤ê¸° ìŠ¤í‚¬#k#bì„ ì›í•˜ëŠ” íŽ«ì— ì ìš©í•´ì¤€ë‹¤.#k\r\n#rë§ˆì§€ë§‰ìœ¼ë¡œ#k#bEí‚¤ë¥¼ ëˆ„ë¥´ì‹œê³  íŽ«ìª½ì„ ì„ íƒí•´ì£¼ì‹œê³  ì•„ì´í…œ ìžë™ì¤ê¸°ë¥¼ ì²´í¬í•´ì£¼ì„¸ìš”. ê·¸ëŸ¬ì‹œë©´ íŽ«ì´ ì•„ì´í…œê³¼ ë©”ì†Œë¥¼ ì¤ìŠµë‹ˆë‹¤.#k\r\n";
 		cm.sendSimple(a1);
 	      }  else if (selection == 4) {
-                var a2 = "#r#e2.µÎÀüÂ°°­ÀÇHP¹°¾à°ú MP¹°¾à ÆêÀÌ ÀÚµ¿À¸·Î Ã¤¿öÁÖ±â#k#n\r\n";
-                a2 += "#b1.Æê ½ºÅ³ »óÁ¡¿¡¼­ HP ¹°¾à ÃæÀü°úMP ¹°¾à ÃæÀü½ºÅ³À» ±¸ÀÔÇÕ´Ï´Ù.#k\r\n#b2.½ºÅ³À» ¿øÇÏ½Ã´ÂÆê¿¡ Àû¿ëÇØÁÖ¼¼¿ä.#k\r\n#b3.Æê½ºÅ³À» Àû¿ëÇÏ¼ËÀ¸¸é EÅ°¸¦ ´©¸£½Ã°í ÆêÃ¢À¸·Î °¡¼Å¼­ #rPOTION SETING#k#b°ø°£ÀÌ ÀÖ½À´Ï´Ù. #rPET HP¿¡´Â HP¹°¾àÀ»#rPET MP¿¡´Â MP¹°¾àÀ»#k#b ¿Ã·ÁÁÖ¼¼¿ä.#k\r\n#b4.ÆêÀÌ ¹°¾àÀ» ¾È¸Ô´Â´Ù. ±×°Ç #rESCÅ°#k#b¸¦ ´©¸£½Ã°í ¿É¼ÇÀ» °¡½Ã°í #rHP°æ°íÇ¥½Ã¿ÍMP°æ°íÇ¥½Ã#k#b°¡ ÀÖ½À´Ï´Ù. ÀÚ½ÅÀÇ ÇÇ°¡ ¾î´ÀÁ¤µµ ±ïÀÏ°æ¿ì ÆêÀÌ ¹°¾àÀ» ÀÚµ¿À¸·Î ¸Ô°Ô ÇØÁÖ´Â°É ¼³Á¤ÇØÁÝ´Ï´Ù.#k";
+                var a2 = "#r#e2.ë‘ì „ì§¸ê°•ì˜HPë¬¼ì•½ê³¼ MPë¬¼ì•½ íŽ«ì´ ìžë™ìœ¼ë¡œ ì±„ì›Œì£¼ê¸°#k#n\r\n";
+                a2 += "#b1.íŽ« ìŠ¤í‚¬ ìƒì ì—ì„œ HP ë¬¼ì•½ ì¶©ì „ê³¼MP ë¬¼ì•½ ì¶©ì „ìŠ¤í‚¬ì„ êµ¬ìž…í•©ë‹ˆë‹¤.#k\r\n#b2.ìŠ¤í‚¬ì„ ì›í•˜ì‹œëŠ”íŽ«ì— ì ìš©í•´ì£¼ì„¸ìš”.#k\r\n#b3.íŽ«ìŠ¤í‚¬ì„ ì ìš©í•˜ì…§ìœ¼ë©´ Eí‚¤ë¥¼ ëˆ„ë¥´ì‹œê³  íŽ«ì°½ìœ¼ë¡œ ê°€ì…”ì„œ #rPOTION SETING#k#bê³µê°„ì´ ìžˆìŠµë‹ˆë‹¤. #rPET HPì—ëŠ” HPë¬¼ì•½ì„#rPET MPì—ëŠ” MPë¬¼ì•½ì„#k#b ì˜¬ë ¤ì£¼ì„¸ìš”.#k\r\n#b4.íŽ«ì´ ë¬¼ì•½ì„ ì•ˆë¨¹ëŠ”ë‹¤. ê·¸ê±´ #rESCí‚¤#k#bë¥¼ ëˆ„ë¥´ì‹œê³  ì˜µì…˜ì„ ê°€ì‹œê³  #rHPê²½ê³ í‘œì‹œì™€MPê²½ê³ í‘œì‹œ#k#bê°€ ìžˆìŠµë‹ˆë‹¤. ìžì‹ ì˜ í”¼ê°€ ì–´ëŠì •ë„ ê¹ì¼ê²½ìš° íŽ«ì´ ë¬¼ì•½ì„ ìžë™ìœ¼ë¡œ ë¨¹ê²Œ í•´ì£¼ëŠ”ê±¸ ì„¤ì •í•´ì¤ë‹ˆë‹¤.#k";
 		cm.sendSimple(a2);
 	      }  else if (selection == 5) {
-                var a3 = "#r#e3.¼¼¹øÂ°°­ÀÇ Æê ÀÚµ¿¹öÇÁ#k#n\r\n";
-                a3 += "#b1.Æê ½ºÅ³ »óÁ¡¿¡¼­ ¹öÇÁÀÚµ¿ ½ºÅ³À» ±¸ÀÔÇÕ´Ï´Ù.#k\r\n#b2.½ºÅ³À» ¿øÇÏ½Ã´ÂÆê¿¡ Àû¿ëÇØÁÖ¼¼¿ä.#k\r\n#b3.Æê½ºÅ³À» Àû¿ëÇÏ¼ËÀ¸¸é EÅ°¸¦ ´©¸£½Ã°í ÆêÃ¢À¸·Î °¡¼Å¼­ #rPET ACCk#b°ø°£ÀÌ ÀÖ½À´Ï´Ù. #r3°³ÀÇ Ä­ÀÌ ÀÖ´Âµ¥¿ä. °¢Ä­¸¶´Ù ¿øÇÏ´Â ½ºÅ³À» ¿Ã·ÁÁÖ¼¼¿ä.#k";
+                var a3 = "#r#e3.ì„¸ë²ˆì§¸ê°•ì˜ íŽ« ìžë™ë²„í”„#k#n\r\n";
+                a3 += "#b1.íŽ« ìŠ¤í‚¬ ìƒì ì—ì„œ ë²„í”„ìžë™ ìŠ¤í‚¬ì„ êµ¬ìž…í•©ë‹ˆë‹¤.#k\r\n#b2.ìŠ¤í‚¬ì„ ì›í•˜ì‹œëŠ”íŽ«ì— ì ìš©í•´ì£¼ì„¸ìš”.#k\r\n#b3.íŽ«ìŠ¤í‚¬ì„ ì ìš©í•˜ì…§ìœ¼ë©´ Eí‚¤ë¥¼ ëˆ„ë¥´ì‹œê³  íŽ«ì°½ìœ¼ë¡œ ê°€ì…”ì„œ #rPET ACCk#bê³µê°„ì´ ìžˆìŠµë‹ˆë‹¤. #r3ê°œì˜ ì¹¸ì´ ìžˆëŠ”ë°ìš”. ê°ì¹¸ë§ˆë‹¤ ì›í•˜ëŠ” ìŠ¤í‚¬ì„ ì˜¬ë ¤ì£¼ì„¸ìš”.#k";
 		cm.sendSimple(a3);
 	      }  else if (selection == 1) {
  	        cm.dispose();
 		cm.openNpc(1040001);
               }  else if (selection == 2) {
 		cm.dispose();
-		cm.openShop(2134003); // Æê½ºÅ³
+		cm.openShop(2134003); // íŽ«ìŠ¤í‚¬
 	      }  else if (selection == 6) {
  	        cm.dispose();
 		cm.openNpc(1012004);

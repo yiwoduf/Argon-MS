@@ -4,7 +4,7 @@ function start() {
     status = -1;
     action(1, 0, 0);
 }
-    ¼¼ÆÃ = "";
+    ì„¸íŒ… = "";
 function action(mode, type, selection) {
     if (mode == -1) {
         cm.dispose();
@@ -20,25 +20,25 @@ function action(mode, type, selection) {
 
     if (status == 0) {
         if(cm.getPlayer().getMapId() == 262030100 || cm.getPlayer().getMapId() == 262030110 || cm.getPlayer().getMapId() == 262030200 || cm.getPlayer().getMapId() == 262030210) {
-                ¼¼ÆÃ = "¹Ì¿Ï"
-                cm.sendYesNo("ÀÌ´ë·Î Æ÷±âÇÏ½Ã°Ú¾î¿ä?");
+                ì„¸íŒ… = "ë¯¸ì™„"
+                cm.sendYesNo("ì´ëŒ€ë¡œ í¬ê¸°í•˜ì‹œê² ì–´ìš”?");
         } else {
-                   ¼¼ÆÃ = "Èú¶ó¾øÀ½"
+                   ì„¸íŒ… = "íë¼ì—†ìŒ"
             for (i=0; i<cm.getMonsterCount(cm.getPlayer().getMapId()); i++) {
                if (cm.getMap(cm.getPlayer().getMapId()).getAllMonster().get(i).getId() == 8870000 || cm.getMap(cm.getPlayer().getMapId()).getAllMonster().get(i).getId() == 8870200 || cm.getMap(cm.getPlayer().getMapId()).getAllMonster().get(i).getId() == 8870100) {
-                   ¼¼ÆÃ = "Èú¶óÀÖÀ½"
+                   ì„¸íŒ… = "íë¼ìˆìŒ"
                }
             }
-         cm.sendYesNo("µµÀüÀ» ¸¶Ä¡°í ÅğÀåÇÏ½Ã°Ú½À´Ï±î?");
+         cm.sendYesNo("ë„ì „ì„ ë§ˆì¹˜ê³  í‡´ì¥í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
         }
     } else if (status == 1) {
-        if (¼¼ÆÃ == "Èú¶óÀÖÀ½") {
-            cm.sendYesNo("¾ÆÁ÷ Èú¶ó¸¦ ¹°¸®Ä¡Áö ¸øÇß´Âµ¥, Á¤¸» Æ÷±âÇÏ°í ³ª°¡½Ã°Ú¾î¿ä?");
-        } else if (¼¼ÆÃ == "Èú¶ó¾øÀ½") {
+        if (ì„¸íŒ… == "íë¼ìˆìŒ") {
+            cm.sendYesNo("ì•„ì§ íë¼ë¥¼ ë¬¼ë¦¬ì¹˜ì§€ ëª»í–ˆëŠ”ë°, ì •ë§ í¬ê¸°í•˜ê³  ë‚˜ê°€ì‹œê² ì–´ìš”?");
+        } else if (ì„¸íŒ… == "íë¼ì—†ìŒ") {
             cm.warp(262030000,1);
             cm.dispose();
         } else {
-            cm.sendNext("¾îÂ¿ ¼ö ¾ø±º¿ä. ¿©±â±îÁö µµ¿ÍÁÖ¼Å¼­ °¨»çÇß¾î¿ä.");
+            cm.sendNext("ì–´ì©” ìˆ˜ ì—†êµ°ìš”. ì—¬ê¸°ê¹Œì§€ ë„ì™€ì£¼ì…”ì„œ ê°ì‚¬í–ˆì–´ìš”.");
         }
     } else if (status == 2) {
         cm.warp(262030000, 1);

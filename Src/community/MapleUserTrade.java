@@ -181,8 +181,8 @@ public class MapleUserTrade {
                 partner.cancel();
                 local.cancel();
 
-                c.getClient().send(MainPacketCreator.serverNotice(5, "Æ®·¹ÀÌµå¸¦ ¿Ï·áÇÏ´Âµ¥ ÇÊ¿äÇÑ ÀÎº¥Åä¸® °ø°£ÀÌ ºÎÁ·ÇÕ´Ï´Ù."));
-                partner.getChr().getClient().send(MainPacketCreator.serverNotice(5, "Æ®·¹ÀÌµå¸¦ ¿Ï·áÇÏ´Âµ¥ ÇÊ¿äÇÑ ÀÎº¥Åä¸® °ø°£ÀÌ ºÎÁ·ÇÕ´Ï´Ù."));
+                c.getClient().send(MainPacketCreator.serverNotice(5, "íŠ¸ë ˆì´ë“œë¥¼ ì™„ë£Œí•˜ëŠ”ë° í•„ìš”í•œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ë¶€ì¡±í•©ë‹ˆë‹¤."));
+                partner.getChr().getClient().send(MainPacketCreator.serverNotice(5, "íŠ¸ë ˆì´ë“œë¥¼ ì™„ë£Œí•˜ëŠ”ë° í•„ìš”í•œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ë¶€ì¡±í•©ë‹ˆë‹¤."));
             } else {
                 local.CompleteTrade();
                 partner.CompleteTrade();
@@ -206,11 +206,11 @@ public class MapleUserTrade {
 
     public static final void startTrade(final MapleCharacter c, boolean isTrade, final boolean iscash) {
         if (c.getLevel() < 60) {
-            c.getClient().send(MainPacketCreator.serverNotice(5, "·¹º§ 60ÀÌ»óºÎÅÍ Æ®·¹ÀÌµå ÀÌ¿ëÀÌ °¡´ÉÇÕ´Ï´Ù."));
+            c.getClient().send(MainPacketCreator.serverNotice(5, "ë ˆë²¨ 60ì´ìƒë¶€í„° íŠ¸ë ˆì´ë“œ ì´ìš©ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤."));
             return;
         }
         if (c.getGMLevel() > 6) {
-            c.getClient().send(MainPacketCreator.serverNotice(5, "ÇØ´ç Ä³¸¯ÅÍ¿Í´Â ±³È¯ÀÌ ºÒ°¡´É ÇÕ´Ï´Ù."));
+            c.getClient().send(MainPacketCreator.serverNotice(5, "í•´ë‹¹ ìºë¦­í„°ì™€ëŠ” êµí™˜ì´ ë¶ˆê°€ëŠ¥ í•©ë‹ˆë‹¤."));
             return;
         }
         if (c.getTrade() == null) {
@@ -219,13 +219,13 @@ public class MapleUserTrade {
             c.getTrade().cash = iscash;
             c.getClient().send(MainPacketCreator.getTradeStart(c.getClient(), c.getTrade(), (byte) 0, isTrade));
         } else {
-            c.getClient().send(MainPacketCreator.serverNotice(5, "ÀÌ¹Ì Æ®·¹ÀÌµå ÁßÀÔ´Ï´Ù."));
+            c.getClient().send(MainPacketCreator.serverNotice(5, "ì´ë¯¸ íŠ¸ë ˆì´ë“œ ì¤‘ì…ë‹ˆë‹¤."));
         }
     }
 
     public static final void inviteTrade(final MapleCharacter c1, final MapleCharacter c2, boolean isTrade) {
         if (c2.getLevel() < 60 || c1.getLevel() < 60) {
-            c1.getClient().send(MainPacketCreator.serverNotice(5, "·¹º§ 60ÀÌ»óºÎÅÍ Æ®·¹ÀÌµå ÀÌ¿ëÀÌ °¡´ÉÇÕ´Ï´Ù."));
+            c1.getClient().send(MainPacketCreator.serverNotice(5, "ë ˆë²¨ 60ì´ìƒë¶€í„° íŠ¸ë ˆì´ë“œ ì´ìš©ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤."));
             cancelTrade(c1.getTrade());
             return;
         }
@@ -238,7 +238,7 @@ public class MapleUserTrade {
             c1.isTrade = isTrade;
             c2.isTrade = isTrade;
         } else {
-            c1.getClient().send(MainPacketCreator.serverNotice(5, "ÀÌ¹Ì ´©±º°¡¿Í Æ®·¹ÀÌµå ÁßÀÔ´Ï´Ù."));
+            c1.getClient().send(MainPacketCreator.serverNotice(5, "ì´ë¯¸ ëˆ„êµ°ê°€ì™€ íŠ¸ë ˆì´ë“œ ì¤‘ì…ë‹ˆë‹¤."));
             cancelTrade(c1.getTrade());
         }
     }
@@ -249,7 +249,7 @@ public class MapleUserTrade {
             c2.getClient().send(MainPacketCreator.getTradePartnerAdd(c1));
             c1.getClient().send(MainPacketCreator.getTradeStart(c1.getClient(), c1.getTrade(), (byte) 1, isTrade));
         } else {
-            c1.getClient().send(MainPacketCreator.serverNotice(5, "»ó´ë¹æÀÌ ÀÌ¹Ì Æ®·¹ÀÌµå¸¦ Á¾·áÇß½À´Ï´Ù."));
+            c1.getClient().send(MainPacketCreator.serverNotice(5, "ìƒëŒ€ë°©ì´ ì´ë¯¸ íŠ¸ë ˆì´ë“œë¥¼ ì¢…ë£Œí–ˆìŠµë‹ˆë‹¤."));
         }
     }
 
@@ -260,7 +260,7 @@ public class MapleUserTrade {
                 MapleCharacter other = trade.getPartner().getChr();
                 other.getTrade().cancel();
                 other.setTrade(null);
-                other.getClient().send(MainPacketCreator.serverNotice(5, c.getName() + " ´ÔÀÌ ±³È¯ ¿äÃ»À» °ÅÀıÇÏ¼Ì½À´Ï´Ù."));
+                other.getClient().send(MainPacketCreator.serverNotice(5, c.getName() + " ë‹˜ì´ êµí™˜ ìš”ì²­ì„ ê±°ì ˆí•˜ì…¨ìŠµë‹ˆë‹¤."));
             }
             trade.cancel();
             c.setTrade(null);

@@ -1,10 +1,10 @@
 /*
  * ArcStory Project
- * ÃÖÁÖ¿ø sch2307@naver.com
- * ÀÌÁØ junny_adm@naver.com
- * ¿ìÁöÈÆ raccoonfox69@gmail.com
- * °­Á¤±Ô ku3135@nate.com
- * ±èÁøÈ« designer@inerve.kr
+ * ìµœì£¼ì› sch2307@naver.com
+ * ì´ì¤€ junny_adm@naver.com
+ * ìš°ì§€í›ˆ raccoonfox69@gmail.com
+ * ê°•ì •ê·œ ku3135@nate.com
+ * ê¹€ì§„í™ designer@inerve.kr
  */
 package launch.helpers;
 
@@ -68,7 +68,7 @@ class LoadQuestData implements Runnable {
                 cacheQuestData();
                 Thread.currentThread().sleep(1);
             } catch (InterruptedException ie) {
-                //System.out.println("ÀÎÅÍ·´Æ® ¹ß»ı");
+                //System.out.println("ì¸í„°ëŸ½íŠ¸ ë°œìƒ");
             } finally {
                 Thread.currentThread().interrupt();
             }
@@ -91,17 +91,17 @@ class LoadQuestData implements Runnable {
 }
 
 /*
-     * type - Àåºñ ¾ÆÀÌÅÛ
-     * 0 : ÀüÃ¼
-     * 10 : ¹«±â
-     * 11 : ¹«±â Á¦¿Ü
-     * 20 : ¹æÆĞ
-     * 40 : ¾Ç¼¼»ç¸®
-     * 51 : Åõ±¸
-     * 52 : »óÀÇ, ÇÑ¹ú¿Ê
-     * 53 : ÇÏÀÇ
-     * 54 : Àå°©
-     * 55 : ½Å¹ß
+     * type - ì¥ë¹„ ì•„ì´í…œ
+     * 0 : ì „ì²´
+     * 10 : ë¬´ê¸°
+     * 11 : ë¬´ê¸° ì œì™¸
+     * 20 : ë°©íŒ¨
+     * 40 : ì•…ì„¸ì‚¬ë¦¬
+     * 51 : íˆ¬êµ¬
+     * 52 : ìƒì˜, í•œë²Œì˜·
+     * 53 : í•˜ì˜
+     * 54 : ì¥ê°‘
+     * 55 : ì‹ ë°œ
  */
 class LoadItemDataThread implements Runnable {
 
@@ -112,7 +112,7 @@ class LoadItemDataThread implements Runnable {
                 cachePotentialItemData();
                 Thread.currentThread().sleep(1);
             } catch (InterruptedException ie) {
-                //System.out.println("ÀÎÅÍ·´Æ® ¹ß»ı");
+                //System.out.println("ì¸í„°ëŸ½íŠ¸ ë°œìƒ");
             } finally {
                 Thread.currentThread().interrupt();
             }
@@ -181,16 +181,16 @@ class LoadItemDataThread implements Runnable {
                 item.ignoreDAMr = (byte) MapleDataTool.getIntConvert("ignoreDAMr", level, 0);
                 item.RecoveryUP = (byte) MapleDataTool.getIntConvert("RecoveryUP", level, 0);
                 switch (item.potentialID) {
-                    case 31001://¾µ¸¸ÇÑ ÇìÀÌ½ºÆ®
-                    case 31002://¾µ¸¸ÇÑ ¹Ì½ºÆ½ µµ¾î
-                    case 31003://¾µ¸¸ÇÑ »şÇÁ ¾ÆÀÌÁî
-                    case 31004://¾µ¸¸ÇÑ ÇÏÀÌÆÛ ¹Ùµğ
+                    case 31001://ì“¸ë§Œí•œ í—¤ì´ìŠ¤íŠ¸
+                    case 31002://ì“¸ë§Œí•œ ë¯¸ìŠ¤í‹± ë„ì–´
+                    case 31003://ì“¸ë§Œí•œ ìƒ¤í”„ ì•„ì´ì¦ˆ
+                    case 31004://ì“¸ë§Œí•œ í•˜ì´í¼ ë°”ë””
                         item.skillID = 0;//(short) (item.potentialID - 23001);
                         break;
-                    case 41005://¾µ¸¸ÇÑ ÄÄ¹î ¿À´õ½º
-                    case 41006://¾µ¸¸ÇÑ ¾îµå¹ê½ºµå ºí·¹½º
-                    case 41007://¾µ¸¸ÇÑ À©µå ºÎ½ºÅÍ
-                        item.skillID = 0;//(short) (item.potentialID - 33001);//¼öÁ¤ÇÊ¿ä
+                    case 41005://ì“¸ë§Œí•œ ì»´ë±ƒ ì˜¤ë”ìŠ¤
+                    case 41006://ì“¸ë§Œí•œ ì–´ë“œë°´ìŠ¤ë“œ ë¸”ë ˆìŠ¤
+                    case 41007://ì“¸ë§Œí•œ ìœˆë“œ ë¶€ìŠ¤í„°
+                        item.skillID = 0;//(short) (item.potentialID - 33001);//ìˆ˜ì •í•„ìš”
                         break;
                     default:
                         item.skillID = 0;
@@ -212,7 +212,7 @@ class LoadPotenOptionDataThread implements Runnable {
                 cachePotentialOptionData();
                 Thread.currentThread().sleep(1);
             } catch (InterruptedException ie) {
-                //System.out.println("ÀÎÅÍ·´Æ® ¹ß»ı");
+                //System.out.println("ì¸í„°ëŸ½íŠ¸ ë°œìƒ");
             } finally {
                 Thread.currentThread().interrupt();
             }
@@ -227,18 +227,18 @@ class LoadPotenOptionDataThread implements Runnable {
             int level = 0;
             Map<Integer, List<Integer>> option = new HashMap<Integer, List<Integer>>();
             List<Integer> id = new ArrayList<Integer>(100);
-            if (potentialID > 0 && potentialID < 906 || potentialID > 2000 && potentialID < 2906) { //1´Ü°è ¿É¼Ç
+            if (potentialID > 0 && potentialID < 906 || potentialID > 2000 && potentialID < 2906) { //1ë‹¨ê³„ ì˜µì…˜
                 level = 1;
             } else if ((potentialID > 10000 && potentialID < 10292) || (potentialID > 20000 && potentialID < 20015)
                     || (potentialID > 30000 && potentialID < 30015) || (potentialID > 40000 && potentialID < 40015)
                     || (potentialID > 12000 && potentialID < 12802) || (potentialID > 22000 && potentialID < 22015)
-                    || (potentialID > 32000 && potentialID < 32015) || (potentialID > 42000 && potentialID < 42015)) { //2´Ü°è ¿É¼Ç
+                    || (potentialID > 32000 && potentialID < 32015) || (potentialID > 42000 && potentialID < 42015)) { //2ë‹¨ê³„ ì˜µì…˜
                 level = 2;
-            } else if ((potentialID > 20040 && potentialID < 20407) || (potentialID > 22040 && potentialID < 22803)) { //3´Ü°è ¿É¼Ç
+            } else if ((potentialID > 20040 && potentialID < 20407) || (potentialID > 22040 && potentialID < 22803)) { //3ë‹¨ê³„ ì˜µì…˜
                 level = 3;
-            } else if ((potentialID > 30040 && potentialID < 31005) || (potentialID > 32040 && potentialID < 32803)) { //4´Ü°è ¿É¼Ç
+            } else if ((potentialID > 30040 && potentialID < 31005) || (potentialID > 32040 && potentialID < 32803)) { //4ë‹¨ê³„ ì˜µì…˜
                 level = 4;
-            } else if ((potentialID > 40040 && potentialID < 41007) || (potentialID > 42040 && potentialID < 42803) || potentialID > 60000) { //5´Ü°è ¿É¼Ç
+            } else if ((potentialID > 40040 && potentialID < 41007) || (potentialID > 42040 && potentialID < 42803) || potentialID > 60000) { //5ë‹¨ê³„ ì˜µì…˜
                 level = 5;
             }
             if (ItemInformation.getInstance().potentialOpCache.containsKey(level)) {
@@ -265,7 +265,7 @@ class LoadEquOptionDataThread implements Runnable {
                 cacheEquipOptionData();
                 Thread.currentThread().sleep(1);
             } catch (InterruptedException ie) {
-                //System.out.println("ÀÎÅÍ·´Æ® ¹ß»ı");
+                //System.out.println("ì¸í„°ëŸ½íŠ¸ ë°œìƒ");
             } finally {
                 Thread.currentThread().interrupt();
             }
@@ -317,7 +317,7 @@ class LoadSkillDataThread implements Runnable {
                 cacheSkillData();
                 Thread.currentThread().sleep(1);
             } catch (InterruptedException ie) {
-                //System.out.println("ÀÎÅÍ·´Æ® ¹ß»ı!");
+                //System.out.println("ì¸í„°ëŸ½íŠ¸ ë°œìƒ!");
             } finally {
                 Thread.currentThread().interrupt();
             }
@@ -344,7 +344,7 @@ class LoadSkillDataThread implements Runnable {
                             }
                             summon_Data = S_data.getChildByPath("summon/attack1/info");
                             if (summon_Data == null) {
-                                MapleData summonData2 = S_data.getChildByPath("summon/die/info"); //ÀÚÆø½ºÅ³ (¸¶ÀÎ µî)
+                                MapleData summonData2 = S_data.getChildByPath("summon/die/info"); //ìí­ìŠ¤í‚¬ (ë§ˆì¸ ë“±)
                                 if (summonData2 != null) {
                                     summon_Data = summonData2;
                                 }
@@ -371,7 +371,7 @@ class LoadSkillDataThread implements Runnable {
                                     }
                                 }
                                 MapleData aa = S_data.getChildByPath("summon/attack1");
-                                if (S_data.getChildByPath("summon/die/info") != null) { //ÀÚÆø½ºÅ³ (¸¶ÀÎ µî)
+                                if (S_data.getChildByPath("summon/die/info") != null) { //ìí­ìŠ¤í‚¬ (ë§ˆì¸ ë“±)
                                     aa = S_data.getChildByPath("summon/die");
                                 }
                                 for (MapleData effect : aa) {
@@ -410,7 +410,7 @@ class LoadCashItemData implements Runnable {
                 cacheCashItemData();
                 Thread.currentThread().sleep(1);
             } catch (InterruptedException ie) {
-                //System.out.println("ÀÎÅÍ·´Æ® ¹ß»ı");
+                //System.out.println("ì¸í„°ëŸ½íŠ¸ ë°œìƒ");
             } finally {
                 Thread.currentThread().interrupt();
             }
@@ -423,7 +423,7 @@ class LoadCashItemData implements Runnable {
             int itemId = MapleDataTool.getIntConvert("ItemId", field, 0);
             boolean onSale = itemId > 0;
             int period = 0;
-            if (GameConstants.isPet(itemId)) { //Æê
+            if (GameConstants.isPet(itemId)) { //í«
                 period = MapleDataTool.getIntConvert("life", CashItemFactory.getInstance().petData.getData(itemId + ".img").getChildByPath("info"));
             } else {
                 period = MapleDataTool.getIntConvert("Period", field, 0);

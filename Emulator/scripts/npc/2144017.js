@@ -16,29 +16,29 @@ function action(mode, type, selection) {
     
     if (status == 0) {
        if(cm.getPlayer().getMapId() == 272020110) {
-           cm.sendSimple("#e<º¸½º: ¾ÆÄ«ÀÌ·³>#n\r\n"
-                        +"À§´ëÇÑ ¿ë»ç¿©, °ËÀº ¸¶¹ı»çÀÇ »ç¾ÇÇÑ ±º´ÜÀå¿¡°Ô ¸Â¼³ ÁØºñ¸¦ ¸¶Ä¡¼Ì½À´Ï±î?\r\n\r\n"
-                        +"#L0##b <º¸½º: ¾ÆÄ«ÀÌ·³> ÀÔÀåÀ» ½ÅÃ»ÇÑ´Ù.");
+           cm.sendSimple("#e<ë³´ìŠ¤: ì•„ì¹´ì´ëŸ¼>#n\r\n"
+                        +"ìœ„ëŒ€í•œ ìš©ì‚¬ì—¬, ê²€ì€ ë§ˆë²•ì‚¬ì˜ ì‚¬ì•…í•œ êµ°ë‹¨ì¥ì—ê²Œ ë§ì„¤ ì¤€ë¹„ë¥¼ ë§ˆì¹˜ì…¨ìŠµë‹ˆê¹Œ?\r\n\r\n"
+                        +"#L0##b <ë³´ìŠ¤: ì•„ì¹´ì´ëŸ¼> ì…ì¥ì„ ì‹ ì²­í•œë‹¤.");
        } else if (cm.getPlayer().getMapId() == 272020200) {
-           cm.sendYesNo("ÅğÀåÇÏ½Ã°Ú½À´Ï±î?");
+           cm.sendYesNo("í‡´ì¥í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
        }
     } else if (status == 1) {
        if(selection == 0) {
           if (cm.getParty() == null) {
-              cm.sendOk("ÆÄÆ¼¸¦ »ı¼ºÇÑ ÈÄ µµÀüÇØ ÁÖ¼¼¿ä.");
+              cm.sendOk("íŒŒí‹°ë¥¼ ìƒì„±í•œ í›„ ë„ì „í•´ ì£¼ì„¸ìš”.");
               cm.dispose();
           } else if (cm.getPlayerCount(272020200) >= 1) {
-              cm.sendOk("ÀÌ¹Ì ´©±º°¡°¡ ¾ÆÄ«ÀÌ·³¿¡ µµÀüÇÏ°í ÀÖ½À´Ï´Ù.\r\n´Ù¸¥ Ã¤³ÎÀ» ÀÌ¿ëÇØ ÁÖ¼¼¿ä.");
+              cm.sendOk("ì´ë¯¸ ëˆ„êµ°ê°€ê°€ ì•„ì¹´ì´ëŸ¼ì— ë„ì „í•˜ê³  ìˆìŠµë‹ˆë‹¤.\r\në‹¤ë¥¸ ì±„ë„ì„ ì´ìš©í•´ ì£¼ì„¸ìš”.");
               cm.dispose();
           } else if (!cm.isLeader()) {
-              cm.sendOk("ÆÄÆ¼Àå¸¸ÀÌ ÀÔÀåÀ» ½ÅÃ»ÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+              cm.sendOk("íŒŒí‹°ì¥ë§Œì´ ì…ì¥ì„ ì‹ ì²­í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
               cm.dispose();
           }
        cm.resetMap(272020200)
        cm.warpParty(272020200);
        cm.getPlayer().getMap().broadcastMessage(Packages.packet.creators.MainPacketCreator.removeNPC(cm.getPlayer().getMap().containsNPC(2144016)));
        cm.getPlayer().getMap().broadcastMessage(Packages.packet.creators.MainPacketCreator.removeNPCController(cm.getPlayer().getMap().containsNPC(2144016)));
-       cm.getPlayer().getMap().startMapEffect("¿ë±â¿Í ¸¸¿ëÀ» ±¸ºĞÇÏÁö ¸øÇÏ´Â ÀÚµéÀÌ¿©. ¸ñ¼ûÀÌ ¾Æ±õÁö ¾Ê´Ù¸é ³»°Ô ´ıºñµµ·Ï. ÈÄÈÄ.", 5120056);
+       cm.getPlayer().getMap().startMapEffect("ìš©ê¸°ì™€ ë§Œìš©ì„ êµ¬ë¶„í•˜ì§€ ëª»í•˜ëŠ” ìë“¤ì´ì—¬. ëª©ìˆ¨ì´ ì•„ê¹ì§€ ì•Šë‹¤ë©´ ë‚´ê²Œ ë¤ë¹„ë„ë¡. í›„í›„.", 5120056);
        cm.playSound(false,"Sound/Voice.img/akayrum/2");
        cm.spawnNpc(2144010, 313, -179);
        cm.dispose();

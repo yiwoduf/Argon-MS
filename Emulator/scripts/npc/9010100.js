@@ -36,10 +36,10 @@ function action(mode, type, selection) {
     if (cm.haveItem(4033248, 1)) {
      cm.gainItem(4033248, -1);
      cm.gainItem(selection, 1);
-     cm.sendOk("200 Á¦ ¹«±â ¿©±âÀÖ´Ù.");
+     cm.sendOk("200 ì œ ë¬´ê¸° ì—¬ê¸°ìˆë‹¤.");
      cm.dispose();
     } else {
-     cm.sendOk("¹«Áö°³ ´ÜÇ³ÀÌ ºÎÁ·ÇÑ°Í°°Àºµ¥?");
+     cm.sendOk("ë¬´ì§€ê°œ ë‹¨í’ì´ ë¶€ì¡±í•œê²ƒê°™ì€ë°?");
      cm.dispose();
     }
    } else if (selection == 3) {

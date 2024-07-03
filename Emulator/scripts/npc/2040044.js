@@ -14,9 +14,9 @@ function action(mode, type, selection) {
 	status++;
     if (status == 0) {
 	if (cm.getMonsterCount(cm.getMapId()) == 0) {
-	    cm.sendNext("#b¾Ë¸®»þ¸£#k¸¦ ¾²·¯¶ß¸®¼Ì±º¿ä! Á¤¸» ¼ö°íÇÏ¼Ì½À´Ï´Ù. ¿©·¯ºÐ ´öºÐ¿¡ Â÷¿øÀÇ ¹®À» ¹«»çÈ÷ ´ÝÀ» ¼ö ÀÖ°Ô µÇ¾ú½À´Ï´Ù. ÀÌÁ¦ ¹ÛÀ¸·Î º¸³»µå¸®µµ·Ï ÇÏ°Ú½À´Ï´Ù.");
+	    cm.sendNext("#bì•Œë¦¬ìƒ¤ë¥´#kë¥¼ ì“°ëŸ¬ëœ¨ë¦¬ì…¨êµ°ìš”! ì •ë§ ìˆ˜ê³ í•˜ì…¨ìŠµë‹ˆë‹¤. ì—¬ëŸ¬ë¶„ ë•ë¶„ì— ì°¨ì›ì˜ ë¬¸ì„ ë¬´ì‚¬ížˆ ë‹«ì„ ìˆ˜ ìžˆê²Œ ë˜ì—ˆìŠµë‹ˆë‹¤. ì´ì œ ë°–ìœ¼ë¡œ ë³´ë‚´ë“œë¦¬ë„ë¡ í•˜ê² ìŠµë‹ˆë‹¤.");
 	} else {
-	    cm.sendNext("¾î¼­ #b¾Ë¸®»þ¸£#k¸¦ ¾²·¯¶ß¸®°í ¿ÍÁÖ¼¼¿ä!");
+	    cm.sendNext("ì–´ì„œ #bì•Œë¦¬ìƒ¤ë¥´#kë¥¼ ì“°ëŸ¬ëœ¨ë¦¬ê³  ì™€ì£¼ì„¸ìš”!");
 	    cm.dispose();
 	}
     } else if (status == 1) {

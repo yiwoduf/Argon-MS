@@ -26,7 +26,7 @@ import client.skills.SkillStatEffect;
 public class MapleMapObjectHandler implements Runnable {
     
     public MapleMapObjectHandler() {
-        System.out.println("MapleMapObjectHandler °¡ ÀÛµ¿ µÇ¾ú½À´Ï´Ù.");
+        System.out.println("MapleMapObjectHandler ê°€ ì‘ë™ ë˜ì—ˆìŠµë‹ˆë‹¤.");
     }
     
     @Override

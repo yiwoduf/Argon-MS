@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -590,7 +590,7 @@ public class MapleClient {
                         unban();
                     }
                     byte loginstate = getLoginState();
-                    if (loginstate > MapleClient.LOGIN_NOTLOGGEDIN) { // already loggedin (ÀÌ¹Ì ·Î±×ÀÎ µÇÀÖ½À
+                    if (loginstate > MapleClient.LOGIN_NOTLOGGEDIN) { // already loggedin (ì´ë¯¸ ë¡œê·¸ì¸ ë˜ìˆìŠµ
                         loggedIn = false;
                         loginok = 7;
                     } else if (pwd.equals(password)) {
@@ -836,7 +836,7 @@ public class MapleClient {
                 ps.close();
                 rs.close();
                 con.close();
-                throw new MYSQLException("Everything sucks ¾ÆÀÌµğ : " + getAccID());
+                throw new MYSQLException("Everything sucks ì•„ì´ë”” : " + getAccID());
             }
             byte state = rs.getByte("loggedin");
 
@@ -881,7 +881,7 @@ public class MapleClient {
             con.close();
             return state;
         } catch (SQLException e) {
-            throw new MYSQLException("Äõ¸® ¿À·ù. »ç¿ë °¡´É ÀÏ¼ö¸¦ ºÒ·¯¿Ã ¼ö ¾ø½À´Ï´Ù.", e);
+            throw new MYSQLException("ì¿¼ë¦¬ ì˜¤ë¥˜. ì‚¬ìš© ê°€ëŠ¥ ì¼ìˆ˜ë¥¼ ë¶ˆëŸ¬ì˜¬ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.", e);
         }
     }
 
@@ -1354,12 +1354,12 @@ public class MapleClient {
             if (cfor.getPlayer() != null) {
                 builder.append("<");
                 builder.append(MapleCharacterUtil.makeMapleReadable(cfor.getPlayer().getName()));
-                builder.append(" (Ä³¸¯ÅÍ½Äº°ÄÚµå: ");
+                builder.append(" (ìºë¦­í„°ì‹ë³„ì½”ë“œ: ");
                 builder.append(cfor.getPlayer().getId());
                 builder.append(")> ");
             }
             if (cfor.getAccountName() != null) {
-                builder.append("(°èÁ¤: ");
+                builder.append("(ê³„ì •: ");
                 builder.append(cfor.getAccountName());
                 builder.append(") ");
             }

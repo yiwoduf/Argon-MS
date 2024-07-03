@@ -17,7 +17,7 @@ import tools.Pair;
 
 /**
  *
- * @author ¸ùÅ°ÇÁ
+ * @author ëª½í‚¤í”„
  */
 public class CalcDamage {
     public CRand32 rndGenForCharacter;
@@ -72,7 +72,7 @@ public class CalcDamage {
                 rand[i] = rndGenForCharacter.Random();
             }
             byte index = 0;
-            //byte ·£´ıÀë = 0;
+            //byte ëœë¤ì¼ = 0;
             byte criticaltemp1 = 0;
             byte temp1 = 0;
             byte temp2 = 0;
@@ -85,14 +85,14 @@ public class CalcDamage {
                 boolean critical = false;
                 index++;
                 double IDK = RandomInRange(rand[index++ % numRand], 0, 100);
-                //·£´ıÀë++;
-                //System.out.println(IDK + " ::::::::::: " + ·£´ıÀë + " ¹øÂ° ·¡´ı");
+                //ëœë¤ì¼++;
+                //System.out.println(IDK + " ::::::::::: " + ëœë¤ì¼ + " ë²ˆì§¸ ë˜ë¤");
                 //Adjusted Random Damage
                 int maxDamage = 94;//(int) chr.getStat().getCurrentMaxBaseDamage();
                 int minDamage = 19; //(int) chr.getStat().getCurrentMinBaseDamage(); 
                 double adjustedRandomDamage = RandomInRange(rand[index++ % numRand], maxDamage, minDamage);
-                //·£´ıÀë++;
-                //System.out.println(adjustedRandomDamage + " ::::::::::: " + ·£´ıÀë + " ¹øÂ° ·¡´ı");
+                //ëœë¤ì¼++;
+                //System.out.println(adjustedRandomDamage + " ::::::::::: " + ëœë¤ì¼ + " ë²ˆì§¸ ë˜ë¤");
                 realDamage += adjustedRandomDamage;
                 if ((hits == 3 && criticaltemp1 == 2) || (temp1 != 0 && hits == 4) || (temp2 != 0 && hits == 5) || (temp6 != 8 && temp6 != 101 && temp4 != 0 && hits == 6)) {
                     if (hits == 3) {
@@ -135,7 +135,7 @@ public class CalcDamage {
                             temp4 = addIndexNumber;
                         } else if (addIndexNumber == 7) {
                             temp2 = 2;
-                            temp5 = 7;//5¹øÂ° Å¸¼ö Å×½ºÆ®
+                            temp5 = 7;//5ë²ˆì§¸ íƒ€ìˆ˜ í…ŒìŠ¤íŠ¸
                         }
                     } else if (hits == 4) {
                         if (temp1 == 1) {
@@ -173,7 +173,7 @@ public class CalcDamage {
                                 if (temp6 == 1 && addIndexNumber == 0) {
                                     temp6 = 100;//check 
                                 } else if (temp6 == 6 && addIndexNumber == 6) {
-                                    temp6 = 99; // 6+6 ÀÏ¶§ Ã¼Å©ÇØ¾ßÇÔ
+                                    temp6 = 99; // 6+6 ì¼ë•Œ ì²´í¬í•´ì•¼í•¨
                                 } else {
                                     temp6 = (byte) (temp6 + addIndexNumber);
                                 }
@@ -188,7 +188,7 @@ public class CalcDamage {
                         } else {
                             index = (byte) (25 + addIndexNumber);
                         }
-                        if (addIndexNumber == 0 || addIndexNumber == 1 || addIndexNumber == 6) { // 6ÀÏ¶§´Â ÀÏÄ¡
+                        if (addIndexNumber == 0 || addIndexNumber == 1 || addIndexNumber == 6) { // 6ì¼ë•ŒëŠ” ì¼ì¹˜
                             if (addIndexNumber == 0) {
                                 temp4 = 8; //onOff
                                 if (temp6 == 99) {
@@ -256,18 +256,18 @@ public class CalcDamage {
 
                 //Adjusted Critical Damage
                 double criticalRate = RandomInRange(rand[index++ % numRand], 100, 0);
-                //·£´ıÀë++;
-                //System.out.println(criticalRate + " ::::::::::: " + ·£´ıÀë + " ¹øÂ° ·¡´ı ÀÎµ¦½º´Â? : " + index);
+                //ëœë¤ì¼++;
+                //System.out.println(criticalRate + " ::::::::::: " + ëœë¤ì¼ + " ë²ˆì§¸ ë˜ë¤ ì¸ë±ìŠ¤ëŠ”? : " + index);
                 if (criticalRate < 65 || (attack.skill == 1121008 && hits == 6)) {//chr.getStat().passive_sharpeye_rate()) {
                     int maxCritDamage = chr.getStat().passive_sharpeye_percent();
                     int minCritDamage = chr.getStat().passive_sharpeye_min_percent();
                     int criticalDamageRate = (int) RandomInRange(rand[index++ % numRand], maxCritDamage, minCritDamage);
-                    //·£´ıÀë++;
-                    //System.out.println(criticalDamageRate + ".00000000000000 ::::::::::: " + ·£´ıÀë + " ¹øÂ° ·¡´ı");
+                    //ëœë¤ì¼++;
+                    //System.out.println(criticalDamageRate + ".00000000000000 ::::::::::: " + ëœë¤ì¼ + " ë²ˆì§¸ ë˜ë¤");
                     realDamage = realDamage + (criticalDamageRate / 100.0 * (int) realDamage);//nexon convert realDamage to int when multiply with criticalDamageRate
                     critical = true;
                     att.right = true;                    
-                    System.out.println("Å©¸®");
+                    System.out.println("í¬ë¦¬");
                     criticaltemp1++;
                 }
                 hits++;

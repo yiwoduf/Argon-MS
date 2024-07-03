@@ -13,11 +13,11 @@ function action(mode, type, selection) {
         status++;
     }
     if (status == 0) {
-º° = "#fUI/UIToolTip/Item/Equip/Star/Star#"
+ë³„ = "#fUI/UIToolTip/Item/Equip/Star/Star#"
 var choose ="";
-º° = "#fUI/UIToolTip/Item/Equip/Star/Star#"
-        choose += "#fn³ª´®°íµñ Extrabold##fs16##fs16#"+º°+"#b¿¡ÀÌÇÃ·¯½º#k#l»óÁ¡½Ã½ºÅÛ#k"+º°+"#l";
-        choose += "\r\n#L0##e#i5044000##g Ä³½Ã¼¥ ÀÌ¿ëÇÏ±â#l\r\n\r\n#r#L1##i1142744#ÈÄ¿ø»óÁ¡#k#l\r\n\r\n#b#L2##i5450011#¸ğµç»óÁ¡#l\r\n\r\n";
+ë³„ = "#fUI/UIToolTip/Item/Equip/Star/Star#"
+        choose += "#fnë‚˜ëˆ”ê³ ë”• Extrabold##fs16##fs16#"+ë³„+"#bì—ì´í”ŒëŸ¬ìŠ¤#k#lìƒì ì‹œìŠ¤í…œ#k"+ë³„+"#l";
+        choose += "\r\n#L0##e#i5044000##g ìºì‹œìƒµ ì´ìš©í•˜ê¸°#l\r\n\r\n#r#L1##i1142744#í›„ì›ìƒì #k#l\r\n\r\n#b#L2##i5450011#ëª¨ë“ ìƒì #l\r\n\r\n";
         if (cm.getPlayer().hasGmLevel(10)){
         choose += "";
 }

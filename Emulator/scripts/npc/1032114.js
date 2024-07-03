@@ -3,15 +3,15 @@
 
 /*
 
-	¿Àµò KMS ÆÀ ¼Ò½ºÀÇ ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	ì˜¤ë”˜ KMS íŒ€ ì†ŒìŠ¤ì˜ ìŠ¤í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤.
 
-	¿£ÇÇ½Ã¾ÆÀÌµð : 1032114
+	ì—”í”¼ì‹œì•„ì´ë”” : 1032114
 	
-	¿£ÇÇ½Ã ÀÌ¸§ : ¿Õ¿¬ÇØ
+	ì—”í”¼ì‹œ ì´ë¦„ : ì™•ì—°í•´
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : 
+	ì—”í”¼ì‹œê°€ ìžˆëŠ” ë§µ : 
 
-	¿£ÇÇ½Ã ¼³¸í : ¸¶¹ý»ç ¼ö·ÃÀå ÀÔ±¸
+	ì—”í”¼ì‹œ ì„¤ëª… : ë§ˆë²•ì‚¬ ìˆ˜ë ¨ìž¥ ìž…êµ¬
 
 
 */
@@ -35,9 +35,9 @@ function action(mode, type, selection) {
     
     if (status == 0) {
         if (cm.getJob() == 200 && cm.getPlayerStat("LVL") < 20) {
-            cm.sendYesNo("ÀÚ³×´Â ÃÊº¸ ¸ðÇè°¡·Î±º! #b¸¶¹ý»ç ¼ö·ÃÀå#k¿¡ µé¾î°¥ ¼ö ÀÖ°Ú¾î. ¾î¶§? µé¾î°¡º¸°Ú´Â°¡? ´Ü ·¹º§ 20ÀÌ µÇ¸é ³ª¿À°Ô µÇ´Ï ÁÖÀÇÇÏ°Ô~");
+            cm.sendYesNo("ìžë„¤ëŠ” ì´ˆë³´ ëª¨í—˜ê°€ë¡œêµ°! #bë§ˆë²•ì‚¬ ìˆ˜ë ¨ìž¥#kì— ë“¤ì–´ê°ˆ ìˆ˜ ìžˆê² ì–´. ì–´ë•Œ? ë“¤ì–´ê°€ë³´ê² ëŠ”ê°€? ë‹¨ ë ˆë²¨ 20ì´ ë˜ë©´ ë‚˜ì˜¤ê²Œ ë˜ë‹ˆ ì£¼ì˜í•˜ê²Œ~");
         } else {
-            cm.sendOk("ÀÌ°÷Àº ¸¶¹ý»ç ¼ö·ÃÀå ÀÔ±¸¶ó³×.");
+            cm.sendOk("ì´ê³³ì€ ë§ˆë²•ì‚¬ ìˆ˜ë ¨ìž¥ ìž…êµ¬ë¼ë„¤.");
             cm.dispose();
         }
     } else if (status == 1) {

@@ -1,5 +1,5 @@
 /*
-ÆÄ¶õµ¹·û±º
+íŒŒë€ëŒë¥œêµ°
 */
 
 var status = -1;
@@ -14,11 +14,11 @@ function end(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-            qm.sendNext("ÇÏÁö¸¸ Áö±İÀº º¼¼ö¾ø½À´Ï´Ù.");
+            qm.sendNext("í•˜ì§€ë§Œ ì§€ê¸ˆì€ ë³¼ìˆ˜ì—†ìŠµë‹ˆë‹¤.");
         } else if (status == 1) {
-            qm.sendNextPrev("½Ç¸ÁÇÏÁö ¸¶½Ã±â¸¦...");
+            qm.sendNextPrev("ì‹¤ë§í•˜ì§€ ë§ˆì‹œê¸°ë¥¼...");
         } else if (status == 2) {
-            qm.sendNextPrev("Á¦ ÀÏÀº ¿©±â±îÁö °°½À´Ï´Ù. ¾ÕÀ¸·Î Àú¸¦ Å¬¸¯ÇÏ½Ã¸é ÀÚÀ¯ÀüÁ÷ÀÌ °¡´ÉÇÕ´Ï´Ù.");
+            qm.sendNextPrev("ì œ ì¼ì€ ì—¬ê¸°ê¹Œì§€ ê°™ìŠµë‹ˆë‹¤. ì•ìœ¼ë¡œ ì €ë¥¼ í´ë¦­í•˜ì‹œë©´ ììœ ì „ì§ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
         } else if (status == 3) {
             qm.forceCompleteQuest();
             qm.dispose();

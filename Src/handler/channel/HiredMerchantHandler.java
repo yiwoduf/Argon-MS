@@ -1,10 +1,10 @@
 /*
  * ArcStory Project
- * ÃÖÁÖ¿ø sch2307@naver.com
- * ÀÌÁØ junny_adm@naver.com
- * ¿ìÁöÈÆ raccoonfox69@gmail.com
- * °­Á¤±Ô ku3135@nate.com
- * ±èÁøÈ« designer@inerve.kr
+ * ìµœì£¼ì› sch2307@naver.com
+ * ì´ì¤€ junny_adm@naver.com
+ * ìš°ì§€í›ˆ raccoonfox69@gmail.com
+ * ê°•ì •ê·œ ku3135@nate.com
+ * ê¹€ì§„í™ designer@inerve.kr
  */
 package handler.channel;
 
@@ -39,7 +39,7 @@ public class HiredMerchantHandler {
 
             switch (state) {
                 case 1:
-                    c.getPlayer().dropMessage(1, "ÇÁ·¹µå¸¯¿¡°Ô ¸ÕÀú ¹°°ÇÀ» Ã£¾Æ°¡¼¼¿ä.");
+                    c.getPlayer().dropMessage(1, "í”„ë ˆë“œë¦­ì—ê²Œ ë¨¼ì € ë¬¼ê±´ì„ ì°¾ì•„ê°€ì„¸ìš”.");
                     break;
                 case 0:
                     /*boolean merch = true;
@@ -47,13 +47,13 @@ public class HiredMerchantHandler {
                     if (!merch) {
                         c.send(PlayerShopPacket.sendTitleBox());
                     } else {
-                        c.getPlayer().dropMessage(1, "ÀÌ¹Ì °í¿ë»óÁ¡ÀÌ ¿­·Á ÀÖ½À´Ï´Ù.");
+                        c.getPlayer().dropMessage(1, "ì´ë¯¸ ê³ ìš©ìƒì ì´ ì—´ë ¤ ìˆìŠµë‹ˆë‹¤.");
                     }*/
                     boolean merch = c.getChannelServer().constainsMerchant(c.getAccID());
                     if (!merch) {
                         c.send(PlayerShopPacket.sendTitleBox());
                     } else {
-                        c.getPlayer().dropMessage(1, "ÀÌ¹Ì °í¿ë»óÁ¡ÀÌ ¿­·ÁÀÕ½À´Ï´Ù.");
+                        c.getPlayer().dropMessage(1, "ì´ë¯¸ ê³ ìš©ìƒì ì´ ì—´ë ¤ì‡ìŠµë‹ˆë‹¤.");
                     }
                     break;
                 default:
@@ -71,15 +71,15 @@ public class HiredMerchantHandler {
         boolean merch = WorldConnected.hasMerchant(c.getPlayer().getAccountID());
         MerchItemPackage pack;
         if (merch) {
-            c.getPlayer().dropMessage(1, "°í¿ë»óÀÎÀ» ´İ°í ´Ù½Ã ½ÃµµÇØ ÁÖ½Ê½Ã¿À");
+            c.getPlayer().dropMessage(1, "ê³ ìš©ìƒì¸ì„ ë‹«ê³  ë‹¤ì‹œ ì‹œë„í•´ ì£¼ì‹­ì‹œì˜¤");
             c.getPlayer().setConversation(0);
         } else if (c.getChannelServer().isShutdown()) {
-            c.getPlayer().dropMessage(1, "¼Ë´Ù¿îÀÌ ÁøÇàÁßÀÌ¹Ç·Î ÀÌ¿ëÇÏ½Ç¼ö ¾ø½À´Ï´Ù.");
+            c.getPlayer().dropMessage(1, "ì…§ë‹¤ìš´ì´ ì§„í–‰ì¤‘ì´ë¯€ë¡œ ì´ìš©í•˜ì‹¤ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
             c.getPlayer().setConversation(0);
         } else if (conv == 3) {
             pack = loadItemFrom_Database(c.getPlayer().getId());
             if (pack == null) {
-                c.getPlayer().dropMessage(1, "º¸°üÁßÀÎ ¾ÆÀÌÅÛÀÌ ¾ø½À´Ï´Ù.");
+                c.getPlayer().dropMessage(1, "ë³´ê´€ì¤‘ì¸ ì•„ì´í…œì´ ì—†ìŠµë‹ˆë‹¤.");
                 c.getPlayer().setConversation(0);
             } else {
                 c.send(PlayerShopPacket.merchItemStore_ItemData(pack));
@@ -117,11 +117,11 @@ public class HiredMerchantHandler {
             final MerchItemPackage pack = loadItemFrom_Database(c.getPlayer().getId());
             if (c.CheckSecondPassword(secondPassword)) {
                 if (merch) {
-                    c.getPlayer().dropMessage(1, "ÇØ´ç °èÁ¤À¸·Î ¿­·ÁÀÕ´Â °í¿ë»óÀÎÀ» ´İ¾ÆÁÖ½ÅÈÄ¿¡ ÀÌ¿ë ºÎÅ¹µå¸³´Ï´Ù.");
+                    c.getPlayer().dropMessage(1, "í•´ë‹¹ ê³„ì •ìœ¼ë¡œ ì—´ë ¤ì‡ëŠ” ê³ ìš©ìƒì¸ì„ ë‹«ì•„ì£¼ì‹ í›„ì— ì´ìš© ë¶€íƒë“œë¦½ë‹ˆë‹¤.");
                     c.getSession().writeAndFlush(MainPacketCreator.resetActions());
                 } else {
                     if (pack == null) {
-                        c.send(PlayerShopPacket.merchItemStore_ItemDataNone()); //º¸°üÁßÀÎ ¾ÆÀÌÅÛÀÌ ¾ø½À´Ï´Ù.
+                        c.send(PlayerShopPacket.merchItemStore_ItemDataNone()); //ë³´ê´€ì¤‘ì¸ ì•„ì´í…œì´ ì—†ìŠµë‹ˆë‹¤.
                         c.getPlayer().setConversation(0);
                     } else {
                         c.send(PlayerShopPacket.merchItemStore_ItemData(pack));
@@ -155,7 +155,7 @@ public class HiredMerchantHandler {
                     c.send(PlayerShopPacket.merchItem_Message((byte) 0x24));  // v 1.2.258 +2
                 }
             } else {
-                c.getPlayer().dropMessage(1, "Ã£À» ¾ÆÀÌÅÛ È¤Àº ¸Ş¼Ò°¡ ¾ø½À´Ï´Ù.");
+                c.getPlayer().dropMessage(1, "ì°¾ì„ ì•„ì´í…œ í˜¹ì€ ë©”ì†Œê°€ ì—†ìŠµë‹ˆë‹¤.");
             }
         } else if (operation == 0x21) {  // v 1.2.258 +2
             c.getPlayer().setConversation(0);

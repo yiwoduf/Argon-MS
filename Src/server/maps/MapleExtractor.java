@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -15,7 +15,7 @@ import packet.creators.MainPacketCreator;
 
 /**
  *
- * @author ¿¡¹İÅ×ÀÌ¸£
+ * @author ì—ë°˜í…Œì´ë¥´
  */
 public class MapleExtractor extends AbstractHinaMapObject {
     public int owner, timeLeft, itemId, fee;

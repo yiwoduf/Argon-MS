@@ -1,9 +1,9 @@
 var status = 0;
-var º° = "#fUI/FarmUI.img/objectStatus/star/whole#";
-º°»¡ = "#fUI/GuildMark.img/Mark/Pattern/00004001/1#"
-º°ÆÄ = "#fUI/GuildMark.img/Mark/Pattern/00004001/11#"
-º°º¸ = "#fUI/GuildMark.img/Mark/Pattern/00004001/13#"
-º°È¸ = "#fUI/GuildMark.img/Mark/Pattern/00004001/15#"
+var ë³„ = "#fUI/FarmUI.img/objectStatus/star/whole#";
+ë³„ë¹¨ = "#fUI/GuildMark.img/Mark/Pattern/00004001/1#"
+ë³„íŒŒ = "#fUI/GuildMark.img/Mark/Pattern/00004001/11#"
+ë³„ë³´ = "#fUI/GuildMark.img/Mark/Pattern/00004001/13#"
+ë³„íšŒ = "#fUI/GuildMark.img/Mark/Pattern/00004001/15#"
 importPackage(Packages.constants);
 
 function start() {
@@ -14,8 +14,8 @@ function action(mode, type, selection) { if (mode == -1) { cm.dispose(); } else 
 
     if (status == 0) {
 		
-		var chat = "           #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+" ÀÌº¥Æ®½Ã½ºÅÛ "+º°+"\r\n#fs10##Cgray#                             "+ServerConstants.serverName+"ÀÇ ÀÌº¥Æ®½Ã½ºÅÛÀÔ´Ï´Ù.#k\r\n\r\n\r\n#fs12#";
-		chat += "#L1#"+º°»¡+" #r[NEW]#k ¿ÀÇÂ±â³ä È«º¸ÀÌº¥Æ®#k\r\n";
+		var chat = "           #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+" ì´ë²¤íŠ¸ì‹œìŠ¤í…œ "+ë³„+"\r\n#fs10##Cgray#                             "+ServerConstants.serverName+"ì˜ ì´ë²¤íŠ¸ì‹œìŠ¤í…œì…ë‹ˆë‹¤.#k\r\n\r\n\r\n#fs12#";
+		chat += "#L1#"+ë³„ë¹¨+" #r[NEW]#k ì˜¤í”ˆê¸°ë… í™ë³´ì´ë²¤íŠ¸#k\r\n";
 		cm.sendSimple(chat);	
 
 	} else if (status == 1) {

@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹èÁöÈÆ raccoonfox69@gmail.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°°ì§€í›ˆ raccoonfox69@gmail.com
  * ==================================
  * 
  */
@@ -44,125 +44,125 @@ public class PlayerCommand implements Command {
     public void execute(final MapleClient c, String[] splitted) throws Exception, IllegalCommandSyntaxException {
         ChannelServer cserv = c.getChannelServer();
 
-        if (splitted[0].equals("@Èû")) {
+        if (splitted[0].equals("@í˜")) {
             int str = Integer.parseInt(splitted[1]);
             final PlayerStats stat = c.getPlayer().getStat();
 
             if (stat.getStr() + str > c.getPlayer().getMaxStats() || c.getPlayer().getRemainingAp() < str || c.getPlayer().getRemainingAp() < 0 || str < 0) {
-                c.getPlayer().dropMessage(5, "¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                c.getPlayer().dropMessage(5, "ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
             } else {
                 stat.setStr(stat.getStr() + str);
                 c.getPlayer().setRemainingAp(c.getPlayer().getRemainingAp() - str);
                 c.getPlayer().updateSingleStat(PlayerStat.AVAILABLEAP, c.getPlayer().getRemainingAp());
                 c.getPlayer().updateSingleStat(PlayerStat.STR, stat.getStr());
             }
-        } else if (splitted[0].equals("@ÀÎÆ®")) {
+        } else if (splitted[0].equals("@ì¸íŠ¸")) {
             int int_ = Integer.parseInt(splitted[1]);
             final PlayerStats stat = c.getPlayer().getStat();
 
             if (stat.getInt() + int_ > c.getPlayer().getMaxStats() || c.getPlayer().getRemainingAp() < int_ || c.getPlayer().getRemainingAp() < 0 || int_ < 0) {
-                c.getPlayer().dropMessage(5, "¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                c.getPlayer().dropMessage(5, "ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
             } else {
                 stat.setInt(stat.getInt() + int_);
                 c.getPlayer().setRemainingAp(c.getPlayer().getRemainingAp() - int_);
                 c.getPlayer().updateSingleStat(PlayerStat.AVAILABLEAP, c.getPlayer().getRemainingAp());
                 c.getPlayer().updateSingleStat(PlayerStat.INT, stat.getInt());
             }
-        } else if (splitted[0].equals("@µ¦½º")) {
+        } else if (splitted[0].equals("@ë±ìŠ¤")) {
             int dex = Integer.parseInt(splitted[1]);
             final PlayerStats stat = c.getPlayer().getStat();
 
             if (stat.getDex() + dex > c.getPlayer().getMaxStats() || c.getPlayer().getRemainingAp() < dex || c.getPlayer().getRemainingAp() < 0 || dex < 0) {
-                c.getPlayer().dropMessage(5, "¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                c.getPlayer().dropMessage(5, "ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
             } else {
                 stat.setDex(stat.getDex() + dex);
                 c.getPlayer().setRemainingAp(c.getPlayer().getRemainingAp() - dex);
                 c.getPlayer().updateSingleStat(PlayerStat.AVAILABLEAP, c.getPlayer().getRemainingAp());
                 c.getPlayer().updateSingleStat(PlayerStat.DEX, stat.getDex());
             }
-        } else if (splitted[0].equals("@·°")) {
+        } else if (splitted[0].equals("@ëŸ­")) {
             int luk = Integer.parseInt(splitted[1]);
             final PlayerStats stat = c.getPlayer().getStat();
 
             if (stat.getLuk() + luk > c.getPlayer().getMaxStats() || c.getPlayer().getRemainingAp() < luk || c.getPlayer().getRemainingAp() < 0 || luk < 0) {
-                c.getPlayer().dropMessage(5, "¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                c.getPlayer().dropMessage(5, "ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
             } else {
                 stat.setLuk(stat.getLuk() + luk);
                 c.getPlayer().setRemainingAp(c.getPlayer().getRemainingAp() - luk);
                 c.getPlayer().updateSingleStat(PlayerStat.AVAILABLEAP, c.getPlayer().getRemainingAp());
                 c.getPlayer().updateSingleStat(PlayerStat.LUK, stat.getLuk());
             }
-        } else if (splitted[0].equals("@ÀÎº¥ÃÊ±âÈ­")) {
+        } else if (splitted[0].equals("@ì¸ë²¤ì´ˆê¸°í™”")) {
             Map<Pair<Short, Short>, MapleInventoryType> eqs = new ArrayMap<Pair<Short, Short>, MapleInventoryType>();
-            if (splitted[1].equals("¸ğµÎ")) {
+            if (splitted[1].equals("ëª¨ë‘")) {
                 for (MapleInventoryType type : MapleInventoryType.values()) {
                     for (IItem item : c.getPlayer().getInventory(type)) {
                         eqs.put(new Pair<Short, Short>(item.getPosition(), item.getQuantity()), type);
                     }
                 }
-            } else if (splitted[1].equals("ÀåÂø")) {
+            } else if (splitted[1].equals("ì¥ì°©")) {
                 for (IItem item : c.getPlayer().getInventory(MapleInventoryType.EQUIPPED)) {
                     eqs.put(new Pair<Short, Short>(item.getPosition(), item.getQuantity()), MapleInventoryType.EQUIPPED);
                 }
-            } else if (splitted[1].equals("Àåºñ")) {
+            } else if (splitted[1].equals("ì¥ë¹„")) {
                 for (IItem item : c.getPlayer().getInventory(MapleInventoryType.EQUIP)) {
                     eqs.put(new Pair<Short, Short>(item.getPosition(), item.getQuantity()), MapleInventoryType.EQUIP);
                 }
-            } else if (splitted[1].equals("¼Òºñ")) {
+            } else if (splitted[1].equals("ì†Œë¹„")) {
                 for (IItem item : c.getPlayer().getInventory(MapleInventoryType.USE)) {
                     eqs.put(new Pair<Short, Short>(item.getPosition(), item.getQuantity()), MapleInventoryType.USE);
                 }
-            } else if (splitted[1].equals("¼³Ä¡")) {
+            } else if (splitted[1].equals("ì„¤ì¹˜")) {
                 for (IItem item : c.getPlayer().getInventory(MapleInventoryType.SETUP)) {
                     eqs.put(new Pair<Short, Short>(item.getPosition(), item.getQuantity()), MapleInventoryType.SETUP);
                 }
-            } else if (splitted[1].equals("±âÅ¸")) {
+            } else if (splitted[1].equals("ê¸°íƒ€")) {
                 for (IItem item : c.getPlayer().getInventory(MapleInventoryType.ETC)) {
                     eqs.put(new Pair<Short, Short>(item.getPosition(), item.getQuantity()), MapleInventoryType.ETC);
                 }
-            } else if (splitted[1].equals("Ä³½Ã")) {
+            } else if (splitted[1].equals("ìºì‹œ")) {
                 for (IItem item : c.getPlayer().getInventory(MapleInventoryType.CASH)) {
                     eqs.put(new Pair<Short, Short>(item.getPosition(), item.getQuantity()), MapleInventoryType.CASH);
                 }
             } else {
-                c.getPlayer().dropMessage(6, "[¸ğµÎ/ÀåÂø/Àåºñ/¼Òºñ/¼³Ä¡/±âÅ¸/Ä³½Ã]");
+                c.getPlayer().dropMessage(6, "[ëª¨ë‘/ì¥ì°©/ì¥ë¹„/ì†Œë¹„/ì„¤ì¹˜/ê¸°íƒ€/ìºì‹œ]");
             }
             for (Map.Entry<Pair<Short, Short>, MapleInventoryType> eq : eqs.entrySet()) {
                 InventoryManipulator.removeFromSlot(c, eq.getValue(), eq.getKey().left, eq.getKey().right, false, false);
             }
-        } else if (splitted[0].equals("@·¢") || splitted[0].equals("@·º") || splitted[0].equals("@?")) {
+        } else if (splitted[0].equals("@ë™") || splitted[0].equals("@ë ‰") || splitted[0].equals("@?")) {
             NPCScriptManager.getInstance().dispose(c);
             c.getSession().write(MainPacketCreator.resetActions());
-            c.getPlayer().dropMessage(1, "¿£ÇÇ½Ã ·ºÀÌ Á¦°ÅµÇ¾ú½À´Ï´Ù.");
-        } else if (splitted[0].equals("@±¤Àå") || splitted[0].equals("@Çì³×½Ã½º") || splitted[0].equals("@¸¶À»")) {
+            c.getPlayer().dropMessage(1, "ì—”í”¼ì‹œ ë ‰ì´ ì œê±°ë˜ì—ˆìŠµë‹ˆë‹¤.");
+        } else if (splitted[0].equals("@ê´‘ì¥") || splitted[0].equals("@í—¤ë„¤ì‹œìŠ¤") || splitted[0].equals("@ë§ˆì„")) {
             int jobid = c.getPlayer().getJob();
             if (jobid == 0 || jobid == 1000 || jobid == 2000 || jobid == 2001 || jobid == 2002 || jobid == 2003 || jobid == 2004
                     || jobid == 3000 || jobid == 3001 || jobid == 5000 || jobid == 6000 || jobid == 6001 || (jobid == 10112 && c.getPlayer().getMapId() == ServerConstants.startMap)) {
-                c.getPlayer().dropMessage(5, "[½Ã½ºÅÛ] ÃÊº¸ÀÚ´Â ±¤ÀåÀ¸·Î ÀÌµ¿ ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+                c.getPlayer().dropMessage(5, "[ì‹œìŠ¤í…œ] ì´ˆë³´ìëŠ” ê´‘ì¥ìœ¼ë¡œ ì´ë™ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                 return;
             }
             if (c.getPlayer().getMapId() == 910340500 || c.getPlayer().getMapId() == 240050200 || c.getPlayer().getMapId() == 272000600 || c.getPlayer().getMapId() == 921160400) {
-                c.getPlayer().dropMessage(5, "[½Ã½ºÅÛ] º¸½º·¹ÀÌµå µµÁß¿¡´Â ÀÌµ¿ ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+                c.getPlayer().dropMessage(5, "[ì‹œìŠ¤í…œ] ë³´ìŠ¤ë ˆì´ë“œ ë„ì¤‘ì—ëŠ” ì´ë™ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                 return;
             }
-            MapleMap target = c.getChannelServer().getMapFactory().getMap(ServerConstants.mainMap); // Ä¡¿ì¾¾ :: ±¤Àå µû·Î ¼³Á¤
+            MapleMap target = c.getChannelServer().getMapFactory().getMap(ServerConstants.mainMap); // ì¹˜ìš°ì”¨ :: ê´‘ì¥ ë”°ë¡œ ì„¤ì •
             MaplePortal targetPortal = null;
             if (splitted.length > 1) {
                 try {
                     targetPortal = target.getPortal(Integer.parseInt(splitted[1]));
                 } catch (IndexOutOfBoundsException e) {
-                    c.getPlayer().dropMessage(5, "¾ø´Â Æ÷Å»ÀÇ °ªÀÌ ÀÖ½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(5, "ì—†ëŠ” í¬íƒˆì˜ ê°’ì´ ìˆìŠµë‹ˆë‹¤.");
                 }
             }
             if (targetPortal == null) {
                 targetPortal = target.getPortal(0);
             }
             c.getPlayer().changeMap(target, targetPortal);
-        } else if (splitted[0].equals("@ÀÚÀ¯½ÃÀå")) {
+        } else if (splitted[0].equals("@ììœ ì‹œì¥")) {
             int jobid = c.getPlayer().getJob();
             if (jobid == 0 || jobid == 1000 || jobid == 2000 || jobid == 2001 || jobid == 2002 || jobid == 2003 || jobid == 2004
                     || jobid == 3000 || jobid == 3001 || jobid == 5000 || jobid == 6000 || jobid == 6001) {
-                c.getPlayer().dropMessage(5, "ÃÊº¸ÀÚ´Â ÀÚÀ¯½ÃÀåÀ¸·Î ÀÌµ¿ ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+                c.getPlayer().dropMessage(5, "ì´ˆë³´ìëŠ” ììœ ì‹œì¥ìœ¼ë¡œ ì´ë™ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                 return;
             }
             MapleMap target = c.getChannelServer().getMapFactory().getMap(910000000);
@@ -172,7 +172,7 @@ public class PlayerCommand implements Command {
                     targetPortal = target.getPortal(Integer.parseInt(splitted[1]));
                 } catch (IndexOutOfBoundsException e) {
                     // noop, assume the gm didn't know how many portals there are
-                    c.getPlayer().dropMessage(5, "¾ø´Â Æ÷Å»ÀÇ °ªÀÌ ÀÖ½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(5, "ì—†ëŠ” í¬íƒˆì˜ ê°’ì´ ìˆìŠµë‹ˆë‹¤.");
                 } catch (NumberFormatException a) {
                     // noop, assume that the gm is drunk
                 }
@@ -181,39 +181,39 @@ public class PlayerCommand implements Command {
                 targetPortal = target.getPortal(0);
             }
             c.getPlayer().changeMap(target, targetPortal);
-        } else if (splitted[0].equals("@µµ¿ò¸»") || splitted[0].equals("@¸í·É¾î")) {
-            c.getPlayer().dropMessage(5, "»ç¿ë°¡´ÉÇÑ ¸í·É¾î´Â ´ÙÀ½°ú °°½À´Ï´Ù.:");
-            c.getPlayer().dropMessage(5, "¸í·É¾î·Î ÀÎÇÑ ºÒÀÌÀÍ¿¡ °ü¸®ÀÚ´Â Ã¥ÀÓÀÌ ¾øÀ½À» ¸í½ÃÇÕ´Ï´Ù. :");
-            c.getPlayer().dropMessage(5, "@ÀúÀå : Á¾·áÀü¿¡ ²À ÃÄ¾ßÇÏ´Â ¸í·É¾îÀÔ´Ï´Ù. ¸í·É¾î¸¦ Ä¡Áö¾Ê°í ¹ß»ıÇÏ´Â ¸ğµç ¿À·ù¿¡ ´ëÇÑ °ü¸®ÀÚÀÇ Ã¥ÀÓÀº ¾ø½À´Ï´Ù.");
-            c.getPlayer().dropMessage(5, "@Èû, @µ¦½º, @ÀÎÆ®, @·° <ÂïÀ» ¼öÄ¡> : ÇØ´ç ½ºÅÈÀ» ¸¶¿ì½º Å¬¸¯ ´ë½Å ÂïÀ» ¼ö ÀÖ½À´Ï´Ù.");
-            c.getPlayer().dropMessage(5, "@ÃÊÀÚ : ÃÊÀÚ ¿£ÇÇ½Ã µîÀå.(Ã³À½¿À½Ã´Â À¯ÀúºĞµé ÇÊ¼ö »çÇ×)");
-            c.getPlayer().dropMessage(5, "@·º : °ø°İ µî Ã¤ÆÃ¿Ü¿¡ ¾Æ¹«°Íµµ ¾ÈµÉ¶§ »ç¿ëÇÏ¼¼¿ä.");
-            c.getPlayer().dropMessage(5, "@±¤Àå : " + ServerConstants.serverName + " ±¤ÀåÀ¸·Î ÀÌµ¿ÇÕ´Ï´Ù.");
-            c.getPlayer().dropMessage(5, "@ÀÎº¥ÃÊ±âÈ­ : ÀÎº¥ÃÊ±âÈ­ ÅÇ ¸ğµÎ/ÀåÂø/Àåºñ/¼Òºñ/¼³Ä¡/±âÅ¸/Ä³½Ã");
-            c.getPlayer().dropMessage(5, "@½ºÅ³¸¶½ºÅÍ : ÇöÀç ÀÚ½ÅÀÇ Á÷¾÷ ½ºÅ³À» ¸¶½ºÅÍÇÕ´Ï´Ù.");
-            c.getPlayer().dropMessage(5, "@·Î±×ÀÎÆ÷ÀÎÆ® : ·Î±×ÀÎÆ÷ÀÎÆ® »óÁ¡À» È£ÃâÇÕ´Ï´Ù.");
-            c.getPlayer().dropMessage(5, "@ÃÊÀÚ : ÃÊÀÚ ¿£ÇÇ½Ã µîÀå.(Ã³À½¿À½Ã´Â À¯ÀúºĞµé ÇÊ¼ö »çÇ×)");
-            c.getPlayer().dropMessage(5, "@µ¿Á¢ : ÇöÀç ¸ŞÀÌÇÃ¿Â¶óÀÎÀÇ µ¿Á¢¼ö¸¦ È®ÀÎÇÒ ¼ö ÀÖ½À´Ï´Ù.");
-            c.getPlayer().dropMessage(5, "@È¯»ı : »ç³ÉÁß¿¡ È¯»ıÀ» »¡¸® ÇÒ ¼ö ÀÖµµ·Ï ¸¸µç ½Ã½ºÅÛ. È¯»ı ¿£ÇÇ½Ã°¡ ³ª¿Â´Ù.");
-            c.getPlayer().dropMessage(5, "@ÃßÃµÀÎ : ÃßÃµÀÎ ¿£ÇÇ½Ã°¡ ³ª¿Â´Ù. ºí·Î±×³ª À¯Æ©ºêµî È«º¸ °æ·Î¸¦ µû¶ó ¿Ô´Ù¸é ÃßÃµÀÎ µî·ÏÀº ÇÊ¼öÀÌ´Ù.");
-            c.getPlayer().dropMessage(5, "~ÇÒ¸» : ÀüÃ¼Ã¤ÆÃ");
+        } else if (splitted[0].equals("@ë„ì›€ë§") || splitted[0].equals("@ëª…ë ¹ì–´")) {
+            c.getPlayer().dropMessage(5, "ì‚¬ìš©ê°€ëŠ¥í•œ ëª…ë ¹ì–´ëŠ” ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤.:");
+            c.getPlayer().dropMessage(5, "ëª…ë ¹ì–´ë¡œ ì¸í•œ ë¶ˆì´ìµì— ê´€ë¦¬ìëŠ” ì±…ì„ì´ ì—†ìŒì„ ëª…ì‹œí•©ë‹ˆë‹¤. :");
+            c.getPlayer().dropMessage(5, "@ì €ì¥ : ì¢…ë£Œì „ì— ê¼­ ì³ì•¼í•˜ëŠ” ëª…ë ¹ì–´ì…ë‹ˆë‹¤. ëª…ë ¹ì–´ë¥¼ ì¹˜ì§€ì•Šê³  ë°œìƒí•˜ëŠ” ëª¨ë“  ì˜¤ë¥˜ì— ëŒ€í•œ ê´€ë¦¬ìì˜ ì±…ì„ì€ ì—†ìŠµë‹ˆë‹¤.");
+            c.getPlayer().dropMessage(5, "@í˜, @ë±ìŠ¤, @ì¸íŠ¸, @ëŸ­ <ì°ì„ ìˆ˜ì¹˜> : í•´ë‹¹ ìŠ¤íƒ¯ì„ ë§ˆìš°ìŠ¤ í´ë¦­ ëŒ€ì‹  ì°ì„ ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
+            c.getPlayer().dropMessage(5, "@ì´ˆì : ì´ˆì ì—”í”¼ì‹œ ë“±ì¥.(ì²˜ìŒì˜¤ì‹œëŠ” ìœ ì €ë¶„ë“¤ í•„ìˆ˜ ì‚¬í•­)");
+            c.getPlayer().dropMessage(5, "@ë ‰ : ê³µê²© ë“± ì±„íŒ…ì™¸ì— ì•„ë¬´ê²ƒë„ ì•ˆë ë•Œ ì‚¬ìš©í•˜ì„¸ìš”.");
+            c.getPlayer().dropMessage(5, "@ê´‘ì¥ : " + ServerConstants.serverName + " ê´‘ì¥ìœ¼ë¡œ ì´ë™í•©ë‹ˆë‹¤.");
+            c.getPlayer().dropMessage(5, "@ì¸ë²¤ì´ˆê¸°í™” : ì¸ë²¤ì´ˆê¸°í™” íƒ­ ëª¨ë‘/ì¥ì°©/ì¥ë¹„/ì†Œë¹„/ì„¤ì¹˜/ê¸°íƒ€/ìºì‹œ");
+            c.getPlayer().dropMessage(5, "@ìŠ¤í‚¬ë§ˆìŠ¤í„° : í˜„ì¬ ìì‹ ì˜ ì§ì—… ìŠ¤í‚¬ì„ ë§ˆìŠ¤í„°í•©ë‹ˆë‹¤.");
+            c.getPlayer().dropMessage(5, "@ë¡œê·¸ì¸í¬ì¸íŠ¸ : ë¡œê·¸ì¸í¬ì¸íŠ¸ ìƒì ì„ í˜¸ì¶œí•©ë‹ˆë‹¤.");
+            c.getPlayer().dropMessage(5, "@ì´ˆì : ì´ˆì ì—”í”¼ì‹œ ë“±ì¥.(ì²˜ìŒì˜¤ì‹œëŠ” ìœ ì €ë¶„ë“¤ í•„ìˆ˜ ì‚¬í•­)");
+            c.getPlayer().dropMessage(5, "@ë™ì ‘ : í˜„ì¬ ë©”ì´í”Œì˜¨ë¼ì¸ì˜ ë™ì ‘ìˆ˜ë¥¼ í™•ì¸í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
+            c.getPlayer().dropMessage(5, "@í™˜ìƒ : ì‚¬ëƒ¥ì¤‘ì— í™˜ìƒì„ ë¹¨ë¦¬ í•  ìˆ˜ ìˆë„ë¡ ë§Œë“  ì‹œìŠ¤í…œ. í™˜ìƒ ì—”í”¼ì‹œê°€ ë‚˜ì˜¨ë‹¤.");
+            c.getPlayer().dropMessage(5, "@ì¶”ì²œì¸ : ì¶”ì²œì¸ ì—”í”¼ì‹œê°€ ë‚˜ì˜¨ë‹¤. ë¸”ë¡œê·¸ë‚˜ ìœ íŠœë¸Œë“± í™ë³´ ê²½ë¡œë¥¼ ë”°ë¼ ì™”ë‹¤ë©´ ì¶”ì²œì¸ ë“±ë¡ì€ í•„ìˆ˜ì´ë‹¤.");
+            c.getPlayer().dropMessage(5, "~í• ë§ : ì „ì²´ì±„íŒ…");
 
-        } else if (splitted[0].equals("@ÀúÀå")) {
+        } else if (splitted[0].equals("@ì €ì¥")) {
             c.getPlayer().saveToDB(false, false);
-            c.getPlayer().dropMessage(5, "ÀúÀåÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
-        } else if (splitted[0].equals("@ÃßÃµÀÎ")) {
+            c.getPlayer().dropMessage(5, "ì €ì¥ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
+        } else if (splitted[0].equals("@ì¶”ì²œì¸")) {
             NPCScriptManager.getInstance().dispose(c);
             NPCScriptManager.getInstance().start(c, 9010031);
-        } else if (splitted[0].equals("@ÃÊÀÚ")) {
+        } else if (splitted[0].equals("@ì´ˆì")) {
             NPCScriptManager.getInstance().dispose(c);
             NPCScriptManager.getInstance().start(c, 9001040);
-        } else if (splitted[0].equals("@µ¿Á¢")) {
-            c.getPlayer().Message(11, "ÇöÀç ¸ŞÀÌÇÃ ¼­¹öÀÇ µ¿Á¢¼ö´Â : " + ChannelServer.getOnlineConnections() + "¸í ÀÔ´Ï´Ù.");
-        } else if (splitted[0].equals("@º¸Á¶¹«±âÇØÁ¦")) {
+        } else if (splitted[0].equals("@ë™ì ‘")) {
+            c.getPlayer().Message(11, "í˜„ì¬ ë©”ì´í”Œ ì„œë²„ì˜ ë™ì ‘ìˆ˜ëŠ” : " + ChannelServer.getOnlineConnections() + "ëª… ì…ë‹ˆë‹¤.");
+        } else if (splitted[0].equals("@ë³´ì¡°ë¬´ê¸°í•´ì œ")) {
             IEquip equip = null;
             equip = (IEquip) c.getPlayer().getInventory(MapleInventoryType.EQUIPPED).getItem((byte) -10);
             if (equip == null) {
-                c.getPlayer().Message(1, "ÀåÂøÁßÀÎ º¸Á¶¹«±â°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+                c.getPlayer().Message(1, "ì¥ì°©ì¤‘ì¸ ë³´ì¡°ë¬´ê¸°ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
                 c.getSession().writeAndFlush(MainPacketCreator.resetActions());
                 return;
             }
@@ -225,48 +225,48 @@ public class PlayerCommand implements Command {
             MapleMap currentMap = c.getPlayer().getMap();
             currentMap.removePlayer(c.getPlayer());
             currentMap.addPlayer(c.getPlayer());
-        } else if (splitted[0].equals("@·¢") || splitted[0].equals("@·º") || splitted[0].equals("@?")) {
+        } else if (splitted[0].equals("@ë™") || splitted[0].equals("@ë ‰") || splitted[0].equals("@?")) {
             NPCScriptManager.getInstance().dispose(c);
             c.getSession().write(MainPacketCreator.resetActions());
-            c.getPlayer().dropMessage(1, "¿£ÇÇ½Ã ·ºÀÌ Á¦°ÅµÇ¾ú½À´Ï´Ù.");
-        } else if (splitted[0].equals("@°æ¸ÅÀå")) {
+            c.getPlayer().dropMessage(1, "ì—”í”¼ì‹œ ë ‰ì´ ì œê±°ë˜ì—ˆìŠµë‹ˆë‹¤.");
+        } else if (splitted[0].equals("@ê²½ë§¤ì¥")) {
             NPCScriptManager.getInstance().start(c, 9030300);
             c.getPlayer().ea();
-        } else if (splitted[0].equals("@È¯»ı")) {
+        } else if (splitted[0].equals("@í™˜ìƒ")) {
             NPCScriptManager.getInstance().start(c, 2491006);
             c.getPlayer().ea();
-        } else if (splitted[0].equals("@½ºÅİ¸®·Îµå") || splitted[0].equals("@½ºÅÈ¸®·Îµå")) {
+        } else if (splitted[0].equals("@ìŠ¤í…Ÿë¦¬ë¡œë“œ") || splitted[0].equals("@ìŠ¤íƒ¯ë¦¬ë¡œë“œ")) {
             c.getPlayer().getStat().recalcLocalStats(c.getPlayer());
-            c.getPlayer().dropMessage(5, "[¾Ë¸²] ½ºÅİ¸®·Îµå¸¦ ¿Ï·á ÇÏ¿´½À´Ï´Ù.");
+            c.getPlayer().dropMessage(5, "[ì•Œë¦¼] ìŠ¤í…Ÿë¦¬ë¡œë“œë¥¼ ì™„ë£Œ í•˜ì˜€ìŠµë‹ˆë‹¤.");
             c.getPlayer().giveDebuff(DiseaseStats.ZOMBIFY, MobSkillFactory.getMobSkill(133, 1));
-        } else if (splitted[0].equals("@½ºÅ³¸¶½ºÅÍ")) {
-            if (GameConstants.isZero(c.getPlayer().getJob())) { // Ä¡¿ì¾¾ :: Á¦·Î @½ºÅ³¸¶½ºÅÍ
+        } else if (splitted[0].equals("@ìŠ¤í‚¬ë§ˆìŠ¤í„°")) {
+            if (GameConstants.isZero(c.getPlayer().getJob())) { // ì¹˜ìš°ì”¨ :: ì œë¡œ @ìŠ¤í‚¬ë§ˆìŠ¤í„°
                 c.getPlayer().maxskill(10100);
                 c.getPlayer().maxskill(10110);
                 c.getPlayer().maxskill(10111);
                 c.getPlayer().maxskill(10112);
-                c.getPlayer().Message(5, "½ºÅ³¸¶½ºÅÍ°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+                c.getPlayer().Message(5, "ìŠ¤í‚¬ë§ˆìŠ¤í„°ê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
                 return;
             }
             for (int i = 0; i < (c.getPlayer().getJob() % 10) + 1; i++) {
                 c.getPlayer().maxskill(((i + 1) == ((c.getPlayer().getJob() % 10) + 1)) ? c.getPlayer().getJob() - (c.getPlayer().getJob() % 100) : c.getPlayer().getJob() - (i + 1));
             }
             c.getPlayer().maxskill(c.getPlayer().getJob());
-            c.getPlayer().Message(5, "½ºÅ³¸¶½ºÅÍ°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
-        } else if (splitted[0].equals("@°¡ÀÌµå")) {
-            String[][] list = {{"¾È³çÇÏ¼¼¿ä #r¸ŞÀÌÇÃ¿Â¶óÀÎ#kÀ» ¾È³»ÇØÁÙ ¿î¿µÀÚ ÀÔ´Ï´Ù.", "1500"},
-            {"#r¸ŞÀÌÇÃ¿Â¶óÀÎ#kÀÇ ¸¸´É»óÁ¡Àº \r\n#bPANG TRADE#k¹öÆ°À» ÀÌ¿ëÇÏ°Å³ª ±¤Àå¿¡ ÀÖ´Â ²µµğ ¿¡°Ô¼­ ÀÌ¿ë ÇÒ ¼ö ÀÖ½À´Ï´Ù.", "4000"},
-            {"#r¸ŞÀÌÇÃ¿Â¶óÀÎ#kÀº ½ºÅ³¸¶½ºÅÍ ½Ã½ºÅÛÀ» »ç¿ëÁßÀÌ¸ç #b@½ºÅ³¸¶½ºÅÍ#k\r\n¸í·É¾î·Î »ç¿ë °¡´ÉÇÕ´Ï´Ù.", "4000"},
-            {"#k¸¹Àº È«º¸¿Í ÇÃ·¹ÀÌ ºÎÅ¹µå¸³´Ï´Ù. °¨»çÇÕ´Ï´Ù.", "4000"},};
+            c.getPlayer().Message(5, "ìŠ¤í‚¬ë§ˆìŠ¤í„°ê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
+        } else if (splitted[0].equals("@ê°€ì´ë“œ")) {
+            String[][] list = {{"ì•ˆë…•í•˜ì„¸ìš” #rë©”ì´í”Œì˜¨ë¼ì¸#kì„ ì•ˆë‚´í•´ì¤„ ìš´ì˜ì ì…ë‹ˆë‹¤.", "1500"},
+            {"#rë©”ì´í”Œì˜¨ë¼ì¸#kì˜ ë§ŒëŠ¥ìƒì ì€ \r\n#bPANG TRADE#kë²„íŠ¼ì„ ì´ìš©í•˜ê±°ë‚˜ ê´‘ì¥ì— ìˆëŠ” ê»¨ë”” ì—ê²Œì„œ ì´ìš© í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.", "4000"},
+            {"#rë©”ì´í”Œì˜¨ë¼ì¸#kì€ ìŠ¤í‚¬ë§ˆìŠ¤í„° ì‹œìŠ¤í…œì„ ì‚¬ìš©ì¤‘ì´ë©° #b@ìŠ¤í‚¬ë§ˆìŠ¤í„°#k\r\nëª…ë ¹ì–´ë¡œ ì‚¬ìš© ê°€ëŠ¥í•©ë‹ˆë‹¤.", "4000"},
+            {"#kë§ì€ í™ë³´ì™€ í”Œë ˆì´ ë¶€íƒë“œë¦½ë‹ˆë‹¤. ê°ì‚¬í•©ë‹ˆë‹¤.", "4000"},};
             for (String[] txt : list) {
                 c.getSession().writeAndFlush(MainPacketCreator.OnAddPopupSay(9062000, Integer.parseInt(txt[1]), txt[0], ""));
             }
-        } else if (splitted[0].equals("@·Î±×ÀÎÆ÷ÀÎÆ®")) {
+        } else if (splitted[0].equals("@ë¡œê·¸ì¸í¬ì¸íŠ¸")) {
             NPCScriptManager.getInstance().start(c, 9062000, "lpShop");
             c.getSession().writeAndFlush(MainPacketCreator.resetActions());
-            /* Ä¡¿ì¾¾ :: English Translated GM Command Starts here */
+            /* ì¹˜ìš°ì”¨ :: English Translated GM Command Starts here */
         } else if (splitted[0].equals("@skillmaster")) {
-            if (GameConstants.isZero(c.getPlayer().getJob())) { // Ä¡¿ì¾¾ :: Á¦·Î @½ºÅ³¸¶½ºÅÍ
+            if (GameConstants.isZero(c.getPlayer().getJob())) { // ì¹˜ìš°ì”¨ :: ì œë¡œ @ìŠ¤í‚¬ë§ˆìŠ¤í„°
                 c.getPlayer().maxskill(10100);
                 c.getPlayer().maxskill(10110);
                 c.getPlayer().maxskill(10111);
@@ -290,7 +290,7 @@ public class PlayerCommand implements Command {
                 c.getPlayer().dropMessage(5, "[Argon] Cannot return right now.");
                 return;
             }
-            MapleMap target = c.getChannelServer().getMapFactory().getMap(ServerConstants.mainMap); // Ä¡¿ì¾¾ :: ±¤Àå µû·Î ¼³Á¤
+            MapleMap target = c.getChannelServer().getMapFactory().getMap(ServerConstants.mainMap); // ì¹˜ìš°ì”¨ :: ê´‘ì¥ ë”°ë¡œ ì„¤ì •
             MaplePortal targetPortal = null;
             if (splitted.length > 1) {
                 try {
@@ -310,33 +310,33 @@ public class PlayerCommand implements Command {
     @Override
     public CommandDefinition[] getDefinition() {
         return new CommandDefinition[]{
-            new CommandDefinition("Èû", "<¿Ã¸±¾ç>", "ÇØ´ç ½ºÅÈÀ» ¸¶¿ì½º Å¬¸¯ ´ë½Å ÂïÀ» ¼ö ÀÖ½À´Ï´Ù.", 0),
-            new CommandDefinition("ÀÎÆ®", "<¿Ã¸±¾ç>", "ÇØ´ç ½ºÅÈÀ» ¸¶¿ì½º Å¬¸¯ ´ë½Å ÂïÀ» ¼ö ÀÖ½À´Ï´Ù.", 0),
-            new CommandDefinition("µ¦½º", "<¿Ã¸±¾ç>", "ÇØ´ç ½ºÅÈÀ» ¸¶¿ì½º Å¬¸¯ ´ë½Å ÂïÀ» ¼ö ÀÖ½À´Ï´Ù.", 0),
-            new CommandDefinition("·°", "<¿Ã¸±¾ç>", "ÇØ´ç ½ºÅÈÀ» ¸¶¿ì½º Å¬¸¯ ´ë½Å ÂïÀ» ¼ö ÀÖ½À´Ï´Ù.", 0),
-            new CommandDefinition("·¢", "", "°ø°İ µî Ã¤ÆÃ¿Ü¿¡ ¾Æ¹«°Íµµ ¾ÈµÉ¶§ »ç¿ëÇÏ¼¼¿ä.", 0),
-            new CommandDefinition("·º", "", "°ø°İ µî Ã¤ÆÃ¿Ü¿¡ ¾Æ¹«°Íµµ ¾ÈµÉ¶§ »ç¿ëÇÏ¼¼¿ä.", 0),
-            new CommandDefinition("¸í·É¾î", "", "À¯Àú ¸í·É¾î¸¦ Ãâ·ÂÇÕ´Ï´Ù.", 0),
-            new CommandDefinition("ÀúÀå", "", "Ä³¸¯ÅÍ¸¦ °­Á¦·Î ÀúÀåÇÕ´Ï´Ù.", 0),
-            new CommandDefinition("¿øÁ¤´ëÀçÀÔÀå", "", "º¸½º ·¹ÀÌµå ÁßÀÌ´ø ¿øÁ¤´ëÀÇ ¸¶Áö¸· ¿øÁ¤´ëÀçÀÔÀå¸ÊÀ¸·Î ÀÌµ¿ÇÕ´Ï´Ù.", 0),
-            new CommandDefinition("±¤Àå", "", "ÇØ´ç ¼­¹öÀÇ ±¤ÀåÀÎ Çì³×½Ã½º·Î ÀÌµ¿ÇÕ´Ï´Ù.", 0),
-            new CommandDefinition("Çì³×½Ã½º", "", "ÇØ´ç ¼­¹öÀÇ ±¤ÀåÀÎ Çì³×½Ã½º·Î ÀÌµ¿ÇÕ´Ï´Ù.", 0),
-            new CommandDefinition("ÀÚÀ¯½ÃÀå", "", "ÀÚÀ¯½ÃÀåÀ¸·Î ÀÌµ¿ÇÕ´Ï´Ù.", 0),
-            new CommandDefinition("ÀÎº¥ÃÊ±âÈ­", "¸ğµÎ/ÀåÂø/Àåºñ/¼Òºñ/¼³Ä¡/±âÅ¸/Ä³½Ã", "ÇØ´ç ÅÇÀÇ ÀÎº¥Åä¸®¸¦ ¸ğµÎ ºñ¿ö¹ö¸³´Ï´Ù.", 0),
-            new CommandDefinition("µµ¿ò¸»", "", "À¯Àú ¸í·É¾î¸¦ Ãâ·ÂÇÕ´Ï´Ù.", 0),
-            new CommandDefinition("¸¶À»", "", "¸¶À»ÀÌµ¿", 0),
-            new CommandDefinition("ÃßÃµÀÎ", "", "ÃßÃµÀÎ", 0),
-            new CommandDefinition("ÃÊÀÚ", "", "ÃÊÀÚ", 0),
-            new CommandDefinition("µ¿Á¢", "", "µ¿Á¢", 0),
-            new CommandDefinition("ÀüÁ÷", "", "ÀüÁ÷", 0),
-            new CommandDefinition("°æ¸ÅÀå", "", "°æ¸ÅÀå", 0),
-            new CommandDefinition("È¯»ı", "", "È¯»ı", 0),
-            new CommandDefinition("½ºÅİ¸®·Îµå", "", "½ºÅİ¸®·Îµå", 0),
-            new CommandDefinition("º¸Á¶¹«±âÇØÁ¦", "", "º¸Á¶¹«±âÇØÁ¦", 0),
-            new CommandDefinition("½ºÅ³¸¶½ºÅÍ", "", "", 0),
-            new CommandDefinition("°¡ÀÌµå", "", "", 0),
-            new CommandDefinition("·Î±×ÀÎÆ÷ÀÎÆ®", "", "", 0),
-            new CommandDefinition("Á×±â", "", "", 0),
+            new CommandDefinition("í˜", "<ì˜¬ë¦´ì–‘>", "í•´ë‹¹ ìŠ¤íƒ¯ì„ ë§ˆìš°ìŠ¤ í´ë¦­ ëŒ€ì‹  ì°ì„ ìˆ˜ ìˆìŠµë‹ˆë‹¤.", 0),
+            new CommandDefinition("ì¸íŠ¸", "<ì˜¬ë¦´ì–‘>", "í•´ë‹¹ ìŠ¤íƒ¯ì„ ë§ˆìš°ìŠ¤ í´ë¦­ ëŒ€ì‹  ì°ì„ ìˆ˜ ìˆìŠµë‹ˆë‹¤.", 0),
+            new CommandDefinition("ë±ìŠ¤", "<ì˜¬ë¦´ì–‘>", "í•´ë‹¹ ìŠ¤íƒ¯ì„ ë§ˆìš°ìŠ¤ í´ë¦­ ëŒ€ì‹  ì°ì„ ìˆ˜ ìˆìŠµë‹ˆë‹¤.", 0),
+            new CommandDefinition("ëŸ­", "<ì˜¬ë¦´ì–‘>", "í•´ë‹¹ ìŠ¤íƒ¯ì„ ë§ˆìš°ìŠ¤ í´ë¦­ ëŒ€ì‹  ì°ì„ ìˆ˜ ìˆìŠµë‹ˆë‹¤.", 0),
+            new CommandDefinition("ë™", "", "ê³µê²© ë“± ì±„íŒ…ì™¸ì— ì•„ë¬´ê²ƒë„ ì•ˆë ë•Œ ì‚¬ìš©í•˜ì„¸ìš”.", 0),
+            new CommandDefinition("ë ‰", "", "ê³µê²© ë“± ì±„íŒ…ì™¸ì— ì•„ë¬´ê²ƒë„ ì•ˆë ë•Œ ì‚¬ìš©í•˜ì„¸ìš”.", 0),
+            new CommandDefinition("ëª…ë ¹ì–´", "", "ìœ ì € ëª…ë ¹ì–´ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.", 0),
+            new CommandDefinition("ì €ì¥", "", "ìºë¦­í„°ë¥¼ ê°•ì œë¡œ ì €ì¥í•©ë‹ˆë‹¤.", 0),
+            new CommandDefinition("ì›ì •ëŒ€ì¬ì…ì¥", "", "ë³´ìŠ¤ ë ˆì´ë“œ ì¤‘ì´ë˜ ì›ì •ëŒ€ì˜ ë§ˆì§€ë§‰ ì›ì •ëŒ€ì¬ì…ì¥ë§µìœ¼ë¡œ ì´ë™í•©ë‹ˆë‹¤.", 0),
+            new CommandDefinition("ê´‘ì¥", "", "í•´ë‹¹ ì„œë²„ì˜ ê´‘ì¥ì¸ í—¤ë„¤ì‹œìŠ¤ë¡œ ì´ë™í•©ë‹ˆë‹¤.", 0),
+            new CommandDefinition("í—¤ë„¤ì‹œìŠ¤", "", "í•´ë‹¹ ì„œë²„ì˜ ê´‘ì¥ì¸ í—¤ë„¤ì‹œìŠ¤ë¡œ ì´ë™í•©ë‹ˆë‹¤.", 0),
+            new CommandDefinition("ììœ ì‹œì¥", "", "ììœ ì‹œì¥ìœ¼ë¡œ ì´ë™í•©ë‹ˆë‹¤.", 0),
+            new CommandDefinition("ì¸ë²¤ì´ˆê¸°í™”", "ëª¨ë‘/ì¥ì°©/ì¥ë¹„/ì†Œë¹„/ì„¤ì¹˜/ê¸°íƒ€/ìºì‹œ", "í•´ë‹¹ íƒ­ì˜ ì¸ë²¤í† ë¦¬ë¥¼ ëª¨ë‘ ë¹„ì›Œë²„ë¦½ë‹ˆë‹¤.", 0),
+            new CommandDefinition("ë„ì›€ë§", "", "ìœ ì € ëª…ë ¹ì–´ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.", 0),
+            new CommandDefinition("ë§ˆì„", "", "ë§ˆì„ì´ë™", 0),
+            new CommandDefinition("ì¶”ì²œì¸", "", "ì¶”ì²œì¸", 0),
+            new CommandDefinition("ì´ˆì", "", "ì´ˆì", 0),
+            new CommandDefinition("ë™ì ‘", "", "ë™ì ‘", 0),
+            new CommandDefinition("ì „ì§", "", "ì „ì§", 0),
+            new CommandDefinition("ê²½ë§¤ì¥", "", "ê²½ë§¤ì¥", 0),
+            new CommandDefinition("í™˜ìƒ", "", "í™˜ìƒ", 0),
+            new CommandDefinition("ìŠ¤í…Ÿë¦¬ë¡œë“œ", "", "ìŠ¤í…Ÿë¦¬ë¡œë“œ", 0),
+            new CommandDefinition("ë³´ì¡°ë¬´ê¸°í•´ì œ", "", "ë³´ì¡°ë¬´ê¸°í•´ì œ", 0),
+            new CommandDefinition("ìŠ¤í‚¬ë§ˆìŠ¤í„°", "", "", 0),
+            new CommandDefinition("ê°€ì´ë“œ", "", "", 0),
+            new CommandDefinition("ë¡œê·¸ì¸í¬ì¸íŠ¸", "", "", 0),
+            new CommandDefinition("ì£½ê¸°", "", "", 0),
             new CommandDefinition("skillmaster", "", "", 0),
             new CommandDefinition("return", "", "return to town", 0)
         };

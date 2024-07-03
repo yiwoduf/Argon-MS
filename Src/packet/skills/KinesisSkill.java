@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -19,7 +19,7 @@ import server.life.MapleMonster;
 
 /**
  *
- * @author ÃÖÁÖ¿ø
+ * @author ìµœì£¼ì›
  */
 public class KinesisSkill {
 
@@ -88,7 +88,7 @@ public class KinesisSkill {
             rh.skip(4);
             packet.writeInt((i) + 1); 
             final int monsterid = rh.readInt();
-            packet.writeInt(monsterid); //¸ó½ºÅÍ ¾ÆÀÌµğ.
+            packet.writeInt(monsterid); //ëª¬ìŠ¤í„° ì•„ì´ë””.
             packet.writeShort(rh.readShort());
             if (monsterid != 0) {
                target = c.getPlayer().getMap().getMonsterByOid(monsterid);

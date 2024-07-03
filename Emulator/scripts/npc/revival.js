@@ -11,7 +11,7 @@ function action(mode, type, selection) {
 	status--;
     }
     if (status == 0) {
-	cm.sendSimpleS("#bºÎÈ°À» ÇÏ½Ã¸é °¡±î¿î °÷¿¡ À§Ä¡ÇÑ ¾ÈÀüÇÑ ¸¶À»·Î ÀÌµ¿ÇÏ°Ô µË´Ï´Ù.\r\n#L0##Cgray#ºÎÈ° ÇÏ°Ú½À´Ï´Ù.#l", 2);
+	cm.sendSimpleS("#bë¶€í™œì„ í•˜ì‹œë©´ ê°€ê¹Œìš´ ê³³ì— ìœ„ì¹˜í•œ ì•ˆì „í•œ ë§ˆì„ë¡œ ì´ë™í•˜ê²Œ ë©ë‹ˆë‹¤.\r\n#L0##Cgray#ë¶€í™œ í•˜ê² ìŠµë‹ˆë‹¤.#l", 2);
     } else if (status == 1) {
 	if (cm.getPlayer().getEventInstance() != null) {
 		cm.getPlayer().getEventInstance().revivePlayer(cm.getPlayer());

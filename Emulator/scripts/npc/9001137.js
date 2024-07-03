@@ -20,25 +20,25 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-           var chat = "#fn³ª´®°íµñ Extrabold#	    #b"+ServerConstants.serverName+"#kÀÇ ±â´É ½Ã½ºÅÛ (Function System)ÀÔ´Ï´Ù.#fs10#\r\n";
+           var chat = "#fnë‚˜ëˆ”ê³ ë”• Extrabold#	    #b"+ServerConstants.serverName+"#kì˜ ê¸°ëŠ¥ ì‹œìŠ¤í…œ (Function System)ì…ë‹ˆë‹¤.#fs10#\r\n";
 
-           chat += "				             #Cgray# "+ServerConstants.serverName+"¿¡ ¿À½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù.#fs12##k\r\n\r\n"
-           chat += "               #k¡ÚÇöÀç ¿¡ÀÌÇÃ·¯½ºÀº #b" + cm.getConnect() + "#k¸í°ú ÇÔ²²ÇÏ°íÀÖ½À´Ï´Ù¡Ú\r\n";
-	chat += "#L1##v2434625# ¿ÜÇü º¯°æ#l";
-	chat += "#L2##v3700338# Àåºñ ¹é¾÷#l";
-	chat += "#L3##v1402259# »óÁ¡ ÀÌ¿ë#l\r\n";
-	chat += "#L4##v4001861# ¸Ş¼Ò ±³È¯#l";
-	chat += "  #L5##v4032279# Àå·¡ Èñ¸Á#l";
-	chat += "#L6##v2434620# ¼±¹° ÇÏ±â#l\r\n";
-	chat += "#L7##v2702000# ¾îºô ¸®Æ¼#l";
-	chat += " #L8##v4009029# ¾ÆÅÛ µå·Ó#l";
-	chat += " #L9##v3014005# ¼­¹ö ·©Å·#l\r\n";
-	chat += "#L10##v4031286# Ã¢°í ÀÌ¿ë";
-	chat += " #L11##v2501000# ¿É¼Ç ¸®¼Â#l"
-	chat += "#L12##v1702445# Ä³½Ã ÃæÀü\r\n";
-	chat += "#L13##v1112763# Áê¾ó Á¦ÀÛ";
-	chat += "  #L14##v5050100# AP °­È­";
-	chat += " #L15##v2430205# ±ØÇÑ º¯»ı\r\n";
+           chat += "				             #Cgray# "+ServerConstants.serverName+"ì— ì˜¤ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤.#fs12##k\r\n\r\n"
+           chat += "               #kâ˜…í˜„ì¬ ì—ì´í”ŒëŸ¬ìŠ¤ì€ #b" + cm.getConnect() + "#këª…ê³¼ í•¨ê»˜í•˜ê³ ìˆìŠµë‹ˆë‹¤â˜…\r\n";
+	chat += "#L1##v2434625# ì™¸í˜• ë³€ê²½#l";
+	chat += "#L2##v3700338# ì¥ë¹„ ë°±ì—…#l";
+	chat += "#L3##v1402259# ìƒì  ì´ìš©#l\r\n";
+	chat += "#L4##v4001861# ë©”ì†Œ êµí™˜#l";
+	chat += "  #L5##v4032279# ì¥ë˜ í¬ë§#l";
+	chat += "#L6##v2434620# ì„ ë¬¼ í•˜ê¸°#l\r\n";
+	chat += "#L7##v2702000# ì–´ë¹Œ ë¦¬í‹°#l";
+	chat += " #L8##v4009029# ì•„í…œ ë“œë¡­#l";
+	chat += " #L9##v3014005# ì„œë²„ ë­í‚¹#l\r\n";
+	chat += "#L10##v4031286# ì°½ê³  ì´ìš©";
+	chat += " #L11##v2501000# ì˜µì…˜ ë¦¬ì…‹#l"
+	chat += "#L12##v1702445# ìºì‹œ ì¶©ì „\r\n";
+	chat += "#L13##v1112763# ì¥¬ì–¼ ì œì‘";
+	chat += "  #L14##v5050100# AP ê°•í™”";
+	chat += " #L15##v2430205# ê·¹í•œ ë³€ìƒ\r\n";
 	cm.sendSimple(chat);
 
 	} else if (status == 1) {

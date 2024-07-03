@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -89,7 +89,7 @@ import server.named.Named;
 import tools.HexTool;
 import tools.StringUtil;
 import tools.Timer.MapTimer;
-import static launch.world.WorldCommunity.¾Æ¸£¹Ì;
+import static launch.world.WorldCommunity.ì•„ë¥´ë¯¸;
 import server.maps.MapleMapObjectType;
 
 public class NPCConversationManager extends AbstractPlayerInteraction {
@@ -443,8 +443,8 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
     }
 
     public void sendStorage() {
-       /* if (getPlayer().getLevel() < 120) { // Ä¡¿ì¾¾ :: Ã¢°í ·¹º§ Á¦ÇÑ
-            getPlayer().dropMessage(1, "120·¹º§ ÀÌ»óºÎÅÍ Ã¢°íÀÌ¿ëÀÌ °¡´ÉÇÕ´Ï´Ù.");
+       /* if (getPlayer().getLevel() < 120) { // ì¹˜ìš°ì”¨ :: ì°½ê³  ë ˆë²¨ ì œí•œ
+            getPlayer().dropMessage(1, "120ë ˆë²¨ ì´ìƒë¶€í„° ì°½ê³ ì´ìš©ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
             return;
         }*/
         c.getPlayer().setConversation(4);
@@ -455,7 +455,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         try {
             c.getPlayer().setConversation(4);
             c.getPlayer().getStorage().send2ndPWChecking(c, npc, true);
-            c.getPlayer().dropMessage(1, "Ã¹¹øÂ° ÀåºñÅÛÀ» Ã¹¹øÂ° ½½·ÔÀ¸·Î ¿Å°ÜÁÖ¼¼¿ä");
+            c.getPlayer().dropMessage(1, "ì²«ë²ˆì§¸ ì¥ë¹„í…œì„ ì²«ë²ˆì§¸ ìŠ¬ë¡¯ìœ¼ë¡œ ì˜®ê²¨ì£¼ì„¸ìš”");
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -633,7 +633,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             sql.close();
             con.close();
         } catch (SQLException ex) {
-            System.out.println("MapleStar °»½ÅÁß ¿À·ù¹ß»ı : " + ex);
+            System.out.println("MapleStar ê°±ì‹ ì¤‘ ì˜¤ë¥˜ë°œìƒ : " + ex);
         }
         if (check) {
             chr.send(UIPacket.getMapleStar((byte) 0x07, chr.getClient(), rank1, rank2));
@@ -656,7 +656,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             num_.add(dd);
             num_.add(ee);
             getPlayer().send(MainPacketCreator.HeadTitle(num_));
-            sendOk("À¯Àú´ÔÀÇ ¿Õ°üÄªÈ£°¡ ¼º°øÀûÀ¸·Î º¯°æµÇ¾ú½À´Ï´Ù.\\r\\n#rÃ¤³ÎÀÌµ¿À» ÇØ¾ß Á¤»óÀûÀ¸·Î º¯°æÀÌ ¿Ï·áµË´Ï´Ù.#k");
+            sendOk("ìœ ì €ë‹˜ì˜ ì™•ê´€ì¹­í˜¸ê°€ ì„±ê³µì ìœ¼ë¡œ ë³€ê²½ë˜ì—ˆìŠµë‹ˆë‹¤.\\r\\n#rì±„ë„ì´ë™ì„ í•´ì•¼ ì •ìƒì ìœ¼ë¡œ ë³€ê²½ì´ ì™„ë£Œë©ë‹ˆë‹¤.#k");
         } else {
             getPlayer().setKeyValue2("HeadTitle", 000000);
             List<Integer> num_ = new ArrayList<Integer>();
@@ -666,21 +666,21 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             num_.add(0);
             num_.add(0);
             getPlayer().send(MainPacketCreator.HeadTitle(num_));
-            sendOk("À¯Àú´ÔÀÇ ¿Õ°üÄªÈ£°¡ ¼º°øÀûÀ¸·Î Á¦°ÅµÇ¾ú½À´Ï´Ù.\\r\\n#rÃ¤³ÎÀÌµ¿À» ÇØ¾ß Á¤»óÀûÀ¸·Î º¯°æÀÌ ¿Ï·áµË´Ï´Ù.#k");
+            sendOk("ìœ ì €ë‹˜ì˜ ì™•ê´€ì¹­í˜¸ê°€ ì„±ê³µì ìœ¼ë¡œ ì œê±°ë˜ì—ˆìŠµë‹ˆë‹¤.\\r\\n#rì±„ë„ì´ë™ì„ í•´ì•¼ ì •ìƒì ìœ¼ë¡œ ë³€ê²½ì´ ì™„ë£Œë©ë‹ˆë‹¤.#k");
         }
         getPlayer().getMap().broadcastMessage(MainPacketCreator.removePlayerFromMap(getPlayer().getId()));
         getPlayer().getMap().broadcastMessage(MainPacketCreator.spawnPlayerMapobject(getPlayer()));
     }
 
     public void sendRebornRank() {
-        String chat = "#eÈ¯»ıÆ÷ÀÎÆ® ·©Å·#n\r\n";
+        String chat = "#eí™˜ìƒí¬ì¸íŠ¸ ë­í‚¹#n\r\n";
         try {
             int index = 0;
             Connection con = MYSQL.getConnection();
             ResultSet rs = con.prepareStatement("SELECT * FROM `characters` order by `reborns` desc limit 10").executeQuery();
             while (rs.next()) {
                 index++;
-                chat += "\r\n" + index + "À§. " + rs.getString("name") + ", È¯»ı Æ÷ÀÎÆ® : " + rs.getInt("reborns");
+                chat += "\r\n" + index + "ìœ„. " + rs.getString("name") + ", í™˜ìƒ í¬ì¸íŠ¸ : " + rs.getInt("reborns");
             }
             rs.close();
             con.close();
@@ -784,7 +784,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
 
     public void increaseGuildCapacity() {
         if (c.getPlayer().getMeso() < 5000000) {
-            c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "500¸¸ ¸Ş¼Ò°¡ ÃæºĞÇÏÁö ¾Ê½À´Ï´Ù."));
+            c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "500ë§Œ ë©”ì†Œê°€ ì¶©ë¶„í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤."));
             return;
         }
         final int gid = c.getPlayer().getGuildId();
@@ -1049,7 +1049,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         // c.getSession().writeAndFlush(MainPacketCreator.updatePlayerStats(statup, c.getPlayer().getJob()));
     }
 
-    ///¿øÁ¤´ë ÀÌÀü¹öÀü/////////////////////////////////////////////////////////////////////////
+    ///ì›ì •ëŒ€ ì´ì „ë²„ì „/////////////////////////////////////////////////////////////////////////
     public MapleSquadLegacy getSquad(String type) {
         return c.getChannelServer().getMapleSquad(type);
     }
@@ -1138,10 +1138,10 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
 
     public String getHighRanking(int type) {
         if (HighRanking.getInstance().getData(type).getRankings().isEmpty()) {
-            return "ÇöÀç ÇØ´çÇÏ´Â ·©Å·ÀÌ ¾ø½À´Ï´Ù.\r\n\r\n¡Ø ·©Å·Àº 1½Ã°£ ÁÖ±â·Î ¾÷µ¥ÀÌÆ® µË´Ï´Ù.\r\n\r\n";
+            return "í˜„ì¬ í•´ë‹¹í•˜ëŠ” ë­í‚¹ì´ ì—†ìŠµë‹ˆë‹¤.\r\n\r\nâ€» ë­í‚¹ì€ 1ì‹œê°„ ì£¼ê¸°ë¡œ ì—…ë°ì´íŠ¸ ë©ë‹ˆë‹¤.\r\n\r\n";
         }
 
-        String ret = "¼±ÅÃÇÏ½Å ·©Å·Àº ¾Æ·¡¿Í °°½À´Ï´Ù.\r\n\r\n¡Ø ·©Å·Àº 1½Ã°£ ÁÖ±â·Î ¾÷µ¥ÀÌÆ® µË´Ï´Ù.\r\n\r\n";
+        String ret = "ì„ íƒí•˜ì‹  ë­í‚¹ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.\r\n\r\nâ€» ë­í‚¹ì€ 1ì‹œê°„ ì£¼ê¸°ë¡œ ì—…ë°ì´íŠ¸ ë©ë‹ˆë‹¤.\r\n\r\n";
         int i = 1;
         for (RankingData rd : HighRanking.getInstance().getData(type).getRankings()) {
             if (type == HighRankingType.FirstAdvance.getType()) {
@@ -1149,25 +1149,25 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
                 int min = time / 60;
                 int sec = time % 60;
                 int left = time % 1000;
-                ret += "#e" + i + ". #n#b" + rd.getName() + "#k Å¬¸®¾î½Ã°£ : " + min + "ºĞ " + sec + "ÃÊ 0." + left + "\r\n";
+                ret += "#e" + i + ". #n#b" + rd.getName() + "#k í´ë¦¬ì–´ì‹œê°„ : " + min + "ë¶„ " + sec + "ì´ˆ 0." + left + "\r\n";
             } else if (type == HighRankingType.SecondAdvance.getType()) {
                 int time = rd.getValue1();
                 int min = time / 60;
                 int sec = time % 60;
                 int left = time % 1000;
-                ret += "#e" + i + ". #n#b" + rd.getName() + "#k Å¬¸®¾î½Ã°£ : " + min + "ºĞ " + sec + "ÃÊ 0." + left + "\r\n";
+                ret += "#e" + i + ". #n#b" + rd.getName() + "#k í´ë¦¬ì–´ì‹œê°„ : " + min + "ë¶„ " + sec + "ì´ˆ 0." + left + "\r\n";
             } else if (type == HighRankingType.ThirdAdvance.getType()) {
                 int time = rd.getValue1();
                 int min = time / 60;
                 int sec = time % 60;
                 int left = time % 1000;
-                ret += "#e" + i + ". #n#b" + rd.getName() + "#k Å¬¸®¾î½Ã°£ : " + min + "ºĞ " + sec + "ÃÊ ³²Àº¶óÀÌÇÁ : " + rd.getValue2() + " ½ÇÆĞ : " + rd.getValue3() + "\r\n";
+                ret += "#e" + i + ". #n#b" + rd.getName() + "#k í´ë¦¬ì–´ì‹œê°„ : " + min + "ë¶„ " + sec + "ì´ˆ ë‚¨ì€ë¼ì´í”„ : " + rd.getValue2() + " ì‹¤íŒ¨ : " + rd.getValue3() + "\r\n";
             } else if (type == HighRankingType.ForthAdvance.getType()) {
                 int time = rd.getValue1();
                 int min = time / 60;
                 int sec = time % 60;
                 int left = time % 1000;
-                ret += "#e" + i + ". #n#b" + rd.getName() + "#k Å¬¸®¾î½Ã°£ : " + min + "ºĞ " + sec + "ÃÊ 0." + left + "\r\n";
+                ret += "#e" + i + ". #n#b" + rd.getName() + "#k í´ë¦¬ì–´ì‹œê°„ : " + min + "ë¶„ " + sec + "ì´ˆ 0." + left + "\r\n";
             }
         }
         return ret;
@@ -1239,7 +1239,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
     }
 
     public void MapiaStart(final MapleCharacter player, int time, final int morningmap, final int citizenmap1, final int citizenmap2, final int citizenmap3, final int citizenmap4, final int citizenmap5, final int citizenmap6, final int mapiamap, final int policemap, final int drmap, final int after, final int night, final int vote) {
-        String[] job = {"½Ã¹Î", "¸¶ÇÇ¾Æ", "°æÂû", "ÀÇ»ç", "½Ã¹Î", "½Ã¹Î", "¸¶ÇÇ¾Æ", "°æÂû", "½Ã¹Î", "¸¶ÇÇ¾Æ"};
+        String[] job = {"ì‹œë¯¼", "ë§ˆí”¼ì•„", "ê²½ì°°", "ì˜ì‚¬", "ì‹œë¯¼", "ì‹œë¯¼", "ë§ˆí”¼ì•„", "ê²½ì°°", "ì‹œë¯¼", "ë§ˆí”¼ì•„"};
         String name = "";
         String mapia = "";
         String police = "";
@@ -1270,15 +1270,15 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             chr.warp(morningmap);
             map.names += chr.getName() + ",";
             chr.mapiajob = job[iNumber[jo] - 1];
-            if (chr.mapiajob == "¸¶ÇÇ¾Æ") {
+            if (chr.mapiajob == "ë§ˆí”¼ì•„") {
                 mapia += chr.getName() + ",";
-            } else if (chr.mapiajob == "°æÂû") {
+            } else if (chr.mapiajob == "ê²½ì°°") {
                 police += chr.getName() + ",";
-            } else if (chr.mapiajob == "½Ã¹Î") {
+            } else if (chr.mapiajob == "ì‹œë¯¼") {
                 citizennumber++;
             }
-            chr.dropMessage(5, "´ç½ÅÀÇ Á÷¾÷Àº " + job[iNumber[jo] - 1] + " ÀÔ´Ï´Ù.");
-            chr.dropShowInfo(time + "ÃÊ ÈÄ ¸¶ÇÇ¾Æ °ÔÀÓÀÌ ½ÃÀÛµË´Ï´Ù.");
+            chr.dropMessage(5, "ë‹¹ì‹ ì˜ ì§ì—…ì€ " + job[iNumber[jo] - 1] + " ì…ë‹ˆë‹¤.");
+            chr.dropShowInfo(time + "ì´ˆ í›„ ë§ˆí”¼ì•„ ê²Œì„ì´ ì‹œì‘ë©ë‹ˆë‹¤.");
             jo++;
         }
         final String mapialist = mapia;
@@ -1289,17 +1289,17 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         TimerTask m_task = new TimerTask() {
             public void run() {
                 for (MapleCharacter chr : player.getMap().getCharacters()) {
-                    if (chr.mapiajob == "¸¶ÇÇ¾Æ") {
+                    if (chr.mapiajob == "ë§ˆí”¼ì•„") {
                         chr.isMapiaVote = true;
-                        chr.dropMessage(6, "¸¶ÇÇ¾ÆÀÎ ´ç½Å µ¿·á´Â " + mapialist + " µéÀÌ ÀÖ½À´Ï´Ù. ¹ãÀÌµÇ¸é °°ÀÌ ÀÇ³íÇÏ¿© ¾Ï»ìÇÒ »ç¶÷À» ¼±ÅÃÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.");
-                    } else if (chr.mapiajob == "°æÂû") {
+                        chr.dropMessage(6, "ë§ˆí”¼ì•„ì¸ ë‹¹ì‹  ë™ë£ŒëŠ” " + mapialist + " ë“¤ì´ ìˆìŠµë‹ˆë‹¤. ë°¤ì´ë˜ë©´ ê°™ì´ ì˜ë…¼í•˜ì—¬ ì•”ì‚´í•  ì‚¬ëŒì„ ì„ íƒí•´ ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤.");
+                    } else if (chr.mapiajob == "ê²½ì°°") {
                         chr.isPoliceVote = true;
-                        chr.dropMessage(6, "°æÂûÀÎ ´ç½Å µ¿·á´Â " + policelist + " µéÀÌ ÀÖ½À´Ï´Ù. ¹ãÀÌµÇ¸é ¸¶ÇÇ¾Æ°°´Ù´Â »ç¶÷À» Áö¸ñÇÏ¸é ¸¶ÇÇ¾ÆÀÎÁö ¾Æ´ÑÁö¸¦ ¾Ë ¼ö ÀÖ½À´Ï´Ù.");
-                    } else if (chr.mapiajob == "ÀÇ»ç") {
+                        chr.dropMessage(6, "ê²½ì°°ì¸ ë‹¹ì‹  ë™ë£ŒëŠ” " + policelist + " ë“¤ì´ ìˆìŠµë‹ˆë‹¤. ë°¤ì´ë˜ë©´ ë§ˆí”¼ì•„ê°™ë‹¤ëŠ” ì‚¬ëŒì„ ì§€ëª©í•˜ë©´ ë§ˆí”¼ì•„ì¸ì§€ ì•„ë‹Œì§€ë¥¼ ì•Œ ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
+                    } else if (chr.mapiajob == "ì˜ì‚¬") {
                         chr.isDrVote = true;
-                        chr.dropMessage(6, "´ç½ÅÀº ÇÏ³ª¹Û¿¡ ¾ø´Â ÀÇ»çÀÔ´Ï´Ù. ´ç½Å¿¡°Ô ºÎ¿©µÈ ÀÓ¹«´Â ½Ã¹Î°ú °æÂûÀ» »ì¸®´Â °ÍÀÔ´Ï´Ù. ¹ãÀÌµÇ¸é ¸¶ÇÇ¾Æ°¡ Áö¸ñÇßÀ»°Í °°Àº »ç¶÷À» ¼±ÅÃÇÏ¸é »ì¸®½Ç ¼ö ÀÖ½À´Ï´Ù.");
-                    } else if (chr.mapiajob == "½Ã¹Î") {
-                        chr.dropMessage(6, "´ç½ÅÀº ½Ã¹ÎÀÔ´Ï´Ù. ³·ÀÌµÇ¸é ´ëÈ­¸¦ ÅëÇØ ¸¶ÇÇ¾Æ¸¦ Ã£¾Æ³» ÅõÇ¥·Î Ã³Çü½ÃÅ°¸é µË´Ï´Ù.");
+                        chr.dropMessage(6, "ë‹¹ì‹ ì€ í•˜ë‚˜ë°–ì— ì—†ëŠ” ì˜ì‚¬ì…ë‹ˆë‹¤. ë‹¹ì‹ ì—ê²Œ ë¶€ì—¬ëœ ì„ë¬´ëŠ” ì‹œë¯¼ê³¼ ê²½ì°°ì„ ì‚´ë¦¬ëŠ” ê²ƒì…ë‹ˆë‹¤. ë°¤ì´ë˜ë©´ ë§ˆí”¼ì•„ê°€ ì§€ëª©í–ˆì„ê²ƒ ê°™ì€ ì‚¬ëŒì„ ì„ íƒí•˜ë©´ ì‚´ë¦¬ì‹¤ ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
+                    } else if (chr.mapiajob == "ì‹œë¯¼") {
+                        chr.dropMessage(6, "ë‹¹ì‹ ì€ ì‹œë¯¼ì…ë‹ˆë‹¤. ë‚®ì´ë˜ë©´ ëŒ€í™”ë¥¼ í†µí•´ ë§ˆí”¼ì•„ë¥¼ ì°¾ì•„ë‚´ íˆ¬í‘œë¡œ ì²˜í˜•ì‹œí‚¤ë©´ ë©ë‹ˆë‹¤.");
                     }
                     chr.getmapiavote = 0;
                     chr.voteamount = 0;
@@ -1311,7 +1311,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
                     chr.getdrvote = 0;
                     chr.isVoting = false;
                 }
-                map.broadcastMessage(MainPacketCreator.getGMText(1, "ÁøÇàÀÚ>>³·ÀÌ µÇ¾ú½À´Ï´Ù. ¸¶ÇÇ¾Æ¸¦ Ã£¾Æ³» ¸ğµÎ Ã³ÇüÇÏ¸é ½Ã¹ÎÀÇ ½Â¸®ÀÌ¸ç, ¸¶ÇÇ¾Æ°¡ °æÂû ¶Ç´Â ½Ã¹ÎÀ» ¸ğµÎ Á×ÀÏ½Ã ¸¶ÇÇ¾ÆÀÇ ½Â¸®ÀÔ´Ï´Ù.(Á÷¾÷ : ½Ã¹Î,°æÂû,¸¶ÇÇ¾Æ,ÀÇ»ç)"));
+                map.broadcastMessage(MainPacketCreator.getGMText(1, "ì§„í–‰ì>>ë‚®ì´ ë˜ì—ˆìŠµë‹ˆë‹¤. ë§ˆí”¼ì•„ë¥¼ ì°¾ì•„ë‚´ ëª¨ë‘ ì²˜í˜•í•˜ë©´ ì‹œë¯¼ì˜ ìŠ¹ë¦¬ì´ë©°, ë§ˆí”¼ì•„ê°€ ê²½ì°° ë˜ëŠ” ì‹œë¯¼ì„ ëª¨ë‘ ì£½ì¼ì‹œ ë§ˆí”¼ì•„ì˜ ìŠ¹ë¦¬ì…ë‹ˆë‹¤.(ì§ì—… : ì‹œë¯¼,ê²½ì°°,ë§ˆí”¼ì•„,ì˜ì‚¬)"));
                 map.playern = playernuma;
                 map.morningmap = morningmap;
                 map.aftertime = after;
@@ -1341,7 +1341,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         long period = time * 1000L;
         for (ChannelServer cserv : ChannelServer.getAllInstances()) {
             cserv.setExpRate(rate);
-            cserv.broadcastPacket(MainPacketCreator.getGMText(7, "[ÀÌº¥Æ®] °æÇèÄ¡ ¹èÀ² ÀÌº¥Æ®°¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù!"));
+            cserv.broadcastPacket(MainPacketCreator.getGMText(7, "[ì´ë²¤íŠ¸] ê²½í—˜ì¹˜ ë°°ìœ¨ ì´ë²¤íŠ¸ê°€ ì‹œì‘ë˜ì—ˆìŠµë‹ˆë‹¤!"));
         }
         EtcTimer t = EtcTimer.getInstance();
         Runnable r = new Runnable() {
@@ -1349,7 +1349,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             public void run() {
                 for (ChannelServer cserv : ChannelServer.getAllInstances()) {
                     cserv.setExpRate(origin);
-                    cserv.broadcastPacket(MainPacketCreator.getGMText(7, "[ÀÌº¥Æ®] °æÇèÄ¡ ¹èÀ² ÀÌº¥Æ®°¡ Á¾·áµÇ¾ú½À´Ï´Ù."));
+                    cserv.broadcastPacket(MainPacketCreator.getGMText(7, "[ì´ë²¤íŠ¸] ê²½í—˜ì¹˜ ë°°ìœ¨ ì´ë²¤íŠ¸ê°€ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤."));
                 }
             }
         };
@@ -1361,7 +1361,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         long period = time * 1000L;
         for (ChannelServer cserv : ChannelServer.getAllInstances()) {
             cserv.setDropRate(rate);
-            cserv.broadcastPacket(MainPacketCreator.getGMText(7, "[ÀÌº¥Æ®] µå·Ó ¹èÀ² ÀÌº¥Æ®°¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù!"));
+            cserv.broadcastPacket(MainPacketCreator.getGMText(7, "[ì´ë²¤íŠ¸] ë“œë¡­ ë°°ìœ¨ ì´ë²¤íŠ¸ê°€ ì‹œì‘ë˜ì—ˆìŠµë‹ˆë‹¤!"));
         }
         EtcTimer t = EtcTimer.getInstance();
         Runnable r = new Runnable() {
@@ -1369,7 +1369,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             public void run() {
                 for (ChannelServer cserv : ChannelServer.getAllInstances()) {
                     cserv.setDropRate(origin);
-                    cserv.broadcastPacket(MainPacketCreator.getGMText(7, "[ÀÌº¥Æ®] µå·Ó ¹èÀ² ÀÌº¥Æ®°¡ Á¾·áµÇ¾ú½À´Ï´Ù."));
+                    cserv.broadcastPacket(MainPacketCreator.getGMText(7, "[ì´ë²¤íŠ¸] ë“œë¡­ ë°°ìœ¨ ì´ë²¤íŠ¸ê°€ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤."));
                 }
             }
         };
@@ -1381,7 +1381,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         long period = time * 1000L;
         for (ChannelServer cserv : ChannelServer.getAllInstances()) {
             cserv.setMesoRate((byte) rate);
-            cserv.broadcastPacket(MainPacketCreator.getGMText(7, "[ÀÌº¥Æ®] ¸Ş¼Ò ¹èÀ² ÀÌº¥Æ®°¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù!"));
+            cserv.broadcastPacket(MainPacketCreator.getGMText(7, "[ì´ë²¤íŠ¸] ë©”ì†Œ ë°°ìœ¨ ì´ë²¤íŠ¸ê°€ ì‹œì‘ë˜ì—ˆìŠµë‹ˆë‹¤!"));
         }
         EtcTimer t = EtcTimer.getInstance();
         Runnable r = new Runnable() {
@@ -1389,7 +1389,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             public void run() {
                 for (ChannelServer cserv : ChannelServer.getAllInstances()) {
                     cserv.setMesoRate(origin);
-                    cserv.broadcastPacket(MainPacketCreator.getGMText(7, "[ÀÌº¥Æ®] ¸Ş¼Ò ¹èÀ² ÀÌº¥Æ®°¡ Á¾·áµÇ¾ú½À´Ï´Ù."));
+                    cserv.broadcastPacket(MainPacketCreator.getGMText(7, "[ì´ë²¤íŠ¸] ë©”ì†Œ ë°°ìœ¨ ì´ë²¤íŠ¸ê°€ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤."));
                 }
             }
         };
@@ -1437,14 +1437,14 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
     }
 
     public void setName(String name) {
-        String[] blocks = {"GM", "¿äÅ©", "ÁÖ´Ï", "ÁöÈÆ", "Á¤±Ô", "¶óÀÓ", "¼Ò¸®"};
+        String[] blocks = {"GM", "ìš”í¬", "ì£¼ë‹ˆ", "ì§€í›ˆ", "ì •ê·œ", "ë¼ì„", "ì†Œë¦¬"};
         for (String b : blocks) {
             if (name.indexOf(b) != -1) {
                 return;
             }
         }
         for (char c : name.toCharArray()) {
-            if (!(c > 'a' && c < 'z') && !(c > '°¡' && c < 'ÇÏ')) {
+            if (!(c > 'a' && c < 'z') && !(c > 'ê°€' && c < 'í•˜')) {
                 return;
             }
         }
@@ -1468,7 +1468,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             con.close();
             getPlayer().getClient().getSession().close();
         } catch (SQLException ex) {
-            System.out.println("´Ğ³×ÀÓ º¯°æ ½ÇÆĞ");
+            System.out.println("ë‹‰ë„¤ì„ ë³€ê²½ ì‹¤íŒ¨");
         }
     }
 
@@ -1506,10 +1506,10 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
                 ochr.setKeyValue2("RPSOTHER", c.getPlayer().getId());
                 NPCScriptManager.getInstance().start(ochr.getClient(), 2100, "RPSACCEPT");
             } else {
-                c.getPlayer().dropMessage(1, "»ó´ë¹æ ¸Ş¼Ò°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+                c.getPlayer().dropMessage(1, "ìƒëŒ€ë°© ë©”ì†Œê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
             }
         } else {
-            c.getPlayer().dropMessage(1, "¸Ş¼Ò°¡ ¼³Á¤µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+            c.getPlayer().dropMessage(1, "ë©”ì†Œê°€ ì„¤ì •ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
         }
 
     }
@@ -1528,7 +1528,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             boolean isExist = false;
             MapleReactor react = null;
             if (PotSystem.getPotId(getPlayer().getGuildId()) != 0) {
-                return "ÀÌ¹Ì ¼³Ä¡µÇÀÖ½À´Ï´Ù.";
+                return "ì´ë¯¸ ì„¤ì¹˜ë˜ìˆìŠµë‹ˆë‹¤.";
             }
             for (final MapleMapObject remo : getPlayer().getMap().getAllReactor()) {
                 react = (MapleReactor) remo;
@@ -1536,7 +1536,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
                     continue;
                 } else if ((react.getPosition().getX() - 100 < getPlayer().getPosition().getX() && react.getPosition().getX() + 100 > getPlayer().getPosition().getX()) && (react.getPosition().getY() - 50 < getPlayer().getPosition().getY() && react.getPosition().getY() + 50 > getPlayer().getPosition().getY())) {
                     isExist = true;
-                    return "Å¸ ±æµå ºĞÀç¶ûÀº °ãÄ¡Áö ¸øÇÕ´Ï´Ù.";
+                    return "íƒ€ ê¸¸ë“œ ë¶„ì¬ë‘ì€ ê²¹ì¹˜ì§€ ëª»í•©ë‹ˆë‹¤.";
                 }
 
             }
@@ -1564,12 +1564,12 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
                 ps.setInt(6, getClient().getChannel());
                 ps.executeUpdate();
                 con.close();
-                return "¼º°øÀûÀ¸·Î ¼³Ä¡µÇ¾ú½À´Ï´Ù.";
+                return "ì„±ê³µì ìœ¼ë¡œ ì„¤ì¹˜ë˜ì—ˆìŠµë‹ˆë‹¤.";
             }
-            return "¼³Ä¡¿¡ ½ÇÆĞÇÏ¼Ì½À´Ï´Ù.";
+            return "ì„¤ì¹˜ì— ì‹¤íŒ¨í•˜ì…¨ìŠµë‹ˆë‹¤.";
         } catch (Exception ex) {
             ex.printStackTrace();
-            return "¿À·ù°¡ ¹ß»ıÇÏ¿© ¼³Ä¡ÇÏÁö ¸øÇß½À´Ï´Ù.";
+            return "ì˜¤ë¥˜ê°€ ë°œìƒí•˜ì—¬ ì„¤ì¹˜í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.";
         }
     }
 
@@ -1613,8 +1613,8 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             }
         }
 
-        map.broadcastMessage(MainPacketCreator.serverNotice(1, "[¼ú·¡ ¸ñ·Ï]\r\n" + CatchingName2));
-        map.broadcastMessage(MainPacketCreator.serverNotice(6, "[¼ú·¡ ¸ñ·Ï] " + CatchingName));
+        map.broadcastMessage(MainPacketCreator.serverNotice(1, "[ìˆ ë˜ ëª©ë¡]\r\n" + CatchingName2));
+        map.broadcastMessage(MainPacketCreator.serverNotice(6, "[ìˆ ë˜ ëª©ë¡] " + CatchingName));
         map.startCatch();
     }
 
@@ -1722,7 +1722,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             }
         }
         getPlayer().setKeyValue2("hyper", 1);
-        return "¼º°øÀûÀ¸·Î ÇÏÀÌÆÛ ½ºÅ³ SP°¡ Áö±ŞµÇ¾ú½À´Ï´Ù.";
+        return "ì„±ê³µì ìœ¼ë¡œ í•˜ì´í¼ ìŠ¤í‚¬ SPê°€ ì§€ê¸‰ë˜ì—ˆìŠµë‹ˆë‹¤.";
     }
 
     public void ItemName(MapleCharacter player, byte pos, final String name) {
@@ -1750,7 +1750,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         return str.toString();
     }
 
-    public String ¸¶½ºÅÍ¸®ºÏ() {
+    public String ë§ˆìŠ¤í„°ë¦¬ë¶() {
         MapleData data = MapleDataProviderFactory.getDataProvider(MapleDataProviderFactory.fileInWZPath("Skill.wz")).getData(StringUtil.getLeftPaddedStr("" + getJob(), '0', 3) + ".img");
         int a = 0;
         StringBuilder str = new StringBuilder();
@@ -1763,7 +1763,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
                             try {
                                 if (getPlayer().getSkillLevel(Integer.parseInt(skillId.getName())) < maxlevel) {
                                     a++;
-                                    str.append("#L" + Integer.parseInt(skillId.getName()) + "# #s" + Integer.parseInt(skillId.getName()) + "# #fnµ¸¿ò##fs14##e#q" + Integer.parseInt(skillId.getName()) + "##n#fs##fn##l\r\n");
+                                    str.append("#L" + Integer.parseInt(skillId.getName()) + "# #s" + Integer.parseInt(skillId.getName()) + "# #fnë‹ì›€##fs14##e#q" + Integer.parseInt(skillId.getName()) + "##n#fs##fn##l\r\n");
                                 }
                             } catch (NumberFormatException e) {
                                 continue;
@@ -1774,7 +1774,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             }
         }
         if (a == 0) {
-            str.append("#fnµ¸¿ò##fs14##e´õÀÌ»ó ¸¶½ºÅÍÇÒ ½ºÅ³ÀÌ ¾ø½À´Ï´Ù.#n#fs##fn#\r\n");
+            str.append("#fnë‹ì›€##fs14##eë”ì´ìƒ ë§ˆìŠ¤í„°í•  ìŠ¤í‚¬ì´ ì—†ìŠµë‹ˆë‹¤.#n#fs##fn#\r\n");
         }
         return str.toString();
     }
@@ -1800,7 +1800,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             return end;
         } else {
             StringBuilder str1 = new StringBuilder();
-            str1.append("¼Ò¿ïÀ» °¨Á¤ÇÒ ¾ÆÀÌÅÛÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+            str1.append("ì†Œìš¸ì„ ê°ì •í•  ì•„ì´í…œì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
             return str1.toString();
         }
     }
@@ -1827,7 +1827,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         if (getPlayer().getLevel() >= 120) {
             getPlayer().send(DueyHandler.sendDuey(item ? 10 : 9, getPlayer().getName()));
         } else {
-            getPlayer().dropMessage(1, "·¹º§ 120 ÀÌ»óºÎÅÍ »ç¿ëÀÌ °¡´É ÇÕ´Ï´Ù.");
+            getPlayer().dropMessage(1, "ë ˆë²¨ 120 ì´ìƒë¶€í„° ì‚¬ìš©ì´ ê°€ëŠ¥ í•©ë‹ˆë‹¤.");
             getPlayer().ea();
         }
     }
@@ -1872,7 +1872,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
                 for (MapleData skillId : skill.getChildren()) {
                     if (!skillId.getName().equals("icon")) {
                         maxLevel = (byte) MapleDataTool.getIntConvert("maxLevel", skillId.getChildByPath("common"), 0);
-                        if (MapleDataTool.getIntConvert("invisible", skillId, 0) == 0 && MapleDataTool.getIntConvert("reqLev", skillId, 0) > 0) { //½ºÅ³Ã¢¿¡ ¾Èº¸ÀÌ´Â ½ºÅ³Àº ¿Ã¸®Áö¾ÊÀ½
+                        if (MapleDataTool.getIntConvert("invisible", skillId, 0) == 0 && MapleDataTool.getIntConvert("reqLev", skillId, 0) > 0) { //ìŠ¤í‚¬ì°½ì— ì•ˆë³´ì´ëŠ” ìŠ¤í‚¬ì€ ì˜¬ë¦¬ì§€ì•ŠìŒ
                             if (c.getPlayer().getLevel() >= MapleDataTool.getIntConvert("reqLev", skillId, 0)) {
                                 c.getPlayer().changeSkillLevel(SkillFactory.getSkill(Integer.parseInt(skillId.getName())), maxLevel, SkillFactory.getSkill(Integer.parseInt(skillId.getName())).isFourthJob() ? maxLevel : 0);
                             }
@@ -1884,8 +1884,8 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
     }
 
     public void sendGuide() {
-        String[][] list = {{"¾È³çÇÏ¼¼¿ä #rMAPLE ONLINE#kÀ» ¾È³»ÇØÁÙ ¿î¿µÀÚ ÀÔ´Ï´Ù.", "1500"},
-        {"#rMAPLE ONLINE#kÀº ½ºÅ³¸¶½ºÅÍ ½Ã½ºÅÛÀ» »ç¿ëÁßÀÌ¸ç #b@½ºÅ³¸¶½ºÅÍ#k\r\n¸í·É¾î·Î »ç¿ë °¡´ÉÇÕ´Ï´Ù.", "4000"}};
+        String[][] list = {{"ì•ˆë…•í•˜ì„¸ìš” #rMAPLE ONLINE#kì„ ì•ˆë‚´í•´ì¤„ ìš´ì˜ì ì…ë‹ˆë‹¤.", "1500"},
+        {"#rMAPLE ONLINE#kì€ ìŠ¤í‚¬ë§ˆìŠ¤í„° ì‹œìŠ¤í…œì„ ì‚¬ìš©ì¤‘ì´ë©° #b@ìŠ¤í‚¬ë§ˆìŠ¤í„°#k\r\nëª…ë ¹ì–´ë¡œ ì‚¬ìš© ê°€ëŠ¥í•©ë‹ˆë‹¤.", "4000"}};
         for (String[] txt : list) {
             c.getSession().writeAndFlush(MainPacketCreator.OnAddPopupSay(9062000, Integer.parseInt(txt[1]), txt[0], ""));
         }
@@ -1911,7 +1911,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
                 if (cRand == c.getPlayer().getWarpRand()) {
                     int id = getDamageMeterRankerId();
                     initDamageMeter(c.getPlayer().getId(), c.getPlayer().getName(), c.getPlayer().getDamageMeter());
-                    c.getPlayer().dropMessage(5, "´©Àû µ¥¹ÌÁö : " + c.getPlayer().getDamageMeter() + " ±â·ÏÀÌ ÀúÀå µÇ¾ú½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(5, "ëˆ„ì  ë°ë¯¸ì§€ : " + c.getPlayer().getDamageMeter() + " ê¸°ë¡ì´ ì €ì¥ ë˜ì—ˆìŠµë‹ˆë‹¤.");
                     c.getPlayer().setDamageMeter(0);
                     c.getPlayer().setWarpRand(-1);
                     warp(ServerConstants.mainMap);
@@ -1921,12 +1921,12 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
                                 for (MapleCharacter chr : cs.getPlayerStorage().getAllCharacters().values()) {
                                     if (chr.getId() == id) {
                                         chr.removeAllEquip(1142187, false);
-                                        chr.dropMessage(5, "ZIÁ¸ µô·®1µî ÀÚ°İÀÌ ¹ÚÅ»µÇ¾î, ÄªÈ£°¡ È¸¼öµÇ¾ú½À´Ï´Ù.");
+                                        chr.dropMessage(5, "ZIì¡´ ë”œëŸ‰1ë“± ìê²©ì´ ë°•íƒˆë˜ì–´, ì¹­í˜¸ê°€ íšŒìˆ˜ë˜ì—ˆìŠµë‹ˆë‹¤.");
                                     }
                                 }
                             }
                         }
-                        WorldBroadcasting.broadcastMessage(MainPacketCreator.OnAddPopupSay(9000036, 3000, "#b" + c.getPlayer().getName() + "#k´ÔÀÌ »õ·Î¿î #eµô·® ¹ÌÅÍ±â 1À§#k°¡ µÇ¾ú½À´Ï´Ù.", ""));
+                        WorldBroadcasting.broadcastMessage(MainPacketCreator.OnAddPopupSay(9000036, 3000, "#b" + c.getPlayer().getName() + "#kë‹˜ì´ ìƒˆë¡œìš´ #eë”œëŸ‰ ë¯¸í„°ê¸° 1ìœ„#kê°€ ë˜ì—ˆìŠµë‹ˆë‹¤.", ""));
                      //   gainItemAllStat(1142187, (short) 1, (short) 100, (short) 30);
                     }
                 }
@@ -1961,7 +1961,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             ResultSet rs = ps.executeQuery();
             int i = 1;
             while (rs.next()) {
-                text += "#r#e" + (i != 10 ? "0" : "") + i + "#n#bÀ§ #r´Ğ³×ÀÓ#b " + rs.getString("name") + " #r´©Àû µ¥¹ÌÁö#b " + Comma(rs.getLong("damage")) + "\r\n";
+                text += "#r#e" + (i != 10 ? "0" : "") + i + "#n#bìœ„ #rë‹‰ë„¤ì„#b " + rs.getString("name") + " #rëˆ„ì  ë°ë¯¸ì§€#b " + Comma(rs.getLong("damage")) + "\r\n";
                 i++;
             }
             rs.close();
@@ -1971,7 +1971,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             ex.printStackTrace();
         }
         if (text.equals("#b")) {
-            text = "#r¾ÆÁ÷±îÁö µô·® ¹ÌÅÍ±â¸¦ °»½ÅÇÑ À¯Àú°¡ ¾ø½À´Ï´Ù.";
+            text = "#rì•„ì§ê¹Œì§€ ë”œëŸ‰ ë¯¸í„°ê¸°ë¥¼ ê°±ì‹ í•œ ìœ ì €ê°€ ì—†ìŠµë‹ˆë‹¤.";
         }
         return text;
     }
@@ -2054,7 +2054,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
     }
 
     public boolean isNamedTimeOver() {
-        String[] ret = Named.namedTime.replaceAll("ºĞ", "").replaceAll("ÃÊ", "").split(" ");
+        String[] ret = Named.namedTime.replaceAll("ë¶„", "").replaceAll("ì´ˆ", "").split(" ");
         int v1 = Integer.parseInt(ret[0]) * (1000 * 60);
         int v2 = Integer.parseInt(ret[1]) * 1000;
         return (v1 + v2) <= 40000;
@@ -2094,11 +2094,11 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             } else {
                 item.setState((byte) 1);
             }
-            if (item.getState() == 1) { //·¹¾î
+            if (item.getState() == 1) { //ë ˆì–´
                 int rand = Randomizer.nextInt(100);
-                if (rand < 5) { //¿¡ÇÈ
+                if (rand < 5) { //ì—í”½
                     item.setState((byte) 18);
-                } else if (rand < 3) { //À¯´ÏÅ©
+                } else if (rand < 3) { //ìœ ë‹ˆí¬
                     item.setState((byte) 19);
                 } else {
                     item.setState((byte) 17);
@@ -2125,11 +2125,11 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
     public void SearchItem(String gomgo) {
         NPCConversationManager cm = this;
         if (gomgo.getBytes().length < 4) {
-            cm.sendOk("°Ë»ö¾î´Â 2±ÛÀÚ ÀÌ»óÀÌ¾î¾ß ÇÕ´Ï´Ù.");
+            cm.sendOk("ê²€ìƒ‰ì–´ëŠ” 2ê¸€ì ì´ìƒì´ì–´ì•¼ í•©ë‹ˆë‹¤.");
             cm.dispose();
             return;
         }
-        c.send(UIPacket.greenShowInfo(gomgo + "(À¸)·Î °Ë»öÁßÀÔ´Ï´Ù. Àá½Ã¸¸ ±â´Ù·ÁÁÖ¼¼¿ä."));
+        c.send(UIPacket.greenShowInfo(gomgo + "(ìœ¼)ë¡œ ê²€ìƒ‰ì¤‘ì…ë‹ˆë‹¤. ì ì‹œë§Œ ê¸°ë‹¤ë ¤ì£¼ì„¸ìš”."));
         String chat = "";
         ItemInformation ii = ItemInformation.getInstance();
         int g = 0;
@@ -2147,7 +2147,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         if (g != 0) {
             cm.sendSimple(chat);
         } else {
-            chat = "¹ß°ßµÈ ¾ÆÀÌÅÛÀÌ ¾ø½À´Ï´Ù.";
+            chat = "ë°œê²¬ëœ ì•„ì´í…œì´ ì—†ìŠµë‹ˆë‹¤.";
             cm.sendOk(chat);
             cm.dispose();
         }
@@ -2166,7 +2166,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         String chat = "";
         int itemlist[] = {4001780, 2049360, 2450087, 1122076, 4001254};
         for (int i = 0; i < itemlist.length; i++) {
-            chat += "#L" + itemlist[i] + "##i" + itemlist[i] + "##b(#z" + itemlist[i] + "#)#k - Áö±Ş¹Ş±â\r\n#l";
+            chat += "#L" + itemlist[i] + "##i" + itemlist[i] + "##b(#z" + itemlist[i] + "#)#k - ì§€ê¸‰ë°›ê¸°\r\n#l";
         }
         return chat;
     }
@@ -2181,7 +2181,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         };
 
         if (!getPlayer().haveItem(4310038, itemlist[itemId][1], false, true)) {
-            sendOk("#i4310038#(#z4310038#) " + itemlist[itemId][1] + "°³ÀÇ ÄÚÀÎÀÌ ÇÊ¿äÇÕ´Ï´Ù");
+            sendOk("#i4310038#(#z4310038#) " + itemlist[itemId][1] + "ê°œì˜ ì½”ì¸ì´ í•„ìš”í•©ë‹ˆë‹¤");
             dispose();
             return;
         }
@@ -2198,16 +2198,16 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             gainItem(itemlist[itemId][0], (short) itemlist[itemId][2]);
         }
         gainItem(4310038, (short) -itemlist[itemId][1]);
-        getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("¼±ÅÃÇÏ½Å [" + ItemInformation.getInstance().getName(itemlist[itemId][0]) + "] ¾ÆÀÌÅÛÀ» ±¸¸Å ÇÏ¿´½À´Ï´Ù...."));
+        getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("ì„ íƒí•˜ì‹  [" + ItemInformation.getInstance().getName(itemlist[itemId][0]) + "] ì•„ì´í…œì„ êµ¬ë§¤ í•˜ì˜€ìŠµë‹ˆë‹¤...."));
     }
 
     public String DamageSkinShop() {
         String chat = "";
         // 5680343, 2431965, 2431966, 2431967, 2432084, 2432131, 2432153, 2432154, 2432207, 2432354, 2432355, 2432465, 2432479, 2432526, 2432532, 2432592, 2432637, 2432638, 2432639, 2432640, 2432658, 2432659, 2432660, 2432661, 2432710, 2432836, 2432972, 2432973, 2433063, 2433178, 2433456, 2433715, 2433804, 2433919, 2433990, 2434248, 2434274, 2434289, 2434390, 2434391, 2434528, 2434529, 2434530, 2434574, 2434575, 2434654, 2434655, 2434661, 2434734, 2434950, 2434951, 2435005, 2435023, 2435024, 2435025, 2435026, 2435027, 2435028, 2435029, 2435030, 2435043, 2435044, 2435045, 2435046, 2435047, 2435140, 2435141, 2435157, 2435158, 2435159, 2435160, 2435161, 2435162, 2435166, 2435168, 2435169, 2435170, 2435171, 2435172, 2435173, 2435174, 2435175, 2435176, 2435177, 2435179, 2435182, 2435184, 2435222, 5680395, 2433631, 2433655, 2433913, 2433980, 2433981, 2434273, 2434542, 2434546, 2434710, 2434824
-        // Ä¡¿ì¾¾ :: Å×¼³´Ô USFM ÀÚ·á µ¥¹ÌÁö½ºÅ²
+        // ì¹˜ìš°ì”¨ :: í…Œì„¤ë‹˜ USFM ìë£Œ ë°ë¯¸ì§€ìŠ¤í‚¨
         int itemlist[] = {2431965,2431966,2431967,2432084,2432131,2432153,2432154,2432207,2432354,2432355,2432465,2432479,2432526,2432532,2432592,2432637,2432638,2432639,2432640,2432658,2432659,2432660,2432661,2432710,2432836,2432972,2432973,2433063,2433178,2433456,2433631,2433655,2433715,2433804,2433913,2433919,2433980,2433981,2433990,2434248,2434273,2434274,2434289,2434390,2434391,2434528,2434529,2434530,2434542,2434546,2434574,2434575,2434654,2434655,2434661,2434710,2434734,2434824,2434950,2434951,2435023,2435024,2435025,2435026,2435027,2435028,2435029,2435030,2435043,2435044,2435045,2435046,2435047,2435140,2435141,2435157,2435158,2435159,2435160,2435161,2435162,2435166,2435168,2435169,2435170,2435171,2435172,2435173,2435174,2435175,2435176,2435177,2435179,2435182,2435184,2435222,2435293,2435313,2435316,2435325,2435326,2435331,2435332,2435333,2435334,2435408,2435424,2435425,2435427,2435428,2435429,2435430,2435431,2435432,2435433,2435456,2435461,2435473,2435474,2435477,2435478,2435490,2435491,2435493,2435516,2435521,2435522,2435523,2435524,2435538,2435972,2436023,2436024,2436026,2436027,2436028,2436029,2435832,2435833,2435839,2435840,2435841,2436045,2436083,2436084,2436085,2436098,2436103,2436140,2436182,2436206,2436212,2436215,2435905,2435906,2435948,2435949,2435955,2435956,2436132,2436258,2436259,2436268,2436400,2436437,2436521,2436522,2436528,2436529,2436553,2436560,2436578,2436596,2436611,2436612,2436679,2436680,2436681,2436682,2436683,2436684,2436785,2436810,2436951,2436952,2436953,2437009,2437022,2437023,2437024,2437164,2437238,2437239,2437243,2437482,2437495,2437496,2437498,2437515,2437691,2437877,2438143,2438144,2438352,2438378,2438379,2438413,2438415,2438417,2438419,2438460};
         for (int i = 0; i < itemlist.length; i++) {
-            chat += "#L" + itemlist[i] + "##i" + itemlist[i] + "##b(#z" + itemlist[i] + "#)#k - Áö±Ş¹Ş±â\r\n#l";
+            chat += "#L" + itemlist[i] + "##i" + itemlist[i] + "##b(#z" + itemlist[i] + "#)#k - ì§€ê¸‰ë°›ê¸°\r\n#l";
         }
         return chat;
     }
@@ -2229,7 +2229,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             {1142607, 1, 100000},};
 
         for (int i = 0; i < itemlist.length; i++) {
-            chat += "#L" + i + "##e#rÈ¯»ıÆ÷ÀÎÆ® " + itemlist[i][2] + "Á¡ - #i" + itemlist[i][0] + "#(#z" + itemlist[i][0] + "#) " + itemlist[i][1] + "°³ ±³È¯#k#n\r\n";
+            chat += "#L" + i + "##e#rí™˜ìƒí¬ì¸íŠ¸ " + itemlist[i][2] + "ì  - #i" + itemlist[i][0] + "#(#z" + itemlist[i][0] + "#) " + itemlist[i][1] + "ê°œ êµí™˜#k#n\r\n";
         }
 
         return chat;
@@ -2251,7 +2251,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             {1142607, 1, 100000, 20000, 5000}};
 
         if (getPlayer().getGP() < itemlist[itemId][2]) {
-            getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("¼±ÅÃÇÏ½Å [" + ItemInformation.getInstance().getName(itemlist[itemId][0]) + "] ¾ÆÀÌÅÛÀº È¯»ıÆ÷ÀÎÆ®°¡ ºÎÁ·ÇÏ¿© ±¸¸Å ÇÏ½Ç ¼ö ¾ø½À´Ï´Ù..."));
+            getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("ì„ íƒí•˜ì‹  [" + ItemInformation.getInstance().getName(itemlist[itemId][0]) + "] ì•„ì´í…œì€ í™˜ìƒí¬ì¸íŠ¸ê°€ ë¶€ì¡±í•˜ì—¬ êµ¬ë§¤ í•˜ì‹¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤..."));
             dispose();
             return;
         }
@@ -2268,83 +2268,83 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         } else {
             gainItem(itemlist[itemId][0], (short) itemlist[itemId][1]);
         }
-        getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("¼±ÅÃÇÏ½Å [" + ItemInformation.getInstance().getName(itemlist[itemId][0]) + "] ¾ÆÀÌÅÛÀ» ±¸¸Å ÇÏ¿´½À´Ï´Ù...."));
+        getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("ì„ íƒí•˜ì‹  [" + ItemInformation.getInstance().getName(itemlist[itemId][0]) + "] ì•„ì´í…œì„ êµ¬ë§¤ í•˜ì˜€ìŠµë‹ˆë‹¤...."));
         getPlayer().gainGP(-itemlist[itemId][2]);
 
         /*if (getPlayer().getGP() < itemlist[itemId][2]) {
-            getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("¼±ÅÃÇÏ½Å [" + ItemInformation.getInstance().getName(itemlist[itemId][0]) + "] ¾ÆÀÌÅÛÀº È¯»ıÆ÷ÀÎÆ®°¡ ºÎÁ·ÇÏ¿© ±¸¸Å ÇÏ½Ç ¼ö ¾ø½À´Ï´Ù..."));
+            getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("ì„ íƒí•˜ì‹  [" + ItemInformation.getInstance().getName(itemlist[itemId][0]) + "] ì•„ì´í…œì€ í™˜ìƒí¬ì¸íŠ¸ê°€ ë¶€ì¡±í•˜ì—¬ êµ¬ë§¤ í•˜ì‹¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤..."));
             dispose();
             return;
         }
         getPlayer().gainItem(itemlist[itemId][0], itemlist[itemId][1]);
-        getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("¼±ÅÃÇÏ½Å [" + ItemInformation.getInstance().getName(itemlist[itemId][0]) + "] ¾ÆÀÌÅÛÀ» ±¸¸Å ÇÏ¿´½À´Ï´Ù...."));
+        getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("ì„ íƒí•˜ì‹  [" + ItemInformation.getInstance().getName(itemlist[itemId][0]) + "] ì•„ì´í…œì„ êµ¬ë§¤ í•˜ì˜€ìŠµë‹ˆë‹¤...."));
         getPlayer().gainGP(-itemlist[itemId][2]);*/
     }
 
     public void ChaosBossSpawn(final int map) {
         int partypass = 0;
         int mapid[] = {
-            240020401, // ¸¶´¨
-            240020102, // ±×¸®ÇÁ
-            230040420, // ÇÇ¾Æ´©½º
-            220080001, // ÆÄÆú¶óÅõ½º
-            280030100, // ÀÚÄñ
-            280030000, // Ä«¿À½º Ä«Äñ
-            240060200, // È¥Å×ÀÏ
-            240060201, // Ä«¿À½º È¥Å×ÀÏ
-            270050100, // ÇÎÅ©ºó            
-            271040100, // ½Ã±×³Ê½º
-            105200210, // ºí·¯µğ Äı(¹ÌÀû¿ë)
-            105200710, // Ä«¿À½º ºí·¯µğ Äı
-            105200110, // ¹İ¹İ
-            105200510, // Ä«¿À½º ¹İ¹İ
-            105200210, // ºÓÀº ÇÇ¿¡¸£
-            105200610, // ºÓÀº Ä«¿À½º ÇÇ¿¡¸£
-            105200410, // º§·ı
-            105200810, // Ä«¿À½º º§·ı
-            262031300, // Èú¶ó
-            262031300, // À§´ëÇÑ Èú¶ó
-            211070100, // ¹İ ·¹¿Â
-            401060300, // ¸Å±×³Ê½º
-            272020210, // ¾ÆÄ«ÀÌ·³
-            993000500, // ºÒ²É´Á´ë
-            350060160, // ½º¿ì
-            209000100, // ·ç½Ãµå
-            350160140, // µ¥¹Ì¾È
-            940200204, // ¾Ç·É
-            970072300, // ¿ì¸£½º
+            240020401, // ë§ˆë‡½
+            240020102, // ê·¸ë¦¬í”„
+            230040420, // í”¼ì•„ëˆ„ìŠ¤
+            220080001, // íŒŒí´ë¼íˆ¬ìŠ¤
+            280030100, // ìì¿°
+            280030000, // ì¹´ì˜¤ìŠ¤ ì¹´ì¿°
+            240060200, // í˜¼í…Œì¼
+            240060201, // ì¹´ì˜¤ìŠ¤ í˜¼í…Œì¼
+            270050100, // í•‘í¬ë¹ˆ            
+            271040100, // ì‹œê·¸ë„ˆìŠ¤
+            105200210, // ë¸”ëŸ¬ë”” í€¸(ë¯¸ì ìš©)
+            105200710, // ì¹´ì˜¤ìŠ¤ ë¸”ëŸ¬ë”” í€¸
+            105200110, // ë°˜ë°˜
+            105200510, // ì¹´ì˜¤ìŠ¤ ë°˜ë°˜
+            105200210, // ë¶‰ì€ í”¼ì—ë¥´
+            105200610, // ë¶‰ì€ ì¹´ì˜¤ìŠ¤ í”¼ì—ë¥´
+            105200410, // ë²¨ë¥¨
+            105200810, // ì¹´ì˜¤ìŠ¤ ë²¨ë¥¨
+            262031300, // íë¼
+            262031300, // ìœ„ëŒ€í•œ íë¼
+            211070100, // ë°˜ ë ˆì˜¨
+            401060300, // ë§¤ê·¸ë„ˆìŠ¤
+            272020210, // ì•„ì¹´ì´ëŸ¼
+            993000500, // ë¶ˆê½ƒëŠ‘ëŒ€
+            350060160, // ìŠ¤ìš°
+            209000100, // ë£¨ì‹œë“œ
+            350160140, // ë°ë¯¸ì•ˆ
+            940200204, // ì•…ë ¹
+            970072300, // ìš°ë¥´ìŠ¤
                       };
 
         int mobCode[][] = {
-            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // ¸¶´¨ 1
-            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // ±×¸®ÇÁ 2
-            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // ÇÇ¾Æ´©½º 3
-            {100004, -362, -462, 99, 10}, // ÆÄÆú¶óÅõ½º - x : -362, y : -462 4
-            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // ÀÚÄñ 5
-            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // Ä«¿À½º ÀÚÄñ 6
-            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // È¥Å×ÀÏ 7
-            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // Ä«¿À½º È¥Å×ÀÏ 8
-            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // ÇÎÅ©ºó 9
-            {100004, 97, 3, 99, 10}, // ½Ã±×³Ê½º - x : 97, y : 3 10
-            {100004, 535, 435, 99, 10}, // ºí·¯µğ Äı 11
-            {100004, 65, 35, 99, 10}, // Ä«¿À½º ºí·¯µğ Äı 12
-            {100004, 535, 435, 99, 10}, // ¹İ¹İ 13
-            {100004, -229, -329, 99, 10}, // Ä«¿À½º ¹İ¹İ 14
-            {100004, 535, 435, 99, 10}, // ºÓÀº ÇÇ¿¡¸£ - x : 1371, y : 1271 15
-            {100004, 545, 445, 99, 10}, // Ä«¿À½º ºÓÀº ÇÇ¿¡¸£ 16
-            {100004, 535, 435, 99, 10}, // º§·ë 17
-            {100004, -695, -795, 99, 10}, // Ä«¿À½º º§·ı 18
-            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // Èú¶ó 19
-            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // À§´ëÇÑ Èú¶ó 20
-            {100004, -46, -146, 99, 10}, // ¹İ ·¹¿Â - x : -46, y : -146 21
-            {100004, 1650, -1347, 99, 10}, //¸Å±×³Ê½º 22
-            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // ¾ÆÄ«ÀÌ·³ 23
-            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 219, 10}, // ºÒ²É´Á´ë 24
-            {100004, 5, -14, 219, 10}, // ½º¿ì - x : 5, y : -14 25
-            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 219, 10}, // ·ç½Ãµå 26
-            {100004, 1206, 1306, 219, 10}, // µ¥¹Ì¾È - x :, y :    27
-            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 219, 10}, //¾Ç·É 28
-            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 219, 10} }; //¿ì¸£½º 29
+            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // ë§ˆë‡½ 1
+            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // ê·¸ë¦¬í”„ 2
+            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // í”¼ì•„ëˆ„ìŠ¤ 3
+            {100004, -362, -462, 99, 10}, // íŒŒí´ë¼íˆ¬ìŠ¤ - x : -362, y : -462 4
+            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // ìì¿° 5
+            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // ì¹´ì˜¤ìŠ¤ ìì¿° 6
+            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // í˜¼í…Œì¼ 7
+            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // ì¹´ì˜¤ìŠ¤ í˜¼í…Œì¼ 8
+            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // í•‘í¬ë¹ˆ 9
+            {100004, 97, 3, 99, 10}, // ì‹œê·¸ë„ˆìŠ¤ - x : 97, y : 3 10
+            {100004, 535, 435, 99, 10}, // ë¸”ëŸ¬ë”” í€¸ 11
+            {100004, 65, 35, 99, 10}, // ì¹´ì˜¤ìŠ¤ ë¸”ëŸ¬ë”” í€¸ 12
+            {100004, 535, 435, 99, 10}, // ë°˜ë°˜ 13
+            {100004, -229, -329, 99, 10}, // ì¹´ì˜¤ìŠ¤ ë°˜ë°˜ 14
+            {100004, 535, 435, 99, 10}, // ë¶‰ì€ í”¼ì—ë¥´ - x : 1371, y : 1271 15
+            {100004, 545, 445, 99, 10}, // ì¹´ì˜¤ìŠ¤ ë¶‰ì€ í”¼ì—ë¥´ 16
+            {100004, 535, 435, 99, 10}, // ë²¨ë£¸ 17
+            {100004, -695, -795, 99, 10}, // ì¹´ì˜¤ìŠ¤ ë²¨ë¥¨ 18
+            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // íë¼ 19
+            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // ìœ„ëŒ€í•œ íë¼ 20
+            {100004, -46, -146, 99, 10}, // ë°˜ ë ˆì˜¨ - x : -46, y : -146 21
+            {100004, 1650, -1347, 99, 10}, //ë§¤ê·¸ë„ˆìŠ¤ 22
+            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 99, 10}, // ì•„ì¹´ì´ëŸ¼ 23
+            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 219, 10}, // ë¶ˆê½ƒëŠ‘ëŒ€ 24
+            {100004, 5, -14, 219, 10}, // ìŠ¤ìš° - x : 5, y : -14 25
+            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 219, 10}, // ë£¨ì‹œë“œ 26
+            {100004, 1206, 1306, 219, 10}, // ë°ë¯¸ì•ˆ - x :, y :    27
+            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 219, 10}, //ì•…ë ¹ 28
+            {100004, c.getPlayer().getPosition().x, c.getPlayer().getPosition().y, 219, 10} }; //ìš°ë¥´ìŠ¤ 29
 
         int time[] = {
         10800,
@@ -2378,69 +2378,69 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         10800,};
 
         String bossMessage[] = {
-            "" + getPlayer().getName() + "´Ô ¸¶´¨ º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù.",
-            "" + getPlayer().getName() + "´Ô ±×¸®ÇÁ º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù.",
-            "" + getPlayer().getName() + "´Ô ÇÇ¾Æ´©½º º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù.",
-            "" + getPlayer().getName() + "´Ô ÆÄÆú¶óÅõ½º º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô ÀÚÄñ º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô Ä«¿À½º ÀÚÄñ º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô È¥Å×ÀÏ º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô Ä«¿À½º È¥Å×ÀÏ º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô ÇÎÅ©ºó º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô ½Ã±×³Ê½º º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô ºí·¯µğ Äı º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô Ä«¿À½º ºí·¯µğ Äı º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô ¹İ¹İ º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô Ä«¿À½º ¹İ¹İ º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô ºÓÀº ÇÇ¿¡¸£ º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô Ä«¿À½º ÇÇ¿¡¸£ º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô º§·ı º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô Ä«¿À½º º§·ı º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô Èú¶ó º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô À§´ëÇÑ Èú¶ó º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô ¹İ ·¹¿Â º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô ¸Å±×³Ê½º º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô ¾ÆÄ«ÀÌ·³ º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô ºÒ²É´Á´ë º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô ½º¿ì º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô ·ç½Ãµå º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô µ¥¹Ì¾È º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô ¾Ç·É º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",
-            "" + getPlayer().getName() + "´Ô ¿ì¸£½º º¸½º ÀÎ½ºÅÏ½º¿¡ ÀÔÀåÇÏ½Å°ÍÀ» È¯¿µÇÕ´Ï´Ù. ¸Ê¾È¿¡ ÀÖ´Â ¿£ÇÇ½Ã¸¦ Å¬¸¯ÇØÁÖ½Ê½Ã¿À.",};
+            "" + getPlayer().getName() + "ë‹˜ ë§ˆë‡½ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤.",
+            "" + getPlayer().getName() + "ë‹˜ ê·¸ë¦¬í”„ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤.",
+            "" + getPlayer().getName() + "ë‹˜ í”¼ì•„ëˆ„ìŠ¤ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤.",
+            "" + getPlayer().getName() + "ë‹˜ íŒŒí´ë¼íˆ¬ìŠ¤ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ìì¿° ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ì¹´ì˜¤ìŠ¤ ìì¿° ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ í˜¼í…Œì¼ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ì¹´ì˜¤ìŠ¤ í˜¼í…Œì¼ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ í•‘í¬ë¹ˆ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ì‹œê·¸ë„ˆìŠ¤ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ë¸”ëŸ¬ë”” í€¸ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ì¹´ì˜¤ìŠ¤ ë¸”ëŸ¬ë”” í€¸ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ë°˜ë°˜ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ì¹´ì˜¤ìŠ¤ ë°˜ë°˜ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ë¶‰ì€ í”¼ì—ë¥´ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ì¹´ì˜¤ìŠ¤ í”¼ì—ë¥´ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ë²¨ë¥¨ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ì¹´ì˜¤ìŠ¤ ë²¨ë¥¨ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ íë¼ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ìœ„ëŒ€í•œ íë¼ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ë°˜ ë ˆì˜¨ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ë§¤ê·¸ë„ˆìŠ¤ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ì•„ì¹´ì´ëŸ¼ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ë¶ˆê½ƒëŠ‘ëŒ€ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ìŠ¤ìš° ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ë£¨ì‹œë“œ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ë°ë¯¸ì•ˆ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ì•…ë ¹ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",
+            "" + getPlayer().getName() + "ë‹˜ ìš°ë¥´ìŠ¤ ë³´ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ì— ì…ì¥í•˜ì‹ ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. ë§µì•ˆì— ìˆëŠ” ì—”í”¼ì‹œë¥¼ í´ë¦­í•´ì£¼ì‹­ì‹œì˜¤.",};
 
         if (getParty() == null) {
-            sendOk("ÆÄÆ¼·Î¸¸ ÀÔÀå ÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.");
+            sendOk("íŒŒí‹°ë¡œë§Œ ì…ì¥ í•˜ì‹¤ ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
             dispose();
             return;
         }
 
         if (!isLeader()) {
-            sendOk("ÆÄÆ¼ÀåÀÌ ÀÔÀå½ÅÃ»À» ÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+            sendOk("íŒŒí‹°ì¥ì´ ì…ì¥ì‹ ì²­ì„ í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
             dispose();
             return;
         }
 
         if (!allMembersHere()) {
-            sendOk("ÆÄÆ¼¿øÀÌ Àü¿ø ÀÌ°÷¿¡ ¸ğ¿©ÀÖ¾î¾ß ÇÕ´Ï´Ù.");
+            sendOk("íŒŒí‹°ì›ì´ ì „ì› ì´ê³³ì— ëª¨ì—¬ìˆì–´ì•¼ í•©ë‹ˆë‹¤.");
             dispose();
             return;
         }
 
         if (partypass == 0) {
-            String ¸» = "ÆÄÆ¼¿ø Áß #b#e";
+            String ë§ = "íŒŒí‹°ì› ì¤‘ #b#e";
             for (int i = 0; i < getPartyMembers().size(); i++) {
                 if (getPlayer().getParty().getMemberByIndex(i).getLevel() <= mobCode[map][3]) {
                     int h = 0;
                     partypass = 1;
                     h++;
-                    ¸» += "" + getPlayer().getParty().getMemberByIndex(i).getName() + ",";
+                    ë§ += "" + getPlayer().getParty().getMemberByIndex(i).getName() + ",";
                     if (h != getPartyMembers().size()) {
                     }
                 }
             }
-            ¸» += "#n#k´ÔÀº ·¹º§ÀÌ ¸¸Á·ÇÏÁö ¾Ê¾Æ¼­ ºÒ°¡´ÉÇÕ´Ï´Ù.";
+            ë§ += "#n#kë‹˜ì€ ë ˆë²¨ì´ ë§Œì¡±í•˜ì§€ ì•Šì•„ì„œ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤.";
             if (partypass == 1) {
-                sendOk(¸»);
+                sendOk(ë§);
                 dispose();
             } else {
                 MapleMonster mob;
@@ -2490,39 +2490,39 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             {24100003, 20000},
             {142110011, 20000}};
         if (getRC() < moneybuff[skillid][1]) {
-            getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("¼±ÅÃÇÏ½Å [" + SkillFactory.getSkillName(moneybuff[skillid][0]) + "] ¹öÇÁ´Â ÈÄ¿øÆ÷ÀÎÆ®°¡ ºÎÁ·ÇÏ¿© ±¸¸Å ÇÏ½Ç ¼ö ¾ø½À´Ï´Ù..."));
+            getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("ì„ íƒí•˜ì‹  [" + SkillFactory.getSkillName(moneybuff[skillid][0]) + "] ë²„í”„ëŠ” í›„ì›í¬ì¸íŠ¸ê°€ ë¶€ì¡±í•˜ì—¬ êµ¬ë§¤ í•˜ì‹¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤..."));
             dispose();
             return;
         }
         if (getPlayer().getKeyValue(value[skillid]) != null) {
-            getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("¼±ÅÃÇÏ½Å [" + SkillFactory.getSkillName(moneybuff[skillid][0]) + "] ¹öÇÁ´Â ÀÌ¹Ì ±¸¸ÅÇÏ¿© ±¸¸Å ÇÏ½Ç ¼ö ¾ø½À´Ï´Ù..."));
+            getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("ì„ íƒí•˜ì‹  [" + SkillFactory.getSkillName(moneybuff[skillid][0]) + "] ë²„í”„ëŠ” ì´ë¯¸ êµ¬ë§¤í•˜ì—¬ êµ¬ë§¤ í•˜ì‹¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤..."));
             dispose();
             return;
         }
         getPlayer().setKeyValue(value[skillid], "ture");
         loseRC(moneybuff[skillid][1]);
         getPlayer().unlockMaxDamage();
-        getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("¼±ÅÃÇÏ½Å [" + SkillFactory.getSkillName(moneybuff[skillid][0]) + "] ¹öÇÁ¸¦ ±¸¸Å ¿Ï·á ÇÏ¿´½À´Ï´Ù.."));
+        getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("ì„ íƒí•˜ì‹  [" + SkillFactory.getSkillName(moneybuff[skillid][0]) + "] ë²„í”„ë¥¼ êµ¬ë§¤ ì™„ë£Œ í•˜ì˜€ìŠµë‹ˆë‹¤.."));
         dispose();
     }
 
     public void RadWeaponShopGain(int itemid) {
         int itemlist[] = {
-            1402214, // ·¹µå ÅõÇÚµå ¼Òµå
-            1422156, // ·¹µå ¸ğ¿ï
-            1472230, // ·¹µå ½ºÆ¼¾î
-            1332242, // ·¹µå Ä¿ÅÍ
-            1342087, // ·¹µå ºí·¹ÀÌµå
-            1382226, // ·¹µå ½ºÅÂÇÁ
-            1492194, // ·¹µå °Ç
-            1462208, // ·¹µå Å©·Î½ºº¸¿ì
-            1452220, // ·¹µå º¸¿ì
-            1532112, // ·¹µå Ä³³í
-            1432182, // ·¹µå ½ºÇÇ¾î
-            1482183, // ·¹µå ³ÊÅ¬
+            1402214, // ë ˆë“œ íˆ¬í•¸ë“œ ì†Œë“œ
+            1422156, // ë ˆë“œ ëª¨ìš¸
+            1472230, // ë ˆë“œ ìŠ¤í‹°ì–´
+            1332242, // ë ˆë“œ ì»¤í„°
+            1342087, // ë ˆë“œ ë¸”ë ˆì´ë“œ
+            1382226, // ë ˆë“œ ìŠ¤íƒœí”„
+            1492194, // ë ˆë“œ ê±´
+            1462208, // ë ˆë“œ í¬ë¡œìŠ¤ë³´ìš°
+            1452220, // ë ˆë“œ ë³´ìš°
+            1532112, // ë ˆë“œ ìºë…¼
+            1432182, // ë ˆë“œ ìŠ¤í”¼ì–´
+            1482183, // ë ˆë“œ ë„ˆí´
         };
         if (!getPlayer().haveItem(4310129, 50, false, true)) {
-            sendOk("ÄÚÀÎÀÌ ºÎÁ·ÇÏ¿© ¾ÆÀÌÅÛÀ» ±¸¸Å ÇÏ½Ç ¼ö ¾ø½À´Ï´Ù.");
+            sendOk("ì½”ì¸ì´ ë¶€ì¡±í•˜ì—¬ ì•„ì´í…œì„ êµ¬ë§¤ í•˜ì‹¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
             dispose();
             return;
         }
@@ -2539,124 +2539,124 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         } else {
             gainItem(itemlist[itemid], (short) 1);
         }
-        getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("¼±ÅÃÇÏ½Å [" + ItemInformation.getInstance().getName(itemlist[itemid]) + "] ¾ÆÀÌÅÛÀ» ±¸¸Å ÇÏ¿´½À´Ï´Ù...."));
+        getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("ì„ íƒí•˜ì‹  [" + ItemInformation.getInstance().getName(itemlist[itemid]) + "] ì•„ì´í…œì„ êµ¬ë§¤ í•˜ì˜€ìŠµë‹ˆë‹¤...."));
 
     }
 
     public void gainInsItem(int selection) {
         int itemlist[] = {3015873, 3015788, 3015564, 3016200, 3015646, 3015643, 3015705, 3015844, 3015387, 3015388, 3015389, 3015390, 3015391, 3015392, 3017011, 3017012, 3017013, 3017014, 3017015, 3017016};
         if (!getPlayer().haveItem(4033247, 1000, false, true)) {
-            sendOk("#r#i4033247#(#z4033247#) - 1000°³°¡ ÇÊ¿äÇÕ´Ï´Ù#k");
+            sendOk("#r#i4033247#(#z4033247#) - 1000ê°œê°€ í•„ìš”í•©ë‹ˆë‹¤#k");
             dispose();
             return;
         }
         gainItem(4033247, (short) -1000);
         gainItem(itemlist[selection], (short) 1);
-        getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("¼±ÅÃÇÏ½Å [" + ItemInformation.getInstance().getName(itemlist[selection]) + "] ¾ÆÀÌÅÛÀ» ±¸¸Å ÇÏ¿´½À´Ï´Ù...."));
+        getClient().getSession().writeAndFlush(UIPacket.greenShowInfo("ì„ íƒí•˜ì‹  [" + ItemInformation.getInstance().getName(itemlist[selection]) + "] ì•„ì´í…œì„ êµ¬ë§¤ í•˜ì˜€ìŠµë‹ˆë‹¤...."));
     }
 
     public void CollectivelyShop(int shopid, int npcid) {
         int shoplist[] = {
-            // ¸ğµç Á÷¾÷ »óÁ¡ ½ÃÀÛ
+            // ëª¨ë“  ì§ì—… ìƒì  ì‹œì‘
 
-            10021, // Àü»ç - ¸ğÀÚ »óÁ¡
-            10018, // Àü»ç - »óÀÇ »óÁ¡
-            10017, // Àü»ç - ÇÏÀÇ »óÁ¡
-            10016, // Àü»ç - ½Å¹ß »óÁ¡
-            10019, // Àü»ç - Àü½Å »óÁ¡
-            10020, // Àü»ç - Àå°© »óÁ¡
-            10022, // Àü»ç - ¹æÆĞ »óÁ¡
+            10021, // ì „ì‚¬ - ëª¨ì ìƒì 
+            10018, // ì „ì‚¬ - ìƒì˜ ìƒì 
+            10017, // ì „ì‚¬ - í•˜ì˜ ìƒì 
+            10016, // ì „ì‚¬ - ì‹ ë°œ ìƒì 
+            10019, // ì „ì‚¬ - ì „ì‹  ìƒì 
+            10020, // ì „ì‚¬ - ì¥ê°‘ ìƒì 
+            10022, // ì „ì‚¬ - ë°©íŒ¨ ìƒì 
 
-            3000136, // Àü»ç - µ¥½ºÆä¶óµµ »óÁ¡
-            10023, // Àü»ç - ÇÑ¼Õ µµ³¢ »óÁ¡
-            10024, // Àü»ç - µÎ¼Õ µµ³¢ »óÁ¡
-            10025, // Àü»ç - ÇÑ¼Õ µĞ±â »óÁ¡
-            10026, // Àü»ç - µÎ¼Õ µĞ±â »óÁ¡
-            10027, // Àü»ç - ÇÑ¼Õ°Ë »óÁ¡
-            10028, // Àü»ç - µÎ¼Õ°Ë »óÁ¡
-            10029, // Àü»ç - Ã¢
-            10030, // Àü»ç - Æú¾Ï
+            3000136, // ì „ì‚¬ - ë°ìŠ¤í˜ë¼ë„ ìƒì 
+            10023, // ì „ì‚¬ - í•œì† ë„ë¼ ìƒì 
+            10024, // ì „ì‚¬ - ë‘ì† ë„ë¼ ìƒì 
+            10025, // ì „ì‚¬ - í•œì† ë‘”ê¸° ìƒì 
+            10026, // ì „ì‚¬ - ë‘ì† ë‘”ê¸° ìƒì 
+            10027, // ì „ì‚¬ - í•œì†ê²€ ìƒì 
+            10028, // ì „ì‚¬ - ë‘ì†ê²€ ìƒì 
+            10029, // ì „ì‚¬ - ì°½
+            10030, // ì „ì‚¬ - í´ì•”
 
-            10003, // ¹ı»ç - ¸ğÀÚ »óÁ¡
-            10001, // ¹ı»ç - Àü½Å »óÁ¡ 
-            10123, // ¹ı»ç - »óÀÇ »óÁ¡
-            12124, // ¹ı»ç - ÇÏÀÇ »óÁ¡
-            10000, // ¹ı»ç - ½Å¹ß »óÁ¡
-            10002, // ¹ı»ç - Àå°© »óÁ¡
-            10004, // ¹ı»ç - ¹æÆĞ »óÁ¡
+            10003, // ë²•ì‚¬ - ëª¨ì ìƒì 
+            10001, // ë²•ì‚¬ - ì „ì‹  ìƒì  
+            10123, // ë²•ì‚¬ - ìƒì˜ ìƒì 
+            12124, // ë²•ì‚¬ - í•˜ì˜ ìƒì 
+            10000, // ë²•ì‚¬ - ì‹ ë°œ ìƒì 
+            10002, // ë²•ì‚¬ - ì¥ê°‘ ìƒì 
+            10004, // ë²•ì‚¬ - ë°©íŒ¨ ìƒì 
 
-            3000137, // ¹ı»ç - »şÀÌ´× ·Îµå »óÁ¡
-            10125, // ¹ı»ç - µå·¡°ï Àåºñ »óÁ¡
-            10005, // ¹ı»ç - ¿Ïµå
-            10006, // ¹ı»ç - ½ºÅÂÇÁ
+            3000137, // ë²•ì‚¬ - ìƒ¤ì´ë‹ ë¡œë“œ ìƒì 
+            10125, // ë²•ì‚¬ - ë“œë˜ê³¤ ì¥ë¹„ ìƒì 
+            10005, // ë²•ì‚¬ - ì™„ë“œ
+            10006, // ë²•ì‚¬ - ìŠ¤íƒœí”„
 
-            10034, // ±Ã¼ö - ¸ğÀÚ »óÁ¡
-            10121, // ±Ã¼ö - »óÀÇ »óÁ¡
-            10122, // ±Ã¼ö - ÇÏÀÇ »óÁ¡
-            10032, // ±Ã¼ö - Àü½Å »óÁ¡
-            10031, // ±Ã¼ö - ½Å¹ß »óÁ¡
-            10033, // ±Ã¼ö - Àå°© »óÁ¡
+            10034, // ê¶ìˆ˜ - ëª¨ì ìƒì 
+            10121, // ê¶ìˆ˜ - ìƒì˜ ìƒì 
+            10122, // ê¶ìˆ˜ - í•˜ì˜ ìƒì 
+            10032, // ê¶ìˆ˜ - ì „ì‹  ìƒì 
+            10031, // ê¶ìˆ˜ - ì‹ ë°œ ìƒì 
+            10033, // ê¶ìˆ˜ - ì¥ê°‘ ìƒì 
 
-            10035, // ±Ã¼ö - È° »óÁ¡
-            10036, // ±Ã¼ö - ¼®±Ã »óÁ¡
-            10108, // ±Ã¼ö - µà¾ó±Ã »óÁ¡
-            10110, // ±Ã¼ö - ¸¶¹ıÈ­»ì »óÁ¡
-            10037, // ±Ã¼ö - È­»ì »óÁ¡
+            10035, // ê¶ìˆ˜ - í™œ ìƒì 
+            10036, // ê¶ìˆ˜ - ì„ê¶ ìƒì 
+            10108, // ê¶ìˆ˜ - ë“€ì–¼ê¶ ìƒì 
+            10110, // ê¶ìˆ˜ - ë§ˆë²•í™”ì‚´ ìƒì 
+            10037, // ê¶ìˆ˜ - í™”ì‚´ ìƒì 
 
-            10012, // µµÀû - ¸ğÀÚ »óÁ¡
-            10008, // µµÀû - »óÀÇ »óÁ¡
-            10009, // µµÀû - ÇÏÀÇ »óÁ¡
-            10010, // µµÀû - Àü½Å »óÁ¡
-            10007, // µµÀû - ½Å¹ß »óÁ¡
-            10011, // µµÀû - Àå°© »óÁ¡
-            10013, // µµÀû - ¹æÆĞ »óÁ¡
+            10012, // ë„ì  - ëª¨ì ìƒì 
+            10008, // ë„ì  - ìƒì˜ ìƒì 
+            10009, // ë„ì  - í•˜ì˜ ìƒì 
+            10010, // ë„ì  - ì „ì‹  ìƒì 
+            10007, // ë„ì  - ì‹ ë°œ ìƒì 
+            10011, // ë„ì  - ì¥ê°‘ ìƒì 
+            10013, // ë„ì  - ë°©íŒ¨ ìƒì 
 
-            3000135, // µµÀû - ¿¡³ÊÁö¼Òµå »óÁ¡
-            10014, // µµÀû - ´Ü°Ë »óÁ¡
-            10015, // µµÀû - ¾Æ´ë »óÁ¡
-            10106, // µµÀû - ºí·¹ÀÌµå »óÁ¡
-            10109, // µµÀû - ÄÉÀÎ »óÁ¡
-            2003, // µµÀû - Ä«µå »óÁ¡
-            10038, // µµÀû - Ç¥Ã¢ »óÁ¡
+            3000135, // ë„ì  - ì—ë„ˆì§€ì†Œë“œ ìƒì 
+            10014, // ë„ì  - ë‹¨ê²€ ìƒì 
+            10015, // ë„ì  - ì•„ëŒ€ ìƒì 
+            10106, // ë„ì  - ë¸”ë ˆì´ë“œ ìƒì 
+            10109, // ë„ì  - ì¼€ì¸ ìƒì 
+            2003, // ë„ì  - ì¹´ë“œ ìƒì 
+            10038, // ë„ì  - í‘œì°½ ìƒì 
 
-            10090, // ÇØÀû - ¸ğÀÚ»óÁ¡
-            10091, // ÇØÀû - Àü½Å»óÁ¡
-            10093, // ÇØÀû - ½Å¹ß»óÁ¡
-            10092, // ÇØÀû - Àå°©»óÁ¡
+            10090, // í•´ì  - ëª¨ììƒì 
+            10091, // í•´ì  - ì „ì‹ ìƒì 
+            10093, // í•´ì  - ì‹ ë°œìƒì 
+            10092, // í•´ì  - ì¥ê°‘ìƒì 
 
-            10087, // ÇØÀû - ³ÊÅ¬»óÁ¡
-            10088, // ÇØÀû - ÃÑ»óÁ¡
-            10107, // ÇØÀû - ÇÚµåÄ³³í»óÁ¡
-            11100, // ÇØÀû - ¼Ò¿ï½´ÅÍ»óÁ¡
-            10089, // ÇØÀû - º¼¸´»óÁ¡
+            10087, // í•´ì  - ë„ˆí´ìƒì 
+            10088, // í•´ì  - ì´ìƒì 
+            10107, // í•´ì  - í•¸ë“œìºë…¼ìƒì 
+            11100, // í•´ì  - ì†Œìš¸ìŠˆí„°ìƒì 
+            10089, // í•´ì  - ë³¼ë¦¿ìƒì 
 
-            // ¸ğµç Á÷¾÷ »óÁ¡ Á¾·á
+            // ëª¨ë“  ì§ì—… ìƒì  ì¢…ë£Œ
 
-            // ¼¼Æ® ¾ÆÀÌÅÛ »óÁ¡ ½ÃÀÛ
+            // ì„¸íŠ¸ ì•„ì´í…œ ìƒì  ì‹œì‘
 
-            1401004, // ÅÛÆä½ºÆ® »óÁ¡
-            9250028, // ¿©Á¦ »óÁ¡
-            2040000, // Å¸ÀÏ·±Æ® »óÁ¡
-            9250027, // ·çÅ¸ºñ½º »óÁ¡
-            1201002, // ¾Û¼Ö·¦½º »óÁ¡
+            1401004, // í…œí˜ìŠ¤íŠ¸ ìƒì 
+            9250028, // ì—¬ì œ ìƒì 
+            2040000, // íƒ€ì¼ëŸ°íŠ¸ ìƒì 
+            9250027, // ë£¨íƒ€ë¹„ìŠ¤ ìƒì 
+            1201002, // ì•±ì†”ë©ìŠ¤ ìƒì 
 
-            9999999, // ¾ÆÄÉÀÎ ¹«±â »óÁ¡
-            9999998, // ¾ÆÄÉÀÎ ¹æ¾î±¸ »óÁ¡
+            9999999, // ì•„ì¼€ì¸ ë¬´ê¸° ìƒì 
+            9999998, // ì•„ì¼€ì¸ ë°©ì–´êµ¬ ìƒì 
 
-            // ¼¼Æ® ¾ÆÀÌÅÛ »óÁ¡ Á¾·á
+            // ì„¸íŠ¸ ì•„ì´í…œ ìƒì  ì¢…ë£Œ
 
-            // °ø¿ë »óÁ¡ ½ÃÀÛ
+            // ê³µìš© ìƒì  ì‹œì‘
 
-            2232100, // ¼Òºñ »óÁ¡
-            8000, // ¾Ç¼¼ »óÁ¡ - ¾ó±¼ Àå½Ä
-            8001, // ¾Ç¼¼ »óÁ¡ - ´«Àå½Ä
-            8002, // ¾Ç¼¼ »óÁ¡ - Ææ´øÆ®
-            8003, // ¾Ç¼¼ »óÁ¡ - °ßÀå
-            8004, // ¾Ç¼¼ »óÁ¡ - ¹İÁö
-            8005, // ¾Ç¼¼ »óÁ¡ - ¹îÁö
-            9110005, // ÀÇÀÚ »óÁ¡
+            2232100, // ì†Œë¹„ ìƒì 
+            8000, // ì•…ì„¸ ìƒì  - ì–¼êµ´ ì¥ì‹
+            8001, // ì•…ì„¸ ìƒì  - ëˆˆì¥ì‹
+            8002, // ì•…ì„¸ ìƒì  - íœë˜íŠ¸
+            8003, // ì•…ì„¸ ìƒì  - ê²¬ì¥
+            8004, // ì•…ì„¸ ìƒì  - ë°˜ì§€
+            8005, // ì•…ì„¸ ìƒì  - ë±ƒì§€
+            9110005, // ì˜ì ìƒì 
 
-            444446, // ºí·¡½ºÅÍ ¹«±â»óÁ¡
+            444446, // ë¸”ë˜ìŠ¤í„° ë¬´ê¸°ìƒì 
         };
         openShop(shoplist[shopid]);
         dispose();
@@ -2684,16 +2684,16 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
     public String isMarriCheck(final String name) {
         final MapleCharacter chr = getPlayer().getMap().getCharacterByName_InMap(name);
         if (chr == null) {
-            return "»ó´ë¹æÀÌ ÇöÀç¸Ê¿¡ °°ÀÌ ÀÖ´Â°Ô ¸Â³ª¿ä?";
+            return "ìƒëŒ€ë°©ì´ í˜„ì¬ë§µì— ê°™ì´ ìˆëŠ”ê²Œ ë§ë‚˜ìš”?";
         }
         if (chr.getMid() > 0) {
-            return "»ó´ë¹æÀº ÀÌ¹Ì ´Ù¸¥ ¹è¿ìÀÚ°¡ ÀÖ½À´Ï´Ù.";
+            return "ìƒëŒ€ë°©ì€ ì´ë¯¸ ë‹¤ë¥¸ ë°°ìš°ìê°€ ìˆìŠµë‹ˆë‹¤.";
         }
         if (chr.getGender() == getPlayer().getGender()) {
-            return "µ¿¼º ³¢¸®ÀÇ °áÈ¥Àº ¾ÈµË´Ï´Ù.";
+            return "ë™ì„± ë¼ë¦¬ì˜ ê²°í˜¼ì€ ì•ˆë©ë‹ˆë‹¤.";
         }
         if (getPlayer().getMid() > 0) {
-            return "ÀÌ¹Ì " + getPlayer().getName() + "´ÔÀº °áÈ¥ÇÏ½Å ¹è¿ìÀÚ°¡ °è½Ê´Ï´Ù¸¸? (¼³¸¶ ºÒ·û..?)";
+            return "ì´ë¯¸ " + getPlayer().getName() + "ë‹˜ì€ ê²°í˜¼í•˜ì‹  ë°°ìš°ìê°€ ê³„ì‹­ë‹ˆë‹¤ë§Œ? (ì„¤ë§ˆ ë¶ˆë¥œ..?)";
         }
         return "";
     }
@@ -2701,7 +2701,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
     public void startMarri(final String name) {
         final MapleCharacter chr = getPlayer().getMap().getCharacterByName_InMap(name);
         if (chr == null) {
-            sendOk("±×ºĞÀÌ ÇöÀç¸Ê¿¡ °°ÀÌ °è½Å°Ô ¸Â³ª¿ä?");
+            sendOk("ê·¸ë¶„ì´ í˜„ì¬ë§µì— ê°™ì´ ê³„ì‹ ê²Œ ë§ë‚˜ìš”?");
             return;
         }
         getPlayer().warp(680000210);
@@ -2750,11 +2750,11 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         boolean check = false;
         try {
             Connection connect = MYSQL.getConnection();
-            PreparedStatement ps = connect.prepareCall("SELECT º£ÆÃ±İ¾× FROM totoplayer WHERE charid = ?");
+            PreparedStatement ps = connect.prepareCall("SELECT ë² íŒ…ê¸ˆì•¡ FROM totoplayer WHERE charid = ?");
             ps.setInt(1, cid);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                int checks = rs.getInt("º£ÆÃ±İ¾×");
+                int checks = rs.getInt("ë² íŒ…ê¸ˆì•¡");
                 if (checks > 0) {
                     check = true;
                 }
@@ -2815,16 +2815,16 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
             item.setUniqueId(MapleItemIdenfier.getInstance().getNewUniqueId());
             item1.setCash(true);
             item1.setUniqueId(MapleItemIdenfier.getInstance().getNewUniqueId());
-            MapleRing.makeRing(itemid, chr, item.getUniqueId(), item1.getUniqueId()); //³»²¨
-            MapleRing.makeRing(itemid, getPlayer(), item1.getUniqueId(), item.getUniqueId());//ÆÄÆ®³Ê²¨
+            MapleRing.makeRing(itemid, chr, item.getUniqueId(), item1.getUniqueId()); //ë‚´êº¼
+            MapleRing.makeRing(itemid, getPlayer(), item1.getUniqueId(), item.getUniqueId());//íŒŒíŠ¸ë„ˆêº¼
             InventoryManipulator.addbyItem(getClient(), item);
             InventoryManipulator.addbyItem(chr.getClient(), item1);
             chr.reloadChar();
             reloadChar();
-            sendOk("¼±ÅÃÇÏ½Å ¹İÁö¸¦ Á¦ÀÛ ¿Ï·á ÇÏ¿´½À´Ï´Ù. ÀÎº¥Åä¸®¸¦ È®ÀÎÇØ ºÁÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.");
-            chr.dropMessage(5, getPlayer().getName() + "´ÔÀ¸·Î ºÎÅÍ ¹İÁö°¡ µµÂø ÇÏ¿´½À´Ï´Ù. ÀÎº¥Åä¸®¸¦ È®ÀÎÇØ ÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.");
+            sendOk("ì„ íƒí•˜ì‹  ë°˜ì§€ë¥¼ ì œì‘ ì™„ë£Œ í•˜ì˜€ìŠµë‹ˆë‹¤. ì¸ë²¤í† ë¦¬ë¥¼ í™•ì¸í•´ ë´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.");
+            chr.dropMessage(5, getPlayer().getName() + "ë‹˜ìœ¼ë¡œ ë¶€í„° ë°˜ì§€ê°€ ë„ì°© í•˜ì˜€ìŠµë‹ˆë‹¤. ì¸ë²¤í† ë¦¬ë¥¼ í™•ì¸í•´ ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.");
         } catch (Exception ex) {
-            sendOk("¹İÁö¸¦ Á¦ÀÛÇÏ´Âµ¥ ¿À·ù°¡ ¹ß»ı ÇÏ¿´½À´Ï´Ù.");
+            sendOk("ë°˜ì§€ë¥¼ ì œì‘í•˜ëŠ”ë° ì˜¤ë¥˜ê°€ ë°œìƒ í•˜ì˜€ìŠµë‹ˆë‹¤.");
         }
     }
 
@@ -2836,14 +2836,14 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
     }
 
     public void MulungRank() {
-        String chat = "#e#b¹«¸ªµµÀå ·©Å·#k#n\r\n";
+        String chat = "#e#bë¬´ë¦‰ë„ì¥ ë­í‚¹#k#n\r\n";
         try {
             int index = 0;
             Connection con = MYSQL.getConnection();
             ResultSet rs = con.prepareStatement("SELECT * FROM `mulung` order by `timeString` desc limit 30").executeQuery();
             while (rs.next()) {
                 index++;
-                chat += "#r#e\r\n" + index + "À§#k#n #b´Ğ³×ÀÓ : " + rs.getString("name") + "#k #eÅ¬¸®¾î ½Ã°£ : " + rs.getString("timeString") + "#n";
+                chat += "#r#e\r\n" + index + "ìœ„#k#n #bë‹‰ë„¤ì„ : " + rs.getString("name") + "#k #eí´ë¦¬ì–´ ì‹œê°„ : " + rs.getString("timeString") + "#n";
             }
             rs.close();
             con.close();
@@ -2853,14 +2853,14 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
         sendOk(chat);
     }
 
-    public void ¾Æ¸£¹Ì() {
-        WorldCommunity.¾Æ¸£¹Ì();
+    public void ì•„ë¥´ë¯¸() {
+        WorldCommunity.ì•„ë¥´ë¯¸();
     }
 
-    public void ¾Æ¸£¹Ì³¡() {
-        WorldBroadcasting.broadcastMessage(MainPacketCreator.startMapEffect("¾Æ¸£¹Ì : ¿©·¯ºĞ ¾Æ½±Áö¸¸ È­¾àÀÌ ´Ù ¶³¾îÁ® ¹ö·È¾î¿ä ¤Ğ.¤Ğ ´ÙÀ½¿¡ ¶Ç ¸¸³ª¿ä~", 5120124, true));
-        WorldBroadcasting.broadcastMessage(MainPacketCreator.getGMText(11, "¾Æ¸£¹Ì : ¿©·¯ºĞ ¾Æ½±Áö¸¸ È­¾àÀÌ ´Ù ¶³¾îÁ® ¹ö·È¾î¿ä ¤Ğ.¤Ğ ´ÙÀ½¿¡ ¶Ç ¸¸³ª¿ä~"));
-        ¾Æ¸£¹Ì = false;
+    public void ì•„ë¥´ë¯¸ë() {
+        WorldBroadcasting.broadcastMessage(MainPacketCreator.startMapEffect("ì•„ë¥´ë¯¸ : ì—¬ëŸ¬ë¶„ ì•„ì‰½ì§€ë§Œ í™”ì•½ì´ ë‹¤ ë–¨ì–´ì ¸ ë²„ë ¸ì–´ìš” ã… .ã…  ë‹¤ìŒì— ë˜ ë§Œë‚˜ìš”~", 5120124, true));
+        WorldBroadcasting.broadcastMessage(MainPacketCreator.getGMText(11, "ì•„ë¥´ë¯¸ : ì—¬ëŸ¬ë¶„ ì•„ì‰½ì§€ë§Œ í™”ì•½ì´ ë‹¤ ë–¨ì–´ì ¸ ë²„ë ¸ì–´ìš” ã… .ã…  ë‹¤ìŒì— ë˜ ë§Œë‚˜ìš”~"));
+        ì•„ë¥´ë¯¸ = false;
     }
 
     public boolean isMulung(int mapid) {

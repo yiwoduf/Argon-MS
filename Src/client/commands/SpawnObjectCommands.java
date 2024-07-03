@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -19,7 +19,7 @@ public class SpawnObjectCommands implements Command {
 
     @Override
     public void execute(MapleClient c, String[] splitted) throws Exception, IllegalCommandSyntaxException {
-        if (splitted[0].equals("!·é")) {
+        if (splitted[0].equals("!ë£¬")) {
             Point pos = c.getPlayer().getPosition();
             int type = Integer.parseInt(splitted[1]);
             if (type >= 0 && type <= 7) {
@@ -32,17 +32,17 @@ public class SpawnObjectCommands implements Command {
                 c.getPlayer().getMap().broadcastMessage(RunePacket.spawnRune(rune, false));
                 c.getPlayer().getMap().broadcastMessage(RunePacket.spawnRune(rune, true));
             } else {
-                c.getPlayer().message("0~7±îÁö¸¸ ÀÔ·Â °¡´ÉÇÕ´Ï´Ù.");
+                c.getPlayer().message("0~7ê¹Œì§€ë§Œ ìž…ë ¥ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
             }
-        } else if (splitted[0].equals("!¿ÀºêÁ§Æ®")) {
-            c.getPlayer().message("ÇöÀç ¸Ê¿¡ ÀÖ´Â ¿ÀºêÁ§Æ® ¼ö´Â " + c.getPlayer().getMap().getMapObjectSize() + "°³ ÀÔ´Ï´Ù.");
+        } else if (splitted[0].equals("!ì˜¤ë¸Œì íŠ¸")) {
+            c.getPlayer().message("í˜„ìž¬ ë§µì— ìžˆëŠ” ì˜¤ë¸Œì íŠ¸ ìˆ˜ëŠ” " + c.getPlayer().getMap().getMapObjectSize() + "ê°œ ìž…ë‹ˆë‹¤.");
         }
     }
 
     @Override
     public CommandDefinition[] getDefinition() {
         return new CommandDefinition[]{
-            new CommandDefinition("·é", "<·éÅ¸ÀÔ>", "ÇöÀç À§Ä¡¿¡ ÇØ´ç ·éÀ» »ý¼ºÇÕ´Ï´Ù.", 6),
-            new CommandDefinition("¿ÀºêÁ§Æ®", "", "¿ÀºêÁ§Æ® ¼ö¸¦ °¡Á®¿É´Ï´Ù.", 6),};
+            new CommandDefinition("ë£¬", "<ë£¬íƒ€ìž…>", "í˜„ìž¬ ìœ„ì¹˜ì— í•´ë‹¹ ë£¬ì„ ìƒì„±í•©ë‹ˆë‹¤.", 6),
+            new CommandDefinition("ì˜¤ë¸Œì íŠ¸", "", "ì˜¤ë¸Œì íŠ¸ ìˆ˜ë¥¼ ê°€ì ¸ì˜µë‹ˆë‹¤.", 6),};
     }
 }

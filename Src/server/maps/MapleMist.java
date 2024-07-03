@@ -1,16 +1,16 @@
 /*
  Maple Team ProJect
- Á¦ÀÛ ¿ëµµ : ¼­¹ö¿î¿µ¿ë
- ÆÀ¿ø¸ñ·Ï
- * °­µ¿¿ø dongwon1852@nate.com 
- * ±è¼±ÀÏ fileupload@nate.com
- * ±è¼®Çö azxcs3@nate.com
- * ±èÁø¼º m0nday_s@nate.com
- * °øÁØÇù kkong1001@nate.com
- * ±è¹ÎÈ£ rubystory0603@nate.com
- * ÀÌÀç¿Õ ejwj5592@nate.com
- * ÃÖ¿ëÀç virgo_s_t@nate.com
- * ¼­¼º´ö abq1239@nate.com
+ ì œì‘ ìš©ë„ : ì„œë²„ìš´ì˜ìš©
+ íŒ€ì›ëª©ë¡
+ * ê°•ë™ì› dongwon1852@nate.com 
+ * ê¹€ì„ ì¼ fileupload@nate.com
+ * ê¹€ì„í˜„ azxcs3@nate.com
+ * ê¹€ì§„ì„± m0nday_s@nate.com
+ * ê³µì¤€í˜‘ kkong1001@nate.com
+ * ê¹€ë¯¼í˜¸ rubystory0603@nate.com
+ * ì´ì¬ì™• ejwj5592@nate.com
+ * ìµœìš©ì¬ virgo_s_t@nate.com
+ * ì„œì„±ë• abq1239@nate.com
  */
 package server.maps;
 
@@ -35,12 +35,12 @@ public class MapleMist extends AbstractHinaMapObject {
     private MobSkill skill;
     private boolean isMobMist, isPoisonMist, isShelter, isRecovery, isBurningRegion, isTimeCapsule, isChilingStep;
     private int skillDelay, skilllevel;
-    private int clockType; //¹İ¹İ
+    private int clockType; //ë°˜ë°˜
     private boolean isUsed;
     private Point position;
     private long endTime = -1;
     private MapleMap map;
-    private int useEffectCount = 0; // È¦¸® ÆÄ¿îÆ¾ »ç¿ë°¡´É È½¼ö
+    private int useEffectCount = 0; // í™€ë¦¬ íŒŒìš´í‹´ ì‚¬ìš©ê°€ëŠ¥ íšŸìˆ˜
 
     public MapleMist(Rectangle mistPosition, MapleMonster mob, MobSkill skill, Point position) {
         this.mistPosition = mistPosition;
@@ -65,7 +65,7 @@ public class MapleMist extends AbstractHinaMapObject {
         this.skilllevel = skilllevel;
         this.position = position;
         switch (source.getSourceId()) {
-            case 4121015: // ÆÛÁö ¿¡¾î¸®¾î
+            case 4121015: // í¼ì§€ ì—ì–´ë¦¬ì–´
             case 4221006: // Smoke Screen
                 isMobMist = false;
                 isPoisonMist = false;
@@ -86,7 +86,7 @@ public class MapleMist extends AbstractHinaMapObject {
                 isRecovery = false;
                 skillDelay = source.getSourceId() == 2100010 ? 6 : 0;
                 break;
-            case 32121006: //½©ÅÍ
+            case 32121006: //ì‰˜í„°
                 isMobMist = false;
                 isPoisonMist = false;
                 isShelter = true;
@@ -107,18 +107,18 @@ public class MapleMist extends AbstractHinaMapObject {
                 isRecovery = false;
                 skillDelay = 2;
                 break;
-            case 12121005: //¹ö´× ¸®Á¯
+            case 12121005: //ë²„ë‹ ë¦¬ì ¼
                 skillDelay = 2;
                 isBurningRegion = true;
                 break;
-            case 36121007: //Å¸ÀÓ Ä¸½¶
+            case 36121007: //íƒ€ì„ ìº¡ìŠ
                 skillDelay = 15;
                 isTimeCapsule = true;
                 break;
-            case 2311011: // È¦¸®ÆÄ¿îÆ¾
+            case 2311011: // í™€ë¦¬íŒŒìš´í‹´
                 useEffectCount = source.getY();
                 break;
-            case 2201009: // Ä¥¸µ ½ºÅÜ
+            case 2201009: // ì¹ ë§ ìŠ¤í…
                 isChilingStep = true;
                 break;
         }

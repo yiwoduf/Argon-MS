@@ -24,7 +24,7 @@ function action(mode, type, selection) {
     }
 	if(cm.getPlayer().getMapId() == 921160100) {
 	if(status == 0) {
-	cm.sendSimple("¿©±â±îÁö¿Ã¶ó¿À½Ã´Ù´Ï ´ë´ÜÇÕ´Ï´Ù.\r\n¹Ù·Î ´ÙÀ½Àå¼Ò·Î ÀÌµ¿ÇÏ°Ú½À´Ï±î?\r\n#L1#´ÙÀ½ Àå¼Ò·Î ÀÌµ¿ÇÑ´Ù.#l");
+	cm.sendSimple("ì—¬ê¸°ê¹Œì§€ì˜¬ë¼ì˜¤ì‹œë‹¤ë‹ˆ ëŒ€ë‹¨í•©ë‹ˆë‹¤.\r\në°”ë¡œ ë‹¤ìŒì¥ì†Œë¡œ ì´ë™í•˜ê² ìŠµë‹ˆê¹Œ?\r\n#L1#ë‹¤ìŒ ì¥ì†Œë¡œ ì´ë™í•œë‹¤.#l");
 	cm.showEffect(true,"quest/party/clear");
 	} else if (status == 1) {
 	if(selection == 0) {
@@ -50,11 +50,11 @@ function action(mode, type, selection) {
 		}
 	} else if (cm.getPlayer().getMapId() == 921160200) {
 	if(status == 0) {
-	cm.sendSimple("¹Ù·Î ´ÙÀ½Àå¼Ò·Î ÀÌµ¿ÇÏ°Ú½À´Ï±î?\r\n#L0#´ÙÀ½ Àå¼Ò·Î ÀÌµ¿ÇÑ´Ù.#l");
+	cm.sendSimple("ë°”ë¡œ ë‹¤ìŒì¥ì†Œë¡œ ì´ë™í•˜ê² ìŠµë‹ˆê¹Œ?\r\n#L0#ë‹¤ìŒ ì¥ì†Œë¡œ ì´ë™í•œë‹¤.#l");
 	//cm.showEffect(true,"quest/party/clear");
 	} else if (status == 1) {
         if (cm.getMonsterCount(921160200) > 0) {
-  	cm.sendOk("¸ğµç ¸ó½ºÅÍ¸¦ Àü¸ê½ÃÄÑ¾ß ÇÕ´Ï´Ù.");
+  	cm.sendOk("ëª¨ë“  ëª¬ìŠ¤í„°ë¥¼ ì „ë©¸ì‹œì¼œì•¼ í•©ë‹ˆë‹¤.");
   	cm.dispose();
 	} else {
 	cm.resetMap(921160300);
@@ -69,7 +69,7 @@ function action(mode, type, selection) {
 }
 	} else if(cm.getPlayer().getMapId() == 921160350) {
 	if(status == 0) {
-	cm.sendSimple("¹Ù·Î ´ÙÀ½Àå¼Ò·Î ÀÌµ¿ÇÏ°Ú½À´Ï±î?\r\n#L0#´ÙÀ½ Àå¼Ò·Î ÀÌµ¿ÇÑ´Ù.#l");
+	cm.sendSimple("ë°”ë¡œ ë‹¤ìŒì¥ì†Œë¡œ ì´ë™í•˜ê² ìŠµë‹ˆê¹Œ?\r\n#L0#ë‹¤ìŒ ì¥ì†Œë¡œ ì´ë™í•œë‹¤.#l");
 	cm.showEffect(true,"quest/party/clear");
 	} else if (status == 1) {
 	if(selection == 0) {
@@ -97,11 +97,11 @@ function action(mode, type, selection) {
 		}
 	} else if (cm.getPlayer().getMapId() == 921160400) {
 	if(status == 0) {
-	cm.sendSimple("¹Ù·Î ´ÙÀ½Àå¼Ò·Î ÀÌµ¿ÇÏ°Ú½À´Ï±î?\r\n#L0#´ÙÀ½ Àå¼Ò·Î ÀÌµ¿ÇÑ´Ù.#l");
+	cm.sendSimple("ë°”ë¡œ ë‹¤ìŒì¥ì†Œë¡œ ì´ë™í•˜ê² ìŠµë‹ˆê¹Œ?\r\n#L0#ë‹¤ìŒ ì¥ì†Œë¡œ ì´ë™í•œë‹¤.#l");
 	//cm.showEffect(true,"quest/party/clear");
 	} else if (status == 1) {
         if (cm.getMonsterCount(921160400) > 0) {
-  	cm.sendOk("¸ğµç ¸ó½ºÅÍ¸¦ Àü¸ê½ÃÄÑ¾ß ÇÕ´Ï´Ù.");
+  	cm.sendOk("ëª¨ë“  ëª¬ìŠ¤í„°ë¥¼ ì „ë©¸ì‹œì¼œì•¼ í•©ë‹ˆë‹¤.");
   	cm.dispose();
 	} else {
 	cm.allPartyWarp(921160500,true);
@@ -110,7 +110,7 @@ function action(mode, type, selection) {
 		}
 	} else if (cm.getPlayer().getMapId() == 921160600) {
 	if(status == 0) {
-	cm.sendSimple("¹Ù·Î ´ÙÀ½Àå¼Ò·Î ÀÌµ¿ÇÏ°Ú½À´Ï±î?\r\n#L1#´ÙÀ½ Àå¼Ò·Î ÀÌµ¿ÇÑ´Ù.#l");
+	cm.sendSimple("ë°”ë¡œ ë‹¤ìŒì¥ì†Œë¡œ ì´ë™í•˜ê² ìŠµë‹ˆê¹Œ?\r\n#L1#ë‹¤ìŒ ì¥ì†Œë¡œ ì´ë™í•œë‹¤.#l");
 	//cm.showEffect(true,"quest/party/clear");
 	} else if (status == 1) {
 	if (cm.haveItem(4001528, 6)) {
@@ -121,13 +121,13 @@ function action(mode, type, selection) {
 	cm.spawnMob(9300454,-840,-181);
 	cm.dispose();
 	} else {
-  	cm.sendOk("#i4001528# #z4001528#°¡ ºÎÁ· ÇÕ´Ï´Ù. ¾î¼­»¡¸® 6°³ÀÇ¿­¼è¸¦ ¸ğ¾ÆÁÖ½Ê¼î.");
+  	cm.sendOk("#i4001528# #z4001528#ê°€ ë¶€ì¡± í•©ë‹ˆë‹¤. ì–´ì„œë¹¨ë¦¬ 6ê°œì˜ì—´ì‡ ë¥¼ ëª¨ì•„ì£¼ì‹­ì‡¼.");
 	cm.dispose();
 			}
 		}
 	} else if (cm.getPlayer().getMapId() == 921160700) {
 	if(status == 0) {
-	cm.sendSimple("µµ¿ÍÁÖ¼Å¼­ Á¤¸» °¨»çµå¸³´Ï´Ù. ´öºĞ¿¡ ÀÌ°÷À» ¹ş¾î³¯ ¼ö ÀÖ°Ô µÇ¾ú½À´Ï´Ù..\r\n#L1#ÀÌ°÷¿¡¼­ ³ª°¡½Ã°Ú½À´Ï±î?#l");
+	cm.sendSimple("ë„ì™€ì£¼ì…”ì„œ ì •ë§ ê°ì‚¬ë“œë¦½ë‹ˆë‹¤. ë•ë¶„ì— ì´ê³³ì„ ë²—ì–´ë‚  ìˆ˜ ìˆê²Œ ë˜ì—ˆìŠµë‹ˆë‹¤..\r\n#L1#ì´ê³³ì—ì„œ ë‚˜ê°€ì‹œê² ìŠµë‹ˆê¹Œ?#l");
 	//cm.showEffect(true,"quest/party/clear");
 	} else if (status == 1) {
 	if (cm.haveItem(4001528, 0)) {
@@ -135,13 +135,13 @@ function action(mode, type, selection) {
 	cm.warp(921160000,0);
 	cm.dispose();
 	} else {
-  	cm.sendOk("#i4001528# #z4001528#°¡ ºÎÁ· ÇÕ´Ï´Ù. ¾î¼­»¡¸® ¿­¼è¸¦ ¸ğ¾ÆÁÖ½Ê¼î.");
+  	cm.sendOk("#i4001528# #z4001528#ê°€ ë¶€ì¡± í•©ë‹ˆë‹¤. ì–´ì„œë¹¨ë¦¬ ì—´ì‡ ë¥¼ ëª¨ì•„ì£¼ì‹­ì‡¼.");
 	cm.dispose();
 			}
 		}
 	} else if (cm.getPlayer().getMapId() == 921160500) {
 	if(status == 0) {
-	cm.sendSimple("¹Ù·Î ´ÙÀ½Àå¼Ò·Î ÀÌµ¿ÇÏ°Ú½À´Ï±î?\r\n#L1#´ÙÀ½ Àå¼Ò·Î ÀÌµ¿ÇÑ´Ù.#l");
+	cm.sendSimple("ë°”ë¡œ ë‹¤ìŒì¥ì†Œë¡œ ì´ë™í•˜ê² ìŠµë‹ˆê¹Œ?\r\n#L1#ë‹¤ìŒ ì¥ì†Œë¡œ ì´ë™í•œë‹¤.#l");
 	cm.showEffect(true,"quest/party/clear");
 		} else if(status == 1) {
 	cm.allPartyWarp(921160600,true);

@@ -32,13 +32,13 @@ function action(mode, type, selection)
 	if (status == 0 && mode == 1)
 	{
 	var k = "#fUI/UIToolTip/Item/Equip/Star/Star#"
-	var chat ="Á¦·Ã ¹× ¾ÆÀÌÅÛÀ» Á¦ÀÛÇÒ ¼ö ÀÖ´Â °Í °°´Ù¡¦.#b\r\n\r\n"
-	chat += "#r#e[¿ø¼® Á¦ÀÛ ¹× Á¦·Ã]#b#n\r\n";
-	chat += "#L2#"+k+" #e±¤¼®#n, #eº¸¼®#n ¹× #eÅ©¸®½ºÅ»#nÀ» Á¦·ÃÇÑ´Ù.#l\r\n\r\n\r\n"
+	var chat ="ì œë ¨ ë° ì•„ì´í…œì„ ì œì‘í•  ìˆ˜ ìˆëŠ” ê²ƒ ê°™ë‹¤â€¦.#b\r\n\r\n"
+	chat += "#r#e[ì›ì„ ì œì‘ ë° ì œë ¨]#b#n\r\n";
+	chat += "#L2#"+k+" #eê´‘ì„#n, #eë³´ì„#n ë° #eí¬ë¦¬ìŠ¤íƒˆ#nì„ ì œë ¨í•œë‹¤.#l\r\n\r\n\r\n"
 
-	chat += "#r#e[150 ·¹º§ ¹«±â ¹× ¹æ¾î±¸ Á¦ÀÛ]#b#n\r\n";
-	chat += "#L10#"+k+" #e150 ·¹º§ ·çÅ¸ºñ½º ¹«±â#n¸¦ Á¦ÀÛÇÑ´Ù.#l\r\n"
-	chat += "#L11#"+k+" #e150 ·¹º§ ·çÅ¸ºñ½º ¹æ¾î±¸#n¸¦ Á¦ÀÛÇÑ´Ù.#l\r\n\r\n\r\n"
+	chat += "#r#e[150 ë ˆë²¨ ë¬´ê¸° ë° ë°©ì–´êµ¬ ì œì‘]#b#n\r\n";
+	chat += "#L10#"+k+" #e150 ë ˆë²¨ ë£¨íƒ€ë¹„ìŠ¤ ë¬´ê¸°#në¥¼ ì œì‘í•œë‹¤.#l\r\n"
+	chat += "#L11#"+k+" #e150 ë ˆë²¨ ë£¨íƒ€ë¹„ìŠ¤ ë°©ì–´êµ¬#në¥¼ ì œì‘í•œë‹¤.#l\r\n\r\n\r\n"
 	cm.sendSimpleS(chat, 2)
 	}
 
@@ -49,12 +49,12 @@ function action(mode, type, selection)
 	if (selectedType == 2)
 	{
 	var items = new Array (4011000, 4011001, 4011002, 4011003, 4011004, 4011005, 4011006, 4011008, 4021000, 4021001, 4021002, 4021003, 4021004, 4021005, 4021006, 4021007, 4021008, 4005000, 4005001, 4005002, 4005003, 4005004);
-	var selStr = "¾î¶² Á¾·ùÀÇ ±¤¼®, º¸¼® ¶Ç´Â Å©¸®½ºÅ»À» Á¦·ÃÇÒÁö ¼±ÅÃÇÏÀÚ.\r\n\r\n#b";
-	selStr += "#e#r[±¤¼® Á¦·Ã]#k#n\r\n";
+	var selStr = "ì–´ë–¤ ì¢…ë¥˜ì˜ ê´‘ì„, ë³´ì„ ë˜ëŠ” í¬ë¦¬ìŠ¤íƒˆì„ ì œë ¨í• ì§€ ì„ íƒí•˜ì.\r\n\r\n#b";
+	selStr += "#e#r[ê´‘ì„ ì œë ¨]#k#n\r\n";
 	for (i = 0; i < 8; selStr += "#b#L"+i+"##i"+items[i]+":# #t"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
-	selStr += "#e#r[º¸¼® Á¦·Ã]#k#n\r\n";
+	selStr += "#e#r[ë³´ì„ ì œë ¨]#k#n\r\n";
 	for (i = 8; i < 17; selStr += "#b#L"+i+"##i"+items[i]+":# #t"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
-	selStr += "#e#r[Å©¸®½ºÅ» Á¦·Ã]#k#n\r\n";
+	selStr += "#e#r[í¬ë¦¬ìŠ¤íƒˆ ì œë ¨]#k#n\r\n";
 	for (i = 17; i < 22; selStr += "#b#L"+i+"##i"+items[i]+":# #t"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
 	cm.sendSimpleS(selStr, 2)
 	equip = false;
@@ -64,16 +64,16 @@ function action(mode, type, selection)
 	if (selectedType == 10)
 	{
 	var items = new Array (1302275, 1312153, 1322203, 1232057, 1402196, 1412135, 1422140, 1432167, 1442223, 1582016, 1372177, 1382208, 1212063, 1262016, 1452205, 1462193, 1522094, 1332225, 1342082, 1362090, 1242060, 1472214, 1222058, 1242061, 1482168, 1492179, 1532098);
-	var selStr = "¾î¶² ¹«±â¸¦ ¸¸µéÁö ¼±ÅÃÇÏÀÚ.\r\n\r\n#b";
-	selStr += "#e#r[150 ·¹º§ ·çÅ¸ºñ½º Àü»ç ¹«±â]#k#n\r\n";
+	var selStr = "ì–´ë–¤ ë¬´ê¸°ë¥¼ ë§Œë“¤ì§€ ì„ íƒí•˜ì.\r\n\r\n#b";
+	selStr += "#e#r[150 ë ˆë²¨ ë£¨íƒ€ë¹„ìŠ¤ ì „ì‚¬ ë¬´ê¸°]#k#n\r\n";
 	for (i = 0; i < 10; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
-	selStr += "#e#r[150 ·¹º§ ·çÅ¸ºñ½º ¸¶¹ı»ç ¹«±â]#k#n\r\n";
+	selStr += "#e#r[150 ë ˆë²¨ ë£¨íƒ€ë¹„ìŠ¤ ë§ˆë²•ì‚¬ ë¬´ê¸°]#k#n\r\n";
 	for (i = 10; i < 14; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
-	selStr += "#e#r[150 ·¹º§ ·çÅ¸ºñ½º ±Ã¼ö ¹«±â]#k#n\r\n";
+	selStr += "#e#r[150 ë ˆë²¨ ë£¨íƒ€ë¹„ìŠ¤ ê¶ìˆ˜ ë¬´ê¸°]#k#n\r\n";
 	for (i = 14; i < 17; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
-	selStr += "#e#r[150 ·¹º§ ·çÅ¸ºñ½º µµÀû ¹«±â]#k#n\r\n";
+	selStr += "#e#r[150 ë ˆë²¨ ë£¨íƒ€ë¹„ìŠ¤ ë„ì  ë¬´ê¸°]#k#n\r\n";
 	for (i = 17; i < 22; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
-	selStr += "#e#r[150 ·¹º§ ·çÅ¸ºñ½º ÇØÀû ¹«±â]#k#n\r\n";
+	selStr += "#e#r[150 ë ˆë²¨ ë£¨íƒ€ë¹„ìŠ¤ í•´ì  ë¬´ê¸°]#k#n\r\n";
 	for (i = 22; i < 27; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
 	cm.sendSimpleS(selStr, 2);
 	equip = true;
@@ -81,12 +81,12 @@ function action(mode, type, selection)
 
 	if (selectedType == 11){
 	var items = new Array (1003797, 1003798, 1003799, 1003800, 1003801, 1042254, 1042255, 1042256, 1042257, 1042258, 1062165, 1062166, 1062167, 1062168, 1062169);
-	var selStr = "¾î¶² ¹æ¾î±¸¸¦ ¸¸µéÁö ¼±ÅÃÇÏÀÚ.\r\n\r\n#b";
-	selStr += "#e#r[150 ·¹º§ ·çÅ¸ºñ½º ¸ğÀÚ]#k#n\r\n";
+	var selStr = "ì–´ë–¤ ë°©ì–´êµ¬ë¥¼ ë§Œë“¤ì§€ ì„ íƒí•˜ì.\r\n\r\n#b";
+	selStr += "#e#r[150 ë ˆë²¨ ë£¨íƒ€ë¹„ìŠ¤ ëª¨ì]#k#n\r\n";
 	for (i = 0; i < 5; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
-	selStr += "#e#r[150 ·¹º§ ·çÅ¸ºñ½º »óÀÇ]#k#n\r\n";
+	selStr += "#e#r[150 ë ˆë²¨ ë£¨íƒ€ë¹„ìŠ¤ ìƒì˜]#k#n\r\n";
 	for (i = 5; i < 10; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
-	selStr += "#e#r[150 ·¹º§ ·çÅ¸ºñ½º ÇÏÀÇ]#k#n\r\n";
+	selStr += "#e#r[150 ë ˆë²¨ ë£¨íƒ€ë¹„ìŠ¤ í•˜ì˜]#k#n\r\n";
 	for (i = 10; i < 15; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
 	cm.sendSimpleS(selStr, 2);
 	equip = true;
@@ -95,16 +95,16 @@ function action(mode, type, selection)
 	if (selectedType == 12)
 	{
 	var items = new Array (1302333, 1312199, 1322250, 1232109, 1402251, 1412177, 1422184, 1432214, 1442268, 1582017, 1372222, 1382259, 1212115, 1262017, 1452252, 1462239, 1522138, 1332274, 1342101, 1362135, 1242116, 1472261, 1222109, 1242120, 1482216, 1492231, 1532144);
-	var selStr = "¾î¶² ¹«±â¸¦ ¸¸µéÁö ¼±ÅÃÇÏÀÚ.\r\n\r\n#b";
-	selStr += "#e#r[160 ·¹º§ ¾Û¼Ö·¦½º Àü»ç ¹«±â]#k#n\r\n";
+	var selStr = "ì–´ë–¤ ë¬´ê¸°ë¥¼ ë§Œë“¤ì§€ ì„ íƒí•˜ì.\r\n\r\n#b";
+	selStr += "#e#r[160 ë ˆë²¨ ì•±ì†”ë©ìŠ¤ ì „ì‚¬ ë¬´ê¸°]#k#n\r\n";
 	for (i = 0; i < 10; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
-	selStr += "#e#r[160 ·¹º§ ¾Û¼Ö·¦½º ¸¶¹ı»ç ¹«±â]#k#n\r\n";
+	selStr += "#e#r[160 ë ˆë²¨ ì•±ì†”ë©ìŠ¤ ë§ˆë²•ì‚¬ ë¬´ê¸°]#k#n\r\n";
 	for (i = 10; i < 14; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
-	selStr += "#e#r[160 ·¹º§ ¾Û¼Ö·¦½º ±Ã¼ö ¹«±â]#k#n\r\n";
+	selStr += "#e#r[160 ë ˆë²¨ ì•±ì†”ë©ìŠ¤ ê¶ìˆ˜ ë¬´ê¸°]#k#n\r\n";
 	for (i = 14; i < 17; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
-	selStr += "#e#r[160 ·¹º§ ¾Û¼Ö·¦½º µµÀû ¹«±â]#k#n\r\n";
+	selStr += "#e#r[160 ë ˆë²¨ ì•±ì†”ë©ìŠ¤ ë„ì  ë¬´ê¸°]#k#n\r\n";
 	for (i = 17; i < 22; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
-	selStr += "#e#r[160 ·¹º§ ¾Û¼Ö·¦½º ÇØÀû ¹«±â]#k#n\r\n";
+	selStr += "#e#r[160 ë ˆë²¨ ì•±ì†”ë©ìŠ¤ í•´ì  ë¬´ê¸°]#k#n\r\n";
 	for (i = 22; i < 27; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
 	cm.sendSimpleS(selStr, 2);
 	equip = true;
@@ -112,18 +112,18 @@ function action(mode, type, selection)
 
 	if (selectedType == 13){
 	var items = new Array (1004422, 1004423, 1004424, 1004425, 1004426, 1052882, 1052887, 1052888, 1052889, 1052890, 1073030, 1073032, 1073033, 1073034, 1073035, 1082636, 1082637, 1082638, 1082639, 1082640, 1102775, 1102794, 1102795, 1102796, 1102797, 1152174, 1152176, 1152177, 1152178, 1152179);
-	var selStr = "¾î¶² ¹æ¾î±¸¸¦ ¸¸µéÁö ¼±ÅÃÇÏÀÚ.\r\n\r\n#b";
-	selStr += "#e#r[160 ·¹º§ ¾Û¼Ö·¦½º ¸ğÀÚ]#k#n\r\n";
+	var selStr = "ì–´ë–¤ ë°©ì–´êµ¬ë¥¼ ë§Œë“¤ì§€ ì„ íƒí•˜ì.\r\n\r\n#b";
+	selStr += "#e#r[160 ë ˆë²¨ ì•±ì†”ë©ìŠ¤ ëª¨ì]#k#n\r\n";
 	for (i = 0; i < 5; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
-	selStr += "#e#r[160 ·¹º§ ¾Û¼Ö·¦½º Àü½Å]#k#n\r\n";
+	selStr += "#e#r[160 ë ˆë²¨ ì•±ì†”ë©ìŠ¤ ì „ì‹ ]#k#n\r\n";
 	for (i = 5; i < 10; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
-	selStr += "#e#r[160 ·¹º§ ¾Û¼Ö·¦½º ½Å¹ß]#k#n\r\n";
+	selStr += "#e#r[160 ë ˆë²¨ ì•±ì†”ë©ìŠ¤ ì‹ ë°œ]#k#n\r\n";
 	for (i = 10; i < 15; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
-	selStr += "#e#r[160 ·¹º§ ¾Û¼Ö·¦½º Àå°©]#k#n\r\n";
+	selStr += "#e#r[160 ë ˆë²¨ ì•±ì†”ë©ìŠ¤ ì¥ê°‘]#k#n\r\n";
 	for (i = 15; i < 20; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
-	selStr += "#e#r[160 ·¹º§ ¾Û¼Ö·¦½º ¸ÁÅä]#k#n\r\n";
+	selStr += "#e#r[160 ë ˆë²¨ ì•±ì†”ë©ìŠ¤ ë§í† ]#k#n\r\n";
 	for (i = 20; i < 25; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
-	selStr += "#e#r[160 ·¹º§ ¾Û¼Ö·¦½º ¾î±úÀå½Ä]#k#n\r\n";
+	selStr += "#e#r[160 ë ˆë²¨ ì•±ì†”ë©ìŠ¤ ì–´ê¹¨ì¥ì‹]#k#n\r\n";
 	for (i = 25; i < 30; selStr += "#b#L"+i+"##z"+items[i]+"##l\r\n",i++); selStr += "\r\n\r\n";
 	cm.sendSimpleS(selStr, 2);
 	equip = true;
@@ -135,7 +135,7 @@ function action(mode, type, selection)
 	else if (status == 2 && mode == 1) {
 	selectedItem = selection;
 
-		/* Á¦·Ã ½ÃÀÛ */
+		/* ì œë ¨ ì‹œì‘ */
 
 	if (selectedType == 2){
 		var itemSet   = new Array (4011000, 4011001, 4011002, 4011003, 4011004, 4011005, 4011006, 4011008, 4021000, 4021001, 4021002, 4021003, 4021004, 4021005, 4021006, 4021007, 4021008, 4005000, 4005001, 4005002, 4005003, 4005004);
@@ -147,7 +147,7 @@ function action(mode, type, selection)
 		matQty = matQtySet[selectedItem];
 		cost = costSet[selectedItem];
 	}
-	cm.sendGetNumber("#b#i"+item+"# #z"+item+"##kÀ» ¸¸µå½Ç²«°¡¿ä? ±×·¸´Ù¸é ¸î °³¸¦ ¸¸µå½Ã°Ú¾î¿ä?",1,1,1000)
+	cm.sendGetNumber("#b#i"+item+"# #z"+item+"##kì„ ë§Œë“œì‹¤ê»€ê°€ìš”? ê·¸ë ‡ë‹¤ë©´ ëª‡ ê°œë¥¼ ë§Œë“œì‹œê² ì–´ìš”?",1,1,1000)
 	}
 	else if (status == 3 && mode == 1) {
 	if (equip)
@@ -393,28 +393,28 @@ function action(mode, type, selection)
 		cost = costSet[selectedItem];
 	}
 
-	var prompt = "¾îµğº¸ÀÚ¡¦. #b#z"+item+"# "+qty+"°³#k¸¦ ¸¸µå·Á¸é ¾Æ·¡¿¡ ÀÖ´Â Àç·á¿Í ¼ö¼ö·á¸¦ ÁØºñÇØ¾ß ÇÏ´Â±º. ¸ğµÎ ÁØºñ°¡ µÇ¾îÀÖ³ª?\r\n#b";
+	var prompt = "ì–´ë””ë³´ìâ€¦. #b#z"+item+"# "+qty+"ê°œ#kë¥¼ ë§Œë“œë ¤ë©´ ì•„ë˜ì— ìˆëŠ” ì¬ë£Œì™€ ìˆ˜ìˆ˜ë£Œë¥¼ ì¤€ë¹„í•´ì•¼ í•˜ëŠ”êµ°. ëª¨ë‘ ì¤€ë¹„ê°€ ë˜ì–´ìˆë‚˜?\r\n#b";
 	if (mats instanceof Array)
 	{
 		for(var i = 0; i < mats.length; i++)
 		{
 			if(cm.itemQuantity(mats[i]) < matQty[i])
 			{
-				prompt += "\r\n#i"+mats[i]+":# #t"+mats[i]+"# (#r"+cm.itemQuantity(mats[i])+"°³ #k/#b "+ matQty[i] * qty +"°³)";
+				prompt += "\r\n#i"+mats[i]+":# #t"+mats[i]+"# (#r"+cm.itemQuantity(mats[i])+"ê°œ #k/#b "+ matQty[i] * qty +"ê°œ)";
 			}
 			else
 			{
-				prompt += "\r\n#i"+mats[i]+":# #t"+mats[i]+"# (#b#e"+cm.itemQuantity(mats[i])+"°³ #k#n/#b "+ matQty[i] * qty +"°³)";
+				prompt += "\r\n#i"+mats[i]+":# #t"+mats[i]+"# (#b#e"+cm.itemQuantity(mats[i])+"ê°œ #k#n/#b "+ matQty[i] * qty +"ê°œ)";
 			}
 		}
 	}
 	else {
-		prompt += "\r\n#i"+mats+"# #z"+mats+"# " + matQty * qty + "°³";
+		prompt += "\r\n#i"+mats+"# #z"+mats+"# " + matQty * qty + "ê°œ";
 	}
 		
 	if (cost > 0)
 			if(cost*qty != 0) {
-		prompt += "\r\n#i4031138# #b"+cost * qty / 10000+"¸¸ ¸Ş¼Ò";
+		prompt += "\r\n#i4031138# #b"+cost * qty / 10000+"ë§Œ ë©”ì†Œ";
 			}
 
 	cm.sendYesNoS(prompt, 2);
@@ -422,7 +422,7 @@ function action(mode, type, selection)
 	var complete = false;
 		
 	if (cm.getMeso() < cost * qty) {
-		cm.sendOk("¸Ş¼Ò#k ´Â Á¦´ë·Î °®°í ÀÖ´Â°Ç°¡? ´Ù½Ã ÇÑ¹ø È®ÀÎÇØº¸°Ô.")
+		cm.sendOk("ë©”ì†Œ#k ëŠ” ì œëŒ€ë¡œ ê°–ê³  ìˆëŠ”ê±´ê°€? ë‹¤ì‹œ í•œë²ˆ í™•ì¸í•´ë³´ê²Œ.")
 		cm.dispose();
 		return;
 	} else {
@@ -442,7 +442,7 @@ function action(mode, type, selection)
 		complete = false;
 	}
 	if (!complete)
-		cm.sendOkS("Àç·á°¡ ¸ğµÎ ¾ø°Å³ª, ÀÎº¥Åä¸® °ø°£ÀÌ ºÎÁ·ÇÑ °Í °°´Ù. ¼ö¼ö·á°¡ ºÎÁ·ÇØµµ ¸¸µé ¼ö ¾ø´Ù°í ÇÏ´Â±º.", 2);
+		cm.sendOkS("ì¬ë£Œê°€ ëª¨ë‘ ì—†ê±°ë‚˜, ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ë¶€ì¡±í•œ ê²ƒ ê°™ë‹¤. ìˆ˜ìˆ˜ë£Œê°€ ë¶€ì¡±í•´ë„ ë§Œë“¤ ìˆ˜ ì—†ë‹¤ê³  í•˜ëŠ”êµ°.", 2);
 	else {
 		if (mats instanceof Array) {
 		for (var i = 0; i < mats.length; i++){
@@ -459,7 +459,7 @@ function action(mode, type, selection)
 		cm.gainItem(4003000, 15 * qty);
 		else
 		cm.gainItem(item, qty);
-		cm.sendOk("ÀÚ¾Æ.. ´Ù µÆ´Ù±¸. ¿ª½Ã ¿Ïº®ÇÑ ¾ÆÀÌÅÛÀÌ Åº»ıÇßÀİ¾Æ? ´Ù¸¥ ÀÛ¾÷µµ ÇÊ¿äÇÏ´Ù¸é ´Ù½Ã ³ª¿¡°Ô Ã£¾Æ¿À¶ó±¸.");
+		cm.sendOk("ìì•„.. ë‹¤ ëë‹¤êµ¬. ì—­ì‹œ ì™„ë²½í•œ ì•„ì´í…œì´ íƒ„ìƒí–ˆì–ì•„? ë‹¤ë¥¸ ì‘ì—…ë„ í•„ìš”í•˜ë‹¤ë©´ ë‹¤ì‹œ ë‚˜ì—ê²Œ ì°¾ì•„ì˜¤ë¼êµ¬.");
 	}
 	cm.dispose();
 	}

@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -32,7 +32,7 @@ public class ShutdownServer implements Runnable {
 	    System.err.println("SHUTDOWN ERROR" + t);
 	}
 
-	System.out.println("[Á¾·á] Ã¤³Î " + channel + " ¼­¹ö°¡ Æ÷Æ®¸¦ ´İ½À´Ï´Ù.");
+	System.out.println("[ì¢…ë£Œ] ì±„ë„ " + channel + " ì„œë²„ê°€ í¬íŠ¸ë¥¼ ë‹«ìŠµë‹ˆë‹¤.");
 	
 
 	boolean error = true;
@@ -44,7 +44,7 @@ public class ShutdownServer implements Runnable {
 	    }
 	}
 
-	System.out.println("[Á¾·á] Ã¤³Î " + channel + " ¼­¹ö¸¦ Á¾·áÁßÀÔ´Ï´Ù.");
+	System.out.println("[ì¢…ë£Œ] ì±„ë„ " + channel + " ì„œë²„ë¥¼ ì¢…ë£Œì¤‘ì…ë‹ˆë‹¤.");
 
 	for (ChannelServer cserv : ChannelServer.getAllInstances()) {
 	    while (!cserv.hasFinishedShutdown()) {
@@ -55,6 +55,6 @@ public class ShutdownServer implements Runnable {
 		}
 	    }
 	}
-        System.out.println("[Á¾·á] Ã¤³Î " + channel + " ¼­¹ö°¡ Á¾·áµÇ¾ú½À´Ï´Ù.");
+        System.out.println("[ì¢…ë£Œ] ì±„ë„ " + channel + " ì„œë²„ê°€ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
     }
 }

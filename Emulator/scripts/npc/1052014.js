@@ -22,7 +22,7 @@ function action(mode, type, selection) {
         status++;
     }
     if (status == 0) {
- cm.sendGetText("Á¤º¸¸¦ ¾Ë°í ½ÍÀº Ä³¸¯ÅÍÀÇ ÀÌ¸§À» ÀÔ·ÂÇØ ÁÖ¼¼¿ä.\r\n#r(ÁÖÀÇ : ¾ø´Â ÀÌ¸§ ÀÔ·ÂÇÏ¸é ¾Æ¹« Ã¢µµ ¾È ¶°¿ä)"); 
+ cm.sendGetText("ì •ë³´ë¥¼ ì•Œê³  ì‹¶ì€ ìºë¦­í„°ì˜ ì´ë¦„ì„ ì…ë ¥í•´ ì£¼ì„¸ìš”.\r\n#r(ì£¼ì˜ : ì—†ëŠ” ì´ë¦„ ì…ë ¥í•˜ë©´ ì•„ë¬´ ì°½ë„ ì•ˆ ë– ìš”)"); 
  } else if (status == 1) {
  name = cm.getText();
  var con = MYSQL.getConnection().prepareStatement("SELECT * FROM characters WHERE name = ?");
@@ -31,12 +31,12 @@ function action(mode, type, selection) {
  eq.next();
  var string = new StringBuilder();
  accountid = eq.getInt("accountid");
- string.append("#e°èÁ¤¹øÈ£ : #n "+accountid+"\r\n")
- .append("\r\n#e°íÀ¯¹øÈ£ : #n "+eq.getInt("id")+"")
- .append("\r\n#e´Ğ³×ÀÓ : #n").append(eq.getString("name"))
- .append("\r\n#e·¹º§ : #n").append(Integer(eq.getInt("level")))
- .append("\r\n#e¸Ş¼Ò : #n").append(Integer(eq.getInt("meso"))).append(" (¿ø)")
- .append("\r\n#L9999##r°í±Ş Á¤º¸#l");
+ string.append("#eê³„ì •ë²ˆí˜¸ : #n "+accountid+"\r\n")
+ .append("\r\n#eê³ ìœ ë²ˆí˜¸ : #n "+eq.getInt("id")+"")
+ .append("\r\n#eë‹‰ë„¤ì„ : #n").append(eq.getString("name"))
+ .append("\r\n#eë ˆë²¨ : #n").append(Integer(eq.getInt("level")))
+ .append("\r\n#eë©”ì†Œ : #n").append(Integer(eq.getInt("meso"))).append(" (ì›)")
+ .append("\r\n#L9999##rê³ ê¸‰ ì •ë³´#l");
 
  cm.sendSimple(""+string.toString());
 
@@ -52,10 +52,10 @@ function action(mode, type, selection) {
  .append("#ePassword : #n"+dq.getString("password")+"\r\n")
  .append("#e2ndPassword : #n"+dq.getString("2ndpassword")+"\r\n")
  .append("#eIP Address : #n"+dq.getString("ip")+"\r\n")
- .append("#e·Î±×ÀÎ ¿©ºÎ : #n"+(dq.getInt("loggedin") == 1 ? "·Î±×ÀÎ »óÅÂ" :
- dq.getInt("loggedin") == 2 ? "°ÔÀÓ Á¢¼ÓÁß" : "·Î±×¾Æ¿ô »óÅÂ")+"\r\n\r\n")
- .append("#e#b- ¸Ş¸ğÇØ ÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù -");
- cm.sendOk("#r°í±Ş Á¤º¸#k\r\n\r\n"+string.toString());
+ .append("#eë¡œê·¸ì¸ ì—¬ë¶€ : #n"+(dq.getInt("loggedin") == 1 ? "ë¡œê·¸ì¸ ìƒíƒœ" :
+ dq.getInt("loggedin") == 2 ? "ê²Œì„ ì ‘ì†ì¤‘" : "ë¡œê·¸ì•„ì›ƒ ìƒíƒœ")+"\r\n\r\n")
+ .append("#e#b- ë©”ëª¨í•´ ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤ -");
+ cm.sendOk("#rê³ ê¸‰ ì •ë³´#k\r\n\r\n"+string.toString());
  cm.dispose();
 }
     }

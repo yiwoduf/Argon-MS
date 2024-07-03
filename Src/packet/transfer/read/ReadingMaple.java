@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -145,7 +145,7 @@ public class ReadingMaple {
         try {
             bs.seek(offset);
         } catch (Exception e) {
-            System.err.println("[¿À·ù] °Ç³Ê¶Ù±â¿¡ ½ÇÆĞÇß½À´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] ê±´ë„ˆë›°ê¸°ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
             if (!ServerConstants.realese) {
                 e.printStackTrace();
             }
@@ -156,7 +156,7 @@ public class ReadingMaple {
         try {
             return bs.getPosition();
         } catch (Exception e) {
-            System.err.println("[¿À·ù] ÆĞÅ¶ÀÇ ÇöÀç À§Ä¡¸¦ ±¸ÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] íŒ¨í‚·ì˜ í˜„ì¬ ìœ„ì¹˜ë¥¼ êµ¬í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
             if (!ServerConstants.realese) {
                 e.printStackTrace();
             }

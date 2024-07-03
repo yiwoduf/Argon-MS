@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -105,20 +105,20 @@ public class LoginPacket {
     }
 
     /*
-         * ·Î±×ÀÎ ¸Þ¼¼Áö ÄÚµå
+         * ë¡œê·¸ì¸ ë©”ì„¸ì§€ ì½”ë“œ
          * 
-         * 0 : ¼º°ø
-         * 3 : Áö¿öÁö°Å³ª Á¢¼Ó ÁßÁöµÈ ¾ÆÀÌµð ÀÔ´Ï´Ù.
-         * 4 : ºñ¹Ð¹øÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.
-         * 5 : µî·ÏµÇÁö ¾ÊÀº ¾ÆÀÌµð ÀÔ´Ï´Ù.
-         * 6 : ½Ã½ºÅÛ ¿À·ù·Î Á¢¼ÓÇÒ ¼ö ¾ø½À´Ï´Ù.
-         * 7 : ÇöÀç Á¢¼ÓÁßÀÎ ¾ÆÀÌµð ÀÔ´Ï´Ù.
-         * 8 : ½Ã½ºÅÛ ¿À·ù·Î Á¢¼ÓÇÒ ¼ö ¾ø½À´Ï´Ù.
-         * 9 : ½Ã½ºÅÛ ¿À·ù·Î Á¢¼ÓÇÒ ¼ö ¾ø½À´Ï´Ù.
-         * 10 : ÇöÀç ¼­¹ö¿¡ Á¢¼Ó¿äÃ»ÀÌ ¸¹¾Æ Ã³¸®ÇÏÁö ¸øÇß½À´Ï´Ù.
-         * 11 : 20¼¼ ÀÌ»ó¸¸ Á¢¼ÓÇÒ ¼ö ÀÖ½À´Ï´Ù. ´Ù¸¥ ¼­¹ö¿¡ ¼±ÅÃÇØ ÁÖ¼¼¿ä.
-         * 17 : U-OTP ¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.
-         * 18 : OTP ¹øÈ£°¡ Æ²¸³´Ï´Ù.
+         * 0 : ì„±ê³µ
+         * 3 : ì§€ì›Œì§€ê±°ë‚˜ ì ‘ì† ì¤‘ì§€ëœ ì•„ì´ë”” ìž…ë‹ˆë‹¤.
+         * 4 : ë¹„ë°€ë²ˆí˜¸ê°€ ì¼ì¹˜í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
+         * 5 : ë“±ë¡ë˜ì§€ ì•Šì€ ì•„ì´ë”” ìž…ë‹ˆë‹¤.
+         * 6 : ì‹œìŠ¤í…œ ì˜¤ë¥˜ë¡œ ì ‘ì†í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
+         * 7 : í˜„ìž¬ ì ‘ì†ì¤‘ì¸ ì•„ì´ë”” ìž…ë‹ˆë‹¤.
+         * 8 : ì‹œìŠ¤í…œ ì˜¤ë¥˜ë¡œ ì ‘ì†í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
+         * 9 : ì‹œìŠ¤í…œ ì˜¤ë¥˜ë¡œ ì ‘ì†í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.
+         * 10 : í˜„ìž¬ ì„œë²„ì— ì ‘ì†ìš”ì²­ì´ ë§Žì•„ ì²˜ë¦¬í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.
+         * 11 : 20ì„¸ ì´ìƒë§Œ ì ‘ì†í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤. ë‹¤ë¥¸ ì„œë²„ì— ì„ íƒí•´ ì£¼ì„¸ìš”.
+         * 17 : U-OTP ë²ˆí˜¸ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”.
+         * 18 : OTP ë²ˆí˜¸ê°€ í‹€ë¦½ë‹ˆë‹¤.
      */
     public static final byte[] getLoginFailed(final int reason) {
         final WritingPacket w = new WritingPacket(16);
@@ -210,8 +210,8 @@ public class LoginPacket {
         w.write(client.getGender());
         w.write(client.isGm() ? 1 : 0); // Admin byte
         w.write0(22);
-        w.writeMapleAsciiString(Pwd); //ÆÐ½º¿öµå.
-        w.writeMapleAsciiString(Acc); //°ÔÀÓ ¾ÆÀÌµð.
+        w.writeMapleAsciiString(Pwd); //íŒ¨ìŠ¤ì›Œë“œ.
+        w.writeMapleAsciiString(Acc); //ê²Œìž„ ì•„ì´ë””.
         w.write(0);
         w.write(0);
         w.write(1);
@@ -257,11 +257,11 @@ public class LoginPacket {
         w.write(LoginServer.getInstance().getFlag());
         String msg = "";
         if (GameConstants.isServerReady()) {
-            /* ¼­¹ö°¡ µ¥ÀÌÅÍ°¡ ¿ÏÀüÈ÷ ·ÎµùµÇ¾úÀ» °æ¿ì */
+            /* ì„œë²„ê°€ ë°ì´í„°ê°€ ì™„ì „ížˆ ë¡œë”©ë˜ì—ˆì„ ê²½ìš° */
             msg = LoginServer.getInstance().getEventMessage();
         } else {
-            /* ¼­¹ö°¡ µ¥ÀÌÅÍ°¡ ¿ÏÀüÈ÷ ·ÎµùµÇÁö ¾Ê¾ÒÀ» °æ¿ì */
-            msg = "¼­¹ö°¡ ÁØºñµÇÁö ¾Ê¾Ò½À´Ï´Ù.\r\n\r\nÇÊ¿äÇÑ µ¥ÀÌÅÍ¸¦ ¸ðµÎ \r\nºÒ·¯¿Ã ¶§ ±îÁö Àá½Ã¸¸ \r\n±â´Ù·Á ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.";
+            /* ì„œë²„ê°€ ë°ì´í„°ê°€ ì™„ì „ížˆ ë¡œë”©ë˜ì§€ ì•Šì•˜ì„ ê²½ìš° */
+            msg = "ì„œë²„ê°€ ì¤€ë¹„ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.\r\n\r\ní•„ìš”í•œ ë°ì´í„°ë¥¼ ëª¨ë‘ \r\në¶ˆëŸ¬ì˜¬ ë•Œ ê¹Œì§€ ìž ì‹œë§Œ \r\nê¸°ë‹¤ë ¤ ì£¼ì‹œê¸° ë°”ëžë‹ˆë‹¤.";
         }
         w.writeMapleAsciiString(msg);
 
@@ -286,7 +286,7 @@ public class LoginPacket {
             } else {
                 load = 50;
             }
-            w.writeMapleAsciiString(LoginServer.getInstance().getServerName() + "-" + (i == 1 ? i : (i == 2 ? ("20¼¼ÀÌ»ó") : (i))));
+            w.writeMapleAsciiString(LoginServer.getInstance().getServerName() + "-" + (i == 1 ? i : (i == 2 ? ("20ì„¸ì´ìƒ") : (i))));
             w.writeInt(load == 0 ? 1 : load >= 50 ? 50 : load);
             w.write(serverId);
             w.write(i);
@@ -319,9 +319,9 @@ public class LoginPacket {
         boolean message = ServerConstants.recommendMessage.length() > 0;
         WritingPacket w = new WritingPacket();
         w.writeShort(SendPacketOpcode.RECOMMEND_WORLD.getValue());
-        w.write(message ? 1 : 0); // °¹¼ö
+        w.write(message ? 1 : 0); // ê°¯ìˆ˜
         if (message) {
-            w.writeInt(0); // ¿ùµå id
+            w.writeInt(0); // ì›”ë“œ id
             w.writeMapleAsciiString(ServerConstants.recommendMessage);
         }
         return w.getPacket();
@@ -361,29 +361,29 @@ public class LoginPacket {
         final WritingPacket w = new WritingPacket();
         w.writeShort(SendPacketOpcode.WORLD_INFORMATION.getValue());
         w.write(0xFF);
-        /* 1.2.240 ±¤°í Ãß°¡ */
-        int advertisement = 0; //1.2.250(2) ±âÁØ.
+        /* 1.2.240 ê´‘ê³  ì¶”ê°€ */
+        int advertisement = 0; //1.2.250(2) ê¸°ì¤€.
         w.write(advertisement);
         for (int i = 0; i < advertisement; i++) {
             w.writeMapleAsciiString((i == 0) ? "http://maplestory.nexon.com/maplestory/news/2015/login_banner.html"
                     : (i == 1) ? "http://s.nx.com/s2/Game/Maplestory/Maple2013/image/banner/ingame_bn/MS2_Festival_1.jpg"
                             : (i == 2) ? "http://s.nx.com/s2/Game/Maplestory/Maple2013/image/banner/ingame_bn/MS2_Festival_2.jpg"
-                                    : "http://s.nx.com/s2/Game/Maplestory/Maple2013/image/banner/ingame_bn/ingame_150701_01.jpg"); //±¤°í »çÁø.
+                                    : "http://s.nx.com/s2/Game/Maplestory/Maple2013/image/banner/ingame_bn/ingame_150701_01.jpg"); //ê´‘ê³  ì‚¬ì§„.
 
             w.writeMapleAsciiString((i == 0) ? "http://maplestory2.nexon.com/event/2015/OnLineFestival?"
                     : (i == 1) ? "http://maplestory2.nexon.com/live/20150627/OnlineFestival?st=maple1&bn=cla_ser&ev=live&dt=20150627"
                             : (i == 2) ? "http://maplestory2.nexon.com/event/2015/StarterPack?st=maple1&bn=cla_ser&ev=starter&dt=20150623"
-                                    : "http://closers.nexon.com/news/events/view.aspx?n4articlesn=117&st=maple&bn=login&ev=20150624"); //ÀÌµ¿ÇÒ ÁÖ¼Ò.
-            w.writeInt(5000); // ½Ã°£
+                                    : "http://closers.nexon.com/news/events/view.aspx?n4articlesn=117&st=maple&bn=login&ev=20150624"); //ì´ë™í•  ì£¼ì†Œ.
+            w.writeInt(5000); // ì‹œê°„
             w.writeInt(415); // width
-            /* ±¤°í width, weight °íÁ¤ */
+            /* ê´‘ê³  width, weight ê³ ì • */
             w.writeInt((i == 0) ? 80 : 70); // height
             w.writeInt((i == 0) ? 192 : 0); // x
             w.writeInt((i == 0) ? 452 : 0); // y
         }
-        /* 1.2.240 ±¤°í Ãß°¡ */
+        /* 1.2.240 ê´‘ê³  ì¶”ê°€ */
         w.write(0); // NotActiveAccountDlgFocus
-        w.write(0); // Àá±ä°èÁ¤ Á¢¼Ó ½Ãµµ?
+        w.write(0); // ìž ê¸´ê³„ì • ì ‘ì† ì‹œë„?
 
         return w.getPacket();
     }
@@ -429,13 +429,13 @@ public class LoginPacket {
         w.write(0);
         w.writeMapleAsciiString("");
         w.writeInt(0);
-        w.write(0);//¹ö´×
+        w.write(0);//ë²„ë‹
         w.writeInt(0);
         w.writeLong(PacketProvider.getKoreanTimestamp(System.currentTimeMillis()));
         w.write(0); //1.2.238+
         w.writeInt(chars.size()); //1.2.238+
         for (final MapleCharacter chr : chars) { //1.2.238+
-            w.writeInt(chr.getId()); //TODO : Ä³¸¯ÅÍ À§Ä¡.
+            w.writeInt(chr.getId()); //TODO : ìºë¦­í„° ìœ„ì¹˜.
         }
         w.write(chars.size()); //1.2.238+
         for (final MapleCharacter chr : chars) {

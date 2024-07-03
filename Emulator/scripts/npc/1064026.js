@@ -22,42 +22,42 @@ function action(mode, type, selection) {
         else
             status--;
 	if (status == 0) {
-		var chat = "½Ã°£¿¡ ³¡ÀÌ¶õ°Ç Á¸ÀçÇÏ´Â°Å¶ó°í »ý°¢ÇÏ½Ã³ª¿ä..\r\n";
-		chat += "\r\nÁö±Ý ½Ã°ø°£ÀÌ ½É°¢ÇÏ°Ô µÚÆ²·Á ";
-		chat += "¿µ¿øÀÇ ½Ã°£ÀÌ µÚÆ²·Á ³¡ÀÌ »ý±æ·Á°í ÇÕ´Ï´Ù. ";
-		chat += "´©±¸ÀÇ ¼ÒÇàÀÎÁö´Â ¸ð¸£Áö¸¸ ÀÌ µÚÆ²¸²À» ´Ù½Ã º»·¡ÀÇ ¸ð½ÀÀ¸·Î µÇµ¹·Á¾ß¸¸ ÇÕ´Ï´Ù. ";
-		chat += "ºÎµð ÀÏ±×·¯Áø ½Ã°£ÀÇ Å¾À» ±¸ÇØÁÖ½Ã°Ú½À´Ï±î ¿ë»ç¿©...\r\n\r\n";
-		chat += "#e<±×·£µå Äù½ºÆ®>#n\r\n";
-		chat += "\r\n#bÄù½ºÆ® : ÀÏ±×·¯Áø ½Ã°£ÀÇÅ¾ Å¬¸®¾î#k";
+		var chat = "ì‹œê°„ì— ëì´ëž€ê±´ ì¡´ìž¬í•˜ëŠ”ê±°ë¼ê³  ìƒê°í•˜ì‹œë‚˜ìš”..\r\n";
+		chat += "\r\nì§€ê¸ˆ ì‹œê³µê°„ì´ ì‹¬ê°í•˜ê²Œ ë’¤í‹€ë ¤ ";
+		chat += "ì˜ì›ì˜ ì‹œê°„ì´ ë’¤í‹€ë ¤ ëì´ ìƒê¸¸ë ¤ê³  í•©ë‹ˆë‹¤. ";
+		chat += "ëˆ„êµ¬ì˜ ì†Œí–‰ì¸ì§€ëŠ” ëª¨ë¥´ì§€ë§Œ ì´ ë’¤í‹€ë¦¼ì„ ë‹¤ì‹œ ë³¸ëž˜ì˜ ëª¨ìŠµìœ¼ë¡œ ë˜ëŒë ¤ì•¼ë§Œ í•©ë‹ˆë‹¤. ";
+		chat += "ë¶€ë”” ì¼ê·¸ëŸ¬ì§„ ì‹œê°„ì˜ íƒ‘ì„ êµ¬í•´ì£¼ì‹œê² ìŠµë‹ˆê¹Œ ìš©ì‚¬ì—¬...\r\n\r\n";
+		chat += "#e<ê·¸ëžœë“œ í€˜ìŠ¤íŠ¸>#n\r\n";
+		chat += "\r\n#bí€˜ìŠ¤íŠ¸ : ì¼ê·¸ëŸ¬ì§„ ì‹œê°„ì˜íƒ‘ í´ë¦¬ì–´#k";
                 while (rank.next()) {
 		i = rank.getInt("number");
-		chat += "\r\n#dÇöÀç " +rank.getString("charid") + " ´ÔÀÇ ÆÄÆ¼°¡ " + rank.getInt("number") + " Ãþ±îÁö Å¬¸®¾î ÇÏ¿´½À´Ï´Ù.#k\r\n\r\n";
+		chat += "\r\n#dí˜„ìž¬ " +rank.getString("charid") + " ë‹˜ì˜ íŒŒí‹°ê°€ " + rank.getInt("number") + " ì¸µê¹Œì§€ í´ë¦¬ì–´ í•˜ì˜€ìŠµë‹ˆë‹¤.#k\r\n\r\n";
 		}
-		chat += "#L0##bÀÏ±×·¯Áø ½Ã°£ÀÇÅ¾¿¡ ´ëÇØ¼­ ¼³¸íÀ» µè°í½Í½À´Ï´Ù.#l\r\n";
-		chat += "#L1#ÀÏ±×·¯Áø ½Ã°£ÀÇÅ¾À» ¿ø·¡¸ð½ÀÀ¸·Î µÇµ¹¸®·¯ °¡°Ú½À´Ï´Ù.#l";
+		chat += "#L0##bì¼ê·¸ëŸ¬ì§„ ì‹œê°„ì˜íƒ‘ì— ëŒ€í•´ì„œ ì„¤ëª…ì„ ë“£ê³ ì‹¶ìŠµë‹ˆë‹¤.#l\r\n";
+		chat += "#L1#ì¼ê·¸ëŸ¬ì§„ ì‹œê°„ì˜íƒ‘ì„ ì›ëž˜ëª¨ìŠµìœ¼ë¡œ ë˜ëŒë¦¬ëŸ¬ ê°€ê² ìŠµë‹ˆë‹¤.#l";
                 chat += "";
 		cm.sendSimple(chat);
 		} else if (status == 1) {
 		if(selection == 0) {
-			cm.sendOk("ÀÏ±×·¯Áø ½Ã°£ÀÇÅ¾Àº ¸ðµçÀ¯Àú °øÅëÀÇ ±×·£µå Äù½ºÆ®ÀÔ´Ï´Ù.\r\nÀÏ±×·¯Áø ½Ã°£ÀÇÅ¾Àº 100Ãþ±îÁö Á¸ÀçÇÏ¸ç 50Ãþ ÀÌ»óÀº Å¬¸®¾î ÇÒ¶§¸¶´Ù ¾ÆÀÌÅÛ¹Ú½º°¡ Áö±ÞµË´Ï´Ù.\r\n#b(¾ÆÀÌÅÛ¹Ú½º¿¡¼­ ³ª¿Ã ¾ÆÀÌÅÛÀº Å¬¸®¾îÇÑ Ãþ¸¶´Ù ´Þ¶óÁý´Ï´Ù)#k\r\nÀÏ±×·¯Áø ½Ã°£ÀÇÅ¾Àº ´Ù¸¥À¯Àú°¡ 1ÃþÀ» Å¬¸®¾îÇÏ¸é ´ÙÀ½ºÎÅÏ 2ÃþÀ¸·Î ¹Ù·Î ¿Ã¶ó°¥¼ö ÀÖ½À´Ï´Ù.\r\nÇÏÁö¸¸ Å¬¸®¾î¿¡ ½ÇÆÐÇßÀ»½Ã ÇØ´çÀ¯Àú´Â ÇÏ·ç°£ ÀÏ±×·¯Áø ½Ã°£ÀÇÅ¾ µµÀü¿¡ ÀÀÇÒ¼ö ¾ø½À´Ï´Ù.\r\nÇÏ·ç ÃÖ´ë 2¹ø µµÀüÀÌ °¡´ÉÇÏ¸ç ÀÏ±×·¯Áø ½Ã°£ÀÇÅ¾Àº ÆÄÆ¼·Î¸¸ ÀÔÀåÀÌ °¡´ÉÇÕ´Ï´Ù.");
+			cm.sendOk("ì¼ê·¸ëŸ¬ì§„ ì‹œê°„ì˜íƒ‘ì€ ëª¨ë“ ìœ ì € ê³µí†µì˜ ê·¸ëžœë“œ í€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.\r\nì¼ê·¸ëŸ¬ì§„ ì‹œê°„ì˜íƒ‘ì€ 100ì¸µê¹Œì§€ ì¡´ìž¬í•˜ë©° 50ì¸µ ì´ìƒì€ í´ë¦¬ì–´ í• ë•Œë§ˆë‹¤ ì•„ì´í…œë°•ìŠ¤ê°€ ì§€ê¸‰ë©ë‹ˆë‹¤.\r\n#b(ì•„ì´í…œë°•ìŠ¤ì—ì„œ ë‚˜ì˜¬ ì•„ì´í…œì€ í´ë¦¬ì–´í•œ ì¸µë§ˆë‹¤ ë‹¬ë¼ì§‘ë‹ˆë‹¤)#k\r\nì¼ê·¸ëŸ¬ì§„ ì‹œê°„ì˜íƒ‘ì€ ë‹¤ë¥¸ìœ ì €ê°€ 1ì¸µì„ í´ë¦¬ì–´í•˜ë©´ ë‹¤ìŒë¶€í„´ 2ì¸µìœ¼ë¡œ ë°”ë¡œ ì˜¬ë¼ê°ˆìˆ˜ ìžˆìŠµë‹ˆë‹¤.\r\ní•˜ì§€ë§Œ í´ë¦¬ì–´ì— ì‹¤íŒ¨í–ˆì„ì‹œ í•´ë‹¹ìœ ì €ëŠ” í•˜ë£¨ê°„ ì¼ê·¸ëŸ¬ì§„ ì‹œê°„ì˜íƒ‘ ë„ì „ì— ì‘í• ìˆ˜ ì—†ìŠµë‹ˆë‹¤.\r\ní•˜ë£¨ ìµœëŒ€ 2ë²ˆ ë„ì „ì´ ê°€ëŠ¥í•˜ë©° ì¼ê·¸ëŸ¬ì§„ ì‹œê°„ì˜íƒ‘ì€ íŒŒí‹°ë¡œë§Œ ìž…ìž¥ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
 			cm.dispose();
 		} else if (selection == 1) {
-				cm.sendYesNo("#bÀÏ±×·¯Áø ½Ã°£ÀÇÅ¾  <" + (i + 1) + "> Ãþ¿¡ µµÀü ÇØº¸½Ã°Ú½À´Ï±î..");
+				cm.sendYesNo("#bì¼ê·¸ëŸ¬ì§„ ì‹œê°„ì˜íƒ‘  <" + (i + 1) + "> ì¸µì— ë„ì „ í•´ë³´ì‹œê² ìŠµë‹ˆê¹Œ..");
 			} 
 		} else if (status == 2) {
 			if(cm.getParty() == null) {
-				cm.sendOk("ÀÏ±×·¯Áø ½Ã°£ÀÇÅ¾Àº ÆÄÆ¼·Î¸¸ µµÀüÀÌ °¡´ÉÇÕ´Ï´Ù.");
+				cm.sendOk("ì¼ê·¸ëŸ¬ì§„ ì‹œê°„ì˜íƒ‘ì€ íŒŒí‹°ë¡œë§Œ ë„ì „ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
 				cm.dispose();
 				return;
 			} 
 			if(!cm.isLeader()) {
-				cm.sendOk("ÀÏ±×·¯Áø ½Ã°£ÀÇÅ¾ µµÀüÀº ÆÄÆ¼Àå¸¸ÀÌ ½ÅÃ»ÇÒ¼ö ÀÖ½À´Ï´Ù.");
+				cm.sendOk("ì¼ê·¸ëŸ¬ì§„ ì‹œê°„ì˜íƒ‘ ë„ì „ì€ íŒŒí‹°ìž¥ë§Œì´ ì‹ ì²­í• ìˆ˜ ìžˆìŠµë‹ˆë‹¤.");
 				cm.dispose();
 				return;
 			}
 			    var q = cm.getEventManager("TimeTower");
                             if (!cm.TimeTowerCheck()) {
-			        cm.sendOk("ÆÄÆ¼¿øÁß ¿À´Ã µµÀü°¡´ÉÇÑ È½¼ö¸¦ ÃÊ°úÇÑ ¸â¹ö°¡ ÀÖ½À´Ï´Ù.");
+			        cm.sendOk("íŒŒí‹°ì›ì¤‘ ì˜¤ëŠ˜ ë„ì „ê°€ëŠ¥í•œ íšŸìˆ˜ë¥¼ ì´ˆê³¼í•œ ë©¤ë²„ê°€ ìžˆìŠµë‹ˆë‹¤.");
                                 cm.dispose();
                             } else {
                                 cm.TimeTowerAdd();

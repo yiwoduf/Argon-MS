@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -72,7 +72,7 @@ public class InterServerHandler {
         String ip = ServerConstants.getServerHost(c);
 
         if (ip == null) { // Cash Shop not init yet
-            c.getSession().writeAndFlush(MainPacketCreator.serverNotice(5, "Ä³½Ã¼¥À» ÇöÀç »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù."));
+            c.getSession().writeAndFlush(MainPacketCreator.serverNotice(5, "ìºì‹œìƒµì„ í˜„ì¬ ì‚¬ìš©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤."));
             return;
         }
 
@@ -251,14 +251,14 @@ public class InterServerHandler {
         /*     if (player.haveItem(1142187, 1, true, true)) {
             if (!isDamageMeterRanker(player.getId())) {
                 player.removeAllEquip(1142187, false);
-                player.send(MainPacketCreator.OnAddPopupSay(9000036, 3000, "ZIÁ¸ µô·®1µî ÀÚ°İÀÌ ¹ÚÅ»µÇ¾î, ÄªÈ£°¡ È¸¼öµÇ¾ú½À´Ï´Ù.", ""));
+                player.send(MainPacketCreator.OnAddPopupSay(9000036, 3000, "ZIì¡´ ë”œëŸ‰1ë“± ìê²©ì´ ë°•íƒˆë˜ì–´, ì¹­í˜¸ê°€ íšŒìˆ˜ë˜ì—ˆìŠµë‹ˆë‹¤.", ""));
             }
         } */
         if (ServerConstants.chr != null) {
             if (player.haveItem(1142558, 1, true, true)) {
                 if (!player.getName().equals(ServerConstants.chr.getName())) {
                     player.removeAllEquip(1142558, false);
-                    player.dropMessage(5, "<zlÈ¯»ı ÃÖ°­ÀÚlz> ÀÚ°İÀÌ ¹ÚÅ»µÇ¾î, ÄªÈ£°¡ È¸¼öµÇ¾ú½À´Ï´Ù.");
+                    player.dropMessage(5, "<zlí™˜ìƒ ìµœê°•ìlz> ìê²©ì´ ë°•íƒˆë˜ì–´, ì¹­í˜¸ê°€ íšŒìˆ˜ë˜ì—ˆìŠµë‹ˆë‹¤.");
                 }
             }
         }
@@ -267,7 +267,7 @@ public class InterServerHandler {
             if (player.getName().equals(ServerConstants.chr.getName())) {
                 if (!player.haveItem(1142558, 1, true, true)) {
                     player.gainItem(1142558, 1);
-                    player.dropMessage(5, "<zlÈ¯»ı ÃÖ°­ÀÚlz> ÈÆÀåÀÌ Áö±Ş µÇ¾ú½À´Ï´Ù.");
+                    player.dropMessage(5, "<zlí™˜ìƒ ìµœê°•ìlz> í›ˆì¥ì´ ì§€ê¸‰ ë˜ì—ˆìŠµë‹ˆë‹¤.");
                 }
             }
         }
@@ -276,7 +276,7 @@ public class InterServerHandler {
             if (player.haveItem(1142268, 1, true, true)) {
                 if (!player.getName().equals(ServerConstants.mrank1)) {
                     player.removeAllEquip(1142268, false);
-                    player.dropMessage(5, "¸Ş¼Òº¸À¯·® Àü¼· 1À§ÀÇ À§¾ö ÀÚ°İÀÌ ¹ÚÅ»µÇ¾î, ÄªÈ£°¡ È¸¼öµÇ¾ú½À´Ï´Ù.");
+                    player.dropMessage(5, "ë©”ì†Œë³´ìœ ëŸ‰ ì „ì„­ 1ìœ„ì˜ ìœ„ì—„ ìê²©ì´ ë°•íƒˆë˜ì–´, ì¹­í˜¸ê°€ íšŒìˆ˜ë˜ì—ˆìŠµë‹ˆë‹¤.");
                 }
             }
         }
@@ -285,7 +285,7 @@ public class InterServerHandler {
             if (player.getName().equals(ServerConstants.mrank1)) {
                 if (!player.haveItem(1142268, 1, true, true)) {
                     player.gainItem(1142268, 1);
-                    player.dropMessage(5, "¸Ş¼Òº¸À¯·® Àü¼· 1À§ÀÇ À§¾ö ÈÆÀåÀÌ Áö±Ş µÇ¾ú½À´Ï´Ù.");
+                    player.dropMessage(5, "ë©”ì†Œë³´ìœ ëŸ‰ ì „ì„­ 1ìœ„ì˜ ìœ„ì—„ í›ˆì¥ì´ ì§€ê¸‰ ë˜ì—ˆìŠµë‹ˆë‹¤.");
                 }
             }
         } */
@@ -293,7 +293,7 @@ public class InterServerHandler {
             if (player.haveItem(1142505, 1, true, true)) {
                 if (!player.getName().equals(ServerConstants.crank1)) {
                     player.removeAllEquip(1142505, false);
-                    player.dropMessage(5, "ÃßÃµÀÎ ·©Å· 1À§ ÀÚ°İÀÌ ¹ÚÅ»µÇ¾î, ÄªÈ£°¡ È¸¼öµÇ¾ú½À´Ï´Ù.");
+                    player.dropMessage(5, "ì¶”ì²œì¸ ë­í‚¹ 1ìœ„ ìê²©ì´ ë°•íƒˆë˜ì–´, ì¹­í˜¸ê°€ íšŒìˆ˜ë˜ì—ˆìŠµë‹ˆë‹¤.");
                 }
             }
         }
@@ -302,58 +302,58 @@ public class InterServerHandler {
             if (player.getName().equals(ServerConstants.crank1)) {
                 if (!player.haveItem(1142505, 1, true, true)) {
                     player.gainItem(1142505, 1);
-                    player.dropMessage(5, "ÃßÃµÀÎ ·©Å· 1À§ ÈÆÀåÀÌ Áö±Ş µÇ¾ú½À´Ï´Ù.");
+                    player.dropMessage(5, "ì¶”ì²œì¸ ë­í‚¹ 1ìœ„ í›ˆì¥ì´ ì§€ê¸‰ ë˜ì—ˆìŠµë‹ˆë‹¤.");
                 }
             }
         } */
 
- /* Á¦·Î ÃÊ±âÈ­ */
+ /* ì œë¡œ ì´ˆê¸°í™” */
         if (GameConstants.isZero(player.getJob())) {
 
             player.setGender((byte) 0);
             player.setSecondGender((byte) 1);
             player.send(ZeroSkill.Clothes(player.getBetaClothes()));
-            player.zeroSkillMaster(); // Ä¡¿ì¾¾ :: Á¦·Î @½ºÅ³¸¶½ºÅÍ ±¸Çö
+            player.zeroSkillMaster(); // ì¹˜ìš°ì”¨ :: ì œë¡œ @ìŠ¤í‚¬ë§ˆìŠ¤í„° êµ¬í˜„
         } else {
             player.setSecondGender((byte) -1);
         }
 
-        /* ÇÎÅ©ºó */
-        if (GameConstants.isPinkBean(player.getJob())) { // Ä¡¿ì¾¾ :: ÇÎÅ©ºó ¿ä¿ä 
+        /* í•‘í¬ë¹ˆ */
+        if (GameConstants.isPinkBean(player.getJob())) { // ì¹˜ìš°ì”¨ :: í•‘í¬ë¹ˆ ìš”ìš” 
             SkillFactory.getSkill(131001010).getEffect(player.getSkillLevel(131001010)).applyTo(player);
         }
 
-        /* ¼Ò¿ïÀÎÃ¦ÅÍ */
+        /* ì†Œìš¸ì¸ì±ˆí„° */
         if ((player.isEquippedSoulWeapon()) && (transfer == null)) {
             player.setSoulCount(0);
             c.send(SoulWeaponPacket.giveSoulGauge(player.getSoulCount(), player.getEquippedSoulSkill()));
         }
 
-        /* ÃÖ´ëµ¥¹ÌÁö ÇØÁ¦ */
+        /* ìµœëŒ€ë°ë¯¸ì§€ í•´ì œ */
         if (ServerConstants.UnlockMaxDamage) {
             player.unlockMaxDamage();
         }
 
-        /* Á¤·ÉÀÇ Ææ´øÆ® */
+        /* ì •ë ¹ì˜ íœë˜íŠ¸ */
         if (player.getInventory(MapleInventoryType.EQUIPPED).findById(1122017) != null) {
             player.equipPendantOfSpirit();
         }
 
-        /* ¿ÀÇÂ°ÔÀÌÆ® */
+        /* ì˜¤í”ˆê²Œì´íŠ¸ */
         c.getPlayer().setKeyValue("opengate", null);
         c.getPlayer().setKeyValue("count", null);
 
-        /* Ææ´øÆ® ½½·Ô */
+        /* íœë˜íŠ¸ ìŠ¬ë¡¯ */
         if (!c.getPlayer().getStat().getJC()) {
-            String[] text = {"¹Ì³²", "¹Ì³à", "Àå¹ÌÄ®", "°üÁ¾", "À¯¸®¸àÅ»", "ºÎÃ³¸ÇÅ»", "ÁÖÀÎ°ø", "È÷·ÎÀÎ", "¿¢½ºÆ®¶ó", "½Å", "¾î±×·Î", "ÀåºñÃæ", "¸¶½ºÅÍ", "°ÔÀÌ", "µ¿Á¤", "È÷Å°ÄÚ¸ğ¸®", "Âğµû", "¸®¾óÃæ"};
-            String[] text2 = {"¹İ°©½À´Ï´Ù", "¾È³çÇÏ¼¼¿ä?"};
+            String[] text = {"ë¯¸ë‚¨", "ë¯¸ë…€", "ì¥ë¯¸ì¹¼", "ê´€ì¢…", "ìœ ë¦¬ë©˜íƒˆ", "ë¶€ì²˜ë§¨íƒˆ", "ì£¼ì¸ê³µ", "íˆë¡œì¸", "ì—‘ìŠ¤íŠ¸ë¼", "ì‹ ", "ì–´ê·¸ë¡œ", "ì¥ë¹„ì¶©", "ë§ˆìŠ¤í„°", "ê²Œì´", "ë™ì •", "íˆí‚¤ì½”ëª¨ë¦¬", "ì°ë”°", "ë¦¬ì–¼ì¶©"};
+            String[] text2 = {"ë°˜ê°‘ìŠµë‹ˆë‹¤", "ì•ˆë…•í•˜ì„¸ìš”?"};
             String text3 = text[(int) java.lang.Math.floor(java.lang.Math.random() * text.length)] + " " + player.getName() + " " + text2[(int) java.lang.Math.floor(java.lang.Math.random() * text2.length)];
             WorldBroadcasting.broadcastMessage(UIPacket.detailShowInfo(text3, false));
-            c.getSession().writeAndFlush(MainPacketCreator.OnAddPopupSay(9062000, 3600, "Á¢¼Ó ÈÄ 60ºĞÀÌ Áö³¯¶§¸¶´Ù ·Î±×ÀÎÆ÷ÀÎÆ®°¡ Àû¸³µË´Ï´Ù.", ""));
+            c.getSession().writeAndFlush(MainPacketCreator.OnAddPopupSay(9062000, 3600, "ì ‘ì† í›„ 60ë¶„ì´ ì§€ë‚ ë•Œë§ˆë‹¤ ë¡œê·¸ì¸í¬ì¸íŠ¸ê°€ ì ë¦½ë©ë‹ˆë‹¤.", ""));
             c.getPlayer().getStat().setJC(true);
         }
 
-        /* ÇÇ¹ö Å¸ÀÓ */
+        /* í”¼ë²„ íƒ€ì„ */
         if (ServerConstants.feverTime) {
             c.getSession().writeAndFlush(MainPacketCreator.feverTime());
         }
@@ -403,7 +403,7 @@ public class InterServerHandler {
         c.getSession().writeAndFlush(MainPacketCreator.OnChatLetClientConnect());
         AdminToolServer.broadcastMessage(AdminToolPacket.Info());
         if (c.getPlayer().getPartTimeJob(c.getPlayer().getId()) > 1) {
-            c.getPlayer().dropMessage(6, "[Ms.¾îÄ«¿îÆ®] ¾Æ¸£¹ÙÀÌÆ® º¸»óÀ» ¹Ş¾ÆÁÖ¼¼¿ä...");
+            c.getPlayer().dropMessage(6, "[Ms.ì–´ì¹´ìš´íŠ¸] ì•„ë¥´ë°”ì´íŠ¸ ë³´ìƒì„ ë°›ì•„ì£¼ì„¸ìš”...");
         }
     }
 
@@ -435,7 +435,7 @@ public class InterServerHandler {
         final int channel = rh.readByte();
         if (c.getPlayer().getMapId() == 120043000) {
             if (!(channel == 0 || channel == 1)) {
-                c.getPlayer().dropMessage(1, "±¤ÀåÀº 1Ã¤³Î 2Ã¤³Î¸¸ »ç¿ëÇÒ¼ö ÀÖ½À´Ï´Ù.");
+                c.getPlayer().dropMessage(1, "ê´‘ì¥ì€ 1ì±„ë„ 2ì±„ë„ë§Œ ì‚¬ìš©í• ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
                 c.getPlayer().send(MainPacketCreator.resetActions());
                 return;
             }
@@ -446,7 +446,7 @@ public class InterServerHandler {
             c.getSession().close();
             return;
         } else if (toch == null || toch.isShutdown()) {
-            c.getSession().writeAndFlush(MainPacketCreator.serverNotice(5, "ÇöÀç Á¢±ÙÇÒ ¼ö ¾ø½À´Ï´Ù."));
+            c.getSession().writeAndFlush(MainPacketCreator.serverNotice(5, "í˜„ì¬ ì ‘ê·¼í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤."));
             return;
         }
         if (chr.getTrade() != null) {

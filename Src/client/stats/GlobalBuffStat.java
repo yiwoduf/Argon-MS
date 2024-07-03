@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -13,7 +13,7 @@ import java.math.BigInteger;
 
 /**
  *
- * @author Æ¼½ã
+ * @author í‹°ì¬
  */
 public interface GlobalBuffStat {
     public BigInteger getBigValue();

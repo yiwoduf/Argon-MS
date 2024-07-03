@@ -31,27 +31,27 @@ function action(mode, type, selection) {
 	status++;
 	if (status == 1) {
 		var percent = getFever() == -1 ? 0 : getFever()
-		var show = getFever() >= 10 && getFever() < 20 ? "¡á¡à¡à¡à¡à¡à¡à¡à¡à¡à" : 
-		getFever() >= 20 && getFever() < 30 ? "¡á¡á¡à¡à¡à¡à¡à¡à¡à¡à" : 
-		getFever() >= 30 && getFever() < 40 ? "¡á¡á¡á¡à¡à¡à¡à¡à¡à¡à" :
-		getFever() >= 40 && getFever() < 50 ? "¡á¡á¡á¡á¡à¡à¡à¡à¡à¡à" :
-		getFever() >= 50 && getFever() < 60 ? "¡á¡á¡á¡á¡á¡à¡à¡à¡à¡à" :
-		getFever() >= 60 && getFever() < 70 ? "¡á¡á¡á¡á¡á¡á¡à¡à¡à¡à" :
-		getFever() >= 70 && getFever() < 80 ? "¡á¡á¡á¡á¡á¡á¡á¡à¡à¡à" :
-		getFever() >= 80 && getFever() < 90 ? "¡á¡á¡á¡á¡á¡á¡á¡á¡à¡à" :
-		getFever() >= 90 && getFever() < 100? "¡á¡á¡á¡á¡á¡á¡á¡á¡á¡à" : "¡à¡à¡à¡à¡à¡à¡à¡à¡à¡à";
-		var txt = "ÀÌ °÷¿¡¼­ ¾ÆÀÌÅÛÀ» ºÐÇØÇÒ ¼ö ÀÖ´Â °Í °°´Ù. ºÐÇØ±â ¾Æ·¡¿¡´Â ÀÛÀº ¸Þ¸ð°¡ Ç¥½ÃµÇ¾î ÀÖ´Ù.\r\n\r\n#r";
-		txt += "¡¡#fs12#¨ç#fs11# Lv.75 ÀÌ»óÀÇ Àåºñ ¾ÆÀÌÅÛ¸¸ ºÐÇØ °¡´É.\r\n";
-		txt += "¡¡#fs12#¨è#fs11# Lv.105 ÀÌ»óÀÇ Àåºñ ¾ÆÀÌÅÛ ºÐÇØ½Ã #e#z4020009##n È¹µæ °¡´É.\r\n";
-		txt += "¡¡#fs12#¨é#fs11# Lv.140 ÀÌ»óÀÇ Àåºñ ¾ÆÀÌÅÛ ºÐÇØ½Ã #e#z4021021##n È¹µæ °¡´É.\r\n#b";
-		txt += "¡¡#fs12#¨Û#fs11# #eÇÇ¹ö º¸³Ê½º °ÔÀÌÁö : #fs12##n#b"+show+" #fs11#("+percent+"%)#fs12##k";
-		txt += "\r\n\r\n¾î¶»°Ô ÇÒ±î? ¾ÆÀÌÅÛÀ» ºÐÇØÇØ º¼±î?\r\n";
-		txt += "#b#L1#À½¡¦. Áö±Ý ´çÀå ºÐÇØ¸¦ ½ÃÀÛÇØº¸ÀÚ.\r\n";
-		txt += "#L2#´À³¦ÀÌ ÁÁÁö ¾Ê¾Æ. Áö±ÝÀº ºÐÇØÇÒ ¶§°¡ ¾Æ´Ï¾ß.";
+		var show = getFever() >= 10 && getFever() < 20 ? "â– â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡" : 
+		getFever() >= 20 && getFever() < 30 ? "â– â– â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡" : 
+		getFever() >= 30 && getFever() < 40 ? "â– â– â– â–¡â–¡â–¡â–¡â–¡â–¡â–¡" :
+		getFever() >= 40 && getFever() < 50 ? "â– â– â– â– â–¡â–¡â–¡â–¡â–¡â–¡" :
+		getFever() >= 50 && getFever() < 60 ? "â– â– â– â– â– â–¡â–¡â–¡â–¡â–¡" :
+		getFever() >= 60 && getFever() < 70 ? "â– â– â– â– â– â– â–¡â–¡â–¡â–¡" :
+		getFever() >= 70 && getFever() < 80 ? "â– â– â– â– â– â– â– â–¡â–¡â–¡" :
+		getFever() >= 80 && getFever() < 90 ? "â– â– â– â– â– â– â– â– â–¡â–¡" :
+		getFever() >= 90 && getFever() < 100? "â– â– â– â– â– â– â– â– â– â–¡" : "â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡â–¡";
+		var txt = "ì´ ê³³ì—ì„œ ì•„ì´í…œì„ ë¶„í•´í•  ìˆ˜ ìžˆëŠ” ê²ƒ ê°™ë‹¤. ë¶„í•´ê¸° ì•„ëž˜ì—ëŠ” ìž‘ì€ ë©”ëª¨ê°€ í‘œì‹œë˜ì–´ ìžˆë‹¤.\r\n\r\n#r";
+		txt += "ã€€#fs12#â‘ #fs11# Lv.75 ì´ìƒì˜ ìž¥ë¹„ ì•„ì´í…œë§Œ ë¶„í•´ ê°€ëŠ¥.\r\n";
+		txt += "ã€€#fs12#â‘¡#fs11# Lv.105 ì´ìƒì˜ ìž¥ë¹„ ì•„ì´í…œ ë¶„í•´ì‹œ #e#z4020009##n íšë“ ê°€ëŠ¥.\r\n";
+		txt += "ã€€#fs12#â‘¢#fs11# Lv.140 ì´ìƒì˜ ìž¥ë¹„ ì•„ì´í…œ ë¶„í•´ì‹œ #e#z4021021##n íšë“ ê°€ëŠ¥.\r\n#b";
+		txt += "ã€€#fs12#â“ž#fs11# #eí”¼ë²„ ë³´ë„ˆìŠ¤ ê²Œì´ì§€ : #fs12##n#b"+show+" #fs11#("+percent+"%)#fs12##k";
+		txt += "\r\n\r\nì–´ë–»ê²Œ í• ê¹Œ? ì•„ì´í…œì„ ë¶„í•´í•´ ë³¼ê¹Œ?\r\n";
+		txt += "#b#L1#ìŒâ€¦. ì§€ê¸ˆ ë‹¹ìž¥ ë¶„í•´ë¥¼ ì‹œìž‘í•´ë³´ìž.\r\n";
+		txt += "#L2#ëŠë‚Œì´ ì¢‹ì§€ ì•Šì•„. ì§€ê¸ˆì€ ë¶„í•´í•  ë•Œê°€ ì•„ë‹ˆì•¼.";
 		cm.sendSimpleS(txt, 2);
 	} else if (status == 2) {
 		var ok = false;
-		var selStr = "ºÐÇØÇÒ ¾ÆÀÌÅÛÀ» ¼±ÅÃÇÏÀÚ. #b75·¹º§ ÀÌ»óÀÇ Àåºñ ¾ÆÀÌÅÛ#k¸¸ °¡´ÉÇÏ´Ù. ¾ÆÀÌÅÛ ÀÌ¸§À§¿¡ ¸¶¿ì½º¸¦ ¿Ã·Á ³õÀ¸¸é ÅøÆÁÀ» º¼ ¼ö ÀÖ´Ù.\r\n";
+		var selStr = "ë¶„í•´í•  ì•„ì´í…œì„ ì„ íƒí•˜ìž. #b75ë ˆë²¨ ì´ìƒì˜ ìž¥ë¹„ ì•„ì´í…œ#kë§Œ ê°€ëŠ¥í•˜ë‹¤. ì•„ì´í…œ ì´ë¦„ìœ„ì— ë§ˆìš°ìŠ¤ë¥¼ ì˜¬ë ¤ ë†“ìœ¼ë©´ íˆ´íŒì„ ë³¼ ìˆ˜ ìžˆë‹¤.\r\n";
 		for (var x = 0; x < invs.length; x++) {
 			var inv = cm.getInventory(invs[x]);
 			for (var i = 0; i <= inv.getSlotLimit(); i++) {
@@ -82,14 +82,14 @@ function action(mode, type, selection) {
 			}
 		}
 		if (!ok && selection == 1) {
-			cm.sendOkS("¸Â´Ù¡¦. ³ª Àåºñ ¾ÆÀÌÅÛÀ» °¡Áö°í ÀÖÁö ¾Ê¾ÒÁö¡¦!", 2);
+			cm.sendOkS("ë§žë‹¤â€¦. ë‚˜ ìž¥ë¹„ ì•„ì´í…œì„ ê°€ì§€ê³  ìžˆì§€ ì•Šì•˜ì§€â€¦!", 2);
 			cm.dispose();
 			return;
 		}
  		if (selection == 1){
 		cm.sendSimpleS(selStr + "#k", 2);
 		}else if (selection == 2){
-		cm.sendOkS("±×·¡. ÀÌ°Ç ¿ÏÀü µµ¹Ú°°Àº ÇàÀ§¾ß. ³ªÁß¿¡ ÇØºÁ¾ß°Ú´Ù.", 2);
+		cm.sendOkS("ê·¸ëž˜. ì´ê±´ ì™„ì „ ë„ë°•ê°™ì€ í–‰ìœ„ì•¼. ë‚˜ì¤‘ì— í•´ë´ì•¼ê² ë‹¤.", 2);
 		cm.dispose();
 		}
 	} else if (status == 3) {
@@ -108,13 +108,13 @@ function action(mode, type, selection) {
 		}
 		var item = statsSel.getItemId();
 		if(cm.isCash(item)){
-		cm.sendOkS("Ä³½Ã ¾ÆÀÌÅÛÀº ºÐÇØÇÒ ¼ö ¾ø±º...", 2);
+		cm.sendOkS("ìºì‹œ ì•„ì´í…œì€ ë¶„í•´í•  ìˆ˜ ì—†êµ°...", 2);
 		cm.dispose();
 		} else if (ItemInformation.getInstance().getReqLevel(item) < 75) {
-		cm.sendOk("Âø¿ë ·¹º§ÀÌ 75 ¹Ì¸¸ÀÎ ¾ÆÀÌÅÛÀº ºÐÇØÇÒ ¼ö ¾ø´Ù´Â ¸Þ½ÃÁö°¡ ³ª¿Â´Ù.");
+		cm.sendOk("ì°©ìš© ë ˆë²¨ì´ 75 ë¯¸ë§Œì¸ ì•„ì´í…œì€ ë¶„í•´í•  ìˆ˜ ì—†ë‹¤ëŠ” ë©”ì‹œì§€ê°€ ë‚˜ì˜¨ë‹¤.");
 		cm.dispose();
 		}else{
-		cm.sendNextS("#b#i"+statsSel.getItemId()+"# #z"+statsSel.getItemId()+"##k ¾ÆÀÌÅÛÀ» Á¤¸»·Î ºÐÇØÇÒ±î? ¾ÆÀÌÅÛÀÇ ¿É¼Ç¿¡ »ó°ü ¾øÀÌ °á°ú´Â ¶È°°ÀÌ ³ª¿ÃÅ×°í, °á°ú¸¦ ¹øº¹ÇÒ ¼ø ¾ø°ÚÁö¡¦.", 2);
+		cm.sendNextS("#b#i"+statsSel.getItemId()+"# #z"+statsSel.getItemId()+"##k ì•„ì´í…œì„ ì •ë§ë¡œ ë¶„í•´í• ê¹Œ? ì•„ì´í…œì˜ ì˜µì…˜ì— ìƒê´€ ì—†ì´ ê²°ê³¼ëŠ” ë˜‘ê°™ì´ ë‚˜ì˜¬í…Œê³ , ê²°ê³¼ë¥¼ ë²ˆë³µí•  ìˆœ ì—†ê² ì§€â€¦.", 2);
 		}
 	} else if (status == 4) {
 		var item = statsSel.getItemId();
@@ -126,24 +126,24 @@ function action(mode, type, selection) {
 		var list_150 = list.split(",")[Math.floor(Math.random()*22)];
 		var list_fvr = list_fv.split(",")[Math.floor(Math.random()*22)];
 		setFever(getFever() + gage)
-		var extract = "#b#i"+statsSel.getItemId()+"# #z"+statsSel.getItemId()+"##k ¾ÆÀÌÅÛÀ» ºÐÇØÇÏ¿© ¾Æ·¡ÀÇ °á°ú¹°ÀÌ ³ª¿Ô´Ù.";
-		extract += "\r\n\r\n#e#b¡¡#fs12#¨Û#fs11# #eºÐÇØ ÈÄ ÇÇ¹ö º¸³Ê½º °ÔÀÌÁö : #r"+getFever()+"% #b("+gage+"% »ó½Â)#n#fs12##k";
+		var extract = "#b#i"+statsSel.getItemId()+"# #z"+statsSel.getItemId()+"##k ì•„ì´í…œì„ ë¶„í•´í•˜ì—¬ ì•„ëž˜ì˜ ê²°ê³¼ë¬¼ì´ ë‚˜ì™”ë‹¤.";
+		extract += "\r\n\r\n#e#bã€€#fs12#â“ž#fs11# #eë¶„í•´ í›„ í”¼ë²„ ë³´ë„ˆìŠ¤ ê²Œì´ì§€ : #r"+getFever()+"% #b("+gage+"% ìƒìŠ¹)#n#fs12##k";
 		extract += "\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0#\r\n";
-			extract += "#b#i"+list_85+"# #z"+list_85+"# "+jw_85+"°³\r\n";
+			extract += "#b#i"+list_85+"# #z"+list_85+"# "+jw_85+"ê°œ\r\n";
 			if(ItemInformation.getInstance().getReqLevel(item) >= 105) {
-			extract += "#b#i"+list_105+"# #z"+list_105+"# "+jw_105+"°³\r\n";
+			extract += "#b#i"+list_105+"# #z"+list_105+"# "+jw_105+"ê°œ\r\n";
 			}
 			if(ItemInformation.getInstance().getReqLevel(item) >= 125) {
-			extract += "#b#i"+list_125+"# #z"+list_125+"# "+jw_125+"°³\r\n";
+			extract += "#b#i"+list_125+"# #z"+list_125+"# "+jw_125+"ê°œ\r\n";
 			}
 			if(ItemInformation.getInstance().getReqLevel(item) >= 150) {
-			extract += "#b#i"+list_150+"# #z"+list_150+"# "+jw_150+"°³\r\n";
+			extract += "#b#i"+list_150+"# #z"+list_150+"# "+jw_150+"ê°œ\r\n";
 			}
 			if(ItemInformation.getInstance().getReqLevel(item) >= 105 && chances_hd < 5) {
-			extract += "#b#i4020009# #z4020009# "+chance_hd+"°³\r\n";
+			extract += "#b#i4020009# #z4020009# "+chance_hd+"ê°œ\r\n";
 			}
 			if(ItemInformation.getInstance().getReqLevel(item) >= 140 && chances_hp < 5) {
-			extract += "#b#i4021021# #z4021021# "+chance_hp+"°³\r\n";
+			extract += "#b#i4021021# #z4021021# "+chance_hp+"ê°œ\r\n";
 			}
 
 			cm.gainItem(list_85, jw_85);
@@ -164,8 +164,8 @@ function action(mode, type, selection) {
 			}
 		if (getFever() >= 100) {
 			setFever(0);
-			extract += "\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0# #e#r[ÇÇ¹ö º¸³Ê½º]#k#n\r\n";
-			extract += "#b#i"+list_fvr+"# #z"+list_fvr+"# "+chance_fv+"°³\r\n";
+			extract += "\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0# #e#r[í”¼ë²„ ë³´ë„ˆìŠ¤]#k#n\r\n";
+			extract += "#b#i"+list_fvr+"# #z"+list_fvr+"# "+chance_fv+"ê°œ\r\n";
 			cm.gainItem(list_fvr, chance_fv);		
 		};
 

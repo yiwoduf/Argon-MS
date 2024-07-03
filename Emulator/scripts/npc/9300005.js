@@ -21,17 +21,17 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-	//cm.sendSimple("#fn³ª´®°íµñ Extrabold##fs13# ¾È³çÇÏ¼¼¿ä, Àú´Â ÀÏ¹İ °­È­ ¿£ÇÇ½Ã ÀÔ´Ï´Ù.\r\n#rÈ²±İ´ÜÇ³ÀÙ <6°³ ¼Ò¸ğ>#k#l\r\n#b#L0#¿Ã½ºÅİÀ» °­È­ÇÏ°Ú½À´Ï´Ù.\r\n#L1#°ø ¸¶¸¦ °­È­ÇÏ°Ú½À´Ï´Ù.\r\n");
-        var chat = "#fn³ª´®°íµñ Extrabold##fs13# #r#e" + cm.getPlayer().getName() + "#n#k´Ô ¾È³çÇÏ¼¼¿ä, Àú´Â ¸Ş¼Ò °­È­ ¿£ÇÇ½ÃÀÔ´Ï´Ù.#l\r\n";
-        chat += "#b#L0#¿Ã½ºÅİÀ» °­È­ÇÏ°Ú½À´Ï´Ù.#k#l\r\n";
-        chat += "#b#L1#°ø°İ·Â/¸¶·ÂÀ» °­È­ ÇÏ°Ú½À´Ï´Ù.#k#l\r\n";
+	//cm.sendSimple("#fnë‚˜ëˆ”ê³ ë”• Extrabold##fs13# ì•ˆë…•í•˜ì„¸ìš”, ì €ëŠ” ì¼ë°˜ ê°•í™” ì—”í”¼ì‹œ ì…ë‹ˆë‹¤.\r\n#rí™©ê¸ˆë‹¨í’ì <6ê°œ ì†Œëª¨>#k#l\r\n#b#L0#ì˜¬ìŠ¤í…Ÿì„ ê°•í™”í•˜ê² ìŠµë‹ˆë‹¤.\r\n#L1#ê³µ ë§ˆë¥¼ ê°•í™”í•˜ê² ìŠµë‹ˆë‹¤.\r\n");
+        var chat = "#fnë‚˜ëˆ”ê³ ë”• Extrabold##fs13# #r#e" + cm.getPlayer().getName() + "#n#kë‹˜ ì•ˆë…•í•˜ì„¸ìš”, ì €ëŠ” ë©”ì†Œ ê°•í™” ì—”í”¼ì‹œì…ë‹ˆë‹¤.#l\r\n";
+        chat += "#b#L0#ì˜¬ìŠ¤í…Ÿì„ ê°•í™”í•˜ê² ìŠµë‹ˆë‹¤.#k#l\r\n";
+        chat += "#b#L1#ê³µê²©ë ¥/ë§ˆë ¥ì„ ê°•í™” í•˜ê² ìŠµë‹ˆë‹¤.#k#l\r\n";
         
         cm.sendSimple(chat);
     } else if (status == 1) {
         slot = selection;
-        sel = selection == 0 ? "¿Ã½ºÅİ" : "°ø°İ·Â/¸¶·Â";
+        sel = selection == 0 ? "ì˜¬ìŠ¤í…Ÿ" : "ê³µê²©ë ¥/ë§ˆë ¥";
         var itemid = 0;
-        text = "#b#e"+sel+"#fn³ª´®°íµñ Extrabold##fs13# °­È­#n#k¸¦ ¼±ÅÃ ÇÏ¼Ë½À´Ï´Ù.\r\n°­È­ÇÒ ¾ÆÀÌÅÛÀ» ¼±ÅÃ ÇØ ÁÖ¼¼¿ä.\r\n";
+        text = "#b#e"+sel+"#fnë‚˜ëˆ”ê³ ë”• Extrabold##fs13# ê°•í™”#n#kë¥¼ ì„ íƒ í•˜ì…§ìŠµë‹ˆë‹¤.\r\nê°•í™”í•  ì•„ì´í…œì„ ì„ íƒ í•´ ì£¼ì„¸ìš”.\r\n";
         for (i = 0; i < 101; i++) {
             if (cm.getEquip(i)) {
                 itemid = cm.getEquip(i).getItemId();
@@ -43,17 +43,17 @@ function action(mode, type, selection) {
         eq = cm.getEquip(selection);
         state = owner(eq);
         if (cm.getPlayer().getMeso() < meso(eq)) {
-            cm.sendOk("#fn³ª´®°íµñ Extrabold##fs13# °­È­¿¡ ÇÊ¿äÇÑ ¸Ş¼Ò°¡ ºÎÁ·ÇÕ´Ï´Ù.\r\n(ÇÊ¿äÇÑ ¸Ş¼ÒÀÇ ¾ç : "+meso(eq)+")");
+            cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• Extrabold##fs13# ê°•í™”ì— í•„ìš”í•œ ë©”ì†Œê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.\r\n(í•„ìš”í•œ ë©”ì†Œì˜ ì–‘ : "+meso(eq)+")");
             cm.dispose();
             return;
         }
         
         if (check(eq)) {
-            cm.sendYesNo("#fn³ª´®°íµñ Extrabold##fs13# ÇöÀç °­È­ »óÅÂ : #b"+state+"#k\r\n¼±ÅÃÇÑ ½ºÅÈ : "+sel+"\r\n´ÙÀ½ °­È­·Î ¿Ã¶ó°¥¶§ ½ÇÆĞÈ®·üÀº 40%¸ç ¼öÄ¡´Â °­È­È½¼ö¿¡ µû¶ó ÁÖ¾îÁı´Ï´Ù.\r\n°­È­¸¦ ÁøÇà ÇÏ½Ã°Ú½À´Ï±î?");
+            cm.sendYesNo("#fnë‚˜ëˆ”ê³ ë”• Extrabold##fs13# í˜„ì¬ ê°•í™” ìƒíƒœ : #b"+state+"#k\r\nì„ íƒí•œ ìŠ¤íƒ¯ : "+sel+"\r\në‹¤ìŒ ê°•í™”ë¡œ ì˜¬ë¼ê°ˆë•Œ ì‹¤íŒ¨í™•ë¥ ì€ 40%ë©° ìˆ˜ì¹˜ëŠ” ê°•í™”íšŸìˆ˜ì— ë”°ë¼ ì£¼ì–´ì§‘ë‹ˆë‹¤.\r\nê°•í™”ë¥¼ ì§„í–‰ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
         }
     } else if (status == 3) {
         if (Randomizer.isSuccess(40)) {
-            cm.sendOk("#fn³ª´®°íµñ Extrabold##fs13# ¾ÆÀÌÅÛ °­È­¿¡ ½ÇÆĞ ÇÏ¿´½À´Ï´Ù.");
+            cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• Extrabold##fs13# ì•„ì´í…œ ê°•í™”ì— ì‹¤íŒ¨ í•˜ì˜€ìŠµë‹ˆë‹¤.");
             cm.gainMeso(-meso(eq));
             cm.dispose();
             return;
@@ -62,14 +62,14 @@ function action(mode, type, selection) {
         level = level(eq);
         cm.gainMeso(-meso(eq));
         eq.setOwner(level);
-        if (sel.equals("¿Ã½ºÅİ")) {
+        if (sel.equals("ì˜¬ìŠ¤í…Ÿ")) {
             eq.setStr(eq.getStr() + amount);
             eq.setDex(eq.getDex() + amount);
             eq.setInt(eq.getInt() + amount);
             eq.setLuk(eq.getLuk() + amount);
             cm.fakeRelog();
             cm.updateChar();
-            cm.sendOk("°­È­¿¡ ¼º°øÇÏ¿© ¿Ã½ºÅİ "+amount+"ÀÌ Ãß°¡µÇ°í "+level+" ÀÌ µÇ¾ú½À´Ï´Ù.");
+            cm.sendOk("ê°•í™”ì— ì„±ê³µí•˜ì—¬ ì˜¬ìŠ¤í…Ÿ "+amount+"ì´ ì¶”ê°€ë˜ê³  "+level+" ì´ ë˜ì—ˆìŠµë‹ˆë‹¤.");
             cm.dispose();
             return;
         } else {
@@ -77,7 +77,7 @@ function action(mode, type, selection) {
             eq.setWatk(eq.getWatk() + amount);
 	    cm.fakeRelog();
 	    cm.updateChar();
-	    cm.sendOk("°­È­¿¡ ¼º°øÇÏ¿© °ø¸¶ "+amount+" ÀÌ Ãß°¡µÇ°í "+level+" ÀÌ µÇ¾ú½À´Ï´Ù."); 
+	    cm.sendOk("ê°•í™”ì— ì„±ê³µí•˜ì—¬ ê³µë§ˆ "+amount+" ì´ ì¶”ê°€ë˜ê³  "+level+" ì´ ë˜ì—ˆìŠµë‹ˆë‹¤."); 
             cm.dispose();
             return;
         }
@@ -86,64 +86,64 @@ function action(mode, type, selection) {
 
 function level(eq) {
     var lev;
-    if (eq.getOwner().equals("1°­")) {
-        lev = "2°­";
-    } else if (eq.getOwner().equals("2°­")) {
-        lev = "3°­";
-    } else if (eq.getOwner().equals("3°­")) {
-        lev = "4°­";
-    } else if (eq.getOwner().equals("4°­")) {
-        lev = "5°­";
-    } else if (eq.getOwner().equals("5°­")) {
-        lev = "6°­";
-    } else if (eq.getOwner().equals("6°­")) {
-        lev = "7°­";
-    } else if (eq.getOwner().equals("7°­")) {
-        lev = "8°­";
-    } else if (eq.getOwner().equals("8°­")) {
-        lev = "9°­";
-    } else if (eq.getOwner().equals("9°­")) {
-        lev = "10°­";
+    if (eq.getOwner().equals("1ê°•")) {
+        lev = "2ê°•";
+    } else if (eq.getOwner().equals("2ê°•")) {
+        lev = "3ê°•";
+    } else if (eq.getOwner().equals("3ê°•")) {
+        lev = "4ê°•";
+    } else if (eq.getOwner().equals("4ê°•")) {
+        lev = "5ê°•";
+    } else if (eq.getOwner().equals("5ê°•")) {
+        lev = "6ê°•";
+    } else if (eq.getOwner().equals("6ê°•")) {
+        lev = "7ê°•";
+    } else if (eq.getOwner().equals("7ê°•")) {
+        lev = "8ê°•";
+    } else if (eq.getOwner().equals("8ê°•")) {
+        lev = "9ê°•";
+    } else if (eq.getOwner().equals("9ê°•")) {
+        lev = "10ê°•";
     } else {
-        lev = "1°­";
+        lev = "1ê°•";
     }
     return lev;
 }
 
 function stat(eq, sel) {
     var stat;
-	if(eq.getOwner().equals("1°­")) { // 1°­ - 2°­ ³Ñ¾î°¥¶§ ½ºÅİ
-		stat = sel == "¿Ã½ºÅİ" ? Randomizer.rand(8, 50) : Randomizer.rand(15, 15);
-	} else if(eq.getOwner().equals("2°­")) { // 2°­ - 3°­ ³Ñ¾î°¥¶§ ½ºÅİ
-		stat = sel == "¿Ã½ºÅİ" ? Randomizer.rand(8, 50) : Randomizer.rand(20, 20);	
-	} else if(eq.getOwner().equals("3°­")) { // 3°­ - 4°­ ³Ñ¾î°¥¶§ ½ºÅİ
-		stat = sel == "¿Ã½ºÅİ" ? Randomizer.rand(8, 50) : Randomizer.rand(25, 25);	
-	} else if(eq.getOwner().equals("4°­")) { // 4°­ - 5°­ ³Ñ¾î°¥¶§ ½ºÅİ
-		stat = sel == "¿Ã½ºÅİ" ? Randomizer.rand(8, 50) : Randomizer.rand(30, 30);	
-	} else if(eq.getOwner().equals("5°­")) { // 5°­ - 6°­ ³Ñ¾î°¥¶§ ½ºÅİ
-		stat = sel == "¿Ã½ºÅİ" ? Randomizer.rand(8, 50) : Randomizer.rand(35, 35);	
-	} else if(eq.getOwner().equals("6°­")) { // 6°­ - 7°­ ³Ñ¾î°¥¶§ ½ºÅİ
-		stat = sel == "¿Ã½ºÅİ" ? Randomizer.rand(8, 50) : Randomizer.rand(40, 40);	
-        } else if(eq.getOwner().equals("7°­")) { // 6°­ - 7°­ ³Ñ¾î°¥¶§ ½ºÅİ
-		stat = sel == "¿Ã½ºÅİ" ? Randomizer.rand(8, 50) : Randomizer.rand(45, 45);	
-        } else if(eq.getOwner().equals("8°­")) { // 6°­ - 7°­ ³Ñ¾î°¥¶§ ½ºÅİ
-		stat = sel == "¿Ã½ºÅİ" ? Randomizer.rand(8, 50) : Randomizer.rand(50, 50);	
-        } else if(eq.getOwner().equals("9°­")) { // 6°­ - 7°­ ³Ñ¾î°¥¶§ ½ºÅİ
-		stat = sel == "¿Ã½ºÅİ" ? Randomizer.rand(8, 50) : Randomizer.rand(60, 60);	         
-	} else { // 1°­À¸·Î °¥¶§ ½ºÅİ
-		stat = sel == "¿Ã½ºÅİ" ? Randomizer.rand(8, 50) : Randomizer.rand(10, 10);	
+	if(eq.getOwner().equals("1ê°•")) { // 1ê°• - 2ê°• ë„˜ì–´ê°ˆë•Œ ìŠ¤í…Ÿ
+		stat = sel == "ì˜¬ìŠ¤í…Ÿ" ? Randomizer.rand(8, 50) : Randomizer.rand(15, 15);
+	} else if(eq.getOwner().equals("2ê°•")) { // 2ê°• - 3ê°• ë„˜ì–´ê°ˆë•Œ ìŠ¤í…Ÿ
+		stat = sel == "ì˜¬ìŠ¤í…Ÿ" ? Randomizer.rand(8, 50) : Randomizer.rand(20, 20);	
+	} else if(eq.getOwner().equals("3ê°•")) { // 3ê°• - 4ê°• ë„˜ì–´ê°ˆë•Œ ìŠ¤í…Ÿ
+		stat = sel == "ì˜¬ìŠ¤í…Ÿ" ? Randomizer.rand(8, 50) : Randomizer.rand(25, 25);	
+	} else if(eq.getOwner().equals("4ê°•")) { // 4ê°• - 5ê°• ë„˜ì–´ê°ˆë•Œ ìŠ¤í…Ÿ
+		stat = sel == "ì˜¬ìŠ¤í…Ÿ" ? Randomizer.rand(8, 50) : Randomizer.rand(30, 30);	
+	} else if(eq.getOwner().equals("5ê°•")) { // 5ê°• - 6ê°• ë„˜ì–´ê°ˆë•Œ ìŠ¤í…Ÿ
+		stat = sel == "ì˜¬ìŠ¤í…Ÿ" ? Randomizer.rand(8, 50) : Randomizer.rand(35, 35);	
+	} else if(eq.getOwner().equals("6ê°•")) { // 6ê°• - 7ê°• ë„˜ì–´ê°ˆë•Œ ìŠ¤í…Ÿ
+		stat = sel == "ì˜¬ìŠ¤í…Ÿ" ? Randomizer.rand(8, 50) : Randomizer.rand(40, 40);	
+        } else if(eq.getOwner().equals("7ê°•")) { // 6ê°• - 7ê°• ë„˜ì–´ê°ˆë•Œ ìŠ¤í…Ÿ
+		stat = sel == "ì˜¬ìŠ¤í…Ÿ" ? Randomizer.rand(8, 50) : Randomizer.rand(45, 45);	
+        } else if(eq.getOwner().equals("8ê°•")) { // 6ê°• - 7ê°• ë„˜ì–´ê°ˆë•Œ ìŠ¤í…Ÿ
+		stat = sel == "ì˜¬ìŠ¤í…Ÿ" ? Randomizer.rand(8, 50) : Randomizer.rand(50, 50);	
+        } else if(eq.getOwner().equals("9ê°•")) { // 6ê°• - 7ê°• ë„˜ì–´ê°ˆë•Œ ìŠ¤í…Ÿ
+		stat = sel == "ì˜¬ìŠ¤í…Ÿ" ? Randomizer.rand(8, 50) : Randomizer.rand(60, 60);	         
+	} else { // 1ê°•ìœ¼ë¡œ ê°ˆë•Œ ìŠ¤í…Ÿ
+		stat = sel == "ì˜¬ìŠ¤í…Ÿ" ? Randomizer.rand(8, 50) : Randomizer.rand(10, 10);	
 	}
 	return stat;		
 }
 
 function check(eq) {
-    if (eq.getOwner().equals("1¡Ú")) {
-        cm.sendOk("#fn³ª´®°íµñ Extrabold##fs13# ÇØ´ç¾ÆÀÌÅÛÀº È²±İ ´ÜÇ³ÀÙ °­È­¸¦ ÁøÇàÇÏ¿© ¸Ş¼Ò °­È­¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+    if (eq.getOwner().equals("1â˜…")) {
+        cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• Extrabold##fs13# í•´ë‹¹ì•„ì´í…œì€ í™©ê¸ˆ ë‹¨í’ì ê°•í™”ë¥¼ ì§„í–‰í•˜ì—¬ ë©”ì†Œ ê°•í™”ë¥¼ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
         cm.dispose();
         return;
     }
-    if (eq.getOwner().equals("10°­")) {
-        cm.sendOk("#fn³ª´®°íµñ Extrabold##fs13# ÇØ´ç ¾ÆÀÌÅÛÀº °­È­¸¦ ´õÀÌ»ó ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+    if (eq.getOwner().equals("10ê°•")) {
+        cm.sendOk("#fnë‚˜ëˆ”ê³ ë”• Extrabold##fs13# í•´ë‹¹ ì•„ì´í…œì€ ê°•í™”ë¥¼ ë”ì´ìƒ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
         cm.dispose();
         return;
     }
@@ -152,23 +152,23 @@ function check(eq) {
 
 function meso (eq) {
     var meso;
-    if (eq.getOwner().equals("1°­")) {
+    if (eq.getOwner().equals("1ê°•")) {
         meso = 10000000;
-    } else if (eq.getOwner().equals("2°­")) {
+    } else if (eq.getOwner().equals("2ê°•")) {
         meso = 15000000;
-    } else if (eq.getOwner().equals("3°­")) {
+    } else if (eq.getOwner().equals("3ê°•")) {
         meso = 30000000;
-    } else if (eq.getOwner().equals("4°­")) {
+    } else if (eq.getOwner().equals("4ê°•")) {
         meso = 50000000;
-    } else if (eq.getOwner().equals("5°­")) {
+    } else if (eq.getOwner().equals("5ê°•")) {
         meso = 100000000;
-    } else if (eq.getOwner().equals("6°­")) {
+    } else if (eq.getOwner().equals("6ê°•")) {
         meso = 200000000;
-    } else if (eq.getOwner().equals("7°­")) {
+    } else if (eq.getOwner().equals("7ê°•")) {
         meso = 300000000;
-    } else if (eq.getOwner().equals("8°­")) {
+    } else if (eq.getOwner().equals("8ê°•")) {
         meso = 500000000;
-    } else if (eq.getOwner().equals("9°­")) {
+    } else if (eq.getOwner().equals("9ê°•")) {
         meso = 1000000000;
     } else {
         meso = 10000000;
@@ -178,12 +178,12 @@ function meso (eq) {
 
 function owner(eq) {
     for(i = 1; i < 7; i++) {
-        if(eq.getOwner().equals(i+"°­")) {
+        if(eq.getOwner().equals(i+"ê°•")) {
            return eq.getOwner();
 	}
     } 
     
     if(state == null) {
-        return "#r°­È­¾ÈÇÔ#k";
+        return "#rê°•í™”ì•ˆí•¨#k";
     }
 }

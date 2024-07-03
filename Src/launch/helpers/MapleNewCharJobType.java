@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -11,33 +11,33 @@ package launch.helpers;
 
 /**
  *
- * @author ½ºÆäÀÌ½º
+ * @author ìŠ¤í˜ì´ìŠ¤
  * 
- *   This file was written by ½ºÆäÀÌ½º (bound8@naver.com)
+ *   This file was written by ìŠ¤í˜ì´ìŠ¤ (bound8@naver.com)
  *
  *
  *
  */
 public enum MapleNewCharJobType {
-    ·¹Áö½ºÅÁ½º((byte) 0),
-    ¸ğÇè°¡((byte) 1),
-    ½Ã±×³Ê½º((byte) 2),
-    ¾Æ¶õ((byte) 3),
-    ¿¡¹İ((byte) 4),
-    ¸Ş¸£¼¼µ¥½º((byte) 5),
-    µ¥¸ó½½·¹ÀÌ¾î((byte) 6),
-    ÆÒÅÒ((byte) 7),
-    µà¾óºí·¹ÀÌ´õ((byte) 8),
-    ¹ÌÇÏÀÏ((byte) 9),
-    ·ç¹Ì³Ê½º((byte) 10),
-    Ä«ÀÌÀú((byte) 11),
-    ¿£Á©¸¯¹ö½ºÅÍ((byte) 12),
-    Ä³³í½´ÅÍ((byte) 13),
-    Á¦³í((byte) 14),
-    Á¦·Î((byte) 15),
-    Àº¿ù((byte) 16),
-    ÇÎÅ©ºó((byte) 17),
-    Å°³×½Ã½º((byte) 18);
+    ë ˆì§€ìŠ¤íƒ•ìŠ¤((byte) 0),
+    ëª¨í—˜ê°€((byte) 1),
+    ì‹œê·¸ë„ˆìŠ¤((byte) 2),
+    ì•„ë€((byte) 3),
+    ì—ë°˜((byte) 4),
+    ë©”ë¥´ì„¸ë°ìŠ¤((byte) 5),
+    ë°ëª¬ìŠ¬ë ˆì´ì–´((byte) 6),
+    íŒ¬í…€((byte) 7),
+    ë“€ì–¼ë¸”ë ˆì´ë”((byte) 8),
+    ë¯¸í•˜ì¼((byte) 9),
+    ë£¨ë¯¸ë„ˆìŠ¤((byte) 10),
+    ì¹´ì´ì €((byte) 11),
+    ì—”ì ¤ë¦­ë²„ìŠ¤í„°((byte) 12),
+    ìºë…¼ìŠˆí„°((byte) 13),
+    ì œë…¼((byte) 14),
+    ì œë¡œ((byte) 15),
+    ì€ì›”((byte) 16),
+    í•‘í¬ë¹ˆ((byte) 17),
+    í‚¤ë„¤ì‹œìŠ¤((byte) 18);
     private byte jobCode = -1;
     
     private MapleNewCharJobType(byte type) {

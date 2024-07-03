@@ -1,6 +1,6 @@
 
 /*
-Á¦ÀÛÀÚ : Å¸ÀÓ (time_amd@nate.com)
+ì œì‘ì : íƒ€ì„ (time_amd@nate.com)
 */
 
 importPackage(Packages.client.items);
@@ -28,71 +28,71 @@ function action(mode, type, selection) {
     if (status == 0) {
         var leftslot = cm.getPlayer().getInventory(MapleInventoryType.ETC).getNumFreeSlot();
         if (leftslot < 1) {
-            cm.sendOk("±âÅ¸Ã¢ ÀÎº¥Åä¸®¸¦ 1Ä­ ºñ¿öÁÖ¼¼¿ä.");
+            cm.sendOk("ê¸°íƒ€ì°½ ì¸ë²¤í† ë¦¬ë¥¼ 1ì¹¸ ë¹„ì›Œì£¼ì„¸ìš”.");
             cm.dispose();
             return;
         }
 	ran = Randomizer.rand(300,300);
         if (Randomizer.nextInt(300) <= 50) {
-            cm.sendOk("#i4440300# #b#z4440300##kÀÌ ³ª¿Ô½À´Ï´Ù. \r\n#rB±Ş Áê¾ó#kÀ» ³ë·Áº¸¼¼¿ä !");
+            cm.sendOk("#i4440300# #b#z4440300##kì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \r\n#rBê¸‰ ì¥¬ì–¼#kì„ ë…¸ë ¤ë³´ì„¸ìš” !");
             cm.gainItem(4440300, 1);
         } else if (Randomizer.nextInt(300) <= 50) {
-            cm.sendOk("#i4441300# #b#z4441300##kÀÌ ³ª¿Ô½À´Ï´Ù. \r\n#rB±Ş Áê¾ó#kÀ» ³ë·Áº¸¼¼¿ä !");
+            cm.sendOk("#i4441300# #b#z4441300##kì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \r\n#rBê¸‰ ì¥¬ì–¼#kì„ ë…¸ë ¤ë³´ì„¸ìš” !");
             cm.gainItem(4441300, 1);
         } else if (Randomizer.nextInt(300) <= 50) {
-            cm.sendOk("#i4442300# #b#z4442300##kÀÌ ³ª¿Ô½À´Ï´Ù. \r\n#rB±Ş Áê¾ó#kÀ» ³ë·Áº¸¼¼¿ä !");
+            cm.sendOk("#i4442300# #b#z4442300##kì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \r\n#rBê¸‰ ì¥¬ì–¼#kì„ ë…¸ë ¤ë³´ì„¸ìš” !");
             cm.gainItem(4442300, 1);
         } else if (Randomizer.nextInt(300) <= 50) {
-            cm.sendOk("#i4443300# #b#z4443300##kÀÌ ³ª¿Ô½À´Ï´Ù. \r\n#rB±Ş Áê¾ó#kÀ» ³ë·Áº¸¼¼¿ä !");
-            cm.gainItem(4443300, 1); // C±Ş ³¡
+            cm.sendOk("#i4443300# #b#z4443300##kì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \r\n#rBê¸‰ ì¥¬ì–¼#kì„ ë…¸ë ¤ë³´ì„¸ìš” !");
+            cm.gainItem(4443300, 1); // Cê¸‰ ë
 	} else if (Randomizer.nextInt(300) <= 30) {  
-            cm.sendOk("#i1112762# #b#z1112762##kÀÌ ³ª¿Ô½À´Ï´Ù. \r\n±¦ÂúÀºµ¥¿ä?!");
+            cm.sendOk("#i1112762# #b#z1112762##kì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \r\nê´œì°®ì€ë°ìš”?!");
             cm.gainItem(1112762, 1);
 	} else if (Randomizer.nextInt(300) <= 30) {
-            cm.sendOk("#i1132191# #b#z1132191##kÀÌ ³ª¿Ô½À´Ï´Ù. \r\n±¦ÂúÀºµ¥¿ä?!");
+            cm.sendOk("#i1132191# #b#z1132191##kì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \r\nê´œì°®ì€ë°ìš”?!");
             cm.gainItem(1132191, 1);
 	} else if (Randomizer.nextInt(300) <= 25) {  
-            cm.sendOk("#i4440200# #b#z4440200##kÀÌ ³ª¿Ô½À´Ï´Ù. \r\n±¦ÂúÀºµ¥¿ä? #rA±Ş Áê¾ó#kÀ» ³ë·Áº¸¼¼¿ä !");
+            cm.sendOk("#i4440200# #b#z4440200##kì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \r\nê´œì°®ì€ë°ìš”? #rAê¸‰ ì¥¬ì–¼#kì„ ë…¸ë ¤ë³´ì„¸ìš” !");
             cm.gainItem(4440200, 1);
 	} else if (Randomizer.nextInt(300) <= 25) {
-            cm.sendOk("#i4441200# #b#z4441200##kÀÌ ³ª¿Ô½À´Ï´Ù. \r\n±¦ÂúÀºµ¥¿ä? #rA±Ş Áê¾ó#kÀ» ³ë·Áº¸¼¼¿ä !");
+            cm.sendOk("#i4441200# #b#z4441200##kì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \r\nê´œì°®ì€ë°ìš”? #rAê¸‰ ì¥¬ì–¼#kì„ ë…¸ë ¤ë³´ì„¸ìš” !");
             cm.gainItem(4441200, 1);
 	} else if (Randomizer.nextInt(300) <= 25) {
-            cm.sendOk("#i4442200# #b#z4442200##kÀÌ ³ª¿Ô½À´Ï´Ù. \r\n±¦ÂúÀºµ¥¿ä? #rA±Ş Áê¾ó#kÀ» ³ë·Áº¸¼¼¿ä !");
+            cm.sendOk("#i4442200# #b#z4442200##kì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \r\nê´œì°®ì€ë°ìš”? #rAê¸‰ ì¥¬ì–¼#kì„ ë…¸ë ¤ë³´ì„¸ìš” !");
             cm.gainItem(4442200, 1);
 	} else if (Randomizer.nextInt(300) <= 25) {
-            cm.sendOk("#i4443200# #b#z4443200##kÀÌ ³ª¿Ô½À´Ï´Ù. \r\n±¦ÂúÀºµ¥¿ä? #rA±Ş Áê¾ó#kÀ» ³ë·Áº¸¼¼¿ä !"); 
-            cm.gainItem(4443200, 1); // B±Ş ³¡
+            cm.sendOk("#i4443200# #b#z4443200##kì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \r\nê´œì°®ì€ë°ìš”? #rAê¸‰ ì¥¬ì–¼#kì„ ë…¸ë ¤ë³´ì„¸ìš” !"); 
+            cm.gainItem(4443200, 1); // Bê¸‰ ë
 	} else if (Randomizer.nextInt(300) <= 20) {
-            cm.sendOk("#i4440100# #b#z4440100##kÀÌ ³ª¿Ô½À´Ï´Ù. \r\nÁ¤¸»ÁÁ¾Æ¿ä ! ±×·¸Áö¸¸  #rS±Ş Áê¾ó#kÀ» ÇâÇØ !");
+            cm.sendOk("#i4440100# #b#z4440100##kì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \r\nì •ë§ì¢‹ì•„ìš” ! ê·¸ë ‡ì§€ë§Œ  #rSê¸‰ ì¥¬ì–¼#kì„ í–¥í•´ !");
             cm.gainItem(4440100, 1); 
 	} else if (Randomizer.nextInt(300) <= 20) {
-            cm.sendOk("#i4441100# #b#z4441100##kÀÌ ³ª¿Ô½À´Ï´Ù. \r\nÁ¤¸»ÁÁ¾Æ¿ä ! ±×·¸Áö¸¸  #rS±Ş Áê¾ó#kÀ» ÇâÇØ !");
+            cm.sendOk("#i4441100# #b#z4441100##kì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \r\nì •ë§ì¢‹ì•„ìš” ! ê·¸ë ‡ì§€ë§Œ  #rSê¸‰ ì¥¬ì–¼#kì„ í–¥í•´ !");
             cm.gainItem(4441100, 1); 
 	} else if (Randomizer.nextInt(300) <= 20) {
-            cm.sendOk("#i4442100# #b#z4442100##kÀÌ ³ª¿Ô½À´Ï´Ù. \r\nÁ¤¸»ÁÁ¾Æ¿ä ! ±×·¸Áö¸¸  #rS±Ş Áê¾ó#kÀ» ÇâÇØ !");
+            cm.sendOk("#i4442100# #b#z4442100##kì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \r\nì •ë§ì¢‹ì•„ìš” ! ê·¸ë ‡ì§€ë§Œ  #rSê¸‰ ì¥¬ì–¼#kì„ í–¥í•´ !");
             cm.gainItem(4442100, 1); 
 	} else if (Randomizer.nextInt(300) <= 20) {
-	    cm.sendOk("#i4443100# #b#z4443100##kÀÌ ³ª¿Ô½À´Ï´Ù. \r\nÁ¤¸»ÁÁ¾Æ¿ä ! ±×·¸Áö¸¸  #rS±Ş Áê¾ó#kÀ» ÇâÇØ !");
+	    cm.sendOk("#i4443100# #b#z4443100##kì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \r\nì •ë§ì¢‹ì•„ìš” ! ê·¸ë ‡ì§€ë§Œ  #rSê¸‰ ì¥¬ì–¼#kì„ í–¥í•´ !");
             cm.gainItem(4443100, 1); 
 	} else if (Randomizer.nextInt(300) <= 3) {
-	    cm.sendOk("#i4440000# #b#z4440000##kÀÌ ³ª¿Ô½À´Ï´Ù. \r\nÁ¤¸» ÃàÇÏµå·Á¿ä ´ç½ÅÀº #b·°Å°#k°¡ÀÌ!");
-	    WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[TIME] "+cm.getPlayer().getName()+"´ÔÀÌ [½ÅºñÇÑ º¸¼®ÇÔ]¿¡¼­ S±Ş ÈûÀÇ Áê¾óÀ» È¹µæ ÇÏ¼Ì½À´Ï´Ù. ´Ùµé ÃàÇÏÇØ ÁÖ¼¼¿ä!"));
+	    cm.sendOk("#i4440000# #b#z4440000##kì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \r\nì •ë§ ì¶•í•˜ë“œë ¤ìš” ë‹¹ì‹ ì€ #bëŸ­í‚¤#kê°€ì´!");
+	    WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[TIME] "+cm.getPlayer().getName()+"ë‹˜ì´ [ì‹ ë¹„í•œ ë³´ì„í•¨]ì—ì„œ Sê¸‰ í˜ì˜ ì¥¬ì–¼ì„ íšë“ í•˜ì…¨ìŠµë‹ˆë‹¤. ë‹¤ë“¤ ì¶•í•˜í•´ ì£¼ì„¸ìš”!"));
             cm.gainItem(4440000, 1); 
 	} else if (Randomizer.nextInt(300) <= 3) {
-            cm.sendOk("#i4441000# #b#z4441000##kÀÌ ³ª¿Ô½À´Ï´Ù. \r\nÁ¤¸» ÃàÇÏµå·Á¿ä ´ç½ÅÀº #b·°Å°#k°¡ÀÌ!");
-            WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[TIME] "+cm.getPlayer().getName()+"´ÔÀÌ [½ÅºñÇÑ º¸¼®ÇÔ]¿¡¼­ S±Ş Çà¿îÀÇ Áê¾óÀ» È¹µæ ÇÏ¼Ì½À´Ï´Ù. ´Ùµé ÃàÇÏÇØ ÁÖ¼¼¿ä!"));
+            cm.sendOk("#i4441000# #b#z4441000##kì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \r\nì •ë§ ì¶•í•˜ë“œë ¤ìš” ë‹¹ì‹ ì€ #bëŸ­í‚¤#kê°€ì´!");
+            WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[TIME] "+cm.getPlayer().getName()+"ë‹˜ì´ [ì‹ ë¹„í•œ ë³´ì„í•¨]ì—ì„œ Sê¸‰ í–‰ìš´ì˜ ì¥¬ì–¼ì„ íšë“ í•˜ì…¨ìŠµë‹ˆë‹¤. ë‹¤ë“¤ ì¶•í•˜í•´ ì£¼ì„¸ìš”!"));
 	    cm.gainItem(4441000, 1); 
 	} else if (Randomizer.nextInt(300) <= 3) {
-            cm.sendOk("#i4442000# #b#z4442000##kÀÌ ³ª¿Ô½À´Ï´Ù. \r\nÁ¤¸» ÃàÇÏµå·Á¿ä ´ç½ÅÀº #b·°Å°#k°¡ÀÌ!"); 
-            WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[TIME] "+cm.getPlayer().getName()+"´ÔÀÌ [½ÅºñÇÑ º¸¼®ÇÔ]¿¡¼­ S±Ş ÁöÇıÀÇ Áê¾óÀ» È¹µæ ÇÏ¼Ì½À´Ï´Ù. ´Ùµé ÃàÇÏÇØ ÁÖ¼¼¿ä!"));
+            cm.sendOk("#i4442000# #b#z4442000##kì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \r\nì •ë§ ì¶•í•˜ë“œë ¤ìš” ë‹¹ì‹ ì€ #bëŸ­í‚¤#kê°€ì´!"); 
+            WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[TIME] "+cm.getPlayer().getName()+"ë‹˜ì´ [ì‹ ë¹„í•œ ë³´ì„í•¨]ì—ì„œ Sê¸‰ ì§€í˜œì˜ ì¥¬ì–¼ì„ íšë“ í•˜ì…¨ìŠµë‹ˆë‹¤. ë‹¤ë“¤ ì¶•í•˜í•´ ì£¼ì„¸ìš”!"));
 cm.gainItem(4442000, 1); 
 	} else if (Randomizer.nextInt(300) <= 3) {
-            cm.sendOk("#i4443000# #b#z4443000##kÀÌ ³ª¿Ô½À´Ï´Ù. \r\nÁ¤¸» ÃàÇÏµå·Á¿ä ´ç½ÅÀº #b·°Å°#k°¡ÀÌ!");
-            WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[TIME] "+cm.getPlayer().getName()+"´ÔÀÌ [½ÅºñÇÑ º¸¼®ÇÔ]¿¡¼­ S±Ş ¹ÎÃ¸ÇÔÀÇ Áê¾óÀ» È¹µæ ÇÏ¼Ì½À´Ï´Ù. ´Ùµé ÃàÇÏÇØ ÁÖ¼¼¿ä!"));
-cm.gainItem(4443000, 1); // S±Ş ³¡
+            cm.sendOk("#i4443000# #b#z4443000##kì´ ë‚˜ì™”ìŠµë‹ˆë‹¤. \r\nì •ë§ ì¶•í•˜ë“œë ¤ìš” ë‹¹ì‹ ì€ #bëŸ­í‚¤#kê°€ì´!");
+            WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[TIME] "+cm.getPlayer().getName()+"ë‹˜ì´ [ì‹ ë¹„í•œ ë³´ì„í•¨]ì—ì„œ Sê¸‰ ë¯¼ì²©í•¨ì˜ ì¥¬ì–¼ì„ íšë“ í•˜ì…¨ìŠµë‹ˆë‹¤. ë‹¤ë“¤ ì¶•í•˜í•´ ì£¼ì„¸ìš”!"));
+cm.gainItem(4443000, 1); // Sê¸‰ ë
 	} else {
-	    cm.sendOk("¾ÈÅ¸±õÁö¸¸ #r²Î#k ! ´ÙÀ½±âÈ¸¿¡....");
+	    cm.sendOk("ì•ˆíƒ€ê¹ì§€ë§Œ #rê½#k ! ë‹¤ìŒê¸°íšŒì—....");
 }
 	cm.gainItem(2431042, -1);
         cm.dispose();

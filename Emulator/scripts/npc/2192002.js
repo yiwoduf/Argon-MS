@@ -30,10 +30,10 @@ function action(M, T, S)
 
 	if(St == 0)
 	{
-		cm.sendSimple("#b\r\n#L"+LEVEL_RANK+"#·¹º§ ·©Å· È®ÀÎ ÇÏ±â (³» ¼øÀ§ : "+getMYLevelRank(getIdByName(cm.getPlayer().getName()))+"À§)"
-			+ "\r\n#L"+REBORN_RANK+"#È¯»ı ·©Å· È®ÀÎ ÇÏ±â (³» ¼øÀ§ : "+getMYRebornsRank(getIdByName(cm.getPlayer().getName()))+"À§)"
-			+ "\r\n#L"+MESO_RANK+"#¸Ş¼Ò ·©Å· È®ÀÎ ÇÏ±â (³» ¼øÀ§ : "+getMYMesoRank(getIdByName(cm.getPlayer().getName()))+"À§)"
-			+ "\r\n\r\n#r#L"+SEARCH_RANK+"#Á¾ÇÕ ·©Å· È®ÀÎ ÇÏ±â");
+		cm.sendSimple("#b\r\n#L"+LEVEL_RANK+"#ë ˆë²¨ ë­í‚¹ í™•ì¸ í•˜ê¸° (ë‚´ ìˆœìœ„ : "+getMYLevelRank(getIdByName(cm.getPlayer().getName()))+"ìœ„)"
+			+ "\r\n#L"+REBORN_RANK+"#í™˜ìƒ ë­í‚¹ í™•ì¸ í•˜ê¸° (ë‚´ ìˆœìœ„ : "+getMYRebornsRank(getIdByName(cm.getPlayer().getName()))+"ìœ„)"
+			+ "\r\n#L"+MESO_RANK+"#ë©”ì†Œ ë­í‚¹ í™•ì¸ í•˜ê¸° (ë‚´ ìˆœìœ„ : "+getMYMesoRank(getIdByName(cm.getPlayer().getName()))+"ìœ„)"
+			+ "\r\n\r\n#r#L"+SEARCH_RANK+"#ì¢…í•© ë­í‚¹ í™•ì¸ í•˜ê¸°");
 	}
 
 
@@ -101,7 +101,7 @@ function action(M, T, S)
 			break;
 
 			case SEARCH_RANK:
-			cm.sendGetText("°Ë»öÇÒ Ä³¸¯ÅÍÀÇ ´Ğ³×ÀÓÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä. ÀÏºÎ Ä³¸¯ÅÍ´Â °Ë»öÀÌ Á¦ÇÑµÉ ¼ö ÀÖ½À´Ï´Ù.");
+			cm.sendGetText("ê²€ìƒ‰í•  ìºë¦­í„°ì˜ ë‹‰ë„¤ì„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”. ì¼ë¶€ ìºë¦­í„°ëŠ” ê²€ìƒ‰ì´ ì œí•œë  ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
 			break;
 
 			default:
@@ -121,14 +121,14 @@ function action(M, T, S)
 		{
 			if(getIdByName(cm.getText()) == null)
 			{
-				cm.sendOk("ÀÔ·ÂÇÑ Ä³¸¯ÅÍ´Â Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+				cm.sendOk("ì…ë ¥í•œ ìºë¦­í„°ëŠ” ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 				cm.dispose();
 				return;
 			}
-			cm.sendOk(""+targetName(getIdByName(cm.getText()))+" Ä³¸¯ÅÍÀÇ ·©Å· Á¤º¸ÀÔ´Ï´Ù.#b"
-				+ "\r\n¡¡·¹º§ ·©Å· : #e"+getMYLevelRank(getIdByName(cm.getText()))+"#nÀ§ (Lv."+targetLevel(getIdByName(cm.getText()))+")"
-				+ "\r\n¡¡È¯»ı ·©Å· : #e"+getMYRebornsRank(getIdByName(cm.getText()))+"#nÀ§ ("+targetReborns(getIdByName(cm.getText()))+" ¹ø)"
-				+ "\r\n¡¡¸Ş¼Ò ·©Å· : #e"+getMYMesoRank(getIdByName(cm.getText()))+"#nÀ§ ("+Comma(targetMeso(getIdByName(cm.getText())))+" ¸Ş¼Ò)");
+			cm.sendOk(""+targetName(getIdByName(cm.getText()))+" ìºë¦­í„°ì˜ ë­í‚¹ ì •ë³´ì…ë‹ˆë‹¤.#b"
+				+ "\r\nã€€ë ˆë²¨ ë­í‚¹ : #e"+getMYLevelRank(getIdByName(cm.getText()))+"#nìœ„ (Lv."+targetLevel(getIdByName(cm.getText()))+")"
+				+ "\r\nã€€í™˜ìƒ ë­í‚¹ : #e"+getMYRebornsRank(getIdByName(cm.getText()))+"#nìœ„ ("+targetReborns(getIdByName(cm.getText()))+" ë²ˆ)"
+				+ "\r\nã€€ë©”ì†Œ ë­í‚¹ : #e"+getMYMesoRank(getIdByName(cm.getText()))+"#nìœ„ ("+Comma(targetMeso(getIdByName(cm.getText())))+" ë©”ì†Œ)");
 			cm.dispose();
 		}
 	}
@@ -192,7 +192,7 @@ function getMYMesoRank(i)
 function getLevelRank()
 {
 	gRank++;
-	Sb.append("#fnµ¸¿òÃ¼#")
+	Sb.append("#fnë‹ì›€ì²´#")
 
 	if(gRank == 1)
 	{
@@ -213,15 +213,15 @@ function getLevelRank()
 	{
 		Sb.append("#Cgray#").append("#b#e").append(""+eval(gRank)+"");
 	}
-	Sb.append("À§#n#k")
+	Sb.append("ìœ„#n#k")
 	if(Con.getString("name") == cm.getPlayer().getName())
 	{
-		Sb.append("¡¡#rLv.").append(eval(Con.getInt("level"))).append("¡¡#e");
+		Sb.append("ã€€#rLv.").append(eval(Con.getInt("level"))).append("ã€€#e");
 		Sb.append(Con.getString("name")).append("#k#n");
 	}
 	else
 	{
-		Sb.append("¡¡Lv.").append(eval(Con.getInt("level"))).append("¡¡");
+		Sb.append("ã€€Lv.").append(eval(Con.getInt("level"))).append("ã€€");
 		Sb.append(Con.getString("name"))
 	}
 	Sb.append(" #Cgray#(").append(job).append(")").append("\r\n");
@@ -230,7 +230,7 @@ function getLevelRank()
 function getRebornsRank()
 {
 	gRank++;
-	Sb.append("#fnµ¸¿òÃ¼#")
+	Sb.append("#fnë‹ì›€ì²´#")
 	if(gRank == 1)
 	{
 	}
@@ -252,15 +252,15 @@ function getRebornsRank()
 	{
 		Sb.append("#Cgray#").append("#b#e").append(""+eval(gRank)+"");
 	}
-	Sb.append("À§#n#k")
+	Sb.append("ìœ„#n#k")
 	if(Con.getString("name") == cm.getPlayer().getName())
 	{
-		Sb.append("¡¡#r").append(eval(Con.getInt("reborns"))).append("¡¡#e");
+		Sb.append("ã€€#r").append(eval(Con.getInt("reborns"))).append("ã€€#e");
 		Sb.append(Con.getString("name")).append("#k#n");
 	}
 	else
 	{
-		Sb.append("¡¡").append(eval(Con.getInt("reborns"))).append("¡¡");
+		Sb.append("ã€€").append(eval(Con.getInt("reborns"))).append("ã€€");
 		Sb.append(Con.getString("name"))
 	}
 	Sb.append(" #Cgray#(").append(job).append(")").append("\r\n");
@@ -269,7 +269,7 @@ function getRebornsRank()
 function getMesoRank()
 {
 	gRank++;
-	Sb.append("#fnµ¸¿òÃ¼#")
+	Sb.append("#fnë‹ì›€ì²´#")
 
 	if(gRank == 1)
 	{
@@ -292,15 +292,15 @@ function getMesoRank()
 	{
 		Sb.append("#Cgray#").append("#b#e").append(""+eval(gRank)+"");
 	}
-	Sb.append("À§#n#k")
+	Sb.append("ìœ„#n#k")
 	if(Con.getString("name") == cm.getPlayer().getName())
 	{
-		Sb.append("¡¡#r#e").append(Comma(eval(Con.getLong("meso")))).append(" ¸Ş¼Ò¡¡");
+		Sb.append("ã€€#r#e").append(Comma(eval(Con.getLong("meso")))).append(" ë©”ì†Œã€€");
 		Sb.append(Con.getString("name")).append("#k#n\r\n");
 	}
 	else
 	{
-		Sb.append("¡¡").append(Comma(eval(Con.getLong("meso")))).append(" ¸Ş¼Ò¡¡");
+		Sb.append("ã€€").append(Comma(eval(Con.getLong("meso")))).append(" ë©”ì†Œã€€");
 		Sb.append(Con.getString("name")).append("\r\n");
 	}
 }
@@ -318,15 +318,15 @@ function getCharInfo(i)
 		Ext = true;
 		getExp = (Con.getInt("level") == 250) ? 0 : eval(Con.getLong("exp"))/Packages.constants.GameConstants.getExpNeededForLevel(eval(Con.getInt("level"))) * 100;
 		Sb.append("#fs12#");
-		Sb.append("#e´Ğ³×ÀÓ#fs18# #fs12##n: #e#b").append(Con.getString("name")).append("#Cgray##n (»ı¼ºÀÏÀÚ : ").append(Con.getString("createdate")).append(")#k\r\n");
-		Sb.append(" ¤¤#e·¹º§#n : #b").append(eval(Con.getInt("level"))).append("#k (");
+		Sb.append("#eë‹‰ë„¤ì„#fs18# #fs12##n: #e#b").append(Con.getString("name")).append("#Cgray##n (ìƒì„±ì¼ì : ").append(Con.getString("createdate")).append(")#k\r\n");
+		Sb.append(" ã„´#eë ˆë²¨#n : #b").append(eval(Con.getInt("level"))).append("#k (");
 		Sb.append(Comma(eval(Con.getLong("exp")))).append(" / "+Comma(Packages.constants.GameConstants.getExpNeededForLevel(eval(Con.getInt("level"))))+"").append(") ");
 		Sb.append("["+getExp.toFixed(2)+"%]\r\n");
-		Sb.append(" ¤¤#e½ºÅİ#n : #bSTR#k#fs11#(").append((eval(Con.getInt("str")))).append(")  #fs12##bDEX#k#fs11#(").append(eval(Con.getInt("dex")));
+		Sb.append(" ã„´#eìŠ¤í…Ÿ#n : #bSTR#k#fs11#(").append((eval(Con.getInt("str")))).append(")  #fs12##bDEX#k#fs11#(").append(eval(Con.getInt("dex")));
 		Sb.append(")  #fs12##bINT#k#fs11#(").append(eval(Con.getInt("int"))).append(")  #fs12##bLUK#k#fs11#(").append(eval(Con.getInt("luk"))).append(")#fs12#\r\n");
-		Sb.append("#e¡¡¡¡  ¡¡ #n#rHP#k[#r").append(Comma(eval(Con.getInt("hp")))).append("#k / #r").append(Comma(eval(Con.getInt("maxhp")))).append("#k]  ");
+		Sb.append("#eã€€ã€€  ã€€ #n#rHP#k[#r").append(Comma(eval(Con.getInt("hp")))).append("#k / #r").append(Comma(eval(Con.getInt("maxhp")))).append("#k]  ");
 		Sb.append("#bMP#k[#b").append(Comma(eval(Con.getInt("mp")))).append("#k / #b").append(Comma(eval(Con.getInt("maxmp")))).append("#k]\r\n");
-		Sb.append(" ¤¤#e¸Ş¼Ò#n : #b").append(Comma(eval(Con.getLong("meso"))));
+		Sb.append(" ã„´#eë©”ì†Œ#n : #b").append(Comma(eval(Con.getLong("meso"))));
 		Sb.append("#k\r\n\r\n\r\n");
 	}
 	if (Ext)
@@ -335,7 +335,7 @@ function getCharInfo(i)
 	}
 	else
 	{
-		cm.sendOk("¾ø´Â Ä³¸¯ÅÍÀÇ Á¤º¸°¡ ÀÔ·ÂµÇ¾ú½À´Ï´Ù. ´Ù½Ã ½ÃµµÇØÁÖ¼¼¿ä.");
+		cm.sendOk("ì—†ëŠ” ìºë¦­í„°ì˜ ì •ë³´ê°€ ì…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì‹œë„í•´ì£¼ì„¸ìš”.");
 	}
 	Con.close();
 	con.close();
@@ -434,83 +434,83 @@ function getPlayerJobs(i)
 {
 	switch(i)
 	{
-		case 100: job = "°Ë»ç"; break;
-		case 200: job = "¸¶¹ı»ç"; break;
-		case 300: job = "±Ã¼ö"; break;
-		case 400: job = "µµÀû"; break;
-		case 500: job = "ÇØÀû"; break;
-		case 110: job = "ÆÄÀÌÅÍ"; break;
-		case 111: job = "Å©·ç¼¼ÀÌ´õ"; break;
-		case 112: job = "È÷¾î·Î"; break;
-		case 120: job = "ÆäÀÌÁö"; break;
-		case 121: job = "³ªÀÌÆ®"; break;
-		case 122: job = "ÆÈ¶óµò"; break;
-		case 130: job = "½ºÇÇ¾î¸Ç"; break;
-		case 131: job = "¹ö¼­Ä¿"; break;
-		case 132: job = "´ÙÅ©³ªÀÌÆ®"; break;
-		case 210: job = "À§ÀÚµå(ºÒ, µ¶)"; break;
-		case 211: job = "¸ŞÀÌÁö(ºÒ, µ¶)"; break;
-		case 212: job = "¾ÆÅ©¸ŞÀÌÁö(ºÒ,µ¶)"; break;
-		case 220: job = "À§ÀÚµå(½ã, Äİ)"; break;
-		case 221: job = "¸ŞÀÌÁö(½ã, Äİ)"; break;
-		case 222: job = "¾ÆÅ©¸ŞÀÌÁö(½ã,Äİ)"; break;
-		case 230: job = "Å¬·¹¸¯"; break;
-		case 231: job = "ÇÁ¸®½ºÆ®"; break;
-		case 232: job = "ºñ¼ó"; break;
-		case 310: job = "ÇåÅÍ"; break;
-		case 311: job = "·¹ÀÎÀú"; break;
-		case 312: job = "º¸¿ì¸¶½ºÅÍ";  break;
-		case 320: job = "»ç¼ö"; break;
-		case 321: job = "Àú°İ¼ö"; break;
-		case 322: job = "½Å±Ã"; break;
-		case 410: job = "¾î½Ø½Å"; break;
-		case 411: job = "Çã¹Ô"; break;
-		case 412: job = "³ªÀÌÆ®·Îµå";  break;
-		case 420: job = "½ÃÇÁ"; break;
-		case 421: job = "½ÃÇÁ¸¶½ºÅÍ"; break;
-		case 422: job = "¼¨µµ¾î"; break;
-		case 430: job = "¼¼¹Ìµà¾î·¯"; break;
-		case 431: job = "µà¾î·¯"; break;
-		case 432: job = "µà¾ó¸¶½ºÅÍ"; break;
-		case 433: job = "½½·¹¼Å"; break;
-		case 434: job = "µà¾óºí·¹ÀÌ´õ";  break;
-		case 510: job = "ÀÎÆÄÀÌÅÍ"; break;
-		case 511: job = "¹öÄ¿´Ï¾î"; break;
-		case 512: job = "¹ÙÀÌÆÛ"; break;
-		case 520: job = "°Ç½½¸µ°Å"; break;
-		case 521: job = "¹ßÅ°¸®"; break;
-		case 522: job = "Ä¸Æ¾"; break;
-		case 530: job = "Ä³³í½´ÅÍ"; break;
-		case 531: job = "Ä³³íºí·¡½ºÅÍ"; break;
-		case 532: job = "Ä³³í¸¶½ºÅÍ"; break;
+		case 100: job = "ê²€ì‚¬"; break;
+		case 200: job = "ë§ˆë²•ì‚¬"; break;
+		case 300: job = "ê¶ìˆ˜"; break;
+		case 400: job = "ë„ì "; break;
+		case 500: job = "í•´ì "; break;
+		case 110: job = "íŒŒì´í„°"; break;
+		case 111: job = "í¬ë£¨ì„¸ì´ë”"; break;
+		case 112: job = "íˆì–´ë¡œ"; break;
+		case 120: job = "í˜ì´ì§€"; break;
+		case 121: job = "ë‚˜ì´íŠ¸"; break;
+		case 122: job = "íŒ”ë¼ë”˜"; break;
+		case 130: job = "ìŠ¤í”¼ì–´ë§¨"; break;
+		case 131: job = "ë²„ì„œì»¤"; break;
+		case 132: job = "ë‹¤í¬ë‚˜ì´íŠ¸"; break;
+		case 210: job = "ìœ„ìë“œ(ë¶ˆ, ë…)"; break;
+		case 211: job = "ë©”ì´ì§€(ë¶ˆ, ë…)"; break;
+		case 212: job = "ì•„í¬ë©”ì´ì§€(ë¶ˆ,ë…)"; break;
+		case 220: job = "ìœ„ìë“œ(ì¬, ì½œ)"; break;
+		case 221: job = "ë©”ì´ì§€(ì¬, ì½œ)"; break;
+		case 222: job = "ì•„í¬ë©”ì´ì§€(ì¬,ì½œ)"; break;
+		case 230: job = "í´ë ˆë¦­"; break;
+		case 231: job = "í”„ë¦¬ìŠ¤íŠ¸"; break;
+		case 232: job = "ë¹„ìˆ"; break;
+		case 310: job = "í—Œí„°"; break;
+		case 311: job = "ë ˆì¸ì €"; break;
+		case 312: job = "ë³´ìš°ë§ˆìŠ¤í„°";  break;
+		case 320: job = "ì‚¬ìˆ˜"; break;
+		case 321: job = "ì €ê²©ìˆ˜"; break;
+		case 322: job = "ì‹ ê¶"; break;
+		case 410: job = "ì–´ìŒ”ì‹ "; break;
+		case 411: job = "í—ˆë°‹"; break;
+		case 412: job = "ë‚˜ì´íŠ¸ë¡œë“œ";  break;
+		case 420: job = "ì‹œí”„"; break;
+		case 421: job = "ì‹œí”„ë§ˆìŠ¤í„°"; break;
+		case 422: job = "ì„€ë„ì–´"; break;
+		case 430: job = "ì„¸ë¯¸ë“€ì–´ëŸ¬"; break;
+		case 431: job = "ë“€ì–´ëŸ¬"; break;
+		case 432: job = "ë“€ì–¼ë§ˆìŠ¤í„°"; break;
+		case 433: job = "ìŠ¬ë ˆì…”"; break;
+		case 434: job = "ë“€ì–¼ë¸”ë ˆì´ë”";  break;
+		case 510: job = "ì¸íŒŒì´í„°"; break;
+		case 511: job = "ë²„ì»¤ë‹ˆì–´"; break;
+		case 512: job = "ë°”ì´í¼"; break;
+		case 520: job = "ê±´ìŠ¬ë§ê±°"; break;
+		case 521: job = "ë°œí‚¤ë¦¬"; break;
+		case 522: job = "ìº¡í‹´"; break;
+		case 530: job = "ìºë…¼ìŠˆí„°"; break;
+		case 531: job = "ìºë…¼ë¸”ë˜ìŠ¤í„°"; break;
+		case 532: job = "ìºë…¼ë§ˆìŠ¤í„°"; break;
 
-		case 1100: case 1110: case 1111: case 1112: job = "¼Ò¿ï¸¶½ºÅÍ";  break;
-		case 1200: case 1210: case 1211: case 1212: job = "ÇÃ·¹ÀÓÀ§ÀÚµå"; break;
-		case 1300: case 1310: case 1311: case 1312: job = "À©µåºê·¹ÀÌÄ¿"; break;
-		case 1400: case 1410: case 1411: case 1412: job = "³ªÀÌÆ®¿öÄ¿"; break;
-		case 1500: case 1510: case 1511: case 1512: job = "½ºÆ®¶óÀÌÄ¿"; break;
+		case 1100: case 1110: case 1111: case 1112: job = "ì†Œìš¸ë§ˆìŠ¤í„°";  break;
+		case 1200: case 1210: case 1211: case 1212: job = "í”Œë ˆì„ìœ„ìë“œ"; break;
+		case 1300: case 1310: case 1311: case 1312: job = "ìœˆë“œë¸Œë ˆì´ì»¤"; break;
+		case 1400: case 1410: case 1411: case 1412: job = "ë‚˜ì´íŠ¸ì›Œì»¤"; break;
+		case 1500: case 1510: case 1511: case 1512: job = "ìŠ¤íŠ¸ë¼ì´ì»¤"; break;
 
-		case 2100: case 2110: case 2111: case 2112: job = "¾Æ¶õ"; break;
+		case 2100: case 2110: case 2111: case 2112: job = "ì•„ë€"; break;
 		case 2200: case 2210: case 2211: case 2212: case 2213:
-		case 2214: case 2215: case 2216: case 2217: case 2218: job = "¿¡¹İ"; break;
-		case 2300: case 2310: case 2311: case 2312: job = "¸Ş¸£¼¼µ¥½º"; break;
-		case 2400: case 2410: case 2411: case 2412: job = "ÆÒÅÒ";  break;
-		case 2700: case 2710: case 2711: case 2712: job = "·ç¹Ì³Ê½º"; break;
-		case 2500: case 2510: case 2511: case 2512: job = "Àº¿ù"; break;
+		case 2214: case 2215: case 2216: case 2217: case 2218: job = "ì—ë°˜"; break;
+		case 2300: case 2310: case 2311: case 2312: job = "ë©”ë¥´ì„¸ë°ìŠ¤"; break;
+		case 2400: case 2410: case 2411: case 2412: job = "íŒ¬í…€";  break;
+		case 2700: case 2710: case 2711: case 2712: job = "ë£¨ë¯¸ë„ˆìŠ¤"; break;
+		case 2500: case 2510: case 2511: case 2512: job = "ì€ì›”"; break;
 
-		case 3100: case 3110: case 3111: case 3112: job = "µ¥¸ó½½·¹ÀÌ¾î"; break;
-		case 3101: case 3120: case 3121: case 3122: job = "µ¥¸ó¾îº¥Á®"; break;
-		case 3200: case 3210: case 3211: case 3212: job = "¹èÆ²¸ŞÀÌÁö"; break;
-		case 3300: case 3310: case 3311: case 3312: job = "¿ÍÀÏµåÇåÅÍ"; break;
-		case 3500: case 3512: case 3511: case 3512: job = "¸ŞÄ«´Ğ"; break;
-		case 3600: case 3610: case 3611: case 3612: job = "Á¦³í"; break;
-		case 3700: case 3710: case 3711: case 3712: job = "ºí·¡½ºÅÍ"; break;
+		case 3100: case 3110: case 3111: case 3112: job = "ë°ëª¬ìŠ¬ë ˆì´ì–´"; break;
+		case 3101: case 3120: case 3121: case 3122: job = "ë°ëª¬ì–´ë²¤ì ¸"; break;
+		case 3200: case 3210: case 3211: case 3212: job = "ë°°í‹€ë©”ì´ì§€"; break;
+		case 3300: case 3310: case 3311: case 3312: job = "ì™€ì¼ë“œí—Œí„°"; break;
+		case 3500: case 3512: case 3511: case 3512: job = "ë©”ì¹´ë‹‰"; break;
+		case 3600: case 3610: case 3611: case 3612: job = "ì œë…¼"; break;
+		case 3700: case 3710: case 3711: case 3712: job = "ë¸”ë˜ìŠ¤í„°"; break;
 	
-		case 5100: case 5110: case 5111: case 5112: job = "¹ÌÇÏÀÏ"; break;
-		case 6100: case 6110: case 6111: case 6112: job = "Ä«ÀÌÀú"; break;
-		case 6500: case 6510: case 6511: case 6512: job = "¿£Á©¸¯¹ö½ºÅÍ"; break;
+		case 5100: case 5110: case 5111: case 5112: job = "ë¯¸í•˜ì¼"; break;
+		case 6100: case 6110: case 6111: case 6112: job = "ì¹´ì´ì €"; break;
+		case 6500: case 6510: case 6511: case 6512: job = "ì—”ì ¤ë¦­ë²„ìŠ¤í„°"; break;
 
-		case 14200: case 14210: case 14211: case 14212: job = "Å°³×½Ã½º"; break;	
-		default: "ÃÊº¸ÀÚ"; break;
+		case 14200: case 14210: case 14211: case 14212: job = "í‚¤ë„¤ì‹œìŠ¤"; break;	
+		default: "ì´ˆë³´ì"; break;
 	}
 }

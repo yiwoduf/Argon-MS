@@ -1,11 +1,11 @@
 var status = 0;
-º°»¡ = "#fUI/GuildMark.img/Mark/Pattern/00004001/1#"
-º°ÆÄ = "#fUI/GuildMark.img/Mark/Pattern/00004001/11#"
-º°º¸ = "#fUI/GuildMark.img/Mark/Pattern/00004001/13#"
-º°È¸ = "#fUI/GuildMark.img/Mark/Pattern/00004001/15#"
-º°°Ë = "#fUI/GuildMark.img/Mark/Pattern/00004001/16#"
-¿Õº° = "#fUI/FarmUI.img/objectStatus/star/whole#"
-var º° = "#fUI/FarmUI.img/objectStatus/star/whole#";
+ë³„ë¹¨ = "#fUI/GuildMark.img/Mark/Pattern/00004001/1#"
+ë³„íŒŒ = "#fUI/GuildMark.img/Mark/Pattern/00004001/11#"
+ë³„ë³´ = "#fUI/GuildMark.img/Mark/Pattern/00004001/13#"
+ë³„íšŒ = "#fUI/GuildMark.img/Mark/Pattern/00004001/15#"
+ë³„ê²€ = "#fUI/GuildMark.img/Mark/Pattern/00004001/16#"
+ì™•ë³„ = "#fUI/FarmUI.img/objectStatus/star/whole#"
+var ë³„ = "#fUI/FarmUI.img/objectStatus/star/whole#";
 importPackage(Packages.constants);
 
 function start() {
@@ -16,6 +16,6 @@ function action(mode, type, selection) { if (mode == -1) { cm.dispose(); } else 
 
     if (status == 0) {
 		var Lcoin = cm.itemQuantity(4310071);
-		var jessica = "  #fn³ª´®°íµñ Extrabold##fs17#"+º°+" "+ServerConstants.serverName+"¿¡ ¿À½Å °ÍÀ» È¯¿µÇÕ´Ï´Ù. "+¿Õº°+" \r\n#fs10#                                  #Cgray#Áñ°Å¿î ½Ã°£ µÇ½Ã±â ¹Ù¶ø´Ï´Ù.#k\r\n\r\n#fs12#"; 
-		jessica += "                  #b#h ##k ´ÔÀÇ "+ServerConstants.serverName+" #bÈ¯»ı È½¼ö#k : #r"+cm.getReborns()+" P#k\r\n";
-                jessica += "                       #bÈÄ¿ø Æ÷ÀÎÆ®#k : #r"+cm.getRC()+" P#k #bÈ«º¸ ÄÚÀÎ#k : #r"+ Lcoin +" °³#k\r\n";
+		var jessica = "  #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17#"+ë³„+" "+ServerConstants.serverName+"ì— ì˜¤ì‹  ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤. "+ì™•ë³„+" \r\n#fs10#                                  #Cgray#ì¦ê±°ìš´ ì‹œê°„ ë˜ì‹œê¸° ë°”ëë‹ˆë‹¤.#k\r\n\r\n#fs12#"; 
+		jessica += "                  #b#h ##k ë‹˜ì˜ "+ServerConstants.serverName+" #bí™˜ìƒ íšŸìˆ˜#k : #r"+cm.getReborns()+" P#k\r\n";
+                jessica += "                       #bí›„ì› í¬ì¸íŠ¸#k : #r"+cm.getRC()+" P#k #bí™ë³´ ì½”ì¸#k : #r"+ Lcoin +" ê°œ#k\r\n";

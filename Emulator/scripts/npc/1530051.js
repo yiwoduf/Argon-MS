@@ -13,11 +13,11 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-            cm.sendYesNo("#e<±¸°üÀ» µÇÃ£¾ÆÁÖ¼¼¿ä!>#n\r\n\r\n#e#dNo.1 #fUI/UIWindow2.img/MobGage/Mob/2700100# ÀÇ¹®ÀÇ ¼÷³à#n#k   È¹µæ¾ÆÀÌÅÛ #i4310125# (1°³)\r\n#e#dNo.2 #fUI/UIWindow2.img/MobGage/Mob/2700104# ¿õ±â#n#k              È¹µæ¾ÆÀÌÅÛ #i4310125# (1~2°³)\r\n#e#bNo.3 #fUI/UIWindow2.img/MobGage/Mob/2700103# C.µå·¡°ï#n#k       È¹µæ¾ÆÀÌÅÛ #i4310125# (1~2°³)\r\n#e#bNo.4 #fUI/UIWindow2.img/MobGage/Mob/2700101# ¹İ°íÈï#n#k           È¹µæ¾ÆÀÌÅÛ #i4310125# (1~3°³)\r\n#e#bNo.5 #fUI/UIWindow2.img/MobGage/Mob/2700102# ÃÖ¹Ú»ç#n#k           È¹µæ¾ÆÀÌÅÛ #i4310125# (1~4°³)\r\n#e#rNo.F #fUI/UIWindow2.img/MobGage/Mob/2700200# ¹Ú·Ï#n#k              È¹µæ¾ÆÀÌÅÛ #i4310124# (1~5°³)\r\n\r\n#e#rÀÌµ¿ÇÏ½Ã°Ú½À´Ï±î?\r\n[ÆÄÆ¼¸¦±¸¼ºÇÏÁö ¾ÊÀ¸¸é ÀÔÀåÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù.]\r\n#e#b#n#k#n#k\r\n");
+            cm.sendYesNo("#e<êµ¬ê´€ì„ ë˜ì°¾ì•„ì£¼ì„¸ìš”!>#n\r\n\r\n#e#dNo.1 #fUI/UIWindow2.img/MobGage/Mob/2700100# ì˜ë¬¸ì˜ ìˆ™ë…€#n#k   íšë“ì•„ì´í…œ #i4310125# (1ê°œ)\r\n#e#dNo.2 #fUI/UIWindow2.img/MobGage/Mob/2700104# ì›…ê¸°#n#k              íšë“ì•„ì´í…œ #i4310125# (1~2ê°œ)\r\n#e#bNo.3 #fUI/UIWindow2.img/MobGage/Mob/2700103# C.ë“œë˜ê³¤#n#k       íšë“ì•„ì´í…œ #i4310125# (1~2ê°œ)\r\n#e#bNo.4 #fUI/UIWindow2.img/MobGage/Mob/2700101# ë°˜ê³ í¥#n#k           íšë“ì•„ì´í…œ #i4310125# (1~3ê°œ)\r\n#e#bNo.5 #fUI/UIWindow2.img/MobGage/Mob/2700102# ìµœë°•ì‚¬#n#k           íšë“ì•„ì´í…œ #i4310125# (1~4ê°œ)\r\n#e#rNo.F #fUI/UIWindow2.img/MobGage/Mob/2700200# ë°•ë¡#n#k              íšë“ì•„ì´í…œ #i4310124# (1~5ê°œ)\r\n\r\n#e#rì´ë™í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\r\n[íŒŒí‹°ë¥¼êµ¬ì„±í•˜ì§€ ì•Šìœ¼ë©´ ì…ì¥ì´ ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤.]\r\n#e#b#n#k#n#k\r\n");
 	} else if (status == 1) {
             if (cm.getPlayer().getParty() != null) {
                 if (cm.getPlayerCount(330003100) > 0 || cm.getPlayerCount(330003500) > 1 || cm.getPlayerCount(330003400) > 2 || cm.getPlayerCount(330003200) > 3 || cm.getPlayerCount(330003300) > 4 || cm.getPlayerCount(330003600) > 5)  {
-                    cm.sendOk("ÇöÀç ±¸°ü¿¡ µµÀü ÁßÀÎ ÇÃ·¹ÀÌ¾î°¡ ÀÖ½À´Ï´Ù.");
+                    cm.sendOk("í˜„ì¬ êµ¬ê´€ì— ë„ì „ ì¤‘ì¸ í”Œë ˆì´ì–´ê°€ ìˆìŠµë‹ˆë‹¤.");
                     cm.dispose();
                 } else {
 		    cm.resetMap(330003100);
@@ -26,7 +26,7 @@ function action(mode, type, selection) {
                     cm.dispose();
                 }
             } else {
-		cm.sendOk("ÆÄÆ¼¸¦ ¸¸µé¾î ÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.");
+		cm.sendOk("íŒŒí‹°ë¥¼ ë§Œë“¤ì–´ ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.");
 		cm.dispose();
 	    }
         }

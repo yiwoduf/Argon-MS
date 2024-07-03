@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -14,8 +14,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum RecvPacketOpcode {
-    //Æş, Å¬¶óÀÌ¾ğÆ®.
-//Æş, Å¬¶óÀÌ¾ğÆ®.
+    //í, í´ë¼ì´ì–¸íŠ¸.
+//í, í´ë¼ì´ì–¸íŠ¸.
     PONG(false),
     CHANGE_MEISTER_BILL_MAP(false, 0x102),
     PART_TIME_JOB(false, 0x8F),
@@ -25,7 +25,7 @@ public enum RecvPacketOpcode {
     CLIENT_EXCEPTION_INFO(false, 0x9A),
     WVS_SETUP_STEP(false, 0x9B),
     CHECK_HOTFIX(false),
-    // ·Î±×ÀÎ
+    // ë¡œê·¸ì¸
     SESSION_CHECK_R(false),
     LOGIN_REQUEST(false),
     SECONDPW_RESULT_R,
@@ -42,7 +42,7 @@ public enum RecvPacketOpcode {
     NEW_CONNECTION(false),
     SET_BURNING_CHAR_R,
     CLIENT_QUIT,
-    // Ã¤³Î
+    // ì±„ë„
     PLAYER_LOGGEDIN(false),
     REDISPLAY_CHANNEL,
     CHANGE_MAP,

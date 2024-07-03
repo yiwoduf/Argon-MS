@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  *
  */
@@ -199,10 +199,10 @@ public class MapleLifeProvider {
                 } else if (mid >= 9300184 && mid <= 9300215) { // Mulung TC mobs
                     hpdisplaytype = 2;
                 } else if (!stats.isBoss()
-                        || // º¸½º ¾Æ´Ô
+                        || // ë³´ìŠ¤ ì•„ë‹˜
                         (mid >= 9800000 && mid <= 9800124)
-                        || // ¸ó½ºÅÍÆÄÅ©
-                        (mid >= 9302044 && mid <= 9302048)) { // ¾Æ½º¿Ï
+                        || // ëª¬ìŠ¤í„°íŒŒí¬
+                        (mid >= 9302044 && mid <= 9302048)) { // ì•„ìŠ¤ì™„
                     hpdisplaytype = 3;
                 }
             }

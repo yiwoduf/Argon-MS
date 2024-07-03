@@ -4,7 +4,7 @@ importPackage(Packages.client.items);
 importPackage(java.lang);
 
 var itemidd = 0;
-var mesorate = 7500; // °³´ç ¸Ş¼Ò
+var mesorate = 7500; // ê°œë‹¹ ë©”ì†Œ
 
 function start() {
 	status = -1;
@@ -16,7 +16,7 @@ if (mode == 1) status++;
 else { cm.dispose(); return; }
 
 if (status == 0) {
-           var chat = "#fn³ª´®°íµñ Extrabold#	    ¡Ø±³È¯ÇÏ½Ç ¾ÆÀÌÅÛÀ» ¼±ÅÃÇØÁÖ¼¼¿ä¡Ø#fs10#\r\n";
+           var chat = "#fnë‚˜ëˆ”ê³ ë”• Extrabold#	    â€»êµí™˜í•˜ì‹¤ ì•„ì´í…œì„ ì„ íƒí•´ì£¼ì„¸ìš”â€»#fs10#\r\n";
 	var inven = cm.getInventory(4);
 	var inventory = cm.getInventory(4).getSlotLimit();
 	for (var limit = 0; limit < inventory; limit++) {
@@ -31,9 +31,9 @@ if (status == 0) {
 	item = cm.getInventory(4).getItem(s % 9000).copy();
 	if (item.getQuantity() != 1){
 		itemidd = item.getItemId();
-		cm.sendGetNumber("#fn³ª´®°íµñ Extrabold# ÇöÀç Àû¿ë µÈ ¸Ş¼Ò ¹èÀ²Àº #b"+mesorate+":1#k ÀÔ´Ï´Ù.\r\n¸î°³¸¦ ÀüÈ¯ ÇÏ½Ã°Ú½À´Ï±î? ¼±ÅÃÇÏ½Å ¾ÆÀÌÅÛÀº\r\n#b#i"+item.getItemId()+"# #t"+item.getItemId()+"# #r"+item.getQuantity()+"°³#k ÀÔ´Ï´Ù.",1,1,item.getQuantity());
+		cm.sendGetNumber("#fnë‚˜ëˆ”ê³ ë”• Extrabold# í˜„ì¬ ì ìš© ëœ ë©”ì†Œ ë°°ìœ¨ì€ #b"+mesorate+":1#k ì…ë‹ˆë‹¤.\r\nëª‡ê°œë¥¼ ì „í™˜ í•˜ì‹œê² ìŠµë‹ˆê¹Œ? ì„ íƒí•˜ì‹  ì•„ì´í…œì€\r\n#b#i"+item.getItemId()+"# #t"+item.getItemId()+"# #r"+item.getQuantity()+"ê°œ#k ì…ë‹ˆë‹¤.",1,1,item.getQuantity());
 	} else {
-		cm.sendOk("°³¼ö°¡ 1°³ÀÎ ¾ÆÀÌÅÛÀº ÀüÈ¯ ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+		cm.sendOk("ê°œìˆ˜ê°€ 1ê°œì¸ ì•„ì´í…œì€ ì „í™˜ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		cm.dispose();
 	}
 
@@ -41,10 +41,10 @@ if (status == 0) {
 	gmeso = selection*mesorate;
 	if (cm.haveItem(itemidd,selection)) {
 		cm.gainItem(itemidd,-selection);
-		cm.sendOk("#b#e"+gmeso+" ¸Ş¼Ò#n#k¸¸Å­ ÀüÈ¯ µÇ¾ú½À´Ï´Ù. Áñ°Å¿î °ÔÀÓ µÇ¼¼¿ä!");
+		cm.sendOk("#b#e"+gmeso+" ë©”ì†Œ#n#kë§Œí¼ ì „í™˜ ë˜ì—ˆìŠµë‹ˆë‹¤. ì¦ê±°ìš´ ê²Œì„ ë˜ì„¸ìš”!");
 		cm.gainMeso(gmeso);
 	} else {
-		cm.sendOk("È®½ÇÈ÷ ÀÔ·Â °¹¼ö¸¸Å­ °¡Áö°í °è½Å°Ô ¸Â³ª¿ä?");
+		cm.sendOk("í™•ì‹¤íˆ ì…ë ¥ ê°¯ìˆ˜ë§Œí¼ ê°€ì§€ê³  ê³„ì‹ ê²Œ ë§ë‚˜ìš”?");
 	}
 	cm.dispose();
 }

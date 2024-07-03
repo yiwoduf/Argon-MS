@@ -179,16 +179,16 @@ function allMonstersDead(eim) {
 
     eim.setProperty("points", totalp);
 
-    eim.broadcastPlayerMsg(5, "½ºÅ×ÀÌÁö¸¦ Å¬¸®¾îÇÏ¿´½À´Ï´Ù. " + num + "Æ÷ÀÎÆ®¸¦ ¾ò¾ú½À´Ï´Ù. < ÃÑ ½ºÅ×ÀÌÁöÆ÷ÀÎÆ®" + totalp + ">");
+    eim.broadcastPlayerMsg(5, "ìŠ¤í…Œì´ì§€ë¥¼ í´ë¦¬ì–´í•˜ì˜€ìŠµë‹ˆë‹¤. " + num + "í¬ì¸íŠ¸ë¥¼ ì–»ì—ˆìŠµë‹ˆë‹¤. < ì´ ìŠ¤í…Œì´ì§€í¬ì¸íŠ¸" + totalp + ">");
     
     eim.saveBossQuest(num);
 
     if (mobnum < monster.length) {
-	eim.broadcastPlayerMsg(6, "ÁØºñÇÏ¼¼¿ä. ´ÙÀ½ º¸½º°¡ ³ªÅ¸³³´Ï´Ù.");
+	eim.broadcastPlayerMsg(6, "ì¤€ë¹„í•˜ì„¸ìš”. ë‹¤ìŒ ë³´ìŠ¤ê°€ ë‚˜íƒ€ë‚©ë‹ˆë‹¤.");
     } else {
 	eim.saveBossQuest(15000);
 	eim.saveNX(40000);
-	eim.broadcastPlayerMsg(5, "Çï¸ğµå¸¦ Å¬¸®¾îÇÏ¼Ì½À´Ï´Ù. < 15,000 Æ÷ÀÎÆ®, 40,000 Ä³½Ã Ãß°¡ Áö±Ş >");
+	eim.broadcastPlayerMsg(5, "í—¬ëª¨ë“œë¥¼ í´ë¦¬ì–´í•˜ì…¨ìŠµë‹ˆë‹¤. < 15,000 í¬ì¸íŠ¸, 40,000 ìºì‹œ ì¶”ê°€ ì§€ê¸‰ >");
 	eim.giveAchievement(22);
 	}
 // When invoking unregisterMonster(MapleMonster mob) OR killed

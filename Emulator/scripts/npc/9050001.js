@@ -3,19 +3,19 @@
 
 /*
 
-	* �ܹ����ǽ� �ڵ����� ��ũ��Ʈ�� ���� ������� ��ũ��Ʈ �Դϴ�.
+	* 단문엔피시 자동제작 스크립트를 통해 만들어진 스크립트 입니다.
 
 	* (Guardian Project Development Source Script)
 
-	GM ReefOnline �� ���� ����� �����ϴ�.
+	GM ReefOnline 에 의해 만들어 졌습니다.
 
-	���ǽþ��̵� : 9050001
+	엔피시아이디 : 9050001
 
-	���ǽ� �̸� : ��ȯ�� �Ǳ׹�
+	엔피시 이름 : 소환수 피그미
 
-	���ǽð� �ִ� �� : ���罺Ʈ��Ʈ : �����̹� �̴ϰ��� ���� (970060000)
+	엔피시가 있는 맵 : 히든스트리트 : 서바이벌 미니게임 대기실 (970060000)
 
-	���ǽ� ���� : MISSINGNO
+	엔피시 설명 : MISSINGNO
 
 
 */
@@ -41,7 +41,7 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        cm.sendOk("�������� �۾����Դϴ�");
+        cm.sendOk("보스상점 작업중입니다");
         cm.dispose();
         return;
     }

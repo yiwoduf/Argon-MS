@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.Random;
 
 /**
- * @author ´Ş ´Ô(dongwon4724)
+ * @author ë‹¬ ë‹˜(dongwon4724)
  *
  */
 public class MakerItemFactory {
@@ -34,7 +34,7 @@ public class MakerItemFactory {
         if (recipes.get(toCreate) != null) {
             return recipes.get(toCreate);
         }
-        System.out.println("[¾Ë¸²] ItemMake.img¸¦ ºÒ·¯¿É´Ï´Ù.");
+        System.out.println("[ì•Œë¦¼] ItemMake.imgë¥¼ ë¶ˆëŸ¬ì˜µë‹ˆë‹¤.");
         makerData = datasource.getData("ItemMake.img");
         for (MapleData dt : makerData.getChildren()) //loop through every category
             for (MapleData itemdata : dt.getChildren()) { // loop through all the items in each category

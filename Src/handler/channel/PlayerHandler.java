@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  *
  */
@@ -82,7 +82,7 @@ import server.maps.MapleWreckage;
 public class PlayerHandler {
 
     private static ItemInformation ii = ItemInformation.getInstance();
-    private static int ¿©¿ì·É = 0, Rank = 0;
+    private static int ì—¬ìš°ë ¹ = 0, Rank = 0;
     public static transient ScheduledFuture<?> diabolicRecoveryTask = null;
 
     private static int isFinisher(int skillid) {
@@ -216,7 +216,7 @@ public class PlayerHandler {
     public static void absorbingDF(ReadingMaple rh, MapleClient c) {
         int size = rh.readInt();
         int skillid = rh.readInt();
-        /*½ÃÄ¿ Å×½ºÆ®*/
+        /*ì‹œì»¤ í…ŒìŠ¤íŠ¸*/
         int room = 0;
         byte unk = 0;
         int sn = 0;
@@ -227,13 +227,13 @@ public class PlayerHandler {
             if (GameConstants.isDemonSlayer(c.getPlayer().getJob())) {
                 c.getPlayer().addMP(c.getPlayer().getStat().getForce(room));
             }
-            /*if (rh.available() > 0 && !GameConstants.isMechanic(c.getPlayer().getJob()) && !GameConstants.isBattleMage(c.getPlayer().getJob()) && !GameConstants.isPhantom(c.getPlayer().getJob()) && !GameConstants.isWindBreaker(c.getPlayer().getJob()) && !GameConstants.isNightWalker(c.getPlayer().getJob()) && !GameConstants.isAngelicBuster(c.getPlayer().getJob())) { //Á¦¹ß ¿¹¿ÜÃ³¸®Á» ÇÏÀÚ
+            /*if (rh.available() > 0 && !GameConstants.isMechanic(c.getPlayer().getJob()) && !GameConstants.isBattleMage(c.getPlayer().getJob()) && !GameConstants.isPhantom(c.getPlayer().getJob()) && !GameConstants.isWindBreaker(c.getPlayer().getJob()) && !GameConstants.isNightWalker(c.getPlayer().getJob()) && !GameConstants.isAngelicBuster(c.getPlayer().getJob())) { //ì œë°œ ì˜ˆì™¸ì²˜ë¦¬ì¢€ í•˜ì
                 unk = rh.readByte();
                 sn = rh.readInt();
             }*/
-            if (GameConstants.isEunWol(c.getPlayer().getJob()) && ¿©¿ì·É != 0) {
+            if (GameConstants.isEunWol(c.getPlayer().getJob()) && ì—¬ìš°ë ¹ != 0) {
                 c.getPlayer().getMap().broadcastMessage(MainPacketCreator.absorbingRFG(c.getPlayer().getId(), skillid, sn));
-                ¿©¿ì·É = ¿©¿ì·É - 50;
+                ì—¬ìš°ë ¹ = ì—¬ìš°ë ¹ - 50;
             }
             if (GameConstants.isAngelicBuster(c.getPlayer().getJob())) {
                 boolean rand = Randomizer.isSuccess(80);
@@ -317,7 +317,7 @@ public class PlayerHandler {
     }
 
     public static void TakeDamage(ReadingMaple rh, MapleClient c, MapleCharacter chr) throws InterruptedException {
-        // <1:46:19> - [Receive] : TAKE_DAMAGE [185] : ¸®½Ãºê µ¥ÀÌÅÍ : 00 E0 00 00 00 00 01 2D A1 07 00 07 8B 02 F4 FE 8B 02 12 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+        // <1:46:19> - [Receive] : TAKE_DAMAGE [185] : ë¦¬ì‹œë¸Œ ë°ì´í„° : 00 E0 00 00 00 00 01 2D A1 07 00 07 8B 02 F4 FE 8B 02 12 FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00
         rh.skip(4); // Ticks 26 91 41 EB 
         rh.skip(4); // B0 36 8B 01  
         byte type = rh.readByte(); // FF 
@@ -407,7 +407,7 @@ public class PlayerHandler {
                             SkillStatEffect e = SkillFactory.getSkill(v1).getEffect(chr.getSkillLevel(v1));
                             int refDmg = (int) (e.getX() * 0.01) * damage;
                             chr.getMap().broadcastMessage(chr, MainPacketCreator.summonAttack(chr.getId(), s.getRight().getObjectId(), (byte) 0x86, (byte) 0x11, allDamage, chr.getLevel(), true, 0), s.getRight().getPosition());
-                            attacker.damage(chr, refDmg, true, v1); // µ¥¹ÌÁö Á¦ÇÑ
+                            attacker.damage(chr, refDmg, true, v1); // ë°ë¯¸ì§€ ì œí•œ
                         }
                     }
                 }
@@ -432,7 +432,7 @@ public class PlayerHandler {
             chr.addHP(-chr.getStat().getCurrentMaxHp());
         }
 
-        /* È¦¸® ¸ÅÁ÷½© °¡µå Ä«¿îÆ® Â÷°¨ */
+        /* í™€ë¦¬ ë§¤ì§ì‰˜ ê°€ë“œ ì¹´ìš´íŠ¸ ì°¨ê° */
         if (chr.getBuffedValue(BuffStats.CTS_HolyMagicShell) != null) {
             if (chr.getKeyValue2("HolyMagicShellLifeCount") != 0 && chr.getKeyValue2("HolyMagicShellLifeCount") != -1) {
                 int life = chr.getKeyValue2("HolyMagicShellLifeCount");
@@ -474,16 +474,16 @@ public class PlayerHandler {
         if (damage == -1) {
             if (chr.getJob() / 100 == 4) {
                 fake = 4020002 + ((chr.getJob() / 10 - 40) * 100000);
-            } else if (chr.getJob() == 122) { //°¡µğ¾ğ ÀÌ¸®½º
+            } else if (chr.getJob() == 122) { //ê°€ë””ì–¸ ì´ë¦¬ìŠ¤
                 fake = 1220006;
                 guardianSpiritActivated = true;
             } else if (GameConstants.isMercedes(chr.getJob())) {
                 fake = 23000001;
-            } else if (chr.getJob() == 512) { //°¡µå Å©·¯½¬
+            } else if (chr.getJob() == 512) { //ê°€ë“œ í¬ëŸ¬ì‰¬
                 fake = 5120014;
             }
         }
-        if (damage == 0) { //°¡µå
+        if (damage == 0) { //ê°€ë“œ
             if (chr.getSkillLevel(31110008) > 0) {
                 SkillStatEffect effs = SkillFactory.getSkill(31110008).getEffect(chr.getSkillLevel(31110008));
                 int recHP = (int) (chr.getStat().getCurrentMaxHp() * (effs.getY() / 100.0D));
@@ -495,7 +495,7 @@ public class PlayerHandler {
         }
 
         if (chr.getJob() == 2711 || chr.getJob() == 2712) {
-            if (chr.getSkillLevel(27110007) > 0) { // ¶óÀÌÇÁ Å¸ÀÌ´Ş
+            if (chr.getSkillLevel(27110007) > 0) { // ë¼ì´í”„ íƒ€ì´ë‹¬
                 ISkill skill = SkillFactory.getSkill(27110007);
                 int critical = chr.getSkillLevel(skill);
                 if ((chr.getStat().getHp() / chr.getStat().getCurrentMaxHp()) * 100 < (chr.getStat().getMp() / chr.getStat().getCurrentMaxMp()) * 100) {
@@ -531,7 +531,7 @@ public class PlayerHandler {
                         chr.checkMonsterAggro(attacker);
                         damage -= bouncedamage;
                         chr.getMap().broadcastMessage(chr, MobPacket.damageMonster(oid, bouncedamage), chr.getPosition());
-                        if (GameConstants.isDemonSlayer(chr.getJob())) { //´ÙÅ© ¸®º¥Áö È¿°ú
+                        if (GameConstants.isDemonSlayer(chr.getJob())) { //ë‹¤í¬ ë¦¬ë²¤ì§€ íš¨ê³¼
                             if (chr.getBuffedValue(BuffStats.CTS_PowerGuard, 31101003) != null) {
                                 SkillStatEffect skills = SkillFactory.getSkill(31101003).getEffect(chr.getSkillLevel(31101003));
                                 if (skills.makeChanceResult()) {
@@ -641,7 +641,7 @@ public class PlayerHandler {
                     mpattack = stats.getMp() - 1;
                 }
             }
-            if (chr.getBuffedValue(BuffStats.CTS_Stance, 22181004) != null) { //¿À´Ğ½ºÀÇ ÀÇÁö
+            if (chr.getBuffedValue(BuffStats.CTS_Stance, 22181004) != null) { //ì˜¤ë‹‰ìŠ¤ì˜ ì˜ì§€
                 int level = chr.getSkillLevel(22181004);
                 int lessDaMper = (int) (new CaltechEval("5+d(" + level + "/2)").evaluate());
                 if (hploss > 0) {
@@ -653,7 +653,7 @@ public class PlayerHandler {
                 }
             }
 
-            if (chr.getSkillLevel(1210016) > 0 && (chr.getJob() == 121 || chr.getJob() == 122)) { //ºí·¡½Ì ¾Æ¸Ó
+            if (chr.getSkillLevel(1210016) > 0 && (chr.getJob() == 121 || chr.getJob() == 122)) { //ë¸”ë˜ì‹± ì•„ë¨¸
                 SkillStatEffect effect = SkillFactory.getSkill(1210016).getEffect(chr.getSkillLevel(1210016));
                 if (!chr.skillisCooling(1210016)) {
                     if (effect.makeChanceResult()) {
@@ -1034,7 +1034,7 @@ public class PlayerHandler {
                 break;
             }
 
-            //--------------------------------------------------------------------------------------------------------// ·£´ı ¼ÒÈ¯¹° ½ÃÀÛ
+            //--------------------------------------------------------------------------------------------------------// ëœë¤ ì†Œí™˜ë¬¼ ì‹œì‘
             case 5201012: {
                 if (skillid == 5201012) {
                     switch (Randomizer.nextInt(3)) { // 1 ~ 3
@@ -1055,7 +1055,7 @@ public class PlayerHandler {
                 break;
             }
             case 5210015: {
-                if (skillid == 5210015) { // ¾î¼Àºí Å©·ç
+                if (skillid == 5210015) { // ì–´ì…ˆë¸” í¬ë£¨
                     switch (Randomizer.nextInt(4)) { // 1 ~ 4 
                         case 0:
                             skillid = 5210015;
@@ -1077,15 +1077,15 @@ public class PlayerHandler {
                 break;
             }
             case 23111008: {
-                if (skillid == 23111008) {// ¿¤¸®¸àÆ® ³ªÀÌÆ®
+                if (skillid == 23111008) {// ì—˜ë¦¬ë©˜íŠ¸ ë‚˜ì´íŠ¸
                     switch (Randomizer.nextInt(3)) {
-                        case 0: // ¾óÀ½
+                        case 0: // ì–¼ìŒ
                             skillid = 23111008;
                             break;
-                        case 1: // ºÒ
+                        case 1: // ë¶ˆ
                             skillid = 23111009;
                             break;
-                        case 2: // ¾îµÒ
+                        case 2: // ì–´ë‘ 
                             skillid = 23111010;
                             break;
                     }
@@ -1095,7 +1095,7 @@ public class PlayerHandler {
                 c.getSession().writeAndFlush(MainPacketCreator.resetActions());
                 break;
             }
-            //--------------------------------------------------------------------------------------------------------// ·£´ı ¼ÒÈ¯¹° ³¡
+            //--------------------------------------------------------------------------------------------------------// ëœë¤ ì†Œí™˜ë¬¼ ë
             case 2001009: {
                 if (chr.isActiveBuffedValue(2201009)) {
                     if (chr.getBuffedSkillEffect(BuffStats.CTS_ChillingStep).makeChanceResult()) {
@@ -1113,47 +1113,47 @@ public class PlayerHandler {
                 }
                 break;
             }
-            case 36121002:   //È¦·Î±×·¥ ±×·¡ÇÇÆ¼ : °üÅë
-            case 36121013:   //È¦·Î±×·¥ ±×·¡ÇÇÆ¼ : ¿ªÀå
-            case 36121014: { //È¦·Î±×·¥ ±×·¡ÇÇÆ¼ : Áö¿ø
+            case 36121002:   //í™€ë¡œê·¸ë¨ ê·¸ë˜í”¼í‹° : ê´€í†µ
+            case 36121013:   //í™€ë¡œê·¸ë¨ ê·¸ë˜í”¼í‹° : ì—­ì¥
+            case 36121014: { //í™€ë¡œê·¸ë¨ ê·¸ë˜í”¼í‹° : ì§€ì›
                 Point pos = rh.readPos();
                 MapleSummon summon = new MapleSummon(chr, skillid, pos, SummonMovementType.STATIONARY, System.currentTimeMillis());
                 chr.getMap().spawnSummon(summon, true, 20000);
                 break;
             }
             case 101100100:
-            case 101100101: { //½º·ÎÀ× ¿şÆù 
+            case 101100101: { //ìŠ¤ë¡œì‰ ì›¨í° 
                 Point pos = rh.readPos();
                 final MapleSummon summon = new MapleSummon(chr, skillid, pos, SummonMovementType.ZEROWEAPON, System.currentTimeMillis());
                 chr.getMap().spawnSummon(summon, true, 5000);
                 c.getSession().writeAndFlush(MainPacketCreator.resetActions());
                 break;
             }
-            case 25100009: { //¿©¿ì·É
+            case 25100009: { //ì—¬ìš°ë ¹
                 rh.skip(1);
                 int sn = rh.readInt();
                 c.getPlayer().send(MainPacketCreator.absorbingFG(c.getPlayer().getId(), 25100010, sn));
-                ¿©¿ì·É = 50;
+                ì—¬ìš°ë ¹ = 50;
                 break;
             }
-            case 25120110: // ºÒ¿©¿ì·É
+            case 25120110: // ë¶ˆì—¬ìš°ë ¹
                 rh.skip(1);
                 int fsn = rh.readInt();
                 c.getPlayer().send(MainPacketCreator.absorbingFG(c.getPlayer().getId(), 25120115, fsn));
-                ¿©¿ì·É = 100;
+                ì—¬ìš°ë ¹ = 100;
                 break;
             case 12001027:
-            case 12001028: { //ÆÄÀÌ¾î ¿öÅ©
+            case 12001028: { //íŒŒì´ì–´ ì›Œí¬
                 c.getPlayer().getMap().broadcastMessage(MainPacketCreator.FireWork(chr));
                 break;
             }
-            case 12101025: { //ÆÄÀÌ¾î ºí¸µÅ©
+            case 12101025: { //íŒŒì´ì–´ ë¸”ë§í¬
                 Point position = rh.readPos();
                 c.getPlayer().send(MainPacketCreator.FireBlink(chr.getId(), position));
                 break;
             }
             case 12120013:
-            case 12120014: { // ½ºÇÇ¸´ ¿Àºê ÇÃ·¹ÀÓ
+            case 12120014: { // ìŠ¤í”¼ë¦¿ ì˜¤ë¸Œ í”Œë ˆì„
                 rh.skip(7);
                 if (chr.getSkillLevel(skillid) <= 0) {
                     chr.teachSkill(skillid, (byte) 30, (byte) 30);
@@ -1170,13 +1170,13 @@ public class PlayerHandler {
                 tosummons.addHP(Integer.MAX_VALUE);
                 break;
             }
-            case 1311013:   //ºñÈ¦´õ µµ¹Ì³ÍÆ®
-            case 1311014: { //ºñÈ¦´õ ¼îÅ©
+            case 1311013:   //ë¹„í™€ë” ë„ë¯¸ë„ŒíŠ¸
+            case 1311014: { //ë¹„í™€ë” ì‡¼í¬
                 c.getSession().write(AdventurerSkill.giveBeholderDominant(skillid == 1311013 ? true : false));
                 c.getSession().write(MainPacketCreator.resetActions());
                 break;
             }
-            case 65111100: { //¼Ò¿ï½ÃÄ¿
+            case 65111100: { //ì†Œìš¸ì‹œì»¤
                 rh.skip(4);
                 int soulnum = rh.readByte();
                 int scheck = 0;
@@ -1193,11 +1193,11 @@ public class PlayerHandler {
                 c.send(AngelicBusterSkill.showRechargeEffect());
                 break;
             }
-            case 2121052:    // ¸Ş±âµµ ÇÃ·¹ÀÓ
-            case 31221001:   // ½¯µå Ã¼ÀÌ½Ì
-            case 35101002:   // È£¹Ö ¹Ì»çÀÏ 
-            case 35110017:    // ¾îµå¹ê½ºÆ® È£¹Ö ¹Ì»çÀÏ
-            case 36001005: { // ÇÉÆ÷ÀÎÆ® ·ÎÄÏ
+            case 2121052:    // ë©”ê¸°ë„ í”Œë ˆì„
+            case 31221001:   // ì‰´ë“œ ì²´ì´ì‹±
+            case 35101002:   // í˜¸ë° ë¯¸ì‚¬ì¼ 
+            case 35110017:    // ì–´ë“œë°´ìŠ¤íŠ¸ í˜¸ë° ë¯¸ì‚¬ì¼
+            case 36001005: { // í•€í¬ì¸íŠ¸ ë¡œì¼“
                 List<Integer> moblist = new ArrayList<Integer>();
                 //CA FB F4 18 5C 5D 20 00 01 01 A2 86 01 00 76 02 00
                 if (skillid == 31221001) {
@@ -1236,11 +1236,11 @@ public class PlayerHandler {
                 }
                 break;
             }
-            case 12111022: { //¸¶¿¤½ºÆ®·ë
+            case 12111022: { //ë§ˆì—˜ìŠ¤íŠ¸ë£¸
                 Point mpos = rh.readPos();
                 rh.skip(3);
                 int mobid = rh.readInt();
-                // ¸¶¿¤½ºÆ®·Ò ½ÃÀü½Ã ÀÌÀü¿¡ ¼ÒÈ¯µÈ ¸¶¿¤½ºÆ®·Ò »èÁ¦ 
+                // ë§ˆì—˜ìŠ¤íŠ¸ë¡¬ ì‹œì „ì‹œ ì´ì „ì— ì†Œí™˜ëœ ë§ˆì—˜ìŠ¤íŠ¸ë¡¬ ì‚­ì œ 
                 List<MapleSummon> maelstrom = new ArrayList<>();
                 chr.getSummons().values().stream().filter(sum -> sum.left == 12111022).forEach(s -> maelstrom.add(s.right));
                 maelstrom.forEach(sum -> {
@@ -1257,17 +1257,17 @@ public class PlayerHandler {
                 chr.ea();
                 break;
             }
-            case 12101022: { // ¹ø ¾Ø ·¹½ºÆ®
+            case 12101022: { // ë²ˆ ì•¤ ë ˆìŠ¤íŠ¸
                 c.getPlayer().addMP((int) (c.getPlayer().getStat().getCurrentMaxMp() * 60 / 100.0D));
                 c.getPlayer().addCooldown(skillid, 0, System.currentTimeMillis());
                 c.getSession().writeAndFlush(MainPacketCreator.skillCooldown(skillid, 0, chr.getBuffedValue(BuffStats.CTS_StrikerHyperElectric) != null, c.getPlayer().getBuffedValue(BuffStats.CTS_FixCoolTime) != null, chr.isGM()));
                 break;
             }
-            case 4211006: { //¸Ş¼Ò ÀÍ½ºÇÃ·ÎÁ¯
+            case 4211006: { //ë©”ì†Œ ìµìŠ¤í”Œë¡œì ¼
                 rh.skip(3);
                 List<MapleMapObject> drops = c.getPlayer().getMap().getMapObjectsInRange(c.getPlayer().getPosition(), 320000, Arrays.asList(MapleMapObjectType.ITEM));
                 final List<MapleWorldMapItem> allmesos = new ArrayList<>();
-                for (int i = 0; i < drops.size(); i++) { //¹üÀ§ ³»¿¡ ÀÖ´Â 1¸Ş¼ÒÀÌ¸ç, ¼ÒÀ¯±ÇÀÌ ÀÚ½Å¿¡°Ô ÀÖ´Â ¸Ş¼Ò
+                for (int i = 0; i < drops.size(); i++) { //ë²”ìœ„ ë‚´ì— ìˆëŠ” 1ë©”ì†Œì´ë©°, ì†Œìœ ê¶Œì´ ìì‹ ì—ê²Œ ìˆëŠ” ë©”ì†Œ
                     MapleWorldMapItem drop = (MapleWorldMapItem) drops.get(i);
                     if (drop.getMeso() == 1 && drop.getOwner() == c.getPlayer().getId()) {
                         allmesos.add(drop);
@@ -1357,10 +1357,10 @@ public class PlayerHandler {
             case 27121054:
                 effect.applyequilibriumBuff(chr, Randomizer.nextBoolean());
                 break;
-            /*case 32001014: // µ¥½º
-            case 32100010: // µ¥½º ÄÁÆ®·¢Æ®
-            case 32110017: // µ¥½º ÄÁÆ®·¢Æ®2
-            case 32120019:  // µ¥½º ÄÁÆ®·¢Æ®3 
+            /*case 32001014: // ë°ìŠ¤
+            case 32100010: // ë°ìŠ¤ ì»¨íŠ¸ë™íŠ¸
+            case 32110017: // ë°ìŠ¤ ì»¨íŠ¸ë™íŠ¸2
+            case 32120019:  // ë°ìŠ¤ ì»¨íŠ¸ë™íŠ¸3 
                 if (chr.getBuffedValue(BuffStats.CTS_BMageDeath) != null) {
                     chr.cancelBuffStats(skillid, BuffStats.CTS_BMageDeath);
                     return;
@@ -1419,7 +1419,7 @@ public class PlayerHandler {
                         }
                     }
                     break;
-                case 30001061: { //Æ÷È¹
+                case 30001061: { //í¬íš
                     int mobid = rh.readInt();
                     MapleMonster mob = chr.getMap().getMonsterByOid(mobid);
                     if (mob.getHp() > mob.getMobMaxHp() / 2) {
@@ -1440,7 +1440,7 @@ public class PlayerHandler {
                     chr.send(MainPacketCreator.updateJaguar(chr));
                     break;
                 }
-                case 35111002: { // ¸¶±×³×Æ½ ÇÊµå
+                case 35111002: { // ë§ˆê·¸ë„¤í‹± í•„ë“œ
                     byte entry = rh.readByte(); //0,1,2 (first:0 second:1 third:2)
                     if (entry == 2) {
                         rh.skip(8);
@@ -1500,7 +1500,7 @@ public class PlayerHandler {
                     }
                     if (effect.isMagicDoor() || effect.isMechDoor()) { // Mystic Door
                         if (effect.isMagicDoor() && c.getPlayer().getParty() == null) {
-                            c.getPlayer().dropMessage(5, "ÆÄÆ¼°¡ ¾øÀ¸¸é ¹Ì½ºÆ½ µµ¾î ½ºÅ³À» »ç¿ëÇÏ½Ç ¼ö ¾ø½À´Ï´Ù.");
+                            c.getPlayer().dropMessage(5, "íŒŒí‹°ê°€ ì—†ìœ¼ë©´ ë¯¸ìŠ¤í‹± ë„ì–´ ìŠ¤í‚¬ì„ ì‚¬ìš©í•˜ì‹¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                             c.getPlayer().send(MainPacketCreator.resetActions());
                             return;
                         }
@@ -1518,7 +1518,7 @@ public class PlayerHandler {
                         if (!FieldLimitType.MysticDoor.check(chr.getMap().getFieldLimit()) || effect.isMechDoor()) {
                             effect.applyTo(c.getPlayer(), pos);
                         } else {
-                            chr.dropMessage(5, "ÇöÀç À§Ä¡¿¡¼± ¹Ì½ºÆ½ µµ¾î¸¦ ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+                            chr.dropMessage(5, "í˜„ì¬ ìœ„ì¹˜ì—ì„  ë¯¸ìŠ¤í‹± ë„ì–´ë¥¼ ì†Œí™˜í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                             chr.send(MainPacketCreator.resetActions());
                         }
                     } else {
@@ -1604,8 +1604,8 @@ public class PlayerHandler {
         ISkill skill = null;
         SkillStatEffect effect = null;
         if (GameConstants.SurfaceDamageSkillLink(attack.skill)) {
-            for (int i = 0; i < attack.allDamage.size(); ++i) { //¸¶¸®¼ö
-                for (int x = 0; x < attack.allDamage.get(i).attack.size(); ++x) { //µ©Áö¼ö
+            for (int i = 0; i < attack.allDamage.size(); ++i) { //ë§ˆë¦¬ìˆ˜
+                for (int x = 0; x < attack.allDamage.get(i).attack.size(); ++x) { //ë€ì§€ìˆ˜
                     MapleMonster Target = chr.getMap().getMonsterByOid(attack.allDamage.get(i).objectid);
                     Target.damage(chr, attack.allDamage.get(i).attack.get(x).left, false, 0);
                     if (Target.getHp() <= 0) {
@@ -1617,7 +1617,7 @@ public class PlayerHandler {
         if (attack.skill != 0) {
             skill = SkillFactory.getSkill(attack.skill);
             effect = attack.getAttackEffect(chr, skillLevel, skill);
-            if (attack.skill == 61120007 || attack.skill == 61121217) { // ¾îµå¹ê½ºµå Àª ¿Àºê ¼Òµå (Æ®·£½ºÇÇ±Ô·¹ÀÌ¼Ç
+            if (attack.skill == 61120007 || attack.skill == 61121217) { // ì–´ë“œë°´ìŠ¤ë“œ ìœŒ ì˜¤ë¸Œ ì†Œë“œ (íŠ¸ëœìŠ¤í”¼ê·œë ˆì´ì…˜
                 DamageParse.applyAttack(attack, skill, c.getPlayer(), attackCount, effect, mirror ? AttackType.NON_RANGED_WITH_MIRROR : AttackType.NON_RANGED);
                 chr.cancelEffect(chr.getBuffedSkillEffect(BuffStats.CTS_StopForceAtomInfo), false, chr.getBuffedStarttime(BuffStats.CTS_StopForceAtomInfo, attack.skill));
                 SkillStatEffect realEffect = SkillFactory.getSkill(61101002).getEffect(c.getPlayer().getSkillLevel(61101002));
@@ -1651,7 +1651,7 @@ public class PlayerHandler {
                     chr.addCooldown(attack.skill, System.currentTimeMillis(), SkillFactory.getSkill(attack.skill).getEffect(skillLevel).getCooldown());
                 }
             }
-            /*if (GameConstants.isPinkBean(chr.getJob())) { // Ä¡¿ì¾¾ :: ÇÎÅ©ºó ¿ä¿ä ±¸Çö
+            /*if (GameConstants.isPinkBean(chr.getJob())) { // ì¹˜ìš°ì”¨ :: í•‘í¬ë¹ˆ ìš”ìš” êµ¬í˜„
                 YoYoCount(c, true);
             }*/
             if (chr.getJob() >= 510 && chr.getJob() <= 512) {//Byper
@@ -1661,7 +1661,7 @@ public class PlayerHandler {
                         MapleMonster mmo = chr.getMap().getMonsterByOid(attack.allDamage.get(i).objectid);
                         if (mmo != null) {
                             if (mmo.getStats().isBoss()) {
-                                ChargeEnergy *= 2;//º¸½º°ø°İ½Ã 2¹èÃæÀü
+                                ChargeEnergy *= 2;//ë³´ìŠ¤ê³µê²©ì‹œ 2ë°°ì¶©ì „
                             }
                         }
                     }
@@ -1679,7 +1679,7 @@ public class PlayerHandler {
                     chr.send(MainPacketCreator.OnOffFlipTheCoin(true));
                 }
             }
-            if (attack.skill == 31111003) { //ºí·¯µğ ·¹ÀÌºì ÇÇÈ¸º¹
+            if (attack.skill == 31111003) { //ë¸”ëŸ¬ë”” ë ˆì´ë¸ í”¼íšŒë³µ
                 int recover = (int) (chr.getStat().getCurrentMaxHp() * (effect.getX() / 100.0D));
                 chr.addHP(recover);
             }
@@ -1794,8 +1794,8 @@ public class PlayerHandler {
             bulletCount = effect.getBulletCount();
         }
         if (GameConstants.SurfaceDamageSkillLink(attack.skill)) {
-            for (int i = 0; i < attack.allDamage.size(); ++i) { //¸¶¸®¼ö
-                for (int x = 0; x < attack.allDamage.get(i).attack.size(); ++x) { //µ©Áö¼ö
+            for (int i = 0; i < attack.allDamage.size(); ++i) { //ë§ˆë¦¬ìˆ˜
+                for (int x = 0; x < attack.allDamage.get(i).attack.size(); ++x) { //ë€ì§€ìˆ˜
                     MapleMonster Target = chr.getMap().getMonsterByOid(attack.allDamage.get(i).objectid);
                     Target.damage(chr, attack.allDamage.get(i).attack.get(x).left, false, 0);
                     if (Target.getHp() <= 0) {
@@ -1860,7 +1860,7 @@ public class PlayerHandler {
                 }
                 termed = true;
             }
-            ///////////////////Ä³½Ã Ç¥Ã¢ ¸ÖÆ¼//////////////////////////////
+            ///////////////////ìºì‹œ í‘œì°½ ë©€í‹°//////////////////////////////
             for (IItem item : chr.getInventory(MapleInventoryType.CASH)) {
                 if ((item.getItemId() / 1000) == 5021) {
                     visProjectile = item.getItemId();
@@ -1927,8 +1927,8 @@ public class PlayerHandler {
         SkillStatEffect effect = attack.getAttackEffect(chr, skillLevel, skill);
         MapleMap map = chr.getMap();
         if (GameConstants.SurfaceDamageSkillLink(attack.skill)) {
-            for (int i = 0; i < attack.allDamage.size(); ++i) { //¸¶¸®¼ö
-                for (int x = 0; x < attack.allDamage.get(i).attack.size(); ++x) { //µ©Áö¼ö
+            for (int i = 0; i < attack.allDamage.size(); ++i) { //ë§ˆë¦¬ìˆ˜
+                for (int x = 0; x < attack.allDamage.get(i).attack.size(); ++x) { //ë€ì§€ìˆ˜
                     MapleMonster Target = chr.getMap().getMonsterByOid(attack.allDamage.get(i).objectid);
                     Target.damage(chr, attack.allDamage.get(i).attack.get(x).left, false, 0);
                     if (Target.getHp() <= 0) {
@@ -1950,20 +1950,20 @@ public class PlayerHandler {
 
         chr.getMap().broadcastMessage(chr, MainPacketCreator.attack(RecvPacketOpcode.MAGIC_ATTACK, chr, chr.getId(), attack.tbyte, attack.skill, skillLevel, attack.display, attack.animation, attack.speed, attack.allDamage, attack.position, (byte) 0, attack.charge, chr.getLevel(), 0), chr.getPosition());
         switch (attack.skill) {
-            case 27101100: // ½ÇÇÇµå ·£¼­
-            case 27101202: // º¸ÀÌµå ÇÁ·¹¼Å
-            case 27111100: // ½ºÆåÆ®·² ¶óÀÌÆ®
-            case 27111202: // ³ì½ºÇÇ¾î
-            case 27121100: // ¶óÀÌÆ® ¸®ÇÃ·º¼Ç
-            case 27121202: // ¾ÆÆ÷Ä®¸³½º
+            case 27101100: // ì‹¤í”¼ë“œ ëœì„œ
+            case 27101202: // ë³´ì´ë“œ í”„ë ˆì…”
+            case 27111100: // ìŠ¤í™íŠ¸ëŸ´ ë¼ì´íŠ¸
+            case 27111202: // ë…¹ìŠ¤í”¼ì–´
+            case 27121100: // ë¼ì´íŠ¸ ë¦¬í”Œë ‰ì…˜
+            case 27121202: // ì•„í¬ì¹¼ë¦½ìŠ¤
             case 2121006:
             case 2221003:
             case 2221006:
             case 2221007:
             case 2221012:
-            case 2321007: // ¿£Á© ·¹ÀÌ
-            case 2121003: // ¹Ì½ºÆ® ÀÌ·´¼Ç
-            case 22181002: //´ÙÅ©Æ÷±×
+            case 2321007: // ì—”ì ¤ ë ˆì´
+            case 2121003: // ë¯¸ìŠ¤íŠ¸ ì´ëŸ½ì…˜
+            case 22181002: //ë‹¤í¬í¬ê·¸
                 bulletCount = effect.getAttackCount();
                 DamageParse.applyAttack(attack, skill, chr, bulletCount, effect, AttackType.RANGED);
                 break;
@@ -2091,7 +2091,7 @@ public class PlayerHandler {
                 rh.skip(4);
             }
             if (chr.getMapId() == 109090300) {
-                chr.dropMessage(1, "¼ú·¡Àâ±â°¡ ´Ù ³¡³¯ ¶§±îÁö ±â´Ù·ÁÁÖ¼¼¿ä! º¸»óÀÖ½À´Ï´Ù.");
+                chr.dropMessage(1, "ìˆ ë˜ì¡ê¸°ê°€ ë‹¤ ëë‚  ë•Œê¹Œì§€ ê¸°ë‹¤ë ¤ì£¼ì„¸ìš”! ë³´ìƒìˆìŠµë‹ˆë‹¤.");
                 c.getSession().writeAndFlush(MainPacketCreator.resetActions());
                 return;
             }
@@ -2177,7 +2177,7 @@ public class PlayerHandler {
 
         if (c.getChannel() != channel) {
             if (c.getPlayer().getLastCC() + 10000 > System.currentTimeMillis()) {
-                c.getPlayer().message(5, "Ã¤³Î ÀÌµ¿Àº 10ÃÊ¸¶´Ù °¡´ÉÇÕ´Ï´Ù.");
+                c.getPlayer().message(5, "ì±„ë„ ì´ë™ì€ 10ì´ˆë§ˆë‹¤ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
                 c.getSession().writeAndFlush(MainPacketCreator.resetActions());
                 return;
             }
@@ -2195,7 +2195,7 @@ public class PlayerHandler {
             case 1:
                 MakerItemFactory.MakerItemCreateEntry recipe = MakerItemFactory.getItemCreateEntry(toCreate);
                 if (!canCreate(c, recipe) || c.getPlayer().getInventory(ii.getInventoryType(toCreate)).isFull()) {
-                    c.getPlayer().dropMessage(1, "ÇØ´ç ¾ÆÀÌÅÛÀÌ ¾ø°Å³ª ÀÎº¥Åä¸®°¡ ²Ë Ã¡½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(1, "í•´ë‹¹ ì•„ì´í…œì´ ì—†ê±°ë‚˜ ì¸ë²¤í† ë¦¬ê°€ ê½‰ ì°¼ìŠµë‹ˆë‹¤.");
                     return;
                 }
                 c.getPlayer().gainMeso(-recipe.getCost(), false);
@@ -2237,7 +2237,7 @@ public class PlayerHandler {
                         InventoryManipulator.addFromDrop(c, item, true);
                         c.getPlayer().getMap().broadcastMessage(MainPacketCreator.getScrollEffect(c.getPlayer().getId(), IEquip.ScrollResult.SUCCESS));
                         c.getPlayer().getMap().broadcastMessage(MainPacketCreator.showSpecialEffect(0x12)); //1.2.251+, (+1)
-                        c.getPlayer().dropMessage(1, "Á¦ÀÛ ¼º°øÇÏ¿´½À´Ï´Ù.");
+                        c.getPlayer().dropMessage(1, "ì œì‘ ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.");
                     } else {
                         c.getPlayer().getMap().broadcastMessage(MainPacketCreator.getScrollEffect(c.getPlayer().getId(), IEquip.ScrollResult.FAIL));
                         c.getPlayer().getMap().broadcastMessage(MainPacketCreator.showSpecialEffect(0x12)); //1.2.251+, (+1)
@@ -2302,7 +2302,7 @@ public class PlayerHandler {
     }
 
     public static void VoydPressure(ReadingMaple rh, MapleCharacter chr) {
-        chr.getMap().broadcastMessage(chr, MainPacketCreator.showVoydPressure(chr.getId(), rh.toString(true).replace("¸®½Ãºê µ¥ÀÌÅÍ : ", "")), false);
+        chr.getMap().broadcastMessage(chr, MainPacketCreator.showVoydPressure(chr.getId(), rh.toString(true).replace("ë¦¬ì‹œë¸Œ ë°ì´í„° : ", "")), false);
     }
 
     //37 01 04 00
@@ -2394,16 +2394,16 @@ public class PlayerHandler {
 
     public static void warpToStarplanet(final byte action, final ReadingMaple rh, final MapleCharacter chr) {
         if (action == 2) {
-            rh.skip(1); //¾Ë ¼ö ¾øÀ½.
-            int mapcode = rh.readInt(); //ÀÌÀü¿¡ ÀÖ´Â ¸ÊÀÇ ÄÚµå.
-            int direction = rh.readByte(); //ÇöÀç ½ºÅ¸ÇÃ·¡´Ö ¸ÊÀÌ¸é 1, ¾Æ´Ï¸é 0.
+            rh.skip(1); //ì•Œ ìˆ˜ ì—†ìŒ.
+            int mapcode = rh.readInt(); //ì´ì „ì— ìˆëŠ” ë§µì˜ ì½”ë“œ.
+            int direction = rh.readByte(); //í˜„ì¬ ìŠ¤íƒ€í”Œë˜ë‹› ë§µì´ë©´ 1, ì•„ë‹ˆë©´ 0.
 
             if (direction == 1) {
-                chr.dropMessage(5, "[¾Ë¸²] " + ServerConstants.serverName + "ÀÇ ±¤ÀåÀÎ ½ºÅ¸ÇÃ·¡´Ö¸ÊÀ¸·Î ÀÌµ¿ÇÕ´Ï´Ù.");
+                chr.dropMessage(5, "[ì•Œë¦¼] " + ServerConstants.serverName + "ì˜ ê´‘ì¥ì¸ ìŠ¤íƒ€í”Œë˜ë‹›ë§µìœ¼ë¡œ ì´ë™í•©ë‹ˆë‹¤.");
                 MapleMap map = chr.getClient().getChannelServer().getMapFactory().getMap(340000100);
                 chr.changeMap(map, map.getPortal(0));
             } else {
-                chr.dropMessage(5, "[¾Ë¸²] ±¤ÀåÀ¸·Î ÀÌµ¿ÇÏ±â ÀÌÀüÀÇ ¸ÊÀ¸·Î ´Ù½Ã ÀÌµ¿ÇÕ´Ï´Ù.");
+                chr.dropMessage(5, "[ì•Œë¦¼] ê´‘ì¥ìœ¼ë¡œ ì´ë™í•˜ê¸° ì´ì „ì˜ ë§µìœ¼ë¡œ ë‹¤ì‹œ ì´ë™í•©ë‹ˆë‹¤.");
                 MapleMap map = chr.getClient().getChannelServer().getMapFactory().getMap(chr.getKeyValue2("Return_to_Starplanet"));
                 chr.changeMap(map, map.getPortal(0));
             }
@@ -2499,8 +2499,8 @@ public class PlayerHandler {
     }
 
     public static final void ChangeInner(ReadingMaple rh, MapleClient ha) {
-        int rank = rh.readInt(); //°íÁ¤ÇÑ µî±Ş
-        int count = rh.readInt(); //°íÁ¤ÇÑ ¾îºô¸®Æ¼ °¹¼ö
+        int rank = rh.readInt(); //ê³ ì •í•œ ë“±ê¸‰
+        int count = rh.readInt(); //ê³ ì •í•œ ì–´ë¹Œë¦¬í‹° ê°¯ìˆ˜
         int consume = 100 + (rank == 1 ? 400 : rank == 2 ? 5000 : rank == 3 ? 10000 : 0) + (count == 1 ? 3000 : count == 2 ? 8000 : 0);
         ha.getPlayer().setInnerExp(ha.getPlayer().getInnerExp() - consume);
         ha.getPlayer().getClient().getSession().writeAndFlush(MainPacketCreator.updateInnerExp(ha.getPlayer().getInnerExp()));
@@ -2535,7 +2535,7 @@ public class PlayerHandler {
             ha.getPlayer().changeSkillLevel(SkillFactory.getSkill(isvh.getSkillId()), isvh.getSkillLevel(), isvh.getSkillLevel());
             ha.getPlayer().getClient().getSession().writeAndFlush(MainPacketCreator.updateInnerAbility(isvh, ha.getPlayer().getInnerSkills().size(), ha.getPlayer().getInnerSkills().size() == 3));
         }
-        ha.getPlayer().getClient().getSession().writeAndFlush(UIPacket.showPopupMessage("¾îºô¸®Æ¼ Àç¼³Á¤¿¡ ¼º°ø ÇÏ¿´½À´Ï´Ù."));
+        ha.getPlayer().getClient().getSession().writeAndFlush(UIPacket.showPopupMessage("ì–´ë¹Œë¦¬í‹° ì¬ì„¤ì •ì— ì„±ê³µ í•˜ì˜€ìŠµë‹ˆë‹¤."));
     }
 
     public static int getRank() {
@@ -2560,18 +2560,18 @@ public class PlayerHandler {
         }
         if (mist.getSourceSkill().getId() == skillId) {
             SkillStatEffect effect = mist.getSource();
-            // MP #mpCon ¼Òºñ, »ç¿ë ½Ã HP #x% È¸º¹, ÃÑ #y¹ø »ç¿ë °¡´É, À¯Áö ½Ã°£ #timeÃÊ. Àç»ç¿ë ´ë±â½Ã°£ #cooltimeÃÊ
+            // MP #mpCon ì†Œë¹„, ì‚¬ìš© ì‹œ HP #x% íšŒë³µ, ì´ #yë²ˆ ì‚¬ìš© ê°€ëŠ¥, ìœ ì§€ ì‹œê°„ #timeì´ˆ. ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ #cooltimeì´ˆ
             if (mist.getUseEffectCount() > 0) {
                 int incHpPer = effect.getX();
                 double incHp = player.getStat().getMaxHp() * (incHpPer * 0.01);
 
                 player.addHP((int) incHp);
-                mist.decrementUseEffectCount(); // »ç¿ë °¡´ÉÈ½¼ö °¨¼Ò
+                mist.decrementUseEffectCount(); // ì‚¬ìš© ê°€ëŠ¥íšŸìˆ˜ ê°ì†Œ
                 if (player.isGM()) {
-                    player.dropMessage(5, "[µğ¹ö±×] incHp : " + incHp + ", ³²Àº »ç¿ë È½¼ö : " + mist.getUseEffectCount());
+                    player.dropMessage(5, "[ë””ë²„ê·¸] incHp : " + incHp + ", ë‚¨ì€ ì‚¬ìš© íšŸìˆ˜ : " + mist.getUseEffectCount());
                 }
             } else {
-                player.dropMessage(5, "»ç¿ë °¡´ÉÇÑ È½¼ö¸¦ ¸ğµÎ »ç¿ëÇÏ¿© »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.");
+                player.dropMessage(5, "ì‚¬ìš© ê°€ëŠ¥í•œ íšŸìˆ˜ë¥¼ ëª¨ë‘ ì‚¬ìš©í•˜ì—¬ ì‚¬ìš©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
             }
         }
         c.getSession().writeAndFlush(MainPacketCreator.resetActions());
@@ -2595,7 +2595,7 @@ public class PlayerHandler {
 
     public static void mistSkill(ReadingMaple rh, MapleCharacter chr) {
         int duration = 0;
-        final int skillId = rh.readInt(); //Ä¥¸µ ½ºÅÜ, ÀÌ±×³ªÀÌÆ®
+        final int skillId = rh.readInt(); //ì¹ ë§ ìŠ¤í…, ì´ê·¸ë‚˜ì´íŠ¸
         if (skillId == 2100010) {
             duration = rh.readInt(); //300 or 350.
         }
@@ -2681,13 +2681,13 @@ public class PlayerHandler {
     public static final void UserDamageSkinSaveRequest(final ReadingMaple rm, final MapleClient c) {
         byte active = rm.readByte();
         switch (active) {
-            case 0x00: { // ÀúÀå
+            case 0x00: { // ì €ì¥
                 c.getPlayer().saveDamageSkin(c, GameConstants.getDamageSkinItemByNumber(c.getPlayer().getDamageSkin()), active);
                 c.send(MainPacketCreator.resetActions(c.getPlayer()));
                 break;
             }
 
-            case 0x02: { // º¯°æ
+            case 0x02: { // ë³€ê²½
                 int skinnumber = rm.readShort();
                 MapleQuest quest = MapleQuest.getInstance(7291);
                 MapleQuestStatus queststatus = new MapleQuestStatus(quest, (byte) 1);
@@ -2695,7 +2695,7 @@ public class PlayerHandler {
                 queststatus.setCustomData(skinString == null ? "0" : skinString);
                 c.getPlayer().updateQuest(queststatus);
                 c.getPlayer().getMap().broadcastMessage(c.getPlayer(), MainPacketCreator.setDamageSkin(c.getPlayer(), skinnumber), false);
-                c.send(MainPacketCreator.showQuestMessage("ÀúÀåµÇÀÖ´ø " + ItemInformation.getInstance().getName(GameConstants.getDamageSkinItemByNumber(skinnumber)) + "À¸·Î ½ºÅ²ÀÌ º¯°æ µÇ¾ú½À´Ï´Ù."));
+                c.send(MainPacketCreator.showQuestMessage("ì €ì¥ë˜ìˆë˜ " + ItemInformation.getInstance().getName(GameConstants.getDamageSkinItemByNumber(skinnumber)) + "ìœ¼ë¡œ ìŠ¤í‚¨ì´ ë³€ê²½ ë˜ì—ˆìŠµë‹ˆë‹¤."));
                 break;
             }
 
@@ -2715,7 +2715,7 @@ public class PlayerHandler {
             int cid = rh.readInt();
             rh.skip(4);
             if (c.getPlayer().getLevel() < 70) {
-                c.getPlayer().dropMessage(1, "70 ·¹º§ ÀÌ»óºÎÅÍ Àü½ÂÀÌ °¡´ÉÇÕ´Ï´Ù.");
+                c.getPlayer().dropMessage(1, "70 ë ˆë²¨ ì´ìƒë¶€í„° ì „ìŠ¹ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
                 c.getPlayer().ea();
                 return;
             }
@@ -2734,7 +2734,7 @@ public class PlayerHandler {
             int l = c.getPlayer().getKeyValue2("linkskillTime");
             if ((l != -1) && (l > (int) (System.currentTimeMillis() / 1000L))) {
                 int time = (int) (l - System.currentTimeMillis() / 1000L) / 60 / 60;
-                c.getPlayer().dropMessage(1, "¼³Á¤ÇÏ½Å ½Ã°£ ±âÁØÀ¸·Î 24½Ã°£ ÈÄ¿¡ °¡´ÉÇÕ´Ï´Ù. ¾à" + time + "½Ã°£ÀÌ ³²¾Ò½À´Ï´Ù. ");
+                c.getPlayer().dropMessage(1, "ì„¤ì •í•˜ì‹  ì‹œê°„ ê¸°ì¤€ìœ¼ë¡œ 24ì‹œê°„ í›„ì— ê°€ëŠ¥í•©ë‹ˆë‹¤. ì•½" + time + "ì‹œê°„ì´ ë‚¨ì•˜ìŠµë‹ˆë‹¤. ");
                 c.getPlayer().ea();
                 return;
             }
@@ -2765,7 +2765,7 @@ public class PlayerHandler {
             if (ps.executeUpdate() == 1) {
                 c.getPlayer().send(MainPacketCreator.getLinkedSkill(ssid, cid, pname));
             } else {
-                c.getPlayer().dropMessage(1, "DB µî·Ï¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù. °ü¸®ÀÚ¿¡°Ô ¹®ÀÇÇØÁÖ¼¼¿ä.");
+                c.getPlayer().dropMessage(1, "DB ë“±ë¡ì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤. ê´€ë¦¬ìì—ê²Œ ë¬¸ì˜í•´ì£¼ì„¸ìš”.");
             }
             ps.close();
             con = null;
@@ -2778,7 +2778,7 @@ public class PlayerHandler {
 
     public static void OnMemoInGameRequest(final ReadingMaple r, final MapleClient c) {
         if (c.getPlayer().getMeso() < 10000) {
-            c.getPlayer().dropMessage(1, "¸Ş¼Ò°¡ ºÎÁ· ÇÕ´Ï´Ù.");
+            c.getPlayer().dropMessage(1, "ë©”ì†Œê°€ ë¶€ì¡± í•©ë‹ˆë‹¤.");
             return;
         }
         int v1 = r.readByte();
@@ -2796,7 +2796,7 @@ public class PlayerHandler {
         }
         String t = r.readMapleAsciiString();
         c.getPlayer().sendNote(name, t);
-        c.getPlayer().dropMessage(1, name + "´Ô¿¡°Ô ÂÊÁö¸¦ º¸³Â½À´Ï´Ù.");
+        c.getPlayer().dropMessage(1, name + "ë‹˜ì—ê²Œ ìª½ì§€ë¥¼ ë³´ëƒˆìŠµë‹ˆë‹¤.");
     }
 
     public static void ChangeMeisterBillMap(final ReadingMaple rh, final MapleClient c) {
@@ -2807,7 +2807,7 @@ public class PlayerHandler {
     public static void NameChange(ReadingMaple rp, MapleClient c) {
         final short type = rp.readShort();
         //if (type == 27) {
-        c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "´Ğ³×ÀÓ º¯°æ½ÅÃ»ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù. Ä³¸¯ÅÍ ¼±ÅÃ Ã¢¿¡¼­ ´Ğ³×ÀÓÀ» º¯°æ ÇÒ ¼ö ÀÖ½À´Ï´Ù."));
+        c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "ë‹‰ë„¤ì„ ë³€ê²½ì‹ ì²­ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤. ìºë¦­í„° ì„ íƒ ì°½ì—ì„œ ë‹‰ë„¤ì„ì„ ë³€ê²½ í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤."));
         c.getSession().writeAndFlush(MainPacketCreator.resetActions());
         c.getPlayer().gainItem(rp.readInt(), (short) -1, false, -1, "");
         c.setNameChangeValue(1, c.getPlayer().getAccountID());
@@ -2819,15 +2819,15 @@ public class PlayerHandler {
         final String beforeName = rp.readMapleAsciiString();
         final String afterName = rp.readMapleAsciiString();
         if (c.getNameChangeValue() == 0) {
-            c.send(MainPacketCreator.serverNotice(1, "ÀÌ¹Ì ´Ğ³×ÀÓÀ» º¯°æ ÇÏ¿´½À´Ï´Ù."));
+            c.send(MainPacketCreator.serverNotice(1, "ì´ë¯¸ ë‹‰ë„¤ì„ì„ ë³€ê²½ í•˜ì˜€ìŠµë‹ˆë‹¤."));
         } else if (beforeName.equals(afterName)) {
-            c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "ÀÌÀü°ú °°Àº ´Ğ³×ÀÓÀ¸·Î´Â º¯°æ ÇÒ ¼ö ¾ø½À´Ï´Ù."));
+            c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "ì´ì „ê³¼ ê°™ì€ ë‹‰ë„¤ì„ìœ¼ë¡œëŠ” ë³€ê²½ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤."));
         } else if (MapleCharacterUtil.canCreateChar(afterName)) {
             c.setCharName(afterName, cid);
             c.setNameChangeValue(0, c.getAccID());
-            c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "´Ğ³×ÀÓ º¯°æÀ» ¿Ï·á ÇÏ¿´½À´Ï´Ù. ·Î±×ÀÎÀ» ´Ù½Ã ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù."));
+            c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "ë‹‰ë„¤ì„ ë³€ê²½ì„ ì™„ë£Œ í•˜ì˜€ìŠµë‹ˆë‹¤. ë¡œê·¸ì¸ì„ ë‹¤ì‹œ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤."));
         } else {
-            c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "[" + afterName + "] À¸·Î´Â º¯°æ ÇÒ ¼ö ¾ø½À´Ï´Ù."));
+            c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "[" + afterName + "] ìœ¼ë¡œëŠ” ë³€ê²½ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤."));
         }
         c.send(LoginPacket.getLoginFailed(20));
     }
@@ -2865,7 +2865,7 @@ public class PlayerHandler {
             }
             final SkillStatEffect effect = SkillFactory.getSkill(131001010).getEffect(c.getPlayer().getSkillLevel(131001010));
             c.getSession().writeAndFlush(MainPacketCreator.giveBuff(131001010, effect.getDuration(), Collections.singletonList(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PinkbeanYoYoStack, c.getPlayer().acaneAim, false)), SkillFactory.getSkill(131001010).getEffect(c.getPlayer().getSkillLevel(131001010)), null, SkillFactory.getSkill(131001010).getAnimationTime(), c.getPlayer()));
-            c.getPlayer().dropMessage(6, "[ÇÎÅ©ºó] ¿ä¿ä ÃæÀü");
+            c.getPlayer().dropMessage(6, "[í•‘í¬ë¹ˆ] ìš”ìš” ì¶©ì „");
         }
     }
 
@@ -2973,9 +2973,9 @@ public class PlayerHandler {
                 final int n = ((byte) list.get(k).getRight() == 0) ? 1 : 0;
                 c.getPlayer().dropMessage(6, n + "");
                 if (n == 1) {
-                    c.getPlayer().Message(8, "[ARGON] " + SkillFactory.getSkillName(skillid) + "¿¡ ´ëÇÏ¿© Ä¿¸àµåÅ° »ç¿ëÀÌ ±İÁö µË´Ï´Ù..");
+                    c.getPlayer().Message(8, "[ARGON] " + SkillFactory.getSkillName(skillid) + "ì— ëŒ€í•˜ì—¬ ì»¤ë©˜ë“œí‚¤ ì‚¬ìš©ì´ ê¸ˆì§€ ë©ë‹ˆë‹¤..");
                 } else if (n == 0) {
-                    c.getPlayer().Message(8, "[ARGON] " + SkillFactory.getSkillName(skillid) + "¿¡ ´ëÇÏ¿© Ä¿¸àµåÅ° »ç¿ëÀÌ °¡´É ÇÕ´Ï´Ù..");
+                    c.getPlayer().Message(8, "[ARGON] " + SkillFactory.getSkillName(skillid) + "ì— ëŒ€í•˜ì—¬ ì»¤ë©˜ë“œí‚¤ ì‚¬ìš©ì´ ê°€ëŠ¥ í•©ë‹ˆë‹¤..");
                 }
                 list.remove(k);
                 list.add(k, new Pair(Byte.parseByte(s), (byte) n));
@@ -3030,7 +3030,7 @@ public class PlayerHandler {
             return;
         }
 
-        if (value == 0) { // ¸Ş¼Ò
+        if (value == 0) { // ë©”ì†Œ
             for (int i = 0; i < (chr.getJob() % 10) + 1; i++) {
                 chr.zerooskill(((i + 1) == ((chr.getJob() % 10) + 1)) ? chr.getJob() - (chr.getJob() % 100) : chr.getJob() - (i + 1));
             }

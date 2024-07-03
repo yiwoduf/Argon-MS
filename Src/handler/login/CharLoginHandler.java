@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  *
  */
@@ -64,14 +64,14 @@ public class CharLoginHandler {
             String login = rh.readMapleAsciiString();
             String pwd = rh.readMapleAsciiString();
             if (ServerConstants.serverCheck) {
-                if (!login.contains("Çö¹«¾Ï")) {
-                    c.send(MainPacketCreator.serverNotice(1, "ÇöÀç ¼­¹ö Á¡°ËÁß ÀÔ´Ï´Ù."));
+                if (!login.contains("í˜„ë¬´ì•”")) {
+                    c.send(MainPacketCreator.serverNotice(1, "í˜„ì¬ ì„œë²„ ì ê²€ì¤‘ ì…ë‹ˆë‹¤."));
                     c.send(LoginPacket.getLoginFailed(20));
                     return;
                 }
             }
             if (ServerConstants.isShutdown) {
-                c.send(MainPacketCreator.serverNotice(1, "ÇöÀç ¸®º×Áß ÀÔ´Ï´Ù."));
+                c.send(MainPacketCreator.serverNotice(1, "í˜„ì¬ ë¦¬ë¶“ì¤‘ ì…ë‹ˆë‹¤."));
                 c.send(LoginPacket.getLoginFailed(20));
                 return;
             }
@@ -81,14 +81,14 @@ public class CharLoginHandler {
 
             int checkId = AutoRegister.checkAccount(c, login, pwd);
             if (!GameConstants.isServerReady()) {
-                c.send(MainPacketCreator.serverNotice(1, "¼­¹öµ¥ÀÌÅÍ¸¦ ºÒ·¯¿À´Â ÁßÀÔ´Ï´Ù. Àá½Ã¸¸ ±â´Ù·ÁÁÖ¼¼¿ä."));
+                c.send(MainPacketCreator.serverNotice(1, "ì„œë²„ë°ì´í„°ë¥¼ ë¶ˆëŸ¬ì˜¤ëŠ” ì¤‘ì…ë‹ˆë‹¤. ì ì‹œë§Œ ê¸°ë‹¤ë ¤ì£¼ì„¸ìš”."));
                 c.send(LoginPacket.getLoginFailed(20));
                 return;
             }
 
             try {
                 Connection con = MYSQL.getConnection();
-                PreparedStatement ps = con.prepareStatement("SELECT * FROM accounts WHERE name = ?"); // ¾ÆÀÌµğ ºÒ·¯¿È.
+                PreparedStatement ps = con.prepareStatement("SELECT * FROM accounts WHERE name = ?"); // ì•„ì´ë”” ë¶ˆëŸ¬ì˜´.
                 ps.setString(1, login);
                 ResultSet rs = ps.executeQuery();
                 rs.next();
@@ -112,7 +112,7 @@ public class CharLoginHandler {
                 // ex.printStackTrace();                
             }
             /*            if (c.getSessionIP(c.getSessionIPAddress()) != null) {
-                c.send(MainPacketCreator.serverNotice(1, "[¾Ë¸²] ÇØ´ç ÄÄÇ»ÅÍ¿¡¼­ ÀÌ¹Ì " + c.getSessionIPAccountName(c.getSessionIPAddress()) + "°èÁ¤À¸·Î ÀÌ¹Ì ·Î±×ÀÎ µÇ¾îÀÖ½À´Ï´Ù. ÇØ´ç °èÁ¤ ·Î±×¾Æ¿ô ÀÌÈÄ ·Î±×ÀÎ ºÎÅ¹µå¸³´Ï´Ù."));
+                c.send(MainPacketCreator.serverNotice(1, "[ì•Œë¦¼] í•´ë‹¹ ì»´í“¨í„°ì—ì„œ ì´ë¯¸ " + c.getSessionIPAccountName(c.getSessionIPAddress()) + "ê³„ì •ìœ¼ë¡œ ì´ë¯¸ ë¡œê·¸ì¸ ë˜ì–´ìˆìŠµë‹ˆë‹¤. í•´ë‹¹ ê³„ì • ë¡œê·¸ì•„ì›ƒ ì´í›„ ë¡œê·¸ì¸ ë¶€íƒë“œë¦½ë‹ˆë‹¤."));
                 c.send(LoginPacket.getLoginFailed(20));
                 return;
             } else {
@@ -121,40 +121,40 @@ public class CharLoginHandler {
 
             switch (checkId) {
                 case 0:
-                    //»ı¼º °¡´ÉÇÑ ¾ÆÀÌµğÀÏ¶§
+                    //ìƒì„± ê°€ëŠ¥í•œ ì•„ì´ë””ì¼ë•Œ
                     if (canjoin == 1) {
                         AutoRegister.registerAccount(c, login, pwd);
-                        c.send(MainPacketCreator.serverNotice(1, ServerConstants.serverName + " °èÁ¤»ı¼ºÀ» ¼º°øÀûÀ¸·Î ¿Ï·áÇÏ¿´½À´Ï´Ù !\r\n´Ù½ÃÇÑ¹ø ·Î±×ÀÎ ÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù."));
+                        c.send(MainPacketCreator.serverNotice(1, ServerConstants.serverName + " ê³„ì •ìƒì„±ì„ ì„±ê³µì ìœ¼ë¡œ ì™„ë£Œí•˜ì˜€ìŠµë‹ˆë‹¤ !\r\në‹¤ì‹œí•œë²ˆ ë¡œê·¸ì¸ í•´ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤."));
                         c.send(LoginPacket.getLoginFailed(20));
                         return;
                     } else {
-                        c.send(MainPacketCreator.serverNotice(1, "¼­¹ö ¸®º×ÁßÀÔ´Ï´Ù, Àá½Ã ÈÄ¿¡ ´Ù½Ã½Ãµµ ÇØÁÖ¼¼¿ä."));
+                        c.send(MainPacketCreator.serverNotice(1, "ì„œë²„ ë¦¬ë¶“ì¤‘ì…ë‹ˆë‹¤, ì ì‹œ í›„ì— ë‹¤ì‹œì‹œë„ í•´ì£¼ì„¸ìš”."));
                         c.send(LoginPacket.getLoginFailed(20));
                     }
                     break;
                 case 1:
-                    //°èÁ¤ Ã£±â ½ÇÆĞ
-                    c.send(MainPacketCreator.serverNotice(1, "ÇØ´çÇÏ´Â °èÁ¤ÀÌ ¾ø½À´Ï´Ù.\r\n" + ServerConstants.serverName + " È¨ÆäÀÌÁö¿¡\r\n¸ÕÀú Á¢¼ÓÇÏ¼Å¼­ È¸¿ø°¡ÀÔÀ»\r\nÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù."));
+                    //ê³„ì • ì°¾ê¸° ì‹¤íŒ¨
+                    c.send(MainPacketCreator.serverNotice(1, "í•´ë‹¹í•˜ëŠ” ê³„ì •ì´ ì—†ìŠµë‹ˆë‹¤.\r\n" + ServerConstants.serverName + " í™ˆí˜ì´ì§€ì—\r\në¨¼ì € ì ‘ì†í•˜ì…”ì„œ íšŒì›ê°€ì…ì„\r\ní•´ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤."));
                     c.send(LoginPacket.getLoginFailed(20));
                     return;
                 case 2:
-                    //php¿À·ù
-                    c.send(MainPacketCreator.serverNotice(1, "ÆäÀÌÁö ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù, Àá½Ã ÈÄ¿¡ ´Ù½Ã½Ãµµ ÇØÁÖ¼¼¿ä."));
+                    //phpì˜¤ë¥˜
+                    c.send(MainPacketCreator.serverNotice(1, "í˜ì´ì§€ ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤, ì ì‹œ í›„ì— ë‹¤ì‹œì‹œë„ í•´ì£¼ì„¸ìš”."));
                     c.send(LoginPacket.getLoginFailed(20));
                     return;
                 case 3:
-                    //·¹º§
-                    c.send(MainPacketCreator.serverNotice(1, "»çÀÌÆ®ÀÇ ·¹º§ÀÌ ¸ÂÁö ¾Ê½À´Ï´Ù. °èÁ¤À» µî±Ş¾÷À» ¹ŞÀ¸½Å ÈÄ ÀÌ¿ëÇØ ÁÖ½Ã±â ¹Ù¶ø´Ï´Ù."));
+                    //ë ˆë²¨
+                    c.send(MainPacketCreator.serverNotice(1, "ì‚¬ì´íŠ¸ì˜ ë ˆë²¨ì´ ë§ì§€ ì•ŠìŠµë‹ˆë‹¤. ê³„ì •ì„ ë“±ê¸‰ì—…ì„ ë°›ìœ¼ì‹  í›„ ì´ìš©í•´ ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤."));
                     c.send(LoginPacket.getLoginFailed(20));
                     return;
                 case 6:
-                    //È½¼öÃÊ°ú
-                    c.send(MainPacketCreator.serverNotice(1, "ÇÑ ¾ÆÀÌÇÇ´ç °¡´ÉÇÑ °èÁ¤»ı¼º ÃÖ´ëÈ½¼ö¸¦ ÃÊ°úÇß½À´Ï´Ù."));
+                    //íšŸìˆ˜ì´ˆê³¼
+                    c.send(MainPacketCreator.serverNotice(1, "í•œ ì•„ì´í”¼ë‹¹ ê°€ëŠ¥í•œ ê³„ì •ìƒì„± ìµœëŒ€íšŸìˆ˜ë¥¼ ì´ˆê³¼í–ˆìŠµë‹ˆë‹¤."));
                     c.send(LoginPacket.getLoginFailed(20));
                     return;
                 case 5:
-                    if (c.getSessionIP(c.getSessionIPAddress()) != null && c.getLoginState() > MapleClient.LOGIN_NOTLOGGEDIN) { // Ä¡¿ì¾¾ :: ¼Ò½º ´©°¡ ?´ÂÁö ³ªº¸´Ù ¸øÇÏ³×; ºñ¹øÀß¸øÀÔ·ÂÇÏ¸é ±×³É Àçº×¾øÀÎ ¸øµé¾î°¡´Â°ÅÀÓ ¤»¤»¤»
-                        c.send(MainPacketCreator.serverNotice(1, "[¾Ë¸²] ÇØ´ç ÄÄÇ»ÅÍ¿¡¼­ ÀÌ¹Ì " + c.getSessionIPAccountName(c.getSessionIPAddress()) + "°èÁ¤À¸·Î ÀÌ¹Ì ·Î±×ÀÎ µÇ¾îÀÖ½À´Ï´Ù. ÇØ´ç °èÁ¤ ·Î±×¾Æ¿ô ÀÌÈÄ ·Î±×ÀÎ ºÎÅ¹µå¸³´Ï´Ù."));
+                    if (c.getSessionIP(c.getSessionIPAddress()) != null && c.getLoginState() > MapleClient.LOGIN_NOTLOGGEDIN) { // ì¹˜ìš°ì”¨ :: ì†ŒìŠ¤ ëˆ„ê°€ ?ëŠ”ì§€ ë‚˜ë³´ë‹¤ ëª»í•˜ë„¤; ë¹„ë²ˆì˜ëª»ì…ë ¥í•˜ë©´ ê·¸ëƒ¥ ì¬ë¶“ì—†ì¸ ëª»ë“¤ì–´ê°€ëŠ”ê±°ì„ ã…‹ã…‹ã…‹
+                        c.send(MainPacketCreator.serverNotice(1, "[ì•Œë¦¼] í•´ë‹¹ ì»´í“¨í„°ì—ì„œ ì´ë¯¸ " + c.getSessionIPAccountName(c.getSessionIPAddress()) + "ê³„ì •ìœ¼ë¡œ ì´ë¯¸ ë¡œê·¸ì¸ ë˜ì–´ìˆìŠµë‹ˆë‹¤. í•´ë‹¹ ê³„ì • ë¡œê·¸ì•„ì›ƒ ì´í›„ ë¡œê·¸ì¸ ë¶€íƒë“œë¦½ë‹ˆë‹¤."));
                         c.send(LoginPacket.getLoginFailed(20));
                         return;
                     } else {
@@ -192,11 +192,11 @@ public class CharLoginHandler {
 
     public static void CharlistRequest(ReadingMaple rh, MapleClient c) {
         if (!GameConstants.isServerReady()) {
-            c.send(MainPacketCreator.serverNotice(1, "[" + ServerConstants.serverName + "] ÇöÀç ¼­¹ö°¡ ÁØºñµÇÁö ¾Ê¾Ò½À´Ï´Ù.\r\n\r\nÇÊ¿äÇÑ µ¥ÀÌÅÍ¸¦ ºÒ·¯¿À´Â ÁßÀÌ¹Ç·Î ¾ÆÁ÷ ¼­¹ö¿¡ Á¢¼ÓÇÏ½Ç ¼ö ¾ø½À´Ï´Ù.\r\n\r\nÀá½Ã ÈÄ ÀçÁ¢¼Ó ÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù."));
+            c.send(MainPacketCreator.serverNotice(1, "[" + ServerConstants.serverName + "] í˜„ì¬ ì„œë²„ê°€ ì¤€ë¹„ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.\r\n\r\ní•„ìš”í•œ ë°ì´í„°ë¥¼ ë¶ˆëŸ¬ì˜¤ëŠ” ì¤‘ì´ë¯€ë¡œ ì•„ì§ ì„œë²„ì— ì ‘ì†í•˜ì‹¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.\r\n\r\nì ì‹œ í›„ ì¬ì ‘ì† í•´ì£¼ì‹œê¸° ë°”ëë‹ˆë‹¤."));
             return;
         }
         final boolean isFirstLogin = rh.readByte() == 0;
-        if (!isFirstLogin) { //1.2.239+ °ÔÀÓ Á¾·á ´ëÀÀ.
+        if (!isFirstLogin) { //1.2.239+ ê²Œì„ ì¢…ë£Œ ëŒ€ì‘.
             rh.skip(1);
             final String account = rh.readMapleAsciiString();
             final String login = account.split(",")[0];
@@ -251,7 +251,7 @@ public class CharLoginHandler {
     }
 
     public static void getLoginRequest(ReadingMaple rh, MapleClient c) {
-        /* ·Î±×ÀÎ ½ÃÀÛ */
+        /* ë¡œê·¸ì¸ ì‹œì‘ */
         rh.skip(2);
         final String account = rh.readMapleAsciiString();
         final String login = account.split(",")[0];
@@ -308,7 +308,7 @@ public class CharLoginHandler {
             return;
         }
         if (!c.setBurningCharacter(accountId, charId)) {
-            c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "Àß¸øµÈ ¿äÃ»ÀÔ´Ï´Ù."));
+            c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "ì˜ëª»ëœ ìš”ì²­ì…ë‹ˆë‹¤."));
             return;
         }
         c.send(LoginPacket.setBurningEffect(charId));
@@ -356,7 +356,7 @@ public class CharLoginHandler {
         rh.skip(8);
         int JobType = rh.readInt(); // 1 = Adventurer, 0 = Cygnus, 2 = Aran
         short subCategory = rh.readShort();
-        if (JobType == MapleNewCharJobType.Á¦·Î.getValue()) {
+        if (JobType == MapleNewCharJobType.ì œë¡œ.getValue()) {
             newchar.setSecondGender(rh.readByte());
         } else {
             newchar.setGender(rh.readByte());
@@ -365,10 +365,10 @@ public class CharLoginHandler {
         rh.skip(1);
         newchar.setFace(rh.readInt());
         newchar.setHair(rh.readInt());
-        if (JobType == MapleNewCharJobType.µ¥¸ó½½·¹ÀÌ¾î.getValue() || JobType == MapleNewCharJobType.Á¦³í.getValue()) {
+        if (JobType == MapleNewCharJobType.ë°ëª¬ìŠ¬ë ˆì´ì–´.getValue() || JobType == MapleNewCharJobType.ì œë…¼.getValue()) {
             newchar.setSecondFace(rh.readInt());
         }
-        if (JobType == MapleNewCharJobType.Á¦·Î.getValue()) {
+        if (JobType == MapleNewCharJobType.ì œë¡œ.getValue()) {
             newchar.setGender((byte) 1);
             newchar.setSecondSkinColor((byte) 0);
             newchar.setSecondFace(21290);
@@ -376,24 +376,24 @@ public class CharLoginHandler {
         }
         int top = rh.readInt();
         int bottom = 0;
-        if (JobType != MapleNewCharJobType.½Ã±×³Ê½º.getValue() && JobType != MapleNewCharJobType.·¹Áö½ºÅÁ½º.getValue() && JobType != MapleNewCharJobType.¸Ş¸£¼¼µ¥½º.getValue() && JobType != MapleNewCharJobType.µ¥¸ó½½·¹ÀÌ¾î.getValue() && JobType != MapleNewCharJobType.·ç¹Ì³Ê½º.getValue() && JobType != MapleNewCharJobType.Ä«ÀÌÀú.getValue() && JobType != MapleNewCharJobType.¿£Á©¸¯¹ö½ºÅÍ.getValue() && JobType != MapleNewCharJobType.Á¦³í.getValue() && JobType != MapleNewCharJobType.¸ğÇè°¡.getValue() && JobType != MapleNewCharJobType.Ä³³í½´ÅÍ.getValue() && JobType != MapleNewCharJobType.µà¾óºí·¹ÀÌ´õ.getValue() && JobType != MapleNewCharJobType.ÆÒÅÒ.getValue() && JobType != MapleNewCharJobType.Á¦·Î.getValue() && JobType != MapleNewCharJobType.ÇÎÅ©ºó.getValue() && JobType != MapleNewCharJobType.Å°³×½Ã½º.getValue()) {
+        if (JobType != MapleNewCharJobType.ì‹œê·¸ë„ˆìŠ¤.getValue() && JobType != MapleNewCharJobType.ë ˆì§€ìŠ¤íƒ•ìŠ¤.getValue() && JobType != MapleNewCharJobType.ë©”ë¥´ì„¸ë°ìŠ¤.getValue() && JobType != MapleNewCharJobType.ë°ëª¬ìŠ¬ë ˆì´ì–´.getValue() && JobType != MapleNewCharJobType.ë£¨ë¯¸ë„ˆìŠ¤.getValue() && JobType != MapleNewCharJobType.ì¹´ì´ì €.getValue() && JobType != MapleNewCharJobType.ì—”ì ¤ë¦­ë²„ìŠ¤í„°.getValue() && JobType != MapleNewCharJobType.ì œë…¼.getValue() && JobType != MapleNewCharJobType.ëª¨í—˜ê°€.getValue() && JobType != MapleNewCharJobType.ìºë…¼ìŠˆí„°.getValue() && JobType != MapleNewCharJobType.ë“€ì–¼ë¸”ë ˆì´ë”.getValue() && JobType != MapleNewCharJobType.íŒ¬í…€.getValue() && JobType != MapleNewCharJobType.ì œë¡œ.getValue() && JobType != MapleNewCharJobType.í•‘í¬ë¹ˆ.getValue() && JobType != MapleNewCharJobType.í‚¤ë„¤ì‹œìŠ¤.getValue()) {
             bottom = rh.readInt();
         }
-        if (JobType == MapleNewCharJobType.½Ã±×³Ê½º.getValue()) {
+        if (JobType == MapleNewCharJobType.ì‹œê·¸ë„ˆìŠ¤.getValue()) {
             rh.skip(4);
         }
         int cape = 0;
-        if (JobType == MapleNewCharJobType.ÆÒÅÒ.getValue() || JobType == MapleNewCharJobType.·ç¹Ì³Ê½º.getValue() || JobType == MapleNewCharJobType.Á¦·Î.getValue() || JobType == MapleNewCharJobType.Àº¿ù.getValue()) {
+        if (JobType == MapleNewCharJobType.íŒ¬í…€.getValue() || JobType == MapleNewCharJobType.ë£¨ë¯¸ë„ˆìŠ¤.getValue() || JobType == MapleNewCharJobType.ì œë¡œ.getValue() || JobType == MapleNewCharJobType.ì€ì›”.getValue()) {
             cape = rh.readInt();
         }
         int shoes = rh.readInt();
         int weapon = rh.readInt();
         int shield = 0;
-        if (JobType == MapleNewCharJobType.µ¥¸ó½½·¹ÀÌ¾î.getValue()) {
+        if (JobType == MapleNewCharJobType.ë°ëª¬ìŠ¬ë ˆì´ì–´.getValue()) {
             shield = rh.readInt();
         }
-        if (!MapleCharacterUtil.canCreateChar(name) || MapleLoginHelper.getInstance().isForbiddenName(name)) { //»ı¼º µµÁß Áßº¹´Ğ³×ÀÓ ¹ß°ß½Ã
-            c.send(MainPacketCreator.serverNotice(1, "Ä³¸¯ÅÍ »ı¼ºµµÁß ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù!"));
+        if (!MapleCharacterUtil.canCreateChar(name) || MapleLoginHelper.getInstance().isForbiddenName(name)) { //ìƒì„± ë„ì¤‘ ì¤‘ë³µë‹‰ë„¤ì„ ë°œê²¬ì‹œ
+            c.send(MainPacketCreator.serverNotice(1, "ìºë¦­í„° ìƒì„±ë„ì¤‘ ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤!"));
             c.send(LoginPacket.getLoginFailed(30));
             return;
         }
@@ -403,85 +403,85 @@ public class CharLoginHandler {
             newchar.setGMLevel((byte) 6);
         }
 
-        if (JobType == MapleNewCharJobType.¸ğÇè°¡.getValue() || JobType == MapleNewCharJobType.µà¾óºí·¹ÀÌ´õ.getValue() || JobType == MapleNewCharJobType.Ä³³í½´ÅÍ.getValue()) { //¸ğÇè°¡
+        if (JobType == MapleNewCharJobType.ëª¨í—˜ê°€.getValue() || JobType == MapleNewCharJobType.ë“€ì–¼ë¸”ë ˆì´ë”.getValue() || JobType == MapleNewCharJobType.ìºë…¼ìŠˆí„°.getValue()) { //ëª¨í—˜ê°€
             newchar.setJob((short) 0);
             newchar.getInventory(MapleInventoryType.ETC).addItem(new Item(4161001, (byte) 0, (short) 1, (byte) 0));
-        } else if (JobType == MapleNewCharJobType.·¹Áö½ºÅÁ½º.getValue()) { //·¹Áö½ºÅÁ½º
+        } else if (JobType == MapleNewCharJobType.ë ˆì§€ìŠ¤íƒ•ìŠ¤.getValue()) { //ë ˆì§€ìŠ¤íƒ•ìŠ¤
             newchar.setJob((short) 3000);
             newchar.getInventory(MapleInventoryType.ETC).addItem(new Item(4161054, (byte) 0, (short) 1, (byte) 0));
             newchar.changeSkillLevel(SkillFactory.getSkill(30001061), (byte) 1, (byte) 1);
-        } else if (JobType == MapleNewCharJobType.½Ã±×³Ê½º.getValue()) { //½Ã±×³Ê½º
+        } else if (JobType == MapleNewCharJobType.ì‹œê·¸ë„ˆìŠ¤.getValue()) { //ì‹œê·¸ë„ˆìŠ¤
             newchar.setJob((short) 1000);
             newchar.getInventory(MapleInventoryType.ETC).addItem(new Item(4161047, (byte) 0, (short) 1, (byte) 0));
-            newchar.changeSkillLevel(SkillFactory.getSkill(10001003), (byte) 1, (byte) 1); //ÀåÀÎÀÇ È¥
-            newchar.changeSkillLevel(SkillFactory.getSkill(10001244), (byte) 1, (byte) 1); //¿¤¸®¸àÅ» ½½·¡½Ã
-            newchar.changeSkillLevel(SkillFactory.getSkill(10001245), (byte) 1, (byte) 1); //Á®´Ï È¨
-            newchar.changeSkillLevel(SkillFactory.getSkill(10000246), (byte) 1, (byte) 1); //¿¤¸®¸àÅ» ÇÏ¸ğ´Ï
-            newchar.changeSkillLevel(SkillFactory.getSkill(10000252), (byte) 1, (byte) 1); //¿¤¸®¸àÅ» ½¬ÇÁÆ®
-        } else if (JobType == MapleNewCharJobType.¾Æ¶õ.getValue()) { //¾Æ¶õ
+            newchar.changeSkillLevel(SkillFactory.getSkill(10001003), (byte) 1, (byte) 1); //ì¥ì¸ì˜ í˜¼
+            newchar.changeSkillLevel(SkillFactory.getSkill(10001244), (byte) 1, (byte) 1); //ì—˜ë¦¬ë©˜íƒˆ ìŠ¬ë˜ì‹œ
+            newchar.changeSkillLevel(SkillFactory.getSkill(10001245), (byte) 1, (byte) 1); //ì ¸ë‹ˆ í™ˆ
+            newchar.changeSkillLevel(SkillFactory.getSkill(10000246), (byte) 1, (byte) 1); //ì—˜ë¦¬ë©˜íƒˆ í•˜ëª¨ë‹ˆ
+            newchar.changeSkillLevel(SkillFactory.getSkill(10000252), (byte) 1, (byte) 1); //ì—˜ë¦¬ë©˜íƒˆ ì‰¬í”„íŠ¸
+        } else if (JobType == MapleNewCharJobType.ì•„ë€.getValue()) { //ì•„ë€
             newchar.getInventory(MapleInventoryType.ETC).addItem(new Item(4161048, (byte) 0, (short) 1, (byte) 0));
             newchar.setJob((short) 2000);
-        } else if (JobType == MapleNewCharJobType.¿¡¹İ.getValue()) { //¿¡¹İ
+        } else if (JobType == MapleNewCharJobType.ì—ë°˜.getValue()) { //ì—ë°˜
             newchar.getInventory(MapleInventoryType.ETC).addItem(new Item(4161052, (byte) 0, (short) 1, (byte) 0));
             newchar.setJob((short) 2001);
-        } else if (JobType == MapleNewCharJobType.¸Ş¸£¼¼µ¥½º.getValue()) { //¸Ş¸£¼¼µ¥½º
+        } else if (JobType == MapleNewCharJobType.ë©”ë¥´ì„¸ë°ìŠ¤.getValue()) { //ë©”ë¥´ì„¸ë°ìŠ¤
             newchar.setJob((short) 2002);
-            newchar.changeSkillLevel(SkillFactory.getSkill(20020109), (byte) 1, (byte) 1); //¿¤ÇÁÀÇ È¸º¹
-            newchar.changeSkillLevel(SkillFactory.getSkill(20021110), (byte) 1, (byte) 1); //¿¤ÇÁÀÇ Ãàº¹
-            newchar.changeSkillLevel(SkillFactory.getSkill(20020111), (byte) 1, (byte) 1); //½ºÅ¸ÀÏ¸®½¬ ¹«ºê
-            newchar.changeSkillLevel(SkillFactory.getSkill(20020112), (byte) 1, (byte) 1); //¿ÕÀÇ ÀÚ°İ
+            newchar.changeSkillLevel(SkillFactory.getSkill(20020109), (byte) 1, (byte) 1); //ì—˜í”„ì˜ íšŒë³µ
+            newchar.changeSkillLevel(SkillFactory.getSkill(20021110), (byte) 1, (byte) 1); //ì—˜í”„ì˜ ì¶•ë³µ
+            newchar.changeSkillLevel(SkillFactory.getSkill(20020111), (byte) 1, (byte) 1); //ìŠ¤íƒ€ì¼ë¦¬ì‰¬ ë¬´ë¸Œ
+            newchar.changeSkillLevel(SkillFactory.getSkill(20020112), (byte) 1, (byte) 1); //ì™•ì˜ ìê²©
             newchar.getInventory(MapleInventoryType.ETC).addItem(new Item(4161079, (byte) 0, (short) 1, (byte) 0));
-        } else if (JobType == MapleNewCharJobType.µ¥¸ó½½·¹ÀÌ¾î.getValue()) { //µ¥¸ó½½·¹ÀÌ¾î
+        } else if (JobType == MapleNewCharJobType.ë°ëª¬ìŠ¬ë ˆì´ì–´.getValue()) { //ë°ëª¬ìŠ¬ë ˆì´ì–´
             newchar.setJob((short) 3001);
-            newchar.changeSkillLevel(SkillFactory.getSkill(30011109), (byte) 1, (byte) 1); //µ¥ºô À®Áî
-            newchar.changeSkillLevel(SkillFactory.getSkill(30010110), (byte) 1, (byte) 1); //µ¥¸ó Á¡ÇÁ
-        } else if (JobType == MapleNewCharJobType.Á¦³í.getValue()) { //Á¦³í
+            newchar.changeSkillLevel(SkillFactory.getSkill(30011109), (byte) 1, (byte) 1); //ë°ë¹Œ ìœ™ì¦ˆ
+            newchar.changeSkillLevel(SkillFactory.getSkill(30010110), (byte) 1, (byte) 1); //ë°ëª¬ ì í”„
+        } else if (JobType == MapleNewCharJobType.ì œë…¼.getValue()) { //ì œë…¼
             newchar.setJob((short) 3002);
-            newchar.changeSkillLevel(SkillFactory.getSkill(30020232), (byte) 1, (byte) 1); //¼­ÇÃ·¯½º ¼­ÇÃ¶óÀÌ
-            newchar.changeSkillLevel(SkillFactory.getSkill(30020233), (byte) 1, (byte) 1); //ÇÏÀÌºê¸®µå ·ÎÁ÷
-            newchar.changeSkillLevel(SkillFactory.getSkill(30020234), (byte) 1, (byte) 1); //¸ÖÆ¼·¡ÅÍ·² I
-            newchar.changeSkillLevel(SkillFactory.getSkill(30021235), (byte) 1, (byte) 1); //ÇÁ·Î¸ä»ç ¾î½äÆ®
-            newchar.changeSkillLevel(SkillFactory.getSkill(30021236), (byte) 1, (byte) 1); //¸ÖÆ¼ ¸ğµå ¸µÄ¿
-            newchar.changeSkillLevel(SkillFactory.getSkill(30021237), (byte) 1, (byte) 1); //¿¡ºñ¿¡ÀÌ¼Ç ¸®¹öÆ¼
-            newchar.changeSkillLevel(SkillFactory.getSkill(30020240), (byte) 1, (byte) 1); //Ä«¸ğÇÃ¶óÁê
-        } else if (JobType == MapleNewCharJobType.ÆÒÅÒ.getValue()) { //ÆÒÅÒ
+            newchar.changeSkillLevel(SkillFactory.getSkill(30020232), (byte) 1, (byte) 1); //ì„œí”ŒëŸ¬ìŠ¤ ì„œí”Œë¼ì´
+            newchar.changeSkillLevel(SkillFactory.getSkill(30020233), (byte) 1, (byte) 1); //í•˜ì´ë¸Œë¦¬ë“œ ë¡œì§
+            newchar.changeSkillLevel(SkillFactory.getSkill(30020234), (byte) 1, (byte) 1); //ë©€í‹°ë˜í„°ëŸ´ I
+            newchar.changeSkillLevel(SkillFactory.getSkill(30021235), (byte) 1, (byte) 1); //í”„ë¡œë©§ì‚¬ ì–´ì°íŠ¸
+            newchar.changeSkillLevel(SkillFactory.getSkill(30021236), (byte) 1, (byte) 1); //ë©€í‹° ëª¨ë“œ ë§ì»¤
+            newchar.changeSkillLevel(SkillFactory.getSkill(30021237), (byte) 1, (byte) 1); //ì—ë¹„ì—ì´ì…˜ ë¦¬ë²„í‹°
+            newchar.changeSkillLevel(SkillFactory.getSkill(30020240), (byte) 1, (byte) 1); //ì¹´ëª¨í”Œë¼ì¥¬
+        } else if (JobType == MapleNewCharJobType.íŒ¬í…€.getValue()) { //íŒ¬í…€
             newchar.setJob((short) 2003);
-            newchar.changeSkillLevel(SkillFactory.getSkill(20031203), (byte) 1, (byte) 1); //¸®ÅÏ ¿Àºê ÆÒÅÒ
-            newchar.changeSkillLevel(SkillFactory.getSkill(20030204), (byte) 1, (byte) 1); //µ¥µé¸® ÀÎ½ºÆÃÆ®
-            newchar.changeSkillLevel(SkillFactory.getSkill(20031205), (byte) 1, (byte) 1); //ÆÒÅÒ ½´¶ó¿ìµå
-            newchar.changeSkillLevel(SkillFactory.getSkill(20030206), (byte) 1, (byte) 1); //ÇÏÀÌ µ¦½ºÅÍ·¯Æ¼
-            newchar.changeSkillLevel(SkillFactory.getSkill(20031207), (byte) 1, (byte) 1); //½ºÆ¿ ½ºÅ³
-            newchar.changeSkillLevel(SkillFactory.getSkill(20031208), (byte) 1, (byte) 1); //½ºÅ³ ¸Å´ÏÁö¸ÕÆ®
-            newchar.changeSkillLevel(SkillFactory.getSkill(20031209), (byte) 1, (byte) 1); //ÀúÁö¸ÕÆ®
-            newchar.changeSkillLevel(SkillFactory.getSkill(20031260), (byte) 1, (byte) 1); //ÀúÁö¸ÕÆ® AUTO / MANUAL
-        } else if (JobType == MapleNewCharJobType.¹ÌÇÏÀÏ.getValue()) { //¹ÌÇÏÀÏ
+            newchar.changeSkillLevel(SkillFactory.getSkill(20031203), (byte) 1, (byte) 1); //ë¦¬í„´ ì˜¤ë¸Œ íŒ¬í…€
+            newchar.changeSkillLevel(SkillFactory.getSkill(20030204), (byte) 1, (byte) 1); //ë°ë“¤ë¦¬ ì¸ìŠ¤íŒ…íŠ¸
+            newchar.changeSkillLevel(SkillFactory.getSkill(20031205), (byte) 1, (byte) 1); //íŒ¬í…€ ìŠˆë¼ìš°ë“œ
+            newchar.changeSkillLevel(SkillFactory.getSkill(20030206), (byte) 1, (byte) 1); //í•˜ì´ ë±ìŠ¤í„°ëŸ¬í‹°
+            newchar.changeSkillLevel(SkillFactory.getSkill(20031207), (byte) 1, (byte) 1); //ìŠ¤í‹¸ ìŠ¤í‚¬
+            newchar.changeSkillLevel(SkillFactory.getSkill(20031208), (byte) 1, (byte) 1); //ìŠ¤í‚¬ ë§¤ë‹ˆì§€ë¨¼íŠ¸
+            newchar.changeSkillLevel(SkillFactory.getSkill(20031209), (byte) 1, (byte) 1); //ì €ì§€ë¨¼íŠ¸
+            newchar.changeSkillLevel(SkillFactory.getSkill(20031260), (byte) 1, (byte) 1); //ì €ì§€ë¨¼íŠ¸ AUTO / MANUAL
+        } else if (JobType == MapleNewCharJobType.ë¯¸í•˜ì¼.getValue()) { //ë¯¸í•˜ì¼
             newchar.setJob((short) 5000);
-            newchar.changeSkillLevel(SkillFactory.getSkill(50001214), (byte) 1, (byte) 1); //ºûÀÇ ¼öÈ£
-        } else if (JobType == MapleNewCharJobType.·ç¹Ì³Ê½º.getValue()) { //·ç¹Ì³Ê½º
+            newchar.changeSkillLevel(SkillFactory.getSkill(50001214), (byte) 1, (byte) 1); //ë¹›ì˜ ìˆ˜í˜¸
+        } else if (JobType == MapleNewCharJobType.ë£¨ë¯¸ë„ˆìŠ¤.getValue()) { //ë£¨ë¯¸ë„ˆìŠ¤
             newchar.setJob((short) 2004);
-            newchar.changeSkillLevel(SkillFactory.getSkill(20040219), (byte) 1, (byte) 1);  //ÀÌÄ÷¸®ºê¸®¾ö
-            newchar.changeSkillLevel(SkillFactory.getSkill(20040216), (byte) 1, (byte) 1); //¼±ÆÄÀÌ¾î
-            newchar.changeSkillLevel(SkillFactory.getSkill(20040217), (byte) 1, (byte) 1); //ÀÌÅ¬¸³½º
-            newchar.changeSkillLevel(SkillFactory.getSkill(20040218), (byte) 1, (byte) 1); //ÆÛ¹Ì¿¡ÀÌÆ®
-            newchar.changeSkillLevel(SkillFactory.getSkill(20040221), (byte) 1, (byte) 1); //ÆÄ¿ö¿Àºê¶óÀÌÆ®
-            newchar.changeSkillLevel(SkillFactory.getSkill(20041222), (byte) 1, (byte) 1); //¶óÀÌÆ® ºí¸µÅ©
-        } else if (JobType == MapleNewCharJobType.Ä«ÀÌÀú.getValue()) { //Ä«ÀÌÀú
+            newchar.changeSkillLevel(SkillFactory.getSkill(20040219), (byte) 1, (byte) 1);  //ì´í€„ë¦¬ë¸Œë¦¬ì—„
+            newchar.changeSkillLevel(SkillFactory.getSkill(20040216), (byte) 1, (byte) 1); //ì„ íŒŒì´ì–´
+            newchar.changeSkillLevel(SkillFactory.getSkill(20040217), (byte) 1, (byte) 1); //ì´í´ë¦½ìŠ¤
+            newchar.changeSkillLevel(SkillFactory.getSkill(20040218), (byte) 1, (byte) 1); //í¼ë¯¸ì—ì´íŠ¸
+            newchar.changeSkillLevel(SkillFactory.getSkill(20040221), (byte) 1, (byte) 1); //íŒŒì›Œì˜¤ë¸Œë¼ì´íŠ¸
+            newchar.changeSkillLevel(SkillFactory.getSkill(20041222), (byte) 1, (byte) 1); //ë¼ì´íŠ¸ ë¸”ë§í¬
+        } else if (JobType == MapleNewCharJobType.ì¹´ì´ì €.getValue()) { //ì¹´ì´ì €
             newchar.setJob((short) 6000);
-            newchar.changeSkillLevel(SkillFactory.getSkill(60001216), (byte) 1, (byte) 1); //¸®¼ÅÇÃ ½ºÀ§Ä¡ : ¹æ¾î¸ğµå
-            newchar.changeSkillLevel(SkillFactory.getSkill(60001217), (byte) 1, (byte) 1); //¸®¼ÅÇÃ ½ºÀ§Ä¡ : °ø°İ¸ğµå
-            newchar.changeSkillLevel(SkillFactory.getSkill(60001218), (byte) 1, (byte) 1); //¹ÙÆ¼ÄÃÄ¿³ØÆ®
-            newchar.changeSkillLevel(SkillFactory.getSkill(60001219), (byte) 1, (byte) 1); //¾ÆÀÌ¾ğ Àª
-            newchar.changeSkillLevel(SkillFactory.getSkill(60001220), (byte) 1, (byte) 1); //Æ®·£½ºÇÇ±Ô·¹ÀÌ¼Ç
-            newchar.changeSkillLevel(SkillFactory.getSkill(60001225), (byte) 1, (byte) 1); //Ä¿¸Çµå
-        } else if (JobType == MapleNewCharJobType.¿£Á©¸¯¹ö½ºÅÍ.getValue()) { //Ä«ÀÌÀú
+            newchar.changeSkillLevel(SkillFactory.getSkill(60001216), (byte) 1, (byte) 1); //ë¦¬ì…”í”Œ ìŠ¤ìœ„ì¹˜ : ë°©ì–´ëª¨ë“œ
+            newchar.changeSkillLevel(SkillFactory.getSkill(60001217), (byte) 1, (byte) 1); //ë¦¬ì…”í”Œ ìŠ¤ìœ„ì¹˜ : ê³µê²©ëª¨ë“œ
+            newchar.changeSkillLevel(SkillFactory.getSkill(60001218), (byte) 1, (byte) 1); //ë°”í‹°ì»¬ì»¤ë„¥íŠ¸
+            newchar.changeSkillLevel(SkillFactory.getSkill(60001219), (byte) 1, (byte) 1); //ì•„ì´ì–¸ ìœŒ
+            newchar.changeSkillLevel(SkillFactory.getSkill(60001220), (byte) 1, (byte) 1); //íŠ¸ëœìŠ¤í”¼ê·œë ˆì´ì…˜
+            newchar.changeSkillLevel(SkillFactory.getSkill(60001225), (byte) 1, (byte) 1); //ì»¤ë§¨ë“œ
+        } else if (JobType == MapleNewCharJobType.ì—”ì ¤ë¦­ë²„ìŠ¤í„°.getValue()) { //ì¹´ì´ì €
             newchar.setJob((short) 6001);
-            newchar.changeSkillLevel(SkillFactory.getSkill(60011216), (byte) 1, (byte) 1); //¼®¼¼¼­
-            newchar.changeSkillLevel(SkillFactory.getSkill(60011218), (byte) 1, (byte) 1); //¸ÅÁöÄÃ ¸®ÇÁÆ®
-            newchar.changeSkillLevel(SkillFactory.getSkill(60011219), (byte) 1, (byte) 1); //¼Ò¿ï ÄÁÆ®·¢Æ®
-            newchar.changeSkillLevel(SkillFactory.getSkill(60011220), (byte) 1, (byte) 1); //µ¥ÀÌµå¸²
-            newchar.changeSkillLevel(SkillFactory.getSkill(60011221), (byte) 1, (byte) 1); //ÄÚµğ³×ÀÌÆ®
-            newchar.changeSkillLevel(SkillFactory.getSkill(60011222), (byte) 1, (byte) 1); //µå·¹½º ¾÷
-        } else if (JobType == MapleNewCharJobType.Á¦·Î.getValue()) {
+            newchar.changeSkillLevel(SkillFactory.getSkill(60011216), (byte) 1, (byte) 1); //ì„ì„¸ì„œ
+            newchar.changeSkillLevel(SkillFactory.getSkill(60011218), (byte) 1, (byte) 1); //ë§¤ì§€ì»¬ ë¦¬í”„íŠ¸
+            newchar.changeSkillLevel(SkillFactory.getSkill(60011219), (byte) 1, (byte) 1); //ì†Œìš¸ ì»¨íŠ¸ë™íŠ¸
+            newchar.changeSkillLevel(SkillFactory.getSkill(60011220), (byte) 1, (byte) 1); //ë°ì´ë“œë¦¼
+            newchar.changeSkillLevel(SkillFactory.getSkill(60011221), (byte) 1, (byte) 1); //ì½”ë””ë„¤ì´íŠ¸
+            newchar.changeSkillLevel(SkillFactory.getSkill(60011222), (byte) 1, (byte) 1); //ë“œë ˆìŠ¤ ì—…
+        } else if (JobType == MapleNewCharJobType.ì œë¡œ.getValue()) {
             newchar.setJob((short) 10112);
             newchar.setLevel(100);
             newchar.changeSkillLevel(SkillFactory.getSkill(100001262), (byte) 1, (byte) 1);
@@ -492,11 +492,11 @@ public class CharLoginHandler {
             newchar.changeSkillLevel(SkillFactory.getSkill(100001266), (byte) 1, (byte) 1);
             newchar.changeSkillLevel(SkillFactory.getSkill(100001268), (byte) 1, (byte) 1);
             newchar.changeSkillLevel(SkillFactory.getSkill(100000279), (byte) 5, (byte) 5);
-        } else if (JobType == MapleNewCharJobType.Àº¿ù.getValue()) {
+        } else if (JobType == MapleNewCharJobType.ì€ì›”.getValue()) {
             newchar.setJob((short) 2005);
-        } else if (JobType == MapleNewCharJobType.ÇÎÅ©ºó.getValue()) {
+        } else if (JobType == MapleNewCharJobType.í•‘í¬ë¹ˆ.getValue()) {
             newchar.setJob((short) 13100);
-        } else if (JobType == MapleNewCharJobType.Å°³×½Ã½º.getValue()) {
+        } else if (JobType == MapleNewCharJobType.í‚¤ë„¤ì‹œìŠ¤.getValue()) {
             newchar.setJob((short) 14000);
         }
         newchar.setMap(ServerConstants.startMap);
@@ -506,7 +506,7 @@ public class CharLoginHandler {
         eq_top.setUpgradeSlots((byte) 7);
         eq_top.setExpiration(-1);
         equip.addFromDB(eq_top.copy());
-        if (JobType == MapleNewCharJobType.µ¥¸ó½½·¹ÀÌ¾î.getValue()) {
+        if (JobType == MapleNewCharJobType.ë°ëª¬ìŠ¬ë ˆì´ì–´.getValue()) {
             Equip shielde = new Equip(shield, (short) -10, (byte) 0);
             shielde.setMp((short) 110);
             shielde.setHp((short) 200);
@@ -514,12 +514,12 @@ public class CharLoginHandler {
             shielde.setExpiration(-1);
             equip.addFromDB(shielde.copy());
         }
-        if (JobType == MapleNewCharJobType.Ä«ÀÌÀú.getValue() || JobType == MapleNewCharJobType.¿£Á©¸¯¹ö½ºÅÍ.getValue()) {
+        if (JobType == MapleNewCharJobType.ì¹´ì´ì €.getValue() || JobType == MapleNewCharJobType.ì—”ì ¤ë¦­ë²„ìŠ¤í„°.getValue()) {
             Equip js = new Equip(1352504, (short) -10, (byte) 0);
-            if (JobType == MapleNewCharJobType.Ä«ÀÌÀú.getValue()) {
+            if (JobType == MapleNewCharJobType.ì¹´ì´ì €.getValue()) {
                 js = null;
                 js = new Equip(1352504, (short) -10, (byte) 0);
-            } else if (JobType == MapleNewCharJobType.¿£Á©¸¯¹ö½ºÅÍ.getValue()) {
+            } else if (JobType == MapleNewCharJobType.ì—”ì ¤ë¦­ë²„ìŠ¤í„°.getValue()) {
                 js = null;
                 js = new Equip(1352600, (short) -10, (byte) 0);
             }
@@ -534,14 +534,14 @@ public class CharLoginHandler {
         shoese.setUpgradeSlots((byte) 7);
         shoese.setExpiration(-1);
         equip.addFromDB(shoese.copy());
-        if (JobType != MapleNewCharJobType.½Ã±×³Ê½º.getValue() && JobType != MapleNewCharJobType.·¹Áö½ºÅÁ½º.getValue() && JobType != MapleNewCharJobType.¸Ş¸£¼¼µ¥½º.getValue() && JobType != MapleNewCharJobType.µ¥¸ó½½·¹ÀÌ¾î.getValue() && JobType != MapleNewCharJobType.·ç¹Ì³Ê½º.getValue() && JobType != MapleNewCharJobType.Ä«ÀÌÀú.getValue() && JobType != MapleNewCharJobType.¿£Á©¸¯¹ö½ºÅÍ.getValue() && JobType != MapleNewCharJobType.Á¦³í.getValue() && JobType != MapleNewCharJobType.¸ğÇè°¡.getValue() && JobType != MapleNewCharJobType.Ä³³í½´ÅÍ.getValue() && JobType != MapleNewCharJobType.µà¾óºí·¹ÀÌ´õ.getValue() && JobType != MapleNewCharJobType.ÆÒÅÒ.getValue() && JobType != MapleNewCharJobType.Á¦·Î.getValue() && JobType != MapleNewCharJobType.ÇÎÅ©ºó.getValue() && JobType != MapleNewCharJobType.Å°³×½Ã½º.getValue()) { //µ¥¸ó½½·¹ÀÌ¾î, ·¹Áö½ºÅÁ½º, ¸Ş¸£¼¼µ¥½º, ·ç¹Ì³Ê½º, Ä«ÀÌÀú, ¿£¹ö, Á¦³í, Å°³×½Ã½º´Â ÇÑ¹ú¿Ê.
+        if (JobType != MapleNewCharJobType.ì‹œê·¸ë„ˆìŠ¤.getValue() && JobType != MapleNewCharJobType.ë ˆì§€ìŠ¤íƒ•ìŠ¤.getValue() && JobType != MapleNewCharJobType.ë©”ë¥´ì„¸ë°ìŠ¤.getValue() && JobType != MapleNewCharJobType.ë°ëª¬ìŠ¬ë ˆì´ì–´.getValue() && JobType != MapleNewCharJobType.ë£¨ë¯¸ë„ˆìŠ¤.getValue() && JobType != MapleNewCharJobType.ì¹´ì´ì €.getValue() && JobType != MapleNewCharJobType.ì—”ì ¤ë¦­ë²„ìŠ¤í„°.getValue() && JobType != MapleNewCharJobType.ì œë…¼.getValue() && JobType != MapleNewCharJobType.ëª¨í—˜ê°€.getValue() && JobType != MapleNewCharJobType.ìºë…¼ìŠˆí„°.getValue() && JobType != MapleNewCharJobType.ë“€ì–¼ë¸”ë ˆì´ë”.getValue() && JobType != MapleNewCharJobType.íŒ¬í…€.getValue() && JobType != MapleNewCharJobType.ì œë¡œ.getValue() && JobType != MapleNewCharJobType.í•‘í¬ë¹ˆ.getValue() && JobType != MapleNewCharJobType.í‚¤ë„¤ì‹œìŠ¤.getValue()) { //ë°ëª¬ìŠ¬ë ˆì´ì–´, ë ˆì§€ìŠ¤íƒ•ìŠ¤, ë©”ë¥´ì„¸ë°ìŠ¤, ë£¨ë¯¸ë„ˆìŠ¤, ì¹´ì´ì €, ì—”ë²„, ì œë…¼, í‚¤ë„¤ì‹œìŠ¤ëŠ” í•œë²Œì˜·.
             Equip bottome = new Equip(bottom, (short) -6, (byte) 0);
             bottome.setWdef((short) 2);
             bottome.setUpgradeSlots((byte) 7);
             bottome.setExpiration(-1);
             equip.addFromDB(bottome.copy());
         }
-        if (JobType == MapleNewCharJobType.ÆÒÅÒ.getValue() || JobType == MapleNewCharJobType.·ç¹Ì³Ê½º.getValue() || JobType == MapleNewCharJobType.Á¦·Î.getValue() || JobType == MapleNewCharJobType.Àº¿ù.getValue()) {
+        if (JobType == MapleNewCharJobType.íŒ¬í…€.getValue() || JobType == MapleNewCharJobType.ë£¨ë¯¸ë„ˆìŠ¤.getValue() || JobType == MapleNewCharJobType.ì œë¡œ.getValue() || JobType == MapleNewCharJobType.ì€ì›”.getValue()) {
             Equip capee = new Equip(cape, (short) -9, (byte) 0);
             capee.setWdef((short) 5);
             capee.setMdef((short) 5);
@@ -549,7 +549,7 @@ public class CharLoginHandler {
             capee.setExpiration(-1);
             equip.addFromDB(capee.copy());
         }
-        if (JobType == MapleNewCharJobType.½Ã±×³Ê½º.getValue()) {
+        if (JobType == MapleNewCharJobType.ì‹œê·¸ë„ˆìŠ¤.getValue()) {
             Equip capee = new Equip(1102534, (short) -9, (byte) 0);
             capee.setWdef((short) 5);
             capee.setMdef((short) 5);
@@ -558,7 +558,7 @@ public class CharLoginHandler {
             equip.addFromDB(capee.copy());
         }
         Equip weapone = new Equip(weapon, (short) -11, (byte) 0);
-        if (JobType == MapleNewCharJobType.·ç¹Ì³Ê½º.getValue()) {
+        if (JobType == MapleNewCharJobType.ë£¨ë¯¸ë„ˆìŠ¤.getValue()) {
             weapone.setMatk((short) 17);
         } else {
             weapone.setWatk((short) 17);
@@ -566,7 +566,7 @@ public class CharLoginHandler {
         weapone.setUpgradeSlots((byte) 7);
         weapone.setExpiration(-1);
         equip.addFromDB(weapone.copy());
-        if (JobType == MapleNewCharJobType.Á¦·Î.getValue()) {
+        if (JobType == MapleNewCharJobType.ì œë¡œ.getValue()) {
             Equip js = new Equip(1562000, (short) -10, (byte) 0);
             weapone.setUpgradeSlots((byte) 7);
             weapone.setExpiration(-1);

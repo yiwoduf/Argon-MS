@@ -1,7 +1,7 @@
 importPackage(java.lang);
 var status = -1;
-var point = 1000; // ÈÄÆ÷
-var point2 = 1000; // È¯Æ÷
+var point = 1000; // í›„í¬
+var point2 = 1000; // í™˜í¬
 var damage = 10000000;
 function start() {
     status = -1;
@@ -16,6 +16,6 @@ function action(mode, type, selection) {
         return;
     }
     if (status == 0) {
-        cm.sendSimple("#fs13##d ÈÄ¿ø °¡Áî¾Æ!~! \r\n È«º¸ °¡Áî¾Æ!~!");
+        cm.sendSimple("#fs13##d í›„ì› ê°€ì¦ˆì•„!~! \r\n í™ë³´ ê°€ì¦ˆì•„!~!");
 
 }

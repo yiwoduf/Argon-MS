@@ -3,17 +3,17 @@
 
 /*
 
-	È÷³ª ¿Â¶óÀÎ ¼Ò½º ÆÑÀÇ ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	ížˆë‚˜ ì˜¨ë¼ì¸ ì†ŒìŠ¤ íŒ©ì˜ ìŠ¤í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤.
 
-        Á¦ÀÛ : Æ¼½ã
+        ì œìž‘ : í‹°ì¬
 
-	¿£ÇÇ½Ã¾ÆÀÌµð : 
+	ì—”í”¼ì‹œì•„ì´ë”” : 
 	
-	¿£ÇÇ½Ã ÀÌ¸§ :
+	ì—”í”¼ì‹œ ì´ë¦„ :
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : 
+	ì—”í”¼ì‹œê°€ ìžˆëŠ” ë§µ : 
 
-	¿£ÇÇ½Ã ¼³¸í : ¾Æ½º¿Ï ÇØ¹æÀü ÀÔÀå
+	ì—”í”¼ì‹œ ì„¤ëª… : ì•„ìŠ¤ì™„ í•´ë°©ì „ ìž…ìž¥
 
 
 */
@@ -47,28 +47,28 @@ function action(mode, type, selection) {
             cm.forceStartQuest(7963, "0");
             cm.getPlayer().setKeyValue("AswanOffSeason_LastDate", date);
         }
-        cm.sendSimple("#e<¾Æ½º¿Ï ÇØ¹æÀü>#n\r\n¿©ÀüÈ÷ ¾Æ½º¿Ï Áö¿ªÀ» ¹èÈ¸ÇÏ°í ÀÖ´Â Èú¶óÀÇ ÀÜ´çµéÀ» ¼ÒÅÁÇÏ½Ã°Ú½À´Ï±î?#b\r\n\r\n\r\n#L0# Èú¶óÀÇ ÀÜ´çÀ» ¼ÒÅÁÇÑ´Ù. (·¹º§ 40ÀÌ»ó. ³²Àº ÀÔÀå È½¼ö: "+(5-Integer.parseInt(cm.getQuestCustomData(7963)))+"¹ø)#l\r\n#L1# Èú¶óÀÇ Å¾ ÀÔ±¸·Î º¸³»µå¸³´Ï´Ù. (·¹º§ 120ÀÌ»ó)#l");
+        cm.sendSimple("#e<ì•„ìŠ¤ì™„ í•´ë°©ì „>#n\r\nì—¬ì „ížˆ ì•„ìŠ¤ì™„ ì§€ì—­ì„ ë°°íšŒí•˜ê³  ìžˆëŠ” ížë¼ì˜ ìž”ë‹¹ë“¤ì„ ì†Œíƒ•í•˜ì‹œê² ìŠµë‹ˆê¹Œ?#b\r\n\r\n\r\n#L0# ížë¼ì˜ ìž”ë‹¹ì„ ì†Œíƒ•í•œë‹¤. (ë ˆë²¨ 40ì´ìƒ. ë‚¨ì€ ìž…ìž¥ íšŸìˆ˜: "+(5-Integer.parseInt(cm.getQuestCustomData(7963)))+"ë²ˆ)#l\r\n#L1# ížë¼ì˜ íƒ‘ ìž…êµ¬ë¡œ ë³´ë‚´ë“œë¦½ë‹ˆë‹¤. (ë ˆë²¨ 120ì´ìƒ)#l");
     } else if (status == 1) {
         if (selection == 0) {
             if (cm.getPlayer().getLevel() < 40) {
-                cm.sendOk("¾ÆÁ÷ Èú¶óÀÇ ÀÜ´çÀ» ¼ÒÅÁÇÏ½Ç ·¹º§ÀÌ ºÎÁ·ÇÏ½Å°Í °°³×¿ä. ÀÜ´ç ¼ÒÅÁÀº ·¹º§ 40ºÎÅÍ ÀÔÀå °¡´ÉÇÕ´Ï´Ù.");
+                cm.sendOk("ì•„ì§ ížë¼ì˜ ìž”ë‹¹ì„ ì†Œíƒ•í•˜ì‹¤ ë ˆë²¨ì´ ë¶€ì¡±í•˜ì‹ ê²ƒ ê°™ë„¤ìš”. ìž”ë‹¹ ì†Œíƒ•ì€ ë ˆë²¨ 40ë¶€í„° ìž…ìž¥ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
                 cm.dispose();
                 return;
             }
             if (cm.getQuestCustomData(7963).equals("5")) {
-                cm.sendOk("¿À´Ã ÀÔÀå°¡´ÉÇÑ È½¼ö¸¦ ¸ðµÎ »ç¿ëÇÏ¼Ì½À´Ï´Ù. ³»ÀÏ ´Ù½Ã µµÀüÇØ ÁÖ¼¼¿ä.");
+                cm.sendOk("ì˜¤ëŠ˜ ìž…ìž¥ê°€ëŠ¥í•œ íšŸìˆ˜ë¥¼ ëª¨ë‘ ì‚¬ìš©í•˜ì…¨ìŠµë‹ˆë‹¤. ë‚´ì¼ ë‹¤ì‹œ ë„ì „í•´ ì£¼ì„¸ìš”.");
                 cm.dispose();
                 return;
             }
             if (cm.getPlayer().getParty() != null) {
                 var em = cm.getEventManager("AswanOffSeason");
                 if (!cm.isLeader()) {
-                    cm.sendOk("ÆÄÆ¼ÀåÀÌ Á¦°Ô ¸»À» °É¾î¾ß ÇÕ´Ï´Ù.");
+                    cm.sendOk("íŒŒí‹°ìž¥ì´ ì œê²Œ ë§ì„ ê±¸ì–´ì•¼ í•©ë‹ˆë‹¤.");
                     cm.dispose();
                     return;
                 }
                 if (!cm.allMembersHere()) {
-                    cm.sendOk("ÆÄÆ¼¿øÀÌ Àü¿ø ÀÌ°÷¿¡ ¸ð¿©ÀÖ¾î¾ß ÇÕ´Ï´Ù.");
+                    cm.sendOk("íŒŒí‹°ì›ì´ ì „ì› ì´ê³³ì— ëª¨ì—¬ìžˆì–´ì•¼ í•©ë‹ˆë‹¤.");
                     cm.dispose();
                     return;
                 }
@@ -87,12 +87,12 @@ function action(mode, type, selection) {
                     }
                 }
                 if (!levelPass) {
-                    cm.sendOk("ÆÄÆ¼¿ø Áß ·¹º§ÀÌ ¸ÂÁö ¾Ê´Â ÆÄÆ¼¿øÀÌ ÀÖ½À´Ï´Ù.\r\n#r40·¹º§ ÀÌ»ó#kÀÇ ÆÄÆ¼¿ø¸¸ ÀÔÀåÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+                    cm.sendOk("íŒŒí‹°ì› ì¤‘ ë ˆë²¨ì´ ë§žì§€ ì•ŠëŠ” íŒŒí‹°ì›ì´ ìžˆìŠµë‹ˆë‹¤.\r\n#r40ë ˆë²¨ ì´ìƒ#kì˜ íŒŒí‹°ì›ë§Œ ìž…ìž¥í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.");
                     cm.dispose();
                     return;
                 }
                 if (!limitPass) {
-                    cm.sendOk("ÆÄÆ¼¿ø Áß ¿À´Ã µµÀü È½¼ö¸¦ ¸ðµÎ ¼ÒÁøÇÑ ÆÄÆ¼¿øÀÌ ÀÖ½À´Ï´Ù.\r\nÇÏ·ç¿¡ 5¹ø¸¸ ÀÔÀå °¡´ÉÇÕ´Ï´Ù.");
+                    cm.sendOk("íŒŒí‹°ì› ì¤‘ ì˜¤ëŠ˜ ë„ì „ íšŸìˆ˜ë¥¼ ëª¨ë‘ ì†Œì§„í•œ íŒŒí‹°ì›ì´ ìžˆìŠµë‹ˆë‹¤.\r\ní•˜ë£¨ì— 5ë²ˆë§Œ ìž…ìž¥ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
                     cm.dispose();
                     return;
                 }
@@ -116,7 +116,7 @@ function action(mode, type, selection) {
             } else {
                 
                 if (!checkLevel(cm.getPlayer().getLevel(), 40, 200)) {
-                    cm.sendOk("ÆÄÆ¼¿ø Áß ·¹º§ÀÌ ¸ÂÁö ¾Ê´Â ÆÄÆ¼¿øÀÌ ÀÖ½À´Ï´Ù.\r\n#r40·¹º§ ÀÌ»ó#kÀÇ ÆÄÆ¼¿ø¸¸ ÀÔÀåÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+                    cm.sendOk("íŒŒí‹°ì› ì¤‘ ë ˆë²¨ì´ ë§žì§€ ì•ŠëŠ” íŒŒí‹°ì›ì´ ìžˆìŠµë‹ˆë‹¤.\r\n#r40ë ˆë²¨ ì´ìƒ#kì˜ íŒŒí‹°ì›ë§Œ ìž…ìž¥í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.");
                     cm.dispose();
                     return;
                 }

@@ -1,6 +1,6 @@
 /*
-Á¦ÀÛÀÚ : ljw5992@naver.com / dbg_yeane@nate.com
-ÁÖ¼® »èÁ¦ ±İÁö
+ì œì‘ì : ljw5992@naver.com / dbg_yeane@nate.com
+ì£¼ì„ ì‚­ì œ ê¸ˆì§€
 */
 
 importPackage(java.sql);
@@ -19,25 +19,25 @@ var i = 0;
                 case 1110:
                 case 1111:
                 case 1112:
-                    job = "¼Ò¿ï¸¶½ºÅÍ";
+                    job = "ì†Œìš¸ë§ˆìŠ¤í„°";
                     break;
                 case 1300:
                 case 1310:
                 case 1311:
                 case 1312:
-                    job = "À©µåºê·¹ÀÌÄ¿";
+                    job = "ìœˆë“œë¸Œë ˆì´ì»¤";
                 case 1400:
                 case 1410:
                 case 1411:
                 case 1412:
-                    job = "½ºÆ®¶óÀÌÄ¿";
+                    job = "ìŠ¤íŠ¸ë¼ì´ì»¤";
                     break;
                     break;
                 case 3600:
                 case 3610:
                 case 3611:
                 case 3612:
-                    job = "Á¦³í";
+                    job = "ì œë…¼";
                     break;
                 case 2001:
                 case 2200:
@@ -50,201 +50,201 @@ var i = 0;
                 case 2216:
                 case 2217:
                 case 2218:
-                    job = "¿¡¹İ";
+                    job = "ì—ë°˜";
                     break
                 case 6001:
                 case 6500:
                 case 6510:
                 case 6511:
                 case 6512:
-                    job = "¿£Á©¸¯¹ö½ºÅÍ";
+                    job = "ì—”ì ¤ë¦­ë²„ìŠ¤í„°";
                     break;
                 case 6000:
                 case 6100:
                 case 6110:
                 case 6111:
                 case 6112:
-                    job = "Ä«ÀÌÀú";
+                    job = "ì¹´ì´ì €";
                     break;
                 case 6001:
                 case 6500:
                 case 6510:
                 case 6511:
                 case 6512:
-                    job = "¿£Á©¸¯¹ö½ºÅÍ";
+                    job = "ì—”ì ¤ë¦­ë²„ìŠ¤í„°";
                     break;
                 case 2004:
                 case 2700:
                 case 2710:
                 case 2711:
                 case 2712:
-                    job = "·ç¹Ì³Ê½º";
+                    job = "ë£¨ë¯¸ë„ˆìŠ¤";
                     break;
                 case 3001:
                 case 3100:
                 case 3110:
                 case 3111:
                 case 3112:
-                    job = "µ¥¸ó½½·¹ÀÌ¾î";
+                    job = "ë°ëª¬ìŠ¬ë ˆì´ì–´";
                     break;
                 case 3002:
                 case 3101:
                 case 3120:
                 case 3121:
                 case 3122:
-                    job = "µ¥¸ó¾îº¥Á®";
+                    job = "ë°ëª¬ì–´ë²¤ì ¸";
                     break;
                 case 3001:
                 case 3100:
                 case 3110:
                 case 3111:
                 case 3112:
-                    job = "µ¥¸ó½½·¹ÀÌ¾î";
+                    job = "ë°ëª¬ìŠ¬ë ˆì´ì–´";
                     break;
                 case 2002:
                 case 2300:
                 case 2310:
                 case 2311:
                 case 2312:
-                    job = "¸Ş¸£¼¼µ¥½º";
+                    job = "ë©”ë¥´ì„¸ë°ìŠ¤";
                     break;
                 case 430:
                 case 431:
                 case 432:
                 case 433:
                 case 434:
-                    job = "µà¾óºí·¹ÀÌµå";
+                    job = "ë“€ì–¼ë¸”ë ˆì´ë“œ";
                     break;
                 case 2003:
                 case 2400:
                 case 2410:
                 case 2411:
                 case 2412:
-                    job = "ÆÒÅÒ";
+                    job = "íŒ¬í…€";
                     break;
                 case 5000:
                 case 5100:
                 case 5110:
                 case 5111:
                 case 5112:
-                    job = "¹ÌÇÏÀÏ";
+                    job = "ë¯¸í•˜ì¼";
                     break;
                 case 3500:
                 case 3512:
                 case 3511:
                 case 3512:
-                    job = "¸ŞÄ«´Ğ";
+                    job = "ë©”ì¹´ë‹‰";
                     break;
                 case 1500:
                 case 1510:
                 case 1511:
                 case 1512:
-                    job = "½ºÆ®¶óÀÌÄ¿";
+                    job = "ìŠ¤íŠ¸ë¼ì´ì»¤";
                     break;
                 case 1300:
                 case 1310:
                 case 1311:
                 case 1312:
-                    job = "À©µåºê·¹ÀÌÄ¿";
+                    job = "ìœˆë“œë¸Œë ˆì´ì»¤";
                     break;
                 case 3300:
                 case 3310:
                 case 3311:
                 case 3312:
-                    job = "¿ÍÀÏµå ÇåÅÍ";
+                    job = "ì™€ì¼ë“œ í—Œí„°";
                     break;
                 case 100:
-                    job = "°Ë»ç";
+                    job = "ê²€ì‚¬";
                     break;
                 case 200:
-                    job = "¸¶¹ı»ç";
+                    job = "ë§ˆë²•ì‚¬";
                     break;
                 case 300:
-                    job = "±Ã¼ö";
+                    job = "ê¶ìˆ˜";
                     break;
                 case 400:
-                    job = "µµÀû";
+                    job = "ë„ì ";
                     break;
                 case 500:
-                    job = "ÇØÀû";
+                    job = "í•´ì ";
                     break;
                 case 110:
                 case 111:
                 case 112:
-                    job = "ÆÄÀÌÅÍ";
+                    job = "íŒŒì´í„°";
                     break;
                 case 120:
                 case 121:
                 case 122:
-                    job = "ÆäÀÌÁö";
+                    job = "í˜ì´ì§€";
                     break;
                 case 130:
                 case 131:
                 case 132:
-                    job = "½ºÇÇ¾î¸Ç";
+                    job = "ìŠ¤í”¼ì–´ë§¨";
                     break;
                 case 210:
                 case 211:
                 case 212:
-                    job = "¸¶¹ı»ç(ºÒ, µ¶)";
+                    job = "ë§ˆë²•ì‚¬(ë¶ˆ, ë…)";
                     break;
                 case 220:
                 case 221:
                 case 222:
-                    job = "¸¶¹ı»ç(½ã, Äİ)";
+                    job = "ë§ˆë²•ì‚¬(ì¬, ì½œ)";
                     break;
                 case 230:
                 case 231:
                 case 232:
-                    job = "Å¬·¹¸¯";
+                    job = "í´ë ˆë¦­";
                     break;
                 case 310:
                 case 311:
                 case 312:
-                    job = "ÇåÅÍ";
+                    job = "í—Œí„°";
                     break;
                 case 320:
                 case 321:
                 case 322:
-                    job = "»ç¼ö";
+                    job = "ì‚¬ìˆ˜";
                     break;
                 case 410:
                 case 411:
                 case 412:
-                    job = "¾î½Ø½Å";
+                    job = "ì–´ìŒ”ì‹ ";
                     break;
                 case 420:
                 case 421:
                 case 422:
-                    job = "½ÃÇÁ";
+                    job = "ì‹œí”„";
                     break;
                 case 430:
                 case 431:
                 case 432:
                 case 434:
-                    job = "¼¼¹Ì µà¾î·¯";
+                    job = "ì„¸ë¯¸ ë“€ì–´ëŸ¬";
                     break;
                 case 510:
                 case 511:
                 case 512:
-                    job = "ÀÎÆÄÀÌÅÍ";
+                    job = "ì¸íŒŒì´í„°";
                     break;
                 case 520:
                 case 521:
                 case 522:
-                    job = "°Ç½½¸µ°Å";
+                    job = "ê±´ìŠ¬ë§ê±°";
                     break;
                 case 530:
                 case 531:
                 case 532:
-                    job = "Ä³³í½´ÅÍ";
+                    job = "ìºë…¼ìŠˆí„°";
                     break;
                 default:
-                    job = "¹ÌÈ®ÀÎ";
+                    job = "ë¯¸í™•ì¸";
             }
-            print.append(Integer(i)).append("À§¡¡#b").append(rank.getString("name")).append("¡¡#k·¹º§ : ").append(Integer(rank.getInt("level"))).append("#b¡¡Á÷¾÷ : #k").append(job).append("\r\n");
+            print.append(Integer(i)).append("ìœ„ã€€#b").append(rank.getString("name")).append("ã€€#kë ˆë²¨ : ").append(Integer(rank.getInt("level"))).append("#bã€€ì§ì—… : #k").append(job).append("\r\n");
     }
-    cm.sendOk("·©Å·ÀÔ´Ï´Ù.\r\n"+print.toString());
+    cm.sendOk("ë­í‚¹ì…ë‹ˆë‹¤.\r\n"+print.toString());
     cm.dispose();
 }
 

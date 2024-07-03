@@ -3,17 +3,17 @@
 
 /*
 
-	Ç»¾î ¿Â¶óÀÎ ¼Ò½º ÆÑÀÇ ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	í“¨ì–´ ì˜¨ë¼ì¸ ì†ŒìŠ¤ íŒ©ì˜ ìŠ¤í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤.
 
-        Á¦ÀÛ : ÁÖÅ©ºí·¢
+        ì œìž‘ : ì£¼í¬ë¸”ëž™
 
-	¿£ÇÇ½Ã¾ÆÀÌµð : 
+	ì—”í”¼ì‹œì•„ì´ë”” : 
 	
-	¿£ÇÇ½Ã ÀÌ¸§ :
+	ì—”í”¼ì‹œ ì´ë¦„ :
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : 
+	ì—”í”¼ì‹œê°€ ìžˆëŠ” ë§µ : 
 
-	¿£ÇÇ½Ã ¼³¸í : 
+	ì—”í”¼ì‹œ ì„¤ëª… : 
 
 
 */
@@ -38,21 +38,21 @@ function action(mode, type, selection) {
     if (status == 0) {
         if (cm.getQuestStatus(3507) == 1) {
             cm.completeQuest(3507);
-            cm.sendOk("ÀÒ¾î¹ö¸° Ãß¾ïÀ» Ã£¾Æ Äù½ºÆ®°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù. #bÈÄÈ¸ÀÇ ±æÀ» °È´ÂÀÚ 1#k Äù½ºÆ®·Î ÁøÇàÇØ ÁÖ¼¼¿ä.");
+            cm.sendOk("ìžƒì–´ë²„ë¦° ì¶”ì–µì„ ì°¾ì•„ í€˜ìŠ¤íŠ¸ê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤. #bí›„íšŒì˜ ê¸¸ì„ ê±·ëŠ”ìž 1#k í€˜ìŠ¤íŠ¸ë¡œ ì§„í–‰í•´ ì£¼ì„¸ìš”.");
             cm.dispose();
         } else if (cm.getQuestStatus(3513) >= 1 && cm.getQuestStatus(3514) != 2) {
             if (cm.getMeso() >= 1000000) {
                 cm.gainMeso(-1000000);
                 cm.completeQuest(3514);
-                cm.getPlayer().message(1, "'°¨Á¤À» ÆÄ´Â ¸¶Á¦»ç' Äù½ºÆ®°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù. [¸Á°¢ÀÇ ±æÀ» °È´ÂÀÚ 1] Äù½ºÆ®·Î ÁøÇàÇØ ÁÖ¼¼¿ä.");
-                cm.getPlayer().message(6, "'°¨Á¤À» ÆÄ´Â ¸¶Á¦»ç' Äù½ºÆ®°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù. [¸Á°¢ÀÇ ±æÀ» °È´ÂÀÚ 1] Äù½ºÆ®·Î ÁøÇàÇØ ÁÖ¼¼¿ä.");
+                cm.getPlayer().message(1, "'ê°ì •ì„ íŒŒëŠ” ë§ˆì œì‚¬' í€˜ìŠ¤íŠ¸ê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤. [ë§ê°ì˜ ê¸¸ì„ ê±·ëŠ”ìž 1] í€˜ìŠ¤íŠ¸ë¡œ ì§„í–‰í•´ ì£¼ì„¸ìš”.");
+                cm.getPlayer().message(6, "'ê°ì •ì„ íŒŒëŠ” ë§ˆì œì‚¬' í€˜ìŠ¤íŠ¸ê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤. [ë§ê°ì˜ ê¸¸ì„ ê±·ëŠ”ìž 1] í€˜ìŠ¤íŠ¸ë¡œ ì§„í–‰í•´ ì£¼ì„¸ìš”.");
                 cm.dispose();
             } else {
-                cm.sendOk("'°¨Á¤À» ÆÄ´Â ¸¶Á¦»ç' Äù½ºÆ®¸¦ ¿Ï·áÇÏ±â À§ÇØ¼­´Â 100¸¸ ¸Þ¼Ò°¡ ÇÊ¿äÇÕ´Ï´Ù.");
+                cm.sendOk("'ê°ì •ì„ íŒŒëŠ” ë§ˆì œì‚¬' í€˜ìŠ¤íŠ¸ë¥¼ ì™„ë£Œí•˜ê¸° ìœ„í•´ì„œëŠ” 100ë§Œ ë©”ì†Œê°€ í•„ìš”í•©ë‹ˆë‹¤.");
                 cm.dispose();
             }
         } else {
-            cm.sendOk("ÀÒ¾î¹ö¸° Ãß¾ïÀ» Ã£¾Æ Äù½ºÆ®¸¦ ¹ÞÀº ÈÄ ÀÌ¿ëÇØ ÁÖ¼¼¿ä.");
+            cm.sendOk("ìžƒì–´ë²„ë¦° ì¶”ì–µì„ ì°¾ì•„ í€˜ìŠ¤íŠ¸ë¥¼ ë°›ì€ í›„ ì´ìš©í•´ ì£¼ì„¸ìš”.");
             cm.dispose();
         }
     }

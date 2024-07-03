@@ -1,16 +1,16 @@
 /*
- * ����Ʈ�¶��� �ҽ� ��ũ��Ʈ �Դϴ�.
+ * 게이트온라인 소스 스크립트 입니다.
  * 
- * ��Ż��ġ : 
- * ��Ż���� : 
+ * 포탈위치 : 
+ * 포탈설명 : 
  * 
- * ���� : Busan_stroy
+ * 제작 : Busan_stroy
  * 
  */
 
 function enter(pi) {
     if (pi.getPlayer().getLevel() < 160) {
-        pi.getPlayer().message("���� 160 �̻� ���� �����մϴ�.");
+        pi.getPlayer().message("레벨 160 이상만 입장 가능합니다.");
         return false;
     }
     pi.playPortalSE();

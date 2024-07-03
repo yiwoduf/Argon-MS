@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -30,7 +30,7 @@ public class PortalPlayerInteraction extends AbstractPlayerInteraction {
             playPortalSE();
             warp(910000001, "st00");
         } else {
-            playerMessage(5, "·¹º§ 10 ÀÌ»ó¸¸ ÀÌ°÷¿¡ µé¾î°¥ ¼ö ÀÖ½À´Ï´Ù.");
+            playerMessage(5, "ë ˆë²¨ 10 ì´ìƒë§Œ ì´ê³³ì— ë“¤ì–´ê°ˆ ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
         }
     }
 }

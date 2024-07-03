@@ -4,7 +4,7 @@ function action() {
             cm.getPlayer().levelUp();
 	    cm.dispose();
         }else{ 
-            cm.sendOk("230·¹º§ ÀÌ»óÀº È¿°ú¸¦ º¼ ¼ö ¾ø½À´Ï´Ù.");
+            cm.sendOk("230ë ˆë²¨ ì´ìƒì€ íš¨ê³¼ë¥¼ ë³¼ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
             cm.dispose();
         }
 }

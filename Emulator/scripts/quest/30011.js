@@ -9,9 +9,9 @@ function start(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-	qm.sendYesNo("ÀÌ¹ø¿¡´Â ¿Õ°üÀÌ ±×·ÁÁø ¹® ¹Û¿¡ ÀÖ´Â ºÀÀÎÀÇ ¼öÈ£ÀÚ¸¦ Ã³Ä¡ÇØÁà.");
+	qm.sendYesNo("ì´ë²ˆì—ëŠ” ì™•ê´€ì´ ê·¸ë ¤ì§„ ë¬¸ ë°–ì— ìˆëŠ” ë´‰ì¸ì˜ ìˆ˜í˜¸ìë¥¼ ì²˜ì¹˜í•´ì¤˜.");
 } else if (status == 1) {
-	qm.sendNext("¿Õ°üÀÌ ±×·ÁÁø ¹® ¹Û¿¡¼­ ´À²¸Áö´Â ±â¿î ¶ÇÇÑ ¸¸¸¸Ä¡ ¾Ê¾Æ. Àı´ë ¹æ½ÉÇÏ¸é ¾ÈµÅ!");
+	qm.sendNext("ì™•ê´€ì´ ê·¸ë ¤ì§„ ë¬¸ ë°–ì—ì„œ ëŠê»´ì§€ëŠ” ê¸°ìš´ ë˜í•œ ë§Œë§Œì¹˜ ì•Šì•„. ì ˆëŒ€ ë°©ì‹¬í•˜ë©´ ì•ˆë¼!");
 	qm.startQuest(30011);
 	qm.getPlayer().setKeyValue("quean","start");
 	qm.dispose();

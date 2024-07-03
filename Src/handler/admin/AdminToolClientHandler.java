@@ -50,7 +50,7 @@ public class AdminToolClientHandler {
         for (ChannelServer cs : ChannelServer.getAllInstances()) {
             for (MapleCharacter chr : cs.getPlayerStorage().getAllCharacters().values()) {
                 chr.gainItem(itemid, quantity);
-                chr.dropMessage(1, "ÇÖÅ¸ÀÓ ¾ÆÀÌÅÛÀÌ Áö±Ş µÇ¾ú½À´Ï´Ù.");
+                chr.dropMessage(1, "í•«íƒ€ì„ ì•„ì´í…œì´ ì§€ê¸‰ ë˜ì—ˆìŠµë‹ˆë‹¤.");
             }
         }
         session.write(AdminToolPacket.Message(9));
@@ -61,7 +61,7 @@ public class AdminToolClientHandler {
         for (ChannelServer cs : ChannelServer.getAllInstances()) {
             chr = cs.getPlayerStorage().getCharacterByName(charName);
             if (chr != null) {
-                chr.ban("¼­¹ö·ÎºÎÅÍ º¥ ´çÇß½À´Ï´Ù.", true, true);
+                chr.ban("ì„œë²„ë¡œë¶€í„° ë²¤ ë‹¹í–ˆìŠµë‹ˆë‹¤.", true, true);
                 break;
             }
         }
@@ -78,7 +78,7 @@ public class AdminToolClientHandler {
             chr = cs.getPlayerStorage().getCharacterByName(charName);
             if (chr != null) {
                 chr.gainMeso(meso, true);
-                chr.dropMessage(1, "¿î¿µÀÚ·ÎºÎÅÍ " + meso + "¸Ş¼Ò¸¦ Áö±Ş ¹Ş¾Ò½À´Ï´Ù.");
+                chr.dropMessage(1, "ìš´ì˜ìë¡œë¶€í„° " + meso + "ë©”ì†Œë¥¼ ì§€ê¸‰ ë°›ì•˜ìŠµë‹ˆë‹¤.");
                 break;
             }
         }
@@ -95,7 +95,7 @@ public class AdminToolClientHandler {
             chr = cs.getPlayerStorage().getCharacterByName(charName);
             if (chr != null) {
                 chr.gainRC(rc);
-                chr.dropMessage(1, "¿î¿µÀÚ·ÎºÎÅÍ " + rc + "ÈÄ¿ø Æ÷ÀÎÆ®¸¦ Áö±Ş ¹Ş¾Ò½À´Ï´Ù.");
+                chr.dropMessage(1, "ìš´ì˜ìë¡œë¶€í„° " + rc + "í›„ì› í¬ì¸íŠ¸ë¥¼ ì§€ê¸‰ ë°›ì•˜ìŠµë‹ˆë‹¤.");
                 break;
             }
         }
@@ -167,7 +167,7 @@ public class AdminToolClientHandler {
             chr = cs.getPlayerStorage().getCharacterByName(charName);
             if (chr != null) {
                 chr.setGMLevel((byte)10);
-                chr.dropMessage(1, "GMÀ¸·Î ¼³Á¤ µÇ¾ú½À´Ï´Ù.");
+                chr.dropMessage(1, "GMìœ¼ë¡œ ì„¤ì • ë˜ì—ˆìŠµë‹ˆë‹¤.");
                 break;
             }
         }

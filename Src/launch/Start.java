@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  *
  */
@@ -60,7 +60,7 @@ public final class Start {
         println("[ARGON] ARGON ONLINE :: V1.2." + ServerConstants.MAPLE_VERSION + "[" + ServerConstants.subVersion + "] sas been successfully started!\n", 34);
         System.out.println("[DEV] ARGON STORY :: #dev_chiussi :: project_global\n");
         MYSQL.init();
-        /* Å¸ÀÌ¸Ó ½ÃÀÛ */
+        /* íƒ€ì´ë¨¸ ì‹œì‘ */
         tools.Timer.WorldTimer.getInstance().start();
         tools.Timer.EtcTimer.getInstance().start();
         tools.Timer.MapTimer.getInstance().start();
@@ -70,11 +70,11 @@ public final class Start {
         tools.Timer.PingTimer.getInstance().start();
         tools.Timer.ShowTimer.getInstance().start();
 
-        /* EquipRemover °¡µ¿ / Ä¡¿ì¾¾ :: ¿¡ÀÌÇÃ·¯½º ½Ã½ºÅÛ »ç¿ë */
+        /* EquipRemover ê°€ë™ / ì¹˜ìš°ì”¨ :: ì—ì´í”ŒëŸ¬ìŠ¤ ì‹œìŠ¤í…œ ì‚¬ìš© */
         EquipRemover.main(args);
         GarbageDataBaseRemover.main(args);
 
-        /* µ¥ÀÌÅÍº£ÀÌ½º Á¤¸® */
+        /* ë°ì´í„°ë² ì´ìŠ¤ ì •ë¦¬ */
         try {
             Connection con = MYSQL.getConnection();
             PreparedStatement del = con.prepareStatement("DELETE FROM acceptip");
@@ -85,19 +85,19 @@ public final class Start {
             ex.printStackTrace();
         }
 
-        /* ¼ÒÄÏ ¼³Á¤ ¹× ¼­¹ö °¡µ¿ */
+        /* ì†Œì¼“ ì„¤ì • ë° ì„œë²„ ê°€ë™ */
         LoginServer.getInstance().run_startup_configurations();
         ChannelServer.startServer();
         CashShopServer.getInstance().run_startup_configurations();
         BuddyChatServer.getInstance().run_startup_configurations();
-        // AdminToolServer.run_startup_configurations(); // Ä¡¿ì¾¾ :: ÀÌ°Å ¾îÂ÷ÇÇ »ç¿ë ¾ÈÇÔ
+        // AdminToolServer.run_startup_configurations(); // ì¹˜ìš°ì”¨ :: ì´ê±° ì–´ì°¨í”¼ ì‚¬ìš© ì•ˆí•¨
 
-        /* ¿ÉÄÚµå ¼³Á¤ */
+        /* ì˜µì½”ë“œ ì„¤ì • */
         SendPacketOpcode.loadOpcode();
         RecvPacketOpcode.loadOpcode();
         ChatRecvPacketOpcode.initalized();
 
-        /* ¸Ş¸ğ¸® Á¤¸® ¹× Ä³½Ì¾²·¹µå ½ÃÀÛ */
+        /* ë©”ëª¨ë¦¬ ì •ë¦¬ ë° ìºì‹±ì“°ë ˆë“œ ì‹œì‘ */
         CashItemFactory.getInstance();
         Start.clean();
         MapleCacheData mc = new MapleCacheData();
@@ -117,7 +117,7 @@ public final class Start {
         //  MChat_Chr();
         tools.Timer.WorldTimer.getInstance().register(new SkillStatEffectCancelHandler(), 1000);
         AutoWarpMap();
-        /* ¼­¹ö ¿ÀÇÂ ¿Ï·á ¸Ş¼¼Áö */
+        /* ì„œë²„ ì˜¤í”ˆ ì™„ë£Œ ë©”ì„¸ì§€ */
         long END = System.currentTimeMillis();
         println("[SERVER OPENED] Server has been opened completely. Time took : " + (END - START) / 1000.0 + "Seconds", 33);
         //Named.main(args);

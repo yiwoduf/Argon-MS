@@ -1,10 +1,10 @@
 /*
  * ArcStory Project
- * ÃÖÁÖ¿ø sch2307@naver.com
- * ÀÌÁØ junny_adm@naver.com
- * ¿ìÁöÈÆ raccoonfox69@gmail.com
- * °­Á¤±Ô ku3135@nate.com
- * ±èÁøÈ« designer@inerve.kr
+ * ìµœì£¼ì› sch2307@naver.com
+ * ì´ì¤€ junny_adm@naver.com
+ * ìš°ì§€í›ˆ raccoonfox69@gmail.com
+ * ê°•ì •ê·œ ku3135@nate.com
+ * ê¹€ì§„í™ designer@inerve.kr
  */
 
 package server.shops;
@@ -44,7 +44,7 @@ public class MapleCharacterShop extends AbstractPlayerStore {
     @Override
     public void closeShop(boolean saveItems, boolean remove) {
         MapleCharacter owner = getMCOwner();
-        getMCOwner().getClient().send(PlayerShopPacket.shopErrorMessage(10, 3, 0)); //»óÁ¡ÀÌ ´İÇû½À´Ï´Ù.
+        getMCOwner().getClient().send(PlayerShopPacket.shopErrorMessage(10, 3, 0)); //ìƒì ì´ ë‹«í˜”ìŠµë‹ˆë‹¤.
         removeAllVisitors(3, -2);
         
         getMap().removeMapObject(this);

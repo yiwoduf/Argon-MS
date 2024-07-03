@@ -3,19 +3,19 @@
 
 /*
 
-	* ´Ü¹®¿£ÇÇ½Ã ÀÚµ¿Á¦ÀÛ ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¸¸µé¾îÁø ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	* ë‹¨ë¬¸ì—”í”¼ì‹œ ìžë™ì œìž‘ ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ë§Œë“¤ì–´ì§„ ìŠ¤í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤.
 
 	* (Guardian Project Development Source Script)
 
-	½ºÇÇ¸´¸Å´ÏÀú ¿¡ ÀÇÇØ ¸¸µé¾î Á³½À´Ï´Ù.
+	ìŠ¤í”¼ë¦¿ë§¤ë‹ˆì € ì— ì˜í•´ ë§Œë“¤ì–´ ì¡ŒìŠµë‹ˆë‹¤.
 
-	¿£ÇÇ½Ã¾ÆÀÌµð : 1012007
+	ì—”í”¼ì‹œì•„ì´ë”” : 1012007
 
-	¿£ÇÇ½Ã ÀÌ¸§ : ÇÁ·Îµå
+	ì—”í”¼ì‹œ ì´ë¦„ : í”„ë¡œë“œ
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : Çì³×½Ã½º : Æê»êÃ¥·Î (100000202)
+	ì—”í”¼ì‹œê°€ ìžˆëŠ” ë§µ : í—¤ë„¤ì‹œìŠ¤ : íŽ«ì‚°ì±…ë¡œ (100000202)
 
-	¿£ÇÇ½Ã ¼³¸í : Á¶·Ã»ç
+	ì—”í”¼ì‹œ ì„¤ëª… : ì¡°ë ¨ì‚¬
 
 
 */
@@ -43,7 +43,7 @@ function action(mode, type, selection) {
     if (status == 0) {
         cm.warp(100050001);
         //cm.gainItem(4310014, 25);//snowcoin
-        cm.gainItem(4031040, 1);//½´¹ÌÀÇ µ·¹¶Ä¡
+        cm.gainItem(4031040, 1);//ìŠˆë¯¸ì˜ ëˆë­‰ì¹˜
         cm.dispose();
         return;
     }

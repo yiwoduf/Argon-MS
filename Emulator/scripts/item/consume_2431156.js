@@ -17,7 +17,7 @@ function action(mode, type, selection) {
         if (status == 0) {
 	    cm.gainItem(2591163, 1);
 	    cm.gainItem(2590008, 1);
-            cm.sendOk("¾Æ·¡ÀÇ ¾ÆÀÌÅÛµéÀÌ Áö±ŞµÇ¾ú½À´Ï´Ù!\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0#\r\n\r\n#i2590008# #b#z2590008##k\r\n#i2591163# #b#z2591163##k");
+            cm.sendOk("ì•„ë˜ì˜ ì•„ì´í…œë“¤ì´ ì§€ê¸‰ë˜ì—ˆìŠµë‹ˆë‹¤!\r\n\r\n#fUI/UIWindow.img/QuestIcon/4/0#\r\n\r\n#i2590008# #b#z2590008##k\r\n#i2591163# #b#z2591163##k");
 	    cm.gainItem(2431156,-1);
 	    cm.dispose();
         } else { 

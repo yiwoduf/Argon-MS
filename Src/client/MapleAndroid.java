@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -27,7 +27,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author ¿¡¹İÅ×ÀÌ¸£
+ * @author ì—ë°˜í…Œì´ë¥´
  */
 public class MapleAndroid {
     private byte skincolor;
@@ -151,7 +151,7 @@ public class MapleAndroid {
         int defHair, defFace;
         int android = ItemInformation.getInstance().getAndroid(itemid);
         if (ItemInformation.getInstance().getAndroidBasicSettings(android) == null) {
-            System.err.println("[¿À·ù] ¾Èµå·ÎÀÌµå¸¦ »ı¼ºÇÏ´ø Áß ¾Èµå·ÎÀÌµåÀÇ ±âº»¿Ü¸ğÀ» ºÒ·¯¿À´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] ì•ˆë“œë¡œì´ë“œë¥¼ ìƒì„±í•˜ë˜ ì¤‘ ì•ˆë“œë¡œì´ë“œì˜ ê¸°ë³¸ì™¸ëª¨ì„ ë¶ˆëŸ¬ì˜¤ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
         }
         defHair = ItemInformation.getInstance().getAndroidBasicSettings(android).getRandomHair();
         defFace = ItemInformation.getInstance().getAndroidBasicSettings(android).getRandomFace();
@@ -159,7 +159,7 @@ public class MapleAndroid {
             final Connection con = MYSQL.getConnection();
 	    final PreparedStatement ps = con.prepareStatement("INSERT INTO android (uniqueid, name, face, hair, itemid, skincolor) VALUES (?, ?, ?, ?, ?, ?)");
 	    ps.setInt(1, ret);
-            ps.setString(2, "¾Èµå·ÎÀÌµå");
+            ps.setString(2, "ì•ˆë“œë¡œì´ë“œ");
 	    ps.setInt(3, defFace);
 	    ps.setInt(4, defHair);
 	    ps.setInt(5, itemid);
@@ -173,7 +173,7 @@ public class MapleAndroid {
 	    return null;
 	}
 	MapleAndroid newandroid = new MapleAndroid(itemid, ret);
-	newandroid.setName("¾Èµå·ÎÀÌµå");
+	newandroid.setName("ì•ˆë“œë¡œì´ë“œ");
 	newandroid.setFace(defFace);
 	newandroid.setHair(defHair);
         newandroid.setSkinColor(0);

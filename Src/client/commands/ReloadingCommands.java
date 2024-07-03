@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹èÁöÈÆ raccoonfox69@gmail.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°°ì§€í›ˆ raccoonfox69@gmail.com
  * ==================================
  * 
  */
@@ -23,49 +23,49 @@ public class ReloadingCommands implements Command {
 
     @Override
     public void execute(MapleClient c, String[] splitted) throws Exception, IllegalCommandSyntaxException {
-	if (splitted[0].equals("!¿ÉÄÚµå¸®¼Â")) {
+	if (splitted[0].equals("!ì˜µì½”ë“œë¦¬ì…‹")) {
 	    SendPacketOpcode.loadOpcode2();
             RecvPacketOpcode.loadOpcode();
-            c.getPlayer().dropShowInfo("[½Ã½ºÅÛ] ¿ÉÄÚµå ¸®¼ÂÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
-	} else if (splitted[0].equals("!µğ¹ö±×¿ÉÄÚµå")) {
+            c.getPlayer().dropShowInfo("[ì‹œìŠ¤í…œ] ì˜µì½”ë“œ ë¦¬ì…‹ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
+	} else if (splitted[0].equals("!ë””ë²„ê·¸ì˜µì½”ë“œ")) {
             for (SendPacketOpcode send : SendPacketOpcode.values()) {
                 if (send.name().equals(splitted[1])) {
                     send.setValue(Short.parseShort(splitted[2]));
-                    c.getPlayer().dropMessage(5, "[µğ¹ö±× ¿ÉÄÚµå] " + send.name() + " : " + send.getValue());
+                    c.getPlayer().dropMessage(5, "[ë””ë²„ê·¸ ì˜µì½”ë“œ] " + send.name() + " : " + send.getValue());
                     break;
                 }
             }
-        } else if (splitted[0].equals("!µå·Ó¸®¼Â")) {
+        } else if (splitted[0].equals("!ë“œë¡­ë¦¬ì…‹")) {
 	    MapleMonsterProvider.getInstance().clearDrops();
 	    ReactorScriptManager.getInstance().clearDrops();
-            c.getPlayer().dropShowInfo("[½Ã½ºÅÛ] µå·Ó ¸®¼ÂÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
-	} else if (splitted[0].equals("!Æ÷Å»¸®¼Â")) {
+            c.getPlayer().dropShowInfo("[ì‹œìŠ¤í…œ] ë“œë¡­ ë¦¬ì…‹ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
+	} else if (splitted[0].equals("!í¬íƒˆë¦¬ì…‹")) {
 	    PortalScriptManager.getInstance().clearScripts();
-            c.getPlayer().dropShowInfo("[½Ã½ºÅÛ] Æ÷Å» ¸®¼ÂÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
-	} else if (splitted[0].equals("!»óÁ¡¸®¼Â")) {
+            c.getPlayer().dropShowInfo("[ì‹œìŠ¤í…œ] í¬íƒˆ ë¦¬ì…‹ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
+	} else if (splitted[0].equals("!ìƒì ë¦¬ì…‹")) {
 	    MapleShopFactory.getInstance().clear();
-            c.getPlayer().dropShowInfo("[½Ã½ºÅÛ] »óÁ¡ ¸®¼ÂÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
-	} else if (splitted[0].equals("!ÀÌº¥Æ®¸®¼Â")) {
+            c.getPlayer().dropShowInfo("[ì‹œìŠ¤í…œ] ìƒì  ë¦¬ì…‹ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
+	} else if (splitted[0].equals("!ì´ë²¤íŠ¸ë¦¬ì…‹")) {
 	    for (ChannelServer instance : ChannelServer.getAllInstances()) {
 		instance.reloadEvents();
 	    }
-            c.getPlayer().dropShowInfo("[½Ã½ºÅÛ] ÀÌº¥Æ® ¸®¼ÂÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
-	} else if (splitted[0].equals("!½ºÅ©¸³Æ®¸®¼Â")) {
+            c.getPlayer().dropShowInfo("[ì‹œìŠ¤í…œ] ì´ë²¤íŠ¸ ë¦¬ì…‹ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
+	} else if (splitted[0].equals("!ìŠ¤í¬ë¦½íŠ¸ë¦¬ì…‹")) {
             NPCScriptManager.getInstance().clearScript();
-            c.getPlayer().dropShowInfo("[½Ã½ºÅÛ] ½ºÅ©¸³Æ® ¸®¼ÂÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+            c.getPlayer().dropShowInfo("[ì‹œìŠ¤í…œ] ìŠ¤í¬ë¦½íŠ¸ ë¦¬ì…‹ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
         }
     }
 
     @Override
     public CommandDefinition[] getDefinition() {
 	return new CommandDefinition[]{
-		    new CommandDefinition("¿ÉÄÚµå¸®¼Â", "", "¸®½Ãºê¿Í ¼¾µå ¿ÉÄÚµå¸¦ properties¿¡¼­ ´Ù½Ã ºÒ·¯¿É´Ï´Ù.", 6),
-		    new CommandDefinition("Æ÷Å»¸®¼Â", "", "Ä³½ÃµÈ Æ÷Å»½ºÅ©¸³Æ®¸¦ ºñ¿ì°í js¸¦ ´Ù½Ã ºÒ·¯¿É´Ï´Ù.", 6),
-		    new CommandDefinition("µå·Ó¸®¼Â", "", "Ä³½ÃµÈ µå·Ó µ¥ÀÌÅÍ¸¦ ºñ¿ì°í DB¿¡¼­ ´Ù½Ã ºÒ·¯¿É´Ï´Ù.", 6),
-		    new CommandDefinition("»óÁ¡¸®¼Â", "", "Ä³½ÃµÈ »óÁ¡ µ¥ÀÌÅÍ¸¦ ºñ¿ì°í DB¿¡¼­ ´Ù½Ã ºÒ·¯¿É´Ï´Ù.", 6),
-		    new CommandDefinition("½ºÅ©¸³Æ®¸®¼Â", "", "Ä³½ÃµÈ ½ºÅ©¸³Æ® µ¥ÀÌÅÍ¸¦ ºñ¿ì°í ÇÊ¿äÇÒ¶§ ´Ù½Ã ºÒ·¯¿É´Ï´Ù.", 6),
-		    new CommandDefinition("ÀÌº¥Æ®¸®¼Â", "", "Ä³½ÃµÇ°í ½ÇÇàÁßÀÎ ÀÌº¥Æ®¸¦ ¸ğµÎ Á¾·áÇÏ°í js¸¦ ´Ù½Ã ºÒ·¯¿É´Ï´Ù.", 6),
-                    new CommandDefinition("µğ¹ö±×¿ÉÄÚµå", "", "", 6)
+		    new CommandDefinition("ì˜µì½”ë“œë¦¬ì…‹", "", "ë¦¬ì‹œë¸Œì™€ ì„¼ë“œ ì˜µì½”ë“œë¥¼ propertiesì—ì„œ ë‹¤ì‹œ ë¶ˆëŸ¬ì˜µë‹ˆë‹¤.", 6),
+		    new CommandDefinition("í¬íƒˆë¦¬ì…‹", "", "ìºì‹œëœ í¬íƒˆìŠ¤í¬ë¦½íŠ¸ë¥¼ ë¹„ìš°ê³  jsë¥¼ ë‹¤ì‹œ ë¶ˆëŸ¬ì˜µë‹ˆë‹¤.", 6),
+		    new CommandDefinition("ë“œë¡­ë¦¬ì…‹", "", "ìºì‹œëœ ë“œë¡­ ë°ì´í„°ë¥¼ ë¹„ìš°ê³  DBì—ì„œ ë‹¤ì‹œ ë¶ˆëŸ¬ì˜µë‹ˆë‹¤.", 6),
+		    new CommandDefinition("ìƒì ë¦¬ì…‹", "", "ìºì‹œëœ ìƒì  ë°ì´í„°ë¥¼ ë¹„ìš°ê³  DBì—ì„œ ë‹¤ì‹œ ë¶ˆëŸ¬ì˜µë‹ˆë‹¤.", 6),
+		    new CommandDefinition("ìŠ¤í¬ë¦½íŠ¸ë¦¬ì…‹", "", "ìºì‹œëœ ìŠ¤í¬ë¦½íŠ¸ ë°ì´í„°ë¥¼ ë¹„ìš°ê³  í•„ìš”í• ë•Œ ë‹¤ì‹œ ë¶ˆëŸ¬ì˜µë‹ˆë‹¤.", 6),
+		    new CommandDefinition("ì´ë²¤íŠ¸ë¦¬ì…‹", "", "ìºì‹œë˜ê³  ì‹¤í–‰ì¤‘ì¸ ì´ë²¤íŠ¸ë¥¼ ëª¨ë‘ ì¢…ë£Œí•˜ê³  jsë¥¼ ë‹¤ì‹œ ë¶ˆëŸ¬ì˜µë‹ˆë‹¤.", 6),
+                    new CommandDefinition("ë””ë²„ê·¸ì˜µì½”ë“œ", "", "", 6)
 	};
     }
 }

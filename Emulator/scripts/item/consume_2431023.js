@@ -1,7 +1,7 @@
 /*
- * ÇÁ·ÎÁ§Æ® : 1.2.214 SpiritStyle
- * Script Author : ÇÏ¿ä(ifhayo)
- * ÀÌ ÁÖ¼®Àº Áö¿ìÁö ¾Ê¾ÆÁÖ¼ÌÀ¸¸é ÁÁ°Ú½À´Ï´Ù.
+ * í”„ë¡œì íŠ¸ : 1.2.214 SpiritStyle
+ * Script Author : í•˜ìš”(ifhayo)
+ * ì´ ì£¼ì„ì€ ì§€ìš°ì§€ ì•Šì•„ì£¼ì…¨ìœ¼ë©´ ì¢‹ê² ìŠµë‹ˆë‹¤.
  *
  */
 
@@ -38,7 +38,7 @@ function action(mode, type, selection) {
 	var itemQty = 1
 	cm.gainItem(itemSet, itemQty);
 	cm.gainItem(itemNed, -1);
-	cm.getPlayer().send(MainPacketCreator.getGMText(6, "¾ÆÀÌÅÛÀ» È¹µæÇÏ¿´½À´Ï´Ù. ("+Packages.server.items.ItemInformation.getInstance().getName(itemSet)+")"));
+	cm.getPlayer().send(MainPacketCreator.getGMText(6, "ì•„ì´í…œì„ íšë“í•˜ì˜€ìŠµë‹ˆë‹¤. ("+Packages.server.items.ItemInformation.getInstance().getName(itemSet)+")"));
 	cm.dispose();
 	}
 	}

@@ -1,8 +1,8 @@
 /*
-	º» ½ºÅ©¸³Æ®´Â ¼±È÷ÆÑÀÇ ÆÄÀÏÀÔ´Ï´Ù.
-	¼±È÷ÆÑÀº KMS ±âÁØÀ¸·Î ¸¸µé¾îÁ³½À´Ï´Ù.
+	ë³¸ ìŠ¤í¬ë¦½íŠ¸ëŠ” ì„ íˆíŒ©ì˜ íŒŒì¼ì…ë‹ˆë‹¤.
+	ì„ íˆíŒ©ì€ KMS ê¸°ì¤€ìœ¼ë¡œ ë§Œë“¤ì–´ì¡ŒìŠµë‹ˆë‹¤.
 
-	³×ÀÌ¹ö : ¼±¿ì(seonwoo__@naver.com)
+	ë„¤ì´ë²„ : ì„ ìš°(seonwoo__@naver.com)
 */
 
 var status = 0;
@@ -18,7 +18,7 @@ function action(mode , type , selection){
 		cm.dispose();
 	} else {
 	if (mode == 0 && (status == 0)) {
-		cm.sendOk("¾È³çÈ÷ °¡¼¼¿ä.");
+		cm.sendOk("ì•ˆë…•íˆ ê°€ì„¸ìš”.");
 		cm.dispose();
 	} 
 	if (mode > 0)
@@ -26,14 +26,14 @@ function action(mode , type , selection){
 	else
 	    status--;
 	if (status == 0) {
-            cm.sendYesNo("Á¤¸» Ã¢°í¸¦ ÀÌ¿ëÇÏ½Ã°Ú½À´Ï±î?")
+            cm.sendYesNo("ì •ë§ ì°½ê³ ë¥¼ ì´ìš©í•˜ì‹œê² ìŠµë‹ˆê¹Œ?")
         } else if (status == 1){
     if (cm.getPlayer().getLevel() >= 120) {
                    cm.sendStorage();
                    cm.dispose();
                    
            } else {
-               cm.sendOk("Ã¢°í¸¦ ÀÌ¿ëÇÏ½Ç·Á¸é 120 ·¹º§ÀÌ»óÀÌ µÇ¼Å¾ßÇÕ´Ï´Ù.")
+               cm.sendOk("ì°½ê³ ë¥¼ ì´ìš©í•˜ì‹¤ë ¤ë©´ 120 ë ˆë²¨ì´ìƒì´ ë˜ì…”ì•¼í•©ë‹ˆë‹¤.")
                cm.dispose();
            }
         }

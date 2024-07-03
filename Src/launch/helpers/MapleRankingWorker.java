@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -18,7 +18,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author ÃÖ¿ëÀç <virgo_s_t@naver.com>
+ * @author ìµœìš©ì¬ <virgo_s_t@naver.com>
  */
 public class MapleRankingWorker implements Runnable {
     
@@ -31,13 +31,13 @@ public class MapleRankingWorker implements Runnable {
             connect.setAutoCommit(false);
             updateAllJobRankings();
         } catch (Exception error) {
-            System.out.println("[¿À·ù] ·©Å·À» ¾÷µ¥ÀÌÆ®ÇÏ´Â µµÁß ¿À·ù°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù. : ");
+            System.out.println("[ì˜¤ë¥˜] ë­í‚¹ì„ ì—…ë°ì´íŠ¸í•˜ëŠ” ë„ì¤‘ ì˜¤ë¥˜ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤. : ");
             if (!ServerConstants.realese) error.printStackTrace();
             try {
                 connect.rollback();
                 connect.setAutoCommit(true);
             } catch (SQLException errors) {
-                System.out.println("[¿À·ù] ·Ñ¹éÀ» ÇÏ´ø µµÁß ¿À·ù°¡ ¹ß»ıÇÏ¿´½À´Ï´Ù. : ");
+                System.out.println("[ì˜¤ë¥˜] ë¡¤ë°±ì„ í•˜ë˜ ë„ì¤‘ ì˜¤ë¥˜ê°€ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤. : ");
                 System.out.println(errors);
             }
         } finally {
@@ -70,7 +70,7 @@ public class MapleRankingWorker implements Runnable {
                 query.setInt(1, rankMove);
                 query.setInt(2, rankMove);
                 query.setInt(3, rank);
-                query.setInt(4, rank); //¿ùµå ·©Å·Àº ÀÏ´Ü ÀÓ½ÃÃ³¸®
+                query.setInt(4, rank); //ì›”ë“œ ë­í‚¹ì€ ì¼ë‹¨ ì„ì‹œì²˜ë¦¬
                 query.setInt(5, result.getInt("id"));
                 query.executeUpdate();
             }

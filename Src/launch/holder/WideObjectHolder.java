@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  *
  */
@@ -650,7 +650,7 @@ public class WideObjectHolder {
                     MapleCharacter chr = cserv.getPlayerStorage().getCharacterByName(hpcz.getName());
                     if (chr != null) {
                         if (chr.getId() != ch.getId()) {
-                            chr.send(MainPacketCreator.serverNotice(5, "'" + ch.getName() + "' ´ÔÀÌ ¿øÁ¤´ë¿¡ °¡ÀÔÇÏ¼Ì½À´Ï´Ù."));
+                            chr.send(MainPacketCreator.serverNotice(5, "'" + ch.getName() + "' ë‹˜ì´ ì›ì •ëŒ€ì— ê°€ì…í•˜ì…¨ìŠµë‹ˆë‹¤."));
                             chr.send(MainPacketCreator.updateExpedition(true, exp));
                         } else {
                             chr.send(MainPacketCreator.updateExpedition(false, exp));

@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -48,8 +48,8 @@ public class MapleShop {
         rechargeableItems.add(2070011);
         rechargeableItems.add(2070012);
         rechargeableItems.add(2070013);
-        rechargeableItems.add(2070023); //ÇÃ·¹ÀÓ Ç¥Ã¢
-        rechargeableItems.add(2070024);    // ¹«ÇÑÀÇ ¼ö¸®°Ë
+        rechargeableItems.add(2070023); //í”Œë ˆì„ í‘œì°½
+        rechargeableItems.add(2070024);    // ë¬´í•œì˜ ìˆ˜ë¦¬ê²€
         rechargeableItems.add(2070026);
 
         rechargeableItems.add(2330000);
@@ -80,14 +80,14 @@ public class MapleShop {
 
     public void sendShop(MapleClient c) {
         if (items == null) {
-            System.out.println("[ARGON] »óÁ¡¿¡ ¾Æ¹«Á¤º¸°¡ ¾ø½À´Ï´Ù.");
+            System.out.println("[ARGON] ìƒì ì— ì•„ë¬´ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.");
             return;
         }
         c.getPlayer().setShop(this);
         c.getSession().writeAndFlush(MainPacketCreator.getNPCShop(c, getNpcId(), items));
     }
 
-    public void buy(MapleClient c, int itemId, short quantity, short position) { // Ä¡¿ì¾¾ :: »óÁ¡ ¹­À½±¸¸Å ¹× µô·¹ÀÌ ¿À·ù
+    public void buy(MapleClient c, int itemId, short quantity, short position) { // ì¹˜ìš°ì”¨ :: ìƒì  ë¬¶ìŒêµ¬ë§¤ ë° ë”œë ˆì´ ì˜¤ë¥˜
 
         int x = 0, index = -1;
         for (IItem i : c.getPlayer().getRebuyList()) {
@@ -108,7 +108,7 @@ public class MapleShop {
                     c.getPlayer().getRebuyList().remove(index);
                     c.getSession().write(MainPacketCreator.confirmShopTransaction((byte) 0, index));
                 } else {
-                    c.getPlayer().dropMessage(1, "ÀÎº¥Åä¸®°¡ ²Ë Ã¡½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(1, "ì¸ë²¤í† ë¦¬ê°€ ê½‰ ì°¼ìŠµë‹ˆë‹¤.");
                     c.getSession().write(MainPacketCreator.confirmShopTransaction((byte) 0, -1));
                 }
             } else {
@@ -122,21 +122,21 @@ public class MapleShop {
                 if (InventoryManipulator.checkSpace(c, itemId, (short) (quantity * item.getQuantity()), "")) {
                     if (GameConstants.isPet(itemId)) {
                         c.getPlayer().BuyPET(itemId);
-                        c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "" + ItemInformation.getInstance().getName(itemId) + "ÆêÀ» ±¸¸Å ÇÏ¿´½À´Ï´Ù."));
+                        c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "" + ItemInformation.getInstance().getName(itemId) + "í«ì„ êµ¬ë§¤ í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         c.getPlayer().gainMeso(-(item.getPrice()), false);
                     } else {
                         ItemInformation ii = ItemInformation.getInstance();
                         if (GameConstants.isRechargable(itemId)) {
                             quantity = ii.getSlotMax(c, item.getItemId());
                             c.getPlayer().gainMeso(-(item.getPrice()), false);
-                            InventoryManipulator.addById(c, itemId, (short) (quantity * item.getQuantity()), null, null, item.getPeriod() <= 0 ? 0 : ((item.getPeriod() * 60L * 1000L) + System.currentTimeMillis()), CurrentTime.getAllCurrentTime() + "¿¡ " + getId() + " »óÁ¡¿¡¼­ ±¸¸ÅÇÑ ¾ÆÀÌÅÛ.");
+                            InventoryManipulator.addById(c, itemId, (short) (quantity * item.getQuantity()), null, null, item.getPeriod() <= 0 ? 0 : ((item.getPeriod() * 60L * 1000L) + System.currentTimeMillis()), CurrentTime.getAllCurrentTime() + "ì— " + getId() + " ìƒì ì—ì„œ êµ¬ë§¤í•œ ì•„ì´í…œ.");
                         } else {
                             c.getPlayer().gainMeso(-(item.getPrice() * quantity), false);
-                            c.getPlayer().gainItem(itemId, (short) (item.getQuantity() * quantity), true, item.getPeriod() <= 0 ? 0 : ((item.getPeriod() * 60L * 1000L) + System.currentTimeMillis()), "»óÁ¡¿¡¼­ ±¸ÀÔÇÑ ¾ÆÀÌÅÛ"); //
+                            c.getPlayer().gainItem(itemId, (short) (item.getQuantity() * quantity), true, item.getPeriod() <= 0 ? 0 : ((item.getPeriod() * 60L * 1000L) + System.currentTimeMillis()), "ìƒì ì—ì„œ êµ¬ì…í•œ ì•„ì´í…œ"); //
                         }
                     }
                 } else {
-                    c.getPlayer().dropMessage(1, "ÀÎº¥Åä¸®°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+                    c.getPlayer().dropMessage(1, "ì¸ë²¤í† ë¦¬ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
                 }
                 c.getSession().writeAndFlush(MainPacketCreator.confirmShopTransaction((byte) 0, -1));
             }
@@ -145,14 +145,14 @@ public class MapleShop {
                 if (InventoryManipulator.checkSpace(c, itemId, (short) (quantity * item.getQuantity()), "")) {
                     if (GameConstants.isPet(itemId)) {
                         c.getPlayer().BuyPET(itemId);
-                        c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "" + ItemInformation.getInstance().getName(itemId) + "ÆêÀ» ±¸¸Å ÇÏ¿´½À´Ï´Ù."));
+                        c.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "" + ItemInformation.getInstance().getName(itemId) + "í«ì„ êµ¬ë§¤ í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         InventoryManipulator.removeById(c, GameConstants.getInventoryType(item.getPrice()), item.getPrice(), item.getPriceQuantity(), false, false);
                     } else {
                         ItemInformation ii = ItemInformation.getInstance();
                         if (GameConstants.isRechargable(itemId)) {
                             quantity = ii.getSlotMax(c, item.getItemId());
                             InventoryManipulator.removeById(c, GameConstants.getInventoryType(item.getPrice()), item.getPrice(), item.getPriceQuantity(), false, false);
-                            InventoryManipulator.addById(c, itemId, (short) (quantity * item.getQuantity()), null, null, item.getPeriod() <= 0 ? 0 : ((item.getPeriod() * 60L * 1000L) + System.currentTimeMillis()), CurrentTime.getAllCurrentTime() + "¿¡ " + getId() + " »óÁ¡¿¡¼­ ±¸¸ÅÇÑ ¾ÆÀÌÅÛ.");
+                            InventoryManipulator.addById(c, itemId, (short) (quantity * item.getQuantity()), null, null, item.getPeriod() <= 0 ? 0 : ((item.getPeriod() * 60L * 1000L) + System.currentTimeMillis()), CurrentTime.getAllCurrentTime() + "ì— " + getId() + " ìƒì ì—ì„œ êµ¬ë§¤í•œ ì•„ì´í…œ.");
                         } else {
                             InventoryManipulator.removeById(c, GameConstants.getInventoryType(item.getPrice()), item.getPrice(), item.getPriceQuantity() * quantity, false, false);
                             if (GameConstants.isMonsterLifeBox(itemId)) {
@@ -160,15 +160,15 @@ public class MapleShop {
                                 if (InventoryManipulator.checkSpace(c, item1.getItemId(), (short) 1, "")) {
                                     InventoryManipulator.addbyItem(c, item1);
                                 } else {
-                                    c.getPlayer().dropMessage(1, "ÀÎº¥Åä¸®°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+                                    c.getPlayer().dropMessage(1, "ì¸ë²¤í† ë¦¬ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
                                 }
                             } else {
-                                InventoryManipulator.addById(c, itemId, (short) (quantity * item.getQuantity()), null, null, item.getPeriod() <= 0 ? 0 : ((item.getPeriod() * 60L * 1000L) + System.currentTimeMillis()), CurrentTime.getAllCurrentTime() + "¿¡ " + getId() + " »óÁ¡¿¡¼­ ±¸¸ÅÇÑ ¾ÆÀÌÅÛ.");
+                                InventoryManipulator.addById(c, itemId, (short) (quantity * item.getQuantity()), null, null, item.getPeriod() <= 0 ? 0 : ((item.getPeriod() * 60L * 1000L) + System.currentTimeMillis()), CurrentTime.getAllCurrentTime() + "ì— " + getId() + " ìƒì ì—ì„œ êµ¬ë§¤í•œ ì•„ì´í…œ.");
                             }
                         }
                     }
                 } else {
-                    c.getPlayer().dropMessage(1, "ÀÎº¥Åä¸®°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+                    c.getPlayer().dropMessage(1, "ì¸ë²¤í† ë¦¬ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
                 }
                 c.getSession().write(MainPacketCreator.confirmShopTransaction((byte) 0, -1));
             }

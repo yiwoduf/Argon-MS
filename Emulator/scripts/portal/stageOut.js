@@ -1,10 +1,10 @@
 /*
- * Ç»¾î¿Â¶óÀÎ ¼Ò½º ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+ * í“¨ì–´ì˜¨ë¼ì¸ ì†ŒìŠ¤ ìŠ¤í¬ë¦½íŠ¸ ì…ë‹ˆë‹¤.
  * 
- * Æ÷Å»À§Ä¡ : 
- * Æ÷Å»¼³¸í : 
+ * í¬íƒˆìœ„ì¹˜ : 
+ * í¬íƒˆì„¤ëª… : 
  * 
- * Á¦ÀÛ : ÁÖÅ©ºí·¢
+ * ì œì‘ : ì£¼í¬ë¸”ë™
  * 
  */
 importPackage(Packages.packet.creators);
@@ -15,9 +15,9 @@ importPackage(Packages.launch.world);
 function enter(pi) {
 	if(pi.getPlayer().getMapId() == 992002000) {
 	pi.getPlayer().getMap().broadcastMessage(MainPacketCreator.showEffect("Gstar/clearS"));
-	pi.getPlayer().getMap().broadcastMessage(UIPacket.showInfo("3ÃÊ µÚ ·Îºñ·Î ÀÌµ¿µË´Ï´Ù."));
+	pi.getPlayer().getMap().broadcastMessage(UIPacket.showInfo("3ì´ˆ ë’¤ ë¡œë¹„ë¡œ ì´ë™ë©ë‹ˆë‹¤."));
 	pi.TheSidClear();
         GameConstants.setTheSid(GameConstants.getTheSidTower(pi.getPlayer().getMapId()), GameConstants.getTheSidMap((GameConstants.getTheSidTower(pi.getPlayer().getMapId()) + 1)), pi.getPlayer());
-        WorldBroadcasting.broadcast(MainPacketCreator.serverNotice(6, "[´õ ½Ãµå] " + pi.getPlayer().getParty().getLeader().getName() + "´ÔÀÇ ÆÄÆ¼°¡ ´õ ½Ãµå 2ÃşÀ» °ø·« Çß½À´Ï´Ù."));
+        WorldBroadcasting.broadcast(MainPacketCreator.serverNotice(6, "[ë” ì‹œë“œ] " + pi.getPlayer().getParty().getLeader().getName() + "ë‹˜ì˜ íŒŒí‹°ê°€ ë” ì‹œë“œ 2ì¸µì„ ê³µëµ í–ˆìŠµë‹ˆë‹¤."));
         }
 }

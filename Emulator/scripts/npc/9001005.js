@@ -10,7 +10,7 @@ function action(mode, type, selection) {
 		cm.dispose();
 	} else {
 		if ((status == 0 || status == 1 || status == 2 || status == 4 || status == 6) && mode == 0) {
-			cm.sendOk("È¤½Ã¶óµµ °áÁ¤ÀÌ ¼­½Å´Ù¸é Àú¿¡°Ô·Î...........");
+			cm.sendOk("í˜¹ì‹œë¼ë„ ê²°ì •ì´ ì„œì‹ ë‹¤ë©´ ì €ì—ê²Œë¡œ...........");
 			cm.dispose();
 			return;
 		}
@@ -19,12 +19,12 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-				cm.sendSimple("¾È³çÇÏ¼¼¿ä~ ÀúÈñ ¿Â¶óÀÎ¿¡ Ã¹¹ßÀ» ³»µð½Å ¿©·¯ºÐÀ» Áø½ÉÀ¸·Î È¯¿µÇÕ´Ï´Ù~ Àú´Â ¿©·¯ºÐ¿¡°Ô ¸ðÇèÀÇ ±æÀ» ¿­¾îÁÖ°íÀÚ ¿©±â¿¡ ÀÖ½À´Ï´Ù~ ÀÚ! ¸ðÇèÀÇ ÁØºñ´Â µÇ¼Ì´ÂÁö¿ä?\r\n\r\n\r\n#rÁÖÀÇ»çÇ× : ¹ÌÇÏÀÏ, ½Ã±×³Ê½º(¹ÌÇÏÀÏ Á¦¿Ü), ·¹Áö½ºÅÁ½º(µ¥¸ó½½·¹ÀÌ¾î Æ÷ÇÔ)·Î ÇÃ·¹ÀÌ ÇÏ½Ç ºÐµé ²²¼­´Â ÇØ´ç Å¬·¡½º·Î »ý¼ºÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù. ±× ¿Ü Å¸ Á÷¾÷±ºÀÇ °æ¿ì¿¡´Â ¹«Á¶°Ç ¸ðÇè°¡ Á÷¾÷À¸·Î Ä³¸¯ÅÍ¸¦ »ý¼ºÇØÁÖ¼¼¿ä. °¨»çÇÕ´Ï´Ù#b\r\n#L0#¸ðÇèÀ» ½ÃÀÛÇÏ°Ú½À´Ï´Ù.#l#b\r\n#L1#¸ðÇèÀ» ½ÃÀÛÇÏ±â Àü¿¡ #r¼ºº°#bÀ» º¯°æÇÏ°í ½Í¾î¿ä.#l");				
+				cm.sendSimple("ì•ˆë…•í•˜ì„¸ìš”~ ì €í¬ ì˜¨ë¼ì¸ì— ì²«ë°œì„ ë‚´ë””ì‹  ì—¬ëŸ¬ë¶„ì„ ì§„ì‹¬ìœ¼ë¡œ í™˜ì˜í•©ë‹ˆë‹¤~ ì €ëŠ” ì—¬ëŸ¬ë¶„ì—ê²Œ ëª¨í—˜ì˜ ê¸¸ì„ ì—´ì–´ì£¼ê³ ìž ì—¬ê¸°ì— ìžˆìŠµë‹ˆë‹¤~ ìž! ëª¨í—˜ì˜ ì¤€ë¹„ëŠ” ë˜ì…¨ëŠ”ì§€ìš”?\r\n\r\n\r\n#rì£¼ì˜ì‚¬í•­ : ë¯¸í•˜ì¼, ì‹œê·¸ë„ˆìŠ¤(ë¯¸í•˜ì¼ ì œì™¸), ë ˆì§€ìŠ¤íƒ•ìŠ¤(ë°ëª¬ìŠ¬ë ˆì´ì–´ í¬í•¨)ë¡œ í”Œë ˆì´ í•˜ì‹¤ ë¶„ë“¤ ê»˜ì„œëŠ” í•´ë‹¹ í´ëž˜ìŠ¤ë¡œ ìƒì„±í•´ì£¼ì‹œê¸¸ ë°”ëžë‹ˆë‹¤. ê·¸ ì™¸ íƒ€ ì§ì—…êµ°ì˜ ê²½ìš°ì—ëŠ” ë¬´ì¡°ê±´ ëª¨í—˜ê°€ ì§ì—…ìœ¼ë¡œ ìºë¦­í„°ë¥¼ ìƒì„±í•´ì£¼ì„¸ìš”. ê°ì‚¬í•©ë‹ˆë‹¤#b\r\n#L0#ëª¨í—˜ì„ ì‹œìž‘í•˜ê² ìŠµë‹ˆë‹¤.#l#b\r\n#L1#ëª¨í—˜ì„ ì‹œìž‘í•˜ê¸° ì „ì— #rì„±ë³„#bì„ ë³€ê²½í•˜ê³  ì‹¶ì–´ìš”.#l");				
 		} else if (status == 1) {		
 			if (selection == 0) {
-				cm.sendNext("ÁØºñ´Â ´Ù µÇ½Å°Ç°¡¿ä? ±×·³ ¿¬ÀÌ¿Â¶óÀÎ¿¡¼­ Áñ°Å¿î ½Ã°£À» º¸³»¼¼¿ä!\r\n\r\n\r\n#bÁÖÀÇ»çÇ× : ´ëÈ­¸¦ µµÁß¿¡ ´Ý°Å³ª ÇÏ¸é ÁøÇàÀÌ ÀüÇô ¾ÈµÇ´Â °æ¿ì°¡ ÀÖ½À´Ï´Ù. ÁÖÀÇ!ÁÖÀÇ!");
+				cm.sendNext("ì¤€ë¹„ëŠ” ë‹¤ ë˜ì‹ ê±´ê°€ìš”? ê·¸ëŸ¼ ì—°ì´ì˜¨ë¼ì¸ì—ì„œ ì¦ê±°ìš´ ì‹œê°„ì„ ë³´ë‚´ì„¸ìš”!\r\n\r\n\r\n#bì£¼ì˜ì‚¬í•­ : ëŒ€í™”ë¥¼ ë„ì¤‘ì— ë‹«ê±°ë‚˜ í•˜ë©´ ì§„í–‰ì´ ì „í˜€ ì•ˆë˜ëŠ” ê²½ìš°ê°€ ìžˆìŠµë‹ˆë‹¤. ì£¼ì˜!ì£¼ì˜!");
 			} else if (selection == 1) {
-				cm.sendSimple("Ä³¸¯ÅÍ ÀüÁ÷ Àü¿¡ ¼ºº°À» ¹Ù²ÙÁö ¾ÊÀ¸¸é ¾ÈµÇ´Â Á÷¾÷ÀÌ ¸î °¡Áö Á¸ÀçÇÕ´Ï´Ù. ±×·± ÀÌÀ¯·Î ¼ºº° º¯È¯ ½Ã½ºÅÛÀ» Áö±Ý¿¡ ÇÑÇØ Áö¿øÇØµå¸®°í ÀÖ½À´Ï´Ù. ¾î´À¼ºº°·Î ÇÏ½Ç°Å¿¡¿ä??\r\n\r\n#L0##b¿©¼º Ä³¸¯ÅÍ·Î ÀüÈ¯#l\r\n#L1##b³²¼º Ä³¸¯ÅÍ·Î ÀüÈ¯#l");
+				cm.sendSimple("ìºë¦­í„° ì „ì§ ì „ì— ì„±ë³„ì„ ë°”ê¾¸ì§€ ì•Šìœ¼ë©´ ì•ˆë˜ëŠ” ì§ì—…ì´ ëª‡ ê°€ì§€ ì¡´ìž¬í•©ë‹ˆë‹¤. ê·¸ëŸ° ì´ìœ ë¡œ ì„±ë³„ ë³€í™˜ ì‹œìŠ¤í…œì„ ì§€ê¸ˆì— í•œí•´ ì§€ì›í•´ë“œë¦¬ê³  ìžˆìŠµë‹ˆë‹¤. ì–´ëŠì„±ë³„ë¡œ í•˜ì‹¤ê±°ì—ìš”??\r\n\r\n#L0##bì—¬ì„± ìºë¦­í„°ë¡œ ì „í™˜#l\r\n#L1##bë‚¨ì„± ìºë¦­í„°ë¡œ ì „í™˜#l");
 			} else {
 			cm.dispose();
 			}
@@ -35,7 +35,7 @@ function action(mode, type, selection) {
                  	cm.getPlayer().setGender(1);
             		cm.fakeRelog();
             		cm.updateChar();
-            		cm.playerMessage(5, "¼ºº° ÀüÈ¯ ½Ã½ºÅÛ¿¡ ÀÇÇØ ¼ºº°ÀÌ ¹Ù²î¸ç ÀÌ¼ºÀÇ ±âº» Çì¾î¿Í ¾ó±¼·Î ¹Ù²î¾ú½À´Ï´Ù.");			
+            		cm.playerMessage(5, "ì„±ë³„ ì „í™˜ ì‹œìŠ¤í…œì— ì˜í•´ ì„±ë³„ì´ ë°”ë€Œë©° ì´ì„±ì˜ ê¸°ë³¸ í—¤ì–´ì™€ ì–¼êµ´ë¡œ ë°”ë€Œì—ˆìŠµë‹ˆë‹¤.");			
             		cm.dispose();
 		   } else if (selection == 1) {
                  	cm.getPlayer().setHair(30000);
@@ -43,7 +43,7 @@ function action(mode, type, selection) {
                  	cm.getPlayer().setGender(0);
             		cm.fakeRelog();
             		cm.updateChar();
-            		cm.playerMessage(5, "¼ºº° ÀüÈ¯ ½Ã½ºÅÛ¿¡ ÀÇÇØ ¼ºº°ÀÌ ¹Ù²î¸ç ÀÌ¼ºÀÇ ±âº» Çì¾î¿Í ¾ó±¼·Î ¹Ù²î¾ú½À´Ï´Ù.");			
+            		cm.playerMessage(5, "ì„±ë³„ ì „í™˜ ì‹œìŠ¤í…œì— ì˜í•´ ì„±ë³„ì´ ë°”ë€Œë©° ì´ì„±ì˜ ê¸°ë³¸ í—¤ì–´ì™€ ì–¼êµ´ë¡œ ë°”ë€Œì—ˆìŠµë‹ˆë‹¤.");			
             		cm.dispose();
 		} else {
 			cm.gainExp(1000);
@@ -59,7 +59,7 @@ function action(mode, type, selection) {
 			cm.gainMeso(10000000);
 			cm.gainItem(2000013, 50);
 			cm.gainItem(2000014, 50);
-                 	cm.playerMessage(5, "´ç½ÅÀÇ Ã¹ ÀÔ¼º ÃàÇÏ·Î, ¼ÒÁ¤ÀÇ Æ÷¼Ç°ú ¸Þ¼Ò¸¦ µå¸³´Ï´Ù. ÀúÈñ ¿Â¶óÀÎ¿¡¼­ Áñ°Å¿î ½Ã°£ µÇ½Ã±æ ¹Ù¶ø´Ï´Ù~");			
+                 	cm.playerMessage(5, "ë‹¹ì‹ ì˜ ì²« ìž…ì„± ì¶•í•˜ë¡œ, ì†Œì •ì˜ í¬ì…˜ê³¼ ë©”ì†Œë¥¼ ë“œë¦½ë‹ˆë‹¤. ì €í¬ ì˜¨ë¼ì¸ì—ì„œ ì¦ê±°ìš´ ì‹œê°„ ë˜ì‹œê¸¸ ë°”ëžë‹ˆë‹¤~");			
        			cm.warp (910027200, 0);
 			cm.dispose();
 			}

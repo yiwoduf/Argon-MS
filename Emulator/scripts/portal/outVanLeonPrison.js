@@ -1,10 +1,10 @@
 /*
- * °¨¿Á
+ * ê°ì˜¥
  */
 
 function enter(pi) {
     //if (!pi.haveItem(4032860, 1)) {
-    //    pi.getPlayer().message("¿­¼è°¡ ¾ø¾î Å»ÃâÇÒ ¼ö ¾ø½À´Ï´Ù.");
+    //    pi.getPlayer().message("ì—´ì‡ ê°€ ì—†ì–´ íƒˆì¶œí•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
     //    return false;
    // } else {
       //  pi.getMap().resetReactors();

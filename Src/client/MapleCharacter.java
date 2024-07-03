@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  *
  */
@@ -216,11 +216,11 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
     public boolean quiver = false;
     public int quivermode = 0;
     public int[] quivercount = {10, 10, 10};
-    /* Rune Ã³¸® ±¸°£ ½ÃÀÛ */
+    /* Rune ì²˜ë¦¬ êµ¬ê°„ ì‹œì‘ */
     private ScheduledFuture<?> LastTouchedRune = null;
     private int TouchedRune, LastTouchedRuneTime = 0;
-    /* Rune Ã³¸® ±¸°£ ³¡ */
- /* Starforce Ã³¸® ±¸°£ ½ÃÀÛ */
+    /* Rune ì²˜ë¦¬ êµ¬ê°„ ë */
+ /* Starforce ì²˜ë¦¬ êµ¬ê°„ ì‹œì‘ */
     private int itemstaticcount = 0;
     private int itemstatic1 = 0;
     private int itemstatic2 = 0;
@@ -237,7 +237,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
     private int scrollorder = 0;
     private int StarPer[] = {0, 0, 0};
     private List<Pair<EnchantEquipStats, Integer>> stata = new ArrayList<Pair<EnchantEquipStats, Integer>>();
-    /* StarForce Ã³¸® ±¸°£ ³¡ */
+    /* StarForce ì²˜ë¦¬ êµ¬ê°„ ë */
     private int gp;
     private int Soul;
     private byte pendantExp = 0;
@@ -891,7 +891,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
                 while (rs.next()) {
                     int time = (int) (rs.getLong("length") + rs.getLong("StartTime") - System.currentTimeMillis());
                     if (time <= 0) {
-                        System.out.println("½ºÅ³Å×½ºÆ® : " + time + "ÃÊ");
+                        System.out.println("ìŠ¤í‚¬í…ŒìŠ¤íŠ¸ : " + time + "ì´ˆ");
                         continue;
                     }
                     ret.addCooldown(rs.getInt("SkillID"), rs.getLong("StartTime"), rs.getLong("length"));
@@ -1051,7 +1051,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
             if (!ServerConstants.realese) {
                 ess.printStackTrace();
             }
-            System.err.println("Ä³¸¯ÅÍ ·Îµù¿¡ ½ÇÆĞÇß½À´Ï´Ù.");
+            System.err.println("ìºë¦­í„° ë¡œë”©ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
         } finally {
             try {
                 if (ps != null) {
@@ -1230,7 +1230,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
                 ps.setInt(4, iv.getType().getType());
                 for (final IItem item : iv.list()) {
                     ps.setInt(1, chr.id);
-                    ps.setInt(2, 1); //¹İµå½Ã ÀÎº¥Åä¸®·Î ÀúÀå.
+                    ps.setInt(2, 1); //ë°˜ë“œì‹œ ì¸ë²¤í† ë¦¬ë¡œ ì €ì¥.
                     ps.setInt(3, item.getItemId());
                     ps.setInt(5, item.getPosition());
                     ps.setInt(6, item.getQuantity());
@@ -1746,7 +1746,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
                 ps.close();
                 cashInv.saveToDB();
             } else {
-                System.err.println("Ä³½Ã¼¥ ÀÎº¥Åä¸®°¡ ³Î Æ÷ÀÎÅÍ°¡ ¹ß»ıÇÏ¿© ÀúÀåÀ» ½ÇÆĞÇß½À´Ï´Ù.");
+                System.err.println("ìºì‹œìƒµ ì¸ë²¤í† ë¦¬ê°€ ë„ í¬ì¸í„°ê°€ ë°œìƒí•˜ì—¬ ì €ì¥ì„ ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
             }
             ps.close();
             con.close();
@@ -1800,7 +1800,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
             con.setTransactionIsolation(Connection.TRANSACTION_READ_UNCOMMITTED);
             con.setAutoCommit(false);
 
-            /* Å° ·¹ÀÌ¾Æ¿ô, ¶óÀÌµù ÀúÀå */
+            /* í‚¤ ë ˆì´ì•„ì›ƒ, ë¼ì´ë”© ì €ì¥ */
             try {
                 deleteWhereCharacterId(con, "DELETE FROM inventoryitems WHERE characterid = ? AND issale = 0");
                 keylayout.saveKeys(id);
@@ -1811,54 +1811,54 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
                 }
             }
 
-            /* Ä³¸¯ÅÍ ÀúÀå */
+            /* ìºë¦­í„° ì €ì¥ */
             CharacterSaveToDB(fromcs);
 
-            /* Æê ÀúÀå */
+            /* í« ì €ì¥ */
             PetSaveToDB();
 
-            /* ¸ÅÅ©·Î ½½·Ô ÀúÀå */
+            /* ë§¤í¬ë¡œ ìŠ¬ë¡¯ ì €ì¥ */
             MacroSaveToDB();
 
-            /* ½½·Ô ÀúÀå */
+            /* ìŠ¬ë¡¯ ì €ì¥ */
             SlotSaveToDB();
 
-            /* Äù½ºÆ® Á¤º¸ ÀúÀå */
+            /* í€˜ìŠ¤íŠ¸ ì •ë³´ ì €ì¥ */
             QuestInfoSaveToDB();
 
-            /* ½ºÅ³ µ¥ÀÌÅÍ ÀúÀå */
+            /* ìŠ¤í‚¬ ë°ì´í„° ì €ì¥ */
             SkillSaveToDB(dc);
 
-            /* Ä£±¸ µ¥ÀÌÅÍ ÀúÀå */
+            /* ì¹œêµ¬ ë°ì´í„° ì €ì¥ */
             BuddiesSaveToDB();
 
-            /* Ä³½¬ ÀÎº¥Åä¸® ÀúÀå */
+            /* ìºì‰¬ ì¸ë²¤í† ë¦¬ ì €ì¥ */
             CashSaveToDB();
 
-            /* ¼Ò¿ø ¸ñ·Ï ÀúÀå */
+            /* ì†Œì› ëª©ë¡ ì €ì¥ */
             WishSaveToDB();
 
-            /* ¾ÆÀÌÅÛ ÀúÀå */
+            /* ì•„ì´í…œ ì €ì¥ */
             ItemFactory.saveItemsFromPlayer(this);
 
-            /* Ã¢°í ÀúÀå */
+            /* ì°½ê³  ì €ì¥ */
             if (storage != null) {
                 storage.saveToDB();
             } else {
-                System.err.println("Ã¢°í ÀÎº¥Åä¸®°¡ ³Î Æ÷ÀÎÅÍ°¡ ¹ß»ıÇÏ¿© ÀúÀåÀ» ½ÇÆĞÇß½À´Ï´Ù.");
+                System.err.println("ì°½ê³  ì¸ë²¤í† ë¦¬ê°€ ë„ í¬ì¸í„°ê°€ ë°œìƒí•˜ì—¬ ì €ì¥ì„ ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
             }
 
-            /* ½ºÆ¿ ½ºÅ³ ÀúÀå */
+            /* ìŠ¤í‹¸ ìŠ¤í‚¬ ì €ì¥ */
             if (steelskills != null) {
                 saveSteelSkills();
             } else {
-                System.err.println("½ºÆ¿ ½ºÅ³ Á¤º¸°¡ ³Î Æ÷ÀÎÅÍ°¡ ¹ß»ıÇÏ¿© ÀúÀåÀ» ½ÇÆĞÇß½À´Ï´Ù.");
+                System.err.println("ìŠ¤í‹¸ ìŠ¤í‚¬ ì •ë³´ê°€ ë„ í¬ì¸í„°ê°€ ë°œìƒí•˜ì—¬ ì €ì¥ì„ ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
             }
 
-            /* Äü ½½·Ô ÀúÀå */
+            /* í€µ ìŠ¬ë¡¯ ì €ì¥ */
             quickslot.saveToDB();
 
-            /* Å°º§·ù ÀúÀå */
+            /* í‚¤ë²¨ë¥˜ ì €ì¥ */
             if (keyvalue_changed) {
                 setKeyValue("HeadTitle", headtitle + "");
                 saveKeyValues();
@@ -2163,10 +2163,10 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
                 if (period > 0) {
                     item.setExpiration(System.currentTimeMillis() + period);
                 }
-                item.setGMLog(CurrentTime.getAllCurrentTime() + "¿¡ " + gm_log);
+                item.setGMLog(CurrentTime.getAllCurrentTime() + "ì— " + gm_log);
                 InventoryManipulator.addbyItem(client, item);
             } else {
-                InventoryManipulator.addById(client, id, quantity, "", null, period, CurrentTime.getAllCurrentTime() + "¿¡ " + getName() + "¿¡¼­ È£ÃâµÈ gainItem ½ºÅ©¸³Æ®·Î ¾òÀº ¾ÆÀÌÅÛ.");
+                InventoryManipulator.addById(client, id, quantity, "", null, period, CurrentTime.getAllCurrentTime() + "ì— " + getName() + "ì—ì„œ í˜¸ì¶œëœ gainItem ìŠ¤í¬ë¦½íŠ¸ë¡œ ì–»ì€ ì•„ì´í…œ.");
             }
         } else {
             InventoryManipulator.removeById(client, GameConstants.getInventoryType(id), id, -quantity, true, false);
@@ -2702,7 +2702,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
                 case 5121003:
                 case 15111002:
                 case 13111005:
-                case 61111008: // Æ®·£½º ÇÇ±Ô·¹ÀÌ¼Ç, ÆÄÀÌ³Î ÇÇ±Ô·¹ÀÌ¼Ç
+                case 61111008: // íŠ¸ëœìŠ¤ í”¼ê·œë ˆì´ì…˜, íŒŒì´ë„ í”¼ê·œë ˆì´ì…˜
                 case 61120008:
                     return; // Since we can't have more than 1, save up on loops
                 default:
@@ -3310,7 +3310,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
         this.damagehit = hit;
     }
 
-    public void gainAddDamageHit(int hit) { // Ä¡¿ì¾¾ :: setAddDamageHit ÀÌ¶û ´Ù¸¦°Ô ¹¹ÀÓ? =+ hit; ·Î ¼³Á¤ÇÔ / ´Ù¸¥ ¼·Àº ¸ğ¸£°Ú´Âµ¥ ½ºÅ©¸³Æ® ¾øÀ¸´Ï±î ÀÌ·¸°Ô
+    public void gainAddDamageHit(int hit) { // ì¹˜ìš°ì”¨ :: setAddDamageHit ì´ë‘ ë‹¤ë¥¼ê²Œ ë­ì„? =+ hit; ë¡œ ì„¤ì •í•¨ / ë‹¤ë¥¸ ì„­ì€ ëª¨ë¥´ê² ëŠ”ë° ìŠ¤í¬ë¦½íŠ¸ ì—†ìœ¼ë‹ˆê¹Œ ì´ë ‡ê²Œ
         this.damagehit += hit;
     }
 
@@ -3346,7 +3346,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
                 setSaveDamageSkin(i, itemId);
                 c.send(MainPacketCreator.DamageSkinSaveResult(c.getPlayer()));
                 c.send(MainPacketCreator.resetActions(this));
-                c.send(MainPacketCreator.serverNotice(1, "" + ItemInformation.getInstance().getName(GameConstants.getDamageSkinItemByNumber(getDamageSkin())) + "ÀÌ Á¤»óÀûÀ¸·Î ÀúÀå µÇ¾ú½À´Ï´Ù."));
+                c.send(MainPacketCreator.serverNotice(1, "" + ItemInformation.getInstance().getName(GameConstants.getDamageSkinItemByNumber(getDamageSkin())) + "ì´ ì •ìƒì ìœ¼ë¡œ ì €ì¥ ë˜ì—ˆìŠµë‹ˆë‹¤."));
             } else {
                 c.send(MainPacketCreator.resetActions(this));
             }
@@ -3460,35 +3460,35 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
     public String getBounsTypeName(int type) {
         switch (type) {
             case 0:
-                return "ÀÌº¥Æ® º¸³Ê½º";
+                return "ì´ë²¤íŠ¸ ë³´ë„ˆìŠ¤";
             case 1:
-                return "¿şµù º¸³Ê½º";
+                return "ì›¨ë”© ë³´ë„ˆìŠ¤";
             case 2:
-                return "ÀåÂø º¸³Ê½º";
+                return "ì¥ì°© ë³´ë„ˆìŠ¤";
             case 3:
-                return "ÇÇ½Ã¹æ º¸³Ê½º";
+                return "í”¼ì‹œë°© ë³´ë„ˆìŠ¤";
             case 4:
-                return "·¹ÀÎº¸¿ì º¸³Ê½º";
+                return "ë ˆì¸ë³´ìš° ë³´ë„ˆìŠ¤";
             case 5:
-                return "ºÕ¾÷ º¸³Ê½º";
+                return "ë¶ì—… ë³´ë„ˆìŠ¤";
             case 6:
-                return "ºñ¾à º¸³Ê½º";
+                return "ë¹„ì•½ ë³´ë„ˆìŠ¤";
             case 7:
-                return "ÈŞ½Ä º¸³Ê½º";
+                return "íœ´ì‹ ë³´ë„ˆìŠ¤";
             case 8:
-                return "¾ÆÀÌÅÛ º¸³Ê½º";
+                return "ì•„ì´í…œ ë³´ë„ˆìŠ¤";
             case 9:
-                return "¾Æ½º¿Ï º¸³Ê½º";
+                return "ì•„ìŠ¤ì™„ ë³´ë„ˆìŠ¤";
             case 10:
-                return "¾ÆÀÌÅÛÆÛ¼¾Æ® º¸³Ê½º";
+                return "ì•„ì´í…œí¼ì„¼íŠ¸ ë³´ë„ˆìŠ¤";
             case 11:
-                return "º§·ùÆÑ º¸³Ê½º";
+                return "ë²¨ë¥˜íŒ© ë³´ë„ˆìŠ¤";
             case 12:
-                return "ÆÄÆ¼ ¾ÆÀÌÅÛ º¸³Ê½º";
+                return "íŒŒí‹° ì•„ì´í…œ ë³´ë„ˆìŠ¤";
             case 13:
-                return "Ç÷¸ÍÀÇ ¹İÁö º¸³Ê½º";
+                return "í˜ˆë§¹ì˜ ë°˜ì§€ ë³´ë„ˆìŠ¤";
         }
-        return "¾Ë¼ö¾øÀ½";
+        return "ì•Œìˆ˜ì—†ìŒ";
     }
 
     public int getBounsType(int i) {
@@ -3629,14 +3629,14 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
     public void giveInternetCafeTime() {
         if (getInternetCafeTime() > 1) {
             if (getSkillLevel(92000000) > 0) {
-                gainItem(1502002, (short) 1, false, 3, "PC¹æ È²±İ¼¥");
+                gainItem(1502002, (short) 1, false, 3, "PCë°© í™©ê¸ˆìƒµ");
             } else if (getSkillLevel(92010000) > 0) {
-                gainItem(1512002, (short) 1, false, 3, "PC¹æ È²±İ °î°»ÀÌ ");
+                gainItem(1512002, (short) 1, false, 3, "PCë°© í™©ê¸ˆ ê³¡ê°±ì´ ");
             }
 
             getClient().send(MainPacketCreator.getInternetCafe((byte) 3, getInternetCafeTime()));
-            gainItem(1142145, (short) 1, false, 3, "PC¹æ ÇÁ¸®¹Ì¾ö ÈÆÀå");
-            gainItem(2430267, (short) 1, false, 3, "PC¹æ Àü¿ë ½Ã°ø¼®");
+            gainItem(1142145, (short) 1, false, 3, "PCë°© í”„ë¦¬ë¯¸ì—„ í›ˆì¥");
+            gainItem(2430267, (short) 1, false, 3, "PCë°© ì „ìš© ì‹œê³µì„");
             getClient().send(MainPacketCreator.resetActions(this));
             InternetCafeTimer();
         }
@@ -3893,7 +3893,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
     private void changeMapInternal(final MapleMap to, final Point pos, byte[] warpPacket) {
 
         if (getGMLevel() <= 0 && getMapId() == 931000610) {
-            Message(6, "[¾Ë¸²] ÇöÀç °¨¿Á¿¡ °¤Çô °è½Ã¹Ç·Î ´Ù¸¥¸ÊÀ¸·Î ÀÌµ¿ ÇÏ½Ç¼ö ¾ø½À´Ï´Ù.");
+            Message(6, "[ì•Œë¦¼] í˜„ì¬ ê°ì˜¥ì— ê°‡í˜€ ê³„ì‹œë¯€ë¡œ ë‹¤ë¥¸ë§µìœ¼ë¡œ ì´ë™ í•˜ì‹¤ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
             send(MainPacketCreator.resetActions(this));
             return;
         }
@@ -4326,7 +4326,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
             exp += total;
             levelUp();
             if ((this.getBurningCharacter() == 1) && (this.getLevel() > 10)
-                    && (this.getLevel() <= 99)) { //1.2.251+, ¹ö´×½ÃÁğ 2 ´ëÀÀ.
+                    && (this.getLevel() <= 99)) { //1.2.251+, ë²„ë‹ì‹œì¦Œ 2 ëŒ€ì‘.
                 for (int i = 0; i < 3; i++) {
                     levelUp();
                 }
@@ -4402,7 +4402,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
             total += PremiumIPBonusExp;
         }
 
-        if (getSkillLevel(20021110) > 0) { //¿¤ÇÁÀÇ Ãàº¹
+        if (getSkillLevel(20021110) > 0) { //ì—˜í”„ì˜ ì¶•ë³µ
             PsdBonusExpRate += (int) (gain * (SkillFactory.getSkill(20021110).getEffect(getSkillLevel(20021110)).getStat("expR") / 100.0D));
             total += PsdBonusExpRate;
         }
@@ -4467,7 +4467,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
             exp += total;
             levelUp();
             if ((this.getBurningCharacter() == 1) && (this.getLevel() > 10)
-                    && (this.getLevel() <= 99)) { //1.2.251+, ¹ö´× ½ÃÁğ2 ´ëÀÀ.
+                    && (this.getLevel() <= 99)) { //1.2.251+, ë²„ë‹ ì‹œì¦Œ2 ëŒ€ì‘.
                 for (int i = 0; i < 3; i++) {
                     levelUp();
                 }
@@ -4585,7 +4585,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
                         if (item.isCash()) {
                             client.getSession().writeAndFlush(CashPacket.itemExpired(item.getItemId()));
                         } else {
-                            message(5, "[" + ItemInformation.getInstance().getName(item.getItemId()) + "] ÀÇ À¯È¿±â°£ÀÌ ¸¸·áµÇ¾î »ç¶óÁ³½À´Ï´Ù.");
+                            message(5, "[" + ItemInformation.getInstance().getName(item.getItemId()) + "] ì˜ ìœ íš¨ê¸°ê°„ì´ ë§Œë£Œë˜ì–´ ì‚¬ë¼ì¡ŒìŠµë‹ˆë‹¤.");
                         }
                         toberemove.add(item);
                     }
@@ -4609,7 +4609,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
         }
         for (Integer i : toRemoveSkills) {
             changeSkillLevel(SkillFactory.getSkill(i), (byte) 0, (byte) 0);
-            dropMessage(5, "[" + SkillFactory.getSkillName(i) + "] ½ºÅ³ÀÌ À¯È¿±â°£ÀÌ ¸¸·áµÇ¾î »ç¶óÁ³½À´Ï´Ù.");
+            dropMessage(5, "[" + SkillFactory.getSkillName(i) + "] ìŠ¤í‚¬ì´ ìœ íš¨ê¸°ê°„ì´ ë§Œë£Œë˜ì–´ ì‚¬ë¼ì¡ŒìŠµë‹ˆë‹¤.");
         }
     }
 
@@ -4911,94 +4911,94 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
         int maxhp = stats.getMaxHp();
         int maxmp = stats.getMaxMp();
         //  if (level == 60) {
-        //      gainItem(4001848, (short) 1, false, -1, "·¹º§¾÷Áö±Ş");
+        //      gainItem(4001848, (short) 1, false, -1, "ë ˆë²¨ì—…ì§€ê¸‰");
         //   }
         //      else if (level == 250) {
-        //         gainItem(4001715, (short) 1, false, -1, "·¹º§¾÷Áö±Ş");
+        //         gainItem(4001715, (short) 1, false, -1, "ë ˆë²¨ì—…ì§€ê¸‰");
         //       }
-        if ((GameConstants.isBeginnerJob(job)) && (job != 3001) && (job != 10000)) { // ÃÊº¸ÀÚ
+        if ((GameConstants.isBeginnerJob(job)) && (job != 3001) && (job != 10000)) { // ì´ˆë³´ì
             maxhp += Randomizer.rand(24, 32);
             maxmp += Randomizer.rand(20, 24);
-        } else if (job == 3001 || job == 10000) { // ÃÊº¸ÀÚ
+        } else if (job == 3001 || job == 10000) { // ì´ˆë³´ì
             maxhp += Randomizer.rand(52, 56);
-        } else if (job >= 100 && job <= 132) { // Àü»ç
+        } else if (job >= 100 && job <= 132) { // ì „ì‚¬
             maxhp += Randomizer.rand(70, 105);
             maxmp += Randomizer.rand(10, 20);
-        } else if (job >= 200 && job <= 232) { // ¸¶¹ı»ç
+        } else if (job >= 200 && job <= 232) { // ë§ˆë²•ì‚¬
             maxhp += Randomizer.rand(20, 36);
             maxmp += Randomizer.rand(44, 63);
         } else if ((job >= 300 && job <= 322)
                 || (job >= 400 && job <= 434)
                 || (job >= 1300 && job <= 1312)
                 || (job >= 1400 && job <= 1412)
-                || (job >= 3300 && job <= 3312) //¿ÍÀÏµåÇåÅÍ
+                || (job >= 3300 && job <= 3312) //ì™€ì¼ë“œí—Œí„°
                 ) {
             maxhp += Randomizer.rand(34, 55);
             maxmp += Randomizer.rand(28, 40);
-        } else if (job >= 2300 && job <= 2312) { // ¸Ş¸£¼¼µ¥½º
+        } else if (job >= 2300 && job <= 2312) { // ë©”ë¥´ì„¸ë°ìŠ¤
             maxhp += Randomizer.rand(45, 66);
             maxmp += Randomizer.rand(35, 43);
-        } else if (job >= 3100 && job <= 3122) { // µ¥¸ó½½·¹ÀÌ¾î, µ¥¸ó¾îº¥Á®
+        } else if (job >= 3100 && job <= 3122) { // ë°ëª¬ìŠ¬ë ˆì´ì–´, ë°ëª¬ì–´ë²¤ì ¸
             maxhp += Randomizer.rand(70, 105);
-        } else if (job >= 500 && job <= 532) { // ÇØÀû
+        } else if (job >= 500 && job <= 532) { // í•´ì 
             maxhp += Randomizer.rand(50, 60);
             maxmp += Randomizer.rand(37, 50);
-        } else if (job >= 1100 && job <= 1112) { // ¼Ò¿ï¸¶½ºÅÍ
+        } else if (job >= 1100 && job <= 1112) { // ì†Œìš¸ë§ˆìŠ¤í„°
             maxhp += Randomizer.rand(70, 100);
             maxmp += Randomizer.rand(10, 20);
-        } else if (job >= 1200 && job <= 1212) { // ÇÃ·¹ÀÓ À§ÀÚµå
+        } else if (job >= 1200 && job <= 1212) { // í”Œë ˆì„ ìœ„ìë“œ
             maxhp += Randomizer.rand(20, 38);
             maxmp += Randomizer.rand(50, 75);
-        } else if (job >= 2200 && job <= 2218) { // ¿¡¹İ
+        } else if (job >= 2200 && job <= 2218) { // ì—ë°˜
             maxhp += Randomizer.rand(25, 40);
             maxmp += Randomizer.rand(50, 80);
-        } else if (job >= 2700 && job <= 2712) { // ·ç¹Ì³Ê½º
+        } else if (job >= 2700 && job <= 2712) { // ë£¨ë¯¸ë„ˆìŠ¤
             maxhp += Randomizer.rand(25, 40);
             maxmp += Randomizer.rand(60, 100);
-        } else if (job >= 1500 && job <= 1512) { // ½ºÆ®¶óÀÌÄ¿
+        } else if (job >= 1500 && job <= 1512) { // ìŠ¤íŠ¸ë¼ì´ì»¤
             maxhp += Randomizer.rand(56, 67);
             maxmp += Randomizer.rand(34, 47);
-        } else if (job >= 2100 && job <= 2112) { // ¾Æ¶õ
+        } else if (job >= 2100 && job <= 2112) { // ì•„ë€
             maxhp += Randomizer.rand(100, 130);
             maxmp += Randomizer.rand(10, 15);
-        } else if (job >= 2400 && job <= 2412) { // ÆÒÅÒ
+        } else if (job >= 2400 && job <= 2412) { // íŒ¬í…€
             maxhp += Randomizer.rand(56, 67);
             maxmp += Randomizer.rand(74, 100);
-        } else if (job >= 3700 && job <= 3712) { //ºí·¡¼Å
+        } else if (job >= 3700 && job <= 3712) { //ë¸”ë˜ì…”
             maxhp += Randomizer.rand(56, 67);
             maxmp += Randomizer.rand(74, 100);
-        } else if (job >= 3500 && job <= 3512) { // ¸ŞÄ«´Ğ
+        } else if (job >= 3500 && job <= 3512) { // ë©”ì¹´ë‹‰
             maxhp += Randomizer.rand(56, 67);
             maxmp += Randomizer.rand(34, 47);
-        } else if (job >= 3600 && job <= 3612) { // Á¦³í
+        } else if (job >= 3600 && job <= 3612) { // ì œë…¼
             maxhp += Randomizer.rand(100, 130);
             maxmp += Randomizer.rand(10, 15);
-        } else if (job >= 2500 && job <= 2512) { // Àº¿ù
+        } else if (job >= 2500 && job <= 2512) { // ì€ì›”
             maxhp += Randomizer.rand(66, 77);
             maxmp += Randomizer.rand(44, 57);
-        } else if (job >= 3200 && job <= 3212) { // ¹èÆ²¸ŞÀÌÁö
+        } else if (job >= 3200 && job <= 3212) { // ë°°í‹€ë©”ì´ì§€
             maxhp += Randomizer.rand(30, 36);
             maxmp += Randomizer.rand(44, 63);
-        } else if (job >= 5100 && job <= 5112) { // ¹ÌÇÏÀÏ
+        } else if (job >= 5100 && job <= 5112) { // ë¯¸í•˜ì¼
             maxhp += Randomizer.rand(70, 105);
             maxmp += Randomizer.rand(10, 20);
-        } else if (job >= 6100 && job <= 6112) { // Ä«ÀÌÀú
+        } else if (job >= 6100 && job <= 6112) { // ì¹´ì´ì €
             maxhp += Randomizer.rand(70, 105);
             maxmp += Randomizer.rand(10, 20);
-        } else if (job >= 6500 && job <= 6512) { // ¿£Á©¸¯¹ö½ºÅÍ
+        } else if (job >= 6500 && job <= 6512) { // ì—”ì ¤ë¦­ë²„ìŠ¤í„°
             maxhp += Randomizer.rand(56, 67);
-        } else if (job >= 10100 && job <= 10112) { // Á¦·Î
+        } else if (job >= 10100 && job <= 10112) { // ì œë¡œ
             maxhp += Randomizer.rand(70, 105);
-        } else if (job >= 13000 && job <= 13100) { // ÇÎÅ©ºó
+        } else if (job >= 13000 && job <= 13100) { // í•‘í¬ë¹ˆ
             maxhp += Randomizer.rand(56, 67);
             maxmp += Randomizer.rand(44, 63);
-        } else if (job >= 14000 && job <= 14212) { //Å°³×½Ã½º
+        } else if (job >= 14000 && job <= 14212) { //í‚¤ë„¤ì‹œìŠ¤
             maxhp += Randomizer.rand(70, 105);
         }
         maxmp += stats.getInt() / 10;
 
         if (level == 200 || level == 250 && !isGM()) {
-            final StringBuilder sb = new StringBuilder("[ÃàÇÏ] ");
+            final StringBuilder sb = new StringBuilder("[ì¶•í•˜] ");
             final IItem medal = getInventory(MapleInventoryType.EQUIPPED).getItem((byte) -46);
             if (medal != null) { // Medal
                 sb.append("<");
@@ -5006,7 +5006,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
                 sb.append("> ");
             }
             sb.append(getName());
-            sb.append(" ´ÔÀÌ ·¹º§ " + level + "À»(¸¦) ´Ş¼ºÇß½À´Ï´Ù! ¸ğµÎ ÃàÇÏÇØ ÁÖ¼¼¿ä.");
+            sb.append(" ë‹˜ì´ ë ˆë²¨ " + level + "ì„(ë¥¼) ë‹¬ì„±í–ˆìŠµë‹ˆë‹¤! ëª¨ë‘ ì¶•í•˜í•´ ì£¼ì„¸ìš”.");
             WorldBroadcasting.broadcastMessage(MainPacketCreator.serverNotice(6, sb.toString()));
         }
 
@@ -5026,7 +5026,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
 
         if (!GameConstants.isZero(getJob()) && getLevel() > 10) {
             gainSP(3);
-            zeroSkillMaster(); // Ä¡¿ì¾¾ :: Á¦·Î @½ºÅ³¸¶½ºÅÍ ±¸Çö
+            zeroSkillMaster(); // ì¹˜ìš°ì”¨ :: ì œë¡œ @ìŠ¤í‚¬ë§ˆìŠ¤í„° êµ¬í˜„
         }
 
         client.getSession().writeAndFlush(MainPacketCreator.updateSp(this, false));
@@ -5073,7 +5073,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
         }
     }
 
-    public void zeroSkillMaster() { // Ä¡¿ì¾¾ :: Á¦·Î @½ºÅ³¸¶½ºÅÍ ±¸Çö
+    public void zeroSkillMaster() { // ì¹˜ìš°ì”¨ :: ì œë¡œ @ìŠ¤í‚¬ë§ˆìŠ¤í„° êµ¬í˜„
         int skill[][] = GameConstants.getZeroSkillList();
         for (int i = 0; i < skill.length; i++) {
             if (level >= skill[i][1]) {
@@ -5639,9 +5639,9 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
             }
             equip.setPosition((short) -10);
             equip.setQuantity((short) 1);
-            equip.setGMLog("º¸Á¶¹«±â");
+            equip.setGMLog("ë³´ì¡°ë¬´ê¸°");
             forceReAddItem_NoUpdate(equip, MapleInventoryType.EQUIPPED);
-            Message("" + getJobNameById(job) + " Á÷¾÷À» ´Ş¼ºÇÏ¿© Name. " + li.getName(equip.getItemId()) + " Lv. " + li.getReqLevel(equip.getItemId()) + " º¸Á¶¹«±â·Î ±³Ã¼ µÇ¾ú½À´Ï´Ù.");
+            Message("" + getJobNameById(job) + " ì§ì—…ì„ ë‹¬ì„±í•˜ì—¬ Name. " + li.getName(equip.getItemId()) + " Lv. " + li.getReqLevel(equip.getItemId()) + " ë³´ì¡°ë¬´ê¸°ë¡œ êµì²´ ë˜ì—ˆìŠµë‹ˆë‹¤.");
             client.getSession().write(MainPacketCreator.updateSpecialItemUse(equip, equip.getType(), true, this));
             equipChanged();
         }
@@ -5650,137 +5650,137 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
     public static final String getJobNameById(final int job) {
         switch (job) {
             case 0:
-                return "ÃÊº¸ÀÚ";
+                return "ì´ˆë³´ì";
             case 100:
-                return "°Ë»ç";
+                return "ê²€ì‚¬";
             case 110:
-                return "ÆÄÀÌÅÍ";
+                return "íŒŒì´í„°";
             case 111:
-                return "Å©·ç¼¼ÀÌ´õ";
+                return "í¬ë£¨ì„¸ì´ë”";
             case 112:
-                return "È÷¾î·Î";
+                return "íˆì–´ë¡œ";
             case 120:
-                return "ÆäÀÌÁö";
+                return "í˜ì´ì§€";
             case 121:
-                return "³ªÀÌÆ®";
+                return "ë‚˜ì´íŠ¸";
             case 122:
-                return "ÆÈ¶óµò";
+                return "íŒ”ë¼ë”˜";
             case 130:
-                return "½ºÇÇ¾î¸Ç";
+                return "ìŠ¤í”¼ì–´ë§¨";
             case 131:
-                return "¹ö¼­Ä¿";
+                return "ë²„ì„œì»¤";
             case 132:
-                return "´ÙÅ©³ªÀÌÆ®";
+                return "ë‹¤í¬ë‚˜ì´íŠ¸";
             case 200:
-                return "¸¶¹ı»ç";
+                return "ë§ˆë²•ì‚¬";
             case 210:
-                return "À§ÀÚµå(ºÒ,µ¶)";
+                return "ìœ„ìë“œ(ë¶ˆ,ë…)";
             case 211:
-                return "¸ŞÀÌÁö(ºÒ,µ¶)";
+                return "ë©”ì´ì§€(ë¶ˆ,ë…)";
             case 212:
-                return "¾ÆÅ©¸ŞÀÌÁö(ºÒ,µ¶)";
+                return "ì•„í¬ë©”ì´ì§€(ë¶ˆ,ë…)";
             case 220:
-                return "À§ÀÚµå(½ã,Äİ)";
+                return "ìœ„ìë“œ(ì¬,ì½œ)";
             case 221:
-                return "¸ŞÀÌÁö(½ã,Äİ)";
+                return "ë©”ì´ì§€(ì¬,ì½œ)";
             case 222:
-                return "¾ÆÅ©¸ŞÀÌÁö(½ã,Äİ)";
+                return "ì•„í¬ë©”ì´ì§€(ì¬,ì½œ)";
             case 230:
-                return "Å¬·¹¸¯";
+                return "í´ë ˆë¦­";
             case 231:
-                return "ÇÁ¸®½ºÆ®";
+                return "í”„ë¦¬ìŠ¤íŠ¸";
             case 232:
-                return "ºñ¼ó";
+                return "ë¹„ìˆ";
             case 300:
-                return "¾ÆÃ³";
+                return "ì•„ì²˜";
             case 310:
-                return "ÇåÅÍ";
+                return "í—Œí„°";
             case 311:
-                return "·¹ÀÎÀú";
+                return "ë ˆì¸ì €";
             case 312:
-                return "º¸¿ì¸¶½ºÅÍ";
+                return "ë³´ìš°ë§ˆìŠ¤í„°";
             case 320:
-                return "»ç¼ö";
+                return "ì‚¬ìˆ˜";
             case 321:
-                return "Àú°İ¼ö";
+                return "ì €ê²©ìˆ˜";
             case 322:
-                return "½Å±Ã";
+                return "ì‹ ê¶";
             case 400:
-                return "·Î±×";
+                return "ë¡œê·¸";
             case 410:
-                return "¾î½Ø½Å";
+                return "ì–´ìŒ”ì‹ ";
             case 411:
-                return "Çã¹Ô";
+                return "í—ˆë°‹";
             case 412:
-                return "³ªÀÌÆ®·Îµå";
+                return "ë‚˜ì´íŠ¸ë¡œë“œ";
             case 420:
-                return "½ÃÇÁ";
+                return "ì‹œí”„";
             case 421:
-                return "½ÃÇÁ¸¶½ºÅÍ";
+                return "ì‹œí”„ë§ˆìŠ¤í„°";
             case 422:
-                return "¼¨µµ¾î";
+                return "ì„€ë„ì–´";
             case 430:
-                return "¼¼¹Ìµà¾î·¯";
+                return "ì„¸ë¯¸ë“€ì–´ëŸ¬";
             case 431:
-                return "µà¾î·¯";
+                return "ë“€ì–´ëŸ¬";
             case 432:
-                return "µà¾ó¸¶½ºÅÍ";
+                return "ë“€ì–¼ë§ˆìŠ¤í„°";
             case 433:
-                return "½½·¡¼Å";
+                return "ìŠ¬ë˜ì…”";
             case 434:
-                return "µà¾óºí·¹ÀÌ´õ";
+                return "ë“€ì–¼ë¸”ë ˆì´ë”";
             case 500:
-                return "ÇØÀû";
+                return "í•´ì ";
             case 510:
-                return "ÀÎÆÄÀÌÅÍ";
+                return "ì¸íŒŒì´í„°";
             case 511:
-                return "¹öÄ¿´Ï¾î";
+                return "ë²„ì»¤ë‹ˆì–´";
             case 512:
-                return "¹ÙÀÌÆÛ";
+                return "ë°”ì´í¼";
             case 520:
-                return "°Ç½½¸µ°Å";
+                return "ê±´ìŠ¬ë§ê±°";
             case 521:
-                return "¹ßÅ°¸®";
+                return "ë°œí‚¤ë¦¬";
             case 522:
-                return "Ä¸Æ¾";
+                return "ìº¡í‹´";
             case 800:
-                return "¸Å´ÏÀú";
+                return "ë§¤ë‹ˆì €";
             case 900:
-                return "¿î¿µÀÚ";
+                return "ìš´ì˜ì";
             case 1000:
-                return "³ëºí·¹½º";
+                return "ë…¸ë¸”ë ˆìŠ¤";
             case 1100:
             case 1110:
             case 1111:
             case 1112:
-                return "¼Ò¿ï¸¶½ºÅÍ";
+                return "ì†Œìš¸ë§ˆìŠ¤í„°";
             case 1200:
             case 1210:
             case 1211:
             case 1212:
-                return "ÇÃ·¹ÀÓÀ§ÀÚµå";
+                return "í”Œë ˆì„ìœ„ìë“œ";
             case 1300:
             case 1310:
             case 1311:
             case 1312:
-                return "À©µåºê·¹ÀÌÄ¿";
+                return "ìœˆë“œë¸Œë ˆì´ì»¤";
             case 1400:
             case 1410:
             case 1411:
             case 1412:
-                return "³ªÀÌÆ®¿öÄ¿";
+                return "ë‚˜ì´íŠ¸ì›Œì»¤";
             case 1500:
             case 1510:
             case 1511:
             case 1512:
-                return "½ºÆ®¶óÀÌÄ¿";
+                return "ìŠ¤íŠ¸ë¼ì´ì»¤";
             case 2000:
-                return "·¹Àüµå";
+                return "ë ˆì „ë“œ";
             case 2100:
             case 2110:
             case 2111:
             case 2112:
-                return "¾Æ¶õ";
+                return "ì•„ë€";
             case 2001:
             case 2200:
             case 2210:
@@ -5792,117 +5792,117 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
             case 2216:
             case 2217:
             case 2218:
-                return "¿¡¹İ";
+                return "ì—ë°˜";
             case 3000:
-                return "½ÃÆ¼Áğ";
+                return "ì‹œí‹°ì¦Œ";
             case 3200:
             case 3210:
             case 3211:
             case 3212:
-                return "¹èÆ²¸ŞÀÌÁö";
+                return "ë°°í‹€ë©”ì´ì§€";
             case 3300:
             case 3310:
             case 3311:
             case 3312:
-                return "¿ÍÀÏµåÇåÅÍ";
+                return "ì™€ì¼ë“œí—Œí„°";
             case 3500:
             case 3510:
             case 3511:
             case 3512:
-                return "¸ŞÄ«´Ğ";
+                return "ë©”ì¹´ë‹‰";
             case 501:
-                return "ÇØÀû(Ä³³í½´ÅÍ)";
+                return "í•´ì (ìºë…¼ìŠˆí„°)";
             case 530:
-                return "Ä³³í½´ÅÍ";
+                return "ìºë…¼ìŠˆí„°";
             case 531:
-                return "Ä³³íºí·¡½ºÅÍ";
+                return "ìºë…¼ë¸”ë˜ìŠ¤í„°";
             case 532:
-                return "Ä³³í¸¶½ºÅÍ";
+                return "ìºë…¼ë§ˆìŠ¤í„°";
             case 2002:
             case 2300:
             case 2310:
             case 2311:
             case 2312:
-                return "¸Ş¸£¼¼µ¥½º";
+                return "ë©”ë¥´ì„¸ë°ìŠ¤";
             case 3001:
             case 3100:
             case 3110:
             case 3111:
             case 3112:
-                return "µ¥¸ó½½·¹ÀÌ¾î";
+                return "ë°ëª¬ìŠ¬ë ˆì´ì–´";
             case 2003:
             case 2400:
             case 2410:
             case 2411:
             case 2412:
-                return "ÆÒÅÒ";
+                return "íŒ¬í…€";
             case 2004:
             case 2700:
             case 2710:
             case 2711:
             case 2712:
-                return "·ç¹Ì³Ê½º";
+                return "ë£¨ë¯¸ë„ˆìŠ¤";
             case 5000:
             case 5100:
             case 5110:
             case 5111:
             case 5112:
-                return "¹ÌÇÏÀÏ";
+                return "ë¯¸í•˜ì¼";
             case 6000:
             case 6100:
             case 6110:
             case 6111:
             case 6112:
-                return "Ä«ÀÌÀú";
+                return "ì¹´ì´ì €";
             case 6001:
             case 6500:
             case 6510:
             case 6511:
             case 6512:
-                return "¿£Á©¸¯¹ö½ºÅÍ";
+                return "ì—”ì ¤ë¦­ë²„ìŠ¤í„°";
             case 3101:
             case 3120:
             case 3121:
             case 3122:
-                return "µ¥¸ó¾îº¥Á®";
+                return "ë°ëª¬ì–´ë²¤ì ¸";
             case 3002:
             case 3600:
             case 3610:
             case 3611:
             case 3612:
-                return "Á¦³í";
+                return "ì œë…¼";
             case 3700:
             case 3710:
             case 3711:
             case 3712:
-                return "ºí·¡½ºÅÍ";
+                return "ë¸”ë˜ìŠ¤í„°";
             case 10000:
-                return "Á¦·ÎJR";
+                return "ì œë¡œJR";
             case 10100:
-                return "Á¦·Î10100";
+                return "ì œë¡œ10100";
             case 10110:
-                return "Á¦·Î10110";
+                return "ì œë¡œ10110";
             case 10111:
-                return "Á¦·Î10111";
+                return "ì œë¡œ10111";
             case 10112:
-                return "Á¦·Î";
+                return "ì œë¡œ";
             case 2005:
                 return "???";
             case 2500:
             case 2510:
             case 2511:
             case 2512:
-                return "Àº¿ù";
+                return "ì€ì›”";
             case 14200:
             case 14210:
             case 14211:
             case 14212:
-                return "Å°³×½Ã½º";
+                return "í‚¤ë„¤ì‹œìŠ¤";
             case 13000:
             case 13100:
-                return "ÇÎÅ©ºó";
+                return "í•‘í¬ë¹ˆ";
             default:
-                return "¾Ë¼ö¾øÀ½";
+                return "ì•Œìˆ˜ì—†ìŒ";
         }
     }
 
@@ -6296,7 +6296,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
         level = 10;
         remainingAp = reborns;
         for (ChannelServer cserv : ChannelServer.getAllInstances()) {
-            cserv.broadcastPacket(MainPacketCreator.getGMText(10, "[ÃàÇÏ] " + name + "´ÔÀÌ È¯»ıÀ» ÇÏ¼Ì½À´Ï´Ù. (ÇöÀç È¯»ıÆ÷ÀÎÆ® : " + reborns + ")"));
+            cserv.broadcastPacket(MainPacketCreator.getGMText(10, "[ì¶•í•˜] " + name + "ë‹˜ì´ í™˜ìƒì„ í•˜ì…¨ìŠµë‹ˆë‹¤. (í˜„ì¬ í™˜ìƒí¬ì¸íŠ¸ : " + reborns + ")"));
         }
         client.send(MainPacketCreator.getPlayerInfo(this));
         map.removePlayer(this);
@@ -6343,7 +6343,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
                 break;
         }
         if (show) {
-            send(MainPacketCreator.sendHint("#e#r[¾Ë¸²]#n#k" + quantity + " Ä³½Ã¸¦ È¹µæÇß½À´Ï´Ù.", 250, 5));
+            send(MainPacketCreator.sendHint("#e#r[ì•Œë¦¼]#n#k" + quantity + " ìºì‹œë¥¼ íšë“í–ˆìŠµë‹ˆë‹¤.", 250, 5));
         }
     }
 
@@ -6959,7 +6959,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
         this.combo = combo;
     }
 
-    public void updateCombo(short combo, long curr) { // Ä¡¿ì¾¾ :: applyComboBuff ·Î µû·Î Ã³¸®ÇØ¼­ combo 50 ¿À·ù ¾È»ı±â°Ô
+    public void updateCombo(short combo, long curr) { // ì¹˜ìš°ì”¨ :: applyComboBuff ë¡œ ë”°ë¡œ ì²˜ë¦¬í•´ì„œ combo 50 ì˜¤ë¥˜ ì•ˆìƒê¸°ê²Œ
         if (combo > 30000) {
             combo = 30000;
         }
@@ -7320,7 +7320,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
             ps.close();
             con.close();
         } catch (Exception e) {
-            System.err.println("[¿À·ù] Ä¿½ºÅÒ °ªµéÀ» ÀúÀåÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] ì»¤ìŠ¤í…€ ê°’ë“¤ì„ ì €ì¥í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
             if (!ServerConstants.realese) {
                 e.printStackTrace();
             }
@@ -7348,7 +7348,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
             rs.close();
             con.close();
         } catch (Exception e) {
-            System.err.println("[¿À·ù] Ä¿½ºÅÒ °ªµéÀ» ºÒ·¯¿À´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] ì»¤ìŠ¤í…€ ê°’ë“¤ì„ ë¶ˆëŸ¬ì˜¤ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
             if (!ServerConstants.realese) {
                 e.printStackTrace();
             }
@@ -7376,7 +7376,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
             ps.close();
             con.close();
         } catch (Exception e) {
-            System.err.println("[¿À·ù] ½ºÆ¿ ½ºÅ³ Á¤º¸¸¦ ÀúÀåÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] ìŠ¤í‹¸ ìŠ¤í‚¬ ì •ë³´ë¥¼ ì €ì¥í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
             if (!ServerConstants.realese) {
                 e.printStackTrace();
             }
@@ -7408,7 +7408,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
             rs.close();
             con.close();
         } catch (Exception e) {
-            System.err.println("[¿À·ù] ½ºÆ¿ ½ºÅ³ Á¤º¸µéÀ» ºÒ·¯¿À´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.");
+            System.err.println("[ì˜¤ë¥˜] ìŠ¤í‹¸ ìŠ¤í‚¬ ì •ë³´ë“¤ì„ ë¶ˆëŸ¬ì˜¤ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
             if (!ServerConstants.realese) {
                 e.printStackTrace();
             }
@@ -7782,7 +7782,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
         String str = "";
         int o = 0;
         for (Pair<Integer, Integer> d : getRewardDB()) {
-            str += "#L" + (o++) + "#" + "#z" + d.getLeft() + "# " + d.getRight() + "°³#l\r\n";
+            str += "#L" + (o++) + "#" + "#z" + d.getLeft() + "# " + d.getRight() + "ê°œ#l\r\n";
         }
         return str;
     }
@@ -7802,9 +7802,9 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
     }
 
     public void gainMedalReward(int item) {
-        send(UIPacket.showInfo("<" + ItemInformation.getInstance().getName(item) + "> ÈÆÀåÀ» È¹µæÇÏ¼Ì½À´Ï´Ù!"));
-        message(5, ("<" + ItemInformation.getInstance().getName(item)) + "> ÈÆÀåÀ» È¹µæÇÏ¼Ì½À´Ï´Ù.");
-        gainItem(item, (short) 1, false, -1, "ÀÚµ¿ ÈÆÀå Äù½ºÆ® ¿Ï·á ÈÆÀå.");
+        send(UIPacket.showInfo("<" + ItemInformation.getInstance().getName(item) + "> í›ˆì¥ì„ íšë“í•˜ì…¨ìŠµë‹ˆë‹¤!"));
+        message(5, ("<" + ItemInformation.getInstance().getName(item)) + "> í›ˆì¥ì„ íšë“í•˜ì…¨ìŠµë‹ˆë‹¤.");
+        gainItem(item, (short) 1, false, -1, "ìë™ í›ˆì¥ í€˜ìŠ¤íŠ¸ ì™„ë£Œ í›ˆì¥.");
     }
 
     public List<MapleSummon> getMines() {
@@ -7880,12 +7880,12 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
 //            ret.getStat().setEmpathy(rs.getInt("empathy"));
 //            ret.getStat().setInsight(rs.getInt("insight"));
 //            ret.getStat().setWillPower(rs.getInt("willpower"));
-    /* 0 : Ä«¸®½º¸¶
-     * 1 : ÅëÂû·Â
-     * 2 : ÀÇÁö
-     * 3 : ¼ÕÀçÁÖ
-     * 4 : °¨¼º
-     * 5 : ¸Å·Â
+    /* 0 : ì¹´ë¦¬ìŠ¤ë§ˆ
+     * 1 : í†µì°°ë ¥
+     * 2 : ì˜ì§€
+     * 3 : ì†ì¬ì£¼
+     * 4 : ê°ì„±
+     * 5 : ë§¤ë ¥
      */
     public void addAmbition(int amount) {
         addCharisma(amount);
@@ -8347,10 +8347,10 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
                     }
                 }
             } else {
-                System.out.println("¼±ÆÄÀÌ¾î ½ºÅ³µ¥ÀÌÅÍ¸¦ ¾Ë ¼ö ¾ø½À´Ï´Ù.");
+                System.out.println("ì„ íŒŒì´ì–´ ìŠ¤í‚¬ë°ì´í„°ë¥¼ ì•Œ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
             }
         } else {
-            System.out.println("ÇöÀç ¼±ÆÄÀÌ¾î ½ºÅ³·¹º§ÀÌ 0 ÀÌ°Å³ª ¹è¿ì¾Ê¾Æ ½ºÅ³À» ¹ßµ¿ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+            System.out.println("í˜„ì¬ ì„ íŒŒì´ì–´ ìŠ¤í‚¬ë ˆë²¨ì´ 0 ì´ê±°ë‚˜ ë°°ìš°ì•Šì•„ ìŠ¤í‚¬ì„ ë°œë™í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
         }
     }
 
@@ -8371,15 +8371,15 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
                     }
                 }
             } else {
-                System.out.println("ÀÌÅ¬¸³½º ½ºÅ³µ¥ÀÌÅÍ¸¦ ¾Ë ¼ö ¾ø½À´Ï´Ù.");
+                System.out.println("ì´í´ë¦½ìŠ¤ ìŠ¤í‚¬ë°ì´í„°ë¥¼ ì•Œ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
             }
         } else {
-            System.out.println("ÇöÀç ÀÌÅ¬¸³½º ½ºÅ³·¹º§ÀÌ 0 ÀÌ°Å³ª ¹è¿ì¾Ê¾Æ ½ºÅ³À» ¹ßµ¿ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+            System.out.println("í˜„ì¬ ì´í´ë¦½ìŠ¤ ìŠ¤í‚¬ë ˆë²¨ì´ 0 ì´ê±°ë‚˜ ë°°ìš°ì•Šì•„ ìŠ¤í‚¬ì„ ë°œë™í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
         }
     }
 
     /*
-     * 4Â÷ Á÷¾÷ÀÇ ¸¶½ºÅÍ·¹º§À» ±âº» 10À¸·Î Áö±ŞÇÑ´Ù.
+     * 4ì°¨ ì§ì—…ì˜ ë§ˆìŠ¤í„°ë ˆë²¨ì„ ê¸°ë³¸ 10ìœ¼ë¡œ ì§€ê¸‰í•œë‹¤.
      */
     public void mastery4thJobSkills(MapleCharacter player, int jobId) {
         MapleData data = MapleDataProviderFactory.getDataProvider(MapleDataProviderFactory.fileInWZPath("Skill.wz")).getData(StringUtil.getLeftPaddedStr("" + jobId, '0', 3) + ".img");
@@ -8387,7 +8387,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
             if (skill != null) {
                 for (MapleData skillId : skill.getChildren()) {
                     if (!skillId.getName().equals("icon")) {
-                        if (MapleDataTool.getIntConvert("invisible", skillId, 0) == 0) { //½ºÅ³Ã¢¿¡ ¾Èº¸ÀÌ´Â ½ºÅ³Àº ¿Ã¸®Áö¾ÊÀ½
+                        if (MapleDataTool.getIntConvert("invisible", skillId, 0) == 0) { //ìŠ¤í‚¬ì°½ì— ì•ˆë³´ì´ëŠ” ìŠ¤í‚¬ì€ ì˜¬ë¦¬ì§€ì•ŠìŒ
                             player.changeSkillLevel(SkillFactory.getSkill(Integer.parseInt(skillId.getName())), (byte) 0, (byte) 10);
                         }
                     }
@@ -8646,7 +8646,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
                     break;
             }
         } else {
-            dropMessage(5, "¼ÒÁö°¡´ÉÇÑ ÈÄ¿øÆ÷ÀÎÆ®·®À» ÃÊ°úÇß½À´Ï´Ù.");
+            dropMessage(5, "ì†Œì§€ê°€ëŠ¥í•œ í›„ì›í¬ì¸íŠ¸ëŸ‰ì„ ì´ˆê³¼í–ˆìŠµë‹ˆë‹¤.");
         }
     }
 
@@ -8715,10 +8715,10 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
             map.broadcastMessage(MainPacketCreator.followEffect(followid, 0, null));
         }
         MapleCharacter tt = map.getCharacterById_InMap(followid);
-        client.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "µû¶ó°¡±â°¡ Ãë¼Ò µÇ¾ú½À´Ï´Ù."));
+        client.getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "ë”°ë¼ê°€ê¸°ê°€ ì·¨ì†Œ ë˜ì—ˆìŠµë‹ˆë‹¤."));
         if (tt != null) {
             tt.setFollowId(0);
-            tt.getClient().getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "µû¶ó°¡±â°¡ Ãë¼Ò µÇ¾ú½À´Ï´Ù."));
+            tt.getClient().getSession().writeAndFlush(MainPacketCreator.serverNotice(1, "ë”°ë¼ê°€ê¸°ê°€ ì·¨ì†Œ ë˜ì—ˆìŠµë‹ˆë‹¤."));
         }
         setFollowId(0);
     }
@@ -8751,10 +8751,10 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
                 public void run() {
                     if (pendantExp == 0) {
                         pendantExp++;
-                        dropMessage(5, "Á¤·ÉÀÇ ÆÒ´øÆ®¸¦ Âø¿ëÀ¸·Î ÀÎÇØ ¸ó½ºÅÍ »ç³É ½Ã º¸³Ê½º °æÇèÄ¡ " + pendantExp + "0%¸¦ Ãß°¡·Î È¹µæÇÏ°Ô µË´Ï´Ù.");
+                        dropMessage(5, "ì •ë ¹ì˜ íŒ¬ë˜íŠ¸ë¥¼ ì°©ìš©ìœ¼ë¡œ ì¸í•´ ëª¬ìŠ¤í„° ì‚¬ëƒ¥ ì‹œ ë³´ë„ˆìŠ¤ ê²½í—˜ì¹˜ " + pendantExp + "0%ë¥¼ ì¶”ê°€ë¡œ íšë“í•˜ê²Œ ë©ë‹ˆë‹¤.");
                     } else if (pendantExp < 3) {
                         pendantExp++;
-                        dropMessage(5, "Á¤·ÉÀÇ ÆÒ´øÆ®¸¦ Âø¿ëÇÑÁö " + pendantExp + " ½Ã°£ÀÌ Áö³µ½À´Ï´Ù. " + pendantExp + "0%ÀÇ º¸³Ê½º °æÇèÄ¡¸¦ ¾ò½À´Ï´Ù.");
+                        dropMessage(5, "ì •ë ¹ì˜ íŒ¬ë˜íŠ¸ë¥¼ ì°©ìš©í•œì§€ " + pendantExp + " ì‹œê°„ì´ ì§€ë‚¬ìŠµë‹ˆë‹¤. " + pendantExp + "0%ì˜ ë³´ë„ˆìŠ¤ ê²½í—˜ì¹˜ë¥¼ ì–»ìŠµë‹ˆë‹¤.");
                     } else {
                         pendantOfSpirit.cancel(false);
                     }
@@ -8845,7 +8845,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
                 for (MapleData skillId : skill.getChildren()) {
                     if (!skillId.getName().equals("icon")) {
                         maxLevel = (byte) MapleDataTool.getIntConvert("maxLevel", skillId.getChildByPath("common"), 0);
-                        if (MapleDataTool.getIntConvert("invisible", skillId, 0) == 0) { //½ºÅ³Ã¢¿¡ ¾Èº¸ÀÌ´Â ½ºÅ³Àº ¿Ã¸®Áö¾ÊÀ½
+                        if (MapleDataTool.getIntConvert("invisible", skillId, 0) == 0) { //ìŠ¤í‚¬ì°½ì— ì•ˆë³´ì´ëŠ” ìŠ¤í‚¬ì€ ì˜¬ë¦¬ì§€ì•ŠìŒ
                             if (getLevel() >= MapleDataTool.getIntConvert("reqLev", skillId, 0)) {
                                 try {
                                     changeSkillLevel(SkillFactory.getSkill(Integer.parseInt(skillId.getName())), maxLevel, maxLevel);
@@ -9103,7 +9103,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
             if (level == 20) {
                 switch (getKeyValue("AutoJob")) {
                     case "430":
-                        getClient().send(UIPacket.showInfo("[¾ÏÈæÀ» ±â¾ïÇÏ´ÂÀÚ] ¼¼¹Ìµà¾î·¯·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì•”í‘ì„ ê¸°ì–µí•˜ëŠ”ì] ì„¸ë¯¸ë“€ì–´ëŸ¬ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(430);
                         setKeyValue("AutoJob", "430");
                         return true;
@@ -9111,148 +9111,148 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
             } else if (level == 30) {
                 switch (getKeyValue("AutoJob")) {
                     case "110":
-                        getClient().send(UIPacket.showInfo("[¾ç¼Õ°Ë¼úÀÇ ±â»ç] ÆÄÀÌÅÍ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì–‘ì†ê²€ìˆ ì˜ ê¸°ì‚¬] íŒŒì´í„°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(110);
                         return true;
                     case "120":
-                        getClient().send(UIPacket.showInfo("[ÇÑ¼Õ°Ë¼úÀÇ ±â»ç] ÆäÀÌÁö·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[í•œì†ê²€ìˆ ì˜ ê¸°ì‚¬] í˜ì´ì§€ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(120);
                         return true;
                     case "130":
-                        getClient().send(UIPacket.showInfo("[Ã¢¼úÀÇ ±â»ç] ½ºÇÇ¾î¸Ç·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì°½ìˆ ì˜ ê¸°ì‚¬] ìŠ¤í”¼ì–´ë§¨ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(130);
                         return true;
                     case "210":
-                        getClient().send(UIPacket.showInfo("[ºÒ*µ¶] À§ÀÚµå·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë¶ˆ*ë…] ìœ„ìë“œë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeSkillLevel(SkillFactory.getSkill(2100010), (byte) 10, (byte) 10);
                         changeJob(210);
                         return true;
                     case "220":
-                        getClient().send(UIPacket.showInfo("[¾óÀ½*¹ø°³] À§ÀÚµå·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì–¼ìŒ*ë²ˆê°œ] ìœ„ìë“œë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(220);
                         return true;
                     case "230":
-                        getClient().send(UIPacket.showInfo("[Èú*¹öÇÁ] Å¬·¹¸¯À¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[í*ë²„í”„] í´ë ˆë¦­ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(230);
                         return true;
                     case "310":
-                        getClient().send(UIPacket.showInfo("[»ç°İ¼ö] ÇåÅÍ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‚¬ê²©ìˆ˜] í—Œí„°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(310);
                         return true;
                     case "320":
-                        getClient().send(UIPacket.showInfo("[¸í»ç¼ö] »ç¼ö·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ëª…ì‚¬ìˆ˜] ì‚¬ìˆ˜ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(320);
                         return true;
                     case "410":
-                        getClient().send(UIPacket.showInfo("[Ç¥Ã¢ ¾Ï»ì ÀÔ¹®±â] ¾î½Ø½Å·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[í‘œì°½ ì•”ì‚´ ì…ë¬¸ê¸°] ì–´ìŒ”ì‹ ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(410);
                         return true;
                     case "420":
-                        getClient().send(UIPacket.showInfo("[´Üµµ ¾Ï»ì ÀÔ¹®±â] ½ÃÇÁ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë‹¨ë„ ì•”ì‚´ ì…ë¬¸ê¸°] ì‹œí”„ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(420);
                         return true;
                     case "510":
-                        getClient().send(UIPacket.showInfo("[³ÊÅ¬ ÀÔ¹®±â] ÀÎÆÄÀÌÅÍ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë„ˆí´ ì…ë¬¸ê¸°] ì¸íŒŒì´í„°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(510);
                         return true;
                     case "520":
-                        getClient().send(UIPacket.showInfo("[°Ç ÀÔ¹®±â] °Ç½½¸µ°Å·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ê±´ ì…ë¬¸ê¸°] ê±´ìŠ¬ë§ê±°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(520);
                         return true;
                     case "430":
-                        getClient().send(UIPacket.showInfo("[¾ÏÈæ ¼ÓÀÇ °ú°Å] µà¾î·¯·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì•”í‘ ì†ì˜ ê³¼ê±°] ë“€ì–´ëŸ¬ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(431);
                         return true;
                     case "530":
-                        getClient().send(UIPacket.showInfo("[Ä³³í ÀÔ¹®±â] Ä³³í½´ÅÍ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ìºë…¼ ì…ë¬¸ê¸°] ìºë…¼ìŠˆí„°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(530);
                         return true;
                     case "1110":
-                        getClient().send(UIPacket.showInfo("[½Ã±×³Ê½º ÀÔ¹®±â] ºûÀÇ ±â»ç·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‹œê·¸ë„ˆìŠ¤ ì…ë¬¸ê¸°] ë¹›ì˜ ê¸°ì‚¬ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(1110);
                         return true;
                     case "1210":
-                        getClient().send(UIPacket.showInfo("[½Ã±×³Ê½º ÀÔ¹®±â] ºÒÀÇ ±â»ç·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‹œê·¸ë„ˆìŠ¤ ì…ë¬¸ê¸°] ë¶ˆì˜ ê¸°ì‚¬ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(1210);
                         return true;
                     case "1310":
-                        getClient().send(UIPacket.showInfo("[½Ã±×³Ê½º ÀÔ¹®±â] ¹Ù¶÷ÀÇ ±â»ç·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‹œê·¸ë„ˆìŠ¤ ì…ë¬¸ê¸°] ë°”ëŒì˜ ê¸°ì‚¬ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(1310);
                         return true;
                     case "1410":
-                        getClient().send(UIPacket.showInfo("[½Ã±×³Ê½º ÀÔ¹®±â] ¾îµÒÀÇ ±â»ç·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‹œê·¸ë„ˆìŠ¤ ì…ë¬¸ê¸°] ì–´ë‘ ì˜ ê¸°ì‚¬ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(1410);
                         return true;
                     case "1510":
-                        getClient().send(UIPacket.showInfo("[½Ã±×³Ê½º ÀÔ¹®±â] ¹ø°³ÀÇ ±â»ç·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‹œê·¸ë„ˆìŠ¤ ì…ë¬¸ê¸°] ë²ˆê°œì˜ ê¸°ì‚¬ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(1510);
                         return true;
                     case "2110":
-                        getClient().send(UIPacket.showInfo("[¿µ¿õÀÇ º»´É] ¾Æ¶õÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì˜ì›…ì˜ ë³¸ëŠ¥] ì•„ë€ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(2110);
                         return true;
                     case "2210":
-                        getClient().send(UIPacket.showInfo("[µÎ¹øÂ° °ÉÀ½] ¿¡¹İÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë‘ë²ˆì§¸ ê±¸ìŒ] ì—ë°˜ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(2211);
                         return true;
                     case "2310":
-                        getClient().send(UIPacket.showInfo("[¿µ¿õÀÇ º»´É] ¸Ş¸£¼¼µ¥½º·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì˜ì›…ì˜ ë³¸ëŠ¥] ë©”ë¥´ì„¸ë°ìŠ¤ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(2310);
                         return true;
                     case "2410":
-                        getClient().send(UIPacket.showInfo("[¿µ¿õÀÇ º»´É] ÆÒÅÒÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì˜ì›…ì˜ ë³¸ëŠ¥] íŒ¬í…€ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(2410);
                         return true;
                     case "2510":
-                        getClient().send(UIPacket.showInfo("[¿µ¿õÀÇ º»´É] Àº¿ùÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì˜ì›…ì˜ ë³¸ëŠ¥] ì€ì›”ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(2510);
                         return true;
                     case "2710":
-                        getClient().send(UIPacket.showInfo("[¿µ¿õÀÇ º»´É] ·ç¹Ì³Ê½º·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì˜ì›…ì˜ ë³¸ëŠ¥] ë£¨ë¯¸ë„ˆìŠ¤ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(2710);
                         return true;
                     case "3110":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½º ÀÔ¹®±â] µ¥¸ó½½·¹ÀÌ¾î·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ ì…ë¬¸ê¸°] ë°ëª¬ìŠ¬ë ˆì´ì–´ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3110);
                         return true;
                     case "3120":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½º ÀÔ¹®±â] µ¥¸ó¾îº¥Á®·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ ì…ë¬¸ê¸°] ë°ëª¬ì–´ë²¤ì ¸ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3120);
                         return true;
                     case "3210":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½º ÀÔ¹®±â] ¹èÆ²¸ŞÀÌÁö·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ ì…ë¬¸ê¸°] ë°°í‹€ë©”ì´ì§€ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3210);
                         return true;
                     case "3310":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½º ÀÔ¹®±â] ¿ÍÀÏµåÇåÅÍ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ ì…ë¬¸ê¸°] ì™€ì¼ë“œí—Œí„°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3310);
                         return true;
                     case "3510":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½º ÀÔ¹®±â] ¸ŞÄ«´ĞÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ ì…ë¬¸ê¸°] ë©”ì¹´ë‹‰ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3510);
                         return true;
                     case "3610":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½º ÀÔ¹®±â] Á¦³íÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ ì…ë¬¸ê¸°] ì œë…¼ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3610);
                         return true;
                     case "3710":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½º ÀÔ¹®±â] ºí·¡½ºÅÍÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ ì…ë¬¸ê¸°] ë¸”ë˜ìŠ¤í„°ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3710);
                         return true;
                     case "5110":
-                        getClient().send(UIPacket.showInfo("[½Ã±×³Ê½º ´ÜÀå] ºûÀÇ ±â»ç·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‹œê·¸ë„ˆìŠ¤ ë‹¨ì¥] ë¹›ì˜ ê¸°ì‚¬ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(5110);
                         return true;
                     case "6110":
-                        getClient().send(UIPacket.showInfo("[³ë¹Ù ¼ö·Ã»ı] Ä«ÀÌÀú·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë…¸ë°” ìˆ˜ë ¨ìƒ] ì¹´ì´ì €ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(6110);
                         return true;
                     case "6510":
-                        getClient().send(UIPacket.showInfo("[³ë¹Ù ¼ö·Ã»ı] ¿£Á©¸¯¹ö½ºÅÍ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë…¸ë°” ìˆ˜ë ¨ìƒ] ì—”ì ¤ë¦­ë²„ìŠ¤í„°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(6510);
                         return true;
                     case "14200":
-                        getClient().send(UIPacket.showInfo("[ÃÊ´É·ÂÀÇ ±ú´ŞÀ½] Å°³×½Ã½º·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì´ˆëŠ¥ë ¥ì˜ ê¹¨ë‹¬ìŒ] í‚¤ë„¤ì‹œìŠ¤ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(14210);
                         return true;
                     default:
@@ -9261,7 +9261,7 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
             } else if (level == 55) {
                 switch (getKeyValue("AutoJob")) {
                     case "430":
-                        getClient().send(UIPacket.showInfo("[¾ÏÈæÀÇ Á¤Ã¼¼º] µà¾ó¸¶½ºÅÍ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì•”í‘ì˜ ì •ì²´ì„±] ë“€ì–¼ë§ˆìŠ¤í„°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(432);
                         return true;
                     default:
@@ -9270,299 +9270,299 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
             } else if (level == 60) {
                 switch (getKeyValue("AutoJob")) {
                     case "110":
-                        getClient().send(UIPacket.showInfo("[¿µÈ¥ °Ë¼úÀÇ ±â»ç] Å©·ç¼¼ÀÌ´õ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì˜í˜¼ ê²€ìˆ ì˜ ê¸°ì‚¬] í¬ë£¨ì„¸ì´ë”ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(111);
                         return true;
                     case "120":
-                        getClient().send(UIPacket.showInfo("[¼Ó¼º °Ë¼úÀÇ ±â»ç] ³ªÀÌÆ®·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì†ì„± ê²€ìˆ ì˜ ê¸°ì‚¬] ë‚˜ì´íŠ¸ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(121);
                         return true;
                     case "130":
-                        getClient().send(UIPacket.showInfo("[µå·¡°ï Ã¢¼úÀÇ ±â»ç] µå·¡°ï ³ªÀÌÆ®·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë“œë˜ê³¤ ì°½ìˆ ì˜ ê¸°ì‚¬] ë“œë˜ê³¤ ë‚˜ì´íŠ¸ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(131);
                         return true;
                     case "210":
-                        getClient().send(UIPacket.showInfo("[ºÒ*µ¶] ¸ŞÀÌÁö·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë¶ˆ*ë…] ë©”ì´ì§€ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(211);
                         return true;
                     case "220":
-                        getClient().send(UIPacket.showInfo("[¾óÀ½*¹ø°³] ¸ŞÀÌÁö·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì–¼ìŒ*ë²ˆê°œ] ë©”ì´ì§€ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(221);
                         return true;
                     case "230":
-                        getClient().send(UIPacket.showInfo("[Èú*¹öÇÁ] ÇÁ¸®½ºÆ®·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[í*ë²„í”„] í”„ë¦¬ìŠ¤íŠ¸ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(231);
                         return true;
                     case "310":
-                        getClient().send(UIPacket.showInfo("[¿¬¼â »ç°İ¼ö] ·¹ÀÎÀú·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì—°ì‡„ ì‚¬ê²©ìˆ˜] ë ˆì¸ì €ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(311);
                         return true;
                     case "320":
-                        getClient().send(UIPacket.showInfo("[¹é¹ß¹éÁß ¸í»ç¼ö] Àú°İ¼ö·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë°±ë°œë°±ì¤‘ ëª…ì‚¬ìˆ˜] ì €ê²©ìˆ˜ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(321);
                         return true;
                     case "410":
-                        getClient().send(UIPacket.showInfo("[¾Ï»ì Àü¹®°¡] Çã¹Ô·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì•”ì‚´ ì „ë¬¸ê°€] í—ˆë°‹ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(411);
                         return true;
                     case "420":
-                        getClient().send(UIPacket.showInfo("[¾ÏÈæÀÚ] ½ÃÇÁ ¸¶½ºÅÍ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì•”í‘ì] ì‹œí”„ ë§ˆìŠ¤í„°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(421);
                         return true;
                     case "510":
-                        getClient().send(UIPacket.showInfo("[µå·¡°ï ³ÊÅ¬ ÆÄÀÌÅÍ] ¹öÄ¿´Ï¾î·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë“œë˜ê³¤ ë„ˆí´ íŒŒì´í„°] ë²„ì»¤ë‹ˆì–´ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(511);
                         return true;
                     case "520":
-                        getClient().send(UIPacket.showInfo("[°Ç ¸¶½ºÅÍ¸®] ¹ßÅ°¸®·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ê±´ ë§ˆìŠ¤í„°ë¦¬] ë°œí‚¤ë¦¬ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(521);
                         return true;
                     case "430":
-                        getClient().send(UIPacket.showInfo("[¾ÏÈæÀ» ¾Ë¾Æ¹ö¸°ÀÚ] ½½·¡¼Å·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì•”í‘ì„ ì•Œì•„ë²„ë¦°ì] ìŠ¬ë˜ì…”ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(433);
                         return true;
                     case "530":
-                        getClient().send(UIPacket.showInfo("[Ä³³í ¸¶½ºÅÍ¸®] Ä³³í½´ÅÍ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ìºë…¼ ë§ˆìŠ¤í„°ë¦¬] ìºë…¼ìŠˆí„°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(531);
                         return true;
                     case "2110":
-                        getClient().send(UIPacket.showInfo("[¿µ¿õÀÇ ±ú´ŞÀ½] ¾Æ¶õÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì˜ì›…ì˜ ê¹¨ë‹¬ìŒ] ì•„ë€ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(2111);
                         return true;
                     case "2210":
-                        getClient().send(UIPacket.showInfo("[ÁøÈ­ÀÇ µå·¡°ï] ¿¡¹İÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì§„í™”ì˜ ë“œë˜ê³¤] ì—ë°˜ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(2214);
                         return true;
                     case "2310":
-                        getClient().send(UIPacket.showInfo("[¿µ¿õÀÇ ±ú´ŞÀ½] ¸Ş¸£¼¼µ¥½º·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì˜ì›…ì˜ ê¹¨ë‹¬ìŒ] ë©”ë¥´ì„¸ë°ìŠ¤ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(2311);
                         return true;
                     case "2410":
-                        getClient().send(UIPacket.showInfo("[¿µ¿õÀÇ ±ú´ŞÀ½] ÆÒÅÒÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì˜ì›…ì˜ ê¹¨ë‹¬ìŒ] íŒ¬í…€ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(2411);
                         return true;
                     case "2510":
-                        getClient().send(UIPacket.showInfo("[¿µ¿õÀÇ ±ú´ŞÀ½] Àº¿ùÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì˜ì›…ì˜ ê¹¨ë‹¬ìŒ] ì€ì›”ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(2511);
                         return true;
                     case "2710":
-                        getClient().send(UIPacket.showInfo("[¿µ¿õÀÇ ±ú´ŞÀ½] ·ç¹Ì³Ê½º·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì˜ì›…ì˜ ê¹¨ë‹¬ìŒ] ë£¨ë¯¸ë„ˆìŠ¤ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(2711);
                         return true;
                     case "3110":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½º ¿ä¿ø] µ¥¸ó½½·¹ÀÌ¾î·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ ìš”ì›] ë°ëª¬ìŠ¬ë ˆì´ì–´ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3111);
                         return true;
                     case "3120":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½º ¿ä¿ø] µ¥¸ó¾îº¥Á®·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ ìš”ì›] ë°ëª¬ì–´ë²¤ì ¸ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3121);
                         return true;
                     case "3210":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½º ¿ä¿ø] ¹èÆ²¸ŞÀÌÁö·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ ìš”ì›] ë°°í‹€ë©”ì´ì§€ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3211);
                         return true;
                     case "3310":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½º ¿ä¿ø] ¿ÍÀÏµåÇåÅÍ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ ìš”ì›] ì™€ì¼ë“œí—Œí„°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3311);
                         return true;
                     case "3510":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½º ¿ä¿ø] ¸ŞÄ«´ĞÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ ìš”ì›] ë©”ì¹´ë‹‰ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3511);
                         return true;
                     case "3610":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½º ¿ä¿ø] Á¦³íÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ ìš”ì›] ì œë…¼ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3611);
                         return true;
                     case "3710":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½º ¿ä¿ø] ºí·¡½ºÅÍ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ ìš”ì›] ë¸”ë˜ìŠ¤í„°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3711);
                         return true;
                     case "5110":
-                        getClient().send(UIPacket.showInfo("[½Ã±×³Ê½º ´ÜÀå] ºûÀÇ ±â»ç·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‹œê·¸ë„ˆìŠ¤ ë‹¨ì¥] ë¹›ì˜ ê¸°ì‚¬ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(5111);
                         return true;
                     case "6110":
-                        getClient().send(UIPacket.showInfo("[³ë¹ÙÀÇ ¼öÈ£ÀÚ] Ä«ÀÌÀú·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë…¸ë°”ì˜ ìˆ˜í˜¸ì] ì¹´ì´ì €ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(6111);
                         return true;
                     case "6510":
-                        getClient().send(UIPacket.showInfo("[³ë¹ÙÀÇ ¼öÈ£ÀÚ] ¿£Á©¸¯¹ö½ºÅÍ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë…¸ë°”ì˜ ìˆ˜í˜¸ì] ì—”ì ¤ë¦­ë²„ìŠ¤í„°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(6511);
                         return true;
                     case "1110":
-                        getClient().send(UIPacket.showInfo("[½Ã±×³Ê½º Á¤½Ä ±â»ç] ¼Ò¿ï ¸¶½ºÅÍ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‹œê·¸ë„ˆìŠ¤ ì •ì‹ ê¸°ì‚¬] ì†Œìš¸ ë§ˆìŠ¤í„°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(1111);
                         return true;
                     case "1210":
-                        getClient().send(UIPacket.showInfo("[½Ã±×³Ê½º Á¤½Ä ±â»ç] ÇÃ·¹ÀÓ À§ÀÚµå·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‹œê·¸ë„ˆìŠ¤ ì •ì‹ ê¸°ì‚¬] í”Œë ˆì„ ìœ„ìë“œë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(1211);
                         return true;
                     case "1310":
-                        getClient().send(UIPacket.showInfo("[½Ã±×³Ê½º Á¤½Ä ±â»ç] À©µå ºê·¹ÀÌÄ¿·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‹œê·¸ë„ˆìŠ¤ ì •ì‹ ê¸°ì‚¬] ìœˆë“œ ë¸Œë ˆì´ì»¤ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(1311);
                         return true;
                     case "1410":
-                        getClient().send(UIPacket.showInfo("[½Ã±×³Ê½º Á¤½Ä ±â»ç] ³ªÀÌÆ® ¿öÄ¿·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‹œê·¸ë„ˆìŠ¤ ì •ì‹ ê¸°ì‚¬] ë‚˜ì´íŠ¸ ì›Œì»¤ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(1411);
                         return true;
                     case "1510":
-                        getClient().send(UIPacket.showInfo("[½Ã±×³Ê½º Á¤½Ä ±â»ç] ½ºÆ®¶óÀÌÄ¿·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‹œê·¸ë„ˆìŠ¤ ì •ì‹ ê¸°ì‚¬] ìŠ¤íŠ¸ë¼ì´ì»¤ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(1511);
                         return true;
                     case "14200":
-                        getClient().send(UIPacket.showInfo("[ÃÊ´É·ÂÀÇ ±ú´ŞÀ½] Å°³×½Ã½º·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì´ˆëŠ¥ë ¥ì˜ ê¹¨ë‹¬ìŒ] í‚¤ë„¤ì‹œìŠ¤ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(14211);
                         return true;
                 }
             } else if (level == 100) {
                 switch (getKeyValue("AutoJob")) {
                     case "110":
-                        getClient().send(UIPacket.showInfo("[¿¬¼â °Ë¼úÀÇ ¸¶½ºÅÍ] È÷¾î·Î·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì—°ì‡„ ê²€ìˆ ì˜ ë§ˆìŠ¤í„°] íˆì–´ë¡œë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(112);
                         return true;
                     case "120":
-                        getClient().send(UIPacket.showInfo("[È¯»ó °Ë¼úÀÇ ¸¶½ºÅÍ] ÆÈ¶óµò·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[í™˜ìƒ ê²€ìˆ ì˜ ë§ˆìŠ¤í„°] íŒ”ë¼ë”˜ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(122);
                         return true;
                     case "130":
-                        getClient().send(UIPacket.showInfo("[´ÙÅ© µå·¡°ï Ã¢¼úÀÇ ¸¶½ºÅÍ] ´ÙÅ© ³ªÀÌÆ®·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë‹¤í¬ ë“œë˜ê³¤ ì°½ìˆ ì˜ ë§ˆìŠ¤í„°] ë‹¤í¬ ë‚˜ì´íŠ¸ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(132);
                         return true;
                     case "210":
-                        getClient().send(UIPacket.showInfo("[ºÒ*µ¶ ¸¶½ºÅÍ] ¾ÆÅ©¸ŞÀÌÁö·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë¶ˆ*ë… ë§ˆìŠ¤í„°] ì•„í¬ë©”ì´ì§€ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(212);
                         return true;
                     case "220":
-                        getClient().send(UIPacket.showInfo("[¾óÀ½*¹ø°³ ¸¶½ºÅÍ] ¾ÆÅ©¸ŞÀÌÁö·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì–¼ìŒ*ë²ˆê°œ ë§ˆìŠ¤í„°] ì•„í¬ë©”ì´ì§€ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(222);
                         return true;
                     case "230":
-                        getClient().send(UIPacket.showInfo("[Èú*¹öÇÁ ¸¶½ºÅÍ] ºñ¼óÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[í*ë²„í”„ ë§ˆìŠ¤í„°] ë¹„ìˆìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(232);
                         return true;
                     case "310":
-                        getClient().send(UIPacket.showInfo("[È­»ì ¿¬»çÀÇ ¸¶½ºÅÍ] º¸¿ì ¸¶½ºÅÍ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[í™”ì‚´ ì—°ì‚¬ì˜ ë§ˆìŠ¤í„°] ë³´ìš° ë§ˆìŠ¤í„°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(312);
                         return true;
                     case "320":
-                        getClient().send(UIPacket.showInfo("[È­»ì ÆÄ¿öÀÇ ¸¶½ºÅÍ] ½Å±Ã·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[í™”ì‚´ íŒŒì›Œì˜ ë§ˆìŠ¤í„°] ì‹ ê¶ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(322);
                         return true;
                     case "410":
-                        getClient().send(UIPacket.showInfo("[¿¬¼â ¾Ï»ìÀÇ ¸¶½ºÅÍ] ³ªÀÌÆ® ·Îµå·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì—°ì‡„ ì•”ì‚´ì˜ ë§ˆìŠ¤í„°] ë‚˜ì´íŠ¸ ë¡œë“œë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(412);
                         return true;
                     case "420":
-                        getClient().send(UIPacket.showInfo("[¾ÏÈæÀÇ ¾Ï»ì ¸¶½ºÅÍ] ¼¨µµ¿ì·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì•”í‘ì˜ ì•”ì‚´ ë§ˆìŠ¤í„°] ì„€ë„ìš°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(422);
                         return true;
                     case "510":
-                        getClient().send(UIPacket.showInfo("[Á¤·ÉÀÇ ³ÊÅ¬ ÆÄÀÌÅÍ] ¹ÙÀÌÆÛ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì •ë ¹ì˜ ë„ˆí´ íŒŒì´í„°] ë°”ì´í¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(512);
                         return true;
                     case "520":
-                        getClient().send(UIPacket.showInfo("[¹èÆ² °Ç ¸¶½ºÅÍ¸®] Ä¸Æ¾À¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë°°í‹€ ê±´ ë§ˆìŠ¤í„°ë¦¬] ìº¡í‹´ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(522);
                         return true;
                     case "430":
-                        getClient().send(UIPacket.showInfo("[¾ÏÈæÀ» Á¶Á¤ÇÏ´ÂÀÚ] µà¾óºí·¹ÀÌµå·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì•”í‘ì„ ì¡°ì •í•˜ëŠ”ì] ë“€ì–¼ë¸”ë ˆì´ë“œë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(434);
                         return true;
                     case "530":
-                        getClient().send(UIPacket.showInfo("[ÆÄ±«ÀÇ Ä³³í ¸¶½ºÅÍ¸®] Ä³³í½´ÅÍ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[íŒŒê´´ì˜ ìºë…¼ ë§ˆìŠ¤í„°ë¦¬] ìºë…¼ìŠˆí„°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(532);
                         return true;
                     case "2110":
-                        getClient().send(UIPacket.showInfo("[¿µ¿õÀÇ ºÎÈ°] ¾Æ¶õÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì˜ì›…ì˜ ë¶€í™œ] ì•„ë€ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(2112);
                         return true;
                     case "2210":
-                        getClient().send(UIPacket.showInfo("[Àü¼³ÀÇ µå·¡°ï] ¿¡¹İÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì „ì„¤ì˜ ë“œë˜ê³¤] ì—ë°˜ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(2217);
                         return true;
                     case "2310":
-                        getClient().send(UIPacket.showInfo("[¿µ¿õÀÇ ºÎÈ°] ¸Ş¸£¼¼µ¥½º·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì˜ì›…ì˜ ë¶€í™œ] ë©”ë¥´ì„¸ë°ìŠ¤ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(2312);
                         return true;
                     case "2410":
-                        getClient().send(UIPacket.showInfo("[¿µ¿õÀÇ ºÎÈ°] ÆÒÅÒÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì˜ì›…ì˜ ë¶€í™œ] íŒ¬í…€ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(2412);
                         return true;
                     case "2510":
-                        getClient().send(UIPacket.showInfo("[¿µ¿õÀÇ ºÎÈ°] Àº¿ùÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì˜ì›…ì˜ ë¶€í™œ] ì€ì›”ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(2512);
                         return true;
                     case "2710":
-                        getClient().send(UIPacket.showInfo("[¿µ¿õÀÇ ºÎÈ°] ·ç¹Ì³Ê½º·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì˜ì›…ì˜ ë¶€í™œ] ë£¨ë¯¸ë„ˆìŠ¤ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(2712);
                         return true;
                     case "3110":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½ºÀÇ ¿µ¿õ] µ¥¸ó½½·¹ÀÌ¾î·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ì˜ ì˜ì›…] ë°ëª¬ìŠ¬ë ˆì´ì–´ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3112);
                         return true;
                     case "3120":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½º ¿µ¿õ] µ¥¸ó¾îº¥Á®·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ ì˜ì›…] ë°ëª¬ì–´ë²¤ì ¸ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3122);
                         return true;
                     case "3210":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½ºÀÇ ¿µ¿õ] ¹èÆ²¸ŞÀÌÁö·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ì˜ ì˜ì›…] ë°°í‹€ë©”ì´ì§€ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3212);
                         return true;
                     case "3310":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½ºÀÇ ¿µ¿õ] ¿ÍÀÏµåÇåÅÍ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ì˜ ì˜ì›…] ì™€ì¼ë“œí—Œí„°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3312);
                         return true;
                     case "3510":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½ºÀÇ ¿µ¿õ] ¸ŞÄ«´ĞÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ì˜ ì˜ì›…] ë©”ì¹´ë‹‰ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3512);
                         return true;
                     case "3610":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½ºÀÇ ¿µ¿õ] Á¦³íÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ì˜ ì˜ì›…] ì œë…¼ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3612);
                         return true;
                     case "3710":
-                        getClient().send(UIPacket.showInfo("[·¹Áö½ºÅÁ½ºÀÇ ¿µ¿õ] ºí·¡½ºÅÍ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ë ˆì§€ìŠ¤íƒ•ìŠ¤ì˜ ì˜ì›…] ë¸”ë˜ìŠ¤í„°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(3712);
                         return true;
                     case "5110":
-                        getClient().send(UIPacket.showInfo("[½Ã±×³Ê½º ´ÜÀå] ºûÀÇ ±â»ç·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‹œê·¸ë„ˆìŠ¤ ë‹¨ì¥] ë¹›ì˜ ê¸°ì‚¬ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(5112);
                         return true;
                     case "6110":
-                        getClient().send(UIPacket.showInfo("[¿ëÀÇ ±â»ç] Ä«ÀÌÀú·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ìš©ì˜ ê¸°ì‚¬] ì¹´ì´ì €ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(6112);
                         return true;
                     case "6510":
-                        getClient().send(UIPacket.showInfo("[ÀüÀåÀÇ ¾ÆÀÌµ¹] ¿£Á©¸¯¹ö½ºÅÍ·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì „ì¥ì˜ ì•„ì´ëŒ] ì—”ì ¤ë¦­ë²„ìŠ¤í„°ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(6512);
                         return true;
                     case "1110":
-                        getClient().send(UIPacket.showInfo("[½Ã±×³Ê½º ¿µ¿õ] ºûÀÇ ´ëÁ¤·ÉÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‹œê·¸ë„ˆìŠ¤ ì˜ì›…] ë¹›ì˜ ëŒ€ì •ë ¹ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(1112);
                         changeSkillLevel(11121000, (byte) 30, (byte) 30);
                         return true;
                     case "1210":
-                        getClient().send(UIPacket.showInfo("[½Ã±×³Ê½º ¿µ¿õ] ºÒÀÇ ´ëÁ¤·ÉÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‹œê·¸ë„ˆìŠ¤ ì˜ì›…] ë¶ˆì˜ ëŒ€ì •ë ¹ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(1212);
                         changeSkillLevel(12121000, (byte) 30, (byte) 30);
                         return true;
                     case "1310":
-                        getClient().send(UIPacket.showInfo("[½Ã±×³Ê½º ¿µ¿õ] ¹Ù¶÷ÀÇ ´ëÁ¤·ÉÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‹œê·¸ë„ˆìŠ¤ ì˜ì›…] ë°”ëŒì˜ ëŒ€ì •ë ¹ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(1312);
                         changeSkillLevel(13121000, (byte) 30, (byte) 30);
                         return true;
                     case "1410":
-                        getClient().send(UIPacket.showInfo("[½Ã±×³Ê½º ¿µ¿õ] ¾îµÒÀÇ ´ëÁ¤·ÉÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‹œê·¸ë„ˆìŠ¤ ì˜ì›…] ì–´ë‘ ì˜ ëŒ€ì •ë ¹ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(1412);
                         changeSkillLevel(14121000, (byte) 30, (byte) 30);
                         return true;
                     case "1510":
-                        getClient().send(UIPacket.showInfo("[½Ã±×³Ê½º ¿µ¿õ] ¹ø°³ÀÇ ´ëÁ¤·ÉÀ¸·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì‹œê·¸ë„ˆìŠ¤ ì˜ì›…] ë²ˆê°œì˜ ëŒ€ì •ë ¹ìœ¼ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(1512);
                         changeSkillLevel(15121000, (byte) 30, (byte) 30);
                         return true;
                     case "14200":
-                        getClient().send(UIPacket.showInfo("[ÃÊ´É·ÂÀÇ ¿µ¿õ] Å°³×½Ã½º·Î ÀüÁ÷ÇÏ¿´½À´Ï´Ù."));
+                        getClient().send(UIPacket.showInfo("[ì´ˆëŠ¥ë ¥ì˜ ì˜ì›…] í‚¤ë„¤ì‹œìŠ¤ë¡œ ì „ì§í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         changeJob(14212);
                         return true;
                 }
@@ -10089,8 +10089,8 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
 
     public void giveLP() {
         loginpoint += (!getMap().getAllMonster().isEmpty() ? 2 : 1);
-        getClient().getSession().writeAndFlush(MainPacketCreator.OnAddPopupSay(9062000, 3000, "Á¢¼ÓÈÄ 60ºĞÀÌ Áö³ª ·Î±×ÀÎ Æ÷ÀÎÆ®" + (getMap().getAllMonster().size() != 0 ? 2 : 1) + "Á¡ÀÌ Àû¸³µÇ¾ú½À´Ï´Ù.", ""));
-        dropMessage(5, "Á¢¼ÓÈÄ 60ºĞÀÌ Áö³ª ·Î±×ÀÎ Æ÷ÀÎÆ®" + (!getMap().getAllMonster().isEmpty() ? 2 : 1) + "Á¡ÀÌ Àû¸³µÇ¾ú½À´Ï´Ù.");
+        getClient().getSession().writeAndFlush(MainPacketCreator.OnAddPopupSay(9062000, 3000, "ì ‘ì†í›„ 60ë¶„ì´ ì§€ë‚˜ ë¡œê·¸ì¸ í¬ì¸íŠ¸" + (getMap().getAllMonster().size() != 0 ? 2 : 1) + "ì ì´ ì ë¦½ë˜ì—ˆìŠµë‹ˆë‹¤.", ""));
+        dropMessage(5, "ì ‘ì†í›„ 60ë¶„ì´ ì§€ë‚˜ ë¡œê·¸ì¸ í¬ì¸íŠ¸" + (!getMap().getAllMonster().isEmpty() ? 2 : 1) + "ì ì´ ì ë¦½ë˜ì—ˆìŠµë‹ˆë‹¤.");
     }
 
     public long getLT() {
@@ -10207,8 +10207,8 @@ public class MapleCharacter extends AnimatedHinaMapObjectExtend implements Inven
         getStat().setHp(0, this);
         updateSingleStat(PlayerStat.HP, 0);
 
-        send(UIPacket.detailShowInfo("8ÃÊµÚ ºÎÈ°ÇÕ´Ï´Ù", false));
-        send(MainPacketCreator.serverNotice(6, "8ÃÊµÚ ºÎÈ°ÇÕ´Ï´Ù."));
+        send(UIPacket.detailShowInfo("8ì´ˆë’¤ ë¶€í™œí•©ë‹ˆë‹¤", false));
+        send(MainPacketCreator.serverNotice(6, "8ì´ˆë’¤ ë¶€í™œí•©ë‹ˆë‹¤."));
         BuffTimer.getInstance().schedule(new Runnable() {
             @Override
             public void run() {

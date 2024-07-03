@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹èÁöÈÆ raccoonfox69@gmail.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°°ì§€í›ˆ raccoonfox69@gmail.com
  * ==================================
  * 
  */
@@ -18,7 +18,7 @@ public class ShutdownCommands implements Command {
 
     @Override
     public void execute(MapleClient c, String[] splitted) throws Exception, IllegalCommandSyntaxException {
-	if (splitted[0].equals("!¼­¹öÁ¾·á")) {
+	if (splitted[0].equals("!ì„œë²„ì¢…ë£Œ")) {
 	    int time = 60000;
 	    if (splitted.length > 1) {
 		time = Integer.parseInt(splitted[1]) * 60000;
@@ -26,27 +26,27 @@ public class ShutdownCommands implements Command {
 	    CommandProcessor.forcePersisting();
 	    c.getChannelServer().shutdown(time);
 	    c.getPlayer().dropMessage(6, "Shutting down... in " + time + "");
-	} else if (splitted[0].equals("!Ä³½Ã¼¥¼­¹öÁ¾·á")) {
+	} else if (splitted[0].equals("!ìºì‹œìƒµì„œë²„ì¢…ë£Œ")) {
 	    CashShopServer.getInstance().shutdown();
-	} else if (splitted[0].equals("!ÀüÃ¼¼­¹öÁ¾·á")) {
+	} else if (splitted[0].equals("!ì „ì²´ì„œë²„ì¢…ë£Œ")) {
 	    int time = 60000;
 	    if (splitted.length > 1) {
 		time = Integer.parseInt(splitted[1]) * 60000;
 	    }
 	    CommandProcessor.forcePersisting();
 	    ChannelServer.shutdown(time);
-	    c.getPlayer().dropMessage(6, "1ºĞÈÄ¿¡ ¼­¹ö°¡ Á¾·áµË´Ï´Ù.");
+	    c.getPlayer().dropMessage(6, "1ë¶„í›„ì— ì„œë²„ê°€ ì¢…ë£Œë©ë‹ˆë‹¤.");
 
-	} else if (splitted[0].equals("!·Î±×ÀÎ¼­¹öÁ¾·á")) {
+	} else if (splitted[0].equals("!ë¡œê·¸ì¸ì„œë²„ì¢…ë£Œ")) {
 	    c.getChannelServer().shutdownLogin();
-	    c.getPlayer().dropMessage(6, "Á¾·áÁß..");
+	    c.getPlayer().dropMessage(6, "ì¢…ë£Œì¤‘..");
 
-	} else if (splitted[0].equals("!Áö±İ¼­¹öÁ¾·á")) {
+	} else if (splitted[0].equals("!ì§€ê¸ˆì„œë²„ì¢…ë£Œ")) {
 	    CommandProcessor.forcePersisting();
 	    new ShutdownServer(c.getChannel()).run();
-	    c.getPlayer().dropMessage(6, "Á¾·áÁß..");
+	    c.getPlayer().dropMessage(6, "ì¢…ë£Œì¤‘..");
 
-	} else if (splitted[0].equals("!°í¿ë»óÁ¡Á¾·á")) {
+	} else if (splitted[0].equals("!ê³ ìš©ìƒì ì¢…ë£Œ")) {
 	    c.getChannelServer().closeAllMerchant();
 	}
     }
@@ -54,11 +54,11 @@ public class ShutdownCommands implements Command {
     @Override
     public CommandDefinition[] getDefinition() {
 	return new CommandDefinition[]{
-		    new CommandDefinition("°í¿ë»óÁ¡Á¾·á", "", "ÇöÀç Ã¤³ÎÀÇ ¸ğµç °í¿ë»óÁ¡À» ´İ½À´Ï´Ù.", 6),
-		    new CommandDefinition("Ä³½Ã¼¥¼­¹öÁ¾·á", "", "Ä³½Ã¼¥ ¼­¹ö¸¦ Á¾·áÇÕ´Ï´Ù.", 6),
-		    new CommandDefinition("¼­¹öÁ¾·á", "(<Á¾·á´ë±â½Ã°£>)", "ÇöÀç Ã¤³ÎÀ» Á¾·áÇÕ´Ï´Ù.", 6),
-		    new CommandDefinition("Áö±İ¼­¹öÁ¾·á", "", "ÇöÀç Ã¤³ÎÀÇ ¼­¹ö¸¦ Áö±İ Á¾·áÇÕ´Ï´Ù.", 6),
-		    new CommandDefinition("·Î±×ÀÎ¼­¹öÁ¾·á", "", "·Î±×ÀÎ ¼­¹ö¸¦ Áö±İ Á¾·áÇÕ´Ï´Ù.", 6),
-		    new CommandDefinition("ÀüÃ¼¼­¹öÁ¾·á", "(<Á¾·á´ë±â½Ã°£>)", "¸ğµç ¼­¹ö¸¦ Á¾·áÇÕ´Ï´Ù.", 6),};
+		    new CommandDefinition("ê³ ìš©ìƒì ì¢…ë£Œ", "", "í˜„ì¬ ì±„ë„ì˜ ëª¨ë“  ê³ ìš©ìƒì ì„ ë‹«ìŠµë‹ˆë‹¤.", 6),
+		    new CommandDefinition("ìºì‹œìƒµì„œë²„ì¢…ë£Œ", "", "ìºì‹œìƒµ ì„œë²„ë¥¼ ì¢…ë£Œí•©ë‹ˆë‹¤.", 6),
+		    new CommandDefinition("ì„œë²„ì¢…ë£Œ", "(<ì¢…ë£ŒëŒ€ê¸°ì‹œê°„>)", "í˜„ì¬ ì±„ë„ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.", 6),
+		    new CommandDefinition("ì§€ê¸ˆì„œë²„ì¢…ë£Œ", "", "í˜„ì¬ ì±„ë„ì˜ ì„œë²„ë¥¼ ì§€ê¸ˆ ì¢…ë£Œí•©ë‹ˆë‹¤.", 6),
+		    new CommandDefinition("ë¡œê·¸ì¸ì„œë²„ì¢…ë£Œ", "", "ë¡œê·¸ì¸ ì„œë²„ë¥¼ ì§€ê¸ˆ ì¢…ë£Œí•©ë‹ˆë‹¤.", 6),
+		    new CommandDefinition("ì „ì²´ì„œë²„ì¢…ë£Œ", "(<ì¢…ë£ŒëŒ€ê¸°ì‹œê°„>)", "ëª¨ë“  ì„œë²„ë¥¼ ì¢…ë£Œí•©ë‹ˆë‹¤.", 6),};
     }
 }

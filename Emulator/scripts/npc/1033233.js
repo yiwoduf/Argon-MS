@@ -32,13 +32,13 @@ function action(mode, type, selection) {
         }
         var progress = Integer.parseInt(eim.getProperty("allProgress"));
         if (progress == 70) {
-            cm.sendNext("¾î...¾î¶»°Ô ¿©±â±îÁö ¿À½Å°ÅÁÒ...? È¤½Ã Àú¸¦ ±¸ÇÏ·¯....");
+            cm.sendNext("ì–´...ì–´ë–»ê²Œ ì—¬ê¸°ê¹Œì§€ ì˜¤ì‹ ê±°ì£ ...? í˜¹ì‹œ ì €ë¥¼ êµ¬í•˜ëŸ¬....");
         } else {
             cm.dispose();
             return;
         }
     } else if (status == 1) {
-        cm.sendNext("µÚ.. µÚ¸¦ Á¶½ÉÇÏ¼¼¿ä!!");
+        cm.sendNext("ë’¤.. ë’¤ë¥¼ ì¡°ì‹¬í•˜ì„¸ìš”!!");
     } else if (status == 2) {
         var eim = cm.getPlayer().getEventInstance();
         var mobid = 8220018;

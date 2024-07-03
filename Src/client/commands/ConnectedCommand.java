@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹èÁöÈÆ raccoonfox69@gmail.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°°ì§€í›ˆ raccoonfox69@gmail.com
  * ==================================
  * 
  */
@@ -20,7 +20,7 @@ public class ConnectedCommand implements Command {
     public void execute(MapleClient c, String[] splittedLine) throws Exception, IllegalCommandSyntaxException {
 
 	    Map<Integer, Integer> connected = WorldConnected.getConnected(c.getWorld());
-	    StringBuilder conStr = new StringBuilder("ÇöÀç Á¢¼ÓÁßÀÎ ÀÎ¿ø: ");
+	    StringBuilder conStr = new StringBuilder("í˜„ì¬ ì ‘ì†ì¤‘ì¸ ì¸ì›: ");
 	    boolean first = true;
 	    for (int i : connected.keySet()) {
 		if (!first) {
@@ -29,10 +29,10 @@ public class ConnectedCommand implements Command {
 		    first = false;
 		}
 		if (i == 0) {
-		    conStr.append("ÃÑ: ");
+		    conStr.append("ì´: ");
 		    conStr.append(connected.get(i));
 		} else {
-		    conStr.append("Ã¤³Î");
+		    conStr.append("ì±„ë„");
 		    conStr.append(i);
 		    conStr.append(": ");
 		    conStr.append(connected.get(i));
@@ -44,7 +44,7 @@ public class ConnectedCommand implements Command {
     @Override
     public CommandDefinition[] getDefinition() {
 	return new CommandDefinition[]{
-		    new CommandDefinition("¿¬°á", "", "°¢ Ã¤³Î¿¡ ¿¬°áµÈ À¯Àú¼ö¸¦ Ãâ·ÂÇÕ´Ï´Ù.", 1)
+		    new CommandDefinition("ì—°ê²°", "", "ê° ì±„ë„ì— ì—°ê²°ëœ ìœ ì €ìˆ˜ë¥¼ ì¶œë ¥í•©ë‹ˆë‹¤.", 1)
 	};
     }
 }

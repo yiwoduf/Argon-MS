@@ -1,5 +1,5 @@
 /*
-ÆÄ¶õµ¹·û±º
+íŒŒëž€ëŒë¥œêµ°
 */
 importPackage(Packages.server.quest);
 
@@ -12,13 +12,13 @@ function start(mode, type, selection) {
     } else {
         status++;
         if (status == 0) {
-            qm.sendNext("\r\nÀÌ ÆíÁö¸¦ ÀÐ´Â ¸ðÇè°¡¿¡°Ô.\r\n\r\n³ª´Â Å©·Î½ºÇåÅÍÀÇ ¿ä¿ø #bºñ½ºÆ®#k¶ó°í ÇÏ³×. °ÅµÎÀý¹ÌÇÏ°í ¸»ÇÏÁö. ¿ì¸® Å©·Î½ºÇåÅÍÀÇ ¿ä¿øµéÀº ¸ÞÀÌÇÃ ¿ùµå °¢Áö¸¦ µ¹¾Æ´Ù´Ï¸ç ¾îµÒÀÇ ¸ó½ºÅÍ¸¦ Ã³Ä¡ÇÏ´Â °ÍÀ» ÁÖ ÀÓ¹«·Î ÇÏ°íÀÖÁö. ");
+            qm.sendNext("\r\nì´ íŽ¸ì§€ë¥¼ ì½ëŠ” ëª¨í—˜ê°€ì—ê²Œ.\r\n\r\në‚˜ëŠ” í¬ë¡œìŠ¤í—Œí„°ì˜ ìš”ì› #bë¹„ìŠ¤íŠ¸#kë¼ê³  í•˜ë„¤. ê±°ë‘ì ˆë¯¸í•˜ê³  ë§í•˜ì§€. ìš°ë¦¬ í¬ë¡œìŠ¤í—Œí„°ì˜ ìš”ì›ë“¤ì€ ë©”ì´í”Œ ì›”ë“œ ê°ì§€ë¥¼ ëŒì•„ë‹¤ë‹ˆë©° ì–´ë‘ ì˜ ëª¬ìŠ¤í„°ë¥¼ ì²˜ì¹˜í•˜ëŠ” ê²ƒì„ ì£¼ ìž„ë¬´ë¡œ í•˜ê³ ìžˆì§€. ");
         } else if (status == 1) {
-            qm.sendNextPrev("\r\n±×·±µ¥ Áö±Ý ³»°¡ ÀÖ´Â ÀÌ °÷, #r»çÀÚ¿ÕÀÇ ¼º#k¿¡ ±×µ¿¾È º¼ ¼ö ¾ø¾ú´ø °­·ÂÇÑ ¾îµÒÀÇ ±â¿îÀÌ ³Ñ½Ç´ë°í ÀÖ¾î. ¿¤³ª½ºÀÇ Â÷µðÂù ¹Ù¶÷º¸´Ù ´õ¿í ½Ã¸° °øÆ÷°¡ ´À²¸Áö³×."); 
+            qm.sendNextPrev("\r\nê·¸ëŸ°ë° ì§€ê¸ˆ ë‚´ê°€ ìžˆëŠ” ì´ ê³³, #rì‚¬ìžì™•ì˜ ì„±#kì— ê·¸ë™ì•ˆ ë³¼ ìˆ˜ ì—†ì—ˆë˜ ê°•ë ¥í•œ ì–´ë‘ ì˜ ê¸°ìš´ì´ ë„˜ì‹¤ëŒ€ê³  ìžˆì–´. ì—˜ë‚˜ìŠ¤ì˜ ì°¨ë””ì°¬ ë°”ëžŒë³´ë‹¤ ë”ìš± ì‹œë¦° ê³µí¬ê°€ ëŠê»´ì§€ë„¤."); 
         } else if (status == 2) {
-            qm.sendYesNo("³» ÀÓ¹«¸¦ ¿Ï¼öÇÏ±â À§ÇØ¼­´Â ÀÚ³×¿Í °°Àº ¶Ù¾î³­ ¸ðÇè°¡°¡ ÇÊ¿äÇÑ ½ÃÁ¡ÀÌ¾ß. ³»°Ô µµ¿òÀ» ÁÖ°í ½Í´Ù¸é ´ÙÀ½ ÀåÀ» ÀÐ°Ô.");
+            qm.sendYesNo("ë‚´ ìž„ë¬´ë¥¼ ì™„ìˆ˜í•˜ê¸° ìœ„í•´ì„œëŠ” ìžë„¤ì™€ ê°™ì€ ë›°ì–´ë‚œ ëª¨í—˜ê°€ê°€ í•„ìš”í•œ ì‹œì ì´ì•¼. ë‚´ê²Œ ë„ì›€ì„ ì£¼ê³  ì‹¶ë‹¤ë©´ ë‹¤ìŒ ìž¥ì„ ì½ê²Œ.");
         } else if (status == 3) {
-            qm.sendOk("°í¸¿±º. ÀÌ ÀåÀ» º¸°í ÀÖ´Ù¸é ³ª¸¦ µ½±â·Î ¸¶À½ ¸ÔÀº °ÍÀÌ°ÚÁö. ½Ã°£ÀÌ ¾ø±â ¶§¹®¿¡ ÆíÁö¿¡ ÀÇ·Ú¼­¸¦ ³Ö¾úµÎ¾ú¾î.ÆíÁö¸¦ ´Ù ÀÐÀ¸¸é ³»°¡ ÀÖ´Â °÷À¸·Î °ñµå¸®Ä¡¶õ »óÀÎÀÌ ÀÌµ¿½ÃÄÑÁÙ°ÍÀÌ³×.±×·³, Á¶±Ý µÚ¿¡ º¸ÀÚ°í.");
+            qm.sendOk("ê³ ë§™êµ°. ì´ ìž¥ì„ ë³´ê³  ìžˆë‹¤ë©´ ë‚˜ë¥¼ ë•ê¸°ë¡œ ë§ˆìŒ ë¨¹ì€ ê²ƒì´ê² ì§€. ì‹œê°„ì´ ì—†ê¸° ë•Œë¬¸ì— íŽ¸ì§€ì— ì˜ë¢°ì„œë¥¼ ë„£ì—ˆë‘ì—ˆì–´.íŽ¸ì§€ë¥¼ ë‹¤ ì½ìœ¼ë©´ ë‚´ê°€ ìžˆëŠ” ê³³ìœ¼ë¡œ ê³¨ë“œë¦¬ì¹˜ëž€ ìƒì¸ì´ ì´ë™ì‹œì¼œì¤„ê²ƒì´ë„¤.ê·¸ëŸ¼, ì¡°ê¸ˆ ë’¤ì— ë³´ìžê³ .");
             qm.forceStartQuest();
             qm.dispose();
         }

@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -154,7 +154,7 @@ public class MapleMap {
     public void MapiaVote(final MapleCharacter player) {
         broadcastMessage(MainPacketCreator.musicChange("Wps.img/VOTE"));
         broadcastMessage(MainPacketCreator.getClock(votetime));
-        broadcastMessage(MainPacketCreator.serverNotice(5, "ÅõÇ¥¸¦ ÁøÇàÇÏ½Ã±â ¹Ù¶ø´Ï´Ù. Á¦ÇÑ½Ã°£Àº 30ÃÊ ÀÔ´Ï´Ù."));
+        broadcastMessage(MainPacketCreator.serverNotice(5, "íˆ¬í‘œë¥¼ ì§„í–‰í•˜ì‹œê¸° ë°”ëë‹ˆë‹¤. ì œí•œì‹œê°„ì€ 30ì´ˆ ì…ë‹ˆë‹¤."));
         names = "";
         for (MapleCharacter chr : getCharacters()) {
             names += chr.getName() + ",";
@@ -188,7 +188,7 @@ public class MapleMap {
         String guessname = "";
         for (MapleCharacter chr : getCharacters()) {
             if (chr.getpolicevote == 1 && !chr.isDead) {
-                if (chr.mapiajob == "¸¶ÇÇ¾Æ") {
+                if (chr.mapiajob == "ë§ˆí”¼ì•„") {
                     iii++;
                 }
             }
@@ -197,37 +197,37 @@ public class MapleMap {
                     chr.isDead = true;
                     deadname = chr.getName();
                     deadjob = chr.mapiajob;
-                    //chr.warp(ServerConstants.mainMap); //Á×À»½Ã °¡´Â¸Ê
-                    chr.Message(1, "´ç½ÅÀº ¸¶ÇÇ¾Æ¿¡°Ô ¾Ï»ì ´çÇÏ¿´½À´Ï´Ù.");
+                    //chr.warp(ServerConstants.mainMap); //ì£½ì„ì‹œ ê°€ëŠ”ë§µ
+                    chr.Message(1, "ë‹¹ì‹ ì€ ë§ˆí”¼ì•„ì—ê²Œ ì•”ì‚´ ë‹¹í•˜ì˜€ìŠµë‹ˆë‹¤.");
                     i++;
                 } else {
-                    chr.dropMessage(6, "ÀÇ»ç°¡ ´ç½ÅÀ» »ì·È½À´Ï´Ù.");
+                    chr.dropMessage(6, "ì˜ì‚¬ê°€ ë‹¹ì‹ ì„ ì‚´ë ¸ìŠµë‹ˆë‹¤.");
                     ii++;
                 }
             }
-            if (chr.mapiajob == "½Ã¹Î" && !chr.isDead) {
+            if (chr.mapiajob == "ì‹œë¯¼" && !chr.isDead) {
                 citizen++;
             }
         }
         for (MapleCharacter chr : getCharacters()) {
             if (iii > 0) {
-                chr.dropMessage(6, "°æÂûÀº ¸¶ÇÇ¾Æ¸¦ Ã£¾Ò½À´Ï´Ù.");
+                chr.dropMessage(6, "ê²½ì°°ì€ ë§ˆí”¼ì•„ë¥¼ ì°¾ì•˜ìŠµë‹ˆë‹¤.");
             } else {
-                chr.dropMessage(5, "°æÂûÀº ¸¶ÇÇ¾Æ¸¦ Ã£Áö ¸øÇÏ¿´½À´Ï´Ù.");
+                chr.dropMessage(5, "ê²½ì°°ì€ ë§ˆí”¼ì•„ë¥¼ ì°¾ì§€ ëª»í•˜ì˜€ìŠµë‹ˆë‹¤.");
             }
             if (i == 0) {
                 if (ii > 0) {
-                    chr.dropMessage(6, "ÀÇ»ç´Â ¸¶ÇÇ¾Æ°¡ ¾Ï»ìÇÏ·Á´ø »ç¶÷À» »ì·È½À´Ï´Ù.");
+                    chr.dropMessage(6, "ì˜ì‚¬ëŠ” ë§ˆí”¼ì•„ê°€ ì•”ì‚´í•˜ë ¤ë˜ ì‚¬ëŒì„ ì‚´ë ¸ìŠµë‹ˆë‹¤.");
                 } else {
-                    chr.dropMessage(5, "¸¶ÇÇ¾Æ´Â ¾Æ¹«µµ Á×ÀÌÁö ¸øÇÏ¿´½À´Ï´Ù.");
+                    chr.dropMessage(5, "ë§ˆí”¼ì•„ëŠ” ì•„ë¬´ë„ ì£½ì´ì§€ ëª»í•˜ì˜€ìŠµë‹ˆë‹¤.");
                 }
             } else {
-                chr.dropMessage(5, "ÀÇ»ç´Â ¾Æ¹«µµ »ì¸®Áö ¸øÇß½À´Ï´Ù.");
-                chr.dropMessage(5, "¸¶ÇÇ¾Æ´Â " + deadname + "´ÔÀ» Á×¿´½À´Ï´Ù. ±×ÀÇ Á÷¾÷Àº " + deadjob + " ÀÌ¾ú½À´Ï´Ù.");
+                chr.dropMessage(5, "ì˜ì‚¬ëŠ” ì•„ë¬´ë„ ì‚´ë¦¬ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
+                chr.dropMessage(5, "ë§ˆí”¼ì•„ëŠ” " + deadname + "ë‹˜ì„ ì£½ì˜€ìŠµë‹ˆë‹¤. ê·¸ì˜ ì§ì—…ì€ " + deadjob + " ì´ì—ˆìŠµë‹ˆë‹¤.");
             }
         }
 
-        if (citizen == 0) {// ¸¶ÇÇ¾Æ ½Â
+        if (citizen == 0) {// ë§ˆí”¼ì•„ ìŠ¹
             final Timer m_timer = new Timer();
             TimerTask m_task = new TimerTask() {
                 public void run() {
@@ -247,14 +247,14 @@ public class MapleMap {
         int chan;
         if (MapiaChannel == 1) {
             chan = 20;
-            WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[¸¶ÇÇ¾Æ ¾Ë¸²] " + chan + "¼¼ÀÌ»ó Ã¤³Î¿¡¼­ ¸¶ÇÇ¾ÆÀÇ ½Â¸®·Î °ÔÀÓÀÌ Á¾·á µÇ¾ú½À´Ï´Ù."));
+            WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[ë§ˆí”¼ì•„ ì•Œë¦¼] " + chan + "ì„¸ì´ìƒ ì±„ë„ì—ì„œ ë§ˆí”¼ì•„ì˜ ìŠ¹ë¦¬ë¡œ ê²Œì„ì´ ì¢…ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤."));
         } else {
             chan = MapiaChannel + 1;
-            WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[¸¶ÇÇ¾Æ ¾Ë¸²] " + chan + " Ã¤³Î¿¡¼­ ¸¶ÇÇ¾ÆÀÇ ½Â¸®·Î °ÔÀÓÀÌ Á¾·á µÇ¾ú½À´Ï´Ù."));
+            WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[ë§ˆí”¼ì•„ ì•Œë¦¼] " + chan + " ì±„ë„ì—ì„œ ë§ˆí”¼ì•„ì˜ ìŠ¹ë¦¬ë¡œ ê²Œì„ì´ ì¢…ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤."));
         }
         int rand = Randomizer.rand(50, 100);
         for (MapleCharacter chr : getCharacters()) {
-            if (chr.mapiajob.equals("¸¶ÇÇ¾Æ") && !chr.isDead) {
+            if (chr.mapiajob.equals("ë§ˆí”¼ì•„") && !chr.isDead) {
                 chr.gainMeso(nightnumber * rand * 100000, false);
             }
             chr.isDead = false;
@@ -265,9 +265,9 @@ public class MapleMap {
             chr.getmapiavote = 0;
             chr.getpolicevote = 0;
             chr.voteamount = 0;
-            chr.warp(ServerConstants.mainMap); // ÅğÀå¸Ê
-            chr.dropMessage(5, "¼ö°íÇÏ¼Ì½À´Ï´Ù. ÀÌ¹ø °ÔÀÓÀº ¸¶ÇÇ¾ÆÀÇ ½Â¸®ÀÔ´Ï´Ù!!");
-            chr.dropMessage(6, "¸¶ÇÇ¾Æ °ÔÀÓ º¸»óÀ¸·Î ¼ÒÁ¤ÀÇ ¸Ş¼Ò¸¦ Áö±ŞÇØµå·È½À´Ï´Ù.");
+            chr.warp(ServerConstants.mainMap); // í‡´ì¥ë§µ
+            chr.dropMessage(5, "ìˆ˜ê³ í•˜ì…¨ìŠµë‹ˆë‹¤. ì´ë²ˆ ê²Œì„ì€ ë§ˆí”¼ì•„ì˜ ìŠ¹ë¦¬ì…ë‹ˆë‹¤!!");
+            chr.dropMessage(6, "ë§ˆí”¼ì•„ ê²Œì„ ë³´ìƒìœ¼ë¡œ ì†Œì •ì˜ ë©”ì†Œë¥¼ ì§€ê¸‰í•´ë“œë ¸ìŠµë‹ˆë‹¤.");
         }
         return;
     }
@@ -277,18 +277,18 @@ public class MapleMap {
         int chan;
         if (MapiaChannel == 1) {
             chan = 20;
-            WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[¸¶ÇÇ¾Æ ¾Ë¸²] " + chan + "¼¼ÀÌ»ó Ã¤³Î¿¡¼­ ½Ã¹ÎÀÇ ½Â¸®·Î °ÔÀÓÀÌ Á¾·á µÇ¾ú½À´Ï´Ù."));
+            WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[ë§ˆí”¼ì•„ ì•Œë¦¼] " + chan + "ì„¸ì´ìƒ ì±„ë„ì—ì„œ ì‹œë¯¼ì˜ ìŠ¹ë¦¬ë¡œ ê²Œì„ì´ ì¢…ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤."));
         } else {
             chan = MapiaChannel + 1;
-            WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[¸¶ÇÇ¾Æ ¾Ë¸²] " + chan + " Ã¤³Î¿¡¼­ ½Ã¹ÎÀÇ ½Â¸®·Î °ÔÀÓÀÌ Á¾·á µÇ¾ú½À´Ï´Ù."));
+            WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[ë§ˆí”¼ì•„ ì•Œë¦¼] " + chan + " ì±„ë„ì—ì„œ ì‹œë¯¼ì˜ ìŠ¹ë¦¬ë¡œ ê²Œì„ì´ ì¢…ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤."));
         }
         int rand = Randomizer.rand(10, 80);
         int rand2 = Randomizer.rand(30, 100);
         for (MapleCharacter chr : getCharacters()) {
-            if (chr.mapiajob.equals("½Ã¹Î") && !chr.isDead) {
+            if (chr.mapiajob.equals("ì‹œë¯¼") && !chr.isDead) {
                 chr.gainMeso(nightnumber * rand * 100000, false);
             }
-            if ((chr.mapiajob.equals("°æÂû") || chr.mapiajob.equals("ÀÇ»ç")) && !chr.isDead) {
+            if ((chr.mapiajob.equals("ê²½ì°°") || chr.mapiajob.equals("ì˜ì‚¬")) && !chr.isDead) {
                 chr.gainMeso(nightnumber * rand * 100000, false);
             }
             chr.isDead = false;
@@ -299,9 +299,9 @@ public class MapleMap {
             chr.getmapiavote = 0;
             chr.getpolicevote = 0;
             chr.voteamount = 0;
-            chr.warp(ServerConstants.mainMap); // ÅğÀå¸Ê
-            chr.dropMessage(5, "¼ö°íÇÏ¼Ì½À´Ï´Ù. ÀÌ¹ø °ÔÀÓÀº ½Ã¹ÎÀÇ ½Â¸®ÀÔ´Ï´Ù!!");
-            chr.dropMessage(6, "¸¶ÇÇ¾Æ °ÔÀÓ º¸»óÀ¸·Î ¼ÒÁ¤ÀÇ ¸Ş¼Ò¸¦ Áö±ŞÇØµå·È½À´Ï´Ù.");
+            chr.warp(ServerConstants.mainMap); // í‡´ì¥ë§µ
+            chr.dropMessage(5, "ìˆ˜ê³ í•˜ì…¨ìŠµë‹ˆë‹¤. ì´ë²ˆ ê²Œì„ì€ ì‹œë¯¼ì˜ ìŠ¹ë¦¬ì…ë‹ˆë‹¤!!");
+            chr.dropMessage(6, "ë§ˆí”¼ì•„ ê²Œì„ ë³´ìƒìœ¼ë¡œ ì†Œì •ì˜ ë©”ì†Œë¥¼ ì§€ê¸‰í•´ë“œë ¸ìŠµë‹ˆë‹¤.");
         }
         nightnumber = 0;
         return;
@@ -328,21 +328,21 @@ public class MapleMap {
             }
             if (voteamount[playern - 1] == voteamount[playern - 2]) {
                 for (MapleCharacter chr : getCharacters()) {
-                    chr.dropMessage(6, "ÅõÇ¥ °á°ú ¾Æ¹«µµ Á×Áö ¾Ê¾Ò½À´Ï´Ù.");
-                    chr.dropMessage(5, "Àá½Ã ÈÄ ¹ãÀÌ µË´Ï´Ù.");
+                    chr.dropMessage(6, "íˆ¬í‘œ ê²°ê³¼ ì•„ë¬´ë„ ì£½ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
+                    chr.dropMessage(5, "ì ì‹œ í›„ ë°¤ì´ ë©ë‹ˆë‹¤.");
                 }
                 MapiaNight(player);
             } else {
                 for (MapleCharacter chr : getCharacters()) {
                     if (charinfo[0] == chr.getName()) {
-                        chr.Message(1, "ÁøÇàÀÚ>>´ç½ÅÀº ÅõÇ¥ °á°ú·Î ÀÎÇØ Ã³Çü´çÇÏ¿´½À´Ï´Ù.");
+                        chr.Message(1, "ì§„í–‰ì>>ë‹¹ì‹ ì€ íˆ¬í‘œ ê²°ê³¼ë¡œ ì¸í•´ ì²˜í˜•ë‹¹í•˜ì˜€ìŠµë‹ˆë‹¤.");
                         chr.isDead = true;
                     } else {
-                        chr.dropMessage(6, "ÅõÇ¥ °á°ú " + charinfo[0] + " ´ÔÀÌ Ã³Çü´çÇß½À´Ï´Ù.");
-                        chr.dropMessage(6, charinfo[0] + " ´ÔÀÇ Á÷¾÷Àº " + charinfo[1] + " ÀÔ´Ï´Ù.");
-                        chr.dropMessage(5, "Àá½Ã ÈÄ ¹ãÀÌ µË´Ï´Ù.");
+                        chr.dropMessage(6, "íˆ¬í‘œ ê²°ê³¼ " + charinfo[0] + " ë‹˜ì´ ì²˜í˜•ë‹¹í–ˆìŠµë‹ˆë‹¤.");
+                        chr.dropMessage(6, charinfo[0] + " ë‹˜ì˜ ì§ì—…ì€ " + charinfo[1] + " ì…ë‹ˆë‹¤.");
+                        chr.dropMessage(5, "ì ì‹œ í›„ ë°¤ì´ ë©ë‹ˆë‹¤.");
                     }
-                    if (chr.mapiajob == "¸¶ÇÇ¾Æ" && !chr.isDead) {
+                    if (chr.mapiajob == "ë§ˆí”¼ì•„" && !chr.isDead) {
                         mapia++;
                     }
 
@@ -359,23 +359,23 @@ public class MapleMap {
             int chana;
             if (MapiaChannel == 1) {
                 chana = 20;
-                WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[¸¶ÇÇ¾Æ ¾Ë¸²] " + chana + "¼¼ÀÌ»ó Ã¤³Î¿¡¼­ °ÔÀÓÀÌ ´Ù½Ã È°¼ºÈ­ µÇ¾ú½À´Ï´Ù."));
+                WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[ë§ˆí”¼ì•„ ì•Œë¦¼] " + chana + "ì„¸ì´ìƒ ì±„ë„ì—ì„œ ê²Œì„ì´ ë‹¤ì‹œ í™œì„±í™” ë˜ì—ˆìŠµë‹ˆë‹¤."));
             } else {
                 chana = MapiaChannel + 1;
-                WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[¸¶ÇÇ¾Æ ¾Ë¸²] " + chana + " Ã¤³Î¿¡¼­ °ÔÀÓÀÌ ´Ù½Ã È°¼ºÈ­ µÇ¾ú½À´Ï´Ù."));
+                WorldBroadcasting.broadcast(MainPacketCreator.getGMText(8, "[ë§ˆí”¼ì•„ ì•Œë¦¼] " + chana + " ì±„ë„ì—ì„œ ê²Œì„ì´ ë‹¤ì‹œ í™œì„±í™” ë˜ì—ˆìŠµë‹ˆë‹¤."));
             }
             MapiaIng = false;
             nightnumber = 0;
             for (MapleCharacter chr : getCharacters()) {
                 chr.warp(ServerConstants.mainMap);
-                chr.dropMessage(1, "¿À·ù ÀÔ´Ï´Ù. ¿î¿µÀÚ¿¡°Ô ¹®ÀÇ ÇØ ÁÖ¼¼¿ä.");
+                chr.dropMessage(1, "ì˜¤ë¥˜ ì…ë‹ˆë‹¤. ìš´ì˜ìì—ê²Œ ë¬¸ì˜ í•´ ì£¼ì„¸ìš”.");
             }
             return;
         }
     }
 
     public void MapiaNight(final MapleCharacter player) {
-        final int maps[] = {citizenmap1, citizenmap2, citizenmap3, citizenmap4, citizenmap5, citizenmap6}; // ½Ã¹Î¹ã¸Ê
+        final int maps[] = {citizenmap1, citizenmap2, citizenmap3, citizenmap4, citizenmap5, citizenmap6}; // ì‹œë¯¼ë°¤ë§µ
         nightnumber++;
         final Timer m_timer = new Timer();
         final List<MapleCharacter> chars = new ArrayList<MapleCharacter>();
@@ -397,22 +397,22 @@ public class MapleMap {
                             chr.getmapiavote = 0;
                             chr.getpolicevote = 0;
                             chr.voteamount = 0;
-                            if (chr.mapiajob == "½Ã¹Î") {
+                            if (chr.mapiajob == "ì‹œë¯¼") {
                                 chr.warp(maps[citizen]);
-                                chr.dropMessage(5, nightnumber + "¹øÂ° ¹ãÀÌ µÇ¾ú½À´Ï´Ù. ¸¶ÇÇ¾Æ, °æÂû, ÀÇ»ç°¡ ÅõÇ¥¸¦ ¸ğµÎ ÇÒ¶§±îÁö Àá½Ã¸¸ ±â´Ù·Á ÁÖ¼¼¿ä.");
+                                chr.dropMessage(5, nightnumber + "ë²ˆì§¸ ë°¤ì´ ë˜ì—ˆìŠµë‹ˆë‹¤. ë§ˆí”¼ì•„, ê²½ì°°, ì˜ì‚¬ê°€ íˆ¬í‘œë¥¼ ëª¨ë‘ í• ë•Œê¹Œì§€ ì ì‹œë§Œ ê¸°ë‹¤ë ¤ ì£¼ì„¸ìš”.");
                                 citizen++;
-                            } else if (chr.mapiajob == "¸¶ÇÇ¾Æ") {
+                            } else if (chr.mapiajob == "ë§ˆí”¼ì•„") {
                                 chr.warp(mapiamap);
                                 chr.isMapiaVote = true;
-                                chr.dropMessage(5, nightnumber + "¹øÂ° ¹ãÀÌ µÇ¾ú½À´Ï´Ù. ¹Ù·Î ¿·ÀÇ ¿£ÇÇ½Ã¸¦ ÅëÇØ ¾Ï»ìÇÒ »ç¶÷À» Áö¸ñÇØ ÁÖ¼¼¿ä. Á¦ÇÑ½Ã°£Àº " + nighttime + "ÃÊ ÀÔ´Ï´Ù.");
-                            } else if (chr.mapiajob == "°æÂû") {
+                                chr.dropMessage(5, nightnumber + "ë²ˆì§¸ ë°¤ì´ ë˜ì—ˆìŠµë‹ˆë‹¤. ë°”ë¡œ ì˜†ì˜ ì—”í”¼ì‹œë¥¼ í†µí•´ ì•”ì‚´í•  ì‚¬ëŒì„ ì§€ëª©í•´ ì£¼ì„¸ìš”. ì œí•œì‹œê°„ì€ " + nighttime + "ì´ˆ ì…ë‹ˆë‹¤.");
+                            } else if (chr.mapiajob == "ê²½ì°°") {
                                 chr.warp(policemap);
                                 chr.isPoliceVote = true;
-                                chr.dropMessage(5, nightnumber + "¹øÂ° ¹ãÀÌ µÇ¾ú½À´Ï´Ù. ¹Ù·Î ¿·ÀÇ ¿£ÇÇ½Ã¸¦ ÅëÇØ ¸¶ÇÇ¾Æ ÀÏ°Í °°´Ù´Â »ç¶÷À» Áö¸ñ ÇØ ÁÖ¼¼¿ä. Á¦ÇÑ½Ã°£Àº " + nighttime + "ÃÊ ÀÔ´Ï´Ù.");
-                            } else if (chr.mapiajob == "ÀÇ»ç") {
+                                chr.dropMessage(5, nightnumber + "ë²ˆì§¸ ë°¤ì´ ë˜ì—ˆìŠµë‹ˆë‹¤. ë°”ë¡œ ì˜†ì˜ ì—”í”¼ì‹œë¥¼ í†µí•´ ë§ˆí”¼ì•„ ì¼ê²ƒ ê°™ë‹¤ëŠ” ì‚¬ëŒì„ ì§€ëª© í•´ ì£¼ì„¸ìš”. ì œí•œì‹œê°„ì€ " + nighttime + "ì´ˆ ì…ë‹ˆë‹¤.");
+                            } else if (chr.mapiajob == "ì˜ì‚¬") {
                                 chr.warp(drmap);
                                 chr.isDrVote = true;
-                                chr.dropMessage(5, nightnumber + "¹øÂ° ¹ãÀÌ µÇ¾ú½À´Ï´Ù. ¹Ù·Î ¿·ÀÇ ¿£ÇÇ½Ã¸¦ ÅëÇØ »ì¸®°í ½ÍÀº »ç¶÷À» Áö¸ñ ÇØ ÁÖ¼¼¿ä. Á¦ÇÑ½Ã°£Àº " + nighttime + "ÃÊ ÀÔ´Ï´Ù.");
+                                chr.dropMessage(5, nightnumber + "ë²ˆì§¸ ë°¤ì´ ë˜ì—ˆìŠµë‹ˆë‹¤. ë°”ë¡œ ì˜†ì˜ ì—”í”¼ì‹œë¥¼ í†µí•´ ì‚´ë¦¬ê³  ì‹¶ì€ ì‚¬ëŒì„ ì§€ëª© í•´ ì£¼ì„¸ìš”. ì œí•œì‹œê°„ì€ " + nighttime + "ì´ˆ ì…ë‹ˆë‹¤.");
                             }
                             chr.getClient().send(MainPacketCreator.getClock(nighttime));
                         }
@@ -422,8 +422,8 @@ public class MapleMap {
                     for (MapleCharacter chr : chars) {
                         if (!chr.isDead) {
                             chr.isVoting = false;
-                            chr.warp(morningmap); //¾ÆÄ§¸Ê
-                            chr.dropMessage(6, "¾ÆÄ§ÀÌ µÇ¾ú½À´Ï´Ù. ÅõÇ¥ °á°ú¸¦ ¹ßÇ¥ÇÏ°Ú½À´Ï´Ù.");
+                            chr.warp(morningmap); //ì•„ì¹¨ë§µ
+                            chr.dropMessage(6, "ì•„ì¹¨ì´ ë˜ì—ˆìŠµë‹ˆë‹¤. íˆ¬í‘œ ê²°ê³¼ë¥¼ ë°œí‘œí•˜ê² ìŠµë‹ˆë‹¤.");
                         }
                     }
                     m_timer.cancel();
@@ -778,7 +778,7 @@ public class MapleMap {
                     Rectangle rect = new Rectangle(clock.getBox().x, clock.getBox().y, clock.getBox().width, clock.getBox().height);
                     if (rect.intersects(monster.getRectangle())) {
                         clock.setUsed(true);
-                        chr.send(UIPacket.showInfo("¹İ¹İÀÌ ½Ã°£À» ¿òÁ÷ÀÓ"));
+                        chr.send(UIPacket.showInfo("ë°˜ë°˜ì´ ì‹œê°„ì„ ì›€ì§ì„"));
                         return;
                     }
                 }
@@ -835,7 +835,7 @@ public class MapleMap {
     public final Point calcPointMaple(final Point initial) {
         final MapleFoothold fh = footholds.findMaple(initial);
         if (fh == null) {
-//            System.out.println("[¿À·ù] À§Ä¡¸¦ ±¸ÇÏ´ø Áß ¹Ù´ÚÀÇ Ç²È¦µå¸¦ ±¸ÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.");
+//            System.out.println("[ì˜¤ë¥˜] ìœ„ì¹˜ë¥¼ êµ¬í•˜ë˜ ì¤‘ ë°”ë‹¥ì˜ í’‹í™€ë“œë¥¼ êµ¬í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
             return null;
         }
         int dropY = fh.getY1();
@@ -914,7 +914,7 @@ public class MapleMap {
                     if (GameConstants.getInventoryType(de.itemId) == MapleInventoryType.EQUIP) {
                         idrop = ii.randomizeStats((Equip) ii.getEquipById(de.itemId));
                         if (idrop.getItemId() == 1000000) {
-                            idrop = (Item) InventoryHandler.È¯»ıÀÇºÒ²É((Equip) idrop);
+                            idrop = (Item) InventoryHandler.í™˜ìƒì˜ë¶ˆê½ƒ((Equip) idrop);
                         }
                     } else {
                         final int range = Math.abs(de.Maximum - de.Minimum);
@@ -938,7 +938,7 @@ public class MapleMap {
                     if (GameConstants.getInventoryType(de.itemId) == MapleInventoryType.EQUIP) {
                         idrop = ii.randomizeStats((Equip) ii.getEquipById(de.itemId));
                         if (idrop.getItemId() == 1000000) {
-                            idrop = InventoryHandler.È¯»ıÀÇºÒ²É((Equip) idrop);
+                            idrop = InventoryHandler.í™˜ìƒì˜ë¶ˆê½ƒ((Equip) idrop);
                         }
                     } else {
                         idrop = new Item(de.itemId, (byte) 0, (short) (de.Maximum != 1 ? Randomizer.nextInt(de.Maximum - de.Minimum) + de.Minimum : 1), (byte) 0);
@@ -983,7 +983,7 @@ public class MapleMap {
 
         MapleCharacter dropOwner = monster.killBy(chr);
 
-        if (GameConstants.isZero(chr.getJob())) { //WP Èí¼ö
+        if (GameConstants.isZero(chr.getJob())) { //WP í¡ìˆ˜
             int wp = 1;
             chr.gainWP(wp);
             chr.send(MainPacketCreator.ZeroUpdate(chr));
@@ -1075,13 +1075,13 @@ public class MapleMap {
             spawnMonsterOnGroundBelow(MapleLifeProvider.getMonster(mobid + 1), new Point(-363, 100));
         } else if (mobid == 8850004) {
             spawnMonsterOnGroundBelow(MapleLifeProvider.getMonster(8850012), new Point(-363, 100));
-        } else if (mobid == 8800002 || mobid == 8800102 || mobid == 8800022) { //ÀÚÄñ
+        } else if (mobid == 8800002 || mobid == 8800102 || mobid == 8800022) { //ìì¿°
             killAllMonsters(true);
         }
-        if (mobid == 8800102) { //Ä«¿À½ºÀÚÄñ
+        if (mobid == 8800102) { //ì¹´ì˜¤ìŠ¤ìì¿°
             chr.setExpeditionKilledBoss(true);
         }
-        if (mobid == 8840000) { //¹İ·¹¿Â
+        if (mobid == 8840000) { //ë°˜ë ˆì˜¨
             chr.setExpeditionKilledBoss(true);
         }
         switch (mapid) {
@@ -1223,7 +1223,7 @@ public class MapleMap {
                         for (MaplePartyCharacter mcr : chr.getParty().getMembers()) {
                             MapleCharacter mcrr = ChannelServer.getInstance(chr.getClient().getChannel()).getPlayerStorage().getCharacterByName(mcr.getName());
                             mcrr.changeMap(chr.getClient().getChannelServer().getMapFactory().getMap(100000027), chr.getClient().getChannelServer().getMapFactory().getMap(100000027).getPortal(0));
-                            mcrr.getMap().broadcastMessage(MainPacketCreator.getGMText(21, "" + mcrr.getName() + "´ÔÀÇ ÆÄÆ¼°¡ [" + chr.getClient().getChannel() + "]Ã¤³Î¿¡¼­ ±¸°üÅ»È¯¿¡ ¼º°ø ÇÏ¿´½À´Ï´Ù. ¸ğµÎ ÃàÇÏÇØÁÖ¼¼¿ä"));
+                            mcrr.getMap().broadcastMessage(MainPacketCreator.getGMText(21, "" + mcrr.getName() + "ë‹˜ì˜ íŒŒí‹°ê°€ [" + chr.getClient().getChannel() + "]ì±„ë„ì—ì„œ êµ¬ê´€íƒˆí™˜ì— ì„±ê³µ í•˜ì˜€ìŠµë‹ˆë‹¤. ëª¨ë‘ ì¶•í•˜í•´ì£¼ì„¸ìš”"));
                         }
                     }
                 }
@@ -1243,7 +1243,7 @@ public class MapleMap {
                         for (MaplePartyCharacter mcr : chr.getParty().getMembers()) {
                             MapleCharacter mcrr = ChannelServer.getInstance(chr.getClient().getChannel()).getPlayerStorage().getCharacterByName(mcr.getName());
                             mcrr.changeMap(chr.getClient().getChannelServer().getMapFactory().getMap(100000027), chr.getClient().getChannelServer().getMapFactory().getMap(100000027).getPortal(0));
-                            mcrr.getMap().broadcastMessage(MainPacketCreator.getGMText(21, "" + mcrr.getName() + "´ÔÀÇ ÆÄÆ¼°¡ [" + chr.getClient().getChannel() + "]Ã¤³Î¿¡¼­ ´Á´ë º­¶ô °İÆÄ¿¡ ¼º°ø ÇÏ¿´½À´Ï´Ù. ¸ğµÎ ÃàÇÏÇØÁÖ¼¼¿ä"));
+                            mcrr.getMap().broadcastMessage(MainPacketCreator.getGMText(21, "" + mcrr.getName() + "ë‹˜ì˜ íŒŒí‹°ê°€ [" + chr.getClient().getChannel() + "]ì±„ë„ì—ì„œ ëŠ‘ëŒ€ ë²¼ë½ ê²©íŒŒì— ì„±ê³µ í•˜ì˜€ìŠµë‹ˆë‹¤. ëª¨ë‘ ì¶•í•˜í•´ì£¼ì„¸ìš”"));
                         }
                     }
                 }
@@ -1263,7 +1263,7 @@ public class MapleMap {
                         for (MaplePartyCharacter mcr : chr.getParty().getMembers()) {
                             MapleCharacter mcrr = ChannelServer.getInstance(chr.getClient().getChannel()).getPlayerStorage().getCharacterByName(mcr.getName());
                             mcrr.changeMap(chr.getClient().getChannelServer().getMapFactory().getMap(100000027), chr.getClient().getChannelServer().getMapFactory().getMap(100000027).getPortal(0));
-                            mcrr.getMap().broadcastMessage(MainPacketCreator.getGMText(21, "" + mcrr.getName() + "´ÔÀÇ ÆÄÆ¼°¡ [" + chr.getClient().getChannel() + "]Ã¤³Î¿¡¼­ ÃÖ°­º¸½º ¿ì¸£½º °İÆÄ¿¡ ¼º°ø ÇÏ¿´½À´Ï´Ù. ¸ğµÎ ÃàÇÏÇØÁÖ¼¼¿ä"));
+                            mcrr.getMap().broadcastMessage(MainPacketCreator.getGMText(21, "" + mcrr.getName() + "ë‹˜ì˜ íŒŒí‹°ê°€ [" + chr.getClient().getChannel() + "]ì±„ë„ì—ì„œ ìµœê°•ë³´ìŠ¤ ìš°ë¥´ìŠ¤ ê²©íŒŒì— ì„±ê³µ í•˜ì˜€ìŠµë‹ˆë‹¤. ëª¨ë‘ ì¶•í•˜í•´ì£¼ì„¸ìš”"));
                         }
                     }
                 }
@@ -1283,7 +1283,7 @@ public class MapleMap {
                         for (MaplePartyCharacter mcr : chr.getParty().getMembers()) {
                             MapleCharacter mcrr = ChannelServer.getInstance(chr.getClient().getChannel()).getPlayerStorage().getCharacterByName(mcr.getName());
                             mcrr.changeMap(chr.getClient().getChannelServer().getMapFactory().getMap(100000027), chr.getClient().getChannelServer().getMapFactory().getMap(100000027).getPortal(0));
-                            mcrr.getMap().broadcastMessage(MainPacketCreator.getGMText(21, "" + mcrr.getName() + "´ÔÀÇ ÆÄÆ¼°¡ [" + chr.getClient().getChannel() + "]Ã¤³Î¿¡¼­ ¸ùÈ¯ÀÇ ·ç½Ãµå °İÆÄ¿¡ ¼º°ø ÇÏ¿´½À´Ï´Ù. ¸ğµÎ ÃàÇÏÇØÁÖ¼¼¿ä"));
+                            mcrr.getMap().broadcastMessage(MainPacketCreator.getGMText(21, "" + mcrr.getName() + "ë‹˜ì˜ íŒŒí‹°ê°€ [" + chr.getClient().getChannel() + "]ì±„ë„ì—ì„œ ëª½í™˜ì˜ ë£¨ì‹œë“œ ê²©íŒŒì— ì„±ê³µ í•˜ì˜€ìŠµë‹ˆë‹¤. ëª¨ë‘ ì¶•í•˜í•´ì£¼ì„¸ìš”"));
                         }
                     }
                 }
@@ -1303,7 +1303,7 @@ public class MapleMap {
                         for (MaplePartyCharacter mcr : chr.getParty().getMembers()) {
                             MapleCharacter mcrr = ChannelServer.getInstance(chr.getClient().getChannel()).getPlayerStorage().getCharacterByName(mcr.getName());
                             mcrr.changeMap(chr.getClient().getChannelServer().getMapFactory().getMap(100000027), chr.getClient().getChannelServer().getMapFactory().getMap(100000027).getPortal(0));
-                            mcrr.getMap().broadcastMessage(MainPacketCreator.getGMText(21, "" + mcrr.getName() + "´ÔÀÇ ÆÄÆ¼°¡ [" + chr.getClient().getChannel() + "]Ã¤³Î¿¡¼­ EASY MODE - ¹Ì½ºÆ½ ÇÊµå °İÆÄ¿¡ ¼º°ø ÇÏ¿´½À´Ï´Ù. ¸ğµÎ ÃàÇÏÇØÁÖ¼¼¿ä"));
+                            mcrr.getMap().broadcastMessage(MainPacketCreator.getGMText(21, "" + mcrr.getName() + "ë‹˜ì˜ íŒŒí‹°ê°€ [" + chr.getClient().getChannel() + "]ì±„ë„ì—ì„œ EASY MODE - ë¯¸ìŠ¤í‹± í•„ë“œ ê²©íŒŒì— ì„±ê³µ í•˜ì˜€ìŠµë‹ˆë‹¤. ëª¨ë‘ ì¶•í•˜í•´ì£¼ì„¸ìš”"));
                         }
                     }
                 }
@@ -1321,7 +1321,7 @@ public class MapleMap {
                         for (MaplePartyCharacter mcr : chr.getParty().getMembers()) {
                             MapleCharacter mcrr = ChannelServer.getInstance(chr.getClient().getChannel()).getPlayerStorage().getCharacterByName(mcr.getName());
                             mcrr.changeMap(chr.getClient().getChannelServer().getMapFactory().getMap(100000027), chr.getClient().getChannelServer().getMapFactory().getMap(100000027).getPortal(0));
-                            mcrr.getMap().broadcastMessage(MainPacketCreator.getGMText(21, "" + mcrr.getName() + "´ÔÀÇ ÆÄÆ¼°¡ [" + chr.getClient().getChannel() + "]Ã¤³Î¿¡¼­ NORMMAL MODE - ¹Ì½ºÆ½ ÇÊµå °İÆÄ¿¡ ¼º°ø ÇÏ¿´½À´Ï´Ù. ¸ğµÎ ÃàÇÏÇØÁÖ¼¼¿ä"));
+                            mcrr.getMap().broadcastMessage(MainPacketCreator.getGMText(21, "" + mcrr.getName() + "ë‹˜ì˜ íŒŒí‹°ê°€ [" + chr.getClient().getChannel() + "]ì±„ë„ì—ì„œ NORMMAL MODE - ë¯¸ìŠ¤í‹± í•„ë“œ ê²©íŒŒì— ì„±ê³µ í•˜ì˜€ìŠµë‹ˆë‹¤. ëª¨ë‘ ì¶•í•˜í•´ì£¼ì„¸ìš”"));
                         }
                     }
                 }
@@ -1339,7 +1339,7 @@ public class MapleMap {
                         for (MaplePartyCharacter mcr : chr.getParty().getMembers()) {
                             MapleCharacter mcrr = ChannelServer.getInstance(chr.getClient().getChannel()).getPlayerStorage().getCharacterByName(mcr.getName());
                             mcrr.changeMap(chr.getClient().getChannelServer().getMapFactory().getMap(100000027), chr.getClient().getChannelServer().getMapFactory().getMap(100000027).getPortal(0));
-                            mcrr.getMap().broadcastMessage(MainPacketCreator.getGMText(21, "" + mcrr.getName() + "´ÔÀÇ ÆÄÆ¼°¡ [" + chr.getClient().getChannel() + "]Ã¤³Î¿¡¼­ HARD MODE - ¹Ì½ºÆ½ ÇÊµå °İÆÄ¿¡ ¼º°ø ÇÏ¿´½À´Ï´Ù. ¸ğµÎ ÃàÇÏÇØÁÖ¼¼¿ä"));
+                            mcrr.getMap().broadcastMessage(MainPacketCreator.getGMText(21, "" + mcrr.getName() + "ë‹˜ì˜ íŒŒí‹°ê°€ [" + chr.getClient().getChannel() + "]ì±„ë„ì—ì„œ HARD MODE - ë¯¸ìŠ¤í‹± í•„ë“œ ê²©íŒŒì— ì„±ê³µ í•˜ì˜€ìŠµë‹ˆë‹¤. ëª¨ë‘ ì¶•í•˜í•´ì£¼ì„¸ìš”"));
                         }
                     }
                 }
@@ -1357,7 +1357,7 @@ public class MapleMap {
                         for (MaplePartyCharacter mcr : chr.getParty().getMembers()) {
                             MapleCharacter mcrr = ChannelServer.getInstance(chr.getClient().getChannel()).getPlayerStorage().getCharacterByName(mcr.getName());
                             mcrr.changeMap(chr.getClient().getChannelServer().getMapFactory().getMap(100000000), chr.getClient().getChannelServer().getMapFactory().getMap(100000000).getPortal(0));
-                            mcrr.getMap().broadcastMessage(MainPacketCreator.getGMText(21, "" + mcrr.getName() + "´ÔÀÇ ÆÄÆ¼°¡ [" + chr.getClient().getChannel() + "]Ã¤³Î¿¡¼­ HARD MODE - ¹Ì½ºÆ½ ÇÊµå °İÆÄ¿¡ ¼º°ø ÇÏ¿´½À´Ï´Ù. ¸ğµÎ ÃàÇÏÇØÁÖ¼¼¿ä"));
+                            mcrr.getMap().broadcastMessage(MainPacketCreator.getGMText(21, "" + mcrr.getName() + "ë‹˜ì˜ íŒŒí‹°ê°€ [" + chr.getClient().getChannel() + "]ì±„ë„ì—ì„œ HARD MODE - ë¯¸ìŠ¤í‹± í•„ë“œ ê²©íŒŒì— ì„±ê³µ í•˜ì˜€ìŠµë‹ˆë‹¤. ëª¨ë‘ ì¶•í•˜í•´ì£¼ì„¸ìš”"));
                         }
                     }
                 }
@@ -1375,7 +1375,7 @@ public class MapleMap {
                         for (MaplePartyCharacter mcr : chr.getParty().getMembers()) {
                             MapleCharacter mcrr = ChannelServer.getInstance(chr.getClient().getChannel()).getPlayerStorage().getCharacterByName(mcr.getName());
                             mcrr.changeMap(chr.getClient().getChannelServer().getMapFactory().getMap(100000027), chr.getClient().getChannelServer().getMapFactory().getMap(100000027).getPortal(0));
-                            mcrr.getMap().broadcastMessage(MainPacketCreator.getGMText(21, "" + mcrr.getName() + "´ÔÀÇ ÆÄÆ¼°¡ [" + chr.getClient().getChannel() + "]Ã¤³Î¿¡¼­ ULTIMATE MODE - ¹Ì½ºÆ½ ÇÊµå °İÆÄ¿¡ ¼º°ø ÇÏ¿´½À´Ï´Ù. ¸ğµÎ ÃàÇÏÇØÁÖ¼¼¿ä"));
+                            mcrr.getMap().broadcastMessage(MainPacketCreator.getGMText(21, "" + mcrr.getName() + "ë‹˜ì˜ íŒŒí‹°ê°€ [" + chr.getClient().getChannel() + "]ì±„ë„ì—ì„œ ULTIMATE MODE - ë¯¸ìŠ¤í‹± í•„ë“œ ê²©íŒŒì— ì„±ê³µ í•˜ì˜€ìŠµë‹ˆë‹¤. ëª¨ë‘ ì¶•í•˜í•´ì£¼ì„¸ìš”"));
                         }
                     }
                 }
@@ -1386,7 +1386,7 @@ public class MapleMap {
         if (!this.isEliteBossMap() && !monster.isEliteMonster() && !monster.isEliteBoss() && !monster.getStats().isBoss() && monster.getStats().getLevel() - 20 <= chr.getLevel() && chr.getLevel() <= monster.getStats().getLevel() + 20) {
             SetEliteMobCommonCount(this.EliteMobCommonCount + 1);
         } else if (monster.isEliteMonster()) {
-            broadcastMessage(MainPacketCreator.startMapEffect("¾îµÎ¿î ±â¿îÀÌ »ç¶óÁöÁö ¾Ê¾Æ ÀÌ°÷À» À½»êÇÏ°Ô ¸¸µé°í ÀÖ½À´Ï´Ù.", 5120124, true));
+            broadcastMessage(MainPacketCreator.startMapEffect("ì–´ë‘ìš´ ê¸°ìš´ì´ ì‚¬ë¼ì§€ì§€ ì•Šì•„ ì´ê³³ì„ ìŒì‚°í•˜ê²Œ ë§Œë“¤ê³  ìˆìŠµë‹ˆë‹¤.", 5120124, true));
             monster.setEliteMonster(false);
             timeAllPlayer(this);
         }
@@ -1395,7 +1395,7 @@ public class MapleMap {
             MapleMonster elite = makeEliteMonster(monster);
             spawnMonster(elite, -2);
             broadcastMessage(UIPacket.playSpecialMapSound("Field.img/eliteMonster/Regen"), chr.getPosition());
-            broadcastMessage(MainPacketCreator.startMapEffect("¾îµÎ¿î ±â¿î°ú ÇÔ²² °­·ÂÇÑ ¸ó½ºÅÍ°¡ ÃâÇöÇÕ´Ï´Ù.", 5120124, true));
+            broadcastMessage(MainPacketCreator.startMapEffect("ì–´ë‘ìš´ ê¸°ìš´ê³¼ í•¨ê»˜ ê°•ë ¥í•œ ëª¬ìŠ¤í„°ê°€ ì¶œí˜„í•©ë‹ˆë‹¤.", 5120124, true));
             timeAllPlayer(this);
         }
     }
@@ -1451,7 +1451,7 @@ public class MapleMap {
         final OverrideMonsterStats ostats = new OverrideMonsterStats();
         eliteboss.setEliteBoss(true);
         eliteboss.setEliteType(Randomizer.rand(0x64, 0x88));
-        ostats.setOHp(sourcemob.getMobMaxHp() * 75); //ÇÊµå¸÷ÀÇ 75¹è
+        ostats.setOHp(sourcemob.getMobMaxHp() * 75); //í•„ë“œëª¹ì˜ 75ë°°
         ostats.setOMp(sourcemob.getMobMaxMp());
         ostats.setOPad(0);
         ostats.setOPhysicalDefense(sourcemob.getStats().getPhysicalDefense());
@@ -1837,7 +1837,7 @@ public class MapleMap {
                 chr.send(MainPacketCreator.removeMapEffect());
                 chr.setKeyValue2("Raed", 0);
                 RaedTimer(chr);
-                chr.dropShowInfo("¸ğµç ½ºÅ×ÀÌÁö¸¦ Å¬¸®¾î ÇÏ¼Ì½À´Ï´Ù. ·©Å·°ú ¾ÆÀÌÅÛÀ» È®ÀÎÇØº¸¼¼¿ä");
+                chr.dropShowInfo("ëª¨ë“  ìŠ¤í…Œì´ì§€ë¥¼ í´ë¦¬ì–´ í•˜ì…¨ìŠµë‹ˆë‹¤. ë­í‚¹ê³¼ ì•„ì´í…œì„ í™•ì¸í•´ë³´ì„¸ìš”");
                 chr.gainItem(4310210, 1);
                 return;
 
@@ -1855,7 +1855,7 @@ public class MapleMap {
         int hour = cal.get(Calendar.HOUR);
         int min = cal.get(Calendar.MINUTE);
 
-        String days = year + "³â " + month + "¿ù " + date + "ÀÏ " + hour + "½Ã " + min + "ºĞ ";
+        String days = year + "ë…„ " + month + "ì›” " + date + "ì¼ " + hour + "ì‹œ " + min + "ë¶„ ";
 
         Connection con = null;
         PreparedStatement pr = null;
@@ -1941,11 +1941,11 @@ public class MapleMap {
             case 1:
                 eff[0] = "defense/count/ " + chr.getKeyValue2("moba");
                 Timer.add(100000);
-                Timer.add(1000); // ½Ã°£ÃÊ
-                size = 40; // ¸ó½ºÅÍ ¸¶¸®¼ö
+                Timer.add(1000); // ì‹œê°„ì´ˆ
+                size = 40; // ëª¬ìŠ¤í„° ë§ˆë¦¬ìˆ˜
                 monsterid[0] = 9300826;
-                monsterid[1] = 9300471;  // ¾ÕÀÌ ¼­ºê¸ó½ºÅÍ µÚ¿¡°¡ º¸½º
-                text = "¼ÒÈ¯µÈ ¸ó½ºÅÍ 170 ¸¶¸®¸¦ Ã³Ä¡ÇØÁÖ¼¼¿ä ";
+                monsterid[1] = 9300471;  // ì•ì´ ì„œë¸Œëª¬ìŠ¤í„° ë’¤ì—ê°€ ë³´ìŠ¤
+                text = "ì†Œí™˜ëœ ëª¬ìŠ¤í„° 170 ë§ˆë¦¬ë¥¼ ì²˜ì¹˜í•´ì£¼ì„¸ìš” ";
                 break;
             case 2:
                 eff[0] = "defense/count/ " + chr.getKeyValue2("moba");
@@ -1954,7 +1954,7 @@ public class MapleMap {
                 size = 15;
                 monsterid[0] = 9500617;
                 monsterid[1] = 9500365;
-                text = "¹Ìºóµé »çÀÌ¸¦ ÇÇÇØ¼­ »óÀÚ¸¦ Ã³Ä¡ÇØÁÖ¼¼¿ä ¹Ì´ÏºóµéÀ» °ø°İÇÏ¸é ¾ÈµË´Ï´Ù ";
+                text = "ë¯¸ë¹ˆë“¤ ì‚¬ì´ë¥¼ í”¼í•´ì„œ ìƒìë¥¼ ì²˜ì¹˜í•´ì£¼ì„¸ìš” ë¯¸ë‹ˆë¹ˆë“¤ì„ ê³µê²©í•˜ë©´ ì•ˆë©ë‹ˆë‹¤ ";
                 break;
             case 3:
                 eff[0] = "defense/count/ " + chr.getKeyValue2("moba");
@@ -1963,7 +1963,7 @@ public class MapleMap {
                 size = 1;
                 monsterid[0] = 8230033;
                 monsterid[1] = 9305676;
-                text = "60ÃÊ ½Ã°£µ¿¾È °á°è±â¸¦ Ã³Ä¡ÇØÁÖ¼¼¿ä ¸ó½ºÅÍ´Â µ¥¹ÌÁö¸¦ ÀÔÁö ¾Ê½À´Ï´Ù. ";
+                text = "60ì´ˆ ì‹œê°„ë™ì•ˆ ê²°ê³„ê¸°ë¥¼ ì²˜ì¹˜í•´ì£¼ì„¸ìš” ëª¬ìŠ¤í„°ëŠ” ë°ë¯¸ì§€ë¥¼ ì…ì§€ ì•ŠìŠµë‹ˆë‹¤. ";
                 break;
             case 4:
                 eff[0] = "defense/count/ " + chr.getKeyValue2("moba");
@@ -1972,7 +1972,7 @@ public class MapleMap {
                 size = 30;
                 monsterid[0] = 9300826;
                 monsterid[1] = 9305676;
-                text = "¾ÆÁÖ ¸·°­ÇÑ ¸ó½ºÅÍ°¡ ¼ÒÈ¯µÇ¾ú½À´Ï´Ù ¸ó½ºÅÍ¸¦ Ã³Ä¡ÇØÁÖ¼¼¿ä";
+                text = "ì•„ì£¼ ë§‰ê°•í•œ ëª¬ìŠ¤í„°ê°€ ì†Œí™˜ë˜ì—ˆìŠµë‹ˆë‹¤ ëª¬ìŠ¤í„°ë¥¼ ì²˜ì¹˜í•´ì£¼ì„¸ìš”";
                 break;
             case 5:
                 text = "";
@@ -1994,7 +1994,7 @@ public class MapleMap {
         catchstart = MapTimer.getInstance().schedule(new Runnable() {
             @Override
             public void run() {
-                chr.dropMessage(5, "[½Ã½ºÅÛ] ½Ã°£ÀÌ µÇ¾î ´ë±â½Ç·Î ÅğÀåµÇ¾ú½À´Ï´Ù.");
+                chr.dropMessage(5, "[ì‹œìŠ¤í…œ] ì‹œê°„ì´ ë˜ì–´ ëŒ€ê¸°ì‹¤ë¡œ í‡´ì¥ë˜ì—ˆìŠµë‹ˆë‹¤.");
                 chr.warp(100000027);
                 catchstart.cancel(true);
                 return;
@@ -2252,7 +2252,7 @@ public class MapleMap {
         spawnAndAddRangedMapObject(rune, new DelayedPacketCreation() {
             @Override
             public void sendPackets(MapleClient c) {
-                /* Respawn Effect ¹ßµ¿ */
+                /* Respawn Effect ë°œë™ */
                 c.getSession().writeAndFlush(RunePacket.spawnRune(rune, true));
                 c.getSession().writeAndFlush(RunePacket.spawnRune(rune, false));
             }
@@ -2277,7 +2277,7 @@ public class MapleMap {
             myReactor.setPosition(reactor.getPosition());
             myReactor.setDelay(900000);
             myReactor.setState((byte) 0);
-            myReactor.setName("±¤¸Æ");
+            myReactor.setName("ê´‘ë§¥");
             myReactor.setRank(reactor.getRank());
             spawnReactor(myReactor);
         } else {
@@ -2445,7 +2445,7 @@ public class MapleMap {
                         for (MapleCharacter player : chr.getClient().getChannelServer().getPartyMembers(chr.getParty())) {
                             player.addMPHP((int) (player.getStat().getCurrentMaxHp() / 20.0D), (int) (player.getStat().getCurrentMaxMp() / 20.0D));
                             player.dispelDebuffs();
-                            player.Message("È¿°ú¹ßµ¿");
+                            player.Message("íš¨ê³¼ë°œë™");
                         }
                     }
                 }
@@ -2470,7 +2470,7 @@ public class MapleMap {
                 public void run() {
                     for (MapleMapObject mmo : getMapObjectsInRect(mist.getBox(), Collections.singletonList(MapleMapObjectType.PLAYER))) {
                         MapleCharacter chr = (MapleCharacter) mmo;
-                        //Ä¸½¶ Á¸Àç¿©ºÎ Ã¼Å©
+                        //ìº¡ìŠ ì¡´ì¬ì—¬ë¶€ ì²´í¬
                         for (final MapleMapObject mistoo : chr.getMap().getMapObjectsInRange(chr.getPosition(), Double.POSITIVE_INFINITY, Arrays.asList(MapleMapObjectType.MIST))) {
                             final MapleMist check = (MapleMist) mistoo;
                             if (mist.getOwner() == check.getOwner() && mist.isTimeCapsule()) {
@@ -2747,24 +2747,24 @@ public class MapleMap {
             mapEffect = new MapleMapEffect(ServerConstants.serverWelcome, 5121035);
             chr.send(mapEffect.makeStartData());
         }
-        /* ¹Ì¼Ç Àü¿ë ÀÌÆåÆ® ¾Ë¸² (By.¿¡ÄÚ) */
+        /* ë¯¸ì…˜ ì „ìš© ì´í™íŠ¸ ì•Œë¦¼ (By.ì—ì½”) */
         if (mapid == 921120300) {
-            mapEffect = new MapleMapEffect("Mission STEP 1 : ¸Ê¿¡ ÀÖ´Â ¸ğµç ¸ó½ºÅÍ¸¦ ÅğÄ¡ ÇÏ½Ê½Ã¿À.", 5120124);
+            mapEffect = new MapleMapEffect("Mission STEP 1 : ë§µì— ìˆëŠ” ëª¨ë“  ëª¬ìŠ¤í„°ë¥¼ í‡´ì¹˜ í•˜ì‹­ì‹œì˜¤.", 5120124);
             chr.send(mapEffect.makeStartData());
         }
         if (mapid == 931000300) {
-            mapEffect = new MapleMapEffect("Mission STEP 2 : Ã¶ ¹åÁÙÀ» Å¸°í ¾Æ·¡·Î ÀÌµ¿ ÇÏ½Ê½Ã¿À.", 5120124);
+            mapEffect = new MapleMapEffect("Mission STEP 2 : ì²  ë°§ì¤„ì„ íƒ€ê³  ì•„ë˜ë¡œ ì´ë™ í•˜ì‹­ì‹œì˜¤.", 5120124);
             chr.send(mapEffect.makeStartData());
         }
         if (mapid == 931000310) {
-            mapEffect = new MapleMapEffect("Mission STEP 3 : º¸¶ó»ö ¸¶·Â¼® = 1 °³, Ä«µåÅ° = 100 °³", 5120124);
+            mapEffect = new MapleMapEffect("Mission STEP 3 : ë³´ë¼ìƒ‰ ë§ˆë ¥ì„ = 1 ê°œ, ì¹´ë“œí‚¤ = 100 ê°œ", 5120124);
             chr.send(mapEffect.makeStartData());
         }
         if (mapid == 991000000) {
-            mapEffect = new MapleMapEffect("Mission Final : µå¸®¹Ì¸¦ ÅëÇØ ´ÜÅ×¸¦ ¼ÒÈ¯ÇÏ¿© ¹«Âî¸£½Ê½Ã¿À.", 5120124);
+            mapEffect = new MapleMapEffect("Mission Final : ë“œë¦¬ë¯¸ë¥¼ í†µí•´ ë‹¨í…Œë¥¼ ì†Œí™˜í•˜ì—¬ ë¬´ì°Œë¥´ì‹­ì‹œì˜¤.", 5120124);
             chr.send(mapEffect.makeStartData());
         }
-        if (mapid == 109050001) { //ÀÌº¥Æ®¸Ê ³ª°¡´Â °÷
+        if (mapid == 109050001) { //ì´ë²¤íŠ¸ë§µ ë‚˜ê°€ëŠ” ê³³
             MapleMap map = chr.getClient().getChannelServer().getMapFactory().getMap(ServerConstants.startMap);
             chr.changeMap(map, map.getPortal(0));
         }
@@ -2773,7 +2773,7 @@ public class MapleMap {
             chr.send(MainPacketCreator.getQuickMove(QuickMove.getQuickMoves(mapid)));
             chr.setQuickMoved(true);
         }
-        chr.dispelDebuff(DiseaseStats.TELEPORT); //ÆÃ¹æÁö
+        chr.dispelDebuff(DiseaseStats.TELEPORT); //íŒ…ë°©ì§€
 
         if (chr.getJob() >= 1400 && chr.getJob() <= 1412) {
             chr.acaneAim = 0;
@@ -2781,7 +2781,7 @@ public class MapleMap {
 
         for (int i = 0; i < 3; ++i) {
             if (chr.getPet(i) != null) {
-                chr.getPet(i).setPos(chr.getPosition()); //Æê ÁÂÇ¥ ¾÷µ¥ÀÌÆ®
+                chr.getPet(i).setPos(chr.getPosition()); //í« ì¢Œí‘œ ì—…ë°ì´íŠ¸
                 chr.getClient().send(PetPacket.updatePet(chr, chr.getPet(i), false, chr.getPetLoot()));
                 chr.send(PetPacket.showPet(chr, chr.getPet(i), false, false, false));
                 broadcastMessage(chr, PetPacket.showPet(chr, chr.getPet(i), false, false, true), false);
@@ -2797,7 +2797,7 @@ public class MapleMap {
         }
 
         if (chr.getAndroid() != null) { //Set
-            chr.getAndroid().setPosition(chr.getPosition()); //¾Èµå·ÎÀÌµå ÁÂÇ¥ ¾÷µ¥ÀÌÆ®
+            chr.getAndroid().setPosition(chr.getPosition()); //ì•ˆë“œë¡œì´ë“œ ì¢Œí‘œ ì—…ë°ì´íŠ¸
             broadcastMessage(chr, AndroidPacket.spawnAndroid(chr, chr.getAndroid()), true);
         }
 
@@ -2885,7 +2885,7 @@ public class MapleMap {
             chr.send(UIPacket.showSpecialMapEffect(3, 1, "Bgm36.img/HappyTimeShort", "Map/Map/Map9/924050000.img/back"));
         }
 
-        /* ·é ½ÃÀÛ */
+        /* ë£¬ ì‹œì‘ */
         mutex.lock();
         try {
             final List<MapleMapObject> monsters = this.getAllMonster();
@@ -2897,7 +2897,7 @@ public class MapleMap {
         } finally {
             mutex.unlock();
         }
-        /* ·é Á¾·á */
+        /* ë£¬ ì¢…ë£Œ */
 
         if (chr.getSkillEffect() != null) {
             if (isTown()) {
@@ -2944,7 +2944,7 @@ public class MapleMap {
         if (chr.getExtractor() != null) {
             removeMapObject(chr.getExtractor());
             chr.setExtractor(null);
-            chr.message(5, "¸ÊÀ» ÀÌµ¿ÇÏ¿© ºĞÇØ±â°¡ ÇØÃ¼µÇ¾ú½À´Ï´Ù.");
+            chr.message(5, "ë§µì„ ì´ë™í•˜ì—¬ ë¶„í•´ê¸°ê°€ í•´ì²´ë˜ì—ˆìŠµë‹ˆë‹¤.");
         }
 
         if (chr.getDragon() != null) {
@@ -2955,7 +2955,7 @@ public class MapleMap {
             tempnpcs3.remove(chr.getId());
         }
 
-        if (getId() == 103050510) { // ´Ü·Ã½Ç 1
+        if (getId() == 103050510) { // ë‹¨ë ¨ì‹¤ 1
             spawnTempMonster(1, 9300522, new Point(-578, 152));
             spawnTempMonster(2, 9300521, new Point(-358, 152));
             spawnTempMonster(3, 9300522, new Point(-138, 152));
@@ -2964,7 +2964,7 @@ public class MapleMap {
             spawnTempMonster(6, 9300522, new Point(522, 152));
         }
 
-        if (getId() == 103050530 && getAllMonster().isEmpty()) { // ´Ü·Ã½Ç 3
+        if (getId() == 103050530 && getAllMonster().isEmpty()) { // ë‹¨ë ¨ì‹¤ 3
             spawnTempMonster(1, 9300523, new Point(-192, 152));
         }
     }
@@ -2985,7 +2985,7 @@ public class MapleMap {
         broadcastMessage(source, packet, GameConstants.maxViewRangeSq(), rangedFrom);
     }
 
-    private void broadcastMessage(final MapleCharacter source, final byte[] packet, final double rangeSq, final Point rangedFrom) { // Ä¡¿ì¾¾ :: Ã¤ÆÃ µô·¹ÀÌ ¹®Á¦ ÇØ°á
+    private void broadcastMessage(final MapleCharacter source, final byte[] packet, final double rangeSq, final Point rangedFrom) { // ì¹˜ìš°ì”¨ :: ì±„íŒ… ë”œë ˆì´ ë¬¸ì œ í•´ê²°
         charactersLock.readLock().lock();
         try {
             for (MapleCharacter chr : characters) {
@@ -3401,7 +3401,7 @@ public class MapleMap {
             ps.close();
             con.close();
         } catch (Exception e) {
-            System.out.println("[¿À·ù] DB·Î º¸½º ÄğÅ¸ÀÓÀ» ÀúÀåÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.");
+            System.out.println("[ì˜¤ë¥˜] DBë¡œ ë³´ìŠ¤ ì¿¨íƒ€ì„ì„ ì €ì¥í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
             if (!ServerConstants.realese) {
                 e.printStackTrace();
             }
@@ -3650,7 +3650,7 @@ public class MapleMap {
             catchstart = MapTimer.getInstance().schedule(new Runnable() {
                 @Override
                 public void run() {
-                    broadcastMessage(MainPacketCreator.serverNotice(1, "Á¦ÇÑ½Ã°£ 2ºĞÀÌ Áö³ª ¾çÀÌ ½Â¸®ÇÏ¿´½À´Ï´Ù!\r\n¸ğµç ºĞµéÀº °ÔÀÓ º¸»ó¸ÊÀ¸·Î ÀÌµ¿µË´Ï´Ù."));
+                    broadcastMessage(MainPacketCreator.serverNotice(1, "ì œí•œì‹œê°„ 2ë¶„ì´ ì§€ë‚˜ ì–‘ì´ ìŠ¹ë¦¬í•˜ì˜€ìŠµë‹ˆë‹¤!\r\nëª¨ë“  ë¶„ë“¤ì€ ê²Œì„ ë³´ìƒë§µìœ¼ë¡œ ì´ë™ë©ë‹ˆë‹¤."));
                     for (MapleCharacter chr : getCharacters()) {
                         chr.getStat().setHp(chr.getStat().getMaxHp(), chr);
                         chr.updateSingleStat(PlayerStat.HP, chr.getStat().getMaxHp());
@@ -3691,7 +3691,7 @@ public class MapleMap {
                     if (npc != null) {
                         addMapObject(npc);
                     } else {
-                        System.out.println("[¿À·ù] ¿£ÇÇ½Ã µ¥ÀÌÅÍ¸¦ ¸¸µå´ÂÁß ³Î Æ÷ÀÎÅÍ ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                        System.out.println("[ì˜¤ë¥˜] ì—”í”¼ì‹œ ë°ì´í„°ë¥¼ ë§Œë“œëŠ”ì¤‘ ë„ í¬ì¸í„° ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
                     }
                 }
             }
@@ -3699,7 +3699,7 @@ public class MapleMap {
             ps.close();
             con.close();
         } catch (Exception e) {
-            System.out.println("[¿À·ù] ¿£ÇÇ½Ã¸¦ DB·ÎºÎÅÍ ºÒ·¯¿À´Âµ¥ ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+            System.out.println("[ì˜¤ë¥˜] ì—”í”¼ì‹œë¥¼ DBë¡œë¶€í„° ë¶ˆëŸ¬ì˜¤ëŠ”ë° ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
             if (!ServerConstants.realese) {
                 e.printStackTrace();
             }

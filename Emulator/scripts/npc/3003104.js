@@ -87,117 +87,117 @@ function action(mode, type, selection) {
     }
     if (cm.getPlayer().getDateKey("1quest") == null || cm.getPlayer().getDateKey("1quest") == "null") {
         if (status == 0) {
-            ¸» = "Àß ¿À¼Ì¾î¿ä, #h #´Ô. ¿À´Ã #h #´Ô¿¡°Ô ºÎÅ¹ µå¸± ÀÏÀº ÀÌ 5°¡ÁöÀÔ´Ï´Ù. Áö±İ ¹Ù·Î ¼öÇàÇÏ½Ã°Ú¾î¿ä? ¸¶À½¿¡ µéÁö ¾Ê´Â´Ù¸é ±³Ã¼ÇÏ±â ¹öÆ°À» ´­·¯ ´Ù¸¥ ÀÓ¹«·Î ±³Ã¼ÇÒ ¼öµµ ÀÖ½À´Ï´Ù.\r\n\r\n";
-            ¸» += "#b#e[ÀÏÀÏ Äù½ºÆ®] #z" + random1 + "# 50°³ ¼öÁı#k#n\r\n"
-            ¸» += "#b#e[ÀÏÀÏ Äù½ºÆ®] #z" + random2 + "# 50°³ ¼öÁı#k#n\r\n"
-            ¸» += "#b#e[ÀÏÀÏ Äù½ºÆ®] #z" + random3 + "# 50°³ ¼öÁı#k#n\r\n"
-            ¸» += "#b#e[ÀÏÀÏ Äù½ºÆ®] #z" + random4 + "# 50°³ ¼öÁı#k#n\r\n"
-            ¸» += "#b#e[ÀÏÀÏ Äù½ºÆ®] #z" + random5 + "# 50°³ ¼öÁı#k#n\r\n"
-            ¸» += "\r\n#d#L1000# Äù½ºÆ® ±³Ã¼ÇÏ±â#l #L1001# Äù½ºÆ® ¼öÇàÇÏ±â"
-            cm.sendSimple(¸»);
+            ë§ = "ì˜ ì˜¤ì…¨ì–´ìš”, #h #ë‹˜. ì˜¤ëŠ˜ #h #ë‹˜ì—ê²Œ ë¶€íƒ ë“œë¦´ ì¼ì€ ì´ 5ê°€ì§€ì…ë‹ˆë‹¤. ì§€ê¸ˆ ë°”ë¡œ ìˆ˜í–‰í•˜ì‹œê² ì–´ìš”? ë§ˆìŒì— ë“¤ì§€ ì•ŠëŠ”ë‹¤ë©´ êµì²´í•˜ê¸° ë²„íŠ¼ì„ ëˆŒëŸ¬ ë‹¤ë¥¸ ì„ë¬´ë¡œ êµì²´í•  ìˆ˜ë„ ìˆìŠµë‹ˆë‹¤.\r\n\r\n";
+            ë§ += "#b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + random1 + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
+            ë§ += "#b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + random2 + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
+            ë§ += "#b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + random3 + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
+            ë§ += "#b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + random4 + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
+            ë§ += "#b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + random5 + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
+            ë§ += "\r\n#d#L1000# í€˜ìŠ¤íŠ¸ êµì²´í•˜ê¸°#l #L1001# í€˜ìŠ¤íŠ¸ ìˆ˜í–‰í•˜ê¸°"
+            cm.sendSimple(ë§);
         } else if (status == 1) {
-            cm.sendYesNo("¸ñ·Ï¿¡ ÀÖ´Â ÀÓ¹«°¡ ¸¶À½¿¡ µéÁö ¾ÊÀ¸¼¼¿ä? ±×·¸´Ù¸é ´Ù¸¥ ÀÓ¹«¸¦ Ã£¾Æº¼ ¼öµµ ÀÖ½À´Ï´Ù.\r\n\r\n#b(ÀÏºÎ ÀÓ¹« È¤Àº ÀüÃ¼ ÀÓ¹«¸¦ Á¦¿Ü½ÃÅ°°í ¸ñ·ÏÀ» Àç±¸¼º ÇÕ´Ï´Ù.)#k");
+            cm.sendYesNo("ëª©ë¡ì— ìˆëŠ” ì„ë¬´ê°€ ë§ˆìŒì— ë“¤ì§€ ì•Šìœ¼ì„¸ìš”? ê·¸ë ‡ë‹¤ë©´ ë‹¤ë¥¸ ì„ë¬´ë¥¼ ì°¾ì•„ë³¼ ìˆ˜ë„ ìˆìŠµë‹ˆë‹¤.\r\n\r\n#b(ì¼ë¶€ ì„ë¬´ í˜¹ì€ ì „ì²´ ì„ë¬´ë¥¼ ì œì™¸ì‹œí‚¤ê³  ëª©ë¡ì„ ì¬êµ¬ì„± í•©ë‹ˆë‹¤.)#k");
         } else if (status == 2) {
             newcheck = true;
-            ¸» = "Á¦¿ÜÇÏ°í ½ÍÀº ÀÓ¹«¸¦ °ñ¶óÁÖ¼¼¿ä.\r\n\r\n"
-            ¸» += "#L1##" + check1 + "#e[ÀÏÀÏ Äù½ºÆ®] #z" + random1 + "# 50°³ ¼öÁı#k#n\r\n"
-            ¸» += "#L2##" + check2 + "#e[ÀÏÀÏ Äù½ºÆ®] #z" + random2 + "# 50°³ ¼öÁı#k#n\r\n"
-            ¸» += "#L3##" + check3 + "#e[ÀÏÀÏ Äù½ºÆ®] #z" + random3 + "# 50°³ ¼öÁı#k#n\r\n"
-            ¸» += "#L4##" + check4 + "#e[ÀÏÀÏ Äù½ºÆ®] #z" + random4 + "# 50°³ ¼öÁı#k#n\r\n"
-            ¸» += "#L5##" + check5 + "#e[ÀÏÀÏ Äù½ºÆ®] #z" + random5 + "# 50°³ ¼öÁı#k#n\r\n\r\n"
-            ¸» += "#L0##r#e´õ ÀÌ»ó Á¦¿ÜÇÏ°í ½ÍÀº ÀÓ¹«´Â ¾ø´Ù."
-            cm.sendSimple(¸»);
+            ë§ = "ì œì™¸í•˜ê³  ì‹¶ì€ ì„ë¬´ë¥¼ ê³¨ë¼ì£¼ì„¸ìš”.\r\n\r\n"
+            ë§ += "#L1##" + check1 + "#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + random1 + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
+            ë§ += "#L2##" + check2 + "#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + random2 + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
+            ë§ += "#L3##" + check3 + "#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + random3 + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
+            ë§ += "#L4##" + check4 + "#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + random4 + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
+            ë§ += "#L5##" + check5 + "#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + random5 + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n\r\n"
+            ë§ += "#L0##r#eë” ì´ìƒ ì œì™¸í•˜ê³  ì‹¶ì€ ì„ë¬´ëŠ” ì—†ë‹¤."
+            cm.sendSimple(ë§);
         } else if (status == 3) {
             if (newcheck == false) {
-                ¸» = "¿À´Ã ºÎÅ¹µå¸± ÀÏÀº ÀÌ·¸°Ô 5°¡ÁöÀÔ´Ï´Ù.\r\n\r\n"
-                ¸» += "#b#e[ÀÏÀÏ Äù½ºÆ®] #z" + random1 + "# 50°³ ¼öÁı#k#n\r\n"
-                ¸» += "#b#e[ÀÏÀÏ Äù½ºÆ®] #z" + random2 + "# 50°³ ¼öÁı#k#n\r\n"
-                ¸» += "#b#e[ÀÏÀÏ Äù½ºÆ®] #z" + random3 + "# 50°³ ¼öÁı#k#n\r\n"
-                ¸» += "#b#e[ÀÏÀÏ Äù½ºÆ®] #z" + random4 + "# 50°³ ¼öÁı#k#n\r\n"
-                ¸» += "#b#e[ÀÏÀÏ Äù½ºÆ®] #z" + random5 + "# 50°³ ¼öÁı#k#n\r\n"
+                ë§ = "ì˜¤ëŠ˜ ë¶€íƒë“œë¦´ ì¼ì€ ì´ë ‡ê²Œ 5ê°€ì§€ì…ë‹ˆë‹¤.\r\n\r\n"
+                ë§ += "#b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + random1 + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
+                ë§ += "#b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + random2 + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
+                ë§ += "#b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + random3 + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
+                ë§ += "#b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + random4 + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
+                ë§ += "#b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + random5 + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
                 cm.getPlayer().setDateKey("1quest_1", random1)
                 cm.getPlayer().setDateKey("1quest_2", random2)
                 cm.getPlayer().setDateKey("1quest_3", random3)
                 cm.getPlayer().setDateKey("1quest_4", random4)
                 cm.getPlayer().setDateKey("1quest_5", random5)
-                cm.sendNext(¸»);
+                cm.sendNext(ë§);
             } else {
-                ¸» = "Á¦¿ÜµÈ ÀÓ¹« ´ë½Å »õ·Î¿î ÀÓ¹«¸¦ Ã£¾Ò½À´Ï´Ù. ¿À´Ã ºÎÅ¹µå¸± ÀÏÀº ÀÌ·¸°Ô 5°¡ÁöÀÔ´Ï´Ù.\r\n\r\n"
-                ¸» += "#b#e[ÀÏÀÏ Äù½ºÆ®] #z" + cm.getPlayer().getDateKey("1quest_1") + "# 50°³ ¼öÁı#k#n\r\n"
-                ¸» += "#b#e[ÀÏÀÏ Äù½ºÆ®] #z" + cm.getPlayer().getDateKey("1quest_2") + "# 50°³ ¼öÁı#k#n\r\n"
-                ¸» += "#b#e[ÀÏÀÏ Äù½ºÆ®] #z" + cm.getPlayer().getDateKey("1quest_3") + "# 50°³ ¼öÁı#k#n\r\n"
-                ¸» += "#b#e[ÀÏÀÏ Äù½ºÆ®] #z" + cm.getPlayer().getDateKey("1quest_4") + "# 50°³ ¼öÁı#k#n\r\n"
-                ¸» += "#b#e[ÀÏÀÏ Äù½ºÆ®] #z" + cm.getPlayer().getDateKey("1quest_5") + "# 50°³ ¼öÁı#k#n\r\n"
-                cm.sendNext(¸»);
+                ë§ = "ì œì™¸ëœ ì„ë¬´ ëŒ€ì‹  ìƒˆë¡œìš´ ì„ë¬´ë¥¼ ì°¾ì•˜ìŠµë‹ˆë‹¤. ì˜¤ëŠ˜ ë¶€íƒë“œë¦´ ì¼ì€ ì´ë ‡ê²Œ 5ê°€ì§€ì…ë‹ˆë‹¤.\r\n\r\n"
+                ë§ += "#b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + cm.getPlayer().getDateKey("1quest_1") + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
+                ë§ += "#b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + cm.getPlayer().getDateKey("1quest_2") + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
+                ë§ += "#b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + cm.getPlayer().getDateKey("1quest_3") + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
+                ë§ += "#b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + cm.getPlayer().getDateKey("1quest_4") + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
+                ë§ += "#b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + cm.getPlayer().getDateKey("1quest_5") + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
+                cm.sendNext(ë§);
             }
             cm.getPlayer().setDateKey("1quest", 0);
             cm.dispose();
         }
     } else {
         if (status == 0) {
-           ¸» = "ÀÌ°÷À» Á¶»çÇÏ´Â °ÍÀÌ ¿©±â ÀÖ´Â ÀúÈñ ½Ã°£ÀÇ ½Å°üµéÀÇ ÀÏÀÌÁÒ.\r\n\r\n"
-           ¸»+= "#fUI/UIWindow2.img/UtilDlgEx/list3#\r\n"
+           ë§ = "ì´ê³³ì„ ì¡°ì‚¬í•˜ëŠ” ê²ƒì´ ì—¬ê¸° ìˆëŠ” ì €í¬ ì‹œê°„ì˜ ì‹ ê´€ë“¤ì˜ ì¼ì´ì£ .\r\n\r\n"
+           ë§+= "#fUI/UIWindow2.img/UtilDlgEx/list3#\r\n"
            if (cm.itemQuantity(cm.getPlayer().getDateKey("1quest_1")) >= 50) {
-                ¸» += "#L1##b#e[ÀÏÀÏ Äù½ºÆ®] #z" + cm.getPlayer().getDateKey("1quest_1") + "# 50°³ ¼öÁı#k#n\r\n"
+                ë§ += "#L1##b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + cm.getPlayer().getDateKey("1quest_1") + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
            }
            if (cm.itemQuantity(cm.getPlayer().getDateKey("1quest_2")) >= 50) {
-                ¸» += "#L2##b#e[ÀÏÀÏ Äù½ºÆ®] #z" + cm.getPlayer().getDateKey("1quest_2") + "# 50°³ ¼öÁı#k#n\r\n"
+                ë§ += "#L2##b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + cm.getPlayer().getDateKey("1quest_2") + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
            }
            if (cm.itemQuantity(cm.getPlayer().getDateKey("1quest_3")) >= 50) {
-                ¸» += "#L3##b#e[ÀÏÀÏ Äù½ºÆ®] #z" + cm.getPlayer().getDateKey("1quest_3") + "# 50°³ ¼öÁı#k#n\r\n"
+                ë§ += "#L3##b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + cm.getPlayer().getDateKey("1quest_3") + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
            }
            if (cm.itemQuantity(cm.getPlayer().getDateKey("1quest_4")) >= 50) {
-                ¸» += "#L4##b#e[ÀÏÀÏ Äù½ºÆ®] #z" + cm.getPlayer().getDateKey("1quest_4") + "# 50°³ ¼öÁı#k#n\r\n"
+                ë§ += "#L4##b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + cm.getPlayer().getDateKey("1quest_4") + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
            }
            if (cm.itemQuantity(cm.getPlayer().getDateKey("1quest_5")) >= 50) {
-                ¸» += "#L5##b#e[ÀÏÀÏ Äù½ºÆ®] #z" + cm.getPlayer().getDateKey("1quest_5") + "# 50°³ ¼öÁı#k#n\r\n"
+                ë§ += "#L5##b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + cm.getPlayer().getDateKey("1quest_5") + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
            }
-           ¸»+= "\r\n"
-           ¸»+= "#fUI/UIWindow2.img/UtilDlgEx/list0#\r\n\r\n"
+           ë§+= "\r\n"
+           ë§+= "#fUI/UIWindow2.img/UtilDlgEx/list0#\r\n\r\n"
            if (cm.itemQuantity(cm.getPlayer().getDateKey("1quest_1")) < 50 && cm.getPlayer().getDateKey("1quest_1") != "null") {
- 		¸» += "#L6##b#e[ÀÏÀÏ Äù½ºÆ®] #z" + cm.getPlayer().getDateKey("1quest_1") + "# 50°³ ¼öÁı#k#n\r\n"
+ 		ë§ += "#L6##b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + cm.getPlayer().getDateKey("1quest_1") + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
            }
            if (cm.itemQuantity(cm.getPlayer().getDateKey("1quest_2")) < 50 && cm.getPlayer().getDateKey("1quest_2") != "null") {
-                ¸» += "#L7##b#e[ÀÏÀÏ Äù½ºÆ®] #z" + cm.getPlayer().getDateKey("1quest_2") + "# 50°³ ¼öÁı#k#n\r\n"
+                ë§ += "#L7##b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + cm.getPlayer().getDateKey("1quest_2") + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
            }
            if (cm.itemQuantity(cm.getPlayer().getDateKey("1quest_3")) < 50 && cm.getPlayer().getDateKey("1quest_3") != "null") {
-                ¸» += "#L8##b#e[ÀÏÀÏ Äù½ºÆ®] #z" + cm.getPlayer().getDateKey("1quest_3") + "# 50°³ ¼öÁı#k#n\r\n"
+                ë§ += "#L8##b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + cm.getPlayer().getDateKey("1quest_3") + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
            }
            if (cm.itemQuantity(cm.getPlayer().getDateKey("1quest_4")) < 50 && cm.getPlayer().getDateKey("1quest_4") != "null") {
-                ¸» += "#L9##b#e[ÀÏÀÏ Äù½ºÆ®] #z" + cm.getPlayer().getDateKey("1quest_4") + "# 50°³ ¼öÁı#k#n\r\n"
+                ë§ += "#L9##b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + cm.getPlayer().getDateKey("1quest_4") + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
            }
            if (cm.itemQuantity(cm.getPlayer().getDateKey("1quest_5")) < 50 && cm.getPlayer().getDateKey("1quest_5") != "null") {
-                ¸» += "#L10##b#e[ÀÏÀÏ Äù½ºÆ®] #z" + cm.getPlayer().getDateKey("1quest_5") + "# 50°³ ¼öÁı#k#n\r\n"
+                ë§ += "#L10##b#e[ì¼ì¼ í€˜ìŠ¤íŠ¸] #z" + cm.getPlayer().getDateKey("1quest_5") + "# 50ê°œ ìˆ˜ì§‘#k#n\r\n"
            }
-           cm.sendSimple(¸»);
+           cm.sendSimple(ë§);
         } else if (status == 1) {
            if (selection == 1) {
                cm.getPlayer().setDateKey("1quest_1", "null");
-               cm.sendOk("Áö±ŞÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+               cm.sendOk("ì§€ê¸‰ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
                cm.getPlayer().setKeyValue("rc_damage",Number(cm.getPlayer().getKeyValue("rc_damage")) + howmuch)
                cm.gainItem(cm.getPlayer().getDateKey("1quest_1"),-50);
 
            }
            if (selection == 2) {
-               cm.sendOk("Áö±ŞÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+               cm.sendOk("ì§€ê¸‰ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
                cm.getPlayer().setKeyValue("rc_damage",Number(cm.getPlayer().getKeyValue("rc_damage")) + howmuch);
                cm.gainItem(cm.getPlayer().getDateKey("1quest_2"),-50);
                cm.getPlayer().setDateKey("1quest_2","null");
            }
            if (selection == 3) {
-               cm.sendOk("Áö±ŞÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+               cm.sendOk("ì§€ê¸‰ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
                cm.getPlayer().setKeyValue("rc_damage",Number(cm.getPlayer().getKeyValue("rc_damage")) + howmuch);
                cm.gainItem(cm.getPlayer().getDateKey("1quest_3"),-50);
                cm.getPlayer().setDateKey("1quest_3","null");
            }
            if (selection == 4) {
-               cm.sendOk("Áö±ŞÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+               cm.sendOk("ì§€ê¸‰ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
                cm.getPlayer().setKeyValue("rc_damage",Number(cm.getPlayer().getKeyValue("rc_damage")) + howmuch);
                cm.gainItem(cm.getPlayer().getDateKey("1quest_4"),-50);
                cm.getPlayer().setDateKey("1quest_4","null");
            }
            if (selection == 5) {
-               cm.sendOk("Áö±ŞÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+               cm.sendOk("ì§€ê¸‰ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
                cm.getPlayer().setKeyValue("rc_damage",Number(cm.getPlayer().getKeyValue("rc_damage")) + howmuch);
                cm.gainItem(cm.getPlayer().getDateKey("1quest_5"),-50);
                cm.getPlayer().setDateKey("1quest_5","null");

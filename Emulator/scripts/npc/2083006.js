@@ -1,15 +1,15 @@
 /*
- º»½ºÅ©¸³Æ®ÀÇ ÀúÀÛ±ÇÀº ¾Æ·¡ ÁöÀÎ¿¡°Ô ÀÖ½À´Ï´Ù.
- Æ÷µô(4_dill) / Çã¶ô¾øÀÌ ¹èÆ÷ÇÒ½Ã ³ª»µÇÒ²¿¾ä.
+ ë³¸ìŠ¤í¬ë¦½íŠ¸ì˜ ì €ì‘ê¶Œì€ ì•„ë˜ ì§€ì¸ì—ê²Œ ìˆìŠµë‹ˆë‹¤.
+ í¬ë”œ(4_dill) / í—ˆë½ì—†ì´ ë°°í¬í• ì‹œ ë‚˜ë»í• ê¼¬ì–Œ.
 */
 
 var status = 0;
 var maps = new Array("240070101", "240070200", "240070300", "240070400", "240070500", "240070600");
-var mapNames = new Array("#b[³×¿À½ÃÆ¼ 2021³â] Æò¹üÇÑ ³îÀÌÅÍ", "#b[³×¿À½ÃÆ¼ 2099³â] ÇÑ¹ãÀÇ Ç×¸¸ ÀÔ±¸", "#b[³×¿À½ÃÆ¼ 2215³â] Æø°İ¸ÂÀº µµ½É »óÁ¡°¡", "#b[³×¿À½ÃÆ¼ 2216³â] ÆóÇã°¡ µÈ µµ½Ã±³Â÷·Î", "#b[³×¿À½ÃÆ¼ 2230³â] À§ÇèÇÑ Å¸¿ö ·Îºñ", "#b[³×¿À½ÃÆ¼ 2503³â] Ãµ°øÇÔÀÇ ¹î¸Ó¸®");
+var mapNames = new Array("#b[ë„¤ì˜¤ì‹œí‹° 2021ë…„] í‰ë²”í•œ ë†€ì´í„°", "#b[ë„¤ì˜¤ì‹œí‹° 2099ë…„] í•œë°¤ì˜ í•­ë§Œ ì…êµ¬", "#b[ë„¤ì˜¤ì‹œí‹° 2215ë…„] í­ê²©ë§ì€ ë„ì‹¬ ìƒì ê°€", "#b[ë„¤ì˜¤ì‹œí‹° 2216ë…„] íí—ˆê°€ ëœ ë„ì‹œêµì°¨ë¡œ", "#b[ë„¤ì˜¤ì‹œí‹° 2230ë…„] ìœ„í—˜í•œ íƒ€ì›Œ ë¡œë¹„", "#b[ë„¤ì˜¤ì‹œí‹° 2503ë…„] ì²œê³µí•¨ì˜ ë±ƒë¨¸ë¦¬");
 var maplist = new Array("100000000");
-var map = new Array("Çì³×½Ã½º");
+var map = new Array("í—¤ë„¤ì‹œìŠ¤");
 
-var warp = new Array("¸¶À»¿öÇÁ", "»ç³ÉÅÍ¿öÇÁ");
+var warp = new Array("ë§ˆì„ì›Œí”„", "ì‚¬ëƒ¥í„°ì›Œí”„");
 var selectedMap = -1;
 
 function start() {
@@ -25,7 +25,7 @@ function action(mode, type, selection) {
             cm.dispose();
             return;
         } else if (status == 1 && mode == 0) {
-            cm.sendNext("´ÙÀ½¿¡ ¶Ç ºÆ¿ä~");
+            cm.sendNext("ë‹¤ìŒì— ë˜ ëµˆìš”~");
             cm.dispose();
             return;
         }
@@ -34,42 +34,42 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-            cm.sendNext("\r\n¾È³çÇÏ¼¼¿ä? Å¸ÀÓ°ÔÀÌÆ®ÀÔ´Ï´Ù.\r\nÀú´Â ³×¿À½ÃÆ¼·Î ¿öÇÁ½ÃÄÑµå¸³´Ï´Ù.\r\n¾ÕÀ¸·Î Àú¸¦ ¸¹ÀÌ ÀÌ¿ëÇØÁÖ¼¼¿ä!");
+            cm.sendNext("\r\nì•ˆë…•í•˜ì„¸ìš”? íƒ€ì„ê²Œì´íŠ¸ì…ë‹ˆë‹¤.\r\nì €ëŠ” ë„¤ì˜¤ì‹œí‹°ë¡œ ì›Œí”„ì‹œì¼œë“œë¦½ë‹ˆë‹¤.\r\nì•ìœ¼ë¡œ ì €ë¥¼ ë§ì´ ì´ìš©í•´ì£¼ì„¸ìš”!");
 	} else if (status == 1) {
-		var msg = "#e#h #´Ô ¿øÇÏ´Â ¿öÇÁ¹æ½ÄÀ» ¼±ÅÃÇØÁÖ¼¼¿ä#n";
+		var msg = "#e#h #ë‹˜ ì›í•˜ëŠ” ì›Œí”„ë°©ì‹ì„ ì„ íƒí•´ì£¼ì„¸ìš”#n";
 		for (var i = 100; i < 102; i++) {
 		msg += "\r\n#b#L" + i + "# " + warp[i-100] + "#l";
 		}
 		cm.sendSimple(msg);
 	} else if (status == 4) {
-          	var place = "#e#h #´Ô ¸ñÀûÁö¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä#n";
+          	var place = "#e#h #ë‹˜ ëª©ì ì§€ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”#n";
 		for (var i = 0; i < maplist.length; i++) {
 		place += "\r\n#b#L" + i + "# " + map[i] + "#l";
                 }
            	cm.sendSimple(place);
         } else if (status == 5) {
 		    selectedMap = selection;
-                    cm.sendYesNo("Á¤¸»·Î ÀÌ ¸¶À»·Î ÀÌµ¿ÇÏ½Ã°Ú½À´Ï±î?");
+                    cm.sendYesNo("ì •ë§ë¡œ ì´ ë§ˆì„ë¡œ ì´ë™í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
         } else if (status == 6) {
                         cm.warp(maplist[selectedMap], 0);
                         cm.dispose();
 	} else if (status == 7) {
-          	var where = "#e#h #´Ô ¸ñÀûÁö¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä#n";
+          	var where = "#e#h #ë‹˜ ëª©ì ì§€ë¥¼ ì„ íƒí•´ì£¼ì„¸ìš”#n";
 		for (var i = 0; i < maps.length; i++) {
 		where += "\r\n#b#L" + i + "# " + mapNames[i] + "#l";
                 }
            	cm.sendSimple(where);
         } else if (status == 8) {
 		    selectedMap = selection;
-                    cm.sendYesNo("Á¤¸»·Î ÀÌ °÷ À¸·Î ÀÌµ¿ÇÏ½Ã°Ú½À´Ï±î?");
+                    cm.sendYesNo("ì •ë§ë¡œ ì´ ê³³ ìœ¼ë¡œ ì´ë™í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
         } else if (status == 9) {
                         cm.warp(maps[selectedMap], 0);
                         cm.dispose();
 	} else if (selection == 100) {
-		cm.sendNext("\r\n¸¶À» ¿öÇÁ ¸®½ºÆ®¸¦ ºÒ·¯¿É´Ï´Ù.")
+		cm.sendNext("\r\në§ˆì„ ì›Œí”„ ë¦¬ìŠ¤íŠ¸ë¥¼ ë¶ˆëŸ¬ì˜µë‹ˆë‹¤.")
 		status++;
 	} else if (selection == 101) {
-		cm.sendNext("\r\n³×¿À½ÃÆ¼ ¿öÇÁ ¸®½ºÆ®¸¦ ºÒ·¯¿É´Ï´Ù.")
+		cm.sendNext("\r\në„¤ì˜¤ì‹œí‹° ì›Œí”„ ë¦¬ìŠ¤íŠ¸ë¥¼ ë¶ˆëŸ¬ì˜µë‹ˆë‹¤.")
 		status++;
 		status++;
 		status++;

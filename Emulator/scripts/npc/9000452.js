@@ -3,19 +3,19 @@
 
 /*
 
-	* ´Ü¹®¿£ÇÇ½Ã ÀÚµ¿Á¦ÀÛ ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¸¸µé¾îÁø ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	* ë‹¨ë¬¸ì—”í”¼ì‹œ ìžë™ì œìž‘ ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ë§Œë“¤ì–´ì§„ ìŠ¤í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤.
 
 	* (Guardian Project Development Source Script)
 
-	SMº¹±¸ ¿¡ ÀÇÇØ ¸¸µé¾î Á³½À´Ï´Ù.
+	SMë³µêµ¬ ì— ì˜í•´ ë§Œë“¤ì–´ ì¡ŒìŠµë‹ˆë‹¤.
 
-	¿£ÇÇ½Ã¾ÆÀÌµð : 9000452
+	ì—”í”¼ì‹œì•„ì´ë”” : 9000452
 
-	¿£ÇÇ½Ã ÀÌ¸§ : º¸¾È ¿ä¿ø B
+	ì—”í”¼ì‹œ ì´ë¦„ : ë³´ì•ˆ ìš”ì› B
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : ¾Ë ¼ö ¾ø´Â °÷ : º¸³Ê½º ½ºÅ×ÀÌÁö (924050000)
+	ì—”í”¼ì‹œê°€ ìžˆëŠ” ë§µ : ì•Œ ìˆ˜ ì—†ëŠ” ê³³ : ë³´ë„ˆìŠ¤ ìŠ¤í…Œì´ì§€ (924050000)
 
-	¿£ÇÇ½Ã ¼³¸í : MISSINGNO
+	ì—”í”¼ì‹œ ì„¤ëª… : MISSINGNO
 
 
 */
@@ -41,7 +41,7 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        cm.sendOk("È­·ÁÇÏÁö?");
+        cm.sendOk("í™”ë ¤í•˜ì§€?");
         cm.dispose();
         return;
     }

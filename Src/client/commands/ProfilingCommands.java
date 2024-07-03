@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹èÁöÈÆ raccoonfox69@gmail.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°°ì§€í›ˆ raccoonfox69@gmail.com
  * ==================================
  * 
  */
@@ -21,15 +21,15 @@ public class ProfilingCommands implements Command {
     @Override
     public CommandDefinition[] getDefinition() {
 	return new CommandDefinition[]{
-		    new CommandDefinition("°¨½Ã½ÃÀÛ", "", "ÇÁ·ÎÆÄÀÏ·¯·Î CPU °¨½Ã¸¦ ½ÃÀÛÇÕ´Ï´Ù.", 6),
-		    new CommandDefinition("°¨½ÃÁ¾·á", "<ÆÄÀÏÀÌ¸§>", "ÇÁ·ÎÆÄÀÏ·¯·Î CPU °¨½Ã¸¦ Á¾·áÇÏ°í ÇØ´ç ÆÄÀÏÀÌ¸§À¸·Î °á°ú¸¦ ÀúÀåÇÕ´Ï´Ù.", 6)
+		    new CommandDefinition("ê°ì‹œì‹œì‘", "", "í”„ë¡œíŒŒì¼ëŸ¬ë¡œ CPU ê°ì‹œë¥¼ ì‹œì‘í•©ë‹ˆë‹¤.", 6),
+		    new CommandDefinition("ê°ì‹œì¢…ë£Œ", "<íŒŒì¼ì´ë¦„>", "í”„ë¡œíŒŒì¼ëŸ¬ë¡œ CPU ê°ì‹œë¥¼ ì¢…ë£Œí•˜ê³  í•´ë‹¹ íŒŒì¼ì´ë¦„ìœ¼ë¡œ ê²°ê³¼ë¥¼ ì €ì¥í•©ë‹ˆë‹¤.", 6)
 	};
     }
 
     @Override
     public void execute(MapleClient c, String[] splitted) {
 
-	if (splitted[0].equals("!°¨½Ã½ÃÀÛ")) {
+	if (splitted[0].equals("!ê°ì‹œì‹œì‘")) {
 	    CPUSampler sampler = CPUSampler.getInstance();
 	    sampler.addIncluded("Maplenewhandler");
             sampler.addIncluded("anticheat");
@@ -47,7 +47,7 @@ public class ProfilingCommands implements Command {
             sampler.addIncluded("tools");
 	    sampler.start();
 
-	} else if (splitted[0].equals("!°¨½ÃÁ¾·á")) {
+	} else if (splitted[0].equals("!ê°ì‹œì¢…ë£Œ")) {
 	    CPUSampler sampler = CPUSampler.getInstance();
 	    try {
 		String filename = "odinprofile.txt";
@@ -56,7 +56,7 @@ public class ProfilingCommands implements Command {
 		}
 		File file = new File(filename);
 		if (file.exists()) {
-		    c.getPlayer().dropMessage(6, "ÀÔ·ÂÇÑ ÆÄÀÏÀÌ ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù. ´Ù¸¥ ÀÌ¸§À» »ç¿ëÇØ ÁÖ¼¼¿ä.");
+		    c.getPlayer().dropMessage(6, "ì…ë ¥í•œ íŒŒì¼ì´ ì´ë¯¸ ì¡´ì¬í•©ë‹ˆë‹¤. ë‹¤ë¥¸ ì´ë¦„ì„ ì‚¬ìš©í•´ ì£¼ì„¸ìš”.");
 		    return;
 		}
 		sampler.stop();

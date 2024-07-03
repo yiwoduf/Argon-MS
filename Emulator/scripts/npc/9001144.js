@@ -46,7 +46,7 @@ function action(mode, type, selection) {
 		cm.dispose();
 		cm.openNpc(9000143);      
         } else if (selection == 100000) {
-                cm.sendSimple ("#r#e[ ¿¸ªÁ πÊæÓ±∏ ]#n#k\r\n" +
+                cm.sendSimple ("#r#e[ Ï†ÑÏÇ¨ Î∞©Ïñ¥Íµ¨ ]#n#k\r\n" +
             "#k#L0#CAP" +
             "#k#L1#TOP" +
             "#k#L2#BOTTOM" +
@@ -55,7 +55,7 @@ function action(mode, type, selection) {
             "#k#L5#GLOVES" +
             "#k#L6#SHIELD\r\n\r\n\r\n\r\n" +
 
-            "#l#b#e[ ¿¸ªÁ π´±‚ ]#n#k\r\n" +
+            "#l#b#e[ Ï†ÑÏÇ¨ Î¨¥Í∏∞ ]#n#k\r\n" +
             "#k#L7#Desperado" +
             "#k#L8#1HAND AXE" +
             "#k#L9#2HAND AXE\r\n" +
@@ -66,7 +66,7 @@ function action(mode, type, selection) {
             "#k#L14#SPEAR" +
             "#k#L15#POLEARM");
         } else if (selection == 100001) {
-                cm.sendSimple ("#r#e[ ∏∂π˝ªÁ πÊæÓ±∏ ]#n#k\r\n" +
+                cm.sendSimple ("#r#e[ ÎßàÎ≤ïÏÇ¨ Î∞©Ïñ¥Íµ¨ ]#n#k\r\n" +
             "#k#L16#CAP" +
             "#k#L7#OVERALL\r\n" +
             "#k#L18#TOP" +
@@ -75,13 +75,13 @@ function action(mode, type, selection) {
             "#k#L21#GLOVES" +
             "#k#L22#SHIELD\r\n\r\n\r\n\r\n" +
 
-            "#l#b#e[ ∏∂π˝ªÁ π´±‚ ]#n#k\r\n" +
+            "#l#b#e[ ÎßàÎ≤ïÏÇ¨ Î¨¥Í∏∞ ]#n#k\r\n" +
             "#k#L23#SHINING ROD" +
             "#k#L24#DRAGON EQP" +
             "#k#L25#WAND" +
             "#k#L26#STAFF");
         } else if (selection == 100002) {
-                cm.sendSimple ("#r#e[ ±√ºˆ πÊæÓ±∏ ]#n#k\r\n" +
+                cm.sendSimple ("#r#e[ Í∂ÅÏàò Î∞©Ïñ¥Íµ¨ ]#n#k\r\n" +
             "#k#L27#CAP" +
             "#k#L28#TOP" +
             "#k#L29#BOTTOM" +
@@ -89,14 +89,14 @@ function action(mode, type, selection) {
             "#k#L31#SHOES" +
             "#k#L32#GLOVES\r\n\r\n\r\n\r\n" +
 
-            "#l#b#e[ ±√ºˆ π´±‚ ]#n#k\r\n" +
+            "#l#b#e[ Í∂ÅÏàò Î¨¥Í∏∞ ]#n#k\r\n" +
             "#k#L33#BOW" +
             "#k#L34#XBOW" +
             "#k#L35#DUALBOW\r\n" +
             "#k#L36#MAGIC ARROW" +
             "#k#L37#ARROW");
         } else if (selection == 100003) {
-                cm.sendSimple ("#r#e[ µµ¿˚ πÊæÓ±∏ ]#n#k\r\n" +
+                cm.sendSimple ("#r#e[ ÎèÑÏ†Å Î∞©Ïñ¥Íµ¨ ]#n#k\r\n" +
             "#l#L38##bCAP" +
             "#k#L39##bTOP" +
             "#k#L40##bBOTTOM" +
@@ -105,7 +105,7 @@ function action(mode, type, selection) {
             "#l#L43##bGLOVES" +
             "#l#L44##bSHIELD\r\n\r\n\r\n\r\n" +
 
-            "#l#b#e[ µµ¿˚ π´±‚ ]#n#k\r\n" +
+            "#l#b#e[ ÎèÑÏ†Å Î¨¥Í∏∞ ]#n#k\r\n" +
             "#l#L45#ENERGY SWORD" +
             "#l#L46#DAGGER" +
             "#l#L47#CLAW\r\n" +
@@ -114,24 +114,24 @@ function action(mode, type, selection) {
             "#l#L50#CARD" +
 	    "#k#L51#DART");
         } else if (selection == 100004) {
-                cm.sendSimple ("#r#e[ «ÿ¿˚ πÊæÓ±∏ ]#n#k\r\n" +
+                cm.sendSimple ("#r#e[ Ìï¥Ï†Å Î∞©Ïñ¥Íµ¨ ]#n#k\r\n" +
             "#k#L52#CAP" +
             "#k#L53#OVERALL\r\n" +
             "#k#L54#SHOES" +
             "#k#L55#GLOVES\r\n\r\n\r\n\r\n" +
 
-            "#l#b#e[ «ÿ¿˚ π´±‚ ]#n#k\r\n" +
+            "#l#b#e[ Ìï¥Ï†Å Î¨¥Í∏∞ ]#n#k\r\n" +
             "#k#L56#KNUCKLE" +
             "#k#L57#GUN" +
             "#k#L58#CANNON\r\n" +
             "#l#L59#SOUL SHOOTER" +
             "#k#L60#BULLET");
         } else if (selection == 100005) {
-                cm.sendSimple ("#r#e[ æ∆ƒ…¿Œ ªÛ¡° ]#n#k\r\n" +
-            "#k#L66#π´±‚" +
-            "#k#L67#πÊæÓ±∏");
+                cm.sendSimple ("#r#e[ ÏïÑÏºÄÏù∏ ÏÉÅÏ†ê ]#n#k\r\n" +
+            "#k#L66#Î¨¥Í∏∞" +
+            "#k#L67#Î∞©Ïñ¥Íµ¨");
         } else if (selection == 100006) {
-                cm.sendSimple ("#r#e[ æ«ººªÁ∏Æ ªÛ¡° ]#n#k" +
+                cm.sendSimple ("#r#e[ ÏïÖÏÑ∏ÏÇ¨Î¶¨ ÏÉÅÏ†ê ]#n#k" +
             "\r\n#L69#FACE" +
             "#L70#EYE" +
             "#L71#PENDANT\r\n" +

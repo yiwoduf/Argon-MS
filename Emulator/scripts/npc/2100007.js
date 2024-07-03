@@ -3,19 +3,19 @@
 
 /*
 
-	* �ܹ����ǽ� �ڵ����� ��ũ��Ʈ�� ���� ������� ��ũ��Ʈ �Դϴ�.
+	* 단문엔피시 자동제작 스크립트를 통해 만들어진 스크립트 입니다.
 
 	* (Guardian Project Development Source Script)
 
-	��Ÿ�� �� ���� ����� �����ϴ�.
+	핫타임 에 의해 만들어 졌습니다.
 
-	���ǽþ��̵� : 2100007
+	엔피시아이디 : 2100007
 
-	���ǽ� �̸� : ���϶�
+	엔피시 이름 : 라일라
 
-	���ǽð� �ִ� �� :  :  (0)
+	엔피시가 있는 맵 :  :  (0)
 
-	���ǽ� ���� : �Ǻΰ�����
+	엔피시 설명 : 피부관리사
 
 
 */
@@ -41,7 +41,7 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        cm.sendOk("�غ����Դϴ�..");
+        cm.sendOk("준비중입니다..");
         cm.dispose();
         return;
     }

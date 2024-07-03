@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -39,16 +39,16 @@ public class ChatHandler {
                 return;
             }
             if (WorldCommunity.isFreeze) {
-                chr.dropMessage(1, "Ã¤ÆÃÀÌ ¾ó·ÁÁ®ÀÖ´Â »óÅÂÀÌ¹Ç·Î\r\nÃ¤ÆÃÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+                chr.dropMessage(1, "ì±„íŒ…ì´ ì–¼ë ¤ì ¸ìˆëŠ” ìƒíƒœì´ë¯€ë¡œ\r\nì±„íŒ…ì„ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                 return;
             }
             if (chr.getChatban().equals("true")) {
-                chr.dropMessage(1, "Ã¤ÆÃ ±İÁö »óÅÂ¿¡¼± Ã¤ÆÃÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+                chr.dropMessage(1, "ì±„íŒ… ê¸ˆì§€ ìƒíƒœì—ì„  ì±„íŒ…ì„ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                 return;
             }
             if (text.charAt(0) == '~') {
                 if (chr.getMeso() < 0) {
-                    chr.dropMessage(1, "30000¸Ş¼Ò°¡ ¾ø¾î ÀüÃ¼Ã¤ÆÃÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.");
+                    chr.dropMessage(1, "30000ë©”ì†Œê°€ ì—†ì–´ ì „ì²´ì±„íŒ…ì„ ì‚¬ìš©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                     return;
                 } else {
                     if (ServerConstants.chatlimit >= 500) {
@@ -65,22 +65,22 @@ public class ChatHandler {
                     sb.append(text.substring(1));
                     if (c.getPlayer().haveItem(1142113, 1, true, false)) {
                         WorldBroadcasting.broadcastMessage(MainPacketCreator.getGMText(1, sb.toString()));
-                        AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[ÀüÃ¼]" + c.getPlayer().getName() + " : " + text.substring(1).toString()));
+                        AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[ì „ì²´]" + c.getPlayer().getName() + " : " + text.substring(1).toString()));
                     } else if (c.getPlayer().haveItem(1143000, 1, true, false)) {
-                    WorldBroadcasting.broadcastMessage(MainPacketCreator.getGMText(9, "[º¸½º¿Õ] " + chr.getName() + ":: " + text.replaceAll("~", "")));
-                    AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("<º¸½º¿Õ> [" + chr.getClient().getChannel() + "]" + chr.getName() + " : " + text));
+                    WorldBroadcasting.broadcastMessage(MainPacketCreator.getGMText(9, "[ë³´ìŠ¤ì™•] " + chr.getName() + ":: " + text.replaceAll("~", "")));
+                    AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("<ë³´ìŠ¤ì™•> [" + chr.getClient().getChannel() + "]" + chr.getName() + " : " + text));
                     } else if (c.getPlayer().haveItem(1142558, 1, true, false)) {
-                    WorldBroadcasting.broadcastMessage(MainPacketCreator.getGMText(27, "[È¯»ı¿Õ] " + chr.getName() + ":: " + text.replaceAll("~", "")));
-                    AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("<È¯»ı¿Õ> [" + chr.getClient().getChannel() + "]" + chr.getName() + " : " + text));
+                    WorldBroadcasting.broadcastMessage(MainPacketCreator.getGMText(27, "[í™˜ìƒì™•] " + chr.getName() + ":: " + text.replaceAll("~", "")));
+                    AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("<í™˜ìƒì™•> [" + chr.getClient().getChannel() + "]" + chr.getName() + " : " + text));
                     } else if (c.getPlayer().haveItem(1142588, 1, true, false)) {
-                    WorldBroadcasting.broadcastMessage(MainPacketCreator.getGMText(12, "¡¼ ÃµÀçÄ¡¿ì ¡½" + chr.getName() + ":: " + text.replaceAll("~", "")));
-                    AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("<Ä¡¿ì> [" + chr.getClient().getChannel() + "]" + chr.getName() + " : " + text));
+                    WorldBroadcasting.broadcastMessage(MainPacketCreator.getGMText(12, "ã€ ì²œì¬ì¹˜ìš° ã€‘" + chr.getName() + ":: " + text.replaceAll("~", "")));
+                    AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("<ì¹˜ìš°> [" + chr.getClient().getChannel() + "]" + chr.getName() + " : " + text));
                     
                     } else {
                         WorldBroadcasting.broadcastMessage(MainPacketCreator.getGMText(21, sb.toString()));
-                        AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[ÀüÃ¼]" + c.getPlayer().getName() + " : " + text.substring(1).toString()));
+                        AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[ì „ì²´]" + c.getPlayer().getName() + " : " + text.substring(1).toString()));
                     }
-                    ControlUnit.ChatList.addElement("[ÀüÃ¼]" + c.getPlayer().getName() + " : " + text.substring(1).toString());
+                    ControlUnit.ChatList.addElement("[ì „ì²´]" + c.getPlayer().getName() + " : " + text.substring(1).toString());
                     ControlUnit.Chat.setModel(ControlUnit.ChatList);
                 }
             } else {
@@ -95,13 +95,13 @@ public class ChatHandler {
                 InventoryHandler.addMedalString(c.getPlayer(), sb);
                 sb.append(text.substring(0));
                 
-                AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[ÀÏ¹İ][Ch." + chr.getClient().getChannel() + "]" + chr.getName() + " : " + text));
+                AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[ì¼ë°˜][Ch." + chr.getClient().getChannel() + "]" + chr.getName() + " : " + text));
                 chr.getMap().broadcastMessage(MainPacketCreator.getChatText(chr.getId(), text, c.getPlayer().isGM(), unk), c.getPlayer().getPosition());
                 
-                ControlUnit.ChatList.addElement("[ÀÏ¹İ][Ch." + chr.getClient().getChannel() + "]" + chr.getName() + " : " + text);
+                ControlUnit.ChatList.addElement("[ì¼ë°˜][Ch." + chr.getClient().getChannel() + "]" + chr.getName() + " : " + text);
                 ControlUnit.Chat.setModel(ControlUnit.ChatList);
             }
-            LoggerChatting.writeLog(LoggerChatting.chatLog, LoggerChatting.getChatLogType("ÀÏ¹İ Ã¤ÆÃ : ", chr, text));
+            LoggerChatting.writeLog(LoggerChatting.chatLog, LoggerChatting.getChatLogType("ì¼ë°˜ ì±„íŒ… : ", chr, text));
         }
     }
 
@@ -118,33 +118,33 @@ public class ChatHandler {
             switch (type) {
                 case 0:
                     ServerConstants.chatlimit++;
-                    AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[Ä£±¸][Ch." + chr.getClient().getChannel() + "]" + chr.getName() + " : " + chattext));
+                    AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[ì¹œêµ¬][Ch." + chr.getClient().getChannel() + "]" + chr.getName() + " : " + chattext));
                     WorldCommunity.buddyChat(recipients, chr.getId(), chr.getName(), chattext);
-                    LoggerChatting.writeLog(LoggerChatting.chatLog, LoggerChatting.getChatLogType("Ä£±¸ : ", chr, chattext));
+                    LoggerChatting.writeLog(LoggerChatting.chatLog, LoggerChatting.getChatLogType("ì¹œêµ¬ : ", chr, chattext));
                     break;
                 case 1:
                     ServerConstants.chatlimit++;
-                    AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[ÆÄÆ¼][Ch." + chr.getClient().getChannel() + "]" + chr.getName() + " : " + chattext));
+                    AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[íŒŒí‹°][Ch." + chr.getClient().getChannel() + "]" + chr.getName() + " : " + chattext));
                     WorldCommunity.partyChat(chr.getParty(), chattext, chr.getName());
-                    LoggerChatting.writeLog(LoggerChatting.chatLog, LoggerChatting.getChatLogType("ÆÄÆ¼ : ", chr, chattext));
+                    LoggerChatting.writeLog(LoggerChatting.chatLog, LoggerChatting.getChatLogType("íŒŒí‹° : ", chr, chattext));
                     break;
                 case 2:
                     ServerConstants.chatlimit++;
-                    AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[±æµå][Ch." + chr.getClient().getChannel() + "]" + chr.getName() + " : " + chattext));
+                    AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[ê¸¸ë“œ][Ch." + chr.getClient().getChannel() + "]" + chr.getName() + " : " + chattext));
                     ChannelServer.guildChat(chr.getGuildId(), chr.getName(), chr.getId(), chattext);
-                    LoggerChatting.writeLog(LoggerChatting.chatLog, LoggerChatting.getChatLogType("±æµå : ", chr, chattext));
+                    LoggerChatting.writeLog(LoggerChatting.chatLog, LoggerChatting.getChatLogType("ê¸¸ë“œ : ", chr, chattext));
                     break;
                 case 3:
                     ServerConstants.chatlimit++;
-                    AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[¿¬ÇÕ][Ch." + chr.getClient().getChannel() + "]" + chr.getName() + " : " + chattext));
+                    AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[ì—°í•©][Ch." + chr.getClient().getChannel() + "]" + chr.getName() + " : " + chattext));
                     WorldCommunity.allianceChat(chr.getGuildId(), chr.getName(), chr.getId(), chattext);
-                    LoggerChatting.writeLog(LoggerChatting.chatLog, LoggerChatting.getChatLogType("¿¬ÇÕ : ", chr, chattext));
+                    LoggerChatting.writeLog(LoggerChatting.chatLog, LoggerChatting.getChatLogType("ì—°í•© : ", chr, chattext));
                     break;
-                case 4: //¿øÁ¤´ë Ã¤ÆÃ
+                case 4: //ì›ì •ëŒ€ ì±„íŒ…
                     ServerConstants.chatlimit++;
-                    AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[¿øÁ¤´ë][Ch." + chr.getClient().getChannel() + "]" + chr.getName() + " : " + chattext));
+                    AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[ì›ì •ëŒ€][Ch." + chr.getClient().getChannel() + "]" + chr.getName() + " : " + chattext));
                     chr.getParty().getExpedition().broadcastMessage(chr, MainPacketCreator.multiChat(chr.getName(), chattext, 4));
-                    LoggerChatting.writeLog(LoggerChatting.chatLog, LoggerChatting.getChatLogType("¿øÁ¤´ë : ", chr, chattext));
+                    LoggerChatting.writeLog(LoggerChatting.chatLog, LoggerChatting.getChatLogType("ì›ì •ëŒ€ : ", chr, chattext));
                     break;
 
             }
@@ -178,12 +178,12 @@ public class ChatHandler {
                                 c.getPlayer().setMessengerPosition(position);
                                 WorldCommunity.joinMessenger(messenger.getId(), messengerplayer, c.getPlayer().getName(), messengerplayer.getChannel());
                             } else {
-                                c.getPlayer().dropMessage(5, "ÀÌ¹Ì ÇØ´ç ¸Ş½ÅÀú´Â ÃÖ´ë ÀÎ¿ø ÀÔ´Ï´Ù.");
+                                c.getPlayer().dropMessage(5, "ì´ë¯¸ í•´ë‹¹ ë©”ì‹ ì €ëŠ” ìµœëŒ€ ì¸ì› ì…ë‹ˆë‹¤.");
                             }
                         }
                     }
                 } else {
-                    c.getPlayer().dropMessage(1, "ÀÌ¹Ì ´İÈù ¹æÀÔ´Ï´Ù.");
+                    c.getPlayer().dropMessage(1, "ì´ë¯¸ ë‹«íŒ ë°©ì…ë‹ˆë‹¤.");
                 }
                 break;
             case 0x02: // exit
@@ -213,7 +213,7 @@ public class ChatHandler {
                             target.getClient().getSession().writeAndFlush(MainPacketCreator.messengerInvite(c.getPlayer().getName(), messenger.getId()));
                             c.getSession().writeAndFlush(MainPacketCreator.messengerNote(input, 4, 1));
                         } else {
-                            c.getSession().writeAndFlush(MainPacketCreator.messengerChat(c.getPlayer().getName(), c.getPlayer().getName() + " : " + input + " ´ÔÀº ÀÌ¹Ì ¸Ş½ÅÀú¸¦ »ç¿ëÇÏ´Â ÁßÀÔ´Ï´Ù."));
+                            c.getSession().writeAndFlush(MainPacketCreator.messengerChat(c.getPlayer().getName(), c.getPlayer().getName() + " : " + input + " ë‹˜ì€ ì´ë¯¸ ë©”ì‹ ì €ë¥¼ ì‚¬ìš©í•˜ëŠ” ì¤‘ì…ë‹ˆë‹¤."));
                         }
                     } else {
                         c.getSession().writeAndFlush(MainPacketCreator.messengerNote(input, 4, 0));
@@ -251,9 +251,9 @@ public class ChatHandler {
         rh.skip(4); //Unknown Packet.
         boolean friend = false;
         switch (mode) {
-            case 0x44: //Ä£±¸ ¸ñ·Ï¿¡¼­ Å¬¸¯
+            case 0x44: //ì¹œêµ¬ ëª©ë¡ì—ì„œ í´ë¦­
                 friend = true;
-            case 5: {//Ã£±â
+            case 5: {//ì°¾ê¸°
                 String recipient = rh.readMapleAsciiString();
                 MapleCharacter player = c.getChannelServer().getPlayerStorage().getCharacterByName(recipient);
                 if (player != null) {
@@ -288,7 +288,7 @@ public class ChatHandler {
                 String recipient = rh.readMapleAsciiString();
                 String text = rh.readMapleAsciiString();
                 ServerConstants.chatlimit++;
-                AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[±Ó¼Ó¸»][Ch." + c.getChannel() + "]" + c.getPlayer().getName() + " : " + text));
+                AdminToolServer.broadcastMessage(AdminToolPacket.sendChatText("[ê·“ì†ë§][Ch." + c.getChannel() + "]" + c.getPlayer().getName() + " : " + text));
                 if (!CommandProcessor.getInstance().processCommand(c, text)) {
                     MapleCharacter player = c.getChannelServer().getPlayerStorage().getCharacterByName(recipient);
                     if (player != null) {
@@ -297,7 +297,7 @@ public class ChatHandler {
                         } else {
                             player.getClient().getSession().writeAndFlush(MainPacketCreator.getWhisper(c.getPlayer().getName(), c.getChannel(), text));
                             c.getSession().writeAndFlush(MainPacketCreator.getWhisperReply(recipient, (byte) 1));
-                            LoggerChatting.writeLog(LoggerChatting.chatLog, LoggerChatting.getChatLogType("±Ó", c.getPlayer(), "[´ë»ó : " + player.getName() + "] : " + text));
+                            LoggerChatting.writeLog(LoggerChatting.chatLog, LoggerChatting.getChatLogType("ê·“", c.getPlayer(), "[ëŒ€ìƒ : " + player.getName() + "] : " + text));
                         }
                     } else { // Not found
                         Collection<ChannelServer> cservs = ChannelServer.getAllInstances();
@@ -312,7 +312,7 @@ public class ChatHandler {
                                 c.getSession().writeAndFlush(MainPacketCreator.getWhisperReply(recipient, (byte) 0));
                             } else {
                                 player.getClient().getSession().writeAndFlush(MainPacketCreator.getWhisper(c.getPlayer().getName(), c.getChannel(), text));
-                                LoggerChatting.writeLog(LoggerChatting.chatLog, LoggerChatting.getChatLogType("±Ó", c.getPlayer(), "[´ë»ó : " + player.getName() + "] : " + text));
+                                LoggerChatting.writeLog(LoggerChatting.chatLog, LoggerChatting.getChatLogType("ê·“", c.getPlayer(), "[ëŒ€ìƒ : " + player.getName() + "] : " + text));
                                 c.getSession().writeAndFlush(MainPacketCreator.getWhisperReply(recipient, (byte) 1));
                             }
                         } else {

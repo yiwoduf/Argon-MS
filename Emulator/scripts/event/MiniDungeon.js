@@ -3,9 +3,9 @@
 
 /*
 
-	Ç»¾î ¿Â¶óÀÎ ¼Ò½º ½ºÅ©¸³Æ®ÀÔ´Ï´Ù.
+	í“¨ì–´ ì˜¨ë¼ì¸ ì†ŒìŠ¤ ìŠ¤í¬ë¦½íŠ¸ìž…ë‹ˆë‹¤.
 
-	¹Ì´Ï´øÀü ½ºÅ©¸³Æ®
+	ë¯¸ë‹ˆë˜ì „ ìŠ¤í¬ë¦½íŠ¸
 
 
 */
@@ -59,7 +59,7 @@ function scheduledTimeout(eim) {
         var chr = eim.getPlayers().iterator().next();
         eim.removePlayer(chr);
         chr.changeMap(exit, exit.getPortal(0));
-        chr.Message(8, "½Ã°£ÀÌ ÃÊ°úµÇ¾ú½À´Ï´Ù. Ã³À½ºÎÅÍ ´Ù½Ã ½ÃÀÛÇØÁÖ¼¼¿ä.");
+        chr.Message(8, "ì‹œê°„ì´ ì´ˆê³¼ë˜ì—ˆìŠµë‹ˆë‹¤. ì²˜ìŒë¶€í„° ë‹¤ì‹œ ì‹œìž‘í•´ì£¼ì„¸ìš”.");
     }
     eim.dispose();
 }
@@ -82,16 +82,16 @@ function playerRevive(eim, player) {
 }
 
 function playerDisconnected(eim, player) {
-    /* 0 : ¸ðµÎ ³ª°¥¶§ ±îÁö´Â ÀÎ½ºÅÏ½º À¯Áö
-     * 1 ~ : ÀÏÁ¤ ¼öÁØ ÀÌ»óÀÇ »ç¶÷¸¸ ³²À¸¸é ´©°¡ ³ª°¡´øÁö ÀÎ½ºÅÏ½º À¯Áö
-     * -1 ~ ÀÌÇÏ : ÀÏÁ¤ ¼öÁØ ÀÌ»óÀÇ »ç¶÷¸¸ ³²À¸¸é À¯ÁöÀÌ³ª, ÆÄÆ¼ÀåÀÌ ³ª°¡¸é ÀÎ½ºÅÏ½º »èÁ¦
+    /* 0 : ëª¨ë‘ ë‚˜ê°ˆë•Œ ê¹Œì§€ëŠ” ì¸ìŠ¤í„´ìŠ¤ ìœ ì§€
+     * 1 ~ : ì¼ì • ìˆ˜ì¤€ ì´ìƒì˜ ì‚¬ëžŒë§Œ ë‚¨ìœ¼ë©´ ëˆ„ê°€ ë‚˜ê°€ë˜ì§€ ì¸ìŠ¤í„´ìŠ¤ ìœ ì§€
+     * -1 ~ ì´í•˜ : ì¼ì • ìˆ˜ì¤€ ì´ìƒì˜ ì‚¬ëžŒë§Œ ë‚¨ìœ¼ë©´ ìœ ì§€ì´ë‚˜, íŒŒí‹°ìž¥ì´ ë‚˜ê°€ë©´ ì¸ìŠ¤í„´ìŠ¤ ì‚­ì œ
      */
     return 0;
 }
 
 function monsterValue(eim, mobid) {
     /*
-     * Å³ Ä«¿îÆ®¸¦ ´õÇÒ ¼ýÀÚ ¹ÝÈ¯
+     * í‚¬ ì¹´ìš´íŠ¸ë¥¼ ë”í•  ìˆ«ìž ë°˜í™˜
      */
     return 1;
 }

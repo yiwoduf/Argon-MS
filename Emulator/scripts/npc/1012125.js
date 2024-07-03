@@ -13,9 +13,9 @@ function action(mode, type, selection) {
 	return;
     }
     if (status == 0) {
-	var chat = "°Ë»öÄ³½Ã¿£ÇÇ½Ã #b"+ cm.getPlayer().getName() + "#k  ÇìÇìÇìÇì#r";
-	chat += "\r\n#r#L1##i2433017# ÈÄ¿ø°Ë»öÄ³½Ã#l";
-	chat += "\r\n#b#L2##i4310038# ÄÚÀÎ°Ë»öÄ³½Ã#l #r#L3##d ´ëÈ­±×¸¸ÇÏ±â #k#l";
+	var chat = "ê²€ìƒ‰ìºì‹œì—”í”¼ì‹œ #b"+ cm.getPlayer().getName() + "#k  í—¤í—¤í—¤í—¤#r";
+	chat += "\r\n#r#L1##i2433017# í›„ì›ê²€ìƒ‰ìºì‹œ#l";
+	chat += "\r\n#b#L2##i4310038# ì½”ì¸ê²€ìƒ‰ìºì‹œ#l #r#L3##d ëŒ€í™”ê·¸ë§Œí•˜ê¸° #k#l";
         cm.sendSpirit(chat,true,0);
       } else if (status == 1) {
         if (selection == 1) {

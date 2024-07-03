@@ -62,26 +62,26 @@ function action(M, T, S)
 			}
 		}
 
-		selStr =  "Ä³¸¯ÅÍÀÇ #b¸Ó¸®¿Í ¾ó±¼À» ¸¶À½²¯ ÀÚ¶û#kÇÒ ¼ö ÀÖ´Â ½ÅºñÀÇ ¸¶³×Å·ÀÔ´Ï´Ù. ¹«¾ùÀ» µµ¿Íµå¸±±î¿ä?\r\n\r\n";
-		selStr += "#e#r<¸¶³×Å· ·ë ÀÔÀåÇÏ±â>#b#n\r\n";
-		selStr += "#L0#¸Ó¸® ¸¶³×Å· ·ë (ÇöÀç È°¼º ·ë #r#e"+GET("HAIR_SLOT")+"#b#n°³ / ÃÖ´ë "+maxHairSlot+"°³ È°¼º °¡´É)#l\r\n";
-		selStr += "#L1#¾ó±¼ ¸¶³×Å· ·ë (ÇöÀç È°¼º ·ë #r#e"+GET("FACE_SLOT")+"#b#n°³ / ÃÖ´ë "+maxFaceSlot+"°³ È°¼º °¡´É)#l\r\n\r\n\r\n";
-		selStr += "#e#r<¸¶³×Å· ·ë È®ÀåÇÏ±â>#b#n\r\n";
+		selStr =  "ìºë¦­í„°ì˜ #bë¨¸ë¦¬ì™€ ì–¼êµ´ì„ ë§ˆìŒê» ìžëž‘#kí•  ìˆ˜ ìžˆëŠ” ì‹ ë¹„ì˜ ë§ˆë„¤í‚¹ìž…ë‹ˆë‹¤. ë¬´ì—‡ì„ ë„ì™€ë“œë¦´ê¹Œìš”?\r\n\r\n";
+		selStr += "#e#r<ë§ˆë„¤í‚¹ ë£¸ ìž…ìž¥í•˜ê¸°>#b#n\r\n";
+		selStr += "#L0#ë¨¸ë¦¬ ë§ˆë„¤í‚¹ ë£¸ (í˜„ìž¬ í™œì„± ë£¸ #r#e"+GET("HAIR_SLOT")+"#b#nê°œ / ìµœëŒ€ "+maxHairSlot+"ê°œ í™œì„± ê°€ëŠ¥)#l\r\n";
+		selStr += "#L1#ì–¼êµ´ ë§ˆë„¤í‚¹ ë£¸ (í˜„ìž¬ í™œì„± ë£¸ #r#e"+GET("FACE_SLOT")+"#b#nê°œ / ìµœëŒ€ "+maxFaceSlot+"ê°œ í™œì„± ê°€ëŠ¥)#l\r\n\r\n\r\n";
+		selStr += "#e#r<ë§ˆë„¤í‚¹ ë£¸ í™•ìž¥í•˜ê¸°>#b#n\r\n";
 		if(GET("HAIR_SLOT").equals(maxHairSlot))
 		{
-			selStr += "#L2##Cgray#´õ ÀÌ»ó ¸Ó¸® ¸¶³×Å· ·ëÀ» È®ÀåÇÒ ¼ö ¾ø½À´Ï´Ù.#l#b\r\n";
+			selStr += "#L2##Cgray#ë” ì´ìƒ ë¨¸ë¦¬ ë§ˆë„¤í‚¹ ë£¸ì„ í™•ìž¥í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.#l#b\r\n";
 		}
 		else
 		{
-			selStr += "#L2#"+Number(GET("HAIR_SLOT") + 1)+"¹ø ¸Ó¸® ¸¶³×Å· ·ë È®ÀåÇÏ±â ("+Comma(addHairCost)+" ¸Þ¼Ò)#l\r\n";
+			selStr += "#L2#"+Number(GET("HAIR_SLOT") + 1)+"ë²ˆ ë¨¸ë¦¬ ë§ˆë„¤í‚¹ ë£¸ í™•ìž¥í•˜ê¸° ("+Comma(addHairCost)+" ë©”ì†Œ)#l\r\n";
 		}
 		if(GET("FACE_SLOT").equals(maxFaceSlot))
 		{
-			selStr += "#L3##Cgray#´õ ÀÌ»ó ¾ó±¼ ¸¶³×Å· ·ëÀ» È®ÀåÇÒ ¼ö ¾ø½À´Ï´Ù.#l#b\r\n";
+			selStr += "#L3##Cgray#ë” ì´ìƒ ì–¼êµ´ ë§ˆë„¤í‚¹ ë£¸ì„ í™•ìž¥í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.#l#b\r\n";
 		}
 		else
 		{
-		selStr += "#L3#"+Number(GET("FACE_SLOT") + 1)+"¹ø ¾ó±¼ ¸¶³×Å· ·ë È®ÀåÇÏ±â ("+Comma(addFaceCost)+" ¸Þ¼Ò)";
+		selStr += "#L3#"+Number(GET("FACE_SLOT") + 1)+"ë²ˆ ì–¼êµ´ ë§ˆë„¤í‚¹ ë£¸ í™•ìž¥í•˜ê¸° ("+Comma(addFaceCost)+" ë©”ì†Œ)";
 		}
 		cm.sendSimpleS(selStr, 4, 1012117);
 	}
@@ -92,46 +92,46 @@ function action(M, T, S)
 		switch(playerChoice)
 		{
 			case 0:
-			selStr = "#b#e#h ##k#n´ÔÀÇ ¸Ó¸® ¸¶³×Å· ·ëÀÔ´Ï´Ù.\r\nÇöÀç #e#rÈ°¼ºµÈ ¸¶³×Å· ·ëÀº "+GET("HAIR_SLOT")+"°³#k#n ÀÔ´Ï´Ù.\r\n";
+			selStr = "#b#e#h ##k#në‹˜ì˜ ë¨¸ë¦¬ ë§ˆë„¤í‚¹ ë£¸ìž…ë‹ˆë‹¤.\r\ní˜„ìž¬ #e#rí™œì„±ëœ ë§ˆë„¤í‚¹ ë£¸ì€ "+GET("HAIR_SLOT")+"ê°œ#k#n ìž…ë‹ˆë‹¤.\r\n";
 			for(i = 0; i < maxHairSlot; i++)
 			{
 				if(getHairSlot(i))
 				{
 					if(GET("HAIR_SLOT_"+i+"") == 0)
 					{
-						selStr += "#L"+i+"##dÀÌ ¸¶³×Å· ·ëÀº ÇöÀç ºñ¾îÀÖ½À´Ï´Ù.#k\r\n";
+						selStr += "#L"+i+"##dì´ ë§ˆë„¤í‚¹ ë£¸ì€ í˜„ìž¬ ë¹„ì–´ìžˆìŠµë‹ˆë‹¤.#k\r\n";
 					}
 					else
 					{
-						selStr += "#L"+i+"##d#eÀúÀåµÊ:#n #t"+GET("HAIR_SLOT_"+i+"")+"##l\r\n";
+						selStr += "#L"+i+"##d#eì €ìž¥ë¨:#n #t"+GET("HAIR_SLOT_"+i+"")+"##l\r\n";
 					}
 				}
 				else
 				{
-					selStr += "#L"+i+"##Cgray#(¾ÆÁ÷ »ç¿ëÇÒ ¼ö ¾ø´Â ¸¶³×Å· ·ëÀÔ´Ï´Ù.)#k\r\n";
+					selStr += "#L"+i+"##Cgray#(ì•„ì§ ì‚¬ìš©í•  ìˆ˜ ì—†ëŠ” ë§ˆë„¤í‚¹ ë£¸ìž…ë‹ˆë‹¤.)#k\r\n";
 				}
 			}
 			cm.sendSimpleS(selStr, 4, 1012117);
 			break;
 
 			case 1:
-			selStr = "#b#e#h ##k#n´ÔÀÇ ¾ó±¼ ¸¶³×Å· ·ëÀÔ´Ï´Ù.\r\nÇöÀç #e#rÈ°¼ºµÈ ¸¶³×Å· ·ëÀº "+GET("FACE_SLOT")+"°³#k#n ÀÔ´Ï´Ù.\r\n";
+			selStr = "#b#e#h ##k#në‹˜ì˜ ì–¼êµ´ ë§ˆë„¤í‚¹ ë£¸ìž…ë‹ˆë‹¤.\r\ní˜„ìž¬ #e#rí™œì„±ëœ ë§ˆë„¤í‚¹ ë£¸ì€ "+GET("FACE_SLOT")+"ê°œ#k#n ìž…ë‹ˆë‹¤.\r\n";
 			for(i = 0; i < maxFaceSlot; i++)
 			{
 				if(getFaceSlot(i))
 				{
 					if(GET("FACE_SLOT_"+i+"") == 0)
 					{
-						selStr += "#L"+i+"##dÀÌ ¸¶³×Å· ·ëÀº ÇöÀç ºñ¾îÀÖ½À´Ï´Ù.#k\r\n";
+						selStr += "#L"+i+"##dì´ ë§ˆë„¤í‚¹ ë£¸ì€ í˜„ìž¬ ë¹„ì–´ìžˆìŠµë‹ˆë‹¤.#k\r\n";
 					}
 					else
 					{
-						selStr += "#L"+i+"##dÀúÀåµÊ: #t"+GET("FACE_SLOT_"+i+"")+"##l\r\n";
+						selStr += "#L"+i+"##dì €ìž¥ë¨: #t"+GET("FACE_SLOT_"+i+"")+"##l\r\n";
 					}
 				}
 				else
 				{
-					selStr += "#L"+i+"##Cgray#(¾ÆÁ÷ »ç¿ëÇÒ ¼ö ¾ø´Â ¸¶³×Å· ·ëÀÔ´Ï´Ù.)#k\r\n";
+					selStr += "#L"+i+"##Cgray#(ì•„ì§ ì‚¬ìš©í•  ìˆ˜ ì—†ëŠ” ë§ˆë„¤í‚¹ ë£¸ìž…ë‹ˆë‹¤.)#k\r\n";
 				}
 			}
 			cm.sendSimpleS(selStr, 4, 1012117);
@@ -140,21 +140,21 @@ function action(M, T, S)
 			case 2:
 			if(GET("HAIR_SLOT").equals(maxHairSlot))
 			{
-				cm.sendOkS("´õ ÀÌ»ó ¸Ó¸® ¸¶³×Å· ·ëÀ» #e#rÈ®ÀåÇÒ ¼ö ¾ø½À´Ï´Ù.#k#n\r\n¸Ó¸® ¸¶³×Å· ·ëÀº #e#r"+maxHairSlot+"°³#k#n±îÁö È®Àå °¡´ÉÇÕ´Ï´Ù.", 4, 1012117);
+				cm.sendOkS("ë” ì´ìƒ ë¨¸ë¦¬ ë§ˆë„¤í‚¹ ë£¸ì„ #e#rí™•ìž¥í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.#k#n\r\në¨¸ë¦¬ ë§ˆë„¤í‚¹ ë£¸ì€ #e#r"+maxHairSlot+"ê°œ#k#nê¹Œì§€ í™•ìž¥ ê°€ëŠ¥í•©ë‹ˆë‹¤.", 4, 1012117);
 				cm.dispose();
 				return;
 			}
-			cm.sendYesNoS("Á¤¸» #e#r"+Number(GET("HAIR_SLOT") + 1)+"¹ø ¸Ó¸® ¸¶³×Å· ·ë#k#nÀ» È®ÀåÇÏ½Ã°Ú¾î¿ä?\r\n#e#r"+Comma(addHairCost)+" ¸Þ¼Ò#k#n°¡ ÇÊ¿äÇÏ´ä´Ï´Ù.", 4, 1012117);
+			cm.sendYesNoS("ì •ë§ #e#r"+Number(GET("HAIR_SLOT") + 1)+"ë²ˆ ë¨¸ë¦¬ ë§ˆë„¤í‚¹ ë£¸#k#nì„ í™•ìž¥í•˜ì‹œê² ì–´ìš”?\r\n#e#r"+Comma(addHairCost)+" ë©”ì†Œ#k#nê°€ í•„ìš”í•˜ë‹µë‹ˆë‹¤.", 4, 1012117);
 			break;
 
 			case 3:
 			if(GET("FACE_SLOT").equals(maxFaceSlot))
 			{
-				cm.sendOkS("´õ ÀÌ»ó ¾ó±¼ ¸¶³×Å· ·ëÀ» #e#rÈ®ÀåÇÒ ¼ö ¾ø½À´Ï´Ù.#k#n\r\n¾ó±¼ ¸¶³×Å· ·ëÀº #e#r"+maxFaceSlot+"°³#k#n±îÁö È®Àå °¡´ÉÇÕ´Ï´Ù.", 4, 1012117);
+				cm.sendOkS("ë” ì´ìƒ ì–¼êµ´ ë§ˆë„¤í‚¹ ë£¸ì„ #e#rí™•ìž¥í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.#k#n\r\nì–¼êµ´ ë§ˆë„¤í‚¹ ë£¸ì€ #e#r"+maxFaceSlot+"ê°œ#k#nê¹Œì§€ í™•ìž¥ ê°€ëŠ¥í•©ë‹ˆë‹¤.", 4, 1012117);
 				cm.dispose();
 				return;
 			}
-			cm.sendYesNoS("Á¤¸» #e#r"+Number(GET("FACE_SLOT") + 1)+"¹ø ¾ó±¼ ¸¶³×Å· ·ë#k#nÀ» È®ÀåÇÏ½Ã°Ú¾î¿ä?\r\n#e#r"+Comma(addFaceCost)+" ¸Þ¼Ò#k#n°¡ ÇÊ¿äÇÏ´ä´Ï´Ù.", 4, 1012117);
+			cm.sendYesNoS("ì •ë§ #e#r"+Number(GET("FACE_SLOT") + 1)+"ë²ˆ ì–¼êµ´ ë§ˆë„¤í‚¹ ë£¸#k#nì„ í™•ìž¥í•˜ì‹œê² ì–´ìš”?\r\n#e#r"+Comma(addFaceCost)+" ë©”ì†Œ#k#nê°€ í•„ìš”í•˜ë‹µë‹ˆë‹¤.", 4, 1012117);
 			break;
 
 			default:
@@ -170,19 +170,19 @@ function action(M, T, S)
 			case 0:
 			if(!getHairSlot(dummySelect))
 			{
-				cm.sendOkS("¾ÆÁ÷ #e#r»ç¿ëÇÒ ¼ö ¾ø´Â ¸¶³×Å· ·ë#k#nÀÔ´Ï´Ù.\r\n¸¶³×Å· ·ëÀº ¸Þ¼Ò¸¦ ÁöºÒÇÏ°í È®ÀåÇÒ ¼ö ÀÖ½À´Ï´Ù.", 4, 1012117);
+				cm.sendOkS("ì•„ì§ #e#rì‚¬ìš©í•  ìˆ˜ ì—†ëŠ” ë§ˆë„¤í‚¹ ë£¸#k#nìž…ë‹ˆë‹¤.\r\në§ˆë„¤í‚¹ ë£¸ì€ ë©”ì†Œë¥¼ ì§€ë¶ˆí•˜ê³  í™•ìž¥í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.", 4, 1012117);
 				cm.dispose();
 				return;
 			}
 			if(GET("HAIR_SLOT_"+dummySelect+"") == 0)
 			{
-				cm.sendYesNoS("Áö±Ý #h #´ÔÀÇ ¸Ó¸®´Â #b#e#t"+cm.getPlayer().getHair()+"##k#nÀÔ´Ï´Ù.\r\nÀÌ ¸Ó¸®¸¦ #e#r"+Number(1 + dummySelect)+"¹ø ¸¶³×Å· ·ë#k#n¿¡ ÀúÀåÇÏ½Ã°Ú¾î¿ä?",  4, 1012117);
+				cm.sendYesNoS("ì§€ê¸ˆ #h #ë‹˜ì˜ ë¨¸ë¦¬ëŠ” #b#e#t"+cm.getPlayer().getHair()+"##k#nìž…ë‹ˆë‹¤.\r\nì´ ë¨¸ë¦¬ë¥¼ #e#r"+Number(1 + dummySelect)+"ë²ˆ ë§ˆë„¤í‚¹ ë£¸#k#nì— ì €ìž¥í•˜ì‹œê² ì–´ìš”?",  4, 1012117);
 			}
 			else
 			{
-				cm.sendSimpleS("#e#r"+Number(1 + dummySelect)+"¹ø ¸¶³×Å· ·ë#k#n¿¡´Â ÇöÀç #b#e#t"+GET("HAIR_SLOT_"+dummySelect+"")+"##k#n°¡ ÀúÀåµÇ¾îÀÖ½À´Ï´Ù. ¹«¾ùÀ» ÇÏ½Ã°Ú½À´Ï±î?\r\n#b"
-					+ "#L0#(Àû¿ëÁß) #e#t"+cm.getPlayer().getHair()+"##n ÀúÀåÇÏ±â#l\r\n"
-					+ "#L1#(ÀúÀåµÊ) #e#t"+GET("HAIR_SLOT_"+dummySelect+"")+"##n Àû¿ëÇÏ±â#l\r\n", 4, 1012117);
+				cm.sendSimpleS("#e#r"+Number(1 + dummySelect)+"ë²ˆ ë§ˆë„¤í‚¹ ë£¸#k#nì—ëŠ” í˜„ìž¬ #b#e#t"+GET("HAIR_SLOT_"+dummySelect+"")+"##k#nê°€ ì €ìž¥ë˜ì–´ìžˆìŠµë‹ˆë‹¤. ë¬´ì—‡ì„ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\r\n#b"
+					+ "#L0#(ì ìš©ì¤‘) #e#t"+cm.getPlayer().getHair()+"##n ì €ìž¥í•˜ê¸°#l\r\n"
+					+ "#L1#(ì €ìž¥ë¨) #e#t"+GET("HAIR_SLOT_"+dummySelect+"")+"##n ì ìš©í•˜ê¸°#l\r\n", 4, 1012117);
 
 			}
 			break;
@@ -190,19 +190,19 @@ function action(M, T, S)
 			case 1:
 			if(!getFaceSlot(dummySelect))
 			{
-				cm.sendOkS("¾ÆÁ÷ #e#r»ç¿ëÇÒ ¼ö ¾ø´Â ¸¶³×Å· ·ë#k#nÀÔ´Ï´Ù.\r\n¸¶³×Å· ·ëÀº ¸Þ¼Ò¸¦ ÁöºÒÇÏ°í È®ÀåÇÒ ¼ö ÀÖ½À´Ï´Ù.", 4, 1012117);
+				cm.sendOkS("ì•„ì§ #e#rì‚¬ìš©í•  ìˆ˜ ì—†ëŠ” ë§ˆë„¤í‚¹ ë£¸#k#nìž…ë‹ˆë‹¤.\r\në§ˆë„¤í‚¹ ë£¸ì€ ë©”ì†Œë¥¼ ì§€ë¶ˆí•˜ê³  í™•ìž¥í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.", 4, 1012117);
 				cm.dispose();
 				return;
 			}
 			if(GET("FACE_SLOT_"+dummySelect+"") == 0)
 			{
-				cm.sendYesNoS("Áö±Ý #h #´ÔÀÇ ¾ó±¼Àº #b#e#t"+cm.getPlayer().getFace()+"##k#nÀÔ´Ï´Ù.\r\nÀÌ ¾ó±¼À» #e#r"+Number(1 + dummySelect)+"¹ø ¸¶³×Å· ·ë#k#n¿¡ ÀúÀåÇÏ½Ã°Ú¾î¿ä?",  4, 1012117);
+				cm.sendYesNoS("ì§€ê¸ˆ #h #ë‹˜ì˜ ì–¼êµ´ì€ #b#e#t"+cm.getPlayer().getFace()+"##k#nìž…ë‹ˆë‹¤.\r\nì´ ì–¼êµ´ì„ #e#r"+Number(1 + dummySelect)+"ë²ˆ ë§ˆë„¤í‚¹ ë£¸#k#nì— ì €ìž¥í•˜ì‹œê² ì–´ìš”?",  4, 1012117);
 			}
 			else
 			{
-				cm.sendSimpleS("#e#r"+Number(1 + dummySelect)+"¹ø ¸¶³×Å· ·ë#k#n¿¡´Â ÇöÀç #b#e#t"+GET("FACE_SLOT_"+dummySelect+"")+"##k#nÀÌ ÀúÀåµÇ¾îÀÖ½À´Ï´Ù. ¹«¾ùÀ» ÇÏ½Ã°Ú½À´Ï±î?\r\n#b"
-					+ "#L0#(Àû¿ëÁß) #e#t"+cm.getPlayer().getFace()+"##n ÀúÀåÇÏ±â#l\r\n"
-					+ "#L1#(ÀúÀåµÊ) #e#t"+GET("FACE_SLOT_"+dummySelect+"")+"##n Àû¿ëÇÏ±â#l\r\n", 4, 1012117);
+				cm.sendSimpleS("#e#r"+Number(1 + dummySelect)+"ë²ˆ ë§ˆë„¤í‚¹ ë£¸#k#nì—ëŠ” í˜„ìž¬ #b#e#t"+GET("FACE_SLOT_"+dummySelect+"")+"##k#nì´ ì €ìž¥ë˜ì–´ìžˆìŠµë‹ˆë‹¤. ë¬´ì—‡ì„ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\r\n#b"
+					+ "#L0#(ì ìš©ì¤‘) #e#t"+cm.getPlayer().getFace()+"##n ì €ìž¥í•˜ê¸°#l\r\n"
+					+ "#L1#(ì €ìž¥ë¨) #e#t"+GET("FACE_SLOT_"+dummySelect+"")+"##n ì ìš©í•˜ê¸°#l\r\n", 4, 1012117);
 
 			}
 			break;
@@ -210,28 +210,28 @@ function action(M, T, S)
 			case 2:
 			if(cm.getMeso() < addHairCost)
 			{
-				cm.sendOkS("#e#r"+Number(1 + GET("HAIR_SLOT"))+"¹ø ¸Ó¸® ¸¶³×Å· ·ë#k#nÀ» È®ÀåÇÒ ¼ö ¾ø½À´Ï´Ù.\r\n¸¶³×Å· ·ë È®Àå¿¡´Â #e#r"+Comma(addHairCost)+" ¸Þ¼Ò#k#n°¡ ÇÊ¿äÇÕ´Ï´Ù.", 4, 1012117);
+				cm.sendOkS("#e#r"+Number(1 + GET("HAIR_SLOT"))+"ë²ˆ ë¨¸ë¦¬ ë§ˆë„¤í‚¹ ë£¸#k#nì„ í™•ìž¥í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.\r\në§ˆë„¤í‚¹ ë£¸ í™•ìž¥ì—ëŠ” #e#r"+Comma(addHairCost)+" ë©”ì†Œ#k#nê°€ í•„ìš”í•©ë‹ˆë‹¤.", 4, 1012117);
 				cm.dispose();
 				return;
 			}
 			cm.gainMeso(-addHairCost);
 			SET("HAIR_SLOT", Number(GET("HAIR_SLOT") + 1));
 			SET("HAIR_SLOT_"+Number(GET("HAIR_SLOT") - 1)+"", 0);
-			cm.sendOkS("ÀÌÁ¦ #e#r"+GET("HAIR_SLOT")+"¹ø ¸Ó¸® ¸¶³×Å· ·ë#k#nÀ» ÀÌ¿ëÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.\r\n¸Ó¸® ¸¶³×Å· ·ëÀº #e#rÃÖ´ë "+maxHairSlot+"°³ ±îÁö È®Àå#k#nÇÒ ¼ö ÀÖ½À´Ï´Ù.", 4, 1012117);
+			cm.sendOkS("ì´ì œ #e#r"+GET("HAIR_SLOT")+"ë²ˆ ë¨¸ë¦¬ ë§ˆë„¤í‚¹ ë£¸#k#nì„ ì´ìš©í•˜ì‹¤ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.\r\në¨¸ë¦¬ ë§ˆë„¤í‚¹ ë£¸ì€ #e#rìµœëŒ€ "+maxHairSlot+"ê°œ ê¹Œì§€ í™•ìž¥#k#ní•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.", 4, 1012117);
 			cm.dispose();
 			break;
 
 			case 3:
 			if(cm.getMeso() < addFaceCost)
 			{
-				cm.sendOkS("#e#r"+Number(1 + GET("FACE_SLOT"))+"¹ø ¾ó±¼ ¸¶³×Å· ·ë#k#nÀ» È®ÀåÇÒ ¼ö ¾ø½À´Ï´Ù.\r\n¸¶³×Å· ·ë È®Àå¿¡´Â #e#r"+Comma(addFaceCost)+" ¸Þ¼Ò#k#n°¡ ÇÊ¿äÇÕ´Ï´Ù.", 4, 1012117);
+				cm.sendOkS("#e#r"+Number(1 + GET("FACE_SLOT"))+"ë²ˆ ì–¼êµ´ ë§ˆë„¤í‚¹ ë£¸#k#nì„ í™•ìž¥í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.\r\në§ˆë„¤í‚¹ ë£¸ í™•ìž¥ì—ëŠ” #e#r"+Comma(addFaceCost)+" ë©”ì†Œ#k#nê°€ í•„ìš”í•©ë‹ˆë‹¤.", 4, 1012117);
 				cm.dispose();
 				return;
 			}
 			cm.gainMeso(-addFaceCost);
 			SET("FACE_SLOT", Number(GET("FACE_SLOT") + 1));
 			SET("FACE_SLOT_"+Number(GET("FACE_SLOT") - 1)+"", 0);
-			cm.sendOkS("ÀÌÁ¦ #e#r"+GET("FACE_SLOT")+"¹ø ¾ó±¼ ¸¶³×Å· ·ë#k#nÀ» ÀÌ¿ëÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.\r\n¾ó±¼ ¸¶³×Å· ·ëÀº #e#rÃÖ´ë "+maxFaceSlot+"°³ ±îÁö È®Àå#k#nÇÒ ¼ö ÀÖ½À´Ï´Ù.", 4, 1012117);
+			cm.sendOkS("ì´ì œ #e#r"+GET("FACE_SLOT")+"ë²ˆ ì–¼êµ´ ë§ˆë„¤í‚¹ ë£¸#k#nì„ ì´ìš©í•˜ì‹¤ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.\r\nì–¼êµ´ ë§ˆë„¤í‚¹ ë£¸ì€ #e#rìµœëŒ€ "+maxFaceSlot+"ê°œ ê¹Œì§€ í™•ìž¥#k#ní•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.", 4, 1012117);
 			cm.dispose();
 			break;
 
@@ -250,7 +250,7 @@ function action(M, T, S)
 			if(GET("HAIR_SLOT_"+dummySelect+"") == 0)
 			{
 				SET("HAIR_SLOT_"+dummySelect+"", cm.getPlayer().getHair());
-				cm.sendOkS("#e#r"+Number(1 + dummySelect)+"¹ø ¸¶³×Å· ·ë#k#n¿¡ #e#b#t"+cm.getPlayer().getHair()+"##k#n°¡ ÀúÀåµÇ¾ú½À´Ï´Ù.", 4, 1012117);
+				cm.sendOkS("#e#r"+Number(1 + dummySelect)+"ë²ˆ ë§ˆë„¤í‚¹ ë£¸#k#nì— #e#b#t"+cm.getPlayer().getHair()+"##k#nê°€ ì €ìž¥ë˜ì—ˆìŠµë‹ˆë‹¤.", 4, 1012117);
 				cm.dispose();
 				return;
 			}
@@ -260,13 +260,13 @@ function action(M, T, S)
 				{
 					case 0:
 					SET("HAIR_SLOT_"+dummySelect+"", cm.getPlayer().getHair());
-					cm.sendOkS("#e#r"+Number(1 + dummySelect)+"¹ø ¸¶³×Å· ·ë#k#n¿¡ #e#b#t"+cm.getPlayer().getHair()+"##k#n°¡ ÀúÀåµÇ¾ú½À´Ï´Ù.", 4, 1012117);
+					cm.sendOkS("#e#r"+Number(1 + dummySelect)+"ë²ˆ ë§ˆë„¤í‚¹ ë£¸#k#nì— #e#b#t"+cm.getPlayer().getHair()+"##k#nê°€ ì €ìž¥ë˜ì—ˆìŠµë‹ˆë‹¤.", 4, 1012117);
 					cm.dispose();
 					break;
 
 					case 1:
 					cm.setAvatar(0, GET("HAIR_SLOT_"+dummySelect+""));
-					cm.sendOkS("#e#r"+Number(1 + dummySelect)+"¹ø ¸¶³×Å· ·ë#k#n¿¡ ÀÖ´ø #e#b#t"+cm.getPlayer().getHair()+"##k#n°¡ Àû¿ëµÇ¾ú½À´Ï´Ù.", 4, 1012117);
+					cm.sendOkS("#e#r"+Number(1 + dummySelect)+"ë²ˆ ë§ˆë„¤í‚¹ ë£¸#k#nì— ìžˆë˜ #e#b#t"+cm.getPlayer().getHair()+"##k#nê°€ ì ìš©ë˜ì—ˆìŠµë‹ˆë‹¤.", 4, 1012117);
 					cm.dispose();
 					break;
 
@@ -282,7 +282,7 @@ function action(M, T, S)
 			if(GET("FACE_SLOT_"+dummySelect+"") == 0)
 			{
 				SET("FACE_SLOT_"+dummySelect+"", cm.getPlayer().getFace());
-				cm.sendOkS("#e#r"+Number(1 + dummySelect)+"¹ø ¸¶³×Å· ·ë#k#n¿¡ #e#b#t"+cm.getPlayer().getFace()+"##k#nÀÌ ÀúÀåµÇ¾ú½À´Ï´Ù.", 4, 1012117);
+				cm.sendOkS("#e#r"+Number(1 + dummySelect)+"ë²ˆ ë§ˆë„¤í‚¹ ë£¸#k#nì— #e#b#t"+cm.getPlayer().getFace()+"##k#nì´ ì €ìž¥ë˜ì—ˆìŠµë‹ˆë‹¤.", 4, 1012117);
 				cm.dispose();
 				return;
 			}
@@ -292,13 +292,13 @@ function action(M, T, S)
 				{
 					case 0:
 					SET("FACE_SLOT_"+dummySelect+"", cm.getPlayer().getFace());
-					cm.sendOkS("#e#r"+Number(1 + dummySelect)+"¹ø ¸¶³×Å· ·ë#k#n¿¡ #e#b#t"+cm.getPlayer().getFace()+"##k#nÀÌ ÀúÀåµÇ¾ú½À´Ï´Ù.", 4, 1012117);
+					cm.sendOkS("#e#r"+Number(1 + dummySelect)+"ë²ˆ ë§ˆë„¤í‚¹ ë£¸#k#nì— #e#b#t"+cm.getPlayer().getFace()+"##k#nì´ ì €ìž¥ë˜ì—ˆìŠµë‹ˆë‹¤.", 4, 1012117);
 					cm.dispose();
 					break;
 
 					case 1:
 					cm.setAvatar(0, GET("FACE_SLOT_"+dummySelect+""));
-					cm.sendOkS("#e#r"+Number(1 + dummySelect)+"¹ø ¸¶³×Å· ·ë#k#n¿¡ ÀÖ´ø #e#b#t"+cm.getPlayer().getFace()+"##k#nÀÌ Àû¿ëµÇ¾ú½À´Ï´Ù.", 4, 1012117);
+					cm.sendOkS("#e#r"+Number(1 + dummySelect)+"ë²ˆ ë§ˆë„¤í‚¹ ë£¸#k#nì— ìžˆë˜ #e#b#t"+cm.getPlayer().getFace()+"##k#nì´ ì ìš©ë˜ì—ˆìŠµë‹ˆë‹¤.", 4, 1012117);
 					cm.dispose();
 					break;
 

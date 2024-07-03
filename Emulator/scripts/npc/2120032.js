@@ -1,8 +1,8 @@
 /*
 
-	Á¦ÀÛ Àè½¼¿Â¶óÀÎ
-	2Â÷¼öÁ¤ Ä¡ ¿ì ¾¾ : projectchiu16@nate.com
-	3Â÷¼öÁ¤ »ç ¶ó ¼¾ : saracen_dev@nate.com
+	ì œì‘ ì­ìŠ¨ì˜¨ë¼ì¸
+	2ì°¨ìˆ˜ì • ì¹˜ ìš° ì”¨ : projectchiu16@nate.com
+	3ì°¨ìˆ˜ì • ì‚¬ ë¼ ì„¼ : saracen_dev@nate.com
 
 */
 
@@ -10,11 +10,11 @@ var k = "#fUI/StarCityUI.img/GradeInfo/icon_ss/0#"
 
 function start() {
  if (true) {
-	    var chat = "#fUI/UIMiniGame.img/custom/check# #fn³ª´®°íµñ Extrabold##fs17##b[System 1]#n\r\n";
+	    var chat = "#fUI/UIMiniGame.img/custom/check# #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17##b[System 1]#n\r\n";
             chat += "#fs13##k#e#L1#"+k+"Delivery#l#L2#"+k+"EQPBKP#L3#"+k+"Storage#l#L4#"+k+"Exchange#l#n\r\n\r\n";
-            chat += "#fUI/UIMiniGame.img/custom/check# #fn³ª´®°íµñ Extrabold##fs17##b[System 2]#n\r\n";
+            chat += "#fUI/UIMiniGame.img/custom/check# #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17##b[System 2]#n\r\n";
             chat += "#fs13##k#e#L5#"+k+"Pet Shop#l#L6#"+k+"Bank#l#L7#"+k+"Rank#l#L8#"+k+"Guild#l#n\r\n\r\n";
-			chat += "#fUI/UIMiniGame.img/custom/check# #fn³ª´®°íµñ Extrabold##fs17##b[System 3]#n\r\n";
+			chat += "#fUI/UIMiniGame.img/custom/check# #fnë‚˜ëˆ”ê³ ë”• Extrabold##fs17##b[System 3]#n\r\n";
             chat += "#fs13##k#e#L9#"+k+"Attendence#l#L10#"+k+"Cash Search#L11#"+k+"RemoveQs#l\r\n#L12#"+k+"Gift#l#n\r\n\r\n";
             chat += "#fs13##k#e#L13#"+k+"Beauty#l#L14#"+k+"Premium Search#L15#"+k+"Reset Item\r\n#L16#"+k+"Zero Beauty#k#l";
 

@@ -2,16 +2,16 @@ var eventmapid = 931050800;
 var returnmap = 1000000;
 
 var monster = new Array(
-	2220000, //¸¶³ë
-	6130101, //¸Ó½¬¸¾
-	6300005, //ºí·ç¸Ó½¬¸¾
-	8220007, //Á»ºñ¸Ó½¬¸¾
-	3220000, //½ºÅÒÇÇ
-	9300003, //Å·½½¶óÀÓ
-	6220000, //´ÙÀÏ
-	3300005, //±×·¹ÀÌ¿¹Æ¼¿Í ÆäÆäÅ·
-	3300006, //°ñµå¿¹Æ¼¿Í ÆäÆäÅ·
-	3300007 //È­ÀÌÆ®¿¹Æ¼¿Í ÆäÆäÅ·
+	2220000, //ë§ˆë…¸
+	6130101, //ë¨¸ì‰¬ë§˜
+	6300005, //ë¸”ë£¨ë¨¸ì‰¬ë§˜
+	8220007, //ì¢€ë¹„ë¨¸ì‰¬ë§˜
+	3220000, //ìŠ¤í…€í”¼
+	9300003, //í‚¹ìŠ¬ë¼ì„
+	6220000, //ë‹¤ì¼
+	3300005, //ê·¸ë ˆì´ì˜ˆí‹°ì™€ í˜í˜í‚¹
+	3300006, //ê³¨ë“œì˜ˆí‹°ì™€ í˜í˜í‚¹
+	3300007 //í™”ì´íŠ¸ì˜ˆí‹°ì™€ í˜í˜í‚¹
     );
 
 function init() {
@@ -46,16 +46,16 @@ function monsterSpawn(eim) { // Custom function
 
     eim.registerMonster(mob);
     switch (monsterid) {
-	case 2220000: //¸¶³ë
-	case 6130101: //¸Ó½¬¸¾
-	case 6300005: //ºí·ç¸Ó½¬¸¾
-	case 8220007: //Á»ºñ¸Ó½¬¸¾
-	case 3220000: //½ºÅÒÇÇ
-	case 9300003: //Å·½½¶óÀÓ
-	case 6220000: //´ÙÀÏ
-	case 3300005: //±×·¹ÀÌ¿¹Æ¼¿Í ÆäÆäÅ·
-	case 3300006: //°ñµå¿¹Æ¼¿Í ÆäÆäÅ·
-	case 3300007: //È­ÀÌÆ®¿¹Æ¼¿Í ÆäÆäÅ·
+	case 2220000: //ë§ˆë…¸
+	case 6130101: //ë¨¸ì‰¬ë§˜
+	case 6300005: //ë¸”ë£¨ë¨¸ì‰¬ë§˜
+	case 8220007: //ì¢€ë¹„ë¨¸ì‰¬ë§˜
+	case 3220000: //ìŠ¤í…€í”¼
+	case 9300003: //í‚¹ìŠ¬ë¼ì„
+	case 6220000: //ë‹¤ì¼
+	case 3300005: //ê·¸ë ˆì´ì˜ˆí‹°ì™€ í˜í˜í‚¹
+	case 3300006: //ê³¨ë“œì˜ˆí‹°ì™€ í˜í˜í‚¹
+	case 3300007: //í™”ì´íŠ¸ì˜ˆí‹°ì™€ í˜í˜í‚¹
 	    var modified = em.newMonsterStats();
 	    modified.setOExp(mob.getMobExp() * 10);
 	    modified.setOHp(mob.getMobMaxHp() * 30);
@@ -102,19 +102,19 @@ function allMonstersDead(eim) {
     eim.restartEventTimer(3000);
 
     var mobnum = parseInt(eim.getProperty("monster_number"));
-    var num = mobnum * 5; // 275 Æ÷ÀÎÆ®¸¦ »ç³ÉÀ¸·Î È¹µæÇÕ´Ï´Ù.
+    var num = mobnum * 5; // 275 í¬ì¸íŠ¸ë¥¼ ì‚¬ëƒ¥ìœ¼ë¡œ íšë“í•©ë‹ˆë‹¤.
     var totalp = parseInt(eim.getProperty("points")) + num;
 
     eim.setProperty("points", totalp);
 //
-    eim.broadcastPlayerMsg(5, "[¾Ë¸²] ½ºÅ×ÀÌÁö¸¦ Å¬¸®¾îÇÏ¼Ì½À´Ï´Ù. º¸»óÀ¸·Î " + num + "BP¸¦ ¾ò¾ú½À´Ï´Ù. [½ºÅ×ÀÌÁö BP : " + totalp + "]");
+    eim.broadcastPlayerMsg(5, "[ì•Œë¦¼] ìŠ¤í…Œì´ì§€ë¥¼ í´ë¦¬ì–´í•˜ì…¨ìŠµë‹ˆë‹¤. ë³´ìƒìœ¼ë¡œ " + num + "BPë¥¼ ì–»ì—ˆìŠµë‹ˆë‹¤. [ìŠ¤í…Œì´ì§€ BP : " + totalp + "]");
 
     eim.saveBossQuest(num); 
 
     if (mobnum < monster.length) {
 } else {
-	eim.saveBossQuest(225); // º¸³Ê½º Æ÷ÀÎÆ®
-	eim.broadcastPlayerMsg(2, "[Ch.1] GM¼¼ÀÌ¹ö : ÃàÇÏÇÕ´Ï´Ù. ¿¢½ºÆÛÆ® ¸ğµå¸¦ Å¬¸®¾îÇÏ¼Ì½À´Ï´Ù. [Å¬¸®¾î BP : 500] ¹İµå½Ã ÅğÀå ÈÄ Ã¤ÆÃÃ¢¿¡ <@·¢>À» ÀÔ·ÂÇØÁÖ¼¼¿ä!");
+	eim.saveBossQuest(225); // ë³´ë„ˆìŠ¤ í¬ì¸íŠ¸
+	eim.broadcastPlayerMsg(2, "[Ch.1] GMì„¸ì´ë²„ : ì¶•í•˜í•©ë‹ˆë‹¤. ì—‘ìŠ¤í¼íŠ¸ ëª¨ë“œë¥¼ í´ë¦¬ì–´í•˜ì…¨ìŠµë‹ˆë‹¤. [í´ë¦¬ì–´ BP : 500] ë°˜ë“œì‹œ í‡´ì¥ í›„ ì±„íŒ…ì°½ì— <@ë™>ì„ ì…ë ¥í•´ì£¼ì„¸ìš”!");
     }
 // When invoking unregisterMonster(MapleMonster mob) OR killed
 // Happens only when size = 0

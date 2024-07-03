@@ -24,10 +24,10 @@ function action(mode, type, selection) {
             cm.dispose();
             return;
         }
-        cm.sendYesNo("¹¹? ¹ú½á ³ª°¡°Ú´Ù°í? Á¤¸» ³ª°¡°í ½ÍÀº°¡?");
+        cm.sendYesNo("ë­? ë²Œì¨ ë‚˜ê°€ê² ë‹¤ê³ ? ì •ë§ ë‚˜ê°€ê³  ì‹¶ì€ê°€?");
         
     } else if (status == 1) {
-      cm.sendNext("ÀÌ·±.. ±Ù¼ºÀÌ ¾ø±¸¸Õ.. ¹¹ ³ª°¡°í ½Í´Ù¸é ³»º¸³» ÁÖ°Ú³×. ´ÙÀ½¿¡ ¶Ç º¸¼¼³ª.")  ;
+      cm.sendNext("ì´ëŸ°.. ê·¼ì„±ì´ ì—†êµ¬ë¨¼.. ë­ ë‚˜ê°€ê³  ì‹¶ë‹¤ë©´ ë‚´ë³´ë‚´ ì£¼ê² ë„¤. ë‹¤ìŒì— ë˜ ë³´ì„¸ë‚˜.")  ;
     } else if (status == 2) {
         var eim = cm.getPlayer().getEventInstance();
         if (cm.getPlayer().getParty() != null) {

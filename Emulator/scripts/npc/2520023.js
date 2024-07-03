@@ -3,19 +3,19 @@
 
 /*
 
-	* ´Ü¹®¿£ÇÇ½Ã ÀÚµ¿Á¦ÀÛ ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¸¸µé¾îÁø ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	* ë‹¨ë¬¸ì—”í”¼ì‹œ ìžë™ì œìž‘ ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ë§Œë“¤ì–´ì§„ ìŠ¤í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤.
 
 	* (Pure Online Development Source Script)
 
-	¼¼ÀÌ¹ö ¿¡ ÀÇÇØ ¸¸µé¾î Á³½À´Ï´Ù.
+	ì„¸ì´ë²„ ì— ì˜í•´ ë§Œë“¤ì–´ ì¡ŒìŠµë‹ˆë‹¤.
 
-	¿£ÇÇ½Ã¾ÆÀÌµð : 2520023
+	ì—”í”¼ì‹œì•„ì´ë”” : 2520023
 
-	¿£ÇÇ½Ã ÀÌ¸§ : ³ªÀÎÇÏÆ®
+	ì—”í”¼ì‹œ ì´ë¦„ : ë‚˜ì¸í•˜íŠ¸
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê :  :  (303090540)
+	ì—”í”¼ì‹œê°€ ìžˆëŠ” ë§µ :  :  (303090540)
 
-	¿£ÇÇ½Ã ¼³¸í : MISSINGNO
+	ì—”í”¼ì‹œ ì„¤ëª… : MISSINGNO
 
 
 */
@@ -41,7 +41,7 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        cm.sendOk("Á¦°¡ ¿©½Å´ÔÀÇ ¿ªÇÒÀ» ´ë½ÅÇÏ°ÚÁö¸¸. °ËÀº¸¶¹ý»ç¿¡ Èû¿¡ ºüÁö¼Å¼­..");
+        cm.sendOk("ì œê°€ ì—¬ì‹ ë‹˜ì˜ ì—­í• ì„ ëŒ€ì‹ í•˜ê² ì§€ë§Œ. ê²€ì€ë§ˆë²•ì‚¬ì— íž˜ì— ë¹ ì§€ì…”ì„œ..");
         cm.dispose();
         return;
     }

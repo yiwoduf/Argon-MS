@@ -14,8 +14,8 @@ function action(mode, type, selection) {
  win = "#fUI/UIWindow.img/RpsGame/win#"; 
  lose = "#fUI/UIWindow.img/RpsGame/lose#"; 
  draw = "#fUI/UIWindow.img/RpsGame/draw#"; 
- »ó´ë°¡À§¹ÙÀ§º¸ = ["#fUI/UIWindow.img/RpsGame/Frock#","#fUI/UIWindow.img/RpsGame/Fscissor#","#fUI/UIWindow.img/RpsGame/Fpaper#"]
- ÀÚ±â°¡À§¹ÙÀ§º¸ = ["#fUI/UIWindow.img/RpsGame/rock#","#fUI/UIWindow.img/RpsGame/scissor#","#fUI/UIWindow.img/RpsGame/paper#"]
+ ìƒëŒ€ê°€ìœ„ë°”ìœ„ë³´ = ["#fUI/UIWindow.img/RpsGame/Frock#","#fUI/UIWindow.img/RpsGame/Fscissor#","#fUI/UIWindow.img/RpsGame/Fpaper#"]
+ ìê¸°ê°€ìœ„ë°”ìœ„ë³´ = ["#fUI/UIWindow.img/RpsGame/rock#","#fUI/UIWindow.img/RpsGame/scissor#","#fUI/UIWindow.img/RpsGame/paper#"]
     if (mode == -1 || mode == 0) {
         cm.dispose();
         return;
@@ -25,36 +25,36 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        cm.sendYesNo("#b"+cm.getPlayer().getKeyValue("Rockgiver")+"#k´Ô²²¼­, °¡À§¹ÙÀ§º¸ ´ë°á ½ÅÃ»À» ÇÏ¼Ì½À´Ï´Ù.\r\n¼ö¶ôÇÏ½Ã°Ú½À´Ï±î?");
+        cm.sendYesNo("#b"+cm.getPlayer().getKeyValue("Rockgiver")+"#kë‹˜ê»˜ì„œ, ê°€ìœ„ë°”ìœ„ë³´ ëŒ€ê²° ì‹ ì²­ì„ í•˜ì…¨ìŠµë‹ˆë‹¤.\r\nìˆ˜ë½í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
     } else if (status == 1) {
          cm.getPlayer().setKeyValue("Rockresult",null);
          cm.getPlayer().setKeyValue("RockOk",1)
-         cm.sendSimple("¾Æ·¡¿¡¼­ ¼±ÅÃÇØÁÖ¼¼¿ä.\r\n\r\n"
+         cm.sendSimple("ì•„ë˜ì—ì„œ ì„ íƒí•´ì£¼ì„¸ìš”.\r\n\r\n"
                           +"#L0#"+rock+"#l#L1#"+scissor+"#L2#"+paper+"#l");
     } else if (status == 2) {
          if (selection != -1) {
          cm.getPlayer().setKeyValue("Rockresult",selection);
          }
-         cm.sendSimple(cm.getPlayer().getKeyValue("Rockresult")+"°á°ú¹ßÇ¥¸¦ ÇÏ°í ÀÖ½À´Ï´Ù...\r\n#L0# #b°á°ú°¡ ¹ßÇ¥µÇ¾ú´ÂÁö È®ÀÎ");
+         cm.sendSimple(cm.getPlayer().getKeyValue("Rockresult")+"ê²°ê³¼ë°œí‘œë¥¼ í•˜ê³  ìˆìŠµë‹ˆë‹¤...\r\n#L0# #bê²°ê³¼ê°€ ë°œí‘œë˜ì—ˆëŠ”ì§€ í™•ì¸");
      } else if (status == 3) {
          target = cm.getClient().getChannelServer().getPlayerStorage().getCharacterByName(cm.getPlayer().getKeyValue("Rockgiver"))
          if (target.getKeyValue("Rockresult") != null) {
             Myresult = cm.getPlayer().getKeyValue("Rockresult")
             Yourresult = target.getKeyValue("Rockresult");
             if ((Myresult == 0 && Yourresult == 1) || (Myresult == 1 && Yourresult == 2) || (Myresult == 2 && Yourresult == 0)) {
-                cm.sendOk("     #b»ó´ë#k"+»ó´ë°¡À§¹ÙÀ§º¸[Yourresult]+"VS"+ÀÚ±â°¡À§¹ÙÀ§º¸[Myresult]+"#r#h #\r\n"+win);
+                cm.sendOk("     #bìƒëŒ€#k"+ìƒëŒ€ê°€ìœ„ë°”ìœ„ë³´[Yourresult]+"VS"+ìê¸°ê°€ìœ„ë°”ìœ„ë³´[Myresult]+"#r#h #\r\n"+win);
                 
             } else if (Myresult == Yourresult) {
- 		cm.sendOk("     #b»ó´ë#k"+»ó´ë°¡À§¹ÙÀ§º¸[Yourresult]+"VS"+ÀÚ±â°¡À§¹ÙÀ§º¸[Myresult]+"#r#h #\r\n"+draw);
+ 		cm.sendOk("     #bìƒëŒ€#k"+ìƒëŒ€ê°€ìœ„ë°”ìœ„ë³´[Yourresult]+"VS"+ìê¸°ê°€ìœ„ë°”ìœ„ë³´[Myresult]+"#r#h #\r\n"+draw);
                 
             } else {
-		cm.sendOk("     #b»ó´ë#k"+»ó´ë°¡À§¹ÙÀ§º¸[Yourresult]+"VS"+ÀÚ±â°¡À§¹ÙÀ§º¸[Myresult]+"#r#h #\r\n"+lose);
+		cm.sendOk("     #bìƒëŒ€#k"+ìƒëŒ€ê°€ìœ„ë°”ìœ„ë³´[Yourresult]+"VS"+ìê¸°ê°€ìœ„ë°”ìœ„ë³´[Myresult]+"#r#h #\r\n"+lose);
                 
             }
 
             cm.dispose();
          } else {
-            cm.sendOk("¾ÆÁ÷ °á°ú°¡ Áı°èµÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+            cm.sendOk("ì•„ì§ ê²°ê³¼ê°€ ì§‘ê³„ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
             status -=2;
          }
     }

@@ -22,7 +22,7 @@ function action(mode, type, selection) {
 
     if (status == 0) {
        if(cm.getPlayer().getMeso() >= 2147483000) {; numberset = 2147483; } else {; numberset = cm.getPlayer().getMeso() / 150; }
-       cm.sendGetNumber("Ä³½ÃÃæÀüÀ» ÇÒ ¼ö ÀÖ´Â ÄÄÇ»ÅÍ´Ù.\r\n¸ğ´ÏÅÍ Ã¢¿¡ #r1Ä³½Ã´ç 150¸Ş¼Ò#k¶ó°í ½áÁ® ÀÖ´Â °Í °°´Ù.",1,1,numberset);
+       cm.sendGetNumber("ìºì‹œì¶©ì „ì„ í•  ìˆ˜ ìˆëŠ” ì»´í“¨í„°ë‹¤.\r\nëª¨ë‹ˆí„° ì°½ì— #r1ìºì‹œë‹¹ 150ë©”ì†Œ#kë¼ê³  ì¨ì ¸ ìˆëŠ” ê²ƒ ê°™ë‹¤.",1,1,numberset);
     } else if (status == 1) {
        cm.gainNX(selection);
        numberset2 = selection * 100

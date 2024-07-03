@@ -108,10 +108,10 @@ public class Skill implements ISkill {
                 }
                 isBuff = effect != null && hit == null && ball == null;
                 isBuff |= action_ != null && MapleDataTool.getString("0", action_, "").equals("alert2");
-                if (StringUtil.getLeftPaddedStr(String.valueOf(id / 10000), '0', 3).equals("8000")) { //º“øÔ, ∑È Ω∫≈≥ µÓ.
+                if (StringUtil.getLeftPaddedStr(String.valueOf(id / 10000), '0', 3).equals("8000")) { //ÏÜåÏö∏, Î£¨ Ïä§ÌÇ¨ Îì±.
                     isBuff = true;
                 }
-                if (MapleDataTool.getInt("attackCount", data, 0) > 0 || MapleDataTool.getInt("mobCount", data, 0) > 0 || MapleDataTool.getInt("damage", data, 0) > 0) { //∞¯∞› Ω∫≈≥.
+                if (MapleDataTool.getInt("attackCount", data, 0) > 0 || MapleDataTool.getInt("mobCount", data, 0) > 0 || MapleDataTool.getInt("damage", data, 0) > 0) { //Í≥µÍ≤© Ïä§ÌÇ¨.
                     isBuff = false;
                 } else if (id != 15001021 && id != 20041222 && id != 20051284 && id != 32121006 && id != 37000010 && id != 37001001 && id != 37101001 && id != 37111000 && id != 37110001 && id != 37111003 && id != 61121052 && id != 65121052) {
                     isBuff = true;
@@ -507,7 +507,7 @@ public class Skill implements ISkill {
         boolean result;
         if (is_ignore_master_level(id)
                 || is_professional_skill()
-                || ((this.id - get_skill_root_from_skill()) == 1054) //¿”¿« √ﬂ∞°.
+                || ((this.id - get_skill_root_from_skill()) == 1054) //ÏûÑÏùò Ï∂îÍ∞Ä.
                 || is_making_skill_recipe()
                 || is_common_skll()
                 || is_novice_skill()

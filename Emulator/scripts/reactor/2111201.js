@@ -6,5 +6,5 @@ function act()
 		rm.spawnMonster(i);
 	}
 	rm.spawnMonster(8800022);
-	rm.mapMessage("¿ø¼®ÀÇ ÈûÀ¸·Î ÀÚÄñÀÌ ¼ÒÈ¯µË´Ï´Ù.");
+	rm.mapMessage("ì›ì„ì˜ í˜ìœ¼ë¡œ ìì¿°ì´ ì†Œí™˜ë©ë‹ˆë‹¤.");
 }

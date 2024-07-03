@@ -1,19 +1,19 @@
 /*
-    @Author Çö½ÇµµÇÇ(dla3753@naver.com)
+    @Author í˜„ì‹¤ë„í”¼(dla3753@naver.com)
 */
 
 importPackage(java.lang);
 importPackage(Packages.client.items);
 
 var apink = -1;
-/* ÇÊ¿äÇÑ ¾ÆÀÌÅÛ / °³¼ö */
+/* í•„ìš”í•œ ì•„ì´í…œ / ê°œìˆ˜ */
 var jungeunji = [4001254,1];
 var kk = -1;
 
 function action(mode,type,selection) { (mode != 1) ? (cm.dispose() + apink--) : apink++;
     if (apink == 0) {
-        var chat = "#e25¼º°­È­#k¸¦ ´ã´çÇÏ´Â ¸®ÇÁ ¿î¿µÀÚÀÔ´Ï´Ù.   °­È­¿¡ ³¡Àº ¾ø½À´Ï´Ù. ´ç½Åµµ ½ÃÀÛÇØº¸¼¼¿ä\r\n°­È­Àç·á´Â #i4001254#ÀÔ´Ï´Ù.#b";
-        chat += "\r\n#L0#Àåºñ °­È­";
+        var chat = "#e25ì„±ê°•í™”#kë¥¼ ë‹´ë‹¹í•˜ëŠ” ë¦¬í”„ ìš´ì˜ìì…ë‹ˆë‹¤.   ê°•í™”ì— ëì€ ì—†ìŠµë‹ˆë‹¤. ë‹¹ì‹ ë„ ì‹œì‘í•´ë³´ì„¸ìš”\r\nê°•í™”ì¬ë£ŒëŠ” #i4001254#ì…ë‹ˆë‹¤.#b";
+        chat += "\r\n#L0#ì¥ë¹„ ê°•í™”";
         cm.sendSimple(chat);
     } else if (apink == 1) {
         var list = cm.getPlayer().getInventory(MapleInventoryType.EQUIP);
@@ -25,14 +25,14 @@ function action(mode,type,selection) { (mode != 1) ? (cm.dispose() + apink--) : 
                  string.append("#L" + i + "# #i").append(list.getItem(i).getItemId() + "# #b#t").append(list.getItem(i).getItemId() + "#").append("\r\n");
              }
         }   
-        check == true ? cm.sendSimple("°­È­ÇÏ½Ç Àåºñ ¾ÆÀÌÅÛÀ» ¼±ÅÃÇØÁÖ¼¼¿ä.\r\n" + string.toString()) : (cm.sendOk("´ëÈ­°¡ ¾ø½À´Ï´Ù.") , cm.dispose());
+        check == true ? cm.sendSimple("ê°•í™”í•˜ì‹¤ ì¥ë¹„ ì•„ì´í…œì„ ì„ íƒí•´ì£¼ì„¸ìš”.\r\n" + string.toString()) : (cm.sendOk("ëŒ€í™”ê°€ ì—†ìŠµë‹ˆë‹¤.") , cm.dispose());
     } else if (apink == 2) {
         kk = selection;
         var equip = cm.getPlayer().getInventory(MapleInventoryType.EQUIP);
         var eunji = equip.getItem(selection);
         var string = new StringBuilder();
-        string.append("#e¼±ÅÃÇÑ ¾ÆÀÌÅÛ : #n#i" + eunji.getItemId() + "##b#t" + eunji.getItemId() + "# #k\r\n").append("#eSTR : #n").append(eunji.getStr() + "\r\n").append("#eDEX : #n").append(eunji.getDex() + "\r\n").append("#eINT : #n").append(eunji.getInt() + "\r\n").append("#eLuk : #n").append(eunji.getLuk() + "\r\n");
-        cm.sendYesNo(string.toString() + "\r\nÁ¤¸»·Î ¾ÆÀÌÅÛÀ» °­È­ ÇÏ½Ã°Ú½À´Ï±î? ¾ÆÀÌÅÛÀ» °­È­ÇÒ½Ã °­È­ÇÑ ¾ÆÀÌÅÛ¿¡ #b¿Ã½ºÅİ#kÀÌ 500°ú °ø¸¶ 600ÀÌ ºÎ¿©µÇ¸ç ¾ÆÀÌÅÛÀ» °­È­ ÇÏ·Á¸é #r25¼ºÄÚÀÎ#k 1°³°¡ ÇÊ¿ä ÇÕ´Ï´Ù.");
+        string.append("#eì„ íƒí•œ ì•„ì´í…œ : #n#i" + eunji.getItemId() + "##b#t" + eunji.getItemId() + "# #k\r\n").append("#eSTR : #n").append(eunji.getStr() + "\r\n").append("#eDEX : #n").append(eunji.getDex() + "\r\n").append("#eINT : #n").append(eunji.getInt() + "\r\n").append("#eLuk : #n").append(eunji.getLuk() + "\r\n");
+        cm.sendYesNo(string.toString() + "\r\nì •ë§ë¡œ ì•„ì´í…œì„ ê°•í™” í•˜ì‹œê² ìŠµë‹ˆê¹Œ? ì•„ì´í…œì„ ê°•í™”í• ì‹œ ê°•í™”í•œ ì•„ì´í…œì— #bì˜¬ìŠ¤í…Ÿ#kì´ 500ê³¼ ê³µë§ˆ 600ì´ ë¶€ì—¬ë˜ë©° ì•„ì´í…œì„ ê°•í™” í•˜ë ¤ë©´ #r25ì„±ì½”ì¸#k 1ê°œê°€ í•„ìš” í•©ë‹ˆë‹¤.");
     } else if (apink == 3) {
         if (cm.haveItem(jungeunji[0],jungeunji[1]) == true) {
             var selected = cm.getPlayer().getInventory(MapleInventoryType.EQUIP).getItem(kk);
@@ -43,9 +43,9 @@ function action(mode,type,selection) { (mode != 1) ? (cm.dispose() + apink--) : 
             selected.setWatk(selected.getWatk() + 600);
             selected.setMatk(selected.getMatk() + 600);
             cm.gainItem(jungeunji[0],-jungeunji[1]);
-            cm.sendOk("¼±ÅÃÇÑ ¾ÆÀÌÅÛÀ» °­È­ ÇÏ¿´½À´Ï´Ù. #r(¿Ã½ºÅİ + 500)(°ø¸¶ + 600)#k");
+            cm.sendOk("ì„ íƒí•œ ì•„ì´í…œì„ ê°•í™” í•˜ì˜€ìŠµë‹ˆë‹¤. #r(ì˜¬ìŠ¤í…Ÿ + 500)(ê³µë§ˆ + 600)#k");
         } else {
-            cm.sendOk("¾ÆÀÌÅÛÀ» °­È­ÇÏ·Á¸é #r¹İÂ¦ÀÌ´Â ¸ŞÀÌÇÃ ÄÚÀÎ#kÀÌ ÇÊ¿äÇÕ´Ï´Ù.");
+            cm.sendOk("ì•„ì´í…œì„ ê°•í™”í•˜ë ¤ë©´ #rë°˜ì§ì´ëŠ” ë©”ì´í”Œ ì½”ì¸#kì´ í•„ìš”í•©ë‹ˆë‹¤.");
         }
         cm.dispose();
     }

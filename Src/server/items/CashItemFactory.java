@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -36,7 +36,7 @@ public class CashItemFactory {
             int itemId = MapleDataTool.getIntConvert("ItemId", field, 0);
             boolean onSale = itemId > 0;
             int period = 0;
-            if (itemId >= 5000000 && itemId <= 5002000) { //Æê
+            if (itemId >= 5000000 && itemId <= 5002000) { //íŽ«
                 period = MapleDataTool.getIntConvert("life", petData.getData(itemId + ".img").getChildByPath("info"));
             } else {
                 period = MapleDataTool.getIntConvert("Period", field, 0);

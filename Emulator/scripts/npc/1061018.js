@@ -1,18 +1,18 @@
 /*
 
- * ´Ü¹®¿£ÇÇ½Ã ÀÚµ¿Á¦ÀÛ ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¸¸µé¾îÁø ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+ * ë‹¨ë¬¸ì—”í”¼ì‹œ ìžë™ì œìž‘ ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ë§Œë“¤ì–´ì§„ ìŠ¤í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤.
 
  * (Pure Online Development Source Script)
 
-¸Þ¸£¼¼µ¥½º ¿¡ ÀÇÇØ ¸¸µé¾î Á³½À´Ï´Ù.
+ë©”ë¥´ì„¸ë°ìŠ¤ ì— ì˜í•´ ë§Œë“¤ì–´ ì¡ŒìŠµë‹ˆë‹¤.
 
-¿£ÇÇ½Ã¾ÆÀÌµð : 9000174
+ì—”í”¼ì‹œì•„ì´ë”” : 9000174
 
-¿£ÇÇ½Ã ÀÌ¸§ : ¹«¸£¹«¸£
+ì—”í”¼ì‹œ ì´ë¦„ : ë¬´ë¥´ë¬´ë¥´
 
-¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê :
+ì—”í”¼ì‹œê°€ ìžˆëŠ” ë§µ :
 
-¿£ÇÇ½Ã ¼³¸í : ¿µÈ¥¿¬±¸°¡
+ì—”í”¼ì‹œ ì„¤ëª… : ì˜í˜¼ì—°êµ¬ê°€
 
 QS2 += "\r\n#fUI/UIWindow2.img/MapleStyle/RewardPopup/backgrnd2#\r\n"
 
@@ -56,127 +56,127 @@ function action(mode, type, selection) {
 		else
 			status--;
 		if (status == 0) {
-			var str = "»ç¶÷µéÀº ¸»ÇÕ´Ï´Ù. ÀÎ°£ÀÌ¶õ ÀÚÀ¯¸¦ »©¾Ñ°ÜºÁ¾ß \r\nÀÚ½ÅÀÇ º»¸ð½ÀÀ» ¾È´Ù°í. Àç¹ÌÀÖÁö¾Ê½À´Ï±î?\r\nÀú ¶ÇÇÑ ¿©±â¿¡ ÀÚÀ¯¸¦ »¯±ä°Í°°¾Æ¿ä.#b\r\n";
+			var str = "ì‚¬ëžŒë“¤ì€ ë§í•©ë‹ˆë‹¤. ì¸ê°„ì´ëž€ ìžìœ ë¥¼ ë¹¼ì•—ê²¨ë´ì•¼ \r\nìžì‹ ì˜ ë³¸ëª¨ìŠµì„ ì•ˆë‹¤ê³ . ìž¬ë¯¸ìžˆì§€ì•ŠìŠµë‹ˆê¹Œ?\r\nì € ë˜í•œ ì—¬ê¸°ì— ìžìœ ë¥¼ ëºê¸´ê²ƒê°™ì•„ìš”.#b\r\n";
 			str += "\r\n#fUI/UIWindow2.img/UtilDlgEx/list1#\r\n"
 
-			   str += "#L81#¸ðÇè°¡Å¸ÀÌÆ²À» È¹µæÇÏ°í½Í½À´Ï´Ù.#l\r\n";
-			str += "#L84#½Ã±×³Ê½ºÅ¸ÀÌÆ²À» È¹µæÇÏ°í½Í½À´Ï´Ù.#l\r\n";
-			str += "#L85#¿µ¿õÅ¸ÀÌÆ²À» È¹µæÇÏ°í½Í½À´Ï´Ù.#l\r\n\r\n";
+			   str += "#L81#ëª¨í—˜ê°€íƒ€ì´í‹€ì„ íšë“í•˜ê³ ì‹¶ìŠµë‹ˆë‹¤.#l\r\n";
+			str += "#L84#ì‹œê·¸ë„ˆìŠ¤íƒ€ì´í‹€ì„ íšë“í•˜ê³ ì‹¶ìŠµë‹ˆë‹¤.#l\r\n";
+			str += "#L85#ì˜ì›…íƒ€ì´í‹€ì„ íšë“í•˜ê³ ì‹¶ìŠµë‹ˆë‹¤.#l\r\n\r\n";
 			cm.sendSimple(str);
 		} else if (status == 1) {
 			if (selection == 82) {
-				var QS7 = "º¸½ºµéÀÇ Áõ°Å¸¦ °¡Áö°í°è½Å°¡¿ä?";
-				QS7 += "\r\n°¡Áö°í °è½Å´Ù¸é ÀúÇÏ°í °Å·¹¸¦ ÇÏÁö¾ÊÀ¸½Ç·¹¿ä?\r\n"
+				var QS7 = "ë³´ìŠ¤ë“¤ì˜ ì¦ê±°ë¥¼ ê°€ì§€ê³ ê³„ì‹ ê°€ìš”?";
+				QS7 += "\r\nê°€ì§€ê³  ê³„ì‹ ë‹¤ë©´ ì €í•˜ê³  ê±°ë ˆë¥¼ í•˜ì§€ì•Šìœ¼ì‹¤ë ˆìš”?\r\n"
 				if (cm.haveItem(4000659, 1) && cm.haveItem(4033311, 1) && cm.haveItem(4033312, 1) && cm.haveItem(4033302, 1) && cm.haveItem(4033303, 1) && cm.haveItem(4033304, 1)) {
 					QS7 += "\r\n #fUI/UIWindow2.img/UtilDlgEx/list3##k"
-					QS7 += "\r\nº¸½ºµéÀÇ Áõ°Å¸¦ ¸ðÀ¸°í ÀÖÀ¸½Å°¡ºÁ¿ä.\r\n"
-					QS7 += "ÀÌ·¸°Ô ¸¹Àº º¸½ºµéÀÇ Áõ°Å´Â Ã³À½º¸´Â°Í°°¾Æ¿ä!\r\n"
+					QS7 += "\r\në³´ìŠ¤ë“¤ì˜ ì¦ê±°ë¥¼ ëª¨ìœ¼ê³  ìžˆìœ¼ì‹ ê°€ë´ìš”.\r\n"
+					QS7 += "ì´ë ‡ê²Œ ë§Žì€ ë³´ìŠ¤ë“¤ì˜ ì¦ê±°ëŠ” ì²˜ìŒë³´ëŠ”ê²ƒê°™ì•„ìš”!\r\n"
 				} else {
 					QS7 += "\r\n #fUI/UIWindow2.img/UtilDlgEx/list1##k\r\n"
 				}
-				QS7 += "#k\#r#L60##b#v4000659#1°³#k,#b#v4033311#1°³#k,#b#v4033312#1°³#k\r\n,#b#v4033302#1°³#k,#b#v4033303#1°³#k,#b#v4033304#1°³#k\r\n #r(º¸»ó : ½ºÄ®·¿ ·£´ý¾ÆÀÌÅÛ )#k#l\r\n"
+				QS7 += "#k\#r#L60##b#v4000659#1ê°œ#k,#b#v4033311#1ê°œ#k,#b#v4033312#1ê°œ#k\r\n,#b#v4033302#1ê°œ#k,#b#v4033303#1ê°œ#k,#b#v4033304#1ê°œ#k\r\n #r(ë³´ìƒ : ìŠ¤ì¹¼ë › ëžœë¤ì•„ì´í…œ )#k#l\r\n"
 				cm.sendSimple(QS7);
 			} else if (selection == 81) {
-				var QS4 = "\r\n¾î¸®¼®Àº ÀÚ¿© ¸ðÇè°¡ Å¸ÀÌÆ²ÀÌ ¹ºÁö´Â ¾Æ´Â°¡?";
-				QS4 += "\r\n±×°ÍÀº ¹Ù·Î ½º½º·Î°¡ ÀÎÁ¤¹Þ´Â¿¹¿ä. ¹Ù·Î ÀÚ½ÅÀÇ ÈûÀ¸·Î\r\nÈ¤½Ã µµÀüÇÏ°í ½ÍÀº½Å°¡¿ä?\r\n";
+				var QS4 = "\r\nì–´ë¦¬ì„ì€ ìžì—¬ ëª¨í—˜ê°€ íƒ€ì´í‹€ì´ ë­”ì§€ëŠ” ì•„ëŠ”ê°€?";
+				QS4 += "\r\nê·¸ê²ƒì€ ë°”ë¡œ ìŠ¤ìŠ¤ë¡œê°€ ì¸ì •ë°›ëŠ”ì˜ˆìš”. ë°”ë¡œ ìžì‹ ì˜ íž˜ìœ¼ë¡œ\r\ní˜¹ì‹œ ë„ì „í•˜ê³  ì‹¶ì€ì‹ ê°€ìš”?\r\n";
 				QS4 += "\r\n #fUI/UIWindow2.img/UtilDlgEx/list1#"
 				//QS4 += "\r\n\r\n#v1142009##v1142010##v1142011##fUI/UIWindow2.img/Title/main/icon1# #v1142012##v1142013##v3700148#"
-				//QS4 += "\r\n\r\nÅ¸ÀÌÆ²À» È¹µæÇÏ½Ã¸é ´Ù¾çÇÑ ÇýÅÃÀÌ Àû¿ëµË´Ï´Ù."
-				//QS4 += "\r\nÀÚ½Å ½º½º·Î°¡ ÀÎÁ¤¹ÞÀ»°÷À» ¼±ÅÃÇØÁÖ¼¼¿ä. \r\nÁ¦°¡ °Å±â·Î º¸³»µå¸±°Ô¿ä.\r\n[ÇÑÁ¤¹Ýº¹Äù½ºÆ®ÀÔ´Ï´Ù.]";
-				QS4 += "\r\n #k\#L210# #v1142009# Åõ½Å\r\n#l\r\n"
-				QS4 += "\r\n #l\n ³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
-				QS4 += "\r\n\r\nÀü»ç°è¿­ÀÇ ÃÖ°íÀÇ Å¸ÀÌÆ²ÀÔ´Ï´Ù.\r\nÀÌ°ÍÀ» È¹µæÇÑÀÚ´Â Àü»ç°è¿­¿¡¼­ Àü¼³ÀÌµË´Ï´Ù.\r\n[ÇÑÁ¤¹Ýº¹Äù½ºÆ®ÀÔ´Ï´Ù.]";
-				QS4 += "\r\n #k\#L211# #v1142010# ÇöÀÚ\r\n"
-				QS4 += "\r\n#l\r\n ³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
-				QS4 += "\r\n\r\n¸¶¹ý»ç°è¿­ÀÇ ÃÖ°íÀÇ Å¸ÀÌÆ²ÀÔ´Ï´Ù.\r\nÀÌ°ÍÀ» È¹µæÇÑÀÚ´Â ¸¶¹ý»ç°è¿­¿¡¼­ Àü¼³ÀÌµË´Ï´Ù.\r\n[ÇÑÁ¤¹Ýº¹Äù½ºÆ®ÀÔ´Ï´Ù.]";
-				QS4 += "\r\n #k\#L212# #v1142011# ½º³ªÀÌÆÛ ·Îµå\r\n"
-				QS4 += "\r\n#l\r\n ³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
-				QS4 += "\r\n\r\n±Ã¼ö°è¿­ÀÇ ÃÖ°íÀÇ Å¸ÀÌÆ²ÀÔ´Ï´Ù.\r\nÀÌ°ÍÀ» È¹µæÇÑÀÚ´Â ±Ã¼ö°è¿­¿¡¼­ Àü¼³ÀÌµË´Ï´Ù.\r\n[ÇÑÁ¤¹Ýº¹Äù½ºÆ®ÀÔ´Ï´Ù.]";
-				QS4 += "\r\n #k\#L213# #v1142012# ·¹Àü´õ¸® ½ÃÇÁ\r\n"
-				QS4 += "\r\n#l\r\n ³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
-				QS4 += "\r\n\r\nµµÀû°è¿­ÀÇ ÃÖ°íÀÇ Å¸ÀÌÆ²ÀÔ´Ï´Ù.\r\nÀÌ°ÍÀ» È¹µæÇÑÀÚ´Â µµÀû°è¿­¿¡¼­ Àü¼³ÀÌµË´Ï´Ù.\r\n[ÇÑÁ¤¹Ýº¹Äù½ºÆ®ÀÔ´Ï´Ù.]";
-				QS4 += "\r\n #k\#L214# #v1142013# ÇØÀû¿Õ\r\n"
-				QS4 += "\r\n#l\r\n ³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
-				QS4 += "\r\n\r\nÇØÀû°è¿­ÀÇ ÃÖ°íÀÇ Å¸ÀÌÆ²ÀÔ´Ï´Ù.\r\nÀÌ°ÍÀ» È¹µæÇÑÀÚ´Â ÇØÀû°è¿­¿¡¼­ Àü¼³ÀÌµË´Ï´Ù.\r\n[ÇÑÁ¤¹Ýº¹Äù½ºÆ®ÀÔ´Ï´Ù.]";
-				//QS4 += "\r\n #k\#L215# #v3700148# ½ºÅä¸® all ¿Ï·áÀÚ\r\n#l"
-				//QS4 += "\r\n#l\r\n ³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
-				//QS4 += "\r\n\r\n½ºÅä¸®Äù½ºÆ® ¿Ã Å¬¸®¾î Å¸ÀÌÆ²ÀÔ´Ï´Ù\r\nÀÌ°ÍÀº  ½ºÅä¸®Äù½ºÆ® ¿Ã Å¬¸®¾î ÁõÇ¥ÀÔ´Ï´Ù\r\n[ÇÑÁ¤Äù½ºÆ®ÀÔ´Ï´Ù.]";
+				//QS4 += "\r\n\r\níƒ€ì´í‹€ì„ íšë“í•˜ì‹œë©´ ë‹¤ì–‘í•œ í˜œíƒì´ ì ìš©ë©ë‹ˆë‹¤."
+				//QS4 += "\r\nìžì‹  ìŠ¤ìŠ¤ë¡œê°€ ì¸ì •ë°›ì„ê³³ì„ ì„ íƒí•´ì£¼ì„¸ìš”. \r\nì œê°€ ê±°ê¸°ë¡œ ë³´ë‚´ë“œë¦´ê²Œìš”.\r\n[í•œì •ë°˜ë³µí€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
+				QS4 += "\r\n #k\#L210# #v1142009# íˆ¬ì‹ \r\n#l\r\n"
+				QS4 += "\r\n #l\n ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
+				QS4 += "\r\n\r\nì „ì‚¬ê³„ì—´ì˜ ìµœê³ ì˜ íƒ€ì´í‹€ìž…ë‹ˆë‹¤.\r\nì´ê²ƒì„ íšë“í•œìžëŠ” ì „ì‚¬ê³„ì—´ì—ì„œ ì „ì„¤ì´ë©ë‹ˆë‹¤.\r\n[í•œì •ë°˜ë³µí€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
+				QS4 += "\r\n #k\#L211# #v1142010# í˜„ìž\r\n"
+				QS4 += "\r\n#l\r\n ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
+				QS4 += "\r\n\r\në§ˆë²•ì‚¬ê³„ì—´ì˜ ìµœê³ ì˜ íƒ€ì´í‹€ìž…ë‹ˆë‹¤.\r\nì´ê²ƒì„ íšë“í•œìžëŠ” ë§ˆë²•ì‚¬ê³„ì—´ì—ì„œ ì „ì„¤ì´ë©ë‹ˆë‹¤.\r\n[í•œì •ë°˜ë³µí€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
+				QS4 += "\r\n #k\#L212# #v1142011# ìŠ¤ë‚˜ì´í¼ ë¡œë“œ\r\n"
+				QS4 += "\r\n#l\r\n ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
+				QS4 += "\r\n\r\nê¶ìˆ˜ê³„ì—´ì˜ ìµœê³ ì˜ íƒ€ì´í‹€ìž…ë‹ˆë‹¤.\r\nì´ê²ƒì„ íšë“í•œìžëŠ” ê¶ìˆ˜ê³„ì—´ì—ì„œ ì „ì„¤ì´ë©ë‹ˆë‹¤.\r\n[í•œì •ë°˜ë³µí€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
+				QS4 += "\r\n #k\#L213# #v1142012# ë ˆì „ë”ë¦¬ ì‹œí”„\r\n"
+				QS4 += "\r\n#l\r\n ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
+				QS4 += "\r\n\r\në„ì ê³„ì—´ì˜ ìµœê³ ì˜ íƒ€ì´í‹€ìž…ë‹ˆë‹¤.\r\nì´ê²ƒì„ íšë“í•œìžëŠ” ë„ì ê³„ì—´ì—ì„œ ì „ì„¤ì´ë©ë‹ˆë‹¤.\r\n[í•œì •ë°˜ë³µí€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
+				QS4 += "\r\n #k\#L214# #v1142013# í•´ì ì™•\r\n"
+				QS4 += "\r\n#l\r\n ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
+				QS4 += "\r\n\r\ní•´ì ê³„ì—´ì˜ ìµœê³ ì˜ íƒ€ì´í‹€ìž…ë‹ˆë‹¤.\r\nì´ê²ƒì„ íšë“í•œìžëŠ” í•´ì ê³„ì—´ì—ì„œ ì „ì„¤ì´ë©ë‹ˆë‹¤.\r\n[í•œì •ë°˜ë³µí€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
+				//QS4 += "\r\n #k\#L215# #v3700148# ìŠ¤í† ë¦¬ all ì™„ë£Œìž\r\n#l"
+				//QS4 += "\r\n#l\r\n ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
+				//QS4 += "\r\n\r\nìŠ¤í† ë¦¬í€˜ìŠ¤íŠ¸ ì˜¬ í´ë¦¬ì–´ íƒ€ì´í‹€ìž…ë‹ˆë‹¤\r\nì´ê²ƒì€  ìŠ¤í† ë¦¬í€˜ìŠ¤íŠ¸ ì˜¬ í´ë¦¬ì–´ ì¦í‘œìž…ë‹ˆë‹¤\r\n[í•œì •í€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
 				cm.sendSimple(QS4);
 			} else if (selection == 84) {
-				var QS8 = "¾î¸®¼®Àº ÀÚ¿© ½Ã±×³Ê½º Å¸ÀÌÆ²ÀÌ ¹ºÁö´Â ¾Æ´Â°¡?";
-				QS8 += "\r\n¹Ù·Î ³ªÇÑÅ× ÀÎÁ¤¹Þ´Â°ÅÁö ¹Ù·Î ±×´ëÀÇ ÈûÀ¸·Î\r\nÁØºñ´Â µÇ¾ú´Â°¡?\r\n";
+				var QS8 = "ì–´ë¦¬ì„ì€ ìžì—¬ ì‹œê·¸ë„ˆìŠ¤ íƒ€ì´í‹€ì´ ë­”ì§€ëŠ” ì•„ëŠ”ê°€?";
+				QS8 += "\r\në°”ë¡œ ë‚˜í•œí…Œ ì¸ì •ë°›ëŠ”ê±°ì§€ ë°”ë¡œ ê·¸ëŒ€ì˜ íž˜ìœ¼ë¡œ\r\nì¤€ë¹„ëŠ” ë˜ì—ˆëŠ”ê°€?\r\n";
 				QS8 += "\r\n #fUI/UIWindow2.img/UtilDlgEx/list1#"
-				//QS8 += "\r\n\r\n #fUI/UIWindow2.img/Title/main/icon1# [Å¸ÀÌÆ²À» È¹µæÇÏ½Ã¸é ´Ù¾çÇÑ ÇýÅÃÀÌ Àû¿ëµË´Ï´Ù.]"
-				//QS8 += "\r\n\r\n¼±ÅÃÇÏ¶ó ³ªÇÑÅ× ÀÎÁ¤¹ÞÀ» °÷À» \r\n³ªÀÇ ÈûÀ¸·Î ±×°÷À¸·Î º¸³»ÁÖ¸¶\r\n[ÇÑÁ¤¹Ýº¹Äù½ºÆ®ÀÔ´Ï´Ù.]";
-				QS8 += "\r\n #k\#L300# #v1142597# ½Ã±×³Ê½ºÀÇ ¿©¼¸ º°\r\n#l\r\n"
-				QS8 += "\r\n #l\n ³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
-				QS8 += "\r\n\r\n½Ã±×³Ê½ºÀÇ ÃÖ°íÀÇ Å¸ÀÌÆ²ÀÔ´Ï´Ù.\r\nÀÌ°ÍÀ» È¹µæÇÑÀÚ´Â ½Ã±×³Ê½º¿¡°Ô ÀÎÁ¤À» ¹Þ°Ô µË´Ï´Ù.\r\n[ÇÑÁ¤¹Ýº¹Äù½ºÆ®ÀÔ´Ï´Ù.]";
+				//QS8 += "\r\n\r\n #fUI/UIWindow2.img/Title/main/icon1# [íƒ€ì´í‹€ì„ íšë“í•˜ì‹œë©´ ë‹¤ì–‘í•œ í˜œíƒì´ ì ìš©ë©ë‹ˆë‹¤.]"
+				//QS8 += "\r\n\r\nì„ íƒí•˜ë¼ ë‚˜í•œí…Œ ì¸ì •ë°›ì„ ê³³ì„ \r\në‚˜ì˜ íž˜ìœ¼ë¡œ ê·¸ê³³ìœ¼ë¡œ ë³´ë‚´ì£¼ë§ˆ\r\n[í•œì •ë°˜ë³µí€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
+				QS8 += "\r\n #k\#L300# #v1142597# ì‹œê·¸ë„ˆìŠ¤ì˜ ì—¬ì„¯ ë³„\r\n#l\r\n"
+				QS8 += "\r\n #l\n ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
+				QS8 += "\r\n\r\nì‹œê·¸ë„ˆìŠ¤ì˜ ìµœê³ ì˜ íƒ€ì´í‹€ìž…ë‹ˆë‹¤.\r\nì´ê²ƒì„ íšë“í•œìžëŠ” ì‹œê·¸ë„ˆìŠ¤ì—ê²Œ ì¸ì •ì„ ë°›ê²Œ ë©ë‹ˆë‹¤.\r\n[í•œì •ë°˜ë³µí€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
 
-				QS8 += "\r\n #k\#L301# #v1142403# ÁøÁ¤ÇÑ ºûÀÇ ±â»ç\r\n#l\r\n"
-				QS8 += "\r\n #l\n ³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
-				QS8 += "\r\n\r\n¹ÌÇÏÀÏÀÇ ÃÖ°íÀÇ Å¸ÀÌÆ²ÀÔ´Ï´Ù.\r\nÀÌ°ÍÀ» È¹µæÇÑÀÚ´Â ºûÀÇ ±â»ç°¡ µË´Ï´Ù.\r\n[ÇÑÁ¤¹Ýº¹Äù½ºÆ®ÀÔ´Ï´Ù.]";
+				QS8 += "\r\n #k\#L301# #v1142403# ì§„ì •í•œ ë¹›ì˜ ê¸°ì‚¬\r\n#l\r\n"
+				QS8 += "\r\n #l\n ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
+				QS8 += "\r\n\r\në¯¸í•˜ì¼ì˜ ìµœê³ ì˜ íƒ€ì´í‹€ìž…ë‹ˆë‹¤.\r\nì´ê²ƒì„ íšë“í•œìžëŠ” ë¹›ì˜ ê¸°ì‚¬ê°€ ë©ë‹ˆë‹¤.\r\n[í•œì •ë°˜ë³µí€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
 				cm.sendSimple(QS8);
 			} else if (selection == 85) {
-				var QS9 = "¾î¸®¼®Àº ÀÚ¿© ¿µ¿õÅ¸ÀÌÆ²ÀÌ ¹ºÁö´Â ¾Æ´Â°¡?";
-				QS9 += "\r\n¹Ù·Î ³ªÇÑÅ× ÀÎÁ¤¹Þ´Â°ÅÁö ¹Ù·Î ±×´ëÀÇ ÈûÀ¸·Î\r\nÁØºñ´Â µÇ¾ú´Â°¡?\r\n";
+				var QS9 = "ì–´ë¦¬ì„ì€ ìžì—¬ ì˜ì›…íƒ€ì´í‹€ì´ ë­”ì§€ëŠ” ì•„ëŠ”ê°€?";
+				QS9 += "\r\në°”ë¡œ ë‚˜í•œí…Œ ì¸ì •ë°›ëŠ”ê±°ì§€ ë°”ë¡œ ê·¸ëŒ€ì˜ íž˜ìœ¼ë¡œ\r\nì¤€ë¹„ëŠ” ë˜ì—ˆëŠ”ê°€?\r\n";
 				QS9 += "\r\n #fUI/UIWindow2.img/UtilDlgEx/list1#"
-				//QS9 += "\r\n\r\n #fUI/UIWindow2.img/Title/main/icon1# [Å¸ÀÌÆ²À» È¹µæÇÏ½Ã¸é ´Ù¾çÇÑ ÇýÅÃÀÌ Àû¿ëµË´Ï´Ù.]"
-				//QS9 += "\r\n\r\n¼±ÅÃÇÏ¶ó ³ªÇÑÅ× ÀÎÁ¤¹ÞÀ» °÷À» \r\n³ªÀÇ ÈûÀ¸·Î ±×°÷À¸·Î º¸³»ÁÖ¸¶\r\n[ÇÑÁ¤¹Ýº¹Äù½ºÆ®ÀÔ´Ï´Ù.]";
-				QS9 += "\r\n #k\#L400# #v1142379# ±«µµ ÆÒÅÒ\r\n#l\r\n"
-				QS9 += "\r\n #l\n ³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
-				QS9 += "\r\n\r\nÆÒÅÒµéÀÇ ÃÖ°íÀÇ Å¸ÀÌÆ²ÀÔ´Ï´Ù.\r\nÀÌ°ÍÀ» È¹µæÇÑÀÚ´Â ÆÒÅÒµé Áß¿¡¼­ ±«µµ ÆÒÅÒÀÌ µË´Ï´Ù.\r\n[ÇÑÁ¤¹Ýº¹Äù½ºÆ®ÀÔ´Ï´Ù.]";
-				QS9 += "\r\n #k\#L401# #v1142158# ¿µ¿õÀÇ ÈÄ°èÀÚ\r\n#l\r\n"
-				QS9 += "\r\n #l\n ³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
-				QS9 += "\r\n\r\n¿¡¹ÝµéÀÇ ÃÖ°íÀÇ Å¸ÀÌÆ²ÀÔ´Ï´Ù.\r\nÀÌ°ÍÀ» È¹µæÇÑÀÚ´Â ¿¡¹Ýµé Áß¿¡¼­ ÈÄ°èÀÚ°¡ µË´Ï´Ù.\r\n[ÇÑÁ¤¹Ýº¹Äù½ºÆ®ÀÔ´Ï´Ù.]";
-				QS9 += "\r\n #k\#L402# #v1142483# ¿î¸íÀÇ ´ëÀûÀÚ\r\n#l\r\n"
-				QS9 += "\r\n #l\n ³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
-				QS9 += "\r\n\r\n·ç¹Ì³Ê½ºµéÀÇ ÃÖ°íÀÇ Å¸ÀÌÆ²ÀÔ´Ï´Ù.\r\nÀÌ°ÍÀ» È¹µæÇÑÀÚ´Â ·ç¹Ì³Ê½ºµé Áß¿¡¼­ Àü¼³ÀÌ µË´Ï´Ù.\r\n[ÇÑÁ¤¹Ýº¹Äù½ºÆ®ÀÔ´Ï´Ù.]";
-				QS9 += "\r\n #k\#L403# #v1142488# ±ØÀÇ¿¡ µµ´ÞÇÑ ÀÚ\r\n#l\r\n"
-				QS9 += "\r\n #l\n ³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
-				QS9 += "\r\n\r\nÄ«ÀÌÀúµéÀÇ ÃÖ°íÀÇ Å¸ÀÌÆ²ÀÔ´Ï´Ù.\r\nÀÌ°ÍÀ» È¹µæÇÑÀÚ´Â Ä«ÀÌÀúµé Áß¿¡¼­ Àü¼³ÀÌ µË´Ï´Ù.\r\n[ÇÑÁ¤¹Ýº¹Äù½ºÆ®ÀÔ´Ï´Ù.]";
+				//QS9 += "\r\n\r\n #fUI/UIWindow2.img/Title/main/icon1# [íƒ€ì´í‹€ì„ íšë“í•˜ì‹œë©´ ë‹¤ì–‘í•œ í˜œíƒì´ ì ìš©ë©ë‹ˆë‹¤.]"
+				//QS9 += "\r\n\r\nì„ íƒí•˜ë¼ ë‚˜í•œí…Œ ì¸ì •ë°›ì„ ê³³ì„ \r\në‚˜ì˜ íž˜ìœ¼ë¡œ ê·¸ê³³ìœ¼ë¡œ ë³´ë‚´ì£¼ë§ˆ\r\n[í•œì •ë°˜ë³µí€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
+				QS9 += "\r\n #k\#L400# #v1142379# ê´´ë„ íŒ¬í…€\r\n#l\r\n"
+				QS9 += "\r\n #l\n ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
+				QS9 += "\r\n\r\níŒ¬í…€ë“¤ì˜ ìµœê³ ì˜ íƒ€ì´í‹€ìž…ë‹ˆë‹¤.\r\nì´ê²ƒì„ íšë“í•œìžëŠ” íŒ¬í…€ë“¤ ì¤‘ì—ì„œ ê´´ë„ íŒ¬í…€ì´ ë©ë‹ˆë‹¤.\r\n[í•œì •ë°˜ë³µí€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
+				QS9 += "\r\n #k\#L401# #v1142158# ì˜ì›…ì˜ í›„ê³„ìž\r\n#l\r\n"
+				QS9 += "\r\n #l\n ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
+				QS9 += "\r\n\r\nì—ë°˜ë“¤ì˜ ìµœê³ ì˜ íƒ€ì´í‹€ìž…ë‹ˆë‹¤.\r\nì´ê²ƒì„ íšë“í•œìžëŠ” ì—ë°˜ë“¤ ì¤‘ì—ì„œ í›„ê³„ìžê°€ ë©ë‹ˆë‹¤.\r\n[í•œì •ë°˜ë³µí€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
+				QS9 += "\r\n #k\#L402# #v1142483# ìš´ëª…ì˜ ëŒ€ì ìž\r\n#l\r\n"
+				QS9 += "\r\n #l\n ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
+				QS9 += "\r\n\r\në£¨ë¯¸ë„ˆìŠ¤ë“¤ì˜ ìµœê³ ì˜ íƒ€ì´í‹€ìž…ë‹ˆë‹¤.\r\nì´ê²ƒì„ íšë“í•œìžëŠ” ë£¨ë¯¸ë„ˆìŠ¤ë“¤ ì¤‘ì—ì„œ ì „ì„¤ì´ ë©ë‹ˆë‹¤.\r\n[í•œì •ë°˜ë³µí€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
+				QS9 += "\r\n #k\#L403# #v1142488# ê·¹ì˜ì— ë„ë‹¬í•œ ìž\r\n#l\r\n"
+				QS9 += "\r\n #l\n ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
+				QS9 += "\r\n\r\nì¹´ì´ì €ë“¤ì˜ ìµœê³ ì˜ íƒ€ì´í‹€ìž…ë‹ˆë‹¤.\r\nì´ê²ƒì„ íšë“í•œìžëŠ” ì¹´ì´ì €ë“¤ ì¤‘ì—ì„œ ì „ì„¤ì´ ë©ë‹ˆë‹¤.\r\n[í•œì •ë°˜ë³µí€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
 
-				QS9 += "\r\n #k\#L404# #v1142499# ½´ÆÛ½ºÅ¸¡Ú\r\n#l\r\n"
-				QS9 += "\r\n #l\n ³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
-				QS9 += "\r\n\r\n¿£Á©¸¯¹ö½ºÅÍµéÀÇ ÃÖ°íÀÇ Å¸ÀÌÆ²ÀÔ´Ï´Ù.\r\nÀÌ°ÍÀ» È¹µæÇÑÀÚ´Â ¿£Á©¸¯¹ö½ºÅÍµé Áß¿¡¼­ ½´ÆÛ½ºÅ¸°¡ µË´Ï´Ù.\r\n[ÇÑÁ¤¹Ýº¹Äù½ºÆ®ÀÔ´Ï´Ù.]";
-				QS9 += "\r\n #k\#L405# #v1142345# º¹¼öÀÇ È­½Å\r\n#l\r\n"
-				QS9 += "\r\n #l\n ³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
-				QS9 += "\r\n\r\nµ¥¸óµéÀÇ ÃÖ°íÀÇ Å¸ÀÌÆ²ÀÔ´Ï´Ù.\r\nÀÌ°ÍÀ» È¹µæÇÑÀÚ´Â µ¥¸óµé Áß¿¡¼­ Àü¼³ÀÌ µË´Ï´Ù.\r\n[ÇÑÁ¤¹Ýº¹Äù½ºÆ®ÀÔ´Ï´Ù.]";
-				QS9 += "\r\n #k\#L406# #v1142340# ¿¤ÇÁÀÇ ¿Õ\r\n#l\r\n"
-				QS9 += "\r\n #l\n ³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
-				QS9 += "\r\n\r\n¸Þ¸£¼¼µ¥½ºµéÀÇ ÃÖ°íÀÇ Å¸ÀÌÆ²ÀÔ´Ï´Ù.\r\nÀÌ°ÍÀ» È¹µæÇÑÀÚ´Â ¸Þ¸£¼¼µ¥½ºµé Áß¿¡¼­ ¿©¿ÕÀÌ µË´Ï´Ù.\r\n[ÇÑÁ¤¹Ýº¹Äù½ºÆ®ÀÔ´Ï´Ù.]";
-				QS9 += "\r\n #k\#L407# #v1142133# ¿µ¿õ ¾Æ¶õ\r\n#l\r\n"
-				QS9 += "\r\n #l\n ³­ÀÌµµ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
-				QS9 += "\r\n\r\n¾Æ¶õµéÀÇ ÃÖ°íÀÇ Å¸ÀÌÆ²ÀÔ´Ï´Ù.\r\nÀÌ°ÍÀ» È¹µæÇÑÀÚ´Â ¾Æ¶õµé Áß¿¡¼­ ¿µ¿õÀÌ µË´Ï´Ù.\r\n[ÇÑÁ¤¹Ýº¹Äù½ºÆ®ÀÔ´Ï´Ù.]";
+				QS9 += "\r\n #k\#L404# #v1142499# ìŠˆí¼ìŠ¤íƒ€â˜…\r\n#l\r\n"
+				QS9 += "\r\n #l\n ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
+				QS9 += "\r\n\r\nì—”ì ¤ë¦­ë²„ìŠ¤í„°ë“¤ì˜ ìµœê³ ì˜ íƒ€ì´í‹€ìž…ë‹ˆë‹¤.\r\nì´ê²ƒì„ íšë“í•œìžëŠ” ì—”ì ¤ë¦­ë²„ìŠ¤í„°ë“¤ ì¤‘ì—ì„œ ìŠˆí¼ìŠ¤íƒ€ê°€ ë©ë‹ˆë‹¤.\r\n[í•œì •ë°˜ë³µí€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
+				QS9 += "\r\n #k\#L405# #v1142345# ë³µìˆ˜ì˜ í™”ì‹ \r\n#l\r\n"
+				QS9 += "\r\n #l\n ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
+				QS9 += "\r\n\r\në°ëª¬ë“¤ì˜ ìµœê³ ì˜ íƒ€ì´í‹€ìž…ë‹ˆë‹¤.\r\nì´ê²ƒì„ íšë“í•œìžëŠ” ë°ëª¬ë“¤ ì¤‘ì—ì„œ ì „ì„¤ì´ ë©ë‹ˆë‹¤.\r\n[í•œì •ë°˜ë³µí€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
+				QS9 += "\r\n #k\#L406# #v1142340# ì—˜í”„ì˜ ì™•\r\n#l\r\n"
+				QS9 += "\r\n #l\n ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
+				QS9 += "\r\n\r\në©”ë¥´ì„¸ë°ìŠ¤ë“¤ì˜ ìµœê³ ì˜ íƒ€ì´í‹€ìž…ë‹ˆë‹¤.\r\nì´ê²ƒì„ íšë“í•œìžëŠ” ë©”ë¥´ì„¸ë°ìŠ¤ë“¤ ì¤‘ì—ì„œ ì—¬ì™•ì´ ë©ë‹ˆë‹¤.\r\n[í•œì •ë°˜ë³µí€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
+				QS9 += "\r\n #k\#L407# #v1142133# ì˜ì›… ì•„ëž€\r\n#l\r\n"
+				QS9 += "\r\n #l\n ë‚œì´ë„ : #e[#fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2##fUI/UIWindow2.img/ToolTip/Equip/Star/Star2#]#n#l"
+				QS9 += "\r\n\r\nì•„ëž€ë“¤ì˜ ìµœê³ ì˜ íƒ€ì´í‹€ìž…ë‹ˆë‹¤.\r\nì´ê²ƒì„ íšë“í•œìžëŠ” ì•„ëž€ë“¤ ì¤‘ì—ì„œ ì˜ì›…ì´ ë©ë‹ˆë‹¤.\r\n[í•œì •ë°˜ë³µí€˜ìŠ¤íŠ¸ìž…ë‹ˆë‹¤.]";
 				cm.sendSimple(QS9);
 			} else if (selection == 79) {
-				var QS2 = "¼¼»ó¿¡´Â ´Ù¾çÇÑ º¸¹°µéÀÌ Á¸ÀçÇÏÁö¸¸ °øÂ¥¶õ ¾ø½À´Ï´Ù..#b\r\n";
+				var QS2 = "ì„¸ìƒì—ëŠ” ë‹¤ì–‘í•œ ë³´ë¬¼ë“¤ì´ ì¡´ìž¬í•˜ì§€ë§Œ ê³µì§œëž€ ì—†ìŠµë‹ˆë‹¤..#b\r\n";
 				QS2 += "\r\n #fUI/UIWindow2.img/UtilDlgEx/list1##k"
-				QS2 += "\r\n ¹«¾ùÀ» ¼±ÅÃÇÏ½Ã°Ú½À´Ï±î? °Å·¹´Â ´Ù¾çÇÕ´Ï´Ù.\r\n Æ¯º°È÷ ÇÊ¿äÇÑ°÷À¸·Î º¸³»ÁÖµµ·ÏÇØµå¸®Áö¿ä.#b\r\n"
+				QS2 += "\r\n ë¬´ì—‡ì„ ì„ íƒí•˜ì‹œê² ìŠµë‹ˆê¹Œ? ê±°ë ˆëŠ” ë‹¤ì–‘í•©ë‹ˆë‹¤.\r\n íŠ¹ë³„ížˆ í•„ìš”í•œê³³ìœ¼ë¡œ ë³´ë‚´ì£¼ë„ë¡í•´ë“œë¦¬ì§€ìš”.#b\r\n"
 				//QS2 += "\r\n#fUI/UIWindow2.img/EvolvingSystem/BtStart/normal/0#\r\n"
-				QS2 += "#k\#r#L1##b#v4000171#500°³#k¸¦ ¸ð¾Æ¿À°Ú½À´Ï´Ù.(º¸»ó : #v1152009# )#l"
-				QS2 += "\r\n #k\#r#L5##b#v4000458#300°³#k¸¦ ¸ð¾Æ¿À°Ú½À´Ï´Ù.(º¸»ó : #v1112594# )#l"
-				QS2 += "\r\n #k\#r#L3##b#v4000440#550°³#k¸¦ ¸ð¾Æ¿À°Ú½À´Ï´Ù.(º¸»ó : #v1032101# )#l"
-				QS2 += "\r\n #k\#r#L4##b#v4000180#,#v4000181#550°³#k¸¦ ¸ð¾Æ¿À°Ú½À´Ï´Ù.(º¸»ó : #v1022123# )#l"
-				QS2 += "\r\n #k\#r#L2##b#v4000364#,#v4000365#550°³#k¸¦ ¸ð¾Æ¿À°Ú½À´Ï´Ù.(º¸»ó : #v1122118# )#l\r\n"
+				QS2 += "#k\#r#L1##b#v4000171#500ê°œ#kë¥¼ ëª¨ì•„ì˜¤ê² ìŠµë‹ˆë‹¤.(ë³´ìƒ : #v1152009# )#l"
+				QS2 += "\r\n #k\#r#L5##b#v4000458#300ê°œ#kë¥¼ ëª¨ì•„ì˜¤ê² ìŠµë‹ˆë‹¤.(ë³´ìƒ : #v1112594# )#l"
+				QS2 += "\r\n #k\#r#L3##b#v4000440#550ê°œ#kë¥¼ ëª¨ì•„ì˜¤ê² ìŠµë‹ˆë‹¤.(ë³´ìƒ : #v1032101# )#l"
+				QS2 += "\r\n #k\#r#L4##b#v4000180#,#v4000181#550ê°œ#kë¥¼ ëª¨ì•„ì˜¤ê² ìŠµë‹ˆë‹¤.(ë³´ìƒ : #v1022123# )#l"
+				QS2 += "\r\n #k\#r#L2##b#v4000364#,#v4000365#550ê°œ#kë¥¼ ëª¨ì•„ì˜¤ê² ìŠµë‹ˆë‹¤.(ë³´ìƒ : #v1122118# )#l\r\n"
 				if (cm.haveItem(4000171, 500)) {
 					QS2 += "\r\n\r\n #fUI/UIWindow2.img/UtilDlgEx/list3##k"
-					QS2 += "#k\r\n#L20##r#b#v4000171#500°³#k¸¦ ¸ð¾Æ¿Ô½À´Ï´Ù.#l\r\n#l\r\n #e¦¦ #n#v1152009#¾ÆÀÌÅÛÀÇ Äù½ºÆ®¸¦ Á¾·áÇÏ°Ú½À´Ï´Ù.#l";
+					QS2 += "#k\r\n#L20##r#b#v4000171#500ê°œ#kë¥¼ ëª¨ì•„ì™”ìŠµë‹ˆë‹¤.#l\r\n#l\r\n #eâ”” #n#v1152009#ì•„ì´í…œì˜ í€˜ìŠ¤íŠ¸ë¥¼ ì¢…ë£Œí•˜ê² ìŠµë‹ˆë‹¤.#l";
 				}
 				if (cm.haveItem(4000458, 300)) {
 					QS2 += "\r\n #fUI/UIWindow2.img/UtilDlgEx/list3##k"
-					QS2 += "#k\r\n#L16##r#b#v4000458#300°³#k¸¦ ¸ð¾Æ¿Ô½À´Ï´Ù.#l\r\n#l\r\n #e¦¦ #n#v1112594#¾ÆÀÌÅÛÀÇ Äù½ºÆ®¸¦ Á¾·áÇÏ°Ú½À´Ï´Ù.#l";
+					QS2 += "#k\r\n#L16##r#b#v4000458#300ê°œ#kë¥¼ ëª¨ì•„ì™”ìŠµë‹ˆë‹¤.#l\r\n#l\r\n #eâ”” #n#v1112594#ì•„ì´í…œì˜ í€˜ìŠ¤íŠ¸ë¥¼ ì¢…ë£Œí•˜ê² ìŠµë‹ˆë‹¤.#l";
 				}
 				if (cm.haveItem(4000440, 550)) {
 					QS2 += "\r\n #fUI/UIWindow2.img/UtilDlgEx/list3##k"
-					QS2 += "#k\r\n#L18##r#b#v4000440#550°³#k¸¦ ¸ð¾Æ¿Ô½À´Ï´Ù.#l\r\n#l\r\n #e¦¦ #n#v1032101#¾ÆÀÌÅÛÀÇ Äù½ºÆ®¸¦ Á¾·áÇÏ°Ú½À´Ï´Ù.#l";
+					QS2 += "#k\r\n#L18##r#b#v4000440#550ê°œ#kë¥¼ ëª¨ì•„ì™”ìŠµë‹ˆë‹¤.#l\r\n#l\r\n #eâ”” #n#v1032101#ì•„ì´í…œì˜ í€˜ìŠ¤íŠ¸ë¥¼ ì¢…ë£Œí•˜ê² ìŠµë‹ˆë‹¤.#l";
 				}
 				if (cm.haveItem(4000180, 550) && cm.haveItem(4000181, 550)) {
 					QS2 += "\r\n #fUI/UIWindow2.img/UtilDlgEx/list3##k"
-					QS2 += "#k\r\n#L17##r#b#v4000180#550°³,#v4000181#550°³#k¸¦ ¸ð¾Æ¿Ô½À´Ï´Ù.#l\r\n#l\r\n #e¦¦ #n#v1022123#¾ÆÀÌÅÛÀÇ Äù½ºÆ®¸¦ Á¾·áÇÏ°Ú½À´Ï´Ù.#l";
+					QS2 += "#k\r\n#L17##r#b#v4000180#550ê°œ,#v4000181#550ê°œ#kë¥¼ ëª¨ì•„ì™”ìŠµë‹ˆë‹¤.#l\r\n#l\r\n #eâ”” #n#v1022123#ì•„ì´í…œì˜ í€˜ìŠ¤íŠ¸ë¥¼ ì¢…ë£Œí•˜ê² ìŠµë‹ˆë‹¤.#l";
 				}
 				if (cm.haveItem(4000364, 550) && cm.haveItem(4000365, 550)) {
 					QS2 += "\r\n #fUI/UIWindow2.img/UtilDlgEx/list3##k"
-					QS2 += "#k\r\n#L19##r#b#v4000364#550°³,#v4000365#550°³#k¸¦ ¸ð¾Æ¿Ô½À´Ï´Ù.#l\r\n#l\r\n #e¦¦ #n#v1122118#¾ÆÀÌÅÛÀÇ Äù½ºÆ®¸¦ Á¾·áÇÏ°Ú½À´Ï´Ù.#l";
+					QS2 += "#k\r\n#L19##r#b#v4000364#550ê°œ,#v4000365#550ê°œ#kë¥¼ ëª¨ì•„ì™”ìŠµë‹ˆë‹¤.#l\r\n#l\r\n #eâ”” #n#v1122118#ì•„ì´í…œì˜ í€˜ìŠ¤íŠ¸ë¥¼ ì¢…ë£Œí•˜ê² ìŠµë‹ˆë‹¤.#l";
 				}
 				cm.sendSimple(QS2);
 			}
@@ -185,86 +185,86 @@ function action(mode, type, selection) {
 				if (cm.haveItem(4000653, 550)) {
 					if (!cm.haveItem(1142009, 1)) {
 						if (cm.canHold(1142009)) {
-							cm.gainSponserItem(1142009, "¸í¿¹ÀÇ ÄªÈ£", 10, 10, 4);
-							//cm.Æ¯º°¾ÆÀÌÅÛ·¹Àüµå¸®(1142009);
+							cm.gainSponserItem(1142009, "ëª…ì˜ˆì˜ ì¹­í˜¸", 10, 10, 4);
+							//cm.íŠ¹ë³„ì•„ì´í…œë ˆì „ë“œë¦¬(1142009);
 							cm.gainItem(4000653, -550);
-							cm.sendOk("ÄªÈ£¸¦ Áö±ÞÇØµå·È½À´Ï´Ù.\r\nÇØ´ç ÄªÈ£´Â ÁÖ¹®¼­¸¦ #r5¹ø#k »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù");
+							cm.sendOk("ì¹­í˜¸ë¥¼ ì§€ê¸‰í•´ë“œë ¸ìŠµë‹ˆë‹¤.\r\ní•´ë‹¹ ì¹­í˜¸ëŠ” ì£¼ë¬¸ì„œë¥¼ #r5ë²ˆ#k ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤");
 						} else {
-							cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.\r\n¶Ç´Â ÀÌ¹Ì º¸À¯ÁßÀÔ´Ï´Ù.");
+							cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.\r\në˜ëŠ” ì´ë¯¸ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 						}
 					} else {
-						cm.sendOk("ÀÌ¹Ì ÇØ´ç ÄªÈ£¸¦ º¸À¯ÁßÀÔ´Ï´Ù.");
+						cm.sendOk("ì´ë¯¸ í•´ë‹¹ ì¹­í˜¸ë¥¼ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 					}
 				} else {
-					cm.sendOk("Äù½ºÆ®¾ÆÀÌÅÛ : #v4000653# \r\nÄù½ºÆ®¾ÆÀÌÅÛÀ» 550°³¸¦ ¸ð¾Æ¿À´Â°ÍÀÌ ÀÎÁ¤Á¶°ÇÀÌ¿¹¿ä.");
+					cm.sendOk("í€˜ìŠ¤íŠ¸ì•„ì´í…œ : #v4000653# \r\ní€˜ìŠ¤íŠ¸ì•„ì´í…œì„ 550ê°œë¥¼ ëª¨ì•„ì˜¤ëŠ”ê²ƒì´ ì¸ì •ì¡°ê±´ì´ì˜ˆìš”.");
 				}
 				cm.dispose();
 			} else if (selection == 211) {
 				if (cm.haveItem(4000650, 550)) {
 					if (!cm.haveItem(1142010, 1)) {
 						if (cm.canHold(1142010)) {
-							cm.gainSponserItem(1142010, "¸í¿¹ÀÇ ÄªÈ£", 10, 10, 4);
+							cm.gainSponserItem(1142010, "ëª…ì˜ˆì˜ ì¹­í˜¸", 10, 10, 4);
 							cm.gainItem(4000650, -550);
-							cm.sendOk("ÄªÈ£¸¦ Áö±ÞÇØµå·È½À´Ï´Ù.\r\nÇØ´ç ÄªÈ£´Â ÁÖ¹®¼­¸¦ #r5¹ø#k »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù");
+							cm.sendOk("ì¹­í˜¸ë¥¼ ì§€ê¸‰í•´ë“œë ¸ìŠµë‹ˆë‹¤.\r\ní•´ë‹¹ ì¹­í˜¸ëŠ” ì£¼ë¬¸ì„œë¥¼ #r5ë²ˆ#k ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤");
 						} else {
-							cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.\r\n¶Ç´Â ÀÌ¹Ì º¸À¯ÁßÀÔ´Ï´Ù.");
+							cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.\r\në˜ëŠ” ì´ë¯¸ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 						}
 					} else {
-						cm.sendOk("ÀÌ¹Ì ÇØ´ç ÄªÈ£¸¦ º¸À¯ÁßÀÔ´Ï´Ù.");
+						cm.sendOk("ì´ë¯¸ í•´ë‹¹ ì¹­í˜¸ë¥¼ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 					}
 				} else {
-					cm.sendOk("Äù½ºÆ®¾ÆÀÌÅÛ : #v4000650# \r\nÄù½ºÆ®¾ÆÀÌÅÛÀ» 550°³¸¦ ¸ð¾Æ¿À´Â°ÍÀÌ ÀÎÁ¤Á¶°ÇÀÌ¿¹¿ä.");
+					cm.sendOk("í€˜ìŠ¤íŠ¸ì•„ì´í…œ : #v4000650# \r\ní€˜ìŠ¤íŠ¸ì•„ì´í…œì„ 550ê°œë¥¼ ëª¨ì•„ì˜¤ëŠ”ê²ƒì´ ì¸ì •ì¡°ê±´ì´ì˜ˆìš”.");
 				}
 				cm.dispose();
 			} else if (selection == 212) {
 				if (cm.haveItem(4000652, 550)) {
 					if (!cm.haveItem(1142011, 1)) {
 						if (cm.canHold(1142011)) {
-							cm.gainSponserItem(1142011, "¸í¿¹ÀÇ ÄªÈ£", 10, 10, 4);
+							cm.gainSponserItem(1142011, "ëª…ì˜ˆì˜ ì¹­í˜¸", 10, 10, 4);
 							cm.gainItem(4000652, -550);
-							cm.sendOk("ÄªÈ£¸¦ Áö±ÞÇØµå·È½À´Ï´Ù.\r\nÇØ´ç ÄªÈ£´Â ÁÖ¹®¼­¸¦ #r5¹ø#k »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù");
+							cm.sendOk("ì¹­í˜¸ë¥¼ ì§€ê¸‰í•´ë“œë ¸ìŠµë‹ˆë‹¤.\r\ní•´ë‹¹ ì¹­í˜¸ëŠ” ì£¼ë¬¸ì„œë¥¼ #r5ë²ˆ#k ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤");
 						} else {
-							cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.\r\n¶Ç´Â ÀÌ¹Ì º¸À¯ÁßÀÔ´Ï´Ù.");
+							cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.\r\në˜ëŠ” ì´ë¯¸ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 						}
 					} else {
-						cm.sendOk("ÀÌ¹Ì ÇØ´ç ÄªÈ£¸¦ º¸À¯ÁßÀÔ´Ï´Ù.");
+						cm.sendOk("ì´ë¯¸ í•´ë‹¹ ì¹­í˜¸ë¥¼ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 					}
 				} else {
-					cm.sendOk("Äù½ºÆ®¾ÆÀÌÅÛ : #v4000652# \r\nÄù½ºÆ®¾ÆÀÌÅÛÀ» 550°³¸¦ ¸ð¾Æ¿À´Â°ÍÀÌ ÀÎÁ¤Á¶°ÇÀÌ¿¹¿ä.");
+					cm.sendOk("í€˜ìŠ¤íŠ¸ì•„ì´í…œ : #v4000652# \r\ní€˜ìŠ¤íŠ¸ì•„ì´í…œì„ 550ê°œë¥¼ ëª¨ì•„ì˜¤ëŠ”ê²ƒì´ ì¸ì •ì¡°ê±´ì´ì˜ˆìš”.");
 				}
 				cm.dispose();
 			} else if (selection == 213) {
 				if (cm.haveItem(4000649, 550)) {
 					if (!cm.haveItem(1142012, 1)) {
 						if (cm.canHold(1142012)) {
-							cm.gainSponserItem(1142012, "¸í¿¹ÀÇ ÄªÈ£", 10, 10, 4);
+							cm.gainSponserItem(1142012, "ëª…ì˜ˆì˜ ì¹­í˜¸", 10, 10, 4);
 							cm.gainItem(4000649, -550);
-							cm.sendOk("ÄªÈ£¸¦ Áö±ÞÇØµå·È½À´Ï´Ù.\r\nÇØ´ç ÄªÈ£´Â ÁÖ¹®¼­¸¦ #r5¹ø#k »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù");
+							cm.sendOk("ì¹­í˜¸ë¥¼ ì§€ê¸‰í•´ë“œë ¸ìŠµë‹ˆë‹¤.\r\ní•´ë‹¹ ì¹­í˜¸ëŠ” ì£¼ë¬¸ì„œë¥¼ #r5ë²ˆ#k ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤");
 						} else {
-							cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.\r\n¶Ç´Â ÀÌ¹Ì º¸À¯ÁßÀÔ´Ï´Ù.");
+							cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.\r\në˜ëŠ” ì´ë¯¸ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 						}
 					} else {
-						cm.sendOk("ÀÌ¹Ì ÇØ´ç ÄªÈ£¸¦ º¸À¯ÁßÀÔ´Ï´Ù.");
+						cm.sendOk("ì´ë¯¸ í•´ë‹¹ ì¹­í˜¸ë¥¼ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 					}
 				} else {
-					cm.sendOk("Äù½ºÆ®¾ÆÀÌÅÛ : #v4000649# \r\nÄù½ºÆ®¾ÆÀÌÅÛÀ» 550°³¸¦ ¸ð¾Æ¿À´Â°ÍÀÌ ÀÎÁ¤Á¶°ÇÀÌ¿¹¿ä.");
+					cm.sendOk("í€˜ìŠ¤íŠ¸ì•„ì´í…œ : #v4000649# \r\ní€˜ìŠ¤íŠ¸ì•„ì´í…œì„ 550ê°œë¥¼ ëª¨ì•„ì˜¤ëŠ”ê²ƒì´ ì¸ì •ì¡°ê±´ì´ì˜ˆìš”.");
 				}
 				cm.dispose();
 			} else if (selection == 214) {
 				if (cm.haveItem(4000651, 550)) {
 					if (!cm.haveItem(1142013, 1)) {
 						if (cm.canHold(1142013)) {
-							cm.gainSponserItem(1142013, "¸í¿¹ÀÇ ÄªÈ£", 10, 10, 4);
+							cm.gainSponserItem(1142013, "ëª…ì˜ˆì˜ ì¹­í˜¸", 10, 10, 4);
 							cm.gainItem(4000651, -550);
-							cm.sendOk("ÄªÈ£¸¦ Áö±ÞÇØµå·È½À´Ï´Ù.\r\nÇØ´ç ÄªÈ£´Â ÁÖ¹®¼­¸¦ #r5¹ø#k »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù");
+							cm.sendOk("ì¹­í˜¸ë¥¼ ì§€ê¸‰í•´ë“œë ¸ìŠµë‹ˆë‹¤.\r\ní•´ë‹¹ ì¹­í˜¸ëŠ” ì£¼ë¬¸ì„œë¥¼ #r5ë²ˆ#k ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤");
 						} else {
-							cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.\r\n¶Ç´Â ÀÌ¹Ì º¸À¯ÁßÀÔ´Ï´Ù.");
+							cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.\r\në˜ëŠ” ì´ë¯¸ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 						}
 					} else {
-						cm.sendOk("ÀÌ¹Ì ÇØ´ç ÄªÈ£¸¦ º¸À¯ÁßÀÔ´Ï´Ù.");
+						cm.sendOk("ì´ë¯¸ í•´ë‹¹ ì¹­í˜¸ë¥¼ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 					}
 				} else {
-					cm.sendOk("Äù½ºÆ®¾ÆÀÌÅÛ : #v4000651# \r\nÄù½ºÆ®¾ÆÀÌÅÛÀ» 550°³¸¦ ¸ð¾Æ¿À´Â°ÍÀÌ ÀÎÁ¤Á¶°ÇÀÌ¿¹¿ä.");
+					cm.sendOk("í€˜ìŠ¤íŠ¸ì•„ì´í…œ : #v4000651# \r\ní€˜ìŠ¤íŠ¸ì•„ì´í…œì„ 550ê°œë¥¼ ëª¨ì•„ì˜¤ëŠ”ê²ƒì´ ì¸ì •ì¡°ê±´ì´ì˜ˆìš”.");
 				}
 				cm.dispose();
 			}
@@ -274,7 +274,7 @@ function action(mode, type, selection) {
 			cm.getPlayer().setKeyValue("QUEST7", "1");
 			cm.dispose();
 			} else {
-			cm.sendOk("¸ðµç ½ºÅä¸®Äù½ºÆ®¸¦ ¿Ï·áÇÏÁö¾Ê¾Ò¾î!");
+			cm.sendOk("ëª¨ë“  ìŠ¤í† ë¦¬í€˜ìŠ¤íŠ¸ë¥¼ ì™„ë£Œí•˜ì§€ì•Šì•˜ì–´!");
 			cm.dispose();
 			}
 			}*/
@@ -282,209 +282,209 @@ function action(mode, type, selection) {
 				if (cm.haveItem(4000654, 550)) {
 					if (!cm.haveItem(1142597, 1)) {
 						if (cm.canHold(1142597)) {
-							cm.gainSponserItem(1142597, "¸í¿¹ÀÇ ÄªÈ£", 10, 10, 4);
+							cm.gainSponserItem(1142597, "ëª…ì˜ˆì˜ ì¹­í˜¸", 10, 10, 4);
 							cm.gainItem(4000654, -550);
-							cm.sendOk("ÄªÈ£¸¦ Áö±ÞÇØµå·È½À´Ï´Ù.\r\nÇØ´ç ÄªÈ£´Â ÁÖ¹®¼­¸¦ #r5¹ø#k »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù");
+							cm.sendOk("ì¹­í˜¸ë¥¼ ì§€ê¸‰í•´ë“œë ¸ìŠµë‹ˆë‹¤.\r\ní•´ë‹¹ ì¹­í˜¸ëŠ” ì£¼ë¬¸ì„œë¥¼ #r5ë²ˆ#k ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤");
 						} else {
-							cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.\r\n¶Ç´Â ÀÌ¹Ì º¸À¯ÁßÀÔ´Ï´Ù.");
+							cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.\r\në˜ëŠ” ì´ë¯¸ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 						}
 					} else {
-						cm.sendOk("ÀÌ¹Ì ÇØ´ç ÄªÈ£¸¦ º¸À¯ÁßÀÔ´Ï´Ù.");
+						cm.sendOk("ì´ë¯¸ í•´ë‹¹ ì¹­í˜¸ë¥¼ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 					}
 				} else {
-					cm.sendOk("Äù½ºÆ®¾ÆÀÌÅÛ : #v4000654# \r\nÄù½ºÆ®¾ÆÀÌÅÛÀ» 550°³¸¦ ¸ð¾Æ¿À´Â°ÍÀÌ ÀÎÁ¤Á¶°ÇÀÌ¿¹¿ä.");
+					cm.sendOk("í€˜ìŠ¤íŠ¸ì•„ì´í…œ : #v4000654# \r\ní€˜ìŠ¤íŠ¸ì•„ì´í…œì„ 550ê°œë¥¼ ëª¨ì•„ì˜¤ëŠ”ê²ƒì´ ì¸ì •ì¡°ê±´ì´ì˜ˆìš”.");
 				}
 			} else if (selection == 301) {
 				if (cm.haveItem(4000654, 550)) {
 					if (!cm.haveItem(1142403, 1)) {
 						if (cm.canHold(1142403)) {
-							cm.gainSponserItem(1142403, "¸í¿¹ÀÇ ÄªÈ£", 10, 10, 4);
+							cm.gainSponserItem(1142403, "ëª…ì˜ˆì˜ ì¹­í˜¸", 10, 10, 4);
 							cm.gainItem(4000654, -550);
-							cm.sendOk("ÄªÈ£¸¦ Áö±ÞÇØµå·È½À´Ï´Ù.\r\nÇØ´ç ÄªÈ£´Â ÁÖ¹®¼­¸¦ #r5¹ø#k »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù");
+							cm.sendOk("ì¹­í˜¸ë¥¼ ì§€ê¸‰í•´ë“œë ¸ìŠµë‹ˆë‹¤.\r\ní•´ë‹¹ ì¹­í˜¸ëŠ” ì£¼ë¬¸ì„œë¥¼ #r5ë²ˆ#k ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤");
 						} else {
-							cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.\r\n¶Ç´Â ÀÌ¹Ì º¸À¯ÁßÀÔ´Ï´Ù.");
+							cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.\r\në˜ëŠ” ì´ë¯¸ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 						}
 					} else {
-						cm.sendOk("ÀÌ¹Ì ÇØ´ç ÄªÈ£¸¦ º¸À¯ÁßÀÔ´Ï´Ù.");
+						cm.sendOk("ì´ë¯¸ í•´ë‹¹ ì¹­í˜¸ë¥¼ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 					}
 				} else {
-					cm.sendOk("Äù½ºÆ®¾ÆÀÌÅÛ : #v4000654# \r\nÄù½ºÆ®¾ÆÀÌÅÛÀ» 550°³¸¦ ¸ð¾Æ¿À´Â°ÍÀÌ ÀÎÁ¤Á¶°ÇÀÌ¿¹¿ä.");
+					cm.sendOk("í€˜ìŠ¤íŠ¸ì•„ì´í…œ : #v4000654# \r\ní€˜ìŠ¤íŠ¸ì•„ì´í…œì„ 550ê°œë¥¼ ëª¨ì•„ì˜¤ëŠ”ê²ƒì´ ì¸ì •ì¡°ê±´ì´ì˜ˆìš”.");
 				}
 			} else if (selection == 400) {
 				if (cm.haveItem(4000654, 550)) {
 					if (!cm.haveItem(1142379, 1)) {
 						if (cm.canHold(1142379)) {
-							cm.gainSponserItem(1142379, "¸í¿¹ÀÇ ÄªÈ£", 10, 10, 4);
+							cm.gainSponserItem(1142379, "ëª…ì˜ˆì˜ ì¹­í˜¸", 10, 10, 4);
 							cm.gainItem(4000654, -550);
-							cm.sendOk("ÄªÈ£¸¦ Áö±ÞÇØµå·È½À´Ï´Ù.\r\nÇØ´ç ÄªÈ£´Â ÁÖ¹®¼­¸¦ #r5¹ø#k »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù");
+							cm.sendOk("ì¹­í˜¸ë¥¼ ì§€ê¸‰í•´ë“œë ¸ìŠµë‹ˆë‹¤.\r\ní•´ë‹¹ ì¹­í˜¸ëŠ” ì£¼ë¬¸ì„œë¥¼ #r5ë²ˆ#k ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤");
 						} else {
-							cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.\r\n¶Ç´Â ÀÌ¹Ì º¸À¯ÁßÀÔ´Ï´Ù.");
+							cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.\r\në˜ëŠ” ì´ë¯¸ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 						}
 					} else {
-						cm.sendOk("ÀÌ¹Ì ÇØ´ç ÄªÈ£¸¦ º¸À¯ÁßÀÔ´Ï´Ù.");
+						cm.sendOk("ì´ë¯¸ í•´ë‹¹ ì¹­í˜¸ë¥¼ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 					}
 				} else {
-					cm.sendOk("Äù½ºÆ®¾ÆÀÌÅÛ : #v4000654# \r\nÄù½ºÆ®¾ÆÀÌÅÛÀ» 550°³¸¦ ¸ð¾Æ¿À´Â°ÍÀÌ ÀÎÁ¤Á¶°ÇÀÌ¿¹¿ä.");
+					cm.sendOk("í€˜ìŠ¤íŠ¸ì•„ì´í…œ : #v4000654# \r\ní€˜ìŠ¤íŠ¸ì•„ì´í…œì„ 550ê°œë¥¼ ëª¨ì•„ì˜¤ëŠ”ê²ƒì´ ì¸ì •ì¡°ê±´ì´ì˜ˆìš”.");
 				}
 			} else if (selection == 401) {
 				if (cm.haveItem(4000654, 550)) {
 					if (!cm.haveItem(1142158, 1)) {
 						if (cm.canHold(1142158)) {
-							cm.gainSponserItem(1142158, "¸í¿¹ÀÇ ÄªÈ£", 10, 10, 4);
+							cm.gainSponserItem(1142158, "ëª…ì˜ˆì˜ ì¹­í˜¸", 10, 10, 4);
 							cm.gainItem(4000654, -550);
-							cm.sendOk("ÄªÈ£¸¦ Áö±ÞÇØµå·È½À´Ï´Ù.\r\nÇØ´ç ÄªÈ£´Â ÁÖ¹®¼­¸¦ #r5¹ø#k »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù");
+							cm.sendOk("ì¹­í˜¸ë¥¼ ì§€ê¸‰í•´ë“œë ¸ìŠµë‹ˆë‹¤.\r\ní•´ë‹¹ ì¹­í˜¸ëŠ” ì£¼ë¬¸ì„œë¥¼ #r5ë²ˆ#k ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤");
 						} else {
-							cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.\r\n¶Ç´Â ÀÌ¹Ì º¸À¯ÁßÀÔ´Ï´Ù.");
+							cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.\r\në˜ëŠ” ì´ë¯¸ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 						}
 					} else {
-						cm.sendOk("ÀÌ¹Ì ÇØ´ç ÄªÈ£¸¦ º¸À¯ÁßÀÔ´Ï´Ù.");
+						cm.sendOk("ì´ë¯¸ í•´ë‹¹ ì¹­í˜¸ë¥¼ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 					}
 				} else {
-					cm.sendOk("Äù½ºÆ®¾ÆÀÌÅÛ : #v4000654# \r\nÄù½ºÆ®¾ÆÀÌÅÛÀ» 550°³¸¦ ¸ð¾Æ¿À´Â°ÍÀÌ ÀÎÁ¤Á¶°ÇÀÌ¿¹¿ä.");
+					cm.sendOk("í€˜ìŠ¤íŠ¸ì•„ì´í…œ : #v4000654# \r\ní€˜ìŠ¤íŠ¸ì•„ì´í…œì„ 550ê°œë¥¼ ëª¨ì•„ì˜¤ëŠ”ê²ƒì´ ì¸ì •ì¡°ê±´ì´ì˜ˆìš”.");
 				}
 
 			} else if (selection == 402) {
 				if (cm.haveItem(4000654, 550)) {
 					if (!cm.haveItem(1142483, 1)) {
 						if (cm.canHold(1142483)) {
-							cm.gainSponserItem(1142483, "¸í¿¹ÀÇ ÄªÈ£", 10, 10, 4);
+							cm.gainSponserItem(1142483, "ëª…ì˜ˆì˜ ì¹­í˜¸", 10, 10, 4);
 							cm.gainItem(4000654, -550);
-							cm.sendOk("ÄªÈ£¸¦ Áö±ÞÇØµå·È½À´Ï´Ù.\r\nÇØ´ç ÄªÈ£´Â ÁÖ¹®¼­¸¦ #r5¹ø#k »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù");
+							cm.sendOk("ì¹­í˜¸ë¥¼ ì§€ê¸‰í•´ë“œë ¸ìŠµë‹ˆë‹¤.\r\ní•´ë‹¹ ì¹­í˜¸ëŠ” ì£¼ë¬¸ì„œë¥¼ #r5ë²ˆ#k ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤");
 						} else {
-							cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.\r\n¶Ç´Â ÀÌ¹Ì º¸À¯ÁßÀÔ´Ï´Ù.");
+							cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.\r\në˜ëŠ” ì´ë¯¸ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 						}
 					} else {
-						cm.sendOk("ÀÌ¹Ì ÇØ´ç ÄªÈ£¸¦ º¸À¯ÁßÀÔ´Ï´Ù.");
+						cm.sendOk("ì´ë¯¸ í•´ë‹¹ ì¹­í˜¸ë¥¼ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 					}
 				} else {
-					cm.sendOk("Äù½ºÆ®¾ÆÀÌÅÛ : #v4000654# \r\nÄù½ºÆ®¾ÆÀÌÅÛÀ» 550°³¸¦ ¸ð¾Æ¿À´Â°ÍÀÌ ÀÎÁ¤Á¶°ÇÀÌ¿¹¿ä.");
+					cm.sendOk("í€˜ìŠ¤íŠ¸ì•„ì´í…œ : #v4000654# \r\ní€˜ìŠ¤íŠ¸ì•„ì´í…œì„ 550ê°œë¥¼ ëª¨ì•„ì˜¤ëŠ”ê²ƒì´ ì¸ì •ì¡°ê±´ì´ì˜ˆìš”.");
 				}
 
 			} else if (selection == 403) {
 				if (cm.haveItem(4000654, 550)) {
 					if (!cm.haveItem(1142488, 1)) {
 						if (cm.canHold(1142488)) {
-							cm.gainSponserItem(1142488, "¸í¿¹ÀÇ ÄªÈ£", 10, 10, 4);
+							cm.gainSponserItem(1142488, "ëª…ì˜ˆì˜ ì¹­í˜¸", 10, 10, 4);
 							cm.gainItem(4000654, -550);
-							cm.sendOk("ÄªÈ£¸¦ Áö±ÞÇØµå·È½À´Ï´Ù.\r\nÇØ´ç ÄªÈ£´Â ÁÖ¹®¼­¸¦ #r5¹ø#k »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù");
+							cm.sendOk("ì¹­í˜¸ë¥¼ ì§€ê¸‰í•´ë“œë ¸ìŠµë‹ˆë‹¤.\r\ní•´ë‹¹ ì¹­í˜¸ëŠ” ì£¼ë¬¸ì„œë¥¼ #r5ë²ˆ#k ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤");
 						} else {
-							cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.\r\n¶Ç´Â ÀÌ¹Ì º¸À¯ÁßÀÔ´Ï´Ù.");
+							cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.\r\në˜ëŠ” ì´ë¯¸ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 						}
 					} else {
-						cm.sendOk("ÀÌ¹Ì ÇØ´ç ÄªÈ£¸¦ º¸À¯ÁßÀÔ´Ï´Ù.");
+						cm.sendOk("ì´ë¯¸ í•´ë‹¹ ì¹­í˜¸ë¥¼ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 					}
 				} else {
-					cm.sendOk("Äù½ºÆ®¾ÆÀÌÅÛ : #v4000654# \r\nÄù½ºÆ®¾ÆÀÌÅÛÀ» 550°³¸¦ ¸ð¾Æ¿À´Â°ÍÀÌ ÀÎÁ¤Á¶°ÇÀÌ¿¹¿ä.");
+					cm.sendOk("í€˜ìŠ¤íŠ¸ì•„ì´í…œ : #v4000654# \r\ní€˜ìŠ¤íŠ¸ì•„ì´í…œì„ 550ê°œë¥¼ ëª¨ì•„ì˜¤ëŠ”ê²ƒì´ ì¸ì •ì¡°ê±´ì´ì˜ˆìš”.");
 				}
 			} else if (selection == 404) {
 				if (cm.haveItem(4000654, 550)) {
 					if (!cm.haveItem(1142499, 1)) {
 						if (cm.canHold(1142499)) {
-							cm.gainSponserItem(1142499, "¸í¿¹ÀÇ ÄªÈ£", 10, 10, 4);
+							cm.gainSponserItem(1142499, "ëª…ì˜ˆì˜ ì¹­í˜¸", 10, 10, 4);
 							cm.gainItem(4000654, -550);
-							cm.sendOk("ÄªÈ£¸¦ Áö±ÞÇØµå·È½À´Ï´Ù.\r\nÇØ´ç ÄªÈ£´Â ÁÖ¹®¼­¸¦ #r5¹ø#k »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù");
+							cm.sendOk("ì¹­í˜¸ë¥¼ ì§€ê¸‰í•´ë“œë ¸ìŠµë‹ˆë‹¤.\r\ní•´ë‹¹ ì¹­í˜¸ëŠ” ì£¼ë¬¸ì„œë¥¼ #r5ë²ˆ#k ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤");
 						} else {
-							cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.\r\n¶Ç´Â ÀÌ¹Ì º¸À¯ÁßÀÔ´Ï´Ù.");
+							cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.\r\në˜ëŠ” ì´ë¯¸ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 						}
 					} else {
-						cm.sendOk("ÀÌ¹Ì ÇØ´ç ÄªÈ£¸¦ º¸À¯ÁßÀÔ´Ï´Ù.");
+						cm.sendOk("ì´ë¯¸ í•´ë‹¹ ì¹­í˜¸ë¥¼ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 					}
 				} else {
-					cm.sendOk("Äù½ºÆ®¾ÆÀÌÅÛ : #v4000654# \r\nÄù½ºÆ®¾ÆÀÌÅÛÀ» 550°³¸¦ ¸ð¾Æ¿À´Â°ÍÀÌ ÀÎÁ¤Á¶°ÇÀÌ¿¹¿ä.");
+					cm.sendOk("í€˜ìŠ¤íŠ¸ì•„ì´í…œ : #v4000654# \r\ní€˜ìŠ¤íŠ¸ì•„ì´í…œì„ 550ê°œë¥¼ ëª¨ì•„ì˜¤ëŠ”ê²ƒì´ ì¸ì •ì¡°ê±´ì´ì˜ˆìš”.");
 				}
 			} else if (selection == 405) {
 				if (cm.haveItem(4000654, 550)) {
 					if (!cm.haveItem(1142345, 1)) {
 						if (cm.canHold(1142345)) {
-							cm.gainSponserItem(1142345, "¸í¿¹ÀÇ ÄªÈ£", 10, 10, 4);
+							cm.gainSponserItem(1142345, "ëª…ì˜ˆì˜ ì¹­í˜¸", 10, 10, 4);
 							cm.gainItem(4000654, -550);
-							cm.sendOk("ÄªÈ£¸¦ Áö±ÞÇØµå·È½À´Ï´Ù.\r\nÇØ´ç ÄªÈ£´Â ÁÖ¹®¼­¸¦ #r5¹ø#k »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù");
+							cm.sendOk("ì¹­í˜¸ë¥¼ ì§€ê¸‰í•´ë“œë ¸ìŠµë‹ˆë‹¤.\r\ní•´ë‹¹ ì¹­í˜¸ëŠ” ì£¼ë¬¸ì„œë¥¼ #r5ë²ˆ#k ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤");
 						} else {
-							cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.\r\n¶Ç´Â ÀÌ¹Ì º¸À¯ÁßÀÔ´Ï´Ù.");
+							cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.\r\në˜ëŠ” ì´ë¯¸ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 						}
 					} else {
-						cm.sendOk("ÀÌ¹Ì ÇØ´ç ÄªÈ£¸¦ º¸À¯ÁßÀÔ´Ï´Ù.");
+						cm.sendOk("ì´ë¯¸ í•´ë‹¹ ì¹­í˜¸ë¥¼ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 					}
 				} else {
-					cm.sendOk("Äù½ºÆ®¾ÆÀÌÅÛ : #v4000654# \r\nÄù½ºÆ®¾ÆÀÌÅÛÀ» 550°³¸¦ ¸ð¾Æ¿À´Â°ÍÀÌ ÀÎÁ¤Á¶°ÇÀÌ¿¹¿ä.");
+					cm.sendOk("í€˜ìŠ¤íŠ¸ì•„ì´í…œ : #v4000654# \r\ní€˜ìŠ¤íŠ¸ì•„ì´í…œì„ 550ê°œë¥¼ ëª¨ì•„ì˜¤ëŠ”ê²ƒì´ ì¸ì •ì¡°ê±´ì´ì˜ˆìš”.");
 				}
 			} else if (selection == 406) {
 				if (cm.haveItem(4000654, 550)) {
 					if (!cm.haveItem(114234, 1)) {
 						if (cm.canHold(114234)) {
-							cm.gainSponserItem(114234, "¸í¿¹ÀÇ ÄªÈ£", 10, 10, 4);
+							cm.gainSponserItem(114234, "ëª…ì˜ˆì˜ ì¹­í˜¸", 10, 10, 4);
 							cm.gainItem(4000654, -550);
-							cm.sendOk("ÄªÈ£¸¦ Áö±ÞÇØµå·È½À´Ï´Ù.\r\nÇØ´ç ÄªÈ£´Â ÁÖ¹®¼­¸¦ #r5¹ø#k »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù");
+							cm.sendOk("ì¹­í˜¸ë¥¼ ì§€ê¸‰í•´ë“œë ¸ìŠµë‹ˆë‹¤.\r\ní•´ë‹¹ ì¹­í˜¸ëŠ” ì£¼ë¬¸ì„œë¥¼ #r5ë²ˆ#k ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤");
 						} else {
-							cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.\r\n¶Ç´Â ÀÌ¹Ì º¸À¯ÁßÀÔ´Ï´Ù.");
+							cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.\r\në˜ëŠ” ì´ë¯¸ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 						}
 					} else {
-						cm.sendOk("ÀÌ¹Ì ÇØ´ç ÄªÈ£¸¦ º¸À¯ÁßÀÔ´Ï´Ù.");
+						cm.sendOk("ì´ë¯¸ í•´ë‹¹ ì¹­í˜¸ë¥¼ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 					}
 				} else {
-					cm.sendOk("Äù½ºÆ®¾ÆÀÌÅÛ : #v4000654# \r\nÄù½ºÆ®¾ÆÀÌÅÛÀ» 550°³¸¦ ¸ð¾Æ¿À´Â°ÍÀÌ ÀÎÁ¤Á¶°ÇÀÌ¿¹¿ä.");
+					cm.sendOk("í€˜ìŠ¤íŠ¸ì•„ì´í…œ : #v4000654# \r\ní€˜ìŠ¤íŠ¸ì•„ì´í…œì„ 550ê°œë¥¼ ëª¨ì•„ì˜¤ëŠ”ê²ƒì´ ì¸ì •ì¡°ê±´ì´ì˜ˆìš”.");
 				}
 			} else if (selection == 407) {
 				if (cm.haveItem(4000654, 550)) {
 					if (!cm.haveItem(1142133, 1)) {
 						if (cm.canHold(1142133)) {
-							cm.gainSponserItem(1142133, "¸í¿¹ÀÇ ÄªÈ£", 10, 10, 4);
+							cm.gainSponserItem(1142133, "ëª…ì˜ˆì˜ ì¹­í˜¸", 10, 10, 4);
 							cm.gainItem(4000654, -550);
-							cm.sendOk("ÄªÈ£¸¦ Áö±ÞÇØµå·È½À´Ï´Ù.\r\nÇØ´ç ÄªÈ£´Â ÁÖ¹®¼­¸¦ #r5¹ø#k »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù");
+							cm.sendOk("ì¹­í˜¸ë¥¼ ì§€ê¸‰í•´ë“œë ¸ìŠµë‹ˆë‹¤.\r\ní•´ë‹¹ ì¹­í˜¸ëŠ” ì£¼ë¬¸ì„œë¥¼ #r5ë²ˆ#k ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤");
 						} else {
-							cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.\r\n¶Ç´Â ÀÌ¹Ì º¸À¯ÁßÀÔ´Ï´Ù.");
+							cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.\r\në˜ëŠ” ì´ë¯¸ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 						}
 					} else {
-						cm.sendOk("ÀÌ¹Ì ÇØ´ç ÄªÈ£¸¦ º¸À¯ÁßÀÔ´Ï´Ù.");
+						cm.sendOk("ì´ë¯¸ í•´ë‹¹ ì¹­í˜¸ë¥¼ ë³´ìœ ì¤‘ìž…ë‹ˆë‹¤.");
 					}
 				} else {
-					cm.sendOk("Äù½ºÆ®¾ÆÀÌÅÛ : #v4000654# \r\nÄù½ºÆ®¾ÆÀÌÅÛÀ» 550°³¸¦ ¸ð¾Æ¿À´Â°ÍÀÌ ÀÎÁ¤Á¶°ÇÀÌ¿¹¿ä.");
+					cm.sendOk("í€˜ìŠ¤íŠ¸ì•„ì´í…œ : #v4000654# \r\ní€˜ìŠ¤íŠ¸ì•„ì´í…œì„ 550ê°œë¥¼ ëª¨ì•„ì˜¤ëŠ”ê²ƒì´ ì¸ì •ì¡°ê±´ì´ì˜ˆìš”.");
 				}
 			} else if (selection == 1) {
 				//cm.warp(222010200);
-				cm.sendOk("Äù½ºÆ®¿¡ ÇÊ¿äÇÑ Àç·á¸¦ ¸ð¾Æ¿À½Ã±â ¹Ù¶ø´Ï´Ù.");
+				cm.sendOk("í€˜ìŠ¤íŠ¸ì— í•„ìš”í•œ ìž¬ë£Œë¥¼ ëª¨ì•„ì˜¤ì‹œê¸° ë°”ëžë‹ˆë‹¤.");
 				cm.dispose();
 			} else if (selection == 2) {
 				//cm.warp(261020400);
-				cm.sendOk("Äù½ºÆ®¿¡ ÇÊ¿äÇÑ Àç·á¸¦ ¸ð¾Æ¿À½Ã±â ¹Ù¶ø´Ï´Ù.");
+				cm.sendOk("í€˜ìŠ¤íŠ¸ì— í•„ìš”í•œ ìž¬ë£Œë¥¼ ëª¨ì•„ì˜¤ì‹œê¸° ë°”ëžë‹ˆë‹¤.");
 				cm.dispose();
 			} else if (selection == 3) {
 				//cm.warp(300010400);
-				cm.sendOk("Äù½ºÆ®¿¡ ÇÊ¿äÇÑ Àç·á¸¦ ¸ð¾Æ¿À½Ã±â ¹Ù¶ø´Ï´Ù.");
+				cm.sendOk("í€˜ìŠ¤íŠ¸ì— í•„ìš”í•œ ìž¬ë£Œë¥¼ ëª¨ì•„ì˜¤ì‹œê¸° ë°”ëžë‹ˆë‹¤.");
 				cm.dispose();
 			} else if (selection == 4) {
 				//cm.warp(230040400);
-				cm.sendOk("Äù½ºÆ®¿¡ ÇÊ¿äÇÑ Àç·á¸¦ ¸ð¾Æ¿À½Ã±â ¹Ù¶ø´Ï´Ù.");
+				cm.sendOk("í€˜ìŠ¤íŠ¸ì— í•„ìš”í•œ ìž¬ë£Œë¥¼ ëª¨ì•„ì˜¤ì‹œê¸° ë°”ëžë‹ˆë‹¤.");
 				cm.dispose();
 			} else if (selection == 5) {
 				//cm.warp(270030500);
-				cm.sendOk("Äù½ºÆ®¿¡ ÇÊ¿äÇÑ Àç·á¸¦ ¸ð¾Æ¿À½Ã±â ¹Ù¶ø´Ï´Ù.");
+				cm.sendOk("í€˜ìŠ¤íŠ¸ì— í•„ìš”í•œ ìž¬ë£Œë¥¼ ëª¨ì•„ì˜¤ì‹œê¸° ë°”ëžë‹ˆë‹¤.");
 				cm.dispose();
 			} else if (selection == 20) {
 				if (cm.haveItem(4000171, 500)) {
 					if (cm.canHold(1152009)) {
-						cm.gainItem(1152009, 1, true); //´ÙÅ© È£¶ûÀÌ ¹ßÅé
+						cm.gainItem(1152009, 1, true); //ë‹¤í¬ í˜¸ëž‘ì´ ë°œí†±
 						cm.gainItem(4000171, -500);
-						cm.sendOk("¿øÇÏ½Ã´ø ¹°°ÇÀÌ ¸ÂÀ¸½Å°¡¿ä?");
+						cm.sendOk("ì›í•˜ì‹œë˜ ë¬¼ê±´ì´ ë§žìœ¼ì‹ ê°€ìš”?");
 					} else {
-						cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.");
+						cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.");
 					}
 				} else {
-					cm.sendOk("#b#v 4000171##k ¾ÆÁ÷ Àç·á°¡ ºÎÁ·ÇØ¿ä");
+					cm.sendOk("#b#v 4000171##k ì•„ì§ ìž¬ë£Œê°€ ë¶€ì¡±í•´ìš”");
 				}
 				cm.dispose();
 			} else if (selection == 19) {
 				if (cm.haveItem(4000364, 550) && cm.haveItem(4000365, 550)) {
 					if (cm.canHold(1122118)) {
-						cm.gainItem(1122118, 1, true); //¿µ¿øÇÑ »ç¶ûÀÇ ÁõÇ¥
+						cm.gainItem(1122118, 1, true); //ì˜ì›í•œ ì‚¬ëž‘ì˜ ì¦í‘œ
 						cm.gainItem(4000364, -550);
 						cm.gainItem(4000365, -550);
-						cm.sendOk("¿øÇÏ½Ã´ø ¹°°ÇÀÌ ¸ÂÀ¸½Å°¡¿ä?");
+						cm.sendOk("ì›í•˜ì‹œë˜ ë¬¼ê±´ì´ ë§žìœ¼ì‹ ê°€ìš”?");
 					} else {
-						cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.");
+						cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.");
 					}
 				} else {
-					cm.sendOk("#b#v 4000364# #v 4000365##k ¾ÆÁ÷ Àç·á°¡ ºÎÁ·ÇØ¿ä");
+					cm.sendOk("#b#v 4000364# #v 4000365##k ì•„ì§ ìž¬ë£Œê°€ ë¶€ì¡±í•´ìš”");
 				}
 				cm.dispose();
 			} else if (selection == 60) {
@@ -499,53 +499,53 @@ function action(mode, type, selection) {
 						cm.gainItem(4033311, -1);
 						cm.gainItem(4033312, -1);
 						cm.gainItem(4000659, -1);
-						cm.sendOk("¿øÇÏ½Ã´ø ¹°°ÇÀÌ ¸ÂÀ¸½Å°¡¿ä?");
+						cm.sendOk("ì›í•˜ì‹œë˜ ë¬¼ê±´ì´ ë§žìœ¼ì‹ ê°€ìš”?");
 					} else {
-						cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.");
+						cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.");
 					}
 				} else {
-					cm.sendOk("Àç·á°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+					cm.sendOk("ìž¬ë£Œê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 				}
 				cm.dispose();
 			} else if (selection == 18) {
 				if (cm.haveItem(4000440, 550)) {
 					if (cm.canHold(1032101)) {
-						cm.gainItem(1032101, 1, true); //´«ºÎ½Å ¾ËÅ×¾î ÀÌ¾î¸µ
+						cm.gainItem(1032101, 1, true); //ëˆˆë¶€ì‹  ì•Œí…Œì–´ ì´ì–´ë§
 						cm.gainItem(4000440, -550);
-						cm.sendOk("¿øÇÏ½Ã´ø ¹°°ÇÀÌ ¸ÂÀ¸½Å°¡¿ä?");
+						cm.sendOk("ì›í•˜ì‹œë˜ ë¬¼ê±´ì´ ë§žìœ¼ì‹ ê°€ìš”?");
 					} else {
-						cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.");
+						cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.");
 					}
 				} else {
-					cm.sendOk("#b#v 4000440##k ¾ÆÁ÷ Àç·á°¡ ºÎÁ·ÇØ¿ä");
+					cm.sendOk("#b#v 4000440##k ì•„ì§ ìž¬ë£Œê°€ ë¶€ì¡±í•´ìš”");
 				}
 				cm.dispose();
 			} else if (selection == 17) {
 				if (cm.haveItem(4000180, 550) && cm.haveItem(4000181, 550)) {
 					if (cm.canHold(1022123)) {
 						//cm.gainhorong(1022123);
-						cm.gainItem(1022123, 1, true); //ÄËÅ¸ÀÇ ¹°¾È°æ
+						cm.gainItem(1022123, 1, true); //ì¼„íƒ€ì˜ ë¬¼ì•ˆê²½
 						cm.gainItem(4000180, -550);
 						cm.gainItem(4000181, -550);
-						cm.sendOk("¿øÇÏ½Ã´ø ¹°°ÇÀÌ ¸ÂÀ¸½Å°¡¿ä?");
+						cm.sendOk("ì›í•˜ì‹œë˜ ë¬¼ê±´ì´ ë§žìœ¼ì‹ ê°€ìš”?");
 					} else {
-						cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.");
+						cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.");
 					}
 				} else {
-					cm.sendOk("#b#v 4000180# #v 4000181##k ¾ÆÁ÷ Àç·á°¡ ºÎÁ·ÇØ¿ä");
+					cm.sendOk("#b#v 4000180# #v 4000181##k ì•„ì§ ìž¬ë£Œê°€ ë¶€ì¡±í•´ìš”");
 				}
 				cm.dispose();
 			} else if (selection == 16) {
 				if (cm.haveItem(4000458, 300)) {
 					if (cm.canHold(1112594)) {
-						cm.gainItem(1112594, 1); //´«²É ¿£Á©¸¯ ºí·¹½º
+						cm.gainItem(1112594, 1); //ëˆˆê½ƒ ì—”ì ¤ë¦­ ë¸”ë ˆìŠ¤
 						cm.gainItem(4000458, -300);
-						cm.sendOk("¿øÇÏ½Ã´ø ¹°°ÇÀÌ ¸ÂÀ¸½Å°¡¿ä?");
+						cm.sendOk("ì›í•˜ì‹œë˜ ë¬¼ê±´ì´ ë§žìœ¼ì‹ ê°€ìš”?");
 					} else {
-						cm.sendOk("ÁË¼ÛÇÏÁö¸¸ ÀÎº¥Åä¸® °ø°£ÀÌ ÃæºÐÇÏÁö ¾ÊÀ¸½Å °Í °°³×¿ä. ÀÎº¥Åä¸® °ø°£À» ºñ¿öÁÖ¼¼¿ä.");
+						cm.sendOk("ì£„ì†¡í•˜ì§€ë§Œ ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ì¶©ë¶„í•˜ì§€ ì•Šìœ¼ì‹  ê²ƒ ê°™ë„¤ìš”. ì¸ë²¤í† ë¦¬ ê³µê°„ì„ ë¹„ì›Œì£¼ì„¸ìš”.");
 					}
 				} else {
-					cm.sendOk("#b#v 4000458##k ¾ÆÁ÷ Àç·á°¡ ºÎÁ·ÇØ¿ä");
+					cm.sendOk("#b#v 4000458##k ì•„ì§ ìž¬ë£Œê°€ ë¶€ì¡±í•´ìš”");
 				}
 				cm.dispose();
 			}

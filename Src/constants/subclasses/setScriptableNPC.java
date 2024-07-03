@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -17,16 +17,16 @@ import java.util.List;
 
 /**
  *
- * @author ¿¡¹İÅ×ÀÌ¸£
+ * @author ì—ë°˜í…Œì´ë¥´
  */
 public class setScriptableNPC {
     private static List<Pair<Integer, String>> npcs = new ArrayList<Pair<Integer, String>>();
     
     public static void doMain() {
-        npcs.add(new Pair<Integer, String>(1033221, "³ª¸¦ ¹üÇØÁÖ¼¼¿ä~¢½")); //¾î¸°½ÃÀıÀÇ Çï·¹³ª
-        npcs.add(new Pair<Integer, String>(1012107, "¾È³çÇÏ¼¼¿ä~")); //À¯Å¸...
-        npcs.add(new Pair<Integer, String>(1012102, "´ÜÇ³ÀÙÀ» Ä³½Ã·Î ±³È¯ÇÏ°í ½Í¾î¿ä.")); //ÇÇ¾Æ
-        npcs.add(new Pair<Integer, String>(2144016, "½ºÅ³À» ¹Ş°í ½Í¾î¿ä.")); //½Ã°£ÀÇ ¿©½Å ·ô´À
+        npcs.add(new Pair<Integer, String>(1033221, "ë‚˜ë¥¼ ë²”í•´ì£¼ì„¸ìš”~â™¡")); //ì–´ë¦°ì‹œì ˆì˜ í—¬ë ˆë‚˜
+        npcs.add(new Pair<Integer, String>(1012107, "ì•ˆë…•í•˜ì„¸ìš”~")); //ìœ íƒ€...
+        npcs.add(new Pair<Integer, String>(1012102, "ë‹¨í’ìì„ ìºì‹œë¡œ êµí™˜í•˜ê³  ì‹¶ì–´ìš”.")); //í”¼ì•„
+        npcs.add(new Pair<Integer, String>(2144016, "ìŠ¤í‚¬ì„ ë°›ê³  ì‹¶ì–´ìš”.")); //ì‹œê°„ì˜ ì—¬ì‹  ë¥€ëŠ
         
         npcs.add(new Pair<Integer, String>(9001001, "1")); //
         npcs.add(new Pair<Integer, String>(9001002, "2")); //

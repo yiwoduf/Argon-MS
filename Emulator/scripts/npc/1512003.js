@@ -3,19 +3,19 @@
 
 /*
 
-	* ´Ü¹®¿£ÇÇ½Ã ÀÚµ¿Á¦ÀÛ ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¸¸µé¾îÁø ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	* ë‹¨ë¬¸ì—”í”¼ì‹œ ìë™ì œì‘ ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ë§Œë“¤ì–´ì§„ ìŠ¤í¬ë¦½íŠ¸ ì…ë‹ˆë‹¤.
 
 	* (Guardian Project Development Source Script)
 
-	¾Æ·î ¿¡ ÀÇÇØ ¸¸µé¾î Á³½À´Ï´Ù.
+	ì•„ë£½ ì— ì˜í•´ ë§Œë“¤ì–´ ì¡ŒìŠµë‹ˆë‹¤.
 
-	¿£ÇÇ½Ã¾ÆÀÌµğ : 1512003
+	ì—”í”¼ì‹œì•„ì´ë”” : 1512003
 
-	¿£ÇÇ½Ã ÀÌ¸§ : ¾Æ±â ¸»¶ó¹ÂÆ®
+	ì—”í”¼ì‹œ ì´ë¦„ : ì•„ê¸° ë§ë¼ë®¤íŠ¸
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : ¸®¿¡³ª ÇØÇù : ¸¶³à ¹Ù¹Ù¶óÀÇ Áı (141040000)
+	ì—”í”¼ì‹œê°€ ìˆëŠ” ë§µ : ë¦¬ì—ë‚˜ í•´í˜‘ : ë§ˆë…€ ë°”ë°”ë¼ì˜ ì§‘ (141040000)
 
-	¿£ÇÇ½Ã ¼³¸í : MISSINGNO
+	ì—”í”¼ì‹œ ì„¤ëª… : MISSINGNO
 
 
 */
@@ -41,20 +41,20 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        var str = "#b#h0##k´Ô ¾È³çÇÏ¼¼¿ä ¿À·Î¶ó ·¹µå ¹«±â »óÁ¡ÀÔ´Ï´Ù.\r\n±¸¸Å¸¦ ¿øÇÏ½Ã´Â ·¹µå ¹«±â¸¦ ¼±ÅÃÇØÁÖ¼¼¿©.\r\n";
-        str += "#r¼ÒÁöÁßÀÎ È«º¸ ÄÚÀÎ °¹¼ö : "+cm.Comma(cm.itemQuantity(4310129))+"°³#k\r\n\r\n";
-        str += "#L0##b#i1402214#(#z1402214#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50°³)\r\n";
-        str += "#L1##b#i1422156#(#z1422156#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50°³)\r\n";
-        str += "#L2##b#i1472230#(#z1472230#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50°³)\r\n";
-        str += "#L3##b#i1332242#(#z1332242#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50°³)\r\n";
-        str += "#L4##b#i1342087#(#z1342087#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50°³)\r\n";
-        str += "#L5##b#i1382226#(#z1382226#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50°³)\r\n";
-        str += "#L6##b#i1492194#(#z1492194#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50°³)\r\n";
-        str += "#L7##b#i1462208#(#z1462208#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50°³)\r\n";
-        str += "#L8##b#i1452220#(#z1452220#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50°³)\r\n";
-        str += "#L9##b#i1532112#(#z1532112#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50°³)\r\n";
-        str += "#L10##b#i1432182#(#z1432182#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50°³)\r\n";
-        str += "#L11##b#i1482183#(#z1482183#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50°³)\r\n";
+        var str = "#b#h0##kë‹˜ ì•ˆë…•í•˜ì„¸ìš” ì˜¤ë¡œë¼ ë ˆë“œ ë¬´ê¸° ìƒì ì…ë‹ˆë‹¤.\r\nêµ¬ë§¤ë¥¼ ì›í•˜ì‹œëŠ” ë ˆë“œ ë¬´ê¸°ë¥¼ ì„ íƒí•´ì£¼ì„¸ì—¬.\r\n";
+        str += "#rì†Œì§€ì¤‘ì¸ í™ë³´ ì½”ì¸ ê°¯ìˆ˜ : "+cm.Comma(cm.itemQuantity(4310129))+"ê°œ#k\r\n\r\n";
+        str += "#L0##b#i1402214#(#z1402214#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50ê°œ)\r\n";
+        str += "#L1##b#i1422156#(#z1422156#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50ê°œ)\r\n";
+        str += "#L2##b#i1472230#(#z1472230#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50ê°œ)\r\n";
+        str += "#L3##b#i1332242#(#z1332242#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50ê°œ)\r\n";
+        str += "#L4##b#i1342087#(#z1342087#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50ê°œ)\r\n";
+        str += "#L5##b#i1382226#(#z1382226#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50ê°œ)\r\n";
+        str += "#L6##b#i1492194#(#z1492194#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50ê°œ)\r\n";
+        str += "#L7##b#i1462208#(#z1462208#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50ê°œ)\r\n";
+        str += "#L8##b#i1452220#(#z1452220#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50ê°œ)\r\n";
+        str += "#L9##b#i1532112#(#z1532112#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50ê°œ)\r\n";
+        str += "#L10##b#i1432182#(#z1432182#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50ê°œ)\r\n";
+        str += "#L11##b#i1482183#(#z1482183#)#k (#r"+cm.Comma(cm.itemQuantity(4310129))+" / 50ê°œ)\r\n";
 
         cm.sendSimple(str);
     } else if (status == 1) {

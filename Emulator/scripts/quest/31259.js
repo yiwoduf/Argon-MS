@@ -1,5 +1,5 @@
 /*
-ÆÄ¶õµ¹·û±º
+íŒŒë€ëŒë¥œêµ°
 */
 importPackage(Packages.server.quest);
 
@@ -12,9 +12,9 @@ function start(mode, type, selection) {
     } else {
         status++;
         if (status == 0) {
-            qm.sendNextS("Â÷ÈÄ¿¡ Á¶»çÇÒ ¹æ¹ıÀÌ »ı±â¸é ´Ù½Ã Á¶»çÇÏ´Â°Ô ÁÁÀ»°Í°°´Ù.", 2);
+            qm.sendNextS("ì°¨í›„ì— ì¡°ì‚¬í•  ë°©ë²•ì´ ìƒê¸°ë©´ ë‹¤ì‹œ ì¡°ì‚¬í•˜ëŠ”ê²Œ ì¢‹ì„ê²ƒê°™ë‹¤.", 2);
         } else if (status == 1) {
-            qm.sendNextS("\r\n\r\n#b(¸¶½ºÅ×¸®¾Æ¸¦ ±¸ÇÒÀÚ ÄªÈ£¸¦ È¸µæÇÏ¿´´Ù.)", 2);
+            qm.sendNextS("\r\n\r\n#b(ë§ˆìŠ¤í…Œë¦¬ì•„ë¥¼ êµ¬í• ì ì¹­í˜¸ë¥¼ íšŒë“í•˜ì˜€ë‹¤.)", 2);
             qm.forceCompleteQuest();
             qm.dispose();
         }

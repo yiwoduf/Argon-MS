@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -34,19 +34,19 @@ public class PartyHandler {
 						c.getPlayer().receivePartyMemberHP();
 						c.getPlayer().updatePartyMemberHP();
 				    	} else {
-						c.getSession().writeAndFlush(MainPacketCreator.serverNotice(5, "ÇØ´ç ÆÄÆ¼´Â ÀÌ¹Ì ÆÄÆ¼¿øÀÌ ²Ë Ã¡½À´Ï´Ù."));
+						c.getSession().writeAndFlush(MainPacketCreator.serverNotice(5, "í•´ë‹¹ íŒŒí‹°ëŠ” ì´ë¯¸ íŒŒí‹°ì›ì´ ê½‰ ì°¼ìŠµë‹ˆë‹¤."));
 			    		}
 				} else if (action == 0x25) { //1.2.220+ (+1)
 					final MapleCharacter cfrom = c.getChannelServer().getPlayerStorage().getCharacterById(party.getLeader().getId());
 					if (cfrom != null) {
-					    cfrom.getClient().getSession().writeAndFlush(MainPacketCreator.serverNotice(5, c.getPlayer().getName()+" ´ÔÀÌ ÆÄÆ¼ ÃÊ´ë¸¦ °ÅÀıÇÏ¿´½À´Ï´Ù."));
+					    cfrom.getClient().getSession().writeAndFlush(MainPacketCreator.serverNotice(5, c.getPlayer().getName()+" ë‹˜ì´ íŒŒí‹° ì´ˆëŒ€ë¥¼ ê±°ì ˆí•˜ì˜€ìŠµë‹ˆë‹¤."));
 					}
 				}
 			} else {
-			    c.getPlayer().dropMessage(5, "ÀÌ¹Ì ÆÄÆ¼°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			    c.getPlayer().dropMessage(5, "ì´ë¯¸ íŒŒí‹°ê°€ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 			}
 	} else {
-	    c.getPlayer().dropMessage(5, "ÀÌ¹Ì ÆÄÆ¼¿¡ °¡ÀÔµÇ¾î ÀÖ¾î ÆÄÆ¼¿¡ °¡ÀÔÇÒ ¼ö ¾ø½À´Ï´Ù.");
+	    c.getPlayer().dropMessage(5, "ì´ë¯¸ íŒŒí‹°ì— ê°€ì…ë˜ì–´ ìˆì–´ íŒŒí‹°ì— ê°€ì…í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 	}
     }
 
@@ -66,7 +66,7 @@ public class PartyHandler {
                     party.setPartyTitle(rh.readMapleAsciiString());
 		    c.getSession().writeAndFlush(MainPacketCreator.partyCreated(party));
 		} else {
-		    c.getPlayer().dropMessage(5, "ÆÄÆ¼¿¡ ÀÌ¹Ì °¡ÀÔµÇ¾î ÀÖ¾î ÆÄÆ¼¸¦ ¸¸µé ¼ö ¾ø½À´Ï´Ù.");
+		    c.getPlayer().dropMessage(5, "íŒŒí‹°ì— ì´ë¯¸ ê°€ì…ë˜ì–´ ìˆì–´ íŒŒí‹°ë¥¼ ë§Œë“¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                     return;
 		}
 		break;
@@ -113,13 +113,13 @@ public class PartyHandler {
 				c.getPlayer().receivePartyMemberHP();
 				c.getPlayer().updatePartyMemberHP();
 			    } else {
-				c.getPlayer().dropMessage(5, "ÇØ´ç ÆÄÆ¼´Â ÀÌ¹Ì ÆÄÆ¼¿øÀÌ ²Ë Ã¡½À´Ï´Ù.");
+				c.getPlayer().dropMessage(5, "í•´ë‹¹ íŒŒí‹°ëŠ” ì´ë¯¸ íŒŒí‹°ì›ì´ ê½‰ ì°¼ìŠµë‹ˆë‹¤.");
 			    }
 			} else {
-			    c.getPlayer().dropMessage(5, "°¡ÀÔÇÏ·Á´Â ÆÄÆ¼´Â ÀÌ¹Ì Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			    c.getPlayer().dropMessage(5, "ê°€ì…í•˜ë ¤ëŠ” íŒŒí‹°ëŠ” ì´ë¯¸ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 			}
 		} else {
-		    c.getPlayer().dropMessage(5, "ÀÌ¹Ì ÆÄÆ¼¿¡ °¡ÀÔµÇ¾î ÀÖ¾î ÆÄÆ¼¿¡ °¡ÀÔÇÒ ¼ö ¾ø½À´Ï´Ù.");
+		    c.getPlayer().dropMessage(5, "ì´ë¯¸ íŒŒí‹°ì— ê°€ì…ë˜ì–´ ìˆì–´ íŒŒí‹°ì— ê°€ì…í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		break;
 	    case 4: // invite
@@ -127,16 +127,16 @@ public class PartyHandler {
 		if (invited != null) {
 		    if (invited.getParty() == null) {
 			if (party.getMembers().size() < 6) {
-			    c.getPlayer().dropMessage(1, invited.getName()+"´ÔÀ» ÆÄÆ¼¿¡ ÃÊ´ëÇß½À´Ï´Ù.");
+			    c.getPlayer().dropMessage(1, invited.getName()+"ë‹˜ì„ íŒŒí‹°ì— ì´ˆëŒ€í–ˆìŠµë‹ˆë‹¤.");
 			    invited.getClient().getSession().writeAndFlush(MainPacketCreator.partyInvite(c.getPlayer()));
 			} else {
-			    c.getPlayer().dropMessage(5, "ÀÌ¹Ì ÆÄÆ¼¿øÀÌ ÃÖ´ë·Î °¡µæ Âù »óÅÂÀÔ´Ï´Ù.");
+			    c.getPlayer().dropMessage(5, "ì´ë¯¸ íŒŒí‹°ì›ì´ ìµœëŒ€ë¡œ ê°€ë“ ì°¬ ìƒíƒœì…ë‹ˆë‹¤.");
 			}
 		    } else {
-			c.getPlayer().dropMessage(5, "ÀÌ¹Ì ÆÄÆ¼¿¡ °¡ÀÔµÇ¾î ÀÖ´Â ´ë»óÀÔ´Ï´Ù.");
+			c.getPlayer().dropMessage(5, "ì´ë¯¸ íŒŒí‹°ì— ê°€ì…ë˜ì–´ ìˆëŠ” ëŒ€ìƒì…ë‹ˆë‹¤.");
 		    }
 		} else {
-		    c.getPlayer().dropMessage(5, "´ë»óÀ» Ã£Áö ¸øÇß½À´Ï´Ù.");
+		    c.getPlayer().dropMessage(5, "ëŒ€ìƒì„ ì°¾ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
 		}
 		break;
 	    case 6: // expel
@@ -152,7 +152,7 @@ public class PartyHandler {
 		break;
 	    case 7: // change leader
                 if (party.getExpedition() != null) {
-                    c.getPlayer().message(1, "¿øÁ¤´ë¿¡ °¡ÀÔµÈ »óÅÂ·Î´Â ÆÄÆ¼ÀåÀ» ÁÙ ¼ö ¾ø½À´Ï´Ù.");
+                    c.getPlayer().message(1, "ì›ì •ëŒ€ì— ê°€ì…ëœ ìƒíƒœë¡œëŠ” íŒŒí‹°ì¥ì„ ì¤„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                     return;
                 }
 		final MaplePartyCharacter newleader = party.getMemberById(rh.readInt());
@@ -164,7 +164,7 @@ public class PartyHandler {
                     party.setPartyTitle(newTitle);
                     c.send(MainPacketCreator.updateParty(c.getChannel(), party, MaplePartyOperation.CHANGE_PARTY_TITLE, partyplayer));
                 } else {
-                    c.getPlayer().message(1, "ÇÑ ±ÛÀÚ ÀÌ»óÀÇ º¯°æÇÒ ÆÄÆ¼¸íÀ» ÀÔ·ÂÇØÁÖ½Ê½Ã¿À.");
+                    c.getPlayer().message(1, "í•œ ê¸€ì ì´ìƒì˜ ë³€ê²½í•  íŒŒí‹°ëª…ì„ ì…ë ¥í•´ì£¼ì‹­ì‹œì˜¤.");
                     return;
                 }
                 break;
@@ -177,7 +177,7 @@ public class PartyHandler {
     public static void processExpeditionRequest(ReadingMaple rh, MapleClient c) {
         byte action = rh.readByte();
         switch (action) {
-            case 78: //¿øÁ¤´ë µî·Ï
+            case 78: //ì›ì •ëŒ€ ë“±ë¡
 		if (c.getPlayer().getParty() == null) {
                     final String partytitle = rh.readMapleAsciiString();
                     MaplePartyCharacter partyplayer = new MaplePartyCharacter(c.getPlayer());
@@ -188,72 +188,72 @@ public class PartyHandler {
                     WideObjectHolder.getInstance().createExpedition(MapleExpeditionType.getById(rh.readInt()), party);
                     c.send(MainPacketCreator.updateExpedition(false, c.getPlayer().getParty().getExpedition()));
 		} else {
-		    c.getPlayer().dropMessage(5, "ÆÄÆ¼¿¡ ÀÌ¹Ì °¡ÀÔµÇ¾î ÀÖ¾î ÆÄÆ¼¸¦ ¸¸µé ¼ö ¾ø½À´Ï´Ù.");
+		    c.getPlayer().dropMessage(5, "íŒŒí‹°ì— ì´ë¯¸ ê°€ì…ë˜ì–´ ìˆì–´ íŒŒí‹°ë¥¼ ë§Œë“¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                 }
                 break;
-            case 79: { //¿øÁ¤´ë ÃÊ´ë
+            case 79: { //ì›ì •ëŒ€ ì´ˆëŒ€
                     MapleCharacter hp = null;
                     String target = rh.readMapleAsciiString();
                     hp = c.getChannelServer().getPlayerStorage().getCharacterByName(target);
                     if (hp == null) {
-                        c.getPlayer().message(1, "ÇöÀç Ã¤³Î¿¡¼­ ´ë»óÀ» ¹ß°ßÇÏÁö ¸øÇß½À´Ï´Ù.");
+                        c.getPlayer().message(1, "í˜„ì¬ ì±„ë„ì—ì„œ ëŒ€ìƒì„ ë°œê²¬í•˜ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
                     } else {
                         MapleExpeditionType type = c.getPlayer().getParty().getExpedition().getType();
                         if (hp.getLevel() < type.minlv || hp.getLevel() > type.maxlv) {
-                            c.getPlayer().message(1, "´ë»óÀº ÀÌ ¿øÁ¤´ë¿¡ °¡ÀÔÇÒ ¼ö ÀÖ´Â ·¹º§ÀÌ ¾Æ´Õ´Ï´Ù.");
+                            c.getPlayer().message(1, "ëŒ€ìƒì€ ì´ ì›ì •ëŒ€ì— ê°€ì…í•  ìˆ˜ ìˆëŠ” ë ˆë²¨ì´ ì•„ë‹™ë‹ˆë‹¤.");
                         } else if (c.getPlayer().getParty().getExpedition().getAllMemberSize() >= type.maxplayer) {
-                            c.getPlayer().message(1, "¿øÁ¤´ëÀÇ ÃÖ´ë ÀÎ¿ø¼ö°¡ ²Ë Ã¡½À´Ï´Ù.");
+                            c.getPlayer().message(1, "ì›ì •ëŒ€ì˜ ìµœëŒ€ ì¸ì›ìˆ˜ê°€ ê½‰ ì°¼ìŠµë‹ˆë‹¤.");
                         } else if (hp.getParty() != null) {
-                            c.getPlayer().message(1, "´ë»óÀº ÀÌ¹Ì ÆÄÆ¼¿¡ °¡ÀÔµÇ¾î ÀÖ½À´Ï´Ù.");
+                            c.getPlayer().message(1, "ëŒ€ìƒì€ ì´ë¯¸ íŒŒí‹°ì— ê°€ì…ë˜ì–´ ìˆìŠµë‹ˆë‹¤.");
                         } else {
                             hp.send(MainPacketCreator.inviteExpedition(c.getPlayer().getParty().getExpedition().getType(), c.getPlayer()));
                         }
                     }
                 }
                 break;
-            case 80: { //ÃÊ´ëÈ®ÀÎ
+            case 80: { //ì´ˆëŒ€í™•ì¸
                     MapleCharacter hp = null;
                     String origin = rh.readMapleAsciiString();
                     rh.skip(4);
                     int subAction = rh.readInt();
-                    if (subAction == 0x07) { //ÃÊ´ë°¡ ¿Ô½¿´ç
+                    if (subAction == 0x07) { //ì´ˆëŒ€ê°€ ì™”ìŠ´ë‹¹
                         hp = c.getChannelServer().getPlayerStorage().getCharacterByName(origin);
                         if (hp == null) {
-                            c.getPlayer().message(1, "ÇöÀç Ã¤³Î¿¡ ÃÊ´ëÇÑ ´ë»óÀÌ ¾ø½À´Ï´Ù.");
+                            c.getPlayer().message(1, "í˜„ì¬ ì±„ë„ì— ì´ˆëŒ€í•œ ëŒ€ìƒì´ ì—†ìŠµë‹ˆë‹¤.");
                         } else {
-                            hp.send(MainPacketCreator.serverNotice(1, c.getPlayer().getName()+"´ÔÀ» ¿øÁ¤´ë¿¡ ÃÊ´ëÇß½À´Ï´Ù."));
+                            hp.send(MainPacketCreator.serverNotice(1, c.getPlayer().getName()+"ë‹˜ì„ ì›ì •ëŒ€ì— ì´ˆëŒ€í–ˆìŠµë‹ˆë‹¤."));
                         }
-                    } else if (subAction == 0x09) { //ÃÊ´ë °ÅÀı
+                    } else if (subAction == 0x09) { //ì´ˆëŒ€ ê±°ì ˆ
                         hp = c.getChannelServer().getPlayerStorage().getCharacterByName(origin);
                         if (hp == null) {
-                            c.getPlayer().message(1, "ÇöÀç Ã¤³Î¿¡ ÃÊ´ëÇÑ ´ë»óÀÌ ¾ø½À´Ï´Ù.");
+                            c.getPlayer().message(1, "í˜„ì¬ ì±„ë„ì— ì´ˆëŒ€í•œ ëŒ€ìƒì´ ì—†ìŠµë‹ˆë‹¤.");
                         } else {
-                            hp.send(MainPacketCreator.serverNotice(5, c.getPlayer().getName()+"´ÔÀÌ ¿øÁ¤´ë ÃÊ´ë¸¦ »ç¾çÇÏ¿´½À´Ï´Ù."));
+                            hp.send(MainPacketCreator.serverNotice(5, c.getPlayer().getName()+"ë‹˜ì´ ì›ì •ëŒ€ ì´ˆëŒ€ë¥¼ ì‚¬ì–‘í•˜ì˜€ìŠµë‹ˆë‹¤."));
                         }
-                    } else if (subAction == 0x08) { //ÃÊ´ë ¼ö¶ô
+                    } else if (subAction == 0x08) { //ì´ˆëŒ€ ìˆ˜ë½
                         hp = c.getChannelServer().getPlayerStorage().getCharacterByName(origin);
                         if (hp == null) {
-                            c.getPlayer().message(1, "ÇöÀç Ã¤³Î¿¡ ÃÊ´ëÇÑ ´ë»óÀÌ ¾ø½À´Ï´Ù.");
+                            c.getPlayer().message(1, "í˜„ì¬ ì±„ë„ì— ì´ˆëŒ€í•œ ëŒ€ìƒì´ ì—†ìŠµë‹ˆë‹¤.");
                         } else {
                             MapleExpedition exp = hp.getParty().getExpedition();
                             if (exp == null) {
-                                c.getPlayer().message(1, "ÃÊ´ëÇÑ ´ë»óÀÌ ÇöÀç ¿øÁ¤´ë¿¡ °¡ÀÔµÇ¾î ÀÖÁö ¾Ê½À´Ï´Ù.");
+                                c.getPlayer().message(1, "ì´ˆëŒ€í•œ ëŒ€ìƒì´ í˜„ì¬ ì›ì •ëŒ€ì— ê°€ì…ë˜ì–´ ìˆì§€ ì•ŠìŠµë‹ˆë‹¤.");
                                 return;
                             }
                             if (exp.getAllMemberSize() < exp.getType().maxplayer) {
                                 WideObjectHolder.getInstance().joinExpedition(exp, c.getPlayer());
                             } else {
-                                c.getPlayer().message(1, "ÀÌ¹Ì ÇØ´ç ¿øÁ¤´ë´Â ÃÖ´ë ÀÎ¿øÀ¸·Î °¡µæÃ¡½À´Ï´Ù.");
+                                c.getPlayer().message(1, "ì´ë¯¸ í•´ë‹¹ ì›ì •ëŒ€ëŠ” ìµœëŒ€ ì¸ì›ìœ¼ë¡œ ê°€ë“ì°¼ìŠµë‹ˆë‹¤.");
                             }
                         }
                     }
                     break;
                 }
-            case 81: {//¿øÁ¤´ë Å»Åğ
+            case 81: {//ì›ì •ëŒ€ íƒˆí‡´
                 if (c.getPlayer().getParty() == null) {
-                    c.getPlayer().dropMessage(5, "°¡ÀÔµÈ ÆÄÆ¼°¡ ¾ø½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(5, "ê°€ì…ëœ íŒŒí‹°ê°€ ì—†ìŠµë‹ˆë‹¤.");
                 } else if (c.getPlayer().getParty().getExpedition() == null) {
-                    c.getPlayer().dropMessage(5, "°¡ÀÔµÈ ¿øÁ¤´ë°¡ ¾ø½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(5, "ê°€ì…ëœ ì›ì •ëŒ€ê°€ ì—†ìŠµë‹ˆë‹¤.");
                 } else {
                     MapleParty party = c.getPlayer().getParty();
                     MaplePartyCharacter partyplayer = new MaplePartyCharacter(c.getPlayer());
@@ -272,14 +272,14 @@ public class PartyHandler {
                 }
                 break;
             }
-            case 82: { //¿øÁ¤´ë Ãß¹æ
+            case 82: { //ì›ì •ëŒ€ ì¶”ë°©
                 int target = rh.readInt();
                 MapleParty party = c.getPlayer().getParty();
                 if (party == null) {
-                    c.getPlayer().message(1, "¿øÁ¤´ë¿¡ ¾ø½À´Ï´Ù.");
+                    c.getPlayer().message(1, "ì›ì •ëŒ€ì— ì—†ìŠµë‹ˆë‹¤.");
                     return;
                 } else if (party.getExpedition() == null) {
-                    c.getPlayer().message(1, "¿øÁ¤´ë¿¡ ¾ø½À´Ï´Ù.");
+                    c.getPlayer().message(1, "ì›ì •ëŒ€ì— ì—†ìŠµë‹ˆë‹¤.");
                     return;
                 }
                 MapleExpedition exp = party.getExpedition();
@@ -296,7 +296,7 @@ public class PartyHandler {
                         }
                     }
                     if (found == null) {
-                        c.getPlayer().message(1, "´ë»óÀÌ ¿øÁ¤´ë¿¡ ¾ø½À´Ï´Ù.");
+                        c.getPlayer().message(1, "ëŒ€ìƒì´ ì›ì •ëŒ€ì— ì—†ìŠµë‹ˆë‹¤.");
                         return;
                     }
                     WideObjectHolder.getInstance().expelExpedition(exp, hpcParty, found);
@@ -306,14 +306,14 @@ public class PartyHandler {
                 }
                 break;
             }
-            case 83: {//¿øÁ¤´ëÀå ÁÖ±â
+            case 83: {//ì›ì •ëŒ€ì¥ ì£¼ê¸°
                 int target = rh.readInt();
                 MapleParty party = c.getPlayer().getParty();
                 if (party == null) {
-                    c.getPlayer().message(1, "¿øÁ¤´ë¿¡ ¾ø½À´Ï´Ù.");
+                    c.getPlayer().message(1, "ì›ì •ëŒ€ì— ì—†ìŠµë‹ˆë‹¤.");
                     return;
                 } else if (party.getExpedition() == null) {
-                    c.getPlayer().message(1, "¿øÁ¤´ë¿¡ ¾ø½À´Ï´Ù.");
+                    c.getPlayer().message(1, "ì›ì •ëŒ€ì— ì—†ìŠµë‹ˆë‹¤.");
                     return;
                 }
                 MapleExpedition exp = party.getExpedition();
@@ -330,21 +330,21 @@ public class PartyHandler {
                         }
                     }
                     if (found == null) {
-                        c.getPlayer().message(1, "´ë»óÀÌ ¿øÁ¤´ë¿¡ ¾ø½À´Ï´Ù.");
+                        c.getPlayer().message(1, "ëŒ€ìƒì´ ì›ì •ëŒ€ì— ì—†ìŠµë‹ˆë‹¤.");
                         return;
                     }
                     WideObjectHolder.getInstance().changeLeaderExpedition(exp, hpcParty, found);
                 }
                 break;
             }
-            case 84: {//¿øÁ¤´ë ÆÄÆ¼Àå ÁÖ±â
+            case 84: {//ì›ì •ëŒ€ íŒŒí‹°ì¥ ì£¼ê¸°
                 int target = rh.readInt();
                 MapleParty party = c.getPlayer().getParty();
                 if (party == null) {
-                    c.getPlayer().message(1, "¿øÁ¤´ë¿¡ ¾ø½À´Ï´Ù.");
+                    c.getPlayer().message(1, "ì›ì •ëŒ€ì— ì—†ìŠµë‹ˆë‹¤.");
                     return;
                 } else if (party.getExpedition() == null) {
-                    c.getPlayer().message(1, "¿øÁ¤´ë¿¡ ¾ø½À´Ï´Ù.");
+                    c.getPlayer().message(1, "ì›ì •ëŒ€ì— ì—†ìŠµë‹ˆë‹¤.");
                     return;
                 }
                 MapleExpedition exp = party.getExpedition();
@@ -361,22 +361,22 @@ public class PartyHandler {
                         }
                     }
                     if (found == null) {
-                        c.getPlayer().message(1, "´ë»óÀÌ ¿øÁ¤´ë¿¡ ¾ø½À´Ï´Ù.");
+                        c.getPlayer().message(1, "ëŒ€ìƒì´ ì›ì •ëŒ€ì— ì—†ìŠµë‹ˆë‹¤.");
                         return;
                     }
                     WideObjectHolder.getInstance().changeLeaderPartyInExpedition(exp, hpcParty, found);
                 }
                 break;
             }
-            case 85: {//¿øÁ¤´ë ÆÄÆ¼ ÀÌµ¿
+            case 85: {//ì›ì •ëŒ€ íŒŒí‹° ì´ë™
                 int index = rh.readInt();
                 int target = rh.readInt();
                 MapleParty party = c.getPlayer().getParty();
                 if (party == null) {
-                    c.getPlayer().message(1, "¿øÁ¤´ë¿¡ ¾ø½À´Ï´Ù.");
+                    c.getPlayer().message(1, "ì›ì •ëŒ€ì— ì—†ìŠµë‹ˆë‹¤.");
                     return;
                 } else if (party.getExpedition() == null) {
-                    c.getPlayer().message(1, "¿øÁ¤´ë¿¡ ¾ø½À´Ï´Ù.");
+                    c.getPlayer().message(1, "ì›ì •ëŒ€ì— ì—†ìŠµë‹ˆë‹¤.");
                     return;
                 }
                 MapleExpedition exp = party.getExpedition();
@@ -389,7 +389,7 @@ public class PartyHandler {
                         }
                     }
                     if (targetchr == null) {
-                        c.getPlayer().message(1, "¿Å±æ ´ë»óÀÌ °ÔÀÓ¿¡ Á¢¼ÓÁßÀÌ ¾Æ´Õ´Ï´Ù.");
+                        c.getPlayer().message(1, "ì˜®ê¸¸ ëŒ€ìƒì´ ê²Œì„ì— ì ‘ì†ì¤‘ì´ ì•„ë‹™ë‹ˆë‹¤.");
                         return;
                     }
                     WideObjectHolder.getInstance().movePlayerExpedition(exp, targetchr.getParty(), index, targetchr);

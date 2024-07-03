@@ -1,0 +1,28 @@
+var status = 0;
+var select = -1;
+
+var names = Array("자쿰의 제단", "혼테일의 동굴", "신들의 황혼", "힐라의 탑", "아카이럼의 제단", "시그너스의 전당","폭군의 왕좌", "여왕의 성","심연의 동굴");
+var boss = Array("자쿰, 카오스 자쿰", "혼테일, 카오스 혼테일", "핑크빈", "힐라", "아카이럼", "타락한 시그너스", "매그너스", "블러디 퀸", "벨룸");
+var mid = Array("280030100", "240060200", "270050100", "262031300", "272020200", "271040100", "401060100", "105200310", "105200410");
+var m = -1;
+var k = "#fUI/UIToolTip/Item/Equip/Star/Star#"
+function start() {
+    status = -1;
+    action(1, 0, 0);
+}
+
+function action(mode, type, selection) {
+    if (mode == -1) {
+        cm.dispose();
+    } else {
+        if (mode == 0) {
+            cm.dispose();
+            return;
+        }
+        if (mode == 1)
+            status++;
+        else
+            status--;
+        if (status == 0) {	
+	    var chat = "#fn나눔고딕 Extrabold##fs12#안녕하세요~! #p1012000#입니다. 다른 곳으로 안전하고 빠르게 이동하고 싶으신가요? 그렇다면 고객 만족을 최우선으로 생각하는 #b#p1012000##k를 이용해 해보세요. 특별히 무료로! 원하시는 곳까지 친절하게 셔다 드리고 있습니다.\r\n";
+	    chat += "#b#L100#"+k+" #e캐시

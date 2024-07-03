@@ -10,5 +10,5 @@ importPackage(Packages.constants);
 
 function act() {
     rm.getPlayer().setKeyValue("mesodrop", (System.currentTimeMillis()+ (900000 / 5)) +"");
-    //rm.getPlayer().dropMessage("5ºĞ°£ »ç³É½Ã ¸Ş¼Ò¸¦ È¹µæÇÏ½Ç¼ö ÀÖ½À´Ï´Ù.");
+    //rm.getPlayer().dropMessage("5ë¶„ê°„ ì‚¬ëƒ¥ì‹œ ë©”ì†Œë¥¼ íšë“í•˜ì‹¤ìˆ˜ ìˆìŠµë‹ˆë‹¤.");
 }

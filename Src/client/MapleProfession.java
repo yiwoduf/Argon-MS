@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  *
- * @author ¿¡¹İÅ×ÀÌ¸£
+ * @author ì—ë°˜í…Œì´ë¥´
  */
 public class MapleProfession {
     private int firstProfession, secondProfession, firstProfessionExp, secondProfessionExp, firstProfessionLevel, secondProfessionLevel, fatigue;

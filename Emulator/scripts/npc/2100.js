@@ -1,4 +1,4 @@
-/* È­ÀÌÆ®¸Å´ÏÀúÀÇ ½ºÅ©¸³Æ® */
+/* í™”ì´íŠ¸ë§¤ë‹ˆì €ì˜ ìŠ¤í¬ë¦½íŠ¸ */
 
 importPackage(java.lang);
 importPackage(Packages.handling.world);
@@ -26,18 +26,18 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-                var chat= "#e#rAURORA ONLINE Ææ´øÆ®»Ì±âÀÔ´Ï´Ù.\r\n#rÀÇÀÚ »Ì±â#k¿¡¼­´Â #b¿©·¯°¡Áö Ææ´øÆ® ¾ÆÀÌÅÛ ÀÌ ³ª¿É´Ï´Ù. \r\n\r\n#r#e»Ì±â ºñ¿ë#n#kÀ¸·Î´Â ÈçÇÑ»ç³ÉÄÚÀÎ 30000°³°¡ ÇÊ¿äÇÕ´Ï´Ù.\r\n";
-	    chat += "#L0##bÆæ´øÆ®¸¦ »Ì°Ú½À´Ï´Ù.#k#n\r\n#l";
+                var chat= "#e#rAURORA ONLINE íœë˜íŠ¸ë½‘ê¸°ì…ë‹ˆë‹¤.\r\n#rì˜ì ë½‘ê¸°#kì—ì„œëŠ” #bì—¬ëŸ¬ê°€ì§€ íœë˜íŠ¸ ì•„ì´í…œ ì´ ë‚˜ì˜µë‹ˆë‹¤. \r\n\r\n#r#eë½‘ê¸° ë¹„ìš©#n#kìœ¼ë¡œëŠ” í”í•œì‚¬ëƒ¥ì½”ì¸ 30000ê°œê°€ í•„ìš”í•©ë‹ˆë‹¤.\r\n";
+	    chat += "#L0##bíœë˜íŠ¸ë¥¼ ë½‘ê² ìŠµë‹ˆë‹¤.#k#n\r\n#l";
 	    cm.sendSimple(chat);
 	} else if (selection == 0) {
 	if (cm.haveItem(4310153, 30000)) {
-			cm.sendOk("Ææ´øÆ® »Ì±â¿¡¼­ ¾Æ·¡ÀÇ ¾ÆÀÌÅÛÀÌ ³ª¿Ô½À´Ï´Ù.\r\n #rÀåºñÄ­#k#l È®ÀÎºÎÅ¹µå¸³´Ï´Ù.");
-//			WorldBroadcasting.broadcast(MainPacketCreator.serverNotice(5, cm.getPlayer().getName() + " ´ÔÀÌ Ææ´øÆ® »Ì±â¸¦ ÇÏ¼Ì½À´Ï´Ù."));
+			cm.sendOk("íœë˜íŠ¸ ë½‘ê¸°ì—ì„œ ì•„ë˜ì˜ ì•„ì´í…œì´ ë‚˜ì™”ìŠµë‹ˆë‹¤.\r\n #rì¥ë¹„ì¹¸#k#l í™•ì¸ë¶€íƒë“œë¦½ë‹ˆë‹¤.");
+//			WorldBroadcasting.broadcast(MainPacketCreator.serverNotice(5, cm.getPlayer().getName() + " ë‹˜ì´ íœë˜íŠ¸ ë½‘ê¸°ë¥¼ í•˜ì…¨ìŠµë‹ˆë‹¤."));
 			makeSponserItem(items[Math.floor(Math.random() * items.length)]);
                 	cm.gainItem(4310153, -30000);
                 	cm.dispose();
 	} else {
-		cm.sendOk("ÈçÇÑ»ç³É ÄÚÀÎÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
+		cm.sendOk("í”í•œì‚¬ëƒ¥ ì½”ì¸ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.");
 		cm.dispose();
 	}
         }
@@ -48,7 +48,7 @@ function action(mode, type, selection) {
 	var ii = Packages.server.items.ItemInformation.getInstance();
 	var item = ii.getEquipById(itemid);
 
-	item.setOwner("[Ææ´øÆ®»Ì±â]");
+	item.setOwner("[íœë˜íŠ¸ë½‘ê¸°]");
 	Packages.server.items.InventoryManipulator.addFromDrop(cm.getC(),item,false);
 }
     

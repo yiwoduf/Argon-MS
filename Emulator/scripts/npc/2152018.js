@@ -1,5 +1,5 @@
 /*
-Cosmos Project Çì³×¾¾
+Cosmos Project í—¤ë„¤ì”¨
 */
 var select = -1;
 
@@ -35,12 +35,12 @@ cm.addEquip2(-10, 1352502);
  cm.updateChar();
 cm.dispose();
 } else if (cm.getPlayer().getJob() == 6112 && cm.getPlayer().getLevel() >= 100 && cm.getPlayer().getLevel() <= 200) {
-cm.addEquip2(-10, 1352503);  //Ä«ÀÌÀú Á¤¼ö
+cm.addEquip2(-10, 1352503);  //ì¹´ì´ì € ì •ìˆ˜
  cm.fakeRelog();
  cm.updateChar();
 cm.dispose();
 }else{
-cm.sendOk("´ç½ÅÀÇ Á÷¾÷À¸·Î´Â ÇØ´ç ¾ÆÀÌÅÛÀ» ¹ÞÀ» ¼ö ¾ø½À´Ï´Ù.");
+cm.sendOk("ë‹¹ì‹ ì˜ ì§ì—…ìœ¼ë¡œëŠ” í•´ë‹¹ ì•„ì´í…œì„ ë°›ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 cm.dispose();
 }
 }

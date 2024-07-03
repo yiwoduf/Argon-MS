@@ -1,6 +1,6 @@
 /*
- È¥Å×ÀÏ ÆÄÆ¼Äù½ºÆ® ¿­¼è ¿öÇÁ
- Á¦ÀÛ : ÁÖÅ©ºí·¢
+ í˜¼í…Œì¼ íŒŒí‹°í€˜ìŠ¤íŠ¸ ì—´ì‡  ì›Œí”„
+ ì œì‘ : ì£¼í¬ë¸”ë™
 */
 importPackage(Packages.client.items);
 importPackage(Packages.packet.creators);
@@ -8,34 +8,34 @@ function act() {
     var eim = rm.getPlayer().getEventInstance();
     var mapid = rm.getPlayer().getMapId();
     var map = eim.getMapFactory().getMap(240050100);
-    if (mapid == 240050101) { //Ã¹¹øÂ° ¹Ì·Î¹æ
+    if (mapid == 240050101) { //ì²«ë²ˆì§¸ ë¯¸ë¡œë°©
         var drop = new Item (4001088, 0, 1, 0);
         map.spawnItemDrop(map.getReactor(2402002), rm.getPlayer(), drop, map.getReactor(2402002).getPosition(), false, false);
         map.getReactor(2402002).setState(1);
         eim.addAchievementRatio(5);
-        rm.mapMessage(6, "¿­¼è°¡ ¾îµğ·Ğ°¡ »ç¶óÁ³½À´Ï´Ù.");
-        map.broadcastMessage(MainPacketCreator.serverNotice(6, "¹İÂ¦ÀÌ´Â ºû°ú ÇÔ²² ¾îµò°¡¿¡¼­ ¿­¼è°¡ ³ªÅ¸³µ½À´Ï´Ù."));
-    } else if (mapid == 240050102) { //µÎ¹øÂ° ¹Ì·Î¹æ
+        rm.mapMessage(6, "ì—´ì‡ ê°€ ì–´ë””ë¡ ê°€ ì‚¬ë¼ì¡ŒìŠµë‹ˆë‹¤.");
+        map.broadcastMessage(MainPacketCreator.serverNotice(6, "ë°˜ì§ì´ëŠ” ë¹›ê³¼ í•¨ê»˜ ì–´ë”˜ê°€ì—ì„œ ì—´ì‡ ê°€ ë‚˜íƒ€ë‚¬ìŠµë‹ˆë‹¤."));
+    } else if (mapid == 240050102) { //ë‘ë²ˆì§¸ ë¯¸ë¡œë°©
         var drop = new Item (4001089, 0, 1, 0);
         map.spawnItemDrop(map.getReactor(2402002), rm.getPlayer(), drop, map.getReactor(2402002).getPosition(), false, false);
         map.getReactor(2402002).setState(0);
         eim.addAchievementRatio(5);
-        rm.mapMessage(6, "¿­¼è°¡ ¾îµğ·Ğ°¡ »ç¶óÁ³½À´Ï´Ù.");
-        map.broadcastMessage(MainPacketCreator.serverNotice(6, "¹İÂ¦ÀÌ´Â ºû°ú ÇÔ²² ¾îµò°¡¿¡¼­ ¿­¼è°¡ ³ªÅ¸³µ½À´Ï´Ù."));
-    } else if (mapid == 240050103) { //¼¼¹øÂ° ¹Ì·Î¹æ
+        rm.mapMessage(6, "ì—´ì‡ ê°€ ì–´ë””ë¡ ê°€ ì‚¬ë¼ì¡ŒìŠµë‹ˆë‹¤.");
+        map.broadcastMessage(MainPacketCreator.serverNotice(6, "ë°˜ì§ì´ëŠ” ë¹›ê³¼ í•¨ê»˜ ì–´ë”˜ê°€ì—ì„œ ì—´ì‡ ê°€ ë‚˜íƒ€ë‚¬ìŠµë‹ˆë‹¤."));
+    } else if (mapid == 240050103) { //ì„¸ë²ˆì§¸ ë¯¸ë¡œë°©
         var drop = new Item (4001090, 0, 1, 0);
         map.spawnItemDrop(map.getReactor(2402002), rm.getPlayer(), drop, map.getReactor(2402002).getPosition(), false, false);
         map.getReactor(2402002).setState(1);
         eim.addAchievementRatio(5);
-        rm.mapMessage(6, "¿­¼è°¡ ¾îµğ·Ğ°¡ »ç¶óÁ³½À´Ï´Ù.");
-        map.broadcastMessage(MainPacketCreator.serverNotice(6, "¹İÂ¦ÀÌ´Â ºû°ú ÇÔ²² ¾îµò°¡¿¡¼­ ¿­¼è°¡ ³ªÅ¸³µ½À´Ï´Ù."));
-    } else if (mapid == 240050104) { //³×¹øÂ° ¹Ì·Î¹æ
+        rm.mapMessage(6, "ì—´ì‡ ê°€ ì–´ë””ë¡ ê°€ ì‚¬ë¼ì¡ŒìŠµë‹ˆë‹¤.");
+        map.broadcastMessage(MainPacketCreator.serverNotice(6, "ë°˜ì§ì´ëŠ” ë¹›ê³¼ í•¨ê»˜ ì–´ë”˜ê°€ì—ì„œ ì—´ì‡ ê°€ ë‚˜íƒ€ë‚¬ìŠµë‹ˆë‹¤."));
+    } else if (mapid == 240050104) { //ë„¤ë²ˆì§¸ ë¯¸ë¡œë°©
         var drop = new Item (4001091, 0, 1, 0);
         map.spawnItemDrop(map.getReactor(2402002), rm.getPlayer(), drop, map.getReactor(2402002).getPosition(), false, false);
         map.getReactor(2402002).setState(0);
         eim.addAchievementRatio(5);
-        rm.mapMessage(6, "¿­¼è°¡ ¾îµğ·Ğ°¡ »ç¶óÁ³½À´Ï´Ù.");
-        map.broadcastMessage(MainPacketCreator.serverNotice(6, "¹İÂ¦ÀÌ´Â ºû°ú ÇÔ²² ¾îµò°¡¿¡¼­ ¿­¼è°¡ ³ªÅ¸³µ½À´Ï´Ù."));
+        rm.mapMessage(6, "ì—´ì‡ ê°€ ì–´ë””ë¡ ê°€ ì‚¬ë¼ì¡ŒìŠµë‹ˆë‹¤.");
+        map.broadcastMessage(MainPacketCreator.serverNotice(6, "ë°˜ì§ì´ëŠ” ë¹›ê³¼ í•¨ê»˜ ì–´ë”˜ê°€ì—ì„œ ì—´ì‡ ê°€ ë‚˜íƒ€ë‚¬ìŠµë‹ˆë‹¤."));
     }
     
 }

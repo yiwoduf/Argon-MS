@@ -14,11 +14,11 @@ function action(mode, type, selection) {
 	return;
     }
     if (status == 0) {
-	var chat = "#d#e #b#h0##k... ÁöÁ÷..  ¹Ì½ºÆ½¼¼°è°¡ ¤¸Á÷. È¥¶õ¿¡ºüÁ®ÀÖ´Ù. µµ¿òÀÌÇÊ¿äÇÏ´Ù.#l";
-	chat += "\r\n#g#L2##fUI/UIWindow2.img/MobGage/Mob/9300003#  ¡¼ EASY ¡½#l #g#L50##fUI/UIWindow2.img/MobGage/Mob/9300594# ¡¼ Normal ¡½#l";
-        chat += "#r#L51##fUI/UIWindow2.img/MobGage/Mob/9300608#  ¡¼ Hard ¡½#l #d#L52##fUI/UIWindow2.img/MobGage/Mob/9300600# ¡¼ Ultimate ¡½#l\r\n";
-        chat += "#b#L3##i4000814# ¡ºÆ÷ÀÎÆ® »óÁ¡¡»#l #b#L4##i4170040# ¡ºÀü¸®Ç° »óÁ¡¡»#l\r\n ";
-	chat += "#d#L5# ´ëÈ­¸¦ ±×¸¸ ÇÑ´Ù.#l";
+	var chat = "#d#e #b#h0##k... ì§€ì§..  ë¯¸ìŠ¤í‹±ì„¸ê³„ê°€ ã…ˆì§. í˜¼ë€ì—ë¹ ì ¸ìˆë‹¤. ë„ì›€ì´í•„ìš”í•˜ë‹¤.#l";
+	chat += "\r\n#g#L2##fUI/UIWindow2.img/MobGage/Mob/9300003#  ã€ EASY ã€‘#l #g#L50##fUI/UIWindow2.img/MobGage/Mob/9300594# ã€ Normal ã€‘#l";
+        chat += "#r#L51##fUI/UIWindow2.img/MobGage/Mob/9300608#  ã€ Hard ã€‘#l #d#L52##fUI/UIWindow2.img/MobGage/Mob/9300600# ã€ Ultimate ã€‘#l\r\n";
+        chat += "#b#L3##i4000814# ã€í¬ì¸íŠ¸ ìƒì ã€#l #b#L4##i4170040# ã€ì „ë¦¬í’ˆ ìƒì ã€#l\r\n ";
+	chat += "#d#L5# ëŒ€í™”ë¥¼ ê·¸ë§Œ í•œë‹¤.#l";
         
 
 	cm.sendSpirit(chat,true,0);

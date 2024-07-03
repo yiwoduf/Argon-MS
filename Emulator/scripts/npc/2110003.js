@@ -1,5 +1,5 @@
 
-/* ÀÇ»ç Àü¿ë ¸Ê ¿£ÇÇ½Ã ÀÔ´Ï´Ù. */
+/* ì˜ì‚¬ ì „ìš© ë§µ ì—”í”¼ì‹œ ì…ë‹ˆë‹¤. */
 importPackage(Packages.launch.world);
 importPackage(Packages.packet.creators);
 importPackage(java.util);
@@ -37,12 +37,12 @@ function action(mode, type, selection) {
 			cm.dispose(); return;
 		}
 			if(cm.getPlayer().isDrVote) {
-				var text = "»ì¸®½Ã±æ ¿øÇÏ´Â »ç¶÷À» ¼±ÅÃ ÇØ ÁÖ¼¼¿ä.\r\n";
+				var text = "ì‚´ë¦¬ì‹œê¸¸ ì›í•˜ëŠ” ì‚¬ëŒì„ ì„ íƒ í•´ ì£¼ì„¸ìš”.\r\n";
 					for(i=0;i< map.playern; i++) {
 					try {
 						if(cm.getClient().getChannelServer().getPlayerStorage().getCharacterByName(names[i]).isDead) {
 							text += "#Cgray##L"+i+"##b"+names[i]+"#k";
-							text += "[»ç¸Á]#l\r\n";
+							text += "[ì‚¬ë§]#l\r\n";
 						} else {
 							text += "#k#L"+i+"##b"+names[i]+"#k#l\r\n";
 						}
@@ -51,26 +51,26 @@ function action(mode, type, selection) {
 					    }
 					}
 			} else {
-				cm.sendOk("´õÀÌ»ó »ì¸± ¼ö ¾ø½À´Ï´Ù.");
+				cm.sendOk("ë”ì´ìƒ ì‚´ë¦´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 				cm.dispose(); return;
 			}
 			cm.sendSimple(text);
     } else if(status == 1) {
 	sel = selection;
 	if(cm.getClient().getChannelServer().getPlayerStorage().getCharacterByName(names[sel]).isDead) {
-		cm.sendOk("»ç¸ÁÇÑ »ç¶÷Àº »ì¸± ¼ö ¾ø½À´Ï´Ù."); cm.dispose(); return;
+		cm.sendOk("ì‚¬ë§í•œ ì‚¬ëŒì€ ì‚´ë¦´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤."); cm.dispose(); return;
 	} else {
-		cm.sendYesNo("Á¤¸» #b"+names[sel]+"#kÀ»(¸¦) »ì¸®½Ã°Ú½À´Ï±î?");
+		cm.sendYesNo("ì •ë§ #b"+names[sel]+"#kì„(ë¥¼) ì‚´ë¦¬ì‹œê² ìŠµë‹ˆê¹Œ?");
 	}
     } else if(status == 2) {
 	if(cm.getPlayer().isDrVote) {
 		cm.getClient().getChannelServer().getPlayerStorage().getCharacterByName(names[sel]).getdrvote = 1;
 		cm.getPlayer().isDrVote = false;
-		map.broadcastMessage(MainPacketCreator.serverNotice(5, cm.getPlayer().getName()+"´ÔÀÌ "+names[sel]+"´ÔÀ» »ì¸®¼Ì½À´Ï´Ù."));
-		cm.sendOk(names[sel]+"´Ô À» »ì·È½À´Ï´Ù..");
+		map.broadcastMessage(MainPacketCreator.serverNotice(5, cm.getPlayer().getName()+"ë‹˜ì´ "+names[sel]+"ë‹˜ì„ ì‚´ë¦¬ì…¨ìŠµë‹ˆë‹¤."));
+		cm.sendOk(names[sel]+"ë‹˜ ì„ ì‚´ë ¸ìŠµë‹ˆë‹¤..");
 		cm.dispose(); return;
 	} else {
-		cm.sendOk("´õÀÌ»ó »ì¸± ¼ö ¾ø½À´Ï´Ù.");
+		cm.sendOk("ë”ì´ìƒ ì‚´ë¦´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 		cm.dispose(); return;
 	}
     }

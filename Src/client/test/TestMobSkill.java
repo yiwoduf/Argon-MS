@@ -1,24 +1,24 @@
 /*
  * ArcStory Project
- * ÃÖÁÖ¿ø sch2307@naver.com
- * ÀÌÁØ junny_adm@naver.com
- * ¿ìÁöÈÆ raccoonfox69@gmail.com
- * °­Á¤±Ô ku3135@nate.com
- * ±èÁøÈ« designer@inerve.kr
+ * ìµœì£¼ì› sch2307@naver.com
+ * ì´ì¤€ junny_adm@naver.com
+ * ìš°ì§€í›ˆ raccoonfox69@gmail.com
+ * ê°•ì •ê·œ ku3135@nate.com
+ * ê¹€ì§„í™ designer@inerve.kr
  */
  /*
  Maple Team ProJect
- Á¦ÀÛ ¿ëµµ : ¼­¹ö¿î¿µ¿ë
- ÆÀ¿ø¸ñ·Ï
- * °­µ¿¿ø dongwon1852@nate.com 
- * ±è¼±ÀÏ fileupload@nate.com
- * ±è¼®Çö azxcs3@nate.com
- * ±èÁø¼º m0nday_s@nate.com
- * °øÁØÇù kkong1001@nate.com
- * ±è¹ÎÈ£ rubystory0603@nate.com
- * ÀÌÀç¿Õ ejwj5592@nate.com
- * ÃÖ¿ëÀç virgo_s_t@nate.com
- * ¼­¼º´ö abq1239@nate.com
+ ì œì‘ ìš©ë„ : ì„œë²„ìš´ì˜ìš©
+ íŒ€ì›ëª©ë¡
+ * ê°•ë™ì› dongwon1852@nate.com 
+ * ê¹€ì„ ì¼ fileupload@nate.com
+ * ê¹€ì„í˜„ azxcs3@nate.com
+ * ê¹€ì§„ì„± m0nday_s@nate.com
+ * ê³µì¤€í˜‘ kkong1001@nate.com
+ * ê¹€ë¯¼í˜¸ rubystory0603@nate.com
+ * ì´ì¬ì™• ejwj5592@nate.com
+ * ìµœìš©ì¬ virgo_s_t@nate.com
+ * ì„œì„±ë• abq1239@nate.com
  */
 package client.test;
 
@@ -113,7 +113,7 @@ public class TestMobSkill {
         this.limit = limit;
     }
 
-    public boolean checkCurrentBuff(MapleCharacter player, MapleMonster monster) { //½ºÅÈ ¼öÁ¤ ÇÊ.
+    public boolean checkCurrentBuff(MapleCharacter player, MapleMonster monster) { //ìŠ¤íƒ¯ ìˆ˜ì • í•„.
         boolean stop = false;
         switch (skillId) {
             case 100:
@@ -146,7 +146,7 @@ public class TestMobSkill {
         return stop;
     }
 
-    public void applyEffect(MapleCharacter player, MapleMonster monster, boolean skill) { //½ºÅÈ ¼öÁ¤ ÇÊ.
+    public void applyEffect(MapleCharacter player, MapleMonster monster, boolean skill) { //ìŠ¤íƒ¯ ìˆ˜ì • í•„.
         DiseaseStats disease = null;
         Map<TestMonsterStatus, Integer> stats = new ArrayMap<TestMonsterStatus, Integer>();
         List<Integer> reflection = new LinkedList<Integer>();
@@ -275,12 +275,12 @@ public class TestMobSkill {
                 stats.put(TestMonsterStatus.MAGIC_DAMAGE_REFLECT, Integer.valueOf(x));
                 stats.put(TestMonsterStatus.MAGIC_IMMUNITY, Integer.valueOf(x));
                 break;
-            case 184: //¹İ¹İ °­Á¦À§Ä¡ÀÌµ¿ - ÀÚÄñ
+            case 184: //ë°˜ë°˜ ê°•ì œìœ„ì¹˜ì´ë™ - ìì¿°
                 disease = DiseaseStats.TELEPORT;
                 this.setX(player.getPosition().x);
                 this.setY(player.getPosition().y);
                 break;
-            case 191: //¹İ¹İ Å¸ÀÓ¿öÇÁ - ÀÚÄñ
+            case 191: //ë°˜ë°˜ íƒ€ì„ì›Œí”„ - ìì¿°
                 Point posFrom = monster.getPosition();
                 Point mylt = new Point(lt.x + posFrom.x, lt.y + posFrom.y);
                 Point myrb = new Point(rb.x + posFrom.x, rb.y + posFrom.y);
@@ -288,7 +288,7 @@ public class TestMobSkill {
                 //MapleMist clock = new MapleMist(box, monster, this, monster.getPosition());
                 //clock.setClockType(Randomizer.rand(1, 2));
                 //monster.getMap().spawnClockMist(clock);
-                monster.getMap().broadcastMessage(UIPacket.showInfo("½Ã°£ÀÇ Æ´»õ¿¡ '±Õ¿­'ÀÌ ¹ß»ıÇÏ¿´½À´Ï´Ù."));
+                monster.getMap().broadcastMessage(UIPacket.showInfo("ì‹œê°„ì˜ í‹ˆìƒˆì— 'ê· ì—´'ì´ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤."));
                 break;
             case 200:
                 for (Integer mobId : getSummons()) {

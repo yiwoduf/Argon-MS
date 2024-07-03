@@ -1,6 +1,6 @@
 /*
-À§ ½ºÅ©¸³Æ®ÀÇ ÀúÀÛ±ÇÀº FoxDevelopTeam ÆÀÀå Fox¿¡°Ô ÀÖ½À´Ï´Ù.
-¹®ÀÇ : rinus_alt / fox_devel@nate.com / opharks (skype)
+ìœ„ ìŠ¤í¬ë¦½íŠ¸ì˜ ì €ì‘ê¶Œì€ FoxDevelopTeam íŒ€ì¥ Foxì—ê²Œ ìˆìŠµë‹ˆë‹¤.
+ë¬¸ì˜ : rinus_alt / fox_devel@nate.com / opharks (skype)
 */
 
 var status = -1;
@@ -18,14 +18,14 @@ function action(mode, type, selection) {
 	return;
     }
     if (status == 0) {
-	var chat = "¹İ°©´Ù. #b¿¡ÀÌÇÃ·¯½º#k ÄÁÅÙÃ÷ ´ã´ç #r¿ä¿øB#k¶ó°í ÇÑ´Ù.\r\n";
-        chat += "#g#L3##i4001861# »ç´Ù¸® Å¸±â#l";
-		chat += "#L4##i2470000# °­È­ ½Ã½ºÅÛ#l";
-		chat += "#L12##i4001101# ÀÎ³» º¸½º#l";
-        chat += "#L13##i2430029# ´ë¹Ú »Ì±â#l";
-		chat += "\r\n#L11##i1012076# #d[N]#g ¸¶ÇÇ¾Æ °ÔÀÓ#l";
-		//chat += "#L20##d[Å×½ºÆ®]#g º¸½º ·¹ÀÌµå#l";
-        chat += "#e#r#L14# ´ëÈ­ ³¡³»±â#l";
+	var chat = "ë°˜ê°‘ë‹¤. #bì—ì´í”ŒëŸ¬ìŠ¤#k ì»¨í…ì¸  ë‹´ë‹¹ #rìš”ì›B#kë¼ê³  í•œë‹¤.\r\n";
+        chat += "#g#L3##i4001861# ì‚¬ë‹¤ë¦¬ íƒ€ê¸°#l";
+		chat += "#L4##i2470000# ê°•í™” ì‹œìŠ¤í…œ#l";
+		chat += "#L12##i4001101# ì¸ë‚´ ë³´ìŠ¤#l";
+        chat += "#L13##i2430029# ëŒ€ë°• ë½‘ê¸°#l";
+		chat += "\r\n#L11##i1012076# #d[N]#g ë§ˆí”¼ì•„ ê²Œì„#l";
+		//chat += "#L20##d[í…ŒìŠ¤íŠ¸]#g ë³´ìŠ¤ ë ˆì´ë“œ#l";
+        chat += "#e#r#L14# ëŒ€í™” ëë‚´ê¸°#l";
 	cm.sendSpirit(chat,true,0);
     } else if (status == 1) {
      var s = selection;

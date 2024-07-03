@@ -102,7 +102,7 @@ public class SkillStatEffect {
                         && !d.getName().equals("lt2") && !d.getName().equals("rb2") && !d.getName().equals("hit")
                         && !d.getName().equals("hit") && !d.getName().equals("ball") && !d.getName().equals("action")
                         && !d.getName().equals("Point") && !d.getName().equals("variableRect") && !d.getName().equals("property")
-                        && !d.getName().equals("mob")) { //imgdir ¸íÀº Ä³½ÌÇÒ ÇÊ¿ä X.
+                        && !d.getName().equals("mob")) { //imgdir ëª…ì€ ìºì‹±í•  í•„ìš” X.
                     if (sourceid == 2321001) {
                         ret.effects.setStats(d.getName(), String.valueOf(d.getData()), true);
                     } else {
@@ -111,7 +111,7 @@ public class SkillStatEffect {
                 }
             } catch (Exception e) {
                 if (!ServerConstants.realese) {
-                    System.out.println("[°æ°í] ½ºÅ³°ª ·ÎµùÁß Àß¸øµÈ °ªÀÌ »ğÀÔµÇ¾ú½À´Ï´Ù. : " + sourceid + " : " + d.getName());
+                    System.out.println("[ê²½ê³ ] ìŠ¤í‚¬ê°’ ë¡œë”©ì¤‘ ì˜ëª»ëœ ê°’ì´ ì‚½ì…ë˜ì—ˆìŠµë‹ˆë‹¤. : " + sourceid + " : " + d.getName());
                 }
             }
         }
@@ -157,7 +157,7 @@ public class SkillStatEffect {
             ret.overTime = true;
         } else {
             if (ret.effects.getStats("time") < 2100000000) {
-                ret.effects.setStats("time", ret.effects.getStats("time") * 1000); //milliseconds ÇüÅÂ·Î ¼öÁ¤
+                ret.effects.setStats("time", ret.effects.getStats("time") * 1000); //milliseconds í˜•íƒœë¡œ ìˆ˜ì •
             }
             ret.overTime = overTime || ret.isMorph() || ret.isPirateCTS_Morph() || ret.isFinalAttack() || ret.isInflation();
         }
@@ -191,54 +191,54 @@ public class SkillStatEffect {
         if (skill) { // hack because we can't get from the datafile...
             switch (sourceid) {
                 case 1000003: //
-                    //¹°¸® ¹æ¾î·Â #pddX, ÃÖ´ë HP #mhpR% Áõ°¡. Àû¿¡°Ô ÇÇ°İ ½Ã µ¥¹ÌÁö #damAbsorbShieldR% °¨¼Ò
+                    //ë¬¼ë¦¬ ë°©ì–´ë ¥ #pddX, ìµœëŒ€ HP #mhpR% ì¦ê°€. ì ì—ê²Œ í”¼ê²© ì‹œ ë°ë¯¸ì§€ #damAbsorbShieldR% ê°ì†Œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PDD, ret.effects.getStats("pddX"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MHPCutR, ret.effects.getStats("mhpR"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DamAbsorbShield, ret.effects.getStats("damAbsorbShieldR"), false));
                     break;
                 case 2001002:
-                    //¸¶¹ıÀÇ ÈûÀ¸·Î ¹Ş´Â µ¥¹ÌÁö¸¦ °¨¼Ò½ÃÅ°°í ÀÏºÎ¸¦ MP·Î ´ë½ÅÇÑ´Ù.\n
-                    //È°¼ºÈ­ µÈ »óÅÂ¿¡¼­ MP°¡ 0 ÀÌ»óÀÏ °æ¿ì ÀÚµ¿À¸·Î ¹ßµ¿µÇ¸ç MP°¡ 0ÀÏ °æ¿ì¿¡´Â ±×´ë·Î HP¸¦ ¼Ò¸ğÇÏ°Ô µÈ´Ù. 
-                    //»ç¿ë ½Ã È¿°ú°¡ È°¼ºÈ­µÇ°í Àç»ç¿ë ½Ã ºñÈ°¼ºÈ­µÇ´Â #c¿Â¿ÀÇÁ ½ºÅ³
-                    //MP #mpCon ¼Òºñ, È°¼ºÈ­ µÇ¾îÀÖ´Â µ¿¾È ¹Ş´Â µ¥¹ÌÁöÀÇ #x%¸¦ MP·Î ´ë½ÅÇÔ
+                    //ë§ˆë²•ì˜ í˜ìœ¼ë¡œ ë°›ëŠ” ë°ë¯¸ì§€ë¥¼ ê°ì†Œì‹œí‚¤ê³  ì¼ë¶€ë¥¼ MPë¡œ ëŒ€ì‹ í•œë‹¤.\n
+                    //í™œì„±í™” ëœ ìƒíƒœì—ì„œ MPê°€ 0 ì´ìƒì¼ ê²½ìš° ìë™ìœ¼ë¡œ ë°œë™ë˜ë©° MPê°€ 0ì¼ ê²½ìš°ì—ëŠ” ê·¸ëŒ€ë¡œ HPë¥¼ ì†Œëª¨í•˜ê²Œ ëœë‹¤. 
+                    //ì‚¬ìš© ì‹œ íš¨ê³¼ê°€ í™œì„±í™”ë˜ê³  ì¬ì‚¬ìš© ì‹œ ë¹„í™œì„±í™”ë˜ëŠ” #cì˜¨ì˜¤í”„ ìŠ¤í‚¬
+                    //MP #mpCon ì†Œë¹„, í™œì„±í™” ë˜ì–´ìˆëŠ” ë™ì•ˆ ë°›ëŠ” ë°ë¯¸ì§€ì˜ #x%ë¥¼ MPë¡œ ëŒ€ì‹ í•¨
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MagicGuard, ret.effects.getStats("x"), false));
                     break;
                 case 2001003:
-                    //ÀÏÁ¤ ½Ã°£ °©¿Ê¿¡ ¸¶·ÂÀ» ÀÀÁı½ÃÄÑ ¹æ¾î·ÂÀ» Áõ°¡½ÃÅ²´Ù.\nÇÊ¿ä ½ºÅ³ : #c¸ÅÁ÷ °¡µå 3·¹º§ ÀÌ»ó#
-                    //MP #mpCon ¼Òºñ, #timeÃÊ°£ ¹°¸® ¹æ¾î·Â #pdd, ¸¶¹ı ¹æ¾î·Â #mdd Áõ°¡
+                    //ì¼ì • ì‹œê°„ ê°‘ì˜·ì— ë§ˆë ¥ì„ ì‘ì§‘ì‹œì¼œ ë°©ì–´ë ¥ì„ ì¦ê°€ì‹œí‚¨ë‹¤.\ní•„ìš” ìŠ¤í‚¬ : #cë§¤ì§ ê°€ë“œ 3ë ˆë²¨ ì´ìƒ#
+                    //MP #mpCon ì†Œë¹„, #timeì´ˆê°„ ë¬¼ë¦¬ ë°©ì–´ë ¥ #pdd, ë§ˆë²• ë°©ì–´ë ¥ #mdd ì¦ê°€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PDD, ret.effects.getStats("pdd"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MDD, ret.effects.getStats("mdd"), false));
                     break;
                 case 4001005:
-                    //MP #mpCon ¼Òºñ, #timeÃÊ°£ ÀÌµ¿¼Óµµ #speed, Á¡ÇÁ·Â #jump Áõ°¡\n[ÆĞ½Ãºê È¿°ú : ÀÌµ¿ ¼Óµµ »óÇÑ#speedMax ¸¸Å­ Áõ°¡]
+                    //MP #mpCon ì†Œë¹„, #timeì´ˆê°„ ì´ë™ì†ë„ #speed, ì í”„ë ¥ #jump ì¦ê°€\n[íŒ¨ì‹œë¸Œ íš¨ê³¼ : ì´ë™ ì†ë„ ìƒí•œ#speedMax ë§Œí¼ ì¦ê°€]
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Speed, ret.effects.getStats("speed"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Jump, ret.effects.getStats("jump"), false));
                     break;
                 case 4001006:
-                    //MP #mpCon ¼Òºñ, #timeÃÊ°£ ÀÌµ¿¼Óµµ #speed, Á¡ÇÁ·Â #jump Áõ°¡\n[ÆĞ½Ãºê È¿°ú : ÀÌµ¿ ¼Óµµ »óÇÑ#speedMax ¸¸Å­ Áõ°¡]
+                    //MP #mpCon ì†Œë¹„, #timeì´ˆê°„ ì´ë™ì†ë„ #speed, ì í”„ë ¥ #jump ì¦ê°€\n[íŒ¨ì‹œë¸Œ íš¨ê³¼ : ì´ë™ ì†ë„ ìƒí•œ#speedMax ë§Œí¼ ì¦ê°€]
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Speed, ret.effects.getStats("speed"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Jump, ret.effects.getStats("jump"), false));
                     break;
                 case 1101006:
-                    //ÀÏÁ¤ ½Ã°£µ¿¾È ¾Æ±ºÀÇ °ø°İ·ÂÀ» Áõ°¡½ÃÅ°°í ÀÚ½ÅÀÌ ¹Ş´Â µ¥¹ÌÁö¸¦ ÁõÆø½ÃÄÑ ¹İ»çÇÑ´Ù. #c´Ù¸¥ ¹öÇÁ¿Í ÁßÃ¸#ÇÏ¿© »ç¿ëÇÒ ¼ö ÀÖ´Ù.
-                    //ÀÏÁ¤ ½Ã°£µ¿¾È ¾Æ±ºÀÇ °ø°İ·ÂÀ» Áõ°¡½ÃÅ°°í ÀÚ½ÅÀÌ ¹Ş´Â µ¥¹ÌÁö¸¦ ÁõÆø½ÃÄÑ ¹İ»çÇÑ´Ù. #c´Ù¸¥ ¹öÇÁ¿Í ÁßÃ¸#ÇÏ¿© »ç¿ëÇÒ ¼ö ÀÖ´Ù.
-                    //MP #mpCon ¼Òºñ, #timeÃÊ°£ ÆÄÆ¼¿øÀÇ °ø°İ·Â #indiePad Áõ°¡. ¹Ş´Â µ¥¹ÌÁö #x% Èí¼öÇÏ°í #y% ÁõÆø½ÃÄÑ ¹İ»ç
-                    //MP #mpCon ¼Òºñ, #timeÃÊ°£ ÆÄÆ¼¿øÀÇ °ø°İ·Â #indiePad Áõ°¡. ¹Ş´Â µ¥¹ÌÁö #x% Èí¼öÇÏ°í #y% ÁõÆø½ÃÄÑ ¹İ»ç
+                    //ì¼ì • ì‹œê°„ë™ì•ˆ ì•„êµ°ì˜ ê³µê²©ë ¥ì„ ì¦ê°€ì‹œí‚¤ê³  ìì‹ ì´ ë°›ëŠ” ë°ë¯¸ì§€ë¥¼ ì¦í­ì‹œì¼œ ë°˜ì‚¬í•œë‹¤. #cë‹¤ë¥¸ ë²„í”„ì™€ ì¤‘ì²©#í•˜ì—¬ ì‚¬ìš©í•  ìˆ˜ ìˆë‹¤.
+                    //ì¼ì • ì‹œê°„ë™ì•ˆ ì•„êµ°ì˜ ê³µê²©ë ¥ì„ ì¦ê°€ì‹œí‚¤ê³  ìì‹ ì´ ë°›ëŠ” ë°ë¯¸ì§€ë¥¼ ì¦í­ì‹œì¼œ ë°˜ì‚¬í•œë‹¤. #cë‹¤ë¥¸ ë²„í”„ì™€ ì¤‘ì²©#í•˜ì—¬ ì‚¬ìš©í•  ìˆ˜ ìˆë‹¤.
+                    //MP #mpCon ì†Œë¹„, #timeì´ˆê°„ íŒŒí‹°ì›ì˜ ê³µê²©ë ¥ #indiePad ì¦ê°€. ë°›ëŠ” ë°ë¯¸ì§€ #x% í¡ìˆ˜í•˜ê³  #y% ì¦í­ì‹œì¼œ ë°˜ì‚¬
+                    //MP #mpCon ì†Œë¹„, #timeì´ˆê°„ íŒŒí‹°ì›ì˜ ê³µê²©ë ¥ #indiePad ì¦ê°€. ë°›ëŠ” ë°ë¯¸ì§€ #x% í¡ìˆ˜í•˜ê³  #y% ì¦í­ì‹œì¼œ ë°˜ì‚¬
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DamageReduce, ret.effects.getStats("y"), false));
                     break;
                 case 1101013:
-                    //È°¼ºÈ­µÇ¸é °ø°İÇÒ ¶§¸¶´Ù ÀÏÁ¤ È®·ü·Î ÄŞº¸ Ä«¿îÆ®°¡ ´©ÀûµÈ´Ù. ÃÖ´ë ´Ù¼¸ °³ÀÇ ÄŞº¸ Ä«¿îÆ®¸¦ ½×À» ¼ö ÀÖ´Ù.\n
-                    //½ºÅ³ »ç¿ë ½Ã È¿°ú°¡ È°¼ºÈ­µÇ°í Àç»ç¿ë ½Ã ºñÈ°¼ºÈ­µÇ´Â #c¿Â¿ÀÇÁ ½ºÅ³#
-                    //È°¼ºÈ­µÇ¸é °ø°İÇÒ ¶§¸¶´Ù ÀÏÁ¤ È®·ü·Î ÄŞº¸ Ä«¿îÆ®°¡ ´©ÀûµÈ´Ù. ÃÖ´ë ´Ù¼¸ °³ÀÇ ÄŞº¸ Ä«¿îÆ®¸¦ ½×À» ¼ö ÀÖ´Ù.
-                    //È°¼ºÈ­ ½Ã °ø°İÇÒ ¶§¸¶´Ù #prop%ÀÇ È®·ü·Î ÄŞº¸ Ä«¿îÆ® ´©Àû. ÄŞº¸ Ä«¿îÅÍ ´ç °ø°İ·Â #y Áõ°¡. ÃÖ´ë ÄŞº¸ Ä«¿îÆ® #x
-                    //È°¼ºÈ­ ½Ã °ø°İÇÒ ¶§¸¶´Ù #prop%ÀÇ È®·ü·Î ÄŞº¸ Ä«¿îÆ® ´©Àû. ÃÖ´ë ÄŞº¸ Ä«¿îÆ® #x
+                    //í™œì„±í™”ë˜ë©´ ê³µê²©í•  ë•Œë§ˆë‹¤ ì¼ì • í™•ë¥ ë¡œ ì½¤ë³´ ì¹´ìš´íŠ¸ê°€ ëˆ„ì ëœë‹¤. ìµœëŒ€ ë‹¤ì„¯ ê°œì˜ ì½¤ë³´ ì¹´ìš´íŠ¸ë¥¼ ìŒ“ì„ ìˆ˜ ìˆë‹¤.\n
+                    //ìŠ¤í‚¬ ì‚¬ìš© ì‹œ íš¨ê³¼ê°€ í™œì„±í™”ë˜ê³  ì¬ì‚¬ìš© ì‹œ ë¹„í™œì„±í™”ë˜ëŠ” #cì˜¨ì˜¤í”„ ìŠ¤í‚¬#
+                    //í™œì„±í™”ë˜ë©´ ê³µê²©í•  ë•Œë§ˆë‹¤ ì¼ì • í™•ë¥ ë¡œ ì½¤ë³´ ì¹´ìš´íŠ¸ê°€ ëˆ„ì ëœë‹¤. ìµœëŒ€ ë‹¤ì„¯ ê°œì˜ ì½¤ë³´ ì¹´ìš´íŠ¸ë¥¼ ìŒ“ì„ ìˆ˜ ìˆë‹¤.
+                    //í™œì„±í™” ì‹œ ê³µê²©í•  ë•Œë§ˆë‹¤ #prop%ì˜ í™•ë¥ ë¡œ ì½¤ë³´ ì¹´ìš´íŠ¸ ëˆ„ì . ì½¤ë³´ ì¹´ìš´í„° ë‹¹ ê³µê²©ë ¥ #y ì¦ê°€. ìµœëŒ€ ì½¤ë³´ ì¹´ìš´íŠ¸ #x
+                    //í™œì„±í™” ì‹œ ê³µê²©í•  ë•Œë§ˆë‹¤ #prop%ì˜ í™•ë¥ ë¡œ ì½¤ë³´ ì¹´ìš´íŠ¸ ëˆ„ì . ìµœëŒ€ ì½¤ë³´ ì¹´ìš´íŠ¸ #x
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ComboCounter, 1, false));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
                 case 2211011:
-                case 2221005: // ¿¤Äû³×½º
-                case 2321003: // ¹ÙÇÏ¹ÂÆ®
+                case 2221005: // ì—˜í€´ë„¤ìŠ¤
+                case 2321003: // ë°”í•˜ë®¤íŠ¸
                 case 5201012:
                 case 5201013:
                 case 5201014:
@@ -257,34 +257,34 @@ public class SkillStatEffect {
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Stance, ret.effects.getStats("x"), false));
                     break;
                 case 1200014:
-                    //Á÷Àü¿¡ »ç¿ëÇÑ ¼Ó¼º°ú #c´Ù¸¥ ¼Ó¼ºÀÇ Â÷Áö ½ºÅ³ »ç¿ë#½Ã ¿¤¸®¸àÅ» Â÷Áö 1°³ ÃæÀü. 
-                    //ÃÖ´ë #z°³ ÃæÀü °¡´É, ÃæÀüÇÑ ¿¤¸®¸àÅ» Â÷Áö ´ç µ¥¹ÌÁö ¹× ¹°¾àÀ» Á¦¿ÜÇÑ Ä¡À¯·® #x%, 
-                    //°ø°İ·Â #y, »óÅÂ ÀÌ»ó ³»¼º #u% Áõ°¡, 
-                    //ÃÖ´ë HPÀÇ ÀÏÁ¤ ºñÀ²·Î ÇÇÇØ¸¦ ÀÔÈ÷´Â °ø°İÀ» Æ÷ÇÔÇÑ ÇÇ°İ µ¥¹ÌÁö #w% °¨¼Ò, #cÃÖ´ë ¹æ¾î·Â 20000#À¸·Î Áõ°¡
+                    //ì§ì „ì— ì‚¬ìš©í•œ ì†ì„±ê³¼ #cë‹¤ë¥¸ ì†ì„±ì˜ ì°¨ì§€ ìŠ¤í‚¬ ì‚¬ìš©#ì‹œ ì—˜ë¦¬ë©˜íƒˆ ì°¨ì§€ 1ê°œ ì¶©ì „. 
+                    //ìµœëŒ€ #zê°œ ì¶©ì „ ê°€ëŠ¥, ì¶©ì „í•œ ì—˜ë¦¬ë©˜íƒˆ ì°¨ì§€ ë‹¹ ë°ë¯¸ì§€ ë° ë¬¼ì•½ì„ ì œì™¸í•œ ì¹˜ìœ ëŸ‰ #x%, 
+                    //ê³µê²©ë ¥ #y, ìƒíƒœ ì´ìƒ ë‚´ì„± #u% ì¦ê°€, 
+                    //ìµœëŒ€ HPì˜ ì¼ì • ë¹„ìœ¨ë¡œ í”¼í•´ë¥¼ ì…íˆëŠ” ê³µê²©ì„ í¬í•¨í•œ í”¼ê²© ë°ë¯¸ì§€ #w% ê°ì†Œ, #cìµœëŒ€ ë°©ì–´ë ¥ 20000#ìœ¼ë¡œ ì¦ê°€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ElementalCharge, 1, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ACC, ret.effects.getStats("y"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EVAR, ret.effects.getStats("u"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DamageReduce, ret.effects.getStats("w"), false));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
-                case 1301006: // ¾ÆÀÌ¾ğ ¿ù
-                    //MP #mpCon ¼Òºñ, #timeÃÊ°£ ÆÀ¿øÀÇ ¹°¸® ¹æ¾î·Â #pdd, ¸¶¹ı ¹æ¾î·Â #mdd Áõ°¡
+                case 1301006: // ì•„ì´ì–¸ ì›”
+                    //MP #mpCon ì†Œë¹„, #timeì´ˆê°„ íŒ€ì›ì˜ ë¬¼ë¦¬ ë°©ì–´ë ¥ #pdd, ë§ˆë²• ë°©ì–´ë ¥ #mdd ì¦ê°€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PDD, ret.effects.getStats("pdd"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MDD, ret.effects.getStats("mdd"), false));
                     break;
                 case 1301007:
-                    //MP #mpCon ¼Òºñ, #timeÃÊ°£ ÆÄÆ¼¿øÀÇ ÃÖ´ë HP¿Í ÃÖ´ë MP #x% Áõ°¡
+                    //MP #mpCon ì†Œë¹„, #timeì´ˆê°„ íŒŒí‹°ì›ì˜ ìµœëŒ€ HPì™€ ìµœëŒ€ MP #x% ì¦ê°€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MaxHP, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MaxMP, ret.effects.getStats("x"), false));
                     break;
                 case 1301013:
-                    //ÁÖÀ§¿¡ ÀÖÀ» ¶§ ÀÏÁ¤ ½Ã°£¸¶´Ù ÀÚ½ÅÀ» Ä¡À¯ÇØ ÁÖ´Â ºñÈ¦´õ¸¦ ¼ÒÈ¯ÇÑ´Ù.
+                    //ì£¼ìœ„ì— ìˆì„ ë•Œ ì¼ì • ì‹œê°„ë§ˆë‹¤ ìì‹ ì„ ì¹˜ìœ í•´ ì£¼ëŠ” ë¹„í™€ë”ë¥¼ ì†Œí™˜í•œë‹¤.
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Beholder, ret.effects.getStats("x"), false));
                     break;
 
                 case 1310016:
-                    //#xÃÊ ¸¶´Ù Áö¼Ó½Ã°£ÀÌ #timeÃÊÀÎ °ø°İ·Â +#epad, ¹°¸® ¹æ¾î·Â +#epdd, 
-                    //Å©¸®Æ¼ÄÃ È®·ü #indieCr%, ¸¶¹ı ¹æ¾î·Â +#emdd, ¸íÁßÄ¡+#acc, È¸ÇÇÄ¡ +#eva ¹öÇÁ ½ÃÀü
+                    //#xì´ˆ ë§ˆë‹¤ ì§€ì†ì‹œê°„ì´ #timeì´ˆì¸ ê³µê²©ë ¥ +#epad, ë¬¼ë¦¬ ë°©ì–´ë ¥ +#epdd, 
+                    //í¬ë¦¬í‹°ì»¬ í™•ë¥  #indieCr%, ë§ˆë²• ë°©ì–´ë ¥ +#emdd, ëª…ì¤‘ì¹˜+#acc, íšŒí”¼ì¹˜ +#eva ë²„í”„ ì‹œì „
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieCr, ret.effects.getStats("indieCr"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EPAD, ret.effects.getStats("epad"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EPDD, ret.effects.getStats("epdd"), false));
@@ -303,30 +303,30 @@ public class SkillStatEffect {
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_CrossOverChain, ret.effects.getStats("x"), false));
                     break;
                 case 1320019:
-                    //¸®ÀÎÄ«³×ÀÌ¼Ç
-                    //HP°¡ 0ÀÌ µÇ¸é HP ¹× MP ¿ÏÀü È¸º¹, #timeÃÊ µ¿¾È ¹«Àû, ±Ã±×´Ò µğ¼¾Æ® Àç»ç¿ë ´ë±â½Ã°£ ¹«½Ã. 
-                    //#timeÃÊ µ¿¾È #z¸íÀÇ Àû Ã³Ä¡, È¤Àº º¸½º¸¦ #z¹ø Å¸°İ ½Ã Áö¼Ó ½Ã°£ÀÌ ³¡³­ ÈÄ ºÎÈ°. Àç¹ßµ¿ ´ë±â½Ã°£ #cooltimeÃÊ. 
-                    //[ÆĞ½Ãºê È¿°ú : HP°¡ #x% ÀÌ»óÀÏ ¶§ µ¥¹ÌÁö +#damage%, ÀÌµ¿¼Óµµ +#psdSpeed, Å©¸®Æ¼ÄÃ È®·ü #cr% Áõ°¡, ÃÖ¼Ò Å©¸®Æ¼ÄÃ µ¥¹ÌÁö #criticaldamageMin% Áõ°¡]
+                    //ë¦¬ì¸ì¹´ë„¤ì´ì…˜
+                    //HPê°€ 0ì´ ë˜ë©´ HP ë° MP ì™„ì „ íšŒë³µ, #timeì´ˆ ë™ì•ˆ ë¬´ì , ê¶ê·¸ë‹ ë””ì„¼íŠ¸ ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ ë¬´ì‹œ. 
+                    //#timeì´ˆ ë™ì•ˆ #zëª…ì˜ ì  ì²˜ì¹˜, í˜¹ì€ ë³´ìŠ¤ë¥¼ #zë²ˆ íƒ€ê²© ì‹œ ì§€ì† ì‹œê°„ì´ ëë‚œ í›„ ë¶€í™œ. ì¬ë°œë™ ëŒ€ê¸°ì‹œê°„ #cooltimeì´ˆ. 
+                    //[íŒ¨ì‹œë¸Œ íš¨ê³¼ : HPê°€ #x% ì´ìƒì¼ ë•Œ ë°ë¯¸ì§€ +#damage%, ì´ë™ì†ë„ +#psdSpeed, í¬ë¦¬í‹°ì»¬ í™•ë¥  #cr% ì¦ê°€, ìµœì†Œ í¬ë¦¬í‹°ì»¬ ë°ë¯¸ì§€ #criticaldamageMin% ì¦ê°€]
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Reincarnation, 1, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_NotDamaged, 1, false));
                     ret.effects.setStats("time", ret.getTime() / 30);
                     break;
                 case 1201013:
-                    //MP #mpCon ¼Ò¸ğ. ÃÖ´ë #mobCount¸íÀÇ Àû¿¡°Ô #damage%·Î #attackCount¹ø µ¥¹ÌÁö¸¦ ÀÔÈ÷¸ç ÀÚ½Å¿¡°Ô·Î ´ç±ä ÈÄ #prop% È®·ü·Î #timeÃÊ µ¿¾È ±âÀı
+                    //MP #mpCon ì†Œëª¨. ìµœëŒ€ #mobCountëª…ì˜ ì ì—ê²Œ #damage%ë¡œ #attackCountë²ˆ ë°ë¯¸ì§€ë¥¼ ì…íˆë©° ìì‹ ì—ê²Œë¡œ ë‹¹ê¸´ í›„ #prop% í™•ë¥ ë¡œ #timeì´ˆ ë™ì•ˆ ê¸°ì ˆ
                     monsterStatus.put(MonsterStatus.STUN, 1);
                     break;
                 case 1201012:
-                    //MP #mpCon ¼Ò¸ğ. ÃÖ´ë #mobCount¸íÀÇ Àû¿¡°Ô #damage%·Î #attackCount¹ø °ø°İ. #prop% È®·ü·Î #timeÃÊ µ¿¾È ÀûÀÇ ÀÌµ¿¼Óµµ °¨¼Ó. #cºÒÅ¸°í ÀÖ´Â Àû °ø°İ ½Ã #z% Ãß°¡ µ¥¹ÌÁö#
+                    //MP #mpCon ì†Œëª¨. ìµœëŒ€ #mobCountëª…ì˜ ì ì—ê²Œ #damage%ë¡œ #attackCountë²ˆ ê³µê²©. #prop% í™•ë¥ ë¡œ #timeì´ˆ ë™ì•ˆ ì ì˜ ì´ë™ì†ë„ ê°ì†. #cë¶ˆíƒ€ê³  ìˆëŠ” ì  ê³µê²© ì‹œ #z% ì¶”ê°€ ë°ë¯¸ì§€#
                     monsterStatus.put(MonsterStatus.SPEED, ret.effects.getStats("x"));
                     break;
                 case 1201011:
-                    //MP #mpCon ¼Ò¸ğ. ÃÖ´ë #mobCount¸íÀÇ Àû¿¡°Ô #damage%·Î #attackCount¹ø °ø°İ. #prop% È®·ü·Î #dotTimeÃÊ µ¿¾È #dot% È­¼Ó¼º µ¥¹ÌÁö
+                    //MP #mpCon ì†Œëª¨. ìµœëŒ€ #mobCountëª…ì˜ ì ì—ê²Œ #damage%ë¡œ #attackCountë²ˆ ê³µê²©. #prop% í™•ë¥ ë¡œ #dotTimeì´ˆ ë™ì•ˆ #dot% í™”ì†ì„± ë°ë¯¸ì§€
                     monsterStatus.put(MonsterStatus.Burned, ret.effects.getStats("dot"));
                     break;
                 case 1211008:
-                    //MP #mpCon ¼Ò¸ğ. ÃÖ´ë #mobCount¸íÀÇ Àû¿¡°Ô #damage%·Î #attackCount¹ø °ø°İ. #prop% È®·ü·Î #timeÃÊ µ¿¾È ±âÀı. ±âÀıÇÏÁö ¾Ê´Â ÀûÀº #dot% Áö¼Ó µ¥¹ÌÁö. 
-                    //#cºí¸®ÀÚµå Â÷Áö È¿°ú·Î ´À·ÁÁø Àû °ø°İ ½Ã #z% Ãß°¡ µ¥¹ÌÁö#
+                    //MP #mpCon ì†Œëª¨. ìµœëŒ€ #mobCountëª…ì˜ ì ì—ê²Œ #damage%ë¡œ #attackCountë²ˆ ê³µê²©. #prop% í™•ë¥ ë¡œ #timeì´ˆ ë™ì•ˆ ê¸°ì ˆ. ê¸°ì ˆí•˜ì§€ ì•ŠëŠ” ì ì€ #dot% ì§€ì† ë°ë¯¸ì§€. 
+                    //#cë¸”ë¦¬ìë“œ ì°¨ì§€ íš¨ê³¼ë¡œ ëŠë ¤ì§„ ì  ê³µê²© ì‹œ #z% ì¶”ê°€ ë°ë¯¸ì§€#
                     monsterStatus.put(MonsterStatus.STUN, 1);
                     break;
                 case 1105:
@@ -336,32 +336,32 @@ public class SkillStatEffect {
                     ret.overTime = true;
                     break;
                 case 1210016:
-//                  //ÇÇ°İ ½Ã #prop% È®·ü·Î °³ÀÎ º¸È£¸· »ı¼º, #timeÃÊ µ¿¾È #c°ø°İ·ÂÀÌ #epad Áõ°¡ÇÏ¸ç ÃÖ´ë #x¹øÀÇ ÇÇÇØ¸¦ Èí¼ö#, 
-                    //´Ü ÃÖ´ë HPÀÇ ÀÏÁ¤ ºñÀ²·Î ÇÇÇØ¸¦ ÀÔÈ÷´Â °ø°İ¿¡ ÇÑÇØ ÇÇÇØ #y% °¨¼Ò, ¹ßµ¿ ½Ã #cooltimeÃÊ µ¿¾È º¸È£¸· Àç»ı¼º ºÒ°¡
+//                  //í”¼ê²© ì‹œ #prop% í™•ë¥ ë¡œ ê°œì¸ ë³´í˜¸ë§‰ ìƒì„±, #timeì´ˆ ë™ì•ˆ #cê³µê²©ë ¥ì´ #epad ì¦ê°€í•˜ë©° ìµœëŒ€ #xë²ˆì˜ í”¼í•´ë¥¼ í¡ìˆ˜#, 
+                    //ë‹¨ ìµœëŒ€ HPì˜ ì¼ì • ë¹„ìœ¨ë¡œ í”¼í•´ë¥¼ ì…íˆëŠ” ê³µê²©ì— í•œí•´ í”¼í•´ #y% ê°ì†Œ, ë°œë™ ì‹œ #cooltimeì´ˆ ë™ì•ˆ ë³´í˜¸ë§‰ ì¬ìƒì„± ë¶ˆê°€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BlessingArmorIncPAD, ret.effects.getStats("epad"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BlessingArmor, ret.effects.getStats("x"), false));
                     break;
                 case 1221004:
-                    //P #mpCon ¼Ò¸ğ. ÃÖ´ë #mobCount¸íÀÇ Àû¿¡°Ô #damage%·Î #attackCount¹ø °ø°İ. 
-                    //#prop% È®·ü·Î #timeÃÊ µ¿¾È Ä§¹¬. #c¶óÀÌÆ®´× Â÷Áö È¿°ú·Î ±âÀıÇÑ Àû °ø°İ ½Ã #z% Ãß°¡ µ¥¹ÌÁö#
+                    //P #mpCon ì†Œëª¨. ìµœëŒ€ #mobCountëª…ì˜ ì ì—ê²Œ #damage%ë¡œ #attackCountë²ˆ ê³µê²©. 
+                    //#prop% í™•ë¥ ë¡œ #timeì´ˆ ë™ì•ˆ ì¹¨ë¬µ. #cë¼ì´íŠ¸ë‹ ì°¨ì§€ íš¨ê³¼ë¡œ ê¸°ì ˆí•œ ì  ê³µê²© ì‹œ #z% ì¶”ê°€ ë°ë¯¸ì§€#
                     monsterStatus.put(MonsterStatus.SEAL, 1);
                     break;
                 case 1221009:
-                    //MP #mpCon ¼Òºñ, #damage% µ¥¹ÌÁö·Î #attackCount¹ø °ø°İ.\n
-                    //¿¤¸®¸àÅ» Â÷Áö ¸ğµÎ ÃæÀüµÇ¾î ÀÖÀ» °æ¿ì ÀÌ¸¦ ¼Ò¸ğÇÏ¿© #timeÃÊ µ¿¾È Å©¸®Æ¼ÄÃ È®·ü #cr%, ¹æ¾î ¹«½Ã ºñÀ² #ignoreMobpdpR%, ÃÖÁ¾ µ¥¹ÌÁö #damR% Áõ°¡\n
-                    //ºí·¡½ºÆ® ¹öÇÁÀÇ Áö¼Ó½Ã°£ µ¿¾È¿¡´Â ¿¤¸®¸àÅ» Â÷Áö¸¦ ¼Ò¸ğÇÏÁö ¾ÊÀ½.
+                    //MP #mpCon ì†Œë¹„, #damage% ë°ë¯¸ì§€ë¡œ #attackCountë²ˆ ê³µê²©.\n
+                    //ì—˜ë¦¬ë©˜íƒˆ ì°¨ì§€ ëª¨ë‘ ì¶©ì „ë˜ì–´ ìˆì„ ê²½ìš° ì´ë¥¼ ì†Œëª¨í•˜ì—¬ #timeì´ˆ ë™ì•ˆ í¬ë¦¬í‹°ì»¬ í™•ë¥  #cr%, ë°©ì–´ ë¬´ì‹œ ë¹„ìœ¨ #ignoreMobpdpR%, ìµœì¢… ë°ë¯¸ì§€ #damR% ì¦ê°€\n
+                    //ë¸”ë˜ìŠ¤íŠ¸ ë²„í”„ì˜ ì§€ì†ì‹œê°„ ë™ì•ˆì—ëŠ” ì—˜ë¦¬ë©˜íƒˆ ì°¨ì§€ë¥¼ ì†Œëª¨í•˜ì§€ ì•ŠìŒ.
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_CriticalBuff, ret.effects.getStats("cr"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IgnoreMobpdpR, ret.effects.getStats("ignoreMobpdpR"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DamR, ret.effects.getStats("damR"), false));
                     break;
-                case 1221015: // ¿¤¸®¸àÅ» Æ÷½º
+                case 1221015: // ì—˜ë¦¬ë©˜íƒˆ í¬ìŠ¤
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
                 case 1221052:
                     monsterStatus.put(MonsterStatus.STUN, 1);
                     break;
                 case 1221054:
-                    //MP #mpCon ¼Òºñ, #timeÃÊ°£ ¿ÏÀü ¹«Àû »óÅÂ. \nÀç»ç¿ë ´ë±â½Ã°£ : #cooltimeÃÊ
+                    //MP #mpCon ì†Œë¹„, #timeì´ˆê°„ ì™„ì „ ë¬´ì  ìƒíƒœ. \nì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ : #cooltimeì´ˆ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_NotDamaged, 1, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IgnorePCounter, 1, false));
                     break;
@@ -376,15 +376,15 @@ public class SkillStatEffect {
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_WizardIgnite, 1, false));
                     break;
                 case 2101001:
-                    //MP #mpCon ¼Òºñ, #timeÃÊ°£ ÆÄÆ¼¿øÀÇ ¸¶·Â #indieMad Áõ°¡
+                    //MP #mpCon ì†Œë¹„, #timeì´ˆê°„ íŒŒí‹°ì›ì˜ ë§ˆë ¥ #indieMad ì¦ê°€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMAD, ret.effects.getStats("indieMad"), true));
                     break;
                 case 2111010:
                     monsterStatus.put(MonsterStatus.POISON, 1);
                     break;
                 case 2111011:
-                    ///MP #mpCon ¼Òºñ, Ä¡¸íÀûÀÎ »óÅÂ ÀÌ»ó ¹æ¾î ½Ã ÃÖ´ë MPÀÇ #x%¸¦ ¼Ò¸ğÇÏ°í #c#prop% È®·ü·Î ÃÖ´ë #y¹ø±îÁö º¸È£¸· Àç»ı¼º#. Àç»ç¿ë ´ë±â½Ã°£ #cooltimeÃÊ\n
-                    //[ÆĞ½Ãºê È¿°ú : »óÅÂ ÀÌ»ó ¹× ¸ğµç ¼Ó¼º ÀúÇ× #asrR% Áõ°¡]
+                    ///MP #mpCon ì†Œë¹„, ì¹˜ëª…ì ì¸ ìƒíƒœ ì´ìƒ ë°©ì–´ ì‹œ ìµœëŒ€ MPì˜ #x%ë¥¼ ì†Œëª¨í•˜ê³  #c#prop% í™•ë¥ ë¡œ ìµœëŒ€ #yë²ˆê¹Œì§€ ë³´í˜¸ë§‰ ì¬ìƒì„±#. ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ #cooltimeì´ˆ\n
+                    //[íŒ¨ì‹œë¸Œ íš¨ê³¼ : ìƒíƒœ ì´ìƒ ë° ëª¨ë“  ì†ì„± ì €í•­ #asrR% ì¦ê°€]
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_StackBuff, ret.effects.getStats("y"), false));
                     break;
                 case 2111007:
@@ -397,13 +397,13 @@ public class SkillStatEffect {
                     monsterStatus.put(MonsterStatus.Burned, ret.effects.getStats("dot"));
                     break;
                 case 2121006:
-                    //MP #mpCon ¼Òºñ, ÃÖ´ë #mobCount¸íÀÇ Àû¿¡°Ô #damage% µ¥¹ÌÁö·Î #attackCount¹ø °ø°İ, #timeÃÊ µ¿¾È ¸¶ºñ, #dotIntervalÃÊ´ç #dot%ÀÇ µµÆ® ÇÇÇØ
+                    //MP #mpCon ì†Œë¹„, ìµœëŒ€ #mobCountëª…ì˜ ì ì—ê²Œ #damage% ë°ë¯¸ì§€ë¡œ #attackCountë²ˆ ê³µê²©, #timeì´ˆ ë™ì•ˆ ë§ˆë¹„, #dotIntervalì´ˆë‹¹ #dot%ì˜ ë„íŠ¸ í”¼í•´
                     monsterStatus.put(MonsterStatus.STUN, 1);
                     monsterStatus.put(MonsterStatus.Burned, 1);
                     break;
                 case 2121011:
-                    //MP #mpCon ¼Òºñ, ´ÜÀÏ Àû #damage% µ¥¹ÌÁö·Î #attackCount¹ø °ø°İ, #prop% È®·ü·Î #dotTimeÃÊ µ¿¾È #dot% Áö¼Ó µ¥¹ÌÁö¸¦ ÁÖ¸ç #cºÎµúÈ÷Áö ¾Ê´Â »óÅÂ Áö¼Ó ¹× #x% °¨¼Ó#, 
-                    //Àû ¸íÁß ½Ã Æ÷ÀÌÁğ ¹Ì½ºÆ® Àû À§Ä¡ »ı¼º, ¸ÂÀº ÀûÀÌ ¾øÀ» °æ¿ì ÀÚ½Å À§Ä¡¿¡ Æ÷ÀÌÁğ ¹Ì½ºÆ® »ı¼º\nÀç»ç¿ë ´ë±â½Ã°£ #cooltimeÃÊ
+                    //MP #mpCon ì†Œë¹„, ë‹¨ì¼ ì  #damage% ë°ë¯¸ì§€ë¡œ #attackCountë²ˆ ê³µê²©, #prop% í™•ë¥ ë¡œ #dotTimeì´ˆ ë™ì•ˆ #dot% ì§€ì† ë°ë¯¸ì§€ë¥¼ ì£¼ë©° #cë¶€ë”ªíˆì§€ ì•ŠëŠ” ìƒíƒœ ì§€ì† ë° #x% ê°ì†#, 
+                    //ì  ëª…ì¤‘ ì‹œ í¬ì´ì¦Œ ë¯¸ìŠ¤íŠ¸ ì  ìœ„ì¹˜ ìƒì„±, ë§ì€ ì ì´ ì—†ì„ ê²½ìš° ìì‹  ìœ„ì¹˜ì— í¬ì´ì¦Œ ë¯¸ìŠ¤íŠ¸ ìƒì„±\nì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ #cooltimeì´ˆ
                     monsterStatus.put(MonsterStatus.Burned, 1);
                     monsterStatus.put(MonsterStatus.SHOWDOWN, 1);
                     monsterStatus.put(MonsterStatus.SPEED, ret.effects.getStats("x"));
@@ -420,17 +420,17 @@ public class SkillStatEffect {
                 case 2221006:
                     monsterStatus.put(MonsterStatus.STUN, 1);
                     break;
-                case 2221011: //ÇÁ¸®Â¡ ºê·¹½º
-                    //#mpCon ¼Òºñ, ÀÚ½ÅÀº ¹«ÀûÀÌ µÇ¸ç ÃÖ´ë #mobCount¸íÀÇ Àû #cÇàµ¿ ºÒ°¡ ¹× ¸¶¹ı ¹æ¾îµµ #y%, ¹°¸® ¹æ¾îµµ #x%#. Å°´Ù¿î Áö¼Ó ½Ã ÃÖ´ë #timeÃÊ °£ À¯Áö
+                case 2221011: //í”„ë¦¬ì§• ë¸Œë ˆìŠ¤
+                    //#mpCon ì†Œë¹„, ìì‹ ì€ ë¬´ì ì´ ë˜ë©° ìµœëŒ€ #mobCountëª…ì˜ ì  #cí–‰ë™ ë¶ˆê°€ ë° ë§ˆë²• ë°©ì–´ë„ #y%, ë¬¼ë¦¬ ë°©ì–´ë„ #x%#. í‚¤ë‹¤ìš´ ì§€ì† ì‹œ ìµœëŒ€ #timeì´ˆ ê°„ ìœ ì§€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_NotDamaged, 1, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IgnorePCounter, 1, false));
                     monsterStatus.put(MonsterStatus.FREEZE, 1);
                     monsterStatus.put(MonsterStatus.WDEF, ret.effects.getStats("x"));
                     monsterStatus.put(MonsterStatus.MDEF, ret.effects.getStats("y"));
                     break;
-                case 2221054: //¾ÆÀÌ½º ¿À¶ó
-                    //ÃÊ´ç MP #mpCon ¼Òºñ, ÁÖÀ§ ¾Æ±º¿¡°Ô ¹Ğ¸®Áö ¾ÊÀ» È®·ü #x%, µ¥¹ÌÁö Èí¼ö #y%, 
-                    //ÃÊ´ç MP #mpCon ¼Òºñ, ÁÖÀ§ ¾Æ±º¿¡°Ô ½ºÅÄ½º È®·ü #x%, µ¥¹ÌÁö Èí¼ö #y%, »óÅÂÀÌ»ó ³»¼º ¹× ¸ğµç ¼Ó¼º ÀúÇ× #v% Áõ°¡ È¿°ú  
+                case 2221054: //ì•„ì´ìŠ¤ ì˜¤ë¼
+                    //ì´ˆë‹¹ MP #mpCon ì†Œë¹„, ì£¼ìœ„ ì•„êµ°ì—ê²Œ ë°€ë¦¬ì§€ ì•Šì„ í™•ë¥  #x%, ë°ë¯¸ì§€ í¡ìˆ˜ #y%, 
+                    //ì´ˆë‹¹ MP #mpCon ì†Œë¹„, ì£¼ìœ„ ì•„êµ°ì—ê²Œ ìŠ¤íƒ ìŠ¤ í™•ë¥  #x%, ë°ë¯¸ì§€ í¡ìˆ˜ #y%, ìƒíƒœì´ìƒ ë‚´ì„± ë° ëª¨ë“  ì†ì„± ì €í•­ #v% ì¦ê°€ íš¨ê³¼  
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IceAura, 1, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_AsrR, ret.effects.getStats("v"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_TerR, ret.effects.getStats("v"), false));
@@ -464,7 +464,7 @@ public class SkillStatEffect {
                     monsterStatus.put(MonsterStatus.STUN, 1);
                     break;
                 case 21110016:
-                    //1000ÄŞº¸ µµ´Ş ½Ã ¾Æµå·¹³¯¸° ºÎ½ºÆ® ÁøÀÔ : #timeÃÊ µ¿¾È ¾Æ¶õÀÇ °ø°İ ½ºÅ³ µ¥¹ÌÁö #w%p Áõ°¡, ÃÖ´ë °ø°İ È½¼ö #xÈ¸ Áõ°¡, ÃÖ´ë °ø°İ °¡´ÉÇÑ ¸ó½ºÅÍ ¼ö #y Áõ°¡\n¿µ±¸ÀûÀ¸·Î ¾Æ¶õÀÇ °ø°İ ½ºÅ³ µ¥¹ÌÁö #z%p Áõ°¡
+                    //1000ì½¤ë³´ ë„ë‹¬ ì‹œ ì•„ë“œë ˆë‚ ë¦° ë¶€ìŠ¤íŠ¸ ì§„ì… : #timeì´ˆ ë™ì•ˆ ì•„ë€ì˜ ê³µê²© ìŠ¤í‚¬ ë°ë¯¸ì§€ #w%p ì¦ê°€, ìµœëŒ€ ê³µê²© íšŸìˆ˜ #xíšŒ ì¦ê°€, ìµœëŒ€ ê³µê²© ê°€ëŠ¥í•œ ëª¬ìŠ¤í„° ìˆ˜ #y ì¦ê°€\nì˜êµ¬ì ìœ¼ë¡œ ì•„ë€ì˜ ê³µê²© ìŠ¤í‚¬ ë°ë¯¸ì§€ #z%p ì¦ê°€
                     statups.add(new Triple<>(BuffStats.CTS_AdrenalinBoost, ret.effects.getStats("y"), false));
                     statups.add(new Triple<>(BuffStats.CTS_AttackCountX, ret.effects.getStats("x"), false));
                     statups.add(new Triple<>(BuffStats.CTS_DamR, ret.effects.getStats("w"), false));
@@ -475,7 +475,7 @@ public class SkillStatEffect {
                     monsterStatus.put(MonsterStatus.WDEF, 1);
                     monsterStatus.put(MonsterStatus.MDEF, 1);
                     break;
-                case 21120018: //ºÎ½ºÆ® ¿£µå ÇåÆ®
+                case 21120018: //ë¶€ìŠ¤íŠ¸ ì—”ë“œ í—ŒíŠ¸
                 case 21120019:
                 case 21120023:
                 case 21120026:
@@ -504,7 +504,7 @@ public class SkillStatEffect {
                     monsterStatus.put(MonsterStatus.SPEED, -30);
                     break;
                 case 31121003:
-                    //°ø°İ·Â, ¹æ¾î·Â #x%, ¸íÁß·ü #z% °¨¼Ò
+                    //ê³µê²©ë ¥, ë°©ì–´ë ¥ #x%, ëª…ì¤‘ë¥  #z% ê°ì†Œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DevilCry, 1, false));
                     monsterStatus.put(MonsterStatus.WATK, -ret.effects.getStats("x"));
                     monsterStatus.put(MonsterStatus.WDEF, -ret.effects.getStats("x"));
@@ -519,7 +519,7 @@ public class SkillStatEffect {
                     monsterStatus.put(MonsterStatus.WDEF, -ret.effects.getStats("y"));
                     monsterStatus.put(MonsterStatus.SPEED, ret.effects.getStats("x"));
                     break;
-                case 35120002: //ÆÄÆ¼¿ø ÃÖÁ¾µ¥¹ÌÁöÁõ°¡
+                case 35120002: //íŒŒí‹°ì› ìµœì¢…ë°ë¯¸ì§€ì¦ê°€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePMdR, ret.effects.getStats("indiePMdR"), true));
                     break;
                 case 65001002:
@@ -533,133 +533,133 @@ public class SkillStatEffect {
                     break;
                 case 142111006:
                 case 142120003:
-                    //¿µ¿ª ³» ÀûÀÇ ÀÌµ¿¼Óµµ °¨¼Ò, #s% ¸¸Å­ ÇØ´ç ÀûÀÇ ¹æ¾îÀ² °¨¼Ò
+                    //ì˜ì—­ ë‚´ ì ì˜ ì´ë™ì†ë„ ê°ì†Œ, #s% ë§Œí¼ í•´ë‹¹ ì ì˜ ë°©ì–´ìœ¨ ê°ì†Œ
                     monsterStatus.put(MonsterStatus.SPEED, ret.effects.getStats("y"));
                     monsterStatus.put(MonsterStatus.WDEF, -ret.effects.getStats("s"));
                     break;
                 case 37110009:
                 case 37120012:
-                    //ÃÖ´ë #x ´Ü°è±îÁö ´©Àû °¡´É, #timeÃÊ°£ À¯Áö, 1´Ü°è ´ç ÃÖÁ¾ µ¥¹ÌÁö #y% Áõ°¡, #w´Ü°è ´ç °ø°İ ¼Óµµ 1´Ü°è Áõ°¡, #z´Ü°è ´ç ½ºÅ³ ¿¬°è ¼Óµµ 1´Ü°è Áõ°¡\n¿µ±¸È÷ °ø°İ·Â #padR% Áõ°¡
+                    //ìµœëŒ€ #x ë‹¨ê³„ê¹Œì§€ ëˆ„ì  ê°€ëŠ¥, #timeì´ˆê°„ ìœ ì§€, 1ë‹¨ê³„ ë‹¹ ìµœì¢… ë°ë¯¸ì§€ #y% ì¦ê°€, #wë‹¨ê³„ ë‹¹ ê³µê²© ì†ë„ 1ë‹¨ê³„ ì¦ê°€, #zë‹¨ê³„ ë‹¹ ìŠ¤í‚¬ ì—°ê³„ ì†ë„ 1ë‹¨ê³„ ì¦ê°€\nì˜êµ¬íˆ ê³µê²©ë ¥ #padR% ì¦ê°€
                     statups.add(new Triple<>(BuffStats.CTS_RWCombination, 1, false));
                     break;
-                case 51101004: //°İ·Á
+                case 51101004: //ê²©ë ¤
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     break;
-                case 1121010: // ÀÎ·¹ÀÌÁö
-                case 51121006: //¼Ò¿ï ·¹ÀÌÁö
+                case 1121010: // ì¸ë ˆì´ì§€
+                case 51121006: //ì†Œìš¸ ë ˆì´ì§€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Enrage, ret.effects.getStats("mobCount"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EnrageCr, ret.effects.getStats("y"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EnrageCrDamMin, ret.effects.getStats("x"), false));
                     break;
-                case 12001001: //¸ÅÁ÷°¡µå
-                case 27000003: //¸ÅÁ÷°¡µå
+                case 12001001: //ë§¤ì§ê°€ë“œ
+                case 27000003: //ë§¤ì§ê°€ë“œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MagicGuard, ret.effects.getStats("x"), false));
                     break;
-                /* ¿¡¹İ ½ÃÀÛ */
-                case 22001012: //¿¡¹İ ¸ÅÁ÷°¡µå
+                /* ì—ë°˜ ì‹œì‘ */
+                case 22001012: //ì—ë°˜ ë§¤ì§ê°€ë“œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MagicGuard, ret.effects.getStats("x"), false));
                     break;
-                case 22110016: //±³°¨
+                case 22110016: //êµê°
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
-                case 22171073: //¿À´Ğ½ºÀÇ Ãàº¹
+                case 22171073: //ì˜¤ë‹‰ìŠ¤ì˜ ì¶•ë³µ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EMAD, ret.effects.getStats("emad"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EPDD, ret.effects.getStats("epdd"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EMDD, ret.effects.getStats("emdd"), false));
                     break;
-                /* ¿¡¹İ Á¾·á */
-                case 2300003: //ÀÎºó¼­ºí
+                /* ì—ë°˜ ì¢…ë£Œ */
+                case 2300003: //ì¸ë¹ˆì„œë¸”
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DamAbsorbShield, ret.effects.getStats("damAbsorbShieldR"), false));
                     break;
                 case 4101004:
                 case 4201003:
                 case 4301003:
                 case 4311001:
-                case 9001001: //¿î¿µÀÚ ÇìÀÌ½ºÆ®
-                case 14001022: //ÇìÀÌ½ºÆ®
+                case 9001001: //ìš´ì˜ì í—¤ì´ìŠ¤íŠ¸
+                case 14001022: //í—¤ì´ìŠ¤íŠ¸
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Speed, ret.effects.getStats("speed"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Jump, ret.effects.getStats("jump"), false));
                     break;
                 case 4201009:
-                case 4311005: // Ä«¸£¸¶
+                case 4311005: // ì¹´ë¥´ë§ˆ
                     statups.clear();
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     break;
-                case 2301002: // Èú
+                case 2301002: // í
                     monsterStatus.put(MonsterStatus.MAGIC_ATTACK_UP, ret.effects.getStats("x"));
                     break;
-                case 2301004: // ºí·¹½º
+                case 2301004: // ë¸”ë ˆìŠ¤
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Bless, ret.effects.getStats("x"), false));
                     break;
-                case 2300009: // ºí·¹½Ì ¾Ó»óºí
-                case 2320013: // ºí·¹½Ì ÇÏ¸ğ´Ï
+                case 2300009: // ë¸”ë ˆì‹± ì•™ìƒë¸”
+                case 2320013: // ë¸”ë ˆì‹± í•˜ëª¨ë‹ˆ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BlessEnsenble, 5, false));
                     break;
-                case 4001003: // ¸ğÇè°¡ ´ÙÅ© »çÀÌÆ®
-                case 4330001: // ¾îµå¹ê½ºµå ´ÙÅ© »çÀÌÆ®
-                case 14001023: // ³ªÀÌÆ® ¿öÄ¿ ´ÙÅ© »çÀÌÆ®
+                case 4001003: // ëª¨í—˜ê°€ ë‹¤í¬ ì‚¬ì´íŠ¸
+                case 4330001: // ì–´ë“œë°´ìŠ¤ë“œ ë‹¤í¬ ì‚¬ì´íŠ¸
+                case 14001023: // ë‚˜ì´íŠ¸ ì›Œì»¤ ë‹¤í¬ ì‚¬ì´íŠ¸
                     statups.clear();
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DarkSight, ret.effects.getStats("x"), false));
                     break;
-                case 30001001: //ÀáÀÔ
-                case 30011001: //ÀáÀÔ
+                case 30001001: //ì ì…
+                case 30011001: //ì ì…
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Speed, ret.effects.getStats("speed"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DarkSight, ret.effects.getStats("x"), false));
                     break;
-                case 4211003: // ÇÈÆÄÅ¶
+                case 4211003: // í”½íŒŒí‚·
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PickPocket, ret.effects.getStats("x"), false));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
-                case 4201011: // ¸Ş¼Ò °¡µå
+                case 4201011: // ë©”ì†Œ ê°€ë“œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MesoGuard, ret.effects.getStats("x"), false));
                     break;
-                case 4111002: // ½¦µµ¿ì ÆÄÆ®³Ê
-                case 4211008: // ½¦µµ¿ì ÆÄÆ®³Ê
-                case 36111006: //¹öÃß¾ó ÇÁ·ÎÁ§¼Ç
+                case 4111002: // ì‰ë„ìš° íŒŒíŠ¸ë„ˆ
+                case 4211008: // ì‰ë„ìš° íŒŒíŠ¸ë„ˆ
+                case 36111006: //ë²„ì¶”ì–¼ í”„ë¡œì ì…˜
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ShadowPartner, ret.effects.getStats("x"), false));
                     break;
                 case 15101006:
-                case 21101006: // ¾Æ¶õ - ½º³ë¿ì Â÷Áö
+                case 21101006: // ì•„ë€ - ìŠ¤ë…¸ìš° ì°¨ì§€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_WeaponCharge, ret.effects.getStats("x"), false));
                     break;
                 case 21100015:
-                case 21120021: // ½ºÀ® ¿¬±¸II
+                case 21120021: // ìŠ¤ìœ™ ì—°êµ¬II
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_AranSmashSwing, ret.effects.getStats("w"), false));
                     break;
-                case 1311008: // µå·¡°ï ½ºÆ®·©½º
+                case 1311008: // ë“œë˜ê³¤ ìŠ¤íŠ¸ë­ìŠ¤
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_STR, ret.effects.getStats("str"), false));
                     break;
-                case 33101004: // ¸¶ÀÎ
+                case 33101004: // ë§ˆì¸
                     // statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.cts_mi, ret.effects.getStats("y"), false)); 
                     break;
-                case 4330009: //¼¨µµ¿ì ÀÌº£ÀÌÁ¯
+                case 4330009: //ì„€ë„ìš° ì´ë² ì´ì ¼
                     statups.clear();
                     ret.overTime = true;
-                    statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_CriticalBuff, 100, false)); // ¹ÌÁ¸Àç ÆĞÅ¶ ÀÓ½Ã¹æÆí
+                    statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_CriticalBuff, 100, false)); // ë¯¸ì¡´ì¬ íŒ¨í‚· ì„ì‹œë°©í¸
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     break;
-                /* Àü»ç ½ÃÀÛ */
-                case 1001003: //¾ÆÀÌ¾ğ ¹Ùµğ
+                /* ì „ì‚¬ ì‹œì‘ */
+                case 1001003: //ì•„ì´ì–¸ ë°”ë””
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePDD, ret.effects.getStats("indiePdd"), true));
                     break;
                 case 13101022:
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_TriflingWhimOnOff, 1, false));
                     break;
-                /* ±Ã¼ö ½ÃÀÛ */
-                case 3101004: //¼Ò¿ï ¾Ö·Î¿ì : È°
-                case 3201004: //¼Ò¿ï ¾Ö·Î¿ì : ¼®±Ã
-                case 13101003: //¼Ò¿ï ¾Ö·Î¿ì : È°
+                /* ê¶ìˆ˜ ì‹œì‘ */
+                case 3101004: //ì†Œìš¸ ì• ë¡œìš° : í™œ
+                case 3201004: //ì†Œìš¸ ì• ë¡œìš° : ì„ê¶
+                case 13101003: //ì†Œìš¸ ì• ë¡œìš° : í™œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EPAD, ret.effects.getStats("epad"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_SoulArrow, ret.effects.getStats("x"), false));
                     break;
-                case 33101003: //¼Ò¿ï ¾Ö·Î¿ì : Å©·Î½º º¸¿ì
+                case 33101003: //ì†Œìš¸ ì• ë¡œìš° : í¬ë¡œìŠ¤ ë³´ìš°
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_SoulArrow, ret.effects.getStats("x"), false));
                     break;
-                case 3121002: // »şÇÁ ¾ÆÀÌÁî
-                case 3221002: // »şÇÁ ¾ÆÀÌÁî
-                case 13121005: // »şÇÁ ¾ÆÀÌÁî
-                case 33121004: // »şÇÁ ¾ÆÀÌÁî
+                case 3121002: // ìƒ¤í”„ ì•„ì´ì¦ˆ
+                case 3221002: // ìƒ¤í”„ ì•„ì´ì¦ˆ
+                case 13121005: // ìƒ¤í”„ ì•„ì´ì¦ˆ
+                case 33121004: // ìƒ¤í”„ ì•„ì´ì¦ˆ
                     int value = 0;
                     value += ret.effects.getStats("y");
                     value |= ret.effects.getStats("x") << 8;
@@ -672,54 +672,54 @@ public class SkillStatEffect {
                 case 5220002: // wrath of the octopi
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PickPocket, 1, false));
                     break;
-                case 3121007: // ÀÏ·çÁ¯ ½ºÅÇ
-                case 3221006: // ÀÏ·çÁ¯ ½ºÅÇ
+                case 3121007: // ì¼ë£¨ì ¼ ìŠ¤íƒ­
+                case 3221006: // ì¼ë£¨ì ¼ ìŠ¤íƒ­
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DEX, ret.effects.getStats("dex"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IllusionStep, ret.effects.getStats("x"), false));
                     break;
-                case 3121016: //¾îµå¹ê½ºµå Äû¹ö
+                case 3121016: //ì–´ë“œë°´ìŠ¤ë“œ í€´ë²„
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_AdvancedQuiver, 1, false));
                     break;
-                /* ±Ã¼ö Á¾·á */
- /* ¹ı»ç ½ÃÀÛ */
+                /* ê¶ìˆ˜ ì¢…ë£Œ */
+ /* ë²•ì‚¬ ì‹œì‘ */
                 case 2111008:
                 case 2211008:
                 case 12101005:
                 case 22141016:
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ElementalReset, ret.effects.getStats("x"), false));
                     break;
-                /* ¹ı»ç Á¾·á */
-                case 22171054: //ÇÁ·»Áöµå ¼Ò¿ï[HyperSkill]
+                /* ë²•ì‚¬ ì¢…ë£Œ */
+                case 22171054: //í”„ë Œì§€ë“œ ì†Œìš¸[HyperSkill]
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
-                case 5100015: // ¿¡³ÊÁö Â÷Áö
-                case 5120018: // ¿ïÆ®¶ó Â÷Áö
+                case 5100015: // ì—ë„ˆì§€ ì°¨ì§€
+                case 5120018: // ìš¸íŠ¸ë¼ ì°¨ì§€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_RWMovingEvar, sourceid != 5100015 ? 0 : 1, false));
                     break;
-                /* Å°³×½Ã½º ½ÃÀÛ */
-                case 142001007: //½ÎÀÌÅ± ÀÎ½ºÆÃÆ®
+                /* í‚¤ë„¤ì‹œìŠ¤ ì‹œì‘ */
+                case 142001007: //ì‹¸ì´í‚¥ ì¸ìŠ¤íŒ…íŠ¸
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_KinesisPsychicEnergeShield, 1, false));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
-                case 142001003: //ESP ºÎ½ºÅÍ
+                case 142001003: //ESP ë¶€ìŠ¤í„°
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieBooster, ret.effects.getStats("indieBooster"), true));
                     break;
-                case 142101004: //½ÎÀÌÅ± ½Çµå
+                case 142101004: //ì‹¸ì´í‚¥ ì‹¤ë“œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_KinesisPsychicShield, ret.effects.getStats("er"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePDD, ret.effects.getStats("indiePdd"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMDD, ret.effects.getStats("indieMdd"), true));
                     break;
-                case 142101005: //¼ø¼öÇÑ Èû
+                case 142101005: //ìˆœìˆ˜í•œ í˜
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
-                case 142111008: //Á¤½Å °­È­
+                case 142111008: //ì •ì‹  ê°•í™”
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMADR, ret.effects.getStats("indieMadR"), true));
                     break;
-                case 142121006: //ESP ¹èÆ² ¿À´õ
+                case 142121006: //ESP ë°°í‹€ ì˜¤ë”
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMAD, ret.effects.getStats("indieMad"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
-                /* Å°³×½Ã½º Á¾·á */
+                /* í‚¤ë„¤ì‹œìŠ¤ ì¢…ë£Œ */
                 case 1101005:
                 case 1101004:
                 case 1201005:
@@ -743,75 +743,75 @@ public class SkillStatEffect {
                 case 12101004:
                 case 13101023:
                 case 15101022:
-                case 22111020: //¸ÅÁ÷ ºÎ½ºÅÍ
-                case 23101002: //µà¾óº¸¿ì°Ç ºÎ½ºÅÍ
-                case 24101005: //ÄÉÀÎ ºÎ½ºÅÍ
-                case 31001001: //µ¥¸ó ºÎ½ºÅÍ
-                case 31201002: //µ¥¸ó ºÎ½ºÅÍ
+                case 22111020: //ë§¤ì§ ë¶€ìŠ¤í„°
+                case 23101002: //ë“€ì–¼ë³´ìš°ê±´ ë¶€ìŠ¤í„°
+                case 24101005: //ì¼€ì¸ ë¶€ìŠ¤í„°
+                case 31001001: //ë°ëª¬ ë¶€ìŠ¤í„°
+                case 31201002: //ë°ëª¬ ë¶€ìŠ¤í„°
                 case 36101004:
-                case 32101005: //½ºÅÂÇÁ ºÎ½ºÅÍ
-                case 33001003: //Å©·Î½ºº¸¿ì ºÎ½ºÅÍ
-                case 35101006: //¸ŞÄ«´Ğ ºÎ½ºÅÍ
-                case 51101003: //¼Òµå ºÎ½ºÅÍ
-                case 27101004: //¸ÅÁ÷ ºÎ½ºÅÍ
+                case 32101005: //ìŠ¤íƒœí”„ ë¶€ìŠ¤í„°
+                case 33001003: //í¬ë¡œìŠ¤ë³´ìš° ë¶€ìŠ¤í„°
+                case 35101006: //ë©”ì¹´ë‹‰ ë¶€ìŠ¤í„°
+                case 51101003: //ì†Œë“œ ë¶€ìŠ¤í„°
+                case 27101004: //ë§¤ì§ ë¶€ìŠ¤í„°
                 case 11101024:
-                case 14101022: //½º·ÎÀ× ºÎ½ºÅÍ - ³ªÀÌÆ®¿öÄ¿
-                case 33101012: // Å©·Î½ºº¸¿ì ºÎ½ºÅÍ - ¿ÍÀÏµåÇåÅÍ
-                case 37101003: //°ÇÆ²·¿ ºÎ½ºÅÍ - ºí·¡½ºÅÍ
+                case 14101022: //ìŠ¤ë¡œì‰ ë¶€ìŠ¤í„° - ë‚˜ì´íŠ¸ì›Œì»¤
+                case 33101012: // í¬ë¡œìŠ¤ë³´ìš° ë¶€ìŠ¤í„° - ì™€ì¼ë“œí—Œí„°
+                case 37101003: //ê±´í‹€ë › ë¶€ìŠ¤í„° - ë¸”ë˜ìŠ¤í„°
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Booster, ret.effects.getStats("x"), false));
                     break;
                 case 21001003: // Aran - Pole Arm Booster
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Booster, -(ret.effects.getStats("y")), false));
                     break;
 
-                /* ÇÃ·¹ÀÓÀ§ÀÚµå */
-                case 12000022: // ¿¤¸®¸àÆ®: ÇÃ·¹ÀÓ 1
-                case 12100026: // ¿¤¸®¸àÆ®: ÇÃ·¹ÀÓ 2
-                case 12110024: // ¿¤¸®¸àÆ®: ÇÃ·¹ÀÓ 3
-                case 12120007: // ¿¤¸®¸àÆ®: ÇÃ·¹ÀÓ 4
+                /* í”Œë ˆì„ìœ„ìë“œ */
+                case 12000022: // ì—˜ë¦¬ë©˜íŠ¸: í”Œë ˆì„ 1
+                case 12100026: // ì—˜ë¦¬ë©˜íŠ¸: í”Œë ˆì„ 2
+                case 12110024: // ì—˜ë¦¬ë©˜íŠ¸: í”Œë ˆì„ 3
+                case 12120007: // ì—˜ë¦¬ë©˜íŠ¸: í”Œë ˆì„ 4
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MAD, ret.effects.getStats("x"), false));
                     break;
-                case 12101024: // ÀÌ±×´Ï¼Ç
+                case 12101024: // ì´ê·¸ë‹ˆì…˜
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Ember, ret.effects.getStats("prop"), false));
                     break;
                 case 12100029:
                     monsterStatus.put(MonsterStatus.MS_TimeBomb, 1);
                     break;
-                case 12101023: // ºÏ ¿Àºê ÆÄÀÌ¾î
+                case 12101023: // ë¶ ì˜¤ë¸Œ íŒŒì´ì–´
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMAD, ret.effects.getStats("indieMad"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieBooster, ret.effects.getStats("indieBooster"), true));
                     break;
-                case 12111023: // º» ÇÇ´Ğ½º
+                case 12111023: // ë³¸ í”¼ë‹‰ìŠ¤
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_FlareTrick, 1, false));
                     break;
                 case 12111029:
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_NotDamaged, 1, false));
                     ret.effects.setStats("time", 3 * 1000);
                     break;
-                case 12120013: // ½ºÇÇ¸´ ¿Àºê ÇÃ·¹ÀÓ
-                case 12120014: // ½ºÇÇ¸´ ¿Àºê ÇÃ·¹ÀÓ
+                case 12120013: // ìŠ¤í”¼ë¦¿ ì˜¤ë¸Œ í”Œë ˆì„
+                case 12120014: // ìŠ¤í”¼ë¦¿ ì˜¤ë¸Œ í”Œë ˆì„
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IgnoreMobDamR, ret.effects.getStats("y"), false));
                     break;
-                case 12120012: // ÇÃ·¹ÀÓ ¹è¸®¾î Æø¹ß
+                case 12120012: // í”Œë ˆì„ ë°°ë¦¬ì–´ í­ë°œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ShieldAttack, ret.effects.getStats("x"), false));
                     break;
-                case 12121003: // ÇÃ·¹ÀÓ ¹è¸®¾î
+                case 12121003: // í”Œë ˆì„ ë°°ë¦¬ì–´
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DamageReduce, ret.effects.getStats("x"), false));
                     break;
-                case 12121005: // ¹ö´× ¸®Á¯
+                case 12121005: // ë²„ë‹ ë¦¬ì ¼
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieBooster, ret.effects.getStats("indieBooster"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
 
-                /* ³ªÀÌÆ®¿öÄ¿ */
+                /* ë‚˜ì´íŠ¸ì›Œì»¤ */
                 case 14001021:
                     statups.add(new Triple(BuffStats.CTS_ElementDarkness, 1, false));
                     monsterStatus.put(MonsterStatus.POISON, ret.effects.getStats("dot"));
                     break;
-                case 14121004: //½¦µµ¿ì ½ºÆ¼Ä¡
+                case 14121004: //ì‰ë„ìš° ìŠ¤í‹°ì¹˜
                     monsterStatus.put(MonsterStatus.STUN, 1);
                     break;
-                case 14110030: // ´ÙÅ©´Ï½º ¾î¼¾¼Ç 
+                case 14110030: // ë‹¤í¬ë‹ˆìŠ¤ ì–´ì„¼ì…˜ 
                     ret.overTime = true;
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DarknessAscension, ret.effects.getStats("x"), false));
                     break;
@@ -821,68 +821,68 @@ public class SkillStatEffect {
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Stance, ret.effects.getStats("indieStance"), false));
                     break;
-                case 14111024: // ½¦µµ¿ì ¼­¹øÆ®
+                case 14111024: // ì‰ë„ìš° ì„œë²ˆíŠ¸
                     ret.effects.setStats("time", 180 * 1000);
                     ret.overTime = true;
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ShadowServant, ret.effects.getStats("x"), false));
                     break;
-                case 14121054: // ½¦µµ¿ì ÀÏ·çÁ¯
+                case 14121054: // ì‰ë„ìš° ì¼ë£¨ì ¼
                 case 14121055:
                 case 14121056:
                     ret.effects.setStats("time", 30 * 1000);
                     ret.overTime = true;
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ShadowIllusion, ret.effects.getStats("x"), false));
                     break;
-                case 5120011: // Ä«¿îÅÍ ¾îÅÃ
-                case 5220012: // Ä«¿îÅÍ ¾îÅÃ
+                case 5120011: // ì¹´ìš´í„° ì–´íƒ
+                case 5220012: // ì¹´ìš´í„° ì–´íƒ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
-                case 20031205: // ÆÒÅÒ ½´¶ó¿ìµå
+                case 20031205: // íŒ¬í…€ ìŠˆë¼ìš°ë“œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Invisible, ret.effects.getStats("x"), false));
                     break;
-                case 24111002: //·° ¿Àºê ÆÒÅÒ ½ÃÇÁ
+                case 24111002: //ëŸ­ ì˜¤ë¸Œ íŒ¬í…€ ì‹œí”„
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_StackBuff, 1, false));
                     break;
-                case 24111003: // ¹Ì½ºÆ÷Ãó ÇÁ·ÎÅØ¼Ç
+                case 24111003: // ë¯¸ìŠ¤í¬ì¸ˆ í”„ë¡œí…ì…˜
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMHPR, ret.effects.getStats("indieMhpR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMMPR, ret.effects.getStats("indieMmpR"), true));
                     break;
-                case 24111005: //¹®¶óÀÌÆ®
+                case 24111005: //ë¬¸ë¼ì´íŠ¸
                     statups.clear();
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieACC, ret.effects.getStats("indieAcc"), true));
                     break;
-                case 24121004: //ÇÁ·¹ÀÌ ¿Àºê ¾Æ¸®¾Æ
+                case 24121004: //í”„ë ˆì´ ì˜¤ë¸Œ ì•„ë¦¬ì•„
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DamR, ret.effects.getStats("damR") + 10, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IgnoreMobDamR, ret.effects.getStats("x") + 10, false));
                     break;
-                case 5121015: //¹ÙÀÌÆÛÁö¼Ç  
+                case 5121015: //ë°”ì´í¼ì§€ì…˜  
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePADR, ret.effects.getStats("indiePadR"), true));
                     break;
-                case 51111003: //»şÀÌ´× Â÷Áö
-                case 11111007: //»şÀÌ´× Â÷Áö
+                case 51111003: //ìƒ¤ì´ë‹ ì°¨ì§€
+                case 11111007: //ìƒ¤ì´ë‹ ì°¨ì§€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
-                case 5111010: // Àª·Î¿ì µğÆæ½Ãºê
+                case 5111010: // ìœŒë¡œìš° ë””íœì‹œë¸Œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DamAbsorbShield, ret.effects.getStats("damAbsorbShieldR"), false));
                     break;
-                case 5101011: // ¸àÅ» Å¬¸®¾î¸®Æ¼
-                case 15101008: // ¸àÅ» Å¬¸®¾î¸®Æ¼
+                case 5101011: // ë©˜íƒˆ í´ë¦¬ì–´ë¦¬í‹°
+                case 15101008: // ë©˜íƒˆ í´ë¦¬ì–´ë¦¬í‹°
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieACC, ret.effects.getStats("indieAcc"), true));
                     break;
-                case 21111001: // ¸¶ÀÌÆ®
+                case 21111001: // ë§ˆì´íŠ¸
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EPAD, ret.effects.getStats("epad"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EPDD, ret.effects.getStats("epdd"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EMDD, ret.effects.getStats("emdd"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_KnockBack, ret.effects.getStats("x"), false));
                     break;
-                case 21111012: // ºí·¹½Ì ¸¶ÇÏ
+                case 21111012: // ë¸”ë ˆì‹± ë§ˆí•˜
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMAD, ret.effects.getStats("indieMad"), true));
                     break;
                 case 8004:
-                case 1211011: //ÄÄ¹î¿À´õ½º
+                case 1211011: //ì»´ë±ƒì˜¤ë”ìŠ¤
                 case 10008004:
                 case 20008004:
                 case 20018004:
@@ -892,13 +892,13 @@ public class SkillStatEffect {
                 case 30018004:
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_CombatOrders, ret.effects.getStats("x"), false));
                     break;
-                case 5001005: //´ë½¬
+                case 5001005: //ëŒ€ì‰¬
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Dash_Speed, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Dash_Jump, ret.effects.getStats("y"), false));
                     break;
-                case 5121009:  //À©µå ºÎ½ºÅÍ
-                case 15111005: //À©µå ºÎ½ºÅÍ
-                case 15121005: //À©µå ºÎ½ºÅÍ
+                case 5121009:  //ìœˆë“œ ë¶€ìŠ¤í„°
+                case 15111005: //ìœˆë“œ ë¶€ìŠ¤í„°
+                case 15121005: //ìœˆë“œ ë¶€ìŠ¤í„°
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PartyBooster, ret.effects.getStats("x"), false));
                     break;
                 case 4321000: //tornado spin uses same buffstats
@@ -906,25 +906,25 @@ public class SkillStatEffect {
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Speed, 100 + ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Jump, ret.effects.getStats("y"), false)); //always 0 but its there
                     break;
-                case 1101007: //ÆÄ¿ö ¸®ÇÃ·º¼Ç
-                case 1201007: //ÆÄ¿ö ¸®ÇÃ·º¼Ç
+                case 1101007: //íŒŒì›Œ ë¦¬í”Œë ‰ì…˜
+                case 1201007: //íŒŒì›Œ ë¦¬í”Œë ‰ì…˜
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ACC, ret.effects.getStats("x"), false));
                     break;
-                case 31101003: //´ÙÅ© ¸®º¥Áö
+                case 31101003: //ë‹¤í¬ ë¦¬ë²¤ì§€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PowerGuard, ret.effects.getStats("y"), false));
                     break;
-                case 9001008: //ÇÏÀÌÆÛ ¹Ùµğ
+                case 9001008: //í•˜ì´í¼ ë°”ë””
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MaxHP, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MaxMP, ret.effects.getStats("x"), false));
                     break;
-                case 1001: // È¸º¹
+                case 1001: // íšŒë³µ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DotHealHPPerSecond, ret.effects.getStats("x"), false));
                     break;
                 case 1311006: //dragon roar
                     ret.effects.setStats("hpR", -ret.effects.getStats("x"));
                     monsterStatus.put(MonsterStatus.STUN, 1);
                     break;
-                case 4341002: //ÆÄÀÌ³Î ÄÆ
+                case 4341002: //íŒŒì´ë„ ì»·
                     ret.effects.setStats("time", 60 * 1000);
                     ret.overTime = true;
                     ret.effects.setStats("hpR", -ret.effects.getStats("x"));
@@ -935,7 +935,7 @@ public class SkillStatEffect {
                 case 4331002:
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ShadowPartner, ret.effects.getStats("x"), false));
                     break;
-                case 27110007: //¶óÀÌÇÁ Å¸ÀÌ´Ş.
+                case 27110007: //ë¼ì´í”„ íƒ€ì´ë‹¬.
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_LifeTidal, 1, false));
                     break;
                 case 1121000:
@@ -951,109 +951,109 @@ public class SkillStatEffect {
                 case 5121000:
                 case 5221000:
                 case 21121000:
-                case 22171068: // ¿¡¹İ ¸ŞÀÌÇÃ ¿ë»ç
-                case 27121009: // ¸ŞÀÌÇÃ ¿ë»ç
-                case 31121004: // ¸ŞÀÌÇÃ ¿ë»ç
-                case 31221008: // ¸ŞÀÌÇÃ ¿ë»ç
-                case 36121008: // ¸ŞÀÌÇÃ ¿ë»ç
-                case 32121007: // ¸ŞÀÌÇÃ ¿ë»ç
-                case 24121008: // ¸ŞÀÌÇÃ ¿ë»ç
+                case 22171068: // ì—ë°˜ ë©”ì´í”Œ ìš©ì‚¬
+                case 27121009: // ë©”ì´í”Œ ìš©ì‚¬
+                case 31121004: // ë©”ì´í”Œ ìš©ì‚¬
+                case 31221008: // ë©”ì´í”Œ ìš©ì‚¬
+                case 36121008: // ë©”ì´í”Œ ìš©ì‚¬
+                case 32121007: // ë©”ì´í”Œ ìš©ì‚¬
+                case 24121008: // ë©”ì´í”Œ ìš©ì‚¬
                 case 4341000:
                 case 5321005:
                 case 23121005:
                 case 25121108:
                 case 35121007:
                 case 33121007:
-                case 37121006: //ºí·¡½ºÅÍ ¸ŞÀÌÇÃ ¿ë»ç
+                case 37121006: //ë¸”ë˜ìŠ¤í„° ë©”ì´í”Œ ìš©ì‚¬
                 case 51121005:
-                case 11121000: //½Ã±×³Ê½º ³ªÀÌÃ÷
-                case 12121000: //½Ã±×³Ê½º ³ªÀÌÃ÷
-                case 13121000: //½Ã±×³Ê½º ³ªÀÌÃ÷
-                case 14121000: //½Ã±×³Ê½º ³ªÀÌÃ÷
-                case 15121000: //½Ã±×³Ê½º ³ªÀÌÃ÷
+                case 11121000: //ì‹œê·¸ë„ˆìŠ¤ ë‚˜ì´ì¸ 
+                case 12121000: //ì‹œê·¸ë„ˆìŠ¤ ë‚˜ì´ì¸ 
+                case 13121000: //ì‹œê·¸ë„ˆìŠ¤ ë‚˜ì´ì¸ 
+                case 14121000: //ì‹œê·¸ë„ˆìŠ¤ ë‚˜ì´ì¸ 
+                case 15121000: //ì‹œê·¸ë„ˆìŠ¤ ë‚˜ì´ì¸ 
                 case 65121009:
                 case 61121014:
-                case 100001268: //Á¦·Î ·ô´ÀÀÇ °¡È£
-                case 142121016: //Å°³×½Ã½º ÀÌ°èÀÇ ¿ë»ç
+                case 100001268: //ì œë¡œ ë¥€ëŠì˜ ê°€í˜¸
+                case 142121016: //í‚¤ë„¤ì‹œìŠ¤ ì´ê³„ì˜ ìš©ì‚¬
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BasicStatUp, ret.effects.getStats("x"), false));
                     break;
-                case 3111011: //ÀÍ½ºÆ®¸² ¾ÆÃÄ¸® : È°
+                case 3111011: //ìµìŠ¤íŠ¸ë¦¼ ì•„ì³ë¦¬ : í™œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ExtremeArchery, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PAD, ret.effects.getStats("padX"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
-                case 3211012: //ÀÍ½ºÆ®¸² ¾ÆÃÄ¸® : ¼®±Ã
+                case 3211012: //ìµìŠ¤íŠ¸ë¦¼ ì•„ì³ë¦¬ : ì„ê¶
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ExtremeArchery, ret.effects.getStats("x"), false));
                     break;
-                case 37121054: //¸Æ½Ã¸¶ÀÌÁî Ä³³í
+                case 37121054: //ë§¥ì‹œë§ˆì´ì¦ˆ ìºë…¼
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_RWMaximizeCannon, ret.effects.getStats("y"), false));
                     break;
-                case 37101001: //´õ Å·
-                case 37111003: //½º¿şÀÌ
+                case 37101001: //ë” í‚¹
+                case 37111003: //ìŠ¤ì›¨ì´
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_RWMovingEvar, 90, false));
                     ret.effects.setStats("time", 15 * 100);
                     break;
-                case 25121209: //¼ÒÈ¥
+                case 25121209: //ì†Œí˜¼
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_SpiritGuard, 3, false));
                     break;
-                case 25121131: //Á¤·É °á¼Ó ±Ø´ëÈ­
-                    //"MP #mpCon ¼Òºñ, #timeÃÊ µ¿¾È¿¡ Á¤·É °­·É ½Ã µ¥¹ÌÁö #indieDamR%, °ø°İ·Â #indiePad, º¸½º ¸ó½ºÅÍ °ø°İ ½Ã µ¥¹ÌÁö #indieBDR%, °ø°İ ¼Óµµ 1´Ü°è Áõ°¡, ÀûÀÇ ¹æ¾îÀ² #indieIgnoreMobpdpR% ¹«½Ã\n#cÀç»ç¿ë ´ë±â½Ã°£: #cooltimeÃÊ#"
+                case 25121131: //ì •ë ¹ ê²°ì† ê·¹ëŒ€í™”
+                    //"MP #mpCon ì†Œë¹„, #timeì´ˆ ë™ì•ˆì— ì •ë ¹ ê°•ë ¹ ì‹œ ë°ë¯¸ì§€ #indieDamR%, ê³µê²©ë ¥ #indiePad, ë³´ìŠ¤ ëª¬ìŠ¤í„° ê³µê²© ì‹œ ë°ë¯¸ì§€ #indieBDR%, ê³µê²© ì†ë„ 1ë‹¨ê³„ ì¦ê°€, ì ì˜ ë°©ì–´ìœ¨ #indieIgnoreMobpdpR% ë¬´ì‹œ\n#cì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„: #cooltimeì´ˆ#"
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieBooster, ret.effects.getStats("indieBooster"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieBDR, ret.effects.getStats("indieBDR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieIgnoreMobpdpR, ret.effects.getStats("indieIgnoreMobpdpR"), true));
                     break;
-                case 65121004: //¼Ò¿ï °ÔÀÌÁî   
+                case 65121004: //ì†Œìš¸ ê²Œì´ì¦ˆ   
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IncCriticalDamMax, ret.effects.getStats("y"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IncCriticalDamMin, ret.effects.getStats("x"), false));
                     break;
-                case 22151003: //¸ÅÁ÷ ·¹Áö½ºÅÏ½º
+                case 22151003: //ë§¤ì§ ë ˆì§€ìŠ¤í„´ìŠ¤
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMDD, ret.effects.getStats("indieMdd"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MagicResistance, ret.effects.getStats("x"), false));
                     break;
-                case 21000000: //¾Æ¶õ ÄŞº¸
+                case 21000000: //ì•„ë€ ì½¤ë³´
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ComboAbilityBuff, ret.effects.getStats("x"), false));
                     break;
-                case 21101005: //µå·¹ÀÎ
+                case 21101005: //ë“œë ˆì¸
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ComboDrain, ret.effects.getStats("x"), false));
                     break;
-                case 31110004: //´ÙÅ© ÀÎµà¾î
-                    //¹°¸®/¸¶¹ı ¹æ¾î·Â #pddR%, »óÅÂÀÌ»ó ³»¼º #asrR%, ¸ğµç ¼Ó¼º ³»¼º #terR% Áõ°¡
+                case 31110004: //ë‹¤í¬ ì¸ë“€ì–´
+                    //ë¬¼ë¦¬/ë§ˆë²• ë°©ì–´ë ¥ #pddR%, ìƒíƒœì´ìƒ ë‚´ì„± #asrR%, ëª¨ë“  ì†ì„± ë‚´ì„± #terR% ì¦ê°€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PDD, ret.effects.getStats("pddR"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MDD, ret.effects.getStats("pddR"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_AsrR, ret.effects.getStats("asrR"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_TerR, ret.effects.getStats("terR"), false));
                     break;
-                case 51111004: //¼Ò¿ï ÀÎµà¾î
-                    //MP #mpCon ¼Òºñ, #timeÃÊ°£ ¹æ¾î·Â #x%, »óÅÂÀÌ»ó ³»¼º #y%, ¸ğµç ¼Ó¼º ³»¼º #z% Áõ°¡
+                case 51111004: //ì†Œìš¸ ì¸ë“€ì–´
+                    //MP #mpCon ì†Œë¹„, #timeì´ˆê°„ ë°©ì–´ë ¥ #x%, ìƒíƒœì´ìƒ ë‚´ì„± #y%, ëª¨ë“  ì†ì„± ë‚´ì„± #z% ì¦ê°€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DefenseAtt, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_AsrR, ret.effects.getStats("y"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_TerR, ret.effects.getStats("z"), false));
                     break;
-                case 51111008: //¼Ò¿ï ¸µÅ©
-                    //ÃÊ´ç MP #mpCon ¼Òºñ.\n[#c¹ÌÇÏÀÏ#] : ÆÄÆ¼¿ø 1¸í¸¶´Ù µ¥¹ÌÁö #indieDamR% Áõ°¡, 
-                    //#dotÃÊ´ç ÃÖ´ë HPÀÇ #s% È¸º¹. ÆÄÆ¼¿øÀÌ ¹Ş´Â µ¥¹ÌÁöÀÇ #q%¸¦ ´ë½Å ¹ŞÀ½. 
-                    //´ë½Å ¹Ş´Â µ¥¹ÌÁö¸¦ ·Î¾â °¡µå·Î ¹«È¿È­ °¡´É.
-                    //\n[#cÆÄÆ¼¿ø#] : ¹ÌÇÏÀÏÀÌ ·Î¾â °¡µå¸¦ ¼º°øÇÏ¿© Áõ°¡ÇÏ´Â °ø°İ·ÂÀÇ #x%¸¸Å­ °ø°İ·Â°ú ¸¶·Â Áõ°¡, ¼Ò¿ï ÀÎµà¾î·Î Áõ°¡ÇÏ´Â »óÅÂÀÌ»ó ³»¼ºÀÇ #y%, ¼Ò¿ï ÀÎµà¾î·Î Áõ°¡ÇÏ´Â ¹æ¾î·ÂÀÇ #w% °øÀ¯.
+                case 51111008: //ì†Œìš¸ ë§í¬
+                    //ì´ˆë‹¹ MP #mpCon ì†Œë¹„.\n[#cë¯¸í•˜ì¼#] : íŒŒí‹°ì› 1ëª…ë§ˆë‹¤ ë°ë¯¸ì§€ #indieDamR% ì¦ê°€, 
+                    //#dotì´ˆë‹¹ ìµœëŒ€ HPì˜ #s% íšŒë³µ. íŒŒí‹°ì›ì´ ë°›ëŠ” ë°ë¯¸ì§€ì˜ #q%ë¥¼ ëŒ€ì‹  ë°›ìŒ. 
+                    //ëŒ€ì‹  ë°›ëŠ” ë°ë¯¸ì§€ë¥¼ ë¡œì–„ ê°€ë“œë¡œ ë¬´íš¨í™” ê°€ëŠ¥.
+                    //\n[#cíŒŒí‹°ì›#] : ë¯¸í•˜ì¼ì´ ë¡œì–„ ê°€ë“œë¥¼ ì„±ê³µí•˜ì—¬ ì¦ê°€í•˜ëŠ” ê³µê²©ë ¥ì˜ #x%ë§Œí¼ ê³µê²©ë ¥ê³¼ ë§ˆë ¥ ì¦ê°€, ì†Œìš¸ ì¸ë“€ì–´ë¡œ ì¦ê°€í•˜ëŠ” ìƒíƒœì´ìƒ ë‚´ì„±ì˜ #y%, ì†Œìš¸ ì¸ë“€ì–´ë¡œ ì¦ê°€í•˜ëŠ” ë°©ì–´ë ¥ì˜ #w% ê³µìœ .
                     statups.add(new Triple<>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     statups.add(new Triple<>(BuffStats.CTS_MichaelSoulLink, 1, false));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
-                case 31121005: //¸ŞÅ¸¸ğÆ÷½Ã½º
+                case 31121005: //ë©”íƒ€ëª¨í¬ì‹œìŠ¤
                     int dam = ret.effects.getStats("damage") - 100;
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMHPR, ret.effects.getStats("indieMhpR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DevilishPower, dam < 0 ? -dam : dam, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DamR, ret.effects.getStats("damR"), false));
                     ret.overTime = true;
                     break;
-                case 31121007: //ÀÎÇÇ´ÏÆ¼ Æ÷½º
+                case 31121007: //ì¸í”¼ë‹ˆí‹° í¬ìŠ¤
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_InfinityForce, 1, false));
                     break;
-                case 31121002: //¹ìÇÇ¸¯ ÅÍÄ¡
+                case 31121002: //ë±€í”¼ë¦­ í„°ì¹˜
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_VampiricTouch, ret.effects.getStats("x"), false));
                     break;
-                case 22131001: //¸ÅÁ÷ ½Çµå
+                case 22131001: //ë§¤ì§ ì‹¤ë“œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PDD, ret.effects.getStats("pdd"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PartyBarrier, ret.effects.getStats("x"), false));
                     break;
@@ -1063,24 +1063,24 @@ public class SkillStatEffect {
                 case 4101011:
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_NightLordMark, 1, false));
                     break;
-                case 4121014: // ´ÙÅ© ¼¼·¹´ÏÆ¼
+                case 4121014: // ë‹¤í¬ ì„¸ë ˆë‹ˆí‹°
                     statups.clear();
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     break;
-                case 4121054: // ºí¸®µù Åå½Å
+                case 4121054: // ë¸”ë¦¬ë”© í†¡ì‹ 
                     statups.clear();
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BleedingToxin, 1, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     monsterStatus.put(MonsterStatus.POISON, ret.effects.getStats("dot"));
                     break;
-                case 4221013: // ¼¨µµ¾î ÀÎ½ºÆÃÆ®
+                case 4221013: // ì„€ë„ì–´ ì¸ìŠ¤íŒ…íŠ¸
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ACC, ret.effects.getStats("x"), true));
                     break;
-                case 23111004: // ÀÌ±×´Ï½º ·Î¾î
+                case 23111004: // ì´ê·¸ë‹ˆìŠ¤ ë¡œì–´
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     break;
-                case 23121004: // ¾Ø½Ã¾ğÆ® ½ºÇÇ¸´
-                    //MP #mpCon ¼Òºñ, #timeÃÊ°£ °ø°İ·Â #indiePadR%, HP #emhp Áõ°¡
+                case 23121004: // ì•¤ì‹œì–¸íŠ¸ ìŠ¤í”¼ë¦¿
+                    //MP #mpCon ì†Œë¹„, #timeì´ˆê°„ ê³µê²©ë ¥ #indiePadR%, HP #emhp ì¦ê°€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EMHP, ret.effects.getStats("emhp"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePADR, ret.effects.getStats("indiePadR"), true));
                     break;
@@ -1096,55 +1096,55 @@ public class SkillStatEffect {
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_JaguarSummoned, 3870, false));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
-                case 33101005: // ÇÏ¿ï¸µ
-                    //MP #mpCon ¼Òºñ, #timeÃÊ°£ Ä³¸¯ÅÍÀÇ ¹Ş´Â µ¥¹ÌÁö°¡ #x% °¨¼ÒÇÏ°í Ãß°¡ È¸ÇÇ È®·ü #x%, ÃÖ´ë MP #x% Áõ°¡, ¸ğµç ÆÄÆ¼¿øÀÇ °ø°İ·Â°ú ¸¶·Â #z% Áõ°¡
+                case 33101005: // í•˜ìš¸ë§
+                    //MP #mpCon ì†Œë¹„, #timeì´ˆê°„ ìºë¦­í„°ì˜ ë°›ëŠ” ë°ë¯¸ì§€ê°€ #x% ê°ì†Œí•˜ê³  ì¶”ê°€ íšŒí”¼ í™•ë¥  #x%, ìµœëŒ€ MP #x% ì¦ê°€, ëª¨ë“  íŒŒí‹°ì›ì˜ ê³µê²©ë ¥ê³¼ ë§ˆë ¥ #z% ì¦ê°€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_HowlingDefence, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_HowlingMaxMP, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_HowlingEvasion, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_HowlingAttackDamage, ret.effects.getStats("z"), false));
                     break;
-                case 33111007: // ºñ½ºÆ® Æû
+                case 33111007: // ë¹„ìŠ¤íŠ¸ í¼
                     statups.clear();
-                    //"MP #mpCon ¼Òºñ, #timeÃÊ°£ °ø°İ·Â #z%, ÀÌµ¿¼Óµµ #x Áõ°¡, °ø°İ ¼Óµµ #w´Ü°è Áõ°¡\n[ÆĞ½Ãºê È¿°ú : ÃÖ´ë HP #mhpR% Áõ°¡]"
+                    //"MP #mpCon ì†Œë¹„, #timeì´ˆê°„ ê³µê²©ë ¥ #z%, ì´ë™ì†ë„ #x ì¦ê°€, ê³µê²© ì†ë„ #wë‹¨ê³„ ì¦ê°€\n[íŒ¨ì‹œë¸Œ íš¨ê³¼ : ìµœëŒ€ HP #mhpR% ì¦ê°€]"
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Speed, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BeastFormDamageUp, ret.effects.getStats("z"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Booster, ret.effects.getStats("w"), false));
                     break;
-                case 2311009: //È¦¸® ¸ÅÁ÷½©
-                    //MP #mpCon ¼Òºñ, ¼ø¼ö HP #z% È¸º¹, #timeÃÊ°£ ¸¶¹ıÀÇ º¸È£¸· »ı¼º. º¸È£¸·ÀÌ À¯ÁöµÇ´Â µ¿¾È ÃÖ´ë #x¹øÀÇ ÇÇÇØ¸¦ Èí¼ö, ¹ßµ¿ ½Ã #yÃÊ µ¿¾È º¸È£¸· Àç»ı¼º ¹× È¦¸® ¸ÅÁ÷½©À¸·Î È¸º¹ ºÒ°¡. Àç»ç¿ë ´ë±â½Ã°£ 90ÃÊ"
+                case 2311009: //í™€ë¦¬ ë§¤ì§ì‰˜
+                    //MP #mpCon ì†Œë¹„, ìˆœìˆ˜ HP #z% íšŒë³µ, #timeì´ˆê°„ ë§ˆë²•ì˜ ë³´í˜¸ë§‰ ìƒì„±. ë³´í˜¸ë§‰ì´ ìœ ì§€ë˜ëŠ” ë™ì•ˆ ìµœëŒ€ #xë²ˆì˜ í”¼í•´ë¥¼ í¡ìˆ˜, ë°œë™ ì‹œ #yì´ˆ ë™ì•ˆ ë³´í˜¸ë§‰ ì¬ìƒì„± ë° í™€ë¦¬ ë§¤ì§ì‰˜ìœ¼ë¡œ íšŒë³µ ë¶ˆê°€. ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ 90ì´ˆ"
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_HolyMagicShell, ret.effects.getStats("x"), false));
                     break;
-                case 11001022: //¿¤¸®¸àÆ® : ¼Ò¿ï
+                case 11001022: //ì—˜ë¦¬ë©˜íŠ¸ : ì†Œìš¸
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ElementSoul, 1, false));
                     monsterStatus.put(MonsterStatus.STUN, 1);
                     break;
-                case 11101022: //Æú¸µ ¹®
-                    //MP #mpCon ¼Òºñ, Å©¸®Æ¼ÄÃ È®·ü #indieCr% Áõ°¡, ¸ğµç ½ºÅ³ÀÇ °ø°İ È½¼ö #x¹è Áõ°¡, ÃÖÁ¾ µ¥¹ÌÁö #y%·Î °¨¼Ò. ¶óÀÌÂ¡ ¼±°ú °°ÀÌ »ç¿ë ºÒ°¡
+                case 11101022: //í´ë§ ë¬¸
+                    //MP #mpCon ì†Œë¹„, í¬ë¦¬í‹°ì»¬ í™•ë¥  #indieCr% ì¦ê°€, ëª¨ë“  ìŠ¤í‚¬ì˜ ê³µê²© íšŸìˆ˜ #xë°° ì¦ê°€, ìµœì¢… ë°ë¯¸ì§€ #y%ë¡œ ê°ì†Œ. ë¼ì´ì§• ì„ ê³¼ ê°™ì´ ì‚¬ìš© ë¶ˆê°€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieCr, ret.effects.getStats("indieCr"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BuckShot, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PoseType, 1, false));
                     break;
-                case 11101023: //ÀÌ³Ê Æ®·¯½ºÆ®
+                case 11101023: //ì´ë„ˆ íŠ¸ëŸ¬ìŠ¤íŠ¸
                     statups.add(new Triple(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     break;
-                case 11111022: //¶óÀÌÂ¡ ¼±
-                    //MP #mpCon ¼Òºñ, µ¥¹ÌÁö #indieDamR% ¹× °ø°İ ¼Óµµ 1´Ü°è Áõ°¡. Æú¸µ ¹®°ú °°ÀÌ »ç¿ë ºÒ°¡
+                case 11111022: //ë¼ì´ì§• ì„ 
+                    //MP #mpCon ì†Œë¹„, ë°ë¯¸ì§€ #indieDamR% ë° ê³µê²© ì†ë„ 1ë‹¨ê³„ ì¦ê°€. í´ë§ ë¬¸ê³¼ ê°™ì´ ì‚¬ìš© ë¶ˆê°€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PoseType, 2, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieBooster, ret.effects.getStats("indieBooster"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
-                case 11111023: //Æ®·ç »çÀÌÆ®
-                    //MP #mpCon ¼Òºñ, #timeÃÊ µ¿¾È #prop% È®·ü·Î ¹üÀ§ ³» ÀûÀÇ ¹æ¾î·Â #v% °¨¼Ò, ÀûÀÌ ¹Ş´Â ÃÖÁ¾ µ¥¹ÌÁö #s% Áõ°¡
+                case 11111023: //íŠ¸ë£¨ ì‚¬ì´íŠ¸
+                    //MP #mpCon ì†Œë¹„, #timeì´ˆ ë™ì•ˆ #prop% í™•ë¥ ë¡œ ë²”ìœ„ ë‚´ ì ì˜ ë°©ì–´ë ¥ #v% ê°ì†Œ, ì ì´ ë°›ëŠ” ìµœì¢… ë°ë¯¸ì§€ #s% ì¦ê°€
                     monsterStatus.put(MonsterStatus.WDEF, -ret.effects.getStats("v"));
                     monsterStatus.put(MonsterStatus.MS_TrueSight, ret.effects.getStats("s"));
                     break;
-                case 11111024: //¼Ò¿ï °¡µğ¾ğ
+                case 11111024: //ì†Œìš¸ ê°€ë””ì–¸
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePDD, ret.effects.getStats("indiePdd"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMHP, ret.effects.getStats("indieMhp"), true));
                     break;
-                case 11121054: //¼Ò¿ï Æ÷Áö
+                case 11121054: //ì†Œìš¸ í¬ì§€
                     statups.clear();
-                    //MP #mpCon ¼Òºñ, #timeÃÊ µ¿¾È °ø°İ·Â #indiePad, ÃÖ´ë µ¥¹ÌÁö Á¦ÇÑ #indieMaxDamageOver Áõ°¡. 
+                    //MP #mpCon ì†Œë¹„, #timeì´ˆ ë™ì•ˆ ê³µê²©ë ¥ #indiePad, ìµœëŒ€ ë°ë¯¸ì§€ ì œí•œ #indieMaxDamageOver ì¦ê°€. 
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_LightOfSpirit, 1, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     break;
@@ -1160,9 +1160,9 @@ public class SkillStatEffect {
                     monsterStatus.put(MonsterStatus.MDEF, ret.effects.getStats("x"));
                     monsterStatus.put(MonsterStatus.AVOID, ret.effects.getStats("z"));
                     break;
-                case 22131000: // ¸ÅÁ÷ ÇÃ·¹¾î
+                case 22131000: // ë§¤ì§ í”Œë ˆì–´
                 case 51111007:
-                case 27101101: //ÀÎ¹ÙÀÌ·¯ºô¸®Æ¼
+                case 27101101: //ì¸ë°”ì´ëŸ¬ë¹Œë¦¬í‹°
                     monsterStatus.put(MonsterStatus.STUN, 1);
                     break;
                 case 22141001:
@@ -1206,7 +1206,7 @@ public class SkillStatEffect {
                 case 5311002:
                 case 5310008:
                 case 2022994:
-                    if (sourceid == 5310008) { //¸ùÅ° ¿şÀÌºê ÃÖ°í Ãâ·Â
+                    if (sourceid == 5310008) { //ëª½í‚¤ ì›¨ì´ë¸Œ ìµœê³  ì¶œë ¥
                         statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_KeyDownTimeIgnore, 1, false));
                     }
                     monsterStatus.put(MonsterStatus.STUN, 1);
@@ -1241,7 +1241,7 @@ public class SkillStatEffect {
                 case 25111206:
                     monsterStatus.put(MonsterStatus.FREEZE, 1);
                     break;
-                case 2121009: //¸¶½ºÅÍ ¸ÅÁ÷
+                case 2121009: //ë§ˆìŠ¤í„° ë§¤ì§
                 case 2221009:
                 case 2321010:
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MasterMagicOn, 1, false));
@@ -1250,24 +1250,24 @@ public class SkillStatEffect {
                 case 22141003:
                     monsterStatus.put(MonsterStatus.SPEED, ret.effects.getStats("x"));
                     break;
-                case 31121006: //´ÙÅ© ¹ÙÀÎµå
+                case 31121006: //ë‹¤í¬ ë°”ì¸ë“œ
                     monsterStatus.put(MonsterStatus.POISON, ret.effects.getStats("dot"));
                     monsterStatus.put(MonsterStatus.FREEZE, 1);
                     break;
-                case 21110011: //ÄŞº¸ÀúÁö¸ÕÆ®
+                case 21110011: //ì½¤ë³´ì €ì§€ë¨¼íŠ¸
                     monsterStatus.put(MonsterStatus.FREEZE, 1);
                     break;
                 case 23111002:
                     monsterStatus.put(MonsterStatus.Burned, ret.effects.getStats("x"));
                     break;
                 case 2211006:
-                case 2221003: //±Û·¹ÀÌ¼È Ã¼ÀÎ
+                case 2221003: //ê¸€ë ˆì´ì…œ ì²´ì¸
                     monsterStatus.put(MonsterStatus.STUN, 1);
                     break;
-                case 20031209: //ÀúÁö¸ÕÆ®
+                case 20031209: //ì €ì§€ë¨¼íŠ¸
                     ret.overTime = true;
                     break;
-                case 20031210: //»¡°­ ÀúÁö¸ÕÆ® - 120705
+                case 20031210: //ë¹¨ê°• ì €ì§€ë¨¼íŠ¸ - 120705
                     ret.overTime = true;
                     break;
                 case 3201007:
@@ -1277,7 +1277,7 @@ public class SkillStatEffect {
                 case 33111005:
                 case 33101011:
                 case 3121006: // phoenix
-                case 5321003: //¸¶±×³×Æ½ ¾ŞÄ¿
+                case 5321003: //ë§ˆê·¸ë„¤í‹± ì•µì»¤
                     monsterStatus.put(MonsterStatus.STUN, Integer.valueOf(1));
                     break;
                 case 3221005: // frostprey
@@ -1340,11 +1340,11 @@ public class SkillStatEffect {
                     ret.effects.setStats("time", Integer.MAX_VALUE); //because it seems to dispel asap.
                     ret.overTime = true;
                     break;
-                case 23121002: //·¹Àüµå¸® ½ºÇÇ¾î
+                case 23121002: //ë ˆì „ë“œë¦¬ ìŠ¤í”¼ì–´
                     monsterStatus.put(MonsterStatus.WDEF, -ret.effects.getStats("x"));
                     break;
-                case 2311003: // È¦¸® ½Éº¼
-                case 9001002: // È¦¸® ½Éº¼
+                case 2311003: // í™€ë¦¬ ì‹¬ë³¼
+                case 9001002: // í™€ë¦¬ ì‹¬ë³¼
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_HolySymbol, ret.effects.getStats("x"), false));
                     break;
                 case 2211004: // il seal
@@ -1357,14 +1357,14 @@ public class SkillStatEffect {
                 case 14111001:
                     monsterStatus.put(MonsterStatus.SHADOW_WEB, 1);
                     break;
-                case 4111009: // ½ºÇÇ¸´ ÀÚº§¸°
-                case 5201008: // ÀÎÇÇ´Ö ºÒ¸´
-                case 14111025: //½ºÇÇ¸´ ½º·ÎÀ®
+                case 4111009: // ìŠ¤í”¼ë¦¿ ìë²¨ë¦°
+                case 5201008: // ì¸í”¼ë‹› ë¶ˆë¦¿
+                case 14111025: //ìŠ¤í”¼ë¦¿ ìŠ¤ë¡œìœ™
                     statups.add(new Triple(BuffStats.CTS_NoBulletConsume, 1, false));
                     break;
                 case 2121004:
                 case 2221004:
-                case 2321004: // ÀÎÇÇ´ÏÆ¼
+                case 2321004: // ì¸í”¼ë‹ˆí‹°
                     statups.add(new Triple(BuffStats.CTS_Infinity, ret.effects.getStats("x"), false));
                     statups.add(new Triple(BuffStats.CTS_Stance, ret.effects.getStats("prop"), false));
                     break;
@@ -1372,12 +1372,12 @@ public class SkillStatEffect {
                 case 1221002:
                 case 1321002: // Stance
                 case 21121003: // Aran - Freezing Posture
-                case 32111014: //½ºÅÄ½º
-                case 50001214: //ºûÀÇ ¼öÈ£
-                case 51121004: //½ºÅÄ½º
+                case 32111014: //ìŠ¤íƒ ìŠ¤
+                case 50001214: //ë¹›ì˜ ìˆ˜í˜¸
+                case 51121004: //ìŠ¤íƒ ìŠ¤
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Stance, ret.effects.getStats("prop"), false));
                     break;
-                case 5321010: // ÆÄÀÌ·¿ ½ºÇÇ¸´
+                case 5321010: // íŒŒì´ë › ìŠ¤í”¼ë¦¿
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Stance, ret.effects.getStats("prop"), false));
                     break;
                 case 1005:
@@ -1391,19 +1391,19 @@ public class SkillStatEffect {
                 case 50001005:
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MaxLevelBuff, ret.effects.getStats("x"), false));
                     break;
-                case 2121002: //¸¶³ª ¸®ÇÃ·º¼Ç
-                case 2221002: //¸¶³ª ¸®ÇÃ·º¼Ç
-                case 2321002: //¸¶³ª ¸®ÇÃ·º¼Ç
+                case 2121002: //ë§ˆë‚˜ ë¦¬í”Œë ‰ì…˜
+                case 2221002: //ë§ˆë‚˜ ë¦¬í”Œë ‰ì…˜
+                case 2321002: //ë§ˆë‚˜ ë¦¬í”Œë ‰ì…˜
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ManaReflection, 1, false));
                     break;
-                case 2321005: //¾îµå¹ê½ºµå ºí·¹½º
+                case 2321005: //ì–´ë“œë°´ìŠ¤ë“œ ë¸”ë ˆìŠ¤
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_AdvancedBless, level, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ACC, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MDD, ret.effects.getStats("y"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMHP, ret.effects.getStats("indieMhp"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMMP, ret.effects.getStats("indieMmp"), true));
                     break;
-                case 9001003: //¿î¿µÀÚÀÇ Ãàº¹
+                case 9001003: //ìš´ì˜ìì˜ ì¶•ë³µ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Speed, ret.effects.getStats("speed"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PDD, ret.effects.getStats("pdd"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MDD, ret.effects.getStats("mdd"), false));
@@ -1413,20 +1413,20 @@ public class SkillStatEffect {
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMHPR, ret.effects.getStats("indieMhpR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMMPR, ret.effects.getStats("indieMmpR"), true));
                     break;
-                // Ä¸Æ¾
-                case 5211009: //ÇÒ·ÎÆ÷ÀÎÆ® ºÒ¸´
+                // ìº¡í‹´
+                case 5211009: //í• ë¡œí¬ì¸íŠ¸ ë¶ˆë¦¿
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     break;
-                case 5221018: //ÆÄÀÌ·¿ ½ºÅ¸ÀÏ
-                    //MP #mpCon ¼Òºñ, #timeÃÊ°£ °ø°İ·Â #indiePadR% Áõ°¡, »óÅÂ ÀÌ»ó°ú ¸ğµç ¼Ó¼º ³»¼º #indieAsrR% Áõ°¡, #indieStance% È®·ü·Î ¹Ğ¸®Áö ¾ÊÀ½. È¸ÇÇÄ¡ #indieEva
+                case 5221018: //íŒŒì´ë › ìŠ¤íƒ€ì¼
+                    //MP #mpCon ì†Œë¹„, #timeì´ˆê°„ ê³µê²©ë ¥ #indiePadR% ì¦ê°€, ìƒíƒœ ì´ìƒê³¼ ëª¨ë“  ì†ì„± ë‚´ì„± #indieAsrR% ì¦ê°€, #indieStance% í™•ë¥ ë¡œ ë°€ë¦¬ì§€ ì•ŠìŒ. íšŒí”¼ì¹˜ #indieEva
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieEVA, ret.effects.getStats("indieEva"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieAsrR, 30, true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieStance, 60, true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePADR, 20, true));
                     break;
-                // Ä³³í½´ÅÍ
-                case 5301003: //¸ùÅ°¸ÅÁ÷
-                case 5320008: //ÇÏÀÌÆÛ ¸ùÅ° ½ºÆç
+                // ìºë…¼ìŠˆí„°
+                case 5301003: //ëª½í‚¤ë§¤ì§
+                case 5320008: //í•˜ì´í¼ ëª½í‚¤ ìŠ¤í 
                     statups.clear();
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMHP, ret.effects.getStats("indieMhp"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMMP, ret.effects.getStats("indieMmp"), true));
@@ -1436,17 +1436,17 @@ public class SkillStatEffect {
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieSpeed, ret.effects.getStats("indieSpeed"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieAllStat, ret.effects.getStats("indieAllStat"), true));
                     break;
-                case 5311004: //¿ÀÅ©Åë ·ê·¿
+                case 5311004: //ì˜¤í¬í†µ ë£°ë ›
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Roulette, 4, false));
                     break;
                 case 5311010:
-                    //MP #mpCon ¼Ò¸ğ. ÃÖ´ë #mobCount¸íÀÇ Àû¿¡°Ô #damage%·Î #attackCount¹ø °ø°İ. #prop% È®·ü·Î #dotTimeÃÊ µ¿¾È #dot% È­¼Ó¼º µ¥¹ÌÁö
+                    //MP #mpCon ì†Œëª¨. ìµœëŒ€ #mobCountëª…ì˜ ì ì—ê²Œ #damage%ë¡œ #attackCountë²ˆ ê³µê²©. #prop% í™•ë¥ ë¡œ #dotTimeì´ˆ ë™ì•ˆ #dot% í™”ì†ì„± ë°ë¯¸ì§€
                     monsterStatus.put(MonsterStatus.MS_AddDamParty, ret.effects.getStats("z"));
                     monsterStatus.put(MonsterStatus.Burned, ret.effects.getStats("dot"));
                     break;
-                case 80001034: //¼¼ÀÎÆ® ¼¼ÀÌ¹ö 1´Ü°è
-                case 80001035: //¼¼ÀÎÆ® ¼¼ÀÌ¹ö 2´Ü°è
-                case 80001036: //¼¼ÀÎÆ® ¼¼ÀÌ¹ö 3´Ü°è
+                case 80001034: //ì„¸ì¸íŠ¸ ì„¸ì´ë²„ 1ë‹¨ê³„
+                case 80001035: //ì„¸ì¸íŠ¸ ì„¸ì´ë²„ 2ë‹¨ê³„
+                case 80001036: //ì„¸ì¸íŠ¸ ì„¸ì´ë²„ 3ë‹¨ê³„
                     statups.clear();
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMAD, ret.effects.getStats("indieMad"), true));
@@ -1461,112 +1461,112 @@ public class SkillStatEffect {
                 case 35120014: //double lucky
                 case 15111011:
                 case 5311005:
-                case 5320007: // ·°Å° ´ÙÀÌ½º
+                case 5320007: // ëŸ­í‚¤ ë‹¤ì´ìŠ¤
                     ret.overTime = true;
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Dice, 0, false));
                     break;
-                // ¸Ş¸£¼¼µ¥½º
-                case 23101003: //½ºÇÇ¸´ ÀÎÇ»Àü
+                // ë©”ë¥´ì„¸ë°ìŠ¤
+                case 23101003: //ìŠ¤í”¼ë¦¿ ì¸í“¨ì „
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DamageReduce, ret.effects.getStats("damage"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_CriticalBuff, ret.effects.getStats("x"), false));
                     break;
-                case 23111005: // ¿öÅÍ ½¯µå
+                case 23111005: // ì›Œí„° ì‰´ë“œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_AsrR, ret.effects.getStats("terR"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_TerR, ret.effects.getStats("terR"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DamAbsorbShield, 1, false));
                     break;
-                case 20050286: // ÀÌ½ºÄÉÀÌÇÁ
+                case 20050286: // ì´ìŠ¤ì¼€ì´í”„
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PreReviveOnce, ret.effects.getStats("prop"), false));
                     break;
-                case 25101009: // ¿©¿ì·É
+                case 25101009: // ì—¬ìš°ë ¹
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_HiddenPossession, 1, false));
                     break;
-                /* ¸ŞÄ«´Ğ ½ÃÀÛ */
-                case 35111016: // ¿À¹öÆ©´×
+                /* ë©”ì¹´ë‹‰ ì‹œì‘ */
+                case 35111016: // ì˜¤ë²„íŠœë‹
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
-                case 35121010: // ¾ÚÇÃ¸®ÆÄÀÌ¾î
+                case 35121010: // ì•°í”Œë¦¬íŒŒì´ì–´
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_AmplifyDamage, ret.effects.getStats("x"), false));
                     ret.effects.setStats("time", 60000);
                     break;
-                case 35121006: // ¼¼ÀÌÇÁÆ¼
+                case 35121006: // ì„¸ì´í”„í‹°
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
-                case 35111011: // Èú¸µ·Îº¿
+                case 35111011: // íë§ë¡œë´‡
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MaxHP, ret.effects.getStats("hp"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MaxHP, ret.effects.getStats("hcHp"), false));
                     break;
-                case 35111002: // ¸¶±×³×Æ½ ÇÊµå
+                case 35111002: // ë§ˆê·¸ë„¤í‹± í•„ë“œ
                     monsterStatus.put(MonsterStatus.STUN, 1);
                     break;
-                case 35101007: // ÆÛÆåÆ® ¾Æ¸Ó
+                case 35101007: // í¼í™íŠ¸ ì•„ë¨¸
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Guard, ret.effects.getStats("x"), false));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
-                case 35111005: // ¾×¼¿·¹ÀÌÅÍ
+                case 35111005: // ì•¡ì…€ë ˆì´í„°
                     monsterStatus.put(MonsterStatus.SPEED, ret.effects.getStats("x"));
                     monsterStatus.put(MonsterStatus.WDEF, ret.effects.getStats("y"));
                     break;
-                case 35121003: // ¿ö¸Ó½Å Å¸ÀÌÅº
+                case 35121003: // ì›Œë¨¸ì‹  íƒ€ì´íƒ„
                     ret.effects.setStats("time", 60 * 120 * 1000);
                     break;
-                case 35001002: // ¸ŞÅ»¾Æ¸Ó : ÈŞ¸Õ
-                case 35111003: // ¸ŞÅ»¾Æ¸Ó : ÅÊÅ©
+                case 35001002: // ë©”íƒˆì•„ë¨¸ : íœ´ë¨¼
+                case 35111003: // ë©”íƒˆì•„ë¨¸ : íƒ±í¬
                     ret.effects.setStats("time", 60 * 120 * 1000);
                     break;
-                /* ¸ŞÄ«´Ğ Á¾·á */
- /* ¹èÆ² ¸ŞÀÌÁö ½ÃÀÛ */
-                case 32001016: // ¿»·Î¿ì ¿À¶ó
+                /* ë©”ì¹´ë‹‰ ì¢…ë£Œ */
+ /* ë°°í‹€ ë©”ì´ì§€ ì‹œì‘ */
+                case 32001016: // ì˜ë¡œìš° ì˜¤ë¼
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BMageAura, level, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieSpeed, ret.effects.getStats("indieSpeed"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieBooster, ret.effects.getStats("indieBooster"), true));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
-                case 32101009: // µå·¹ÀÎ ¿À¶ó
+                case 32101009: // ë“œë ˆì¸ ì˜¤ë¼
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BMageAura, level, false));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
-                case 32111012: // ºí·ç ¿À¶ó
+                case 32111012: // ë¸”ë£¨ ì˜¤ë¼
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BMageAura, level, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieAsrR, ret.effects.getStats("indieAsrR"), true));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
-                case 32111016: // ´ÙÅ© ¶óÀÌÆ®´×
+                case 32111016: // ë‹¤í¬ ë¼ì´íŠ¸ë‹
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DarkLighting, ret.effects.getStats("x"), false));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
-                case 32121010: //¹èÆ² ·¹ÀÌÁö
-                    //MP #mpCon ¼Òºñ, µ¥¹ÌÁö #x% Áõ°¡, Å©¸®Æ¼ÄÃ È®·ü #z% Áõ°¡, ÃÖ¼Ò Å©¸®Æ¼ÄÃ µ¥¹ÌÁö #y% Áõ°¡, ¸ğµç °ø°İ ½ºÅ³ÀÇ ÃÖ´ë Å¸°Ù ¼ö #mobCount¸íÀ¸·Î Á¦ÇÑ
+                case 32121010: //ë°°í‹€ ë ˆì´ì§€
+                    //MP #mpCon ì†Œë¹„, ë°ë¯¸ì§€ #x% ì¦ê°€, í¬ë¦¬í‹°ì»¬ í™•ë¥  #z% ì¦ê°€, ìµœì†Œ í¬ë¦¬í‹°ì»¬ ë°ë¯¸ì§€ #y% ì¦ê°€, ëª¨ë“  ê³µê²© ìŠ¤í‚¬ì˜ ìµœëŒ€ íƒ€ê²Ÿ ìˆ˜ #mobCountëª…ìœ¼ë¡œ ì œí•œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Enrage, (ret.effects.getStats("x") * 100) + 1, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EnrageCr, ret.effects.getStats("z"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EnrageCrDamMin, ret.effects.getStats("y"), false));
                     ret.effects.setStats("time", 2100000000);
                     break;
-                case 32121017: // ´ÙÅ© ¿À¶ó
+                case 32121017: // ë‹¤í¬ ì˜¤ë¼
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BMageAura, level, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
-                /*case 32001014: // µ¥½º
-                case 32100010: // µ¥½º ÄÁÆ®·¢Æ®
-                case 32110017: // µ¥½º ÄÁÆ®·¢Æ®2
-                case 32120019: // µ¥½º ÄÁÆ®·¢Æ®3
+                /*case 32001014: // ë°ìŠ¤
+                case 32100010: // ë°ìŠ¤ ì»¨íŠ¸ë™íŠ¸
+                case 32110017: // ë°ìŠ¤ ì»¨íŠ¸ë™íŠ¸2
+                case 32120019: // ë°ìŠ¤ ì»¨íŠ¸ë™íŠ¸3
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BMageDeath, 0, false));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;*/
-                case 32121018: // µğ¹öÇÁ ¿À¶ó
+                case 32121018: // ë””ë²„í”„ ì˜¤ë¼
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BMageAura, level, false));
                     break;
-                /* ¹èÆ² ¸ŞÀÌÁö Á¾·á */
-                case 2311007: // ÅÚ·¹Æ÷Æ® ¸¶½ºÅÍ¸®
-                case 12111007: // ÅÚ·¹Æ÷Æ® ¸¶½ºÅÍ¸®
-                case 22161005: // ÅÚ·¹Æ÷Æ® ¸¶½ºÅÍ¸®
-                case 32111010: // ÅÚ·¹Æ÷Æ® ¸¶½ºÅÍ¸®
+                /* ë°°í‹€ ë©”ì´ì§€ ì¢…ë£Œ */
+                case 2311007: // í…”ë ˆí¬íŠ¸ ë§ˆìŠ¤í„°ë¦¬
+                case 12111007: // í…”ë ˆí¬íŠ¸ ë§ˆìŠ¤í„°ë¦¬
+                case 22161005: // í…”ë ˆí¬íŠ¸ ë§ˆìŠ¤í„°ë¦¬
+                case 32111010: // í…”ë ˆí¬íŠ¸ ë§ˆìŠ¤í„°ë¦¬
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_TeleportMasteryOn, ret.effects.getStats("x"), false));
                     monsterStatus.put(MonsterStatus.STUN, 1);
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
-                case 33111011: // µå·Î¿ì ¹é
+                case 33111011: // ë“œë¡œìš° ë°±
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DrawBack, ret.effects.getStats("x"), false));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
@@ -1577,21 +1577,21 @@ public class SkillStatEffect {
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ArcaneAim, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IgnoreMobpdpR, ret.effects.getStats("ignoreMobpdpR"), false));
                     break;
-                case 3111000: //ÁıÁß
+                case 3111000: //ì§‘ì¤‘
                 case 3211000:
-                case 33111009: //¿ÍÀÏµåÇåÅÍ ÁıÁß
+                case 33111009: //ì™€ì¼ë“œí—Œí„° ì§‘ì¤‘
                 case 13111001:
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EPAD, ret.effects.getStats("epad"), false));
                     break;
-                case 3210013: //µ¥¹ÌÁö ¸®¹ö½Ì
+                case 3210013: //ë°ë¯¸ì§€ ë¦¬ë²„ì‹±
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PowerTransferGauge, ret.effects.getStats("y"), false));
                     break;
-                case 3120006: //½ºÇÇ¸´ ¸µÅ©
-                case 3220005: // x°ª : Ã¼·Â +% ·®.. ÆĞÅ¶Àü¼Û¿¡´Â °ü·Ã¾øÀ½
+                case 3120006: //ìŠ¤í”¼ë¦¿ ë§í¬
+                case 3220005: // xê°’ : ì²´ë ¥ +% ëŸ‰.. íŒ¨í‚·ì „ì†¡ì—ëŠ” ê´€ë ¨ì—†ìŒ
                     ret.overTime = true;
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_SpiritLink, ret.effects.getStats("x"), false));
                     break;
-                case 13111005: //¾Ë¹ÙÆ®·Î½º
+                case 13111005: //ì•Œë°”íŠ¸ë¡œìŠ¤
                     statups.clear();
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Speed, ret.effects.getStats("speed"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Jump, ret.effects.getStats("jump"), false));
@@ -1599,57 +1599,57 @@ public class SkillStatEffect {
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EPDD, ret.effects.getStats("epdd"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     break;
-                case 27001004: //ÀÍ½ºÅÙµå ¸¶³ª
+                case 27001004: //ìµìŠ¤í…ë“œ ë§ˆë‚˜
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMMPR, ret.effects.getStats("indieMmpR"), true));
                     break;
-                case 27101202: // º¸ÀÌµå ÇÁ·¹¼Å
+                case 27101202: // ë³´ì´ë“œ í”„ë ˆì…”
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_KeyDownAreaMoving, ret.effects.getStats("x"), false));
                     break;
-                case 27100003: //ºí·¹½º ¿Àºê ´ÙÅ©´Ï½º
+                case 27100003: //ë¸”ë ˆìŠ¤ ì˜¤ë¸Œ ë‹¤í¬ë‹ˆìŠ¤
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BlessOfDarkness, ret.effects.getStats("y"), false));
                     ret.overTime = true;
                     break;
-                case 27111005: //¶óÀÌÆ®½¦µµ¿ì °¡µå
+                case 27111005: //ë¼ì´íŠ¸ì‰ë„ìš° ê°€ë“œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePDD, ret.effects.getStats("indiePdd"), true));
                     break;
-                case 27111006: //Æ÷Æ½ ¸ŞµğÅ×ÀÌ¼Ç
+                case 27111006: //í¬í‹± ë©”ë””í…Œì´ì…˜
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EMAD, ret.effects.getStats("emad"), false));
                     break;
-                case 20040216: //¼±ÆÄÀÌ¾î
+                case 20040216: //ì„ íŒŒì´ì–´
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Larkness, ret.effects.getStats("x"), false));
                     break;
-                case 20040217: //ÀÌÅ¬¸³½º
+                case 20040217: //ì´í´ë¦½ìŠ¤
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Larkness, ret.effects.getStats("y"), false));
                     break;
-                case 20040219: //ÀÌÄ÷¸®ºê¸®¾ö
-                case 20040220: //ÀÌÄ÷¸®ºê¸®¾ö
+                case 20040219: //ì´í€„ë¦¬ë¸Œë¦¬ì—„
+                case 20040220: //ì´í€„ë¦¬ë¸Œë¦¬ì—„
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Larkness, 2, false));
                     ret.effects.setStats("time", 1000);
                     break;
-                case 2022911: // ±«µµÀÇ ¿¹°íÀå
+                case 2022911: // ê´´ë„ì˜ ì˜ˆê³ ì¥
                     statups.clear();
                     ret.overTime = true;
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ChangeFoxMan, level, false));
                     break;
-                case 27121005: //´ÙÅ© Å©·¹¼¾µµ
+                case 27121005: //ë‹¤í¬ í¬ë ˆì„¼ë„
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_StackBuff, ret.effects.getStats("x"), false));
                     break;
-                case 27121006: //´ÙÅ©´Ï½º ¼Ò¼­¸®
-                    //MP #mpCon ¼Òºñ, #timeÃÊ°£ ¸ó½ºÅÍ ¼Ó¼º ³»¼º #y% ¹«½Ã\n[ÆĞ½Ãºê È¿°ú : ÃÖÁ¾ µ¥¹ÌÁö #mdR% Áõ°¡, ¹æ¾îÀ² #ignoreMobpdpR% ¹«½Ã]
+                case 27121006: //ë‹¤í¬ë‹ˆìŠ¤ ì†Œì„œë¦¬
+                    //MP #mpCon ì†Œë¹„, #timeì´ˆê°„ ëª¬ìŠ¤í„° ì†ì„± ë‚´ì„± #y% ë¬´ì‹œ\n[íŒ¨ì‹œë¸Œ íš¨ê³¼ : ìµœì¢… ë°ë¯¸ì§€ #mdR% ì¦ê°€, ë°©ì–´ìœ¨ #ignoreMobpdpR% ë¬´ì‹œ]
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ElementalReset, ret.effects.getStats("y"), false));
                     break;
-                case 31121053: //Àª ¿Àºê ¸®¹öÆ¼[µ¥¸ó½½·¹ÀÌ¾î-Hyper]
-                case 31221053: //[µ¥¸ó¾îº¥Á®-Hyper]
-                case 32121053: //[¹èÆ²¸ŞÀÌÁö-Hyper]
-                case 33121053: //[¿ÍÀÏµåÇåÅÍ-Hyper]
-                case 35121053: //[¸ŞÄ«´Ğ-Hyper]
-                case 37121053: //[ºí·¡½ºÅÍ-Hyper]
+                case 31121053: //ìœŒ ì˜¤ë¸Œ ë¦¬ë²„í‹°[ë°ëª¬ìŠ¬ë ˆì´ì–´-Hyper]
+                case 31221053: //[ë°ëª¬ì–´ë²¤ì ¸-Hyper]
+                case 32121053: //[ë°°í‹€ë©”ì´ì§€-Hyper]
+                case 33121053: //[ì™€ì¼ë“œí—Œí„°-Hyper]
+                case 35121053: //[ë©”ì¹´ë‹‰-Hyper]
+                case 37121053: //[ë¸”ë˜ìŠ¤í„°-Hyper]
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
-                case 32121056: // ¹èÆ² ¸¶½ºÅÍ
+                case 32121056: // ë°°í‹€ ë§ˆìŠ¤í„°
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MasterMagicOn, 1, false));
                     break;
-                case 33121054: // »çÀÏ·±Æ® ·¥ÇÇÁö
+                case 33121054: // ì‚¬ì¼ëŸ°íŠ¸ ë¨í”¼ì§€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_FinalAttackProp, ret.effects.getStats("x"), false));
                     break;
@@ -1671,42 +1671,42 @@ public class SkillStatEffect {
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_RoyalGuardState, 1, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_RoyalGuardPrepare, 1, false));
                     break;
-                case 60001216: // ¸®¼ÅÇÃ½ºÀ§Ä¡ : ¹æ¾î¸ğµå
+                case 60001216: // ë¦¬ì…”í”ŒìŠ¤ìœ„ì¹˜ : ë°©ì–´ëª¨ë“œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ReshuffleSwitch, 0, false));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     ret.overTime = true;
                     break;
-                case 60001217: // ¸®¼ÅÇÃ½ºÀ§Ä¡ : °ø°İ¸ğµå
+                case 60001217: // ë¦¬ì…”í”ŒìŠ¤ìœ„ì¹˜ : ê³µê²©ëª¨ë“œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ReshuffleSwitch, 0, false));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     ret.overTime = true;
                     break;
-                case 61101004: // ºí·¹ÀÌÁî ¾÷
+                case 61101004: // ë¸”ë ˆì´ì¦ˆ ì—…
                     statups.clear();
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Booster, ret.effects.getStats("x"), false));
                     ret.overTime = true;
                     break;
-                case 61101002: // Àª ¿Àºê ¼Òµå
-                case 61110211: // Àª ¿Àºê ¼Òµå (Æ®·£½ºÇÇ±Ô·¹ÀÌ¼Ç)
-                case 61120007: // ¾îµå¹ê½ºµå Àª ¿Àºê ¼Òµå
-                case 61121217: // ¾îµå¹ê½ºµå Àª ¿Àºê ¼Òµå (Æ®·£½ºÇÇ±Ô·¹ÀÌ¼Ç)
+                case 61101002: // ìœŒ ì˜¤ë¸Œ ì†Œë“œ
+                case 61110211: // ìœŒ ì˜¤ë¸Œ ì†Œë“œ (íŠ¸ëœìŠ¤í”¼ê·œë ˆì´ì…˜)
+                case 61120007: // ì–´ë“œë°´ìŠ¤ë“œ ìœŒ ì˜¤ë¸Œ ì†Œë“œ
+                case 61121217: // ì–´ë“œë°´ìŠ¤ë“œ ìœŒ ì˜¤ë¸Œ ì†Œë“œ (íŠ¸ëœìŠ¤í”¼ê·œë ˆì´ì…˜)
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_StopForceAtomInfo, ret.effects.getStats("cooltime"), false));
                     ret.effects.setStats("time", level * 12 * 1000);
                     ret.overTime = true;
                     break;
-                case 61111003: // ¸®°ÔÀÎ ½ºÆ®·À½º
+                case 61111003: // ë¦¬ê²Œì¸ ìŠ¤íŠ¸ë ìŠ¤
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_AsrR, ret.effects.getStats("asrR"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_TerR, ret.effects.getStats("terR"), false));
                     break;
-                case 61111004: // Ä«Å»¶óÀÌÁî
+                case 61111004: // ì¹´íƒˆë¼ì´ì¦ˆ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
-                case 61121009: // ·Î¹ö½ºÆ® ¾Æ¸Ó
+                case 61121009: // ë¡œë²„ìŠ¤íŠ¸ ì•„ë¨¸
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PartyBarrier, ret.effects.getStats("v"), false));
                     break;
-                case 61111008: // ÆÄÀÌ³Î ÇÇ±Ô·¹ÀÌ¼Ç (3Â÷)
-                case 61120008: // ÆÄÀÌ³Î ÇÇ±Ô·¹ÀÌ¼Ç (4Â÷)
+                case 61111008: // íŒŒì´ë„ í”¼ê·œë ˆì´ì…˜ (3ì°¨)
+                case 61120008: // íŒŒì´ë„ í”¼ê·œë ˆì´ì…˜ (4ì°¨)
                 case 61121053:
                     statups.add(new Triple<>(BuffStats.CTS_Speed, ret.effects.getStats("speed"), false));
                     statups.add(new Triple<>(BuffStats.CTS_Morph, ret.effects.getStats("morph"), false));
@@ -1715,8 +1715,8 @@ public class SkillStatEffect {
                     statups.add(new Triple<>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     statups.add(new Triple<>(BuffStats.CTS_IndieBooster, ret.effects.getStats("indieBooster"), true));
                     break;
-                case 5321004: // ¼­Æ÷Æ® ¸ùÅ° Æ®À©½º
-                case 5320011: // ¼­Æ÷Æ® ¸ùÅ° Æ®À©½º2
+                case 5321004: // ì„œí¬íŠ¸ ëª½í‚¤ íŠ¸ìœˆìŠ¤
+                case 5320011: // ì„œí¬íŠ¸ ëª½í‚¤ íŠ¸ìœˆìŠ¤2
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Stance, ret.effects.getStats("prop"), false));
                     monsterStatus.put(MonsterStatus.SPEED, ret.effects.getStats("x"));
                     ret.overTime = true;
@@ -1724,64 +1724,64 @@ public class SkillStatEffect {
                 case 22171064:
                     statups.add(new Triple<>(BuffStats.CTS_AsrR, ret.effects.getStats("asrR"), false));
                     break;
-                case 65111003: // Äİ ¿Àºê ¿¡ÀÎ¼ÇÆ®
+                case 65111003: // ì½œ ì˜¤ë¸Œ ì—ì¸ì…˜íŠ¸
                     statups.clear();
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     break;
-                case 60011219: // ¼Ò¿ï ÄÁÆ®·¢Æ®
+                case 60011219: // ì†Œìš¸ ì»¨íŠ¸ë™íŠ¸
                 case 80001155:
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
-                case 65101002: // ÆÄ¿ö Æ®·£½ºÆÛ
+                case 65101002: // íŒŒì›Œ íŠ¸ëœìŠ¤í¼
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PowerTransferGauge, 1000, false));
                     break;
-                case 65101100: // ½ºÆÃ ÀÍ½ºÇÃ·ÎÀü
+                case 65101100: // ìŠ¤íŒ… ìµìŠ¤í”Œë¡œì „
                     monsterStatus.put(MonsterStatus.MS_Explosion, 1);
                     break;
-                case 65111004: // ¾ÆÀÌ¾ğ ·ÎÅÍ½º
+                case 65111004: // ì•„ì´ì–¸ ë¡œí„°ìŠ¤
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Stance, ret.effects.getStats("prop"), false));
                     break;
-                case 65121053: //ÆÄÀÌ³Î ÄÁÆ®·¢Æ®
-                    //#timeÃÊ°£ Å©¸®Æ¼ÄÃ È®·ü #x%. ½ºÅÄ½º È®·ü #indieStance%, »óÅÂ ÀÌ»ó ÀúÇ× #asrR%, ¸ğµç ¼Ó¼º ÀúÇ× #terR% Áõ°¡\nÀç»ç¿ë ´ë±â½Ã°£ #cooltimeÃÊ
+                case 65121053: //íŒŒì´ë„ ì»¨íŠ¸ë™íŠ¸
+                    //#timeì´ˆê°„ í¬ë¦¬í‹°ì»¬ í™•ë¥  #x%. ìŠ¤íƒ ìŠ¤ í™•ë¥  #indieStance%, ìƒíƒœ ì´ìƒ ì €í•­ #asrR%, ëª¨ë“  ì†ì„± ì €í•­ #terR% ì¦ê°€\nì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ #cooltimeì´ˆ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_CriticalBuff, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_AsrR, ret.effects.getStats("asrR"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_TerR, ret.effects.getStats("terR"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieStance, ret.effects.getStats("indieStance"), true));
                     break;
-                case 31201003: // ¾îºñ¼È ·¹ÀÌÁö
+                case 31201003: // ì–´ë¹„ì…œ ë ˆì´ì§€
                     statups.clear();
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     break;
-                case 31211003: // ¸®ÇÁ·¢Æ® ÀÌºí
-                    //HP #hpCon ¼Òºñ, #timeÃÊµ¿¾È ¸ğµç ¼Ó¼º ³»¼º #y%, »óÅÂ ³»¼º #z% Áõ°¡, ¹Ş´Â µ¥¹ÌÁö #x% °¨¼Ò
+                case 31211003: // ë¦¬í”„ë™íŠ¸ ì´ë¸”
+                    //HP #hpCon ì†Œë¹„, #timeì´ˆë™ì•ˆ ëª¨ë“  ì†ì„± ë‚´ì„± #y%, ìƒíƒœ ë‚´ì„± #z% ì¦ê°€, ë°›ëŠ” ë°ë¯¸ì§€ #x% ê°ì†Œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_AsrR, ret.effects.getStats("y"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_TerR, ret.effects.getStats("z"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DamageReduce, ret.effects.getStats("x"), false));
                     break;
-                case 31211004: // µğ¾Æº¼¸¯ ¸®Ä¿¹ö¸®
+                case 31211004: // ë””ì•„ë³¼ë¦­ ë¦¬ì»¤ë²„ë¦¬
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DiabolikRecovery, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMHPR, ret.effects.getStats("indieMhpR"), true));
                     break;
-                case 31221004: // ¿À¹öÈÔ¹Ö ÆÄ¿ö
+                case 31221004: // ì˜¤ë²„íœ„ë° íŒŒì›Œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieBooster, ret.effects.getStats("indieBooster"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
-                case 51121052: // µ¥µé¸® Â÷Áö 
+                case 51121052: // ë°ë“¤ë¦¬ ì°¨ì§€ 
                     monsterStatus.put(MonsterStatus.MS_DeadlyCharge, level);
                     monsterStatus.put(MonsterStatus.MS_AddDamParty, level);
                     break;
-                case 51121054: // ¼¼ÀÌÅ©¸®µå Å¥ºê[Hyper]
-                    //P #mpCon ¼Òºñ, #timeÃÊ°£ µ¥¹ÌÁö #indieDamR%, ÃÖ´ë HP #indieMhpR% Áõ°¡\nµ¥¹ÌÁö °¨¼Ò #x% Ãß°¡, ·Î¾â °¡µåÀÇ ¹æ¾î °¡´ÉÇÑ ½Ã°£ 1È¸Â°·Î °íÁ¤.\nÀç»ç¿ë ´ë±â½Ã°£ : #cooltimeÃÊ
+                case 51121054: // ì„¸ì´í¬ë¦¬ë“œ íë¸Œ[Hyper]
+                    //P #mpCon ì†Œë¹„, #timeì´ˆê°„ ë°ë¯¸ì§€ #indieDamR%, ìµœëŒ€ HP #indieMhpR% ì¦ê°€\në°ë¯¸ì§€ ê°ì†Œ #x% ì¶”ê°€, ë¡œì–„ ê°€ë“œì˜ ë°©ì–´ ê°€ëŠ¥í•œ ì‹œê°„ 1íšŒì§¸ë¡œ ê³ ì •.\nì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ : #cooltimeì´ˆ
                     statups.clear();
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DamAbsorbShield, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMHPR, ret.effects.getStats("indieMhpR"), true));
                     break;
-                case 51121053: // Äı ¿Àºê Åõ¸ğ·Î¿ì[Hyper]
+                case 51121053: // í€¸ ì˜¤ë¸Œ íˆ¬ëª¨ë¡œìš°[Hyper]
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     ret.effects.setStats("time", 60 * 1000);
                     break;
-                case 23121054: //¿¤ºñ½¬ ºí·¹½Ì[Hyper]
+                case 23121054: //ì—˜ë¹„ì‰¬ ë¸”ë ˆì‹±[Hyper]
                     statups.clear();
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Stance, ret.effects.getStats("x"), false));
@@ -1822,112 +1822,112 @@ public class SkillStatEffect {
                     ret.effects.setStats("time", 15000);
                     break;
                 }
-                case 36001002: //ÀÎÅ¬¶óÀÎ ÆÄ¿ö
+                case 36001002: //ì¸í´ë¼ì¸ íŒŒì›Œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     break;
-                case 36111003: //µà¾óºê¸®µå µğÆæ½Ãºê
+                case 36111003: //ë“€ì–¼ë¸Œë¦¬ë“œ ë””íœì‹œë¸Œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_StackBuff, ret.effects.getStats("prop"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DamageReduce, ret.effects.getStats("z"), false));
                     break;
-                case 36111004: //ÀÌÁö½º ½Ã½ºÅÛ
+                case 36111004: //ì´ì§€ìŠ¤ ì‹œìŠ¤í…œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_XenonAegisSystem, 1, false));
                     break;
-                case 36101002: //¸®´Ï¾î ÆÛ½ºÆåÆ¼ºê
+                case 36101002: //ë¦¬ë‹ˆì–´ í¼ìŠ¤í™í‹°ë¸Œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_CriticalBuff, ret.effects.getStats("x"), false));
                     break;
-                case 36101003: //¿¡ÇÇ¼Ç½Ã ÆÄÀÌÇÁ¶óÀÎ
+                case 36101003: //ì—í”¼ì…˜ì‹œ íŒŒì´í”„ë¼ì¸
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMHPR, ret.effects.getStats("indieMhpR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMMPR, ret.effects.getStats("indieMmpR"), true));
                     break;
-                case 36121003: //¿ÀÆÄÃ÷ ÄÚµå
-                    //#c[¼­ÇÃ¶óÀÌ]#\n¿¡³ÊÁö #powerCon ¼Òºñ, #timeÃÊ µ¿¾È µ¥¹ÌÁö #indieDamR%, º¸½º ¸ó½ºÅÍ °ø°İ ½Ã µ¥¹ÌÁö #indieBDR% Áõ°¡
+                case 36121003: //ì˜¤íŒŒì¸  ì½”ë“œ
+                    //#c[ì„œí”Œë¼ì´]#\nì—ë„ˆì§€ #powerCon ì†Œë¹„, #timeì´ˆ ë™ì•ˆ ë°ë¯¸ì§€ #indieDamR%, ë³´ìŠ¤ ëª¬ìŠ¤í„° ê³µê²© ì‹œ ë°ë¯¸ì§€ #indieBDR% ì¦ê°€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieBDR, ret.effects.getStats("indieBDR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
-                case 36121004: //¿ÀÆæ½Ãºê ¸ÅÆ®¸¯½º
+                case 36121004: //ì˜¤íœì‹œë¸Œ ë§¤íŠ¸ë¦­ìŠ¤
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Stance, ret.effects.getStats("stanceProp"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IgnoreMobpdpR, ret.effects.getStats("ignoreMobpdpR"), false));
                     break;
                 case 27121054:
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Larkness, 2, false));
                     break;
-                case 31221054: // Æ÷ºñµç ÄÁÆ®·¢Æ®
+                case 31221054: // í¬ë¹„ë“  ì»¨íŠ¸ë™íŠ¸
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
-                case 30021237: //¿¡ºñ¿¡ÀÌ¼Ç ¸®¹öÆ¼
+                case 30021237: //ì—ë¹„ì—ì´ì…˜ ë¦¬ë²„í‹°
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_NewFlying, 1, false));
                     break;
                 case 4341052:
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Asura, 100, false));
                     break;
-                case 4341054: //È÷µç ºí·¹ÀÌµå
+                case 4341054: //íˆë“  ë¸”ë ˆì´ë“œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_WindBreakerFinal, 1, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ShadowPartner, ret.effects.getStats("x"), false));
                     ret.overTime = true;
                     break;
-                case 3110001: //¸ğÅ» ºí·Î¿ì
+                case 3110001: //ëª¨íƒˆ ë¸”ë¡œìš°
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BowMasterMortalBlow, 1, false));
                     break;
-                case 3110012: //ÄÁ¼¾Æ®·¹ÀÌ¼Ç
+                case 3110012: //ì»¨ì„¼íŠ¸ë ˆì´ì…˜
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BowMasterConcentration, 1, false));
                     break;
-                case 4221054: //ÇÃ¸³ ´õ ÄÚÀÎ
+                case 4221054: //í”Œë¦½ ë” ì½”ì¸
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_FlipTheCoin, 1, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_CriticalBuff, ret.effects.getStats("x"), false));
                     break;
 
-                case 5121054: //½ºÆ¼¹Ä·¹ÀÌÆ®
-                    //¹ßµ¿ ½Ã MP #mpCon ¼Òºñ, #time ÃÊ°£ µ¥¹ÌÁö #indieDamR% Áõ°¡, ÀÏÁ¤ ÁÖ±â·Î ¿¡³ÊÁö #x ½º½º·Î ÃæÀü
+                case 5121054: //ìŠ¤í‹°ë®¬ë ˆì´íŠ¸
+                    //ë°œë™ ì‹œ MP #mpCon ì†Œë¹„, #time ì´ˆê°„ ë°ë¯¸ì§€ #indieDamR% ì¦ê°€, ì¼ì • ì£¼ê¸°ë¡œ ì—ë„ˆì§€ #x ìŠ¤ìŠ¤ë¡œ ì¶©ì „
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Stimulate, 1, false));
                     break;
                 case 5121052:
-                case 5121055: //À¯´ÏÆ¼ ¿Àºê ÆÄ¿ö
+                case 5121055: //ìœ ë‹ˆí‹° ì˜¤ë¸Œ íŒŒì›Œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_UnityOfPower, 1, false));
                     break;
-                case 5321054: //¹÷ ¼¦
+                case 5321054: //ë²… ìƒ·
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BuckShot, level, false));
                     break;
-                case 15121004: //Ãà·Ú
+                case 15121004: //ì¶•ë¢°
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ShadowPartner, ret.effects.getStats("x"), false));
                     break;
-                case 15121054: //ÃµÁö°³º®
+                case 15121054: //ì²œì§€ê°œë²½
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_StrikerHyperElectric, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
                 case 61121054:
-                    //"°ø°İ·Â #indiePad, °ø°İ ¼Óµµ 1´Ü°è Áõ°¡. °ø°İ ¹«½Ã ¹× °ø°İ ¹İ»ç »óÅÂÀÇ Àû¿¡°Ôµµ ÇÇÇØ¸¦ ÀÔÈû
+                    //"ê³µê²©ë ¥ #indiePad, ê³µê²© ì†ë„ 1ë‹¨ê³„ ì¦ê°€. ê³µê²© ë¬´ì‹œ ë° ê³µê²© ë°˜ì‚¬ ìƒíƒœì˜ ì ì—ê²Œë„ í”¼í•´ë¥¼ ì…í˜
                     statups.clear();
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieBooster, ret.effects.getStats("indieBooster"), true));
                     break;
                 case 1121054:
-                    //ÀûÀÇ ¾î¶°ÇÑ °ø°İ¿¡µµ ¹Ğ·Á³ªÁö ¾ÊÀ½.\n
-                    //Å©¸®Æ¼ÄÃ È®·ü #indieCr%, »óÅÂÀÌ»ó ³»¼º ¹× ¸ğµç ¼Ó¼º ÀúÇ× #x%¸¸Å­ Áõ°¡.\n
-                    //·¹ÀÌÂ¡ ºí·Î¿ì°¡ °­È­µÇ¾î ÃÖ´ë #w¸íÀÇ ÀûÀ» #z% µ¥¹ÌÁö·Î #u¹ø °ø°İ, #c¸¶Áö¸· µÎ ¹øÀÇ °ø°İÀº Å©¸®Æ¼ÄÃ ÆÇÁ¤##\n
-                    //Àç»ç¿ë ´ë±â½Ã°£ : #cooltimeÃÊ.\n¿µ±¸ÀûÀ¸·Î ÃÖ´ë µ¥¹ÌÁö Á¦ÇÑ #psdIncMaxDam Áõ°¡
+                    //ì ì˜ ì–´ë– í•œ ê³µê²©ì—ë„ ë°€ë ¤ë‚˜ì§€ ì•ŠìŒ.\n
+                    //í¬ë¦¬í‹°ì»¬ í™•ë¥  #indieCr%, ìƒíƒœì´ìƒ ë‚´ì„± ë° ëª¨ë“  ì†ì„± ì €í•­ #x%ë§Œí¼ ì¦ê°€.\n
+                    //ë ˆì´ì§• ë¸”ë¡œìš°ê°€ ê°•í™”ë˜ì–´ ìµœëŒ€ #wëª…ì˜ ì ì„ #z% ë°ë¯¸ì§€ë¡œ #uë²ˆ ê³µê²©, #cë§ˆì§€ë§‰ ë‘ ë²ˆì˜ ê³µê²©ì€ í¬ë¦¬í‹°ì»¬ íŒì •##\n
+                    //ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ : #cooltimeì´ˆ.\nì˜êµ¬ì ìœ¼ë¡œ ìµœëŒ€ ë°ë¯¸ì§€ ì œí•œ #psdIncMaxDam ì¦ê°€
                     statups.clear();
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Stance, 100, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieCr, ret.effects.getStats("indieCr"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_AsrR, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_TerR, ret.effects.getStats("x"), false));
                     break;
-                case 1321054: //´ÙÅ© ¼­½ºÆ®
+                case 1321054: //ë‹¤í¬ ì„œìŠ¤íŠ¸
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     break;
-                case 2121054: //ÆÄÀÌ¾î ¿À¶ó
+                case 2121054: //íŒŒì´ì–´ ì˜¤ë¼
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_FireAura, 1, false));
                     break;
                 case 31121054:
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ShadowPartner, ret.effects.getStats("x"), false));
                     break;
-                case 2321055: //ÇìºìÁî µµ¾î
+                case 2321055: //í—¤ë¸ì¦ˆ ë„ì–´
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_HeavensDoor, 1, false));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
-                case 2321054: //º¥Àü½º ¿Àºê ¿£Á©
+                case 2321054: //ë²¤ì „ìŠ¤ ì˜¤ë¸Œ ì—”ì ¤
                     ret.absstats = false;
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_VengeanceOfAngel, 1, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IgnoreMobpdpR, ret.effects.getStats("ignoreMobpdpR"), false));
@@ -1935,29 +1935,29 @@ public class SkillStatEffect {
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieBooster, ret.effects.getStats("indieBooster"), true));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
-                case 5221021: //Äü µå·Î¿ì
+                case 5221021: //í€µ ë“œë¡œìš°
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_QuickDraw, 1, false));
                     break;
-                case 5221054: // ¾ğÀ§¾î¸µ ³ØÅ¸
-                    //MP #mpCon ¼Òºñ. #timeÃÊ°£ ÃÖ´ë HP, »óÅÂ ÀÌ»ó ³»¼º, ¸ğµç ¼Ó¼º ÀúÇ× #y% Áõ°¡\nÅ©¸®Æ¼ÄÃ È®·ü, ÃÖ´ë µ¥¹ÌÁö Á¦ÇÑ #indieMaxDamageOverR% Áõ°¡, ÇÇ°İ µ¥¹ÌÁö #w% °¨¼Ò
+                case 5221054: // ì–¸ìœ„ì–´ë§ ë„¥íƒ€
+                    //MP #mpCon ì†Œë¹„. #timeì´ˆê°„ ìµœëŒ€ HP, ìƒíƒœ ì´ìƒ ë‚´ì„±, ëª¨ë“  ì†ì„± ì €í•­ #y% ì¦ê°€\ní¬ë¦¬í‹°ì»¬ í™•ë¥ , ìµœëŒ€ ë°ë¯¸ì§€ ì œí•œ #indieMaxDamageOverR% ì¦ê°€, í”¼ê²© ë°ë¯¸ì§€ #w% ê°ì†Œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_AsrR, ret.effects.getStats("y"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_TerR, ret.effects.getStats("y"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMHPR, ret.effects.getStats("y"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DamageReduce, ret.effects.getStats("w"), false));
                     break;
-                case 15001022: // ¿¤¸®¸àÆ® : ¶óÀÌÆ®´×
+                case 15001022: // ì—˜ë¦¬ë©˜íŠ¸ : ë¼ì´íŠ¸ë‹
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_CygnusElementSkill, 1, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_StackBuff, 1, false));
                     break;
-                case 3121054: // ÇÁ¸®ÆÛ·¹ÀÌ¼Ç
+                case 3121054: // í”„ë¦¬í¼ë ˆì´ì…˜
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Stance, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BdR, ret.effects.getStats("y"), false));
                     break;
                 case 3221054:
-                    //MP #mpCon ¼Òºñ, #timeÃÊ°£ Å©¸®Æ¼ÄÃ È®·ü #x%, 
-                    //ÃÖ´ë Å©¸®Æ¼ÄÃ µ¥¹ÌÁö #y%, ¸ó½ºÅÍ ¹æ¾îÀ² ¹«½Ã #indieIgnoreMobpdpR%, 
-                    //µ¥¹ÌÁö #indieDamR% Áõ°¡\nÀç»ç¿ë ´ë±â½Ã°£ : #cooltimeÃÊ
+                    //MP #mpCon ì†Œë¹„, #timeì´ˆê°„ í¬ë¦¬í‹°ì»¬ í™•ë¥  #x%, 
+                    //ìµœëŒ€ í¬ë¦¬í‹°ì»¬ ë°ë¯¸ì§€ #y%, ëª¬ìŠ¤í„° ë°©ì–´ìœ¨ ë¬´ì‹œ #indieIgnoreMobpdpR%, 
+                    //ë°ë¯¸ì§€ #indieDamR% ì¦ê°€\nì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ : #cooltimeì´ˆ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_CriticalBuff, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IgnoreMobpdpR, ret.effects.getStats("ignoreMobpdpR"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
@@ -1967,35 +1967,35 @@ public class SkillStatEffect {
                 case 15111022:
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DamR, ret.effects.getStats("y"), false));
                     break;
-                /* À©µåºê·¹ÀÌÄ¿ ½ÃÀÛ */
-                case 13001022: // ¿¤¸®¸àÆ® : ½ºÅè
+                /* ìœˆë“œë¸Œë ˆì´ì»¤ ì‹œì‘ */
+                case 13001022: // ì—˜ë¦¬ë©˜íŠ¸ : ìŠ¤í†°
                     statups.clear();
                     statups.add(new Triple<>(BuffStats.CTS_CygnusElementSkill, 1, false));
                     statups.add(new Triple<>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     break;
-                case 13101024: // ½ÇÇÁ½º ¿¡ÀÌµå
-                    //"MP #mpCon ¼Òºñ, #timeÃÊ µ¿¾È È­»ì ¼Òºñ ¾øÀÌ °ø°İ °¡´ÉÇÏ¸ç °ø°İ·Â #indiePad, Å©¸®Æ¼ÄÃ È®·ü #x% Áõ°¡ "
+                case 13101024: // ì‹¤í”„ìŠ¤ ì—ì´ë“œ
+                    //"MP #mpCon ì†Œë¹„, #timeì´ˆ ë™ì•ˆ í™”ì‚´ ì†Œë¹„ ì—†ì´ ê³µê²© ê°€ëŠ¥í•˜ë©° ê³µê²©ë ¥ #indiePad, í¬ë¦¬í‹°ì»¬ í™•ë¥  #x% ì¦ê°€ "
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_SoulArrow, 1, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_CriticalBuff, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     break;
-                case 13110026: //¼¼ÄÁµå À©µå
+                case 13110026: //ì„¸ì»¨ë“œ ìœˆë“œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     break;
-                case 13121004: //À©µå ºí·¹½Ì
-                    //"MP #mpCon ¼Òºñ, #timeÃÊ µ¿¾È °ø°İ·Â #indiePadR%, ¹ÎÃ¸¼º #x%, ¸íÁß·ü #y%, Ãß°¡ È¸ÇÇÀ² #prop%, ÃÖ´ë HP #indieMhpR% Áõ°¡ "
+                case 13121004: //ìœˆë“œ ë¸”ë ˆì‹±
+                    //"MP #mpCon ì†Œë¹„, #timeì´ˆ ë™ì•ˆ ê³µê²©ë ¥ #indiePadR%, ë¯¼ì²©ì„± #x%, ëª…ì¤‘ë¥  #y%, ì¶”ê°€ íšŒí”¼ìœ¨ #prop%, ìµœëŒ€ HP #indieMhpR% ì¦ê°€ "
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePadR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_EVA, ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMHPR, ret.effects.getStats("indieMhpR"), true));
                     break;
-                case 13111023: //¾Ë¹ÙÆ®·Î½º
+                case 13111023: //ì•Œë°”íŠ¸ë¡œìŠ¤
                     ret.absstats = false;
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMHP, ret.effects.getStats("indieMhp"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieBooster, ret.effects.getStats("indieBooster"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieCr, ret.effects.getStats("indieCr"), true));
                     break;
-                case 13120008: //¾Ë¹ÙÆ®·Î½º ¸Æ½Ã¸Ø
+                case 13120008: //ì•Œë°”íŠ¸ë¡œìŠ¤ ë§¥ì‹œë©ˆ
                     ret.absstats = false;
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IgnoreMobpdpR, ret.effects.getStats("ignoreMobpdpR"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
@@ -2008,38 +2008,38 @@ public class SkillStatEffect {
                 case 13121052:
                     monsterStatus.put(MonsterStatus.Burned, 1);
                     break;
-                case 13121054: //½ºÅè ºê¸µ¾î
+                case 13121054: //ìŠ¤í†° ë¸Œë§ì–´
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_StormBringer, 1, false));
                     break;
 
-                case 3211011: //ÆäÀÎ Å³·¯
+                case 3211011: //í˜ì¸ í‚¬ëŸ¬
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MagicShield, ret.effects.getStats("asrR"), false));
                     break;
-                case 2211012: //¿¤¸®¸àÅ» ¾îµªÆÃ(½ã,Äİ)
+                case 2211012: //ì—˜ë¦¬ë©˜íƒˆ ì–´ëíŒ…(ì¬,ì½œ)
                     ret.overTime = true;
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_AntiMagicShell, 1, false));
                     break;
-                case 2311012: //µğ¹ÙÀÎ ÇÁ·ÎÅØ¼Ç
+                case 2311012: //ë””ë°”ì¸ í”„ë¡œí…ì…˜
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_AntiMagicShell, 1, false));
                     break;
-                case 27111004: //¾ÈÆ¼ ¸ÅÁ÷½©
+                case 27111004: //ì•ˆí‹° ë§¤ì§ì‰˜
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MagicShield, 3, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_TerR, ret.effects.getStats("terR"), false));
                     break;
-                case 2201001: //¸ŞµğÅ×ÀÌ¼Ç
+                case 2201001: //ë©”ë””í…Œì´ì…˜
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMAD, ret.effects.getStats("indieMad"), true));
                     break;
-                case 2201009: //Ä¥¸µ ½ºÅÜ
+                case 2201009: //ì¹ ë§ ìŠ¤í…
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ChillingStep, 1, false));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
-                case 1321015: //»õÅ©¸®ÆÄÀÌ½º
+                case 1321015: //ìƒˆí¬ë¦¬íŒŒì´ìŠ¤
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieBDR, ret.effects.getStats("indieBDR"), true));
                     break;
-                case 21121054: //ÄŞº¸ ¾ğ¸®¹ÌÆ¼µå
+                case 21121054: //ì½¤ë³´ ì–¸ë¦¬ë¯¸í‹°ë“œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ComboUnlimited, ret.effects.getStats("cooltime"), false));
                     break;
-                /*»ç¿ë ÈÄ #timeÃÊ°£ µ¥¹ÌÁö #indieDamR%, µ¥¹ÌÁö ÃÖ´ë°ª #indieMaxDamageOverR% Áõ°¡*/
+                /*ì‚¬ìš© í›„ #timeì´ˆê°„ ë°ë¯¸ì§€ #indieDamR%, ë°ë¯¸ì§€ ìµœëŒ€ê°’ #indieMaxDamageOverR% ì¦ê°€*/
                 case 36121052:
                     monsterStatus.put(MonsterStatus.WDEF, 30);
                     break;
@@ -2056,24 +2056,24 @@ public class SkillStatEffect {
                     ret.overTime = true;
                     break;
                 case 65121054:
-                    //#timeÃÊ°£ ¹æ¾î ¹«½Ã ºñÀ² #indieIgnoreMobpdpR%, º¸½º ¸ó½ºÅÍ °ø°İ ½Ã µ¥¹ÌÁö #indieBDR%, ¼Ò¿ï ½ÃÄ¿ ¿¢½ºÆÛÆ® ¹ßµ¿È®·ü #x% Áõ°¡\nÀç»ç¿ë ´ë±â½Ã°£ #cooltimeÃÊ
+                    //#timeì´ˆê°„ ë°©ì–´ ë¬´ì‹œ ë¹„ìœ¨ #indieIgnoreMobpdpR%, ë³´ìŠ¤ ëª¬ìŠ¤í„° ê³µê²© ì‹œ ë°ë¯¸ì§€ #indieBDR%, ì†Œìš¸ ì‹œì»¤ ì—‘ìŠ¤í¼íŠ¸ ë°œë™í™•ë¥  #x% ì¦ê°€\nì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ #cooltimeì´ˆ
                     statups.add(new Triple<>(BuffStats.CTS_IndieIgnoreMobpdpR, ret.effects.getStats("indieIgnoreMobpdpR"), true));
                     statups.add(new Triple<>(BuffStats.CTS_IndieBDR, ret.effects.getStats("indieBDR"), true));
                     break;
-                case 1211014: // ÆÄ¶ó¼îÅ© °¡µå 
-                    //ÀÚ½ÅÀÇ #c°¡µå È®·ü°ú ¹æ¾î·Â#À» °¨¼Ò½ÃÅ°´Â ´ë½Å ÁÖÀ§ ¾Æ±ºµéÀÇ ÇÇ°İ ½Ã µ¥¹ÌÁö¸¦ °¨¼Ò½ÃÅ°°í ÀÏÁ¤ È®·ü·Î °¡µåÇÒ ¼ö ÀÖ°Ô ÇÏ¸ç 
-                    //ÀÚ½ÅÀÇ #c°ø°İ·ÂÀ» Áõ°¡#½ÃÅ²´Ù.\n½ºÅ³ »ç¿ë ½Ã È¿°ú°¡ È°¼ºÈ­µÇ°í Àç»ç¿ë ½Ã ºñÈ°¼ºÈ­µÇ´Â #c¿Â¿ÀÇÁ ½ºÅ³#
+                case 1211014: // íŒŒë¼ì‡¼í¬ ê°€ë“œ 
+                    //ìì‹ ì˜ #cê°€ë“œ í™•ë¥ ê³¼ ë°©ì–´ë ¥#ì„ ê°ì†Œì‹œí‚¤ëŠ” ëŒ€ì‹  ì£¼ìœ„ ì•„êµ°ë“¤ì˜ í”¼ê²© ì‹œ ë°ë¯¸ì§€ë¥¼ ê°ì†Œì‹œí‚¤ê³  ì¼ì • í™•ë¥ ë¡œ ê°€ë“œí•  ìˆ˜ ìˆê²Œ í•˜ë©° 
+                    //ìì‹ ì˜ #cê³µê²©ë ¥ì„ ì¦ê°€#ì‹œí‚¨ë‹¤.\nìŠ¤í‚¬ ì‚¬ìš© ì‹œ íš¨ê³¼ê°€ í™œì„±í™”ë˜ê³  ì¬ì‚¬ìš© ì‹œ ë¹„í™œì„±í™”ë˜ëŠ” #cì˜¨ì˜¤í”„ ìŠ¤í‚¬#
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePDDR, ret.effects.getStats("x"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_KnightsAura, ret.effects.getStats("z"), true));
                     break;
-                case 100000276: //·¡ÇÇµå Å¸ÀÓ(µğÅØÆ®)
+                case 100000276: //ë˜í”¼ë“œ íƒ€ì„(ë””í…íŠ¸)
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_TimeFastABuff, level, false));
                     break;
-                case 100000277: //·¡ÇÇµå Å¸ÀÓ(ÄÄ¹î)
+                case 100000277: //ë˜í”¼ë“œ íƒ€ì„(ì»´ë±ƒ)
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_TimeFastBBuff, level, false));
                     break;
-                case 100001263: //µğ¹ÙÀÎ Æ÷½º
+                case 100001263: //ë””ë°”ì¸ í¬ìŠ¤
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ZeroAuraStr, 1, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMAD, ret.effects.getStats("indieMad"), true));
@@ -2082,7 +2082,7 @@ public class SkillStatEffect {
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieTerR, ret.effects.getStats("indieTerR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieAsrR, ret.effects.getStats("indieAsrR"), true));
                     break;
-                case 100001264: //µğ¹ÙÀÎ ½ºÀ§ÇÁÆ®
+                case 100001264: //ë””ë°”ì¸ ìŠ¤ìœ„í”„íŠ¸
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ZeroAuraSpd, 1, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieACC, ret.effects.getStats("indieAcc"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieEVA, ret.effects.getStats("indieEva"), true));
@@ -2093,151 +2093,151 @@ public class SkillStatEffect {
                 case 100001216:
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Booster, 1, false));
                     break;
-                case 100001274: //Å¸ÀÓ È¦µù
+                case 100001274: //íƒ€ì„ í™€ë”©
                     ret.effects.setStats("time", 15 * 1000);
-                    //Å¸ÀÓ Æ÷½º #forceCon ¼Òºñ, #timeÃÊ µ¿¾È ¹«Àû »óÅÂ, Å¸ÀÓ ¸®¿ÍÀÎµå¸¦ Á¦¿ÜÇÑ Á¦·ÎÀÇ ¸ğµç ½ºÅ³ Àç»ç¿ë ´ë±â½Ã°£ ÃÊ±âÈ­.\n
-                    //Á¦·Î°¡ 200·¹º§ ÀÌ»óÀÏ °æ¿ì »ç¿ë ÈÄ #xÃÊ°£ µ¥¹ÌÁö #y%, ÃÖ´ë µ¥¹ÌÁö Á¦ÇÑ #z% Áõ°¡\n#cÀç»ç¿ë ´ë±â½Ã°£ #cooltimeÃÊ#"
+                    //íƒ€ì„ í¬ìŠ¤ #forceCon ì†Œë¹„, #timeì´ˆ ë™ì•ˆ ë¬´ì  ìƒíƒœ, íƒ€ì„ ë¦¬ì™€ì¸ë“œë¥¼ ì œì™¸í•œ ì œë¡œì˜ ëª¨ë“  ìŠ¤í‚¬ ì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ ì´ˆê¸°í™”.\n
+                    //ì œë¡œê°€ 200ë ˆë²¨ ì´ìƒì¼ ê²½ìš° ì‚¬ìš© í›„ #xì´ˆê°„ ë°ë¯¸ì§€ #y%, ìµœëŒ€ ë°ë¯¸ì§€ ì œí•œ #z% ì¦ê°€\n#cì¬ì‚¬ìš© ëŒ€ê¸°ì‹œê°„ #cooltimeì´ˆ#"
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_NotDamaged, 1, false));
                     break;
                 case 100001281:
                     ret.effects.setStats("time", 90 * 1000);
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PAD, 10, true));
                     break;
-                case 100001005: //ÀÎÅÄ½Ãºê Å¸ÀÓ
+                case 100001005: //ì¸íƒ ì‹œë¸Œ íƒ€ì„
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PAD, 4, true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IllusionStep, 4, false));
                     break;
-                case 100001272: //Å¸ÀÓ ¸®¿ÍÀÎµå
+                case 100001272: //íƒ€ì„ ë¦¬ì™€ì¸ë“œ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PreReviveOnce, ret.effects.getStats("x"), false));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
-                /* ·é ½ºÅ³ */
-                case 80001427: //½Å¼ÓÀÇ ·é ¹öÇÁ
+                /* ë£¬ ìŠ¤í‚¬ */
+                case 80001427: //ì‹ ì†ì˜ ë£¬ ë²„í”„
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieJump, ret.effects.getStats("indieJump"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieSpeed, ret.effects.getStats("indieSpeed"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieEXP, ret.effects.getStats("indieExp"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieBooster, ret.effects.getStats("indieBooster"), true));
                     ret.isRune = true;
                     break;
-                case 80001428: //Àç»ıÀÇ ·é ¹öÇÁ
+                case 80001428: //ì¬ìƒì˜ ë£¬ ë²„í”„
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DotHealHPPerSecond, 1, false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieEXP, ret.effects.getStats("indieExp"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieAsrR, ret.effects.getStats("indieAsrR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieTerR, ret.effects.getStats("indieTerR"), true));
                     ret.isRune = true;
                     break;
-                case 80001430: //ºØ±«ÀÇ ·é ¹öÇÁ
-                case 80001432: //ÆÄ¸êÀÇ ·é ¹öÇÁ 
+                case 80001430: //ë¶•ê´´ì˜ ë£¬ ë²„í”„
+                case 80001432: //íŒŒë©¸ì˜ ë£¬ ë²„í”„ 
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieEXP, ret.effects.getStats("indieExp"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, ret.effects.getStats("indieDamR"), true));
                     ret.isRune = true;
                     break;
-                case 80001874: //Áõ½ÄÀÇ ·é
+                case 80001874: //ì¦ì‹ì˜ ë£¬
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IncMobRateDummy, ret.effects.getStats("incMobRateDummy"), false));
                     break;
-                case 80001875: //ÃÊ¿ùÀÇ ·éfixCoolTime
+                case 80001875: //ì´ˆì›”ì˜ ë£¬fixCoolTime
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_FixCoolTime, ret.effects.getStats("fixCoolTime"), false));
                     ret.isRune = true;
                     break;
-                case 80001752: //ÃµµÕÀÇ ·é °æÇèÄ¡ ¹öÇÁ
-                case 80001753: //ÁöÁøÀÇ ·é °æÇèÄ¡ ¹öÇÁ
-                case 80001754: //¾îµÒÀÇ ·é °æÇèÄ¡ ¹öÇÁ
-                case 80001877: //Áõ½ÄÀÇ ·é °æÇèÄ¡ ¹öÇÁ
-                case 80001878: //ÃÊ¿ùÀÇ ·é °æÇèÄ¡ ¹öÇÁ
+                case 80001752: //ì²œë‘¥ì˜ ë£¬ ê²½í—˜ì¹˜ ë²„í”„
+                case 80001753: //ì§€ì§„ì˜ ë£¬ ê²½í—˜ì¹˜ ë²„í”„
+                case 80001754: //ì–´ë‘ ì˜ ë£¬ ê²½í—˜ì¹˜ ë²„í”„
+                case 80001877: //ì¦ì‹ì˜ ë£¬ ê²½í—˜ì¹˜ ë²„í”„
+                case 80001878: //ì´ˆì›”ì˜ ë£¬ ê²½í—˜ì¹˜ ë²„í”„
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieEXP, ret.effects.getStats("indieExp"), true));
                     ret.isRune = true;
                     break;
-                case 80001757: //ÁöÁøÀÇ ·é °Å´ë ¹öÇÁ.
+                case 80001757: //ì§€ì§„ì˜ ë£¬ ê±°ëŒ€ ë²„í”„.
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieJump, ret.effects.getStats("indieJump"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieSpeed, ret.effects.getStats("indieSpeed"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Inflation, ret.effects.getStats("x"), false));
                     ret.isRune = true;
                     break;
-                case 80001762: //ÃµµÕÀÇ ·é ¹öÇÁ
-                    statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_RandAreaAttack, 3, false)); //3È¸, WZ¿¡ ¹ÌÁ¸Àç.
+                case 80001762: //ì²œë‘¥ì˜ ë£¬ ë²„í”„
+                    statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_RandAreaAttack, 3, false)); //3íšŒ, WZì— ë¯¸ì¡´ì¬.
                     break;
-                /* ¼Ò¿ï½ºÅ³ */
-                case 80001280: //¿©¿ÕÀÇ Çâ±â´Â ³ªºô·¹¶ó
+                /* ì†Œìš¸ìŠ¤í‚¬ */
+                case 80001280: //ì—¬ì™•ì˜ í–¥ê¸°ëŠ” ë‚˜ë¹Œë ˆë¼
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMHPR, ret.effects.getStats("indieMhpR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMMPR, ret.effects.getStats("indieMmpR"), true));
                     break;
-                case 80001218: //È¸Ãá½Å°ø
+                case 80001218: //íšŒì¶˜ì‹ ê³µ
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PAD, ret.effects.getStats("x"), true));
                     break;
-                case 80001455: //¸®½ºÆ®·¹ÀÎÆ® ¸µ
+                case 80001455: //ë¦¬ìŠ¤íŠ¸ë ˆì¸íŠ¸ ë§
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePADR, ret.effects.getStats("indiePadR"), true));
                     break;
-                case 80001456: //¾óÆ¼¸ŞÀÌ´ı ¸µ
+                case 80001456: //ì–¼í‹°ë©”ì´ë¤ ë§
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ACC, 30000, true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MAD, 30000, true));
                     break;
-                case 80001457: //¸®¹Ô ¸µ
+                case 80001457: //ë¦¬ë°‹ ë§
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieBDR, ret.effects.getStats("indieBDR"), true));
                     break;
-                case 80001458: //Çï½ºÄÆ ¸µ
+                case 80001458: //í—¬ìŠ¤ì»· ë§
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MHPCutR, -ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieBDR, ret.effects.getStats("indieBDR"), true));
                     break;
-                case 80001459: //¸¶³ªÄÆ ¸µ
+                case 80001459: //ë§ˆë‚˜ì»· ë§
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MMPCutR, -ret.effects.getStats("x"), false));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieIgnoreMobpdpR, ret.effects.getStats("indieIgnoreMobpdpR"), true));
                     break;
-                case 80001460: //µà¶óºô¸®Æ¼ ¸µ
+                case 80001460: //ë“€ë¼ë¹Œë¦¬í‹° ë§
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMHPR, -ret.effects.getStats("indieMhpR"), true));
                     break;
-                case 80001474: //½ºÀ§ÇÁÆ® ¸µ
+                case 80001474: //ìŠ¤ìœ„í”„íŠ¸ ë§
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieBooster, ret.effects.getStats("indieBooster"), true));
                     break;
-                case 80001477: //¸®ÇÃ·ºÆ¼ºê ¸µ
+                case 80001477: //ë¦¬í”Œë ‰í‹°ë¸Œ ë§
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ACC, ret.effects.getStats("x"), false));
                     break;
-                case 80001479: //¸®½ºÅ©Å×ÀÌÄ¿ ¸µ
+                case 80001479: //ë¦¬ìŠ¤í¬í…Œì´ì»¤ ë§
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePADR, ret.effects.getStats("indiePadR"), true));
                     break;
                 case 80001466:
                 case 80001467:
-                case 80001468: //½ºÆä¼È ¹İÁö
+                case 80001468: //ìŠ¤í˜ì…œ ë°˜ì§€
                 case 80001469:
                 case 80001470:
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_AttackCountX, 1, false));
                     break;
-                case 80001816: //¹«½ÅÃÊ·Ê
+                case 80001816: //ë¬´ì‹ ì´ˆë¡€
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePAD, ret.effects.getStats("indiePad"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMHPR, ret.effects.getStats("indieMhpR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMMPR, ret.effects.getStats("indieMmpR"), true));
                     break;
-                case 80001843: //È­¿°°á°è!!
+                case 80001843: //í™”ì—¼ê²°ê³„!!
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_FireBarrier, ret.effects.getStats("x"), false));
                     break;
-                //Å×½ºÆ®
-                case 131001000: //ÇÎÅ©ºó °ø°İ
+                //í…ŒìŠ¤íŠ¸
+                case 131001000: //í•‘í¬ë¹ˆ ê³µê²©
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PinkbeanAttackBuff, ret.effects.getStats("u"), false));
                     break;
-                case 131001009: //¸ğµÎ Èû³»¿ä!
+                case 131001009: //ëª¨ë‘ í˜ë‚´ìš”!
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieSpeed, ret.effects.getStats("indieSpeed"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieEXP, ret.effects.getStats("indieExp"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePADR, ret.effects.getStats("indiePadR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMADR, ret.effects.getStats("indieMadR"), true));
                     break;
-                case 131001010: //ÃÊºÒ²É ¿ä¿ä
+                case 131001010: //ì´ˆë¶ˆê½ƒ ìš”ìš”
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PinkbeanYoYoStack, 8, false));
                     break;
-                case 131001015: //¹Ì´Ïºó Ãâµ¿!
+                case 131001015: //ë¯¸ë‹ˆë¹ˆ ì¶œë™!
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PinkbeanMinibeenMove, level, false));
                     break;
-                case 131001106: //¸±·¢½º
+                case 131001106: //ë¦´ë™ìŠ¤
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieEXP, ret.effects.getStats("indieExp"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieAsrR, ret.effects.getStats("indieAsrR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMADR, ret.effects.getStats("indieMadR"), true));
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_PinkbeanRelax, level, false));
                     break;
-                case 36001005: // ÇÉÆ÷ÀÎÆ® ·ÎÄÏ
+                case 36001005: // í•€í¬ì¸íŠ¸ ë¡œì¼“
                     statups.clear();
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_XenonAegisSystem, 1, true));
                     ret.effects.setStats("time", Integer.MAX_VALUE);
                     break;
             }
-            /* ³¡ */
+            /* ë */
             if (GameConstants.isBeginnerJob(sourceid / 10000)) {
                 switch (sourceid % 10000) {
                     case 8001:
@@ -2281,7 +2281,7 @@ public class SkillStatEffect {
             addBuffStatPairToListIfNotZero(statups, BuffStats.CTS_NewFlying, 1, false);
         }
 
-        if (ret.isMonsterRiding() && !ret.isFlyRiding()) { // Ä¡¿ì¾¾ :: ÇÃ¶óÀÌ ¶óÀÌµù
+        if (ret.isMonsterRiding() && !ret.isFlyRiding()) { // ì¹˜ìš°ì”¨ :: í”Œë¼ì´ ë¼ì´ë”©
             addBuffStatPairToListIfNotZero(statups, BuffStats.CTS_MonsterRiding, 1, false);
         }
 
@@ -2315,7 +2315,7 @@ public class SkillStatEffect {
             addBuffStatPairToListIfNotZero(statups, BuffStats.CTS_EPAD, Integer.valueOf(ret.effects.getStats("epad")), false);
             addBuffStatPairToListIfNotZero(statups, BuffStats.CTS_EPDD, Integer.valueOf(ret.effects.getStats("epdd")), false);
             addBuffStatPairToListIfNotZero(statups, BuffStats.CTS_EMDD, Integer.valueOf(ret.effects.getStats("emdd")), false);
-            if (sourceid != 21101005 && sourceid != 22131001 && sourceid == 3211010 && sourceid == 3111010 && sourceid == 1100012) { //¸ÅÁ÷ ½Çµå, µå·¹ÀÎÀº ÆĞ½ÃºêÈ¿°úÀÓ
+            if (sourceid != 21101005 && sourceid != 22131001 && sourceid == 3211010 && sourceid == 3111010 && sourceid == 1100012) { //ë§¤ì§ ì‹¤ë“œ, ë“œë ˆì¸ì€ íŒ¨ì‹œë¸Œíš¨ê³¼ì„
                 addBuffStatPairToListIfNotZero(statups, BuffStats.CTS_MHPCutR, ret.effects.getStats("mhpR"), false);
             }
             addBuffStatPairToListIfNotZero(statups, BuffStats.CTS_MMPCutR, ret.effects.getStats("mmpR"), false);
@@ -2526,30 +2526,30 @@ public class SkillStatEffect {
                 chrs.remove(rand);
             }
             return true;
-        } else if (sourceid == 37000006) { //ÀÎµà¾î·±½º ½Çµå
+        } else if (sourceid == 37000006) { //ì¸ë“€ì–´ëŸ°ìŠ¤ ì‹¤ë“œ
             statups.clear();
             statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_RWBarrier, effects.getStats("x"), false));
-        } else if (sourceid == 11001021 || sourceid == 11121054) { //¼Òµå ¿Àºê ¶óÀÌÆ®, ¼Ò¿ï Æ÷½º ÁßÃ¸ ¹æÁö.
+        } else if (sourceid == 11001021 || sourceid == 11121054) { //ì†Œë“œ ì˜¤ë¸Œ ë¼ì´íŠ¸, ì†Œìš¸ í¬ìŠ¤ ì¤‘ì²© ë°©ì§€.
             applyfrom.cancelEffect(sourceid == 11001021 ? SkillFactory.getSkill(11121054).getEffect(applyfrom.getSkillLevel(11121054))
                     : SkillFactory.getSkill(11001021).getEffect(applyfrom.getSkillLevel(11001021)), false, -1);
         } else if (sourceid == 37121005) {
             statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_RWBarrierHeal, effects.getStats("x"), false));
-        } else if (sourceid == 142110009) { //½ÎÀÌÅ± ½Çµå2(¿Ö°î)
+        } else if (sourceid == 142110009) { //ì‹¸ì´í‚¥ ì‹¤ë“œ2(ì™œê³¡)
             statups.clear();
             statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_KinesisPsychicShield, effects.getStats("er"), false));
             statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Stance, effects.getStats("stanceProp"), false));
             statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndiePDD, effects.getStats("indiePdd"), true));
             statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieMDD, effects.getStats("indieMdd"), true));
-        } else if (sourceid == 101120109) { //ÀÌ¹Ã ¹è¸®¾î
+        } else if (sourceid == 101120109) { //ì´ë®¨ ë°°ë¦¬ì–´
             statups.clear();
             statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ImmuneBarrier, (int) (applyto.getStat().getMaxHp() * (Float.valueOf(effects.getStats("x")) / 100)), false));
-        } else if (sourceid == 80001428) { //Àç»ıÀÇ ·é
+        } else if (sourceid == 80001428) { //ì¬ìƒì˜ ë£¬
             statups.clear();
             statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DotHealHPPerSecond, applyfrom.getStat().getMaxHp() / 10, false));
             statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieEXP, effects.getStats("indieExp"), true));
             statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieAsrR, effects.getStats("indieAsrR"), true));
             statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieTerR, effects.getStats("indieTerR"), true));
-        } else if (sourceid == 21001008) { // ¹Ùµğ ÇÁ·¹¼Å
+        } else if (sourceid == 21001008) { // ë°”ë”” í”„ë ˆì…”
             if (applyfrom.getBuffedValue(BuffStats.CTS_BodyPressure) == null) {
                 statups.clear();
                 statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BodyPressure, effects.getStats("x"), false));
@@ -2563,7 +2563,7 @@ public class SkillStatEffect {
                 statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_NautilusFinalAttack, 1, false));
                 this.effects.setStats("time", cooltime.getCooldown() * 1000);
             }
-        } else if (sourceid == 2321001) { // ºñ¼ó ºò¹ğ
+        } else if (sourceid == 2321001) { // ë¹„ìˆ ë¹…ë±…
             if (applyfrom.getCooldownLimit(2321008) > 0 && applyfrom.getBuffedValue(BuffStats.CTS_KeyDownTimeIgnore, 2321001) == null) {
                 SkillStatEffect cooltime = SkillFactory.getSkill(2321008).getEffect(applyfrom.getSkillLevel(2321008));
                 statups.clear();
@@ -2572,34 +2572,34 @@ public class SkillStatEffect {
             } else {
                 return false;
             }
-        } else if (sourceid == 22110016) { // ¿À´Ğ½ºÀÇ ÀÇÁö
+        } else if (sourceid == 22110016) { // ì˜¤ë‹‰ìŠ¤ì˜ ì˜ì§€
             if (applyfrom.getSkillLevel(22170072) > 0) {
                 SkillStatEffect effect = SkillFactory.getSkill(22170072).getEffect(applyfrom.getSkillLevel(22170072));
                 statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Stance, effect.getProb(), false));
             }
-        } else if (sourceid == 100001263 || sourceid == 100001264) { //µğ¹ÙÀÎ ½ºÀ§ÇÁÆ®, µğ¹ÙÀÎ Æ÷½º ÁßÃ¸ ¹æÁö.
+        } else if (sourceid == 100001263 || sourceid == 100001264) { //ë””ë°”ì¸ ìŠ¤ìœ„í”„íŠ¸, ë””ë°”ì¸ í¬ìŠ¤ ì¤‘ì²© ë°©ì§€.
             applyfrom.cancelEffect(sourceid == 100001263 ? SkillFactory.getSkill(100001264).getEffect(applyfrom.getSkillLevel(100001264)) : SkillFactory.getSkill(100001263).getEffect(applyfrom.getSkillLevel(100001263)), false, -1);
-        } else if (sourceid == 11101022 || sourceid == 11111022) { //Æú¸µ¹®, ¶óÀÌÂ¡¼± ÁßÃ¸ ¹æÁö.
+        } else if (sourceid == 11101022 || sourceid == 11111022) { //í´ë§ë¬¸, ë¼ì´ì§•ì„  ì¤‘ì²© ë°©ì§€.
             int skillid = sourceid == 11101022 ? 11111022 : 11101022;
             applyfrom.cancelEffect(SkillFactory.getSkill(skillid).getEffect(applyfrom.getSkillLevel(skillid)), false, -1);
-        } else if (sourceid == 11121005) { //¼Ö·ç³ª Å¸ÀÓ
+        } else if (sourceid == 11121005) { //ì†”ë£¨ë‚˜ íƒ€ì„
             statups.clear();
             statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_GlimmeringTime, 1, false));
             int stateskill = applyfrom.getBuffedSkillEffect(BuffStats.CTS_PoseType, -1).getSourceId();
             int skillid = stateskill == 11101022 ? 11121012 : 11121011;
             SkillStatEffect stateeffect = SkillFactory.getSkill(skillid).getEffect(applyfrom.getSkillLevel(sourceid));
             stateeffect.applyTo(applyto);
-        } else if (sourceid == 11121011) { //¼Ö·ç³ª Å¸ÀÓ : Æú¸µ ¹®
+        } else if (sourceid == 11121011) { //ì†”ë£¨ë‚˜ íƒ€ì„ : í´ë§ ë¬¸
             statups.clear();
-            //Å©¸®Æ¼ÄÃ È®·ü #indieCr% Áõ°¡, ¸ğµç ½ºÅ³ÀÇ °ø°İ È½¼ö #x¹è Áõ°¡, ÃÖÁ¾ µ¥¹ÌÁö #y%·Î °¨¼Ò
+            //í¬ë¦¬í‹°ì»¬ í™•ë¥  #indieCr% ì¦ê°€, ëª¨ë“  ìŠ¤í‚¬ì˜ ê³µê²© íšŸìˆ˜ #xë°° ì¦ê°€, ìµœì¢… ë°ë¯¸ì§€ #y%ë¡œ ê°ì†Œ
             statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BuckShot, effects.getStats("x"), false));
             statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieCr, effects.getStats("indieCr"), true));
-        } else if (sourceid == 11121012) {//¼Ö·ç³ª Å¸ÀÓ : ¶óÀÌÂ¡ ¼±
-            //µ¥¹ÌÁö #indieDamR% ¹× °ø°İ ¼Óµµ 1´Ü°è Áõ°¡
+        } else if (sourceid == 11121012) {//ì†”ë£¨ë‚˜ íƒ€ì„ : ë¼ì´ì§• ì„ 
+            //ë°ë¯¸ì§€ #indieDamR% ë° ê³µê²© ì†ë„ 1ë‹¨ê³„ ì¦ê°€
             statups.clear();
             statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieBooster, effects.getStats("indieBooster"), true));
             statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_IndieDamR, effects.getStats("indieDamR"), true));
-        } else if (sourceid == 5221021) { //Äü µå·Î¿ì ¹ßµ¿
+        } else if (sourceid == 5221021) { //í€µ ë“œë¡œìš° ë°œë™
             statups.clear();
             statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_QuickDraw, effects.getStats("damR"), false));
         }
@@ -2622,7 +2622,7 @@ public class SkillStatEffect {
 
             if (sourceid == 5211014) {
                 applyfrom.cancelEffectFromBuffStat(BuffStats.CTS_Stance, 5211014);
-            } else if (sourceid == 5321004) { //¼­Æ÷Æ® ¸ùÅ° Æ®À©½º  ±âÁ¸ ¼ÒÈ¯¼ö ÀÖ´ÂÁö Ã¼Å©
+            } else if (sourceid == 5321004) { //ì„œí¬íŠ¸ ëª½í‚¤ íŠ¸ìœˆìŠ¤  ê¸°ì¡´ ì†Œí™˜ìˆ˜ ìˆëŠ”ì§€ ì²´í¬
                 applyfrom.cancelEffectFromBuffStat(BuffStats.CTS_Stance, 5320011);
                 applyfrom.cancelEffectFromBuffStat(BuffStats.CTS_Stance, 5321004);
             }
@@ -2679,31 +2679,31 @@ public class SkillStatEffect {
                 try {
                     SkillFactory.getSkill(5320011).getEffect(applyfrom.getSkillLevel(5320011)).applyTo(applyfrom, applyfrom.getPosition());
                 } catch (Exception e) {
-                    System.out.println("[¿À·ù] ¼­Æ÷Æ® ¸ùÅ° Æ®À©½º ¿À·ù");
+                    System.out.println("[ì˜¤ë¥˜] ì„œí¬íŠ¸ ëª½í‚¤ íŠ¸ìœˆìŠ¤ ì˜¤ë¥˜");
                     if (!ServerConstants.realese) {
                         e.printStackTrace();
                     }
                 }
             }
-            if (sourceid == 3111005) { //ÇÇ´Ğ½º
+            if (sourceid == 3111005) { //í”¼ë‹‰ìŠ¤
                 try {
-                    if (applyfrom.getSkillLevel(3120006) > 0) { //½ºÇÇ¸´ ¸µÅ©
+                    if (applyfrom.getSkillLevel(3120006) > 0) { //ìŠ¤í”¼ë¦¿ ë§í¬
                         SkillFactory.getSkill(3120006).getEffect(applyfrom.getSkillLevel(3120006)).applyTo(applyfrom, applyfrom.getPosition());
                     }
                 } catch (Exception e) {
-                    System.out.println("[¿À·ù] ¼­Æ÷Æ® ¸ùÅ° Æ®À©½º ¿À·ù");
+                    System.out.println("[ì˜¤ë¥˜] ì„œí¬íŠ¸ ëª½í‚¤ íŠ¸ìœˆìŠ¤ ì˜¤ë¥˜");
                     if (!ServerConstants.realese) {
                         e.printStackTrace();
                     }
                 }
             }
-            if (sourceid == 3211005) { //ÇÁ¸®Á®
+            if (sourceid == 3211005) { //í”„ë¦¬ì ¸
                 try {
-                    if (applyfrom.getSkillLevel(3220005) > 0) { //½ºÇÇ¸´ ¸µÅ©
+                    if (applyfrom.getSkillLevel(3220005) > 0) { //ìŠ¤í”¼ë¦¿ ë§í¬
                         SkillFactory.getSkill(3220005).getEffect(applyfrom.getSkillLevel(3220005)).applyTo(applyfrom, applyfrom.getPosition());
                     }
                 } catch (Exception e) {
-                    System.out.println("[¿À·ù] ¼­Æ÷Æ® ¸ùÅ° Æ®À©½º ¿À·ù");
+                    System.out.println("[ì˜¤ë¥˜] ì„œí¬íŠ¸ ëª½í‚¤ íŠ¸ìœˆìŠ¤ ì˜¤ë¥˜");
                     if (!ServerConstants.realese) {
                         e.printStackTrace();
                     }
@@ -2766,7 +2766,7 @@ public class SkillStatEffect {
                     applyto.silentPartyUpdate();
                 }
             }
-        } else if (isMechDoor()) { // ¿ÀÇÂ °ÔÀÌÆ®
+        } else if (isMechDoor()) { // ì˜¤í”ˆ ê²Œì´íŠ¸
             int newId = 0;
             boolean applyBuff = false;
             if (applyto.getMechDoors().size() >= 2) {
@@ -2797,7 +2797,7 @@ public class SkillStatEffect {
                 final Rectangle bounds = calculateBoundingBox(pos != null ? pos : applyfrom.getPosition(), applyfrom.isFacingLeft());
                 final MapleMist mist = new MapleMist(bounds, applyfrom, this, effects.getLevel(), pos == null ? applyto.getPosition() : pos);
                 applyfrom.getMap().spawnMist(mist, getDuration(), isMistPoison(), false, isRecovery(), isBurningRegion(), isTimeCapsule(), false, isAran());
-                applyfrom.dropMessage(6, "½ºÆù ¹Ì½ºÆ® ¹ßµ¿ À¯Áö½Ã°£ : " + getDuration() + "ÃÊ");
+                applyfrom.dropMessage(6, "ìŠ¤í° ë¯¸ìŠ¤íŠ¸ ë°œë™ ìœ ì§€ì‹œê°„ : " + getDuration() + "ì´ˆ");
                 if (isTimeCapsule()) {
                     applyfrom.send(MainPacketCreator.TimeCapsule());
                     applyfrom.setChairText(null);
@@ -2807,14 +2807,14 @@ public class SkillStatEffect {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-        } else if (isTimeLeap() || isTimeHolding()) { // Time Leap & Å¸ÀÓ È¦µù
+        } else if (isTimeLeap() || isTimeHolding()) { // Time Leap & íƒ€ì„ í™€ë”©
             for (MapleCoolDownValueHolder i : applyto.getAllCooldowns()) {
                 if (i.skillId != sourceid) {
                     applyto.removeCooldown(i.skillId);
                     applyto.getClient().getSession().writeAndFlush(MainPacketCreator.skillCooldown(i.skillId, 0, applyto.getBuffedValue(BuffStats.CTS_StrikerHyperElectric) != null, applyto.getBuffedValue(BuffStats.CTS_FixCoolTime) != null, applyto.isGM()));
                 }
             }
-        } else if (isMagicCrash()) { //¸ÅÁ÷ Å©·¡½¬
+        } else if (isMagicCrash()) { //ë§¤ì§ í¬ë˜ì‰¬
             final Rectangle bounds = calculateBoundingBox(pos != null ? pos : applyfrom.getPosition(), applyfrom.isFacingLeft());
             int i = 0;
             List<MonsterStatus> cancel = new ArrayList<MonsterStatus>();
@@ -2847,7 +2847,7 @@ public class SkillStatEffect {
 
         } else if (isInfinity()) {
             applyto.startInfinityRegen(this, alchemistModifyVal(applyto, effects.getStats("time"), false));
-        } else if (isExceed(sourceid)) { // ÀÍ½Ãµå ½ºÅ³½ÃÀü½Ã ¹öÇÁÁö±Ş
+        } else if (isExceed(sourceid)) { // ìµì‹œë“œ ìŠ¤í‚¬ì‹œì „ì‹œ ë²„í”„ì§€ê¸‰
             int count = applyto.getStat().getDemonCount();
             int overload = applyto.getStat().getOverLoad();
             final List<Triple<BuffStats, Integer, Boolean>> DemonE = Collections.singletonList(new Triple<>(BuffStats.CTS_OverloadCount, effects.getStats("x"), false));
@@ -2864,38 +2864,38 @@ public class SkillStatEffect {
             } else {
                 applyto.getStat().setDemonCount(0);
             }
-        } else if (sourceid == 1211010) { //¸®½ºÅä³×ÀÌ¼Ç
+        } else if (sourceid == 1211010) { //ë¦¬ìŠ¤í† ë„¤ì´ì…˜
             int recover = (int) (applyto.getStat().getCurrentMaxHp() * (getX() / 100.0D));
             applyto.addHP(recover);
-        } else if (sourceid == 1281) { // ¸®ÅÏ Åõ ¸ŞÀÌÇÃ (¸ğÇè°¡)
+        } else if (sourceid == 1281) { // ë¦¬í„´ íˆ¬ ë©”ì´í”Œ (ëª¨í—˜ê°€)
             if (applyto.getEventInstance() == null) {
                 MapleMap map = applyto.getClient().getChannelServer().getMapFactory().getMap(20000);
                 applyto.changeMap(map, map.getPortal(0));
             } else {
-                applyto.dropMessage(5, "ÀÌ°÷¿¡¼­´Â »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.");
+                applyto.dropMessage(5, "ì´ê³³ì—ì„œëŠ” ì‚¬ìš©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
             }
-        } else if (sourceid == 10001245) { // Á®ÁöÈ¨ (½Ã±×³Ê½º)
+        } else if (sourceid == 10001245) { // ì ¸ì§€í™ˆ (ì‹œê·¸ë„ˆìŠ¤)
             if (applyto.getEventInstance() == null) {
                 MapleMap map = applyto.getClient().getChannelServer().getMapFactory().getMap(130000000);
                 applyto.changeMap(map, map.getPortal(0));
             } else {
-                applyto.dropMessage(5, "ÀÌ°÷¿¡¼­´Â »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.");
+                applyto.dropMessage(5, "ì´ê³³ì—ì„œëŠ” ì‚¬ìš©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
             }
-        } else if (sourceid == 20031203) { // ¸®ÅÏ ¿Àºê ÆÒÅÒ (ÆÒÅÒ)
+        } else if (sourceid == 20031203) { // ë¦¬í„´ ì˜¤ë¸Œ íŒ¬í…€ (íŒ¬í…€)
             if (applyto.getEventInstance() == null) {
                 MapleMap map = applyto.getClient().getChannelServer().getMapFactory().getMap(150000000);
                 applyto.changeMap(map, map.getPortal(0));
             } else {
-                applyto.dropMessage(5, "ÀÌ°÷¿¡¼­´Â »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.");
+                applyto.dropMessage(5, "ì´ê³³ì—ì„œëŠ” ì‚¬ìš©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
             }
-        } else if (sourceid == 100001262) { // ¸®Æ®·¹ÀÌ½º ÅÛÇÃ (Á¦·Î)
+        } else if (sourceid == 100001262) { // ë¦¬íŠ¸ë ˆì´ìŠ¤ í…œí”Œ (ì œë¡œ)
             if (applyto.getEventInstance() == null) {
                 MapleMap map = applyto.getClient().getChannelServer().getMapFactory().getMap(320000000);
                 applyto.changeMap(map, map.getPortal(0));
             } else {
-                applyto.dropMessage(5, "ÀÌ°÷¿¡¼­´Â »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.");
+                applyto.dropMessage(5, "ì´ê³³ì—ì„œëŠ” ì‚¬ìš©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
             }
-        } else if (sourceid == 2311009) { //È¦¸® ¸ÅÁ÷½©
+        } else if (sourceid == 2311009) { //í™€ë¦¬ ë§¤ì§ì‰˜
             if (applyto.getKeyValue("HolyMagicShell_lastReceived") == null) {
                 applyto.setKeyValue("HolyMagicShell_lastReceived", System.currentTimeMillis() + "");
             }
@@ -2920,7 +2920,7 @@ public class SkillStatEffect {
         return true;
     }
 
-    public final boolean applyReturnScroll(final MapleCharacter applyto) { // Ä¡¿ì¾¾ :: ¸¶À» ±ÍÈ¯ ÁÖ¹®¼­ ¼­¹öÈ­
+    public final boolean applyReturnScroll(final MapleCharacter applyto) { // ì¹˜ìš°ì”¨ :: ë§ˆì„ ê·€í™˜ ì£¼ë¬¸ì„œ ì„œë²„í™”
         if (applyto.getMapId() != ServerConstants.mainMap) {
             MapleMap home;
             home = applyto.getClient().getChannelServer().getMapFactory().getMap(ServerConstants.mainMap);
@@ -2935,7 +2935,7 @@ public class SkillStatEffect {
         return false;
     }
 
-    /*public final boolean applyReturnScroll(final MapleCharacter applyto) { // Ä¡¿ì¾¾ :: ¸¶À» ±ÍÈ¯ ÁÖ¹®¼­ ¿øº» ¼Ò½º
+    /*public final boolean applyReturnScroll(final MapleCharacter applyto) { // ì¹˜ìš°ì”¨ :: ë§ˆì„ ê·€í™˜ ì£¼ë¬¸ì„œ ì›ë³¸ ì†ŒìŠ¤
         if (effects.getStats("moveTo") != -1) {
             if (applyto.getMap().getReturnMapId() != applyto.getMapId()) {
                 MapleMap target;
@@ -2966,7 +2966,7 @@ public class SkillStatEffect {
                 final MapleCharacter affected = (MapleCharacter) affectedmo;
                 if (affected != applyfrom && (isGmBuff() || applyfrom.getParty().equals(affected.getParty()))) {
                     if ((isResurrection() && !affected.isAlive()) || (!isResurrection() && affected.isAlive())) {
-                        if (sourceid == 2311009) { //È¦¸® ¸ÅÁ÷½© 30ÃÊ º¸È£¸· Àû¿ë ºÒ°¡
+                        if (sourceid == 2311009) { //í™€ë¦¬ ë§¤ì§ì‰˜ 30ì´ˆ ë³´í˜¸ë§‰ ì ìš© ë¶ˆê°€
                             if (affected.getKeyValue("HolyMagicShell_lastReceived") != null) {
                                 long lasttime = Long.parseLong(affected.getKeyValue("HolyMagicShell_lastReceived"));
                                 if (lasttime + (getY() * 1000) > System.currentTimeMillis()) {
@@ -3029,7 +3029,7 @@ public class SkillStatEffect {
                     break;
                 case 7:
                     int count = 0;
-                    if (sourceid == 13120003) { // ¿©±â¼­ count °¡ Æ®¶óÀÌÇÃ¸µ ¿úÀÇ °¹¼ö (By.ÇÃ·£´õ½º)
+                    if (sourceid == 13120003) { // ì—¬ê¸°ì„œ count ê°€ íŠ¸ë¼ì´í”Œë§ ì›œì˜ ê°¯ìˆ˜ (By.í”Œëœë”ìŠ¤)
                         count = Randomizer.rand(1, 5);
                     } else if (sourceid == 13110022) {
                         count = Randomizer.rand(1, 4);
@@ -3193,7 +3193,7 @@ public class SkillStatEffect {
         this.applyBuffEffect(applyfrom, applyto, primary, lightCharge);
     }
 
-    private final void applyBuffEffect(final MapleCharacter applyfrom, final MapleCharacter applyto, final boolean primary, final boolean lightCharge) { // Ä¡¿ì¾¾ :: '¾Ë¼ö¾ø´Â¿À·ù·Î ½ºÅ³»ç¿ë¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù' ¶óÀÌµù ¿À·ù
+    private final void applyBuffEffect(final MapleCharacter applyfrom, final MapleCharacter applyto, final boolean primary, final boolean lightCharge) { // ì¹˜ìš°ì”¨ :: 'ì•Œìˆ˜ì—†ëŠ”ì˜¤ë¥˜ë¡œ ìŠ¤í‚¬ì‚¬ìš©ì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤' ë¼ì´ë”© ì˜¤ë¥˜
         if (sourceid == 5311005) {
             final int DoubleDice = applyto.getSkillLevel(SkillFactory.getSkill(5320007));
             if (DoubleDice > 0) {
@@ -3234,14 +3234,14 @@ public class SkillStatEffect {
                     applyto.getClient().getSession().writeAndFlush(MainPacketCreator.showRandBuffEffect(applyto.getId(), sourceid, rand1, level, false, false));
                     applyto.getClient().getSession().writeAndFlush(MainPacketCreator.showRandBuffEffect(applyto.getId(), sourceid, rand2, level, false, true));
                     if (rand1 == 1 && rand2 == 1) {
-                        applyto.dropMessage(5, "´õºí ·°Å° ´ÙÀÌ½º ½ºÅ³ÀÌ [" + rand2 + "], [" + rand1 + "] ÀÌ ³ª¿Í ¾Æ¹«·± È¿°ú¸¦ ¹ŞÁö ¸øÇß½À´Ï´Ù.");
+                        applyto.dropMessage(5, "ë”ë¸” ëŸ­í‚¤ ë‹¤ì´ìŠ¤ ìŠ¤í‚¬ì´ [" + rand2 + "], [" + rand1 + "] ì´ ë‚˜ì™€ ì•„ë¬´ëŸ° íš¨ê³¼ë¥¼ ë°›ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
                         return;
                     } else if (rand1 == 1) {
-                        applyto.dropMessage(5, "´õºí ·°Å° ´ÙÀÌ½º ½ºÅ³ÀÌ [" + rand2 + "] ¹ø È¿°ú¸¦ ¹ßµ¿ ½ÃÄ×½À´Ï´Ù.");
+                        applyto.dropMessage(5, "ë”ë¸” ëŸ­í‚¤ ë‹¤ì´ìŠ¤ ìŠ¤í‚¬ì´ [" + rand2 + "] ë²ˆ íš¨ê³¼ë¥¼ ë°œë™ ì‹œì¼°ìŠµë‹ˆë‹¤.");
                     } else if (rand2 == 1) {
-                        applyto.dropMessage(5, "´õºí ·°Å° ´ÙÀÌ½º ½ºÅ³ÀÌ [" + rand1 + "] ¹ø È¿°ú¸¦ ¹ßµ¿ ½ÃÄ×½À´Ï´Ù.");
+                        applyto.dropMessage(5, "ë”ë¸” ëŸ­í‚¤ ë‹¤ì´ìŠ¤ ìŠ¤í‚¬ì´ [" + rand1 + "] ë²ˆ íš¨ê³¼ë¥¼ ë°œë™ ì‹œì¼°ìŠµë‹ˆë‹¤.");
                     } else {
-                        applyto.dropMessage(5, "´õºí ·°Å° ´ÙÀÌ½º ½ºÅ³ÀÌ [" + rand2 + "], [" + rand1 + "] ¹ø È¿°ú¸¦ ¹ßµ¿ ½ÃÄ×½À´Ï´Ù.");
+                        applyto.dropMessage(5, "ë”ë¸” ëŸ­í‚¤ ë‹¤ì´ìŠ¤ ìŠ¤í‚¬ì´ [" + rand2 + "], [" + rand1 + "] ë²ˆ íš¨ê³¼ë¥¼ ë°œë™ ì‹œì¼°ìŠµë‹ˆë‹¤.");
                     }
                     final List<Triple<BuffStats, Integer, Boolean>> stat = Collections.singletonList(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Dice, doublediceid, false));
                     applyto.getClient().getSession().writeAndFlush(MainPacketCreator.giveDoubleDice(doublediceid, sourceid, localDuration, stat));
@@ -3250,12 +3250,12 @@ public class SkillStatEffect {
                     applyto.getMap().broadcastMessage(applyto, MainPacketCreator.showRandBuffEffect(applyto.getId(), tempsource, diceid, level, true, false), false);
                     applyto.getClient().getSession().writeAndFlush(MainPacketCreator.showRandBuffEffect(applyto.getId(), tempsource, diceid, level, false, false));
                     if (diceid <= 1) {
-                        applyto.dropMessage(5, "·°Å° ´ÙÀÌ½º ½ºÅ³ÀÌ [1] ÀÌ ³ª¿Í ¾Æ¹«·± È¿°ú¸¦ ¹ŞÁö ¸øÇß½À´Ï´Ù.");
+                        applyto.dropMessage(5, "ëŸ­í‚¤ ë‹¤ì´ìŠ¤ ìŠ¤í‚¬ì´ [1] ì´ ë‚˜ì™€ ì•„ë¬´ëŸ° íš¨ê³¼ë¥¼ ë°›ì§€ ëª»í–ˆìŠµë‹ˆë‹¤.");
                         return;
                     }
                     final List<Triple<BuffStats, Integer, Boolean>> stat = Collections.singletonList(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Dice, Integer.valueOf(diceid), false));
                     applyto.getClient().getSession().writeAndFlush(MainPacketCreator.giveDice(diceid, tempsource, localDuration, stat));
-                    applyto.dropMessage(5, "·°Å° ´ÙÀÌ½º ½ºÅ³ÀÌ [" + diceid + "] ¹ø È¿°ú¸¦ ¹ßµ¿ ½ÃÄ×½À´Ï´Ù.");
+                    applyto.dropMessage(5, "ëŸ­í‚¤ ë‹¤ì´ìŠ¤ ìŠ¤í‚¬ì´ [" + diceid + "] ë²ˆ íš¨ê³¼ë¥¼ ë°œë™ ì‹œì¼°ìŠµë‹ˆë‹¤.");
                 }
                 normal = false;
                 break;
@@ -3280,7 +3280,7 @@ public class SkillStatEffect {
                 normal = false;
                 break;
             }
-            case 3101009: { // Äû¹ö Ä«Æ®¸®Áö
+            case 3101009: { // í€´ë²„ ì¹´íŠ¸ë¦¬ì§€
                 if (applyto.quiver && applyto.quivermode < 3) {
                     applyto.quivermode += 1;
                 } else {
@@ -3300,8 +3300,8 @@ public class SkillStatEffect {
                 statups.add(new Triple<>(BuffStats.CTS_QuiverCatridge, (applyto.quivercount[0] * 10000) + (applyto.quivercount[1] * 100) + (applyto.quivercount[2] * 1), false));
                 break;
             }
-            case 60001216:   //¸®¼ÅÇÃ½ºÀ§Ä¡ : ¹æ¾î¸ğµå
-            case 60001217: { //¸®¼ÅÇÃ½ºÀ§Ä¡ : °ø°İ ¸ğµå
+            case 60001216:   //ë¦¬ì…”í”ŒìŠ¤ìœ„ì¹˜ : ë°©ì–´ëª¨ë“œ
+            case 60001217: { //ë¦¬ì…”í”ŒìŠ¤ìœ„ì¹˜ : ê³µê²© ëª¨ë“œ
                 if (applyto.getBuffedValue(BuffStats.CTS_ReshuffleSwitch) != null) {
                     if (applyto.getSkillLevel(60001216) > 0) {
                         applyto.cancelEffectFromBuffStat(BuffStats.CTS_ReshuffleSwitch, 60001217);
@@ -3312,7 +3312,7 @@ public class SkillStatEffect {
                 }
                 break;
             }
-            // Àª ¿Àºê ¼Òµå
+            // ìœŒ ì˜¤ë¸Œ ì†Œë“œ
             case 61101002:
             case 61110211:
             case 61120007:
@@ -3324,9 +3324,9 @@ public class SkillStatEffect {
                 }
                 break;
             }
-            case 61111008:   // ÆÄÀÌ³Î ÇÇ±Ô·¹ÀÌ¼Ç (3Â÷)
+            case 61111008:   // íŒŒì´ë„ í”¼ê·œë ˆì´ì…˜ (3ì°¨)
             case 61120008:
-            case 61121053: { // ÆÄÀÌ³Î ÇÇ±Ô·¹ÀÌ¼Ç (4Â÷)
+            case 61121053: { // íŒŒì´ë„ í”¼ê·œë ˆì´ì…˜ (4ì°¨)
                 if (applyto.getJob() == 6112 && sourceid == 61111008) {
                     if (applyto.getSkillLevel(61120007) < 0) {
                         applyto.changeSkillLevel(61120007, (byte) 30, (byte) 30);
@@ -3354,7 +3354,7 @@ public class SkillStatEffect {
                 applyto.send(MainPacketCreator.giveArcane(sourceid, getSkillStats().getStats("x") * applyto.acaneAim, applyto.getAllLinkMid(), localDuration));
                 normal = false;
                 break;
-            case 1211006: //¶óÀÌÆ®´× Â÷Áö ÀÌ¿Ü
+            case 1211006: //ë¼ì´íŠ¸ë‹ ì°¨ì§€ ì´ì™¸
             case 1211004:
             case 1221004:
                 List<Triple<BuffStats, Integer, Boolean>> statt = Collections.singletonList(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_WeaponCharge, 1, false));
@@ -3363,7 +3363,7 @@ public class SkillStatEffect {
                     SkillFactory.getSkill(1211008).getEffect(applyto.getSkillLevel(1211008)).applyBuffEffect(applyto, applyto, primary, true);
                 }
                 break;
-            case 11121054: { //¼Ò¿ï Æ÷Áö
+            case 11121054: { //ì†Œìš¸ í¬ì§€
                 final List<Triple<BuffStats, Integer, Boolean>> stat = Collections.singletonList(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_LightOfSpirit, (sourceid == 11001021 ? 1 : 2), false));
                 if (!applyto.isHidden()) {
                     applyto.getMap().broadcastMessage(applyto, MainPacketCreator.giveForeignBuff(applyto, stat), false);
@@ -3372,9 +3372,9 @@ public class SkillStatEffect {
                 break;
             }
 
-            case 4111002: // ½¦µµ¿ì ÆÄÆ®³Ê
-            case 4211008: // ½¦µµ¿ì ÆÄÆ®³Ê
-            case 36111006: {//¹öÃß¾ó ÇÁ·ÎÁ§¼Ç
+            case 4111002: // ì‰ë„ìš° íŒŒíŠ¸ë„ˆ
+            case 4211008: // ì‰ë„ìš° íŒŒíŠ¸ë„ˆ
+            case 36111006: {//ë²„ì¶”ì–¼ í”„ë¡œì ì…˜
                 final List<Triple<BuffStats, Integer, Boolean>> stat = Collections.singletonList(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ShadowPartner, 1, false));
                 if (!applyto.isHidden()) {
                     applyto.getMap().broadcastMessage(applyto, MainPacketCreator.giveForeignBuff(applyto, stat), false);
@@ -3382,12 +3382,12 @@ public class SkillStatEffect {
                 }
                 break;
             }
-            case 1211008: //¶óÀÌÆ®´× Â÷Áö
+            case 1211008: //ë¼ì´íŠ¸ë‹ ì°¨ì§€
                 if ((applyto.getBuffedValue(BuffStats.CTS_WeaponCharge) != null && applyto.getBuffedValue(BuffStats.CTS_WeaponCharge, 1211008) == null) || lightCharge) {
                     this.statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MAD, getSkillStats().getStats("mad"), false));
                 }
                 break;
-            case 3220005: { //½ºÇÇ¸´ ¸µÅ© : ÇÁ¸®Á®
+            case 3220005: { //ìŠ¤í”¼ë¦¿ ë§í¬ : í”„ë¦¬ì ¸
                 SkillStatEffect eff_ = SkillFactory.getSkill(3211005).getEffect(applyto.getSkillLevel(3211005));
                 effects.setStats("time", eff_.getSkillStats().getStats("time"));
                 localDuration = eff_.getDuration();
@@ -3395,7 +3395,7 @@ public class SkillStatEffect {
                 normal = false;
                 break;
             }
-            case 3120006: { //½ºÇÇ¸´ ¸µÅ© : ÇÇ´Ğ½º
+            case 3120006: { //ìŠ¤í”¼ë¦¿ ë§í¬ : í”¼ë‹‰ìŠ¤
                 SkillStatEffect eff_ = SkillFactory.getSkill(3111005).getEffect(applyto.getSkillLevel(3111005));
                 effects.setStats("time", eff_.getSkillStats().getStats("time"));
                 localDuration = eff_.getDuration();
@@ -3403,7 +3403,7 @@ public class SkillStatEffect {
                 normal = false;
                 break;
             }
-            case 20031210: { // »¡°­ ÀúÁö¸ÕÆ® - 120725 Ãß°¡
+            case 20031210: { // ë¹¨ê°• ì €ì§€ë¨¼íŠ¸ - 120725 ì¶”ê°€
                 if (applyto.getCardStack() < 40) {
                     applyto.getClient().getSession().close();
                     return;
@@ -3426,14 +3426,14 @@ public class SkillStatEffect {
                 applyto.getMap().broadcastMessage(MainPacketCreator.showRandBuffEffect(applyto.getId(), sourceid, rand, 3, true, false));
                 applyto.getMap().broadcastMessage(applyto, MainPacketCreator.absorbingCardStack(applyto.getId(), 4, skillid, true, 5), true);
                 applyto.send(MainPacketCreator.showRandBuffEffect(applyto.getId(), sourceid, rand, 1, false, false));
-                //0 : Å©¸®Æ¼ÄÃ, 1 : ¾ÆÀÌÅÛµå·Ó·ü 2 : ¸ô¶ó 3 : ¸ô¶ó 4: ¸ô¶ó
+                //0 : í¬ë¦¬í‹°ì»¬, 1 : ì•„ì´í…œë“œë¡­ë¥  2 : ëª°ë¼ 3 : ëª°ë¼ 4: ëª°ë¼
                 final List<Triple<BuffStats, Integer, Boolean>> stat = Collections.singletonList(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DebuffTolerance, rand == 0 ? 5 : 10, false));
                 applyto.send(MainPacketCreator.givePhantomJudgement(sourceid, getDuration(), stat, rand + 1));
                 statups = stat;
                 normal = false;
                 break;
             }
-            case 20031209: { //ÀúÁö¸ÕÆ®
+            case 20031209: { //ì €ì§€ë¨¼íŠ¸
                 if (applyto.getCardStack() < 20) {
                     applyto.getClient().getSession().close();
                     return;
@@ -3453,14 +3453,14 @@ public class SkillStatEffect {
                 applyto.getMap().broadcastMessage(applyto, MainPacketCreator.absorbingCardStack(applyto.getId(), 0, skillid, true, 5), true);
                 applyto.getMap().broadcastMessage(MainPacketCreator.showRandBuffEffect(applyto.getId(), sourceid, rand, 1, true, false));
                 applyto.send(MainPacketCreator.showRandBuffEffect(applyto.getId(), sourceid, rand, 1, false, false));
-                //0 : Å©¸®Æ¼ÄÃ, 1 : ¾ÆÀÌÅÛµå·Ó·ü
+                //0 : í¬ë¦¬í‹°ì»¬, 1 : ì•„ì´í…œë“œë¡­ë¥ 
                 final List<Triple<BuffStats, Integer, Boolean>> stat = Collections.singletonList(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_DebuffTolerance, rand == 0 ? 5 : 10, false));
                 applyto.send(MainPacketCreator.givePhantomJudgement(sourceid, getDuration(), stat, rand + 1));
                 statups = stat;
                 normal = false;
                 break;
             }
-            case 27100003: { //ºí·¹½º ¿Àºê ´ÙÅ©´Ï½º
+            case 27100003: { //ë¸”ë ˆìŠ¤ ì˜¤ë¸Œ ë‹¤í¬ë‹ˆìŠ¤
                 final List<Triple<BuffStats, Integer, Boolean>> stat = Collections.singletonList(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BlessOfDarkness, Integer.valueOf(applyto.getBlessOfDark()), false));
                 applyto.getClient().getSession().writeAndFlush(MainPacketCreator.giveBuff(sourceid, localDuration, stat, this, null, SkillFactory.getSkill(sourceid).getAnimationTime(), applyto));
                 normal = false;
@@ -3569,10 +3569,10 @@ public class SkillStatEffect {
                 }
             }
             case 1301013: {
-                effects.setStats("sBeholder", 0); // ÀÓ½ÃÃ³¸®
+                effects.setStats("sBeholder", 0); // ì„ì‹œì²˜ë¦¬
                 break;
             }
-            case 100001268: { //·ô´ÀÀÇ °¡È£
+            case 100001268: { //ë¥€ëŠì˜ ê°€í˜¸
                 statups.clear();
                 if (GameConstants.isZero(applyto.getJob())) {
                     statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BasicStatUp, effects.getStats("x"), false));
@@ -3597,7 +3597,7 @@ public class SkillStatEffect {
             }
             case 21000000: {
                 statups.clear();
-                //½ºÅÄ½º #stanceProp% Áõ°¡, ÄŞº¸ Ä«¿îÆ® 50 ´ç °ø°İ·Â #y, ¹°¸® ¹æ¾î·Â #z, ¸¶¹ı ¹æ¾î·Â #z, ÀÌµ¿¼Óµµ #w¾¿ ÃÖ´ë #xÈ¸±îÁö ´©ÀûÈ¿°ú ÁßÃ¸
+                //ìŠ¤íƒ ìŠ¤ #stanceProp% ì¦ê°€, ì½¤ë³´ ì¹´ìš´íŠ¸ 50 ë‹¹ ê³µê²©ë ¥ #y, ë¬¼ë¦¬ ë°©ì–´ë ¥ #z, ë§ˆë²• ë°©ì–´ë ¥ #z, ì´ë™ì†ë„ #wì”© ìµœëŒ€ #xíšŒê¹Œì§€ ëˆ„ì íš¨ê³¼ ì¤‘ì²©
                 statups.add(new Triple<>(BuffStats.CTS_Stance, effects.getStats("stanceProp"), false));
                 statups.add(new Triple<>(BuffStats.CTS_PAD, getY() * applyto.getCombo() / 50, true));
                 statups.add(new Triple<>(BuffStats.CTS_PDD, getZ() * applyto.getCombo() / 50, true));
@@ -3614,10 +3614,10 @@ public class SkillStatEffect {
                 applyto.giveDebuff(DiseaseStats.STUN, MobSkillFactory.getMobSkill(123, 1));
                 break;
             }
-            /*case 32001014: // µ¥½º
-            case 32100010: // µ¥½º ÄÁÆ®·¢Æ®
-            case 32110017: // µ¥½º ÄÁÆ®·¢Æ®2
-            case 32120019: { // µ¥½º ÄÁÆ®·¢Æ®3
+            /*case 32001014: // ë°ìŠ¤
+            case 32100010: // ë°ìŠ¤ ì»¨íŠ¸ë™íŠ¸
+            case 32110017: // ë°ìŠ¤ ì»¨íŠ¸ë™íŠ¸2
+            case 32120019: { // ë°ìŠ¤ ì»¨íŠ¸ë™íŠ¸3
                 statups.clear();
                 statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_BMageDeath, applyto.deathCount, false));
                 break;
@@ -3648,7 +3648,7 @@ public class SkillStatEffect {
                         return;
                     }
                 }
-                //ÃÖ´ë #x ´Ü°è±îÁö ´©Àû °¡´É, #timeÃÊ°£ À¯Áö, 1´Ü°è ´ç ÃÖÁ¾ µ¥¹ÌÁö #y% Áõ°¡, #w´Ü°è ´ç °ø°İ ¼Óµµ 1´Ü°è Áõ°¡, #z´Ü°è ´ç ½ºÅ³ ¿¬°è ¼Óµµ 1´Ü°è Áõ°¡\n¿µ±¸È÷ °ø°İ·Â #padR% Áõ°¡
+                //ìµœëŒ€ #x ë‹¨ê³„ê¹Œì§€ ëˆ„ì  ê°€ëŠ¥, #timeì´ˆê°„ ìœ ì§€, 1ë‹¨ê³„ ë‹¹ ìµœì¢… ë°ë¯¸ì§€ #y% ì¦ê°€, #wë‹¨ê³„ ë‹¹ ê³µê²© ì†ë„ 1ë‹¨ê³„ ì¦ê°€, #zë‹¨ê³„ ë‹¹ ìŠ¤í‚¬ ì—°ê³„ ì†ë„ 1ë‹¨ê³„ ì¦ê°€\nì˜êµ¬íˆ ê³µê²©ë ¥ #padR% ì¦ê°€
                 applyto.combination++;
                 if (applyto.combination > 10) {
                     applyto.combination = 10;
@@ -3657,12 +3657,12 @@ public class SkillStatEffect {
                 statups.add(new Triple<>(BuffStats.CTS_RWCombination, applyto.combination, false));
                 break;
             }
-            /* Á¾·á */
+            /* ì¢…ë£Œ */
             default:
-                if (sourceid == 22171080 ? isEvanDragonMaster() : isMonsterRiding()) { // Ä¡¿ì½Ã :: ¿¡¹İ ÇÏÀÌÆÛ ¶óÀÌµù ºĞ¸®
+                if (sourceid == 22171080 ? isEvanDragonMaster() : isMonsterRiding()) { // ì¹˜ìš°ì‹œ :: ì—ë°˜ í•˜ì´í¼ ë¼ì´ë”© ë¶„ë¦¬
                     statups.clear();
                     int mountid = (sourceid == 33001001 ? GameConstants.getJaguarIdByMob(applyto.getKeyValue2("CapturedJaguar")) : parseMountInfo(applyfrom, sourceid));
-                    if (sourceid == 33001001) { //Àç±Ô¾î ¶óÀÌµù
+                    if (sourceid == 33001001) { //ì¬ê·œì–´ ë¼ì´ë”©
                         SkillStatEffect sjagur = applyto.getBuffedSkillEffect(BuffStats.CTS_JaguarSummoned);
                         if (sjagur != null) {
                             applyto.cancelEffect(sjagur, false, applyto.getBuffedStarttime(BuffStats.CTS_JaguarSummoned, sjagur.getSourceId()));
@@ -3672,12 +3672,12 @@ public class SkillStatEffect {
                             applyto.cancelEffect(ja_eff, true, -1);
                         }
                         statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MonsterRiding, mountid, false));
-                    } else if (sourceid == 35001002) { //¸ŞÅ»¾Æ¸Ó : ÈŞ¸Õ
+                    } else if (sourceid == 35001002) { //ë©”íƒˆì•„ë¨¸ : íœ´ë¨¼
                         statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Mechanic, 0, false));
                         statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MonsterRiding, mountid, false));
                         applyto.setKeyValue2("mountid", mountid);
                         applyto.setKeyValue2("mountskillid", sourceid);
-                    } else if (sourceid == 35111003) { //¸ŞÅ»¾Æ¸Ó : ÅÊÅ©
+                    } else if (sourceid == 35111003) { //ë©”íƒˆì•„ë¨¸ : íƒ±í¬
                         statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_MonsterRiding, mountid, false));
                         statups.add(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_Mechanic, 1, false));
                         applyto.setKeyValue2("mountid", mountid);
@@ -3709,7 +3709,7 @@ public class SkillStatEffect {
 
         if (sourceid == 35001002 || sourceid == 35111003) {
             applyto.send(MechanicSkill.giveHuman(statups, sourceid, localDuration, parseMountInfo(applyto, sourceid)));
-        } else if (normal && statups.size() > 0 && !isSummon() && !isMonsterRiding()) { // Ä¡¿ì¾¾ :: ¶óÀÌµù °ü¿©
+        } else if (normal && statups.size() > 0 && !isSummon() && !isMonsterRiding()) { // ì¹˜ìš°ì”¨ :: ë¼ì´ë”© ê´€ì—¬
             long overlap_magic = (long) (System.currentTimeMillis() % 1000000000);
             Map<BuffStats, List<StackedSkillEntry>> stacked = applyto.getStackSkills();
             for (Triple<BuffStats, Integer, Boolean> statup : statups) {
@@ -3841,10 +3841,10 @@ public class SkillStatEffect {
                 if (applyfrom.hasDisease(DiseaseStats.ZOMBIFY)) {
                     hpchange /= 2;
                 }
-                if (applyfrom.getSkillLevel(30000002) > 0) { //ÀÌÇÇ¼Ç½Ã
+                if (applyfrom.getSkillLevel(30000002) > 0) { //ì´í”¼ì…˜ì‹œ
                     double percent = (double) (SkillFactory.getSkill(30000002).getEffect(1).getX() / 100.0D);
                     hpchange = (int) ((double) hpchange * percent);
-                } else if (applyfrom.getSkillLevel(30010002) > 0) { //ÀÌÇÇ¼Ç½Ã
+                } else if (applyfrom.getSkillLevel(30010002) > 0) { //ì´í”¼ì…˜ì‹œ
                     double percent = (double) (SkillFactory.getSkill(30010002).getEffect(1).getX() / 100.0D);
                     hpchange = (int) ((double) hpchange * percent);
                 }
@@ -3946,7 +3946,7 @@ public class SkillStatEffect {
                 }
             }
         }
-        if (!skill && sourceid / 1000000 == 2 && GameConstants.isDemonSlayer(applyfrom.getJob()) || GameConstants.isDemonAvenger(applyfrom.getJob()) || GameConstants.isZero(applyfrom.getJob())) { // µ¥¸ó Á¦·Î´Â È¸º¹À» ¹°¾àx
+        if (!skill && sourceid / 1000000 == 2 && GameConstants.isDemonSlayer(applyfrom.getJob()) || GameConstants.isDemonAvenger(applyfrom.getJob()) || GameConstants.isZero(applyfrom.getJob())) { // ë°ëª¬ ì œë¡œëŠ” íšŒë³µì„ ë¬¼ì•½x
             mpchange = 0;
         }
         if (applyfrom.getBuffedValue(BuffStats.CTS_Larkness) != null) {
@@ -4087,16 +4087,16 @@ public class SkillStatEffect {
                 || sourceid == 80001044
                 || (sourceid >= 80001082 && sourceid <= 80001090)
                 || sourceid == 30011159
-                || sourceid == 30011109 || sourceid == 33001001 || sourceid == 35001002 || sourceid == 35111003); // Ä¡¿ì¾¾ :: ¿¡¹İ ÇÏÀÌÆÛ ¸®ÀÌµù ºĞ¸®
+                || sourceid == 30011109 || sourceid == 33001001 || sourceid == 35001002 || sourceid == 35111003); // ì¹˜ìš°ì”¨ :: ì—ë°˜ í•˜ì´í¼ ë¦¬ì´ë”© ë¶„ë¦¬
         //|| sourceid == 30011109 || sourceid == 33001001 || sourceid == 35001002 || sourceid == 35111003 || sourceid == 22171080);
     }
 
-    public final boolean isEvanDragonMaster_() { // Ä¡¿ì¾¾ :: ¿¡¹İ ÇÏÀÌÆÛ ¶óÀÌµù ºĞ¸®
+    public final boolean isEvanDragonMaster_() { // ì¹˜ìš°ì”¨ :: ì—ë°˜ í•˜ì´í¼ ë¼ì´ë”© ë¶„ë¦¬
         return skill
                 && (sourceid == 22171080);
     }
 
-    public final boolean isEvanDragonMaster() { // Ä¡¿ì¾¾ :: ¿¡¹İ ÇÏÀÌÆÛ ¶óÀÌµù ºĞ¸®
+    public final boolean isEvanDragonMaster() { // ì¹˜ìš°ì”¨ :: ì—ë°˜ í•˜ì´í¼ ë¼ì´ë”© ë¶„ë¦¬
         return skill && (isEvanDragonMaster_() || GameConstants.checkMountItem(sourceid) != 0);
     }
 
@@ -4129,7 +4129,7 @@ public class SkillStatEffect {
 
     public final boolean isFlyRiding() {
         switch (sourceid) {
-            case 80001285: //µÕ½ÇµÕ½Ç Ç³¼± ¶óÀÌµù
+            case 80001285: //ë‘¥ì‹¤ë‘¥ì‹¤ í’ì„  ë¼ì´ë”©
             case 22171083:
                 return skill;
         }
@@ -4201,7 +4201,7 @@ public class SkillStatEffect {
     }
 
     public final int getStatusDuration() {
-        if (sourceid == 31121003) { //µ¥ºôÅ©¶óÀÌ
+        if (sourceid == 31121003) { //ë°ë¹Œí¬ë¼ì´
             return effects.getStats("subTime") * 1000;
         }
         if (effects.getStats("subTime") > 0) {
@@ -4463,7 +4463,7 @@ public class SkillStatEffect {
             case 21121008:
             case 22171004:
             case 4341008:
-            case 80001478: //¹öµç ¸®ÇÁÆ® ¸µ
+            case 80001478: //ë²„ë“  ë¦¬í”„íŠ¸ ë§
                 return skill;
         }
         return false;
@@ -4524,8 +4524,8 @@ public class SkillStatEffect {
     public final boolean isSummon() {
         switch (sourceid) {
             case 2211011:
-            case 2221005: // ¿¤Äû³×½º
-            case 2321003: // ¹ÙÇÏ¹ÂÆ®
+            case 2221005: // ì—˜í€´ë„¤ìŠ¤
+            case 2321003: // ë°”í•˜ë®¤íŠ¸
             case 5201012:
             case 5201013:
             case 5201014:
@@ -4703,9 +4703,9 @@ public class SkillStatEffect {
             case 80001500:
             case 80001501:
             case 80001502:
-            /*case 32001014: // µ¥½º
-            case 32100010: // µ¥½º ÄÁÆ®·¢Æ®
-            case 32110017: // µ¥½º ÄÁÆ®·¢Æ®2
+            /*case 32001014: // ë°ìŠ¤
+            case 32100010: // ë°ìŠ¤ ì»¨íŠ¸ë™íŠ¸
+            case 32110017: // ë°ìŠ¤ ì»¨íŠ¸ë™íŠ¸2
             case 32120019:*/
             case 23111008:
             case 23111009:
@@ -4717,7 +4717,7 @@ public class SkillStatEffect {
             case 14120008:
             case 14110029:
             case 14100027:
-            case 14000027: //½¦µµ¿ì ¹èÆ®
+            case 14000027: //ì‰ë„ìš° ë°°íŠ¸
             case 131002015:
                 return SummonMovementType.BIRD_FOLLOW;
 
@@ -4855,9 +4855,9 @@ public class SkillStatEffect {
             case 22171081:
             case 5321052:
             case 14121003:
-            case 36121002: //È¦·Î±×·¥ ±×·¡ÇÇÆ¼ : °üÅë
-            case 36121013: //È¦·Î±×·¥ ±×·¡ÇÇÆ¼ : ¿ªÀå
-            case 36121014: //È¦·Î±×·¥ ±×·¡ÇÇÆ¼ : Áö¿ø
+            case 36121002: //í™€ë¡œê·¸ë¨ ê·¸ë˜í”¼í‹° : ê´€í†µ
+            case 36121013: //í™€ë¡œê·¸ë¨ ê·¸ë˜í”¼í‹° : ì—­ì¥
+            case 36121014: //í™€ë¡œê·¸ë¨ ê·¸ë˜í”¼í‹° : ì§€ì›
             case 2111010:
                 return true;
         }
@@ -5208,7 +5208,7 @@ public class SkillStatEffect {
         return (int) (new CaltechEval(dddd).evaluate());
     }
 
-    public final void applyComboBuff(final MapleCharacter applyto, short combo) { // Ä¡¿ì¾¾ :: ¾Æ¶õ applyComboBuff ½Ãµµ
+    public final void applyComboBuff(final MapleCharacter applyto, short combo) { // ì¹˜ìš°ì”¨ :: ì•„ë€ applyComboBuff ì‹œë„
         final List<Triple<BuffStats, Integer, Boolean>> stat = Collections.singletonList(new Triple<BuffStats, Integer, Boolean>(BuffStats.CTS_ComboAbilityBuff, (int) combo, false));
         applyto.getClient().getSession().write(MainPacketCreator.giveBuff(sourceid, 99999, stat, this, null, SkillFactory.getSkill(sourceid).getAnimationTime())); // Hackish timing, todo find out
 
@@ -5218,28 +5218,28 @@ public class SkillStatEffect {
 
     public final boolean isExceed(int skill) {
         switch (skill) {
-            case 31011000: // ÀÍ½Ãµå : ´õºí ½½·¡½Ã
+            case 31011000: // ìµì‹œë“œ : ë”ë¸” ìŠ¬ë˜ì‹œ
             case 31010004:
             case 31010005:
             case 31010006:
             case 31010007:
                 return true;
 
-            case 31201000: // ÀÍ½Ãµå : µ¥¸ó ½ºÆ®¶óÀÌÅ©
+            case 31201000: // ìµì‹œë“œ : ë°ëª¬ ìŠ¤íŠ¸ë¼ì´í¬
             case 31201007:
             case 31201008:
             case 31201009:
             case 31201010:
                 return true;
 
-            case 31211000: // ÀÍ½Ãµå : ¹®¶óÀÌÆ® ½½·¡½Ã
+            case 31211000: // ìµì‹œë“œ : ë¬¸ë¼ì´íŠ¸ ìŠ¬ë˜ì‹œ
             case 31211007:
             case 31211008:
             case 31211009:
             case 31211010:
                 return true;
 
-            case 31221000: // ÀÍ½Ãµå : ¿¢½ºÅ¥¼Ç
+            case 31221000: // ìµì‹œë“œ : ì—‘ìŠ¤íì…˜
             case 31221009:
             case 31221010:
             case 31221011:

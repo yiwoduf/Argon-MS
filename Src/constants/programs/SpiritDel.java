@@ -14,7 +14,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author ±è½ÂÇö
+ * @author ê¹€ìŠ¹í˜„
  */
 public class SpiritDel {
     public static void main(String args[]) {
@@ -26,7 +26,7 @@ public class SpiritDel {
                 if (!CheckChar(con, sql.getInt("id"))) {
                     ps.setInt(1, sql.getInt("id"));
                     ps.executeUpdate();
-                    System.out.println(sql.getString("name") + "°èÁ¤ »èÁ¦");
+                    System.out.println(sql.getString("name") + "ê³„ì • ì‚­ì œ");
                 }
             }
             ps.close();

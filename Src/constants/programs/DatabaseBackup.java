@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -20,7 +20,7 @@ import launch.ChannelServer;
 
 /**
  *
- * @author ÃÖÁÖ¿ø(sch2307@nate.com)
+ * @author ìµœì£¼ì›(sch2307@nate.com)
  */
 public class DatabaseBackup {
     private static int time = 0;
@@ -38,13 +38,13 @@ public class DatabaseBackup {
         Runnable r = new Runnable() {
             public void run() {
                 if (time == 0) {
-                    System.out.println("[¾Ë¸²] Çö ½Ã°£ºÎ·Î 30ºĞ ÁÖ±â·Î µ¥ÀÌÅÍº£ÀÌ½º ÀÚµ¿ ¹é¾÷ ÇÁ·Î±×·¥ÀÌ ÀÛµ¿µË´Ï´Ù.");
+                    System.out.println("[ì•Œë¦¼] í˜„ ì‹œê°„ë¶€ë¡œ 30ë¶„ ì£¼ê¸°ë¡œ ë°ì´í„°ë² ì´ìŠ¤ ìë™ ë°±ì—… í”„ë¡œê·¸ë¨ì´ ì‘ë™ë©ë‹ˆë‹¤.");
                     time++;
                 } else if (time == -1) {
                     time = 0;
                 } else {
                     try {
-                        for (ChannelServer cserv : ChannelServer.getAllInstances()) { //µ¥ÀÌÅÍº£ÀÌ½º ÀúÀå Àü, µ¥ÀÌÅÍº£ÀÌ½º ÀúÀå.
+                        for (ChannelServer cserv : ChannelServer.getAllInstances()) { //ë°ì´í„°ë² ì´ìŠ¤ ì €ì¥ ì „, ë°ì´í„°ë² ì´ìŠ¤ ì €ì¥.
                             cserv.saveAllMerchant();
                             for (MapleCharacter hp : cserv.getPlayerStorage().getAllCharacters().values()) {
                                 if (hp != null)
@@ -58,7 +58,7 @@ public class DatabaseBackup {
                         Process p = null;
                         File toDel = null;
 
-                        p = Runtime.getRuntime().exec("cmd /C \""+ ServerConstants.windowsDumpPath + "mysqldump\" -u"+ ServerConstants.dbUser +" -p"+ ServerConstants.dbPassword +" Å×½ºÇÇ¾Æ > DBBackup\\GameServer\\"+name+".sql");
+                        p = Runtime.getRuntime().exec("cmd /C \""+ ServerConstants.windowsDumpPath + "mysqldump\" -u"+ ServerConstants.dbUser +" -p"+ ServerConstants.dbPassword +" í…ŒìŠ¤í”¼ì•„ > DBBackup\\GameServer\\"+name+".sql");
                         p = Runtime.getRuntime().exec("cmd /C \""+ ServerConstants.path + "\\gzip\" -9 DBBackup\\GameServer\\" + name + ".sql");
                         p.getInputStream().read();
 
@@ -69,14 +69,14 @@ public class DatabaseBackup {
                         }
 
                         toDel = new File("DBBackup\\GameServer\\" + name + ".sql");
-                        System.out.println("[¾Ë¸²] '" + name + "' ³¯Â¥ÀÇ °ÔÀÓ¼­¹ö µ¥ÀÌÅÍº£ÀÌ½º ÀÚµ¿ ¹é¾÷ÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+                        System.out.println("[ì•Œë¦¼] '" + name + "' ë‚ ì§œì˜ ê²Œì„ì„œë²„ ë°ì´í„°ë² ì´ìŠ¤ ìë™ ë°±ì—…ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
                         toDel.delete();
 
                     } catch (IOException e) {
-                        System.out.println("[¾Ë¸²] µ¥ÀÌÅÍº£ÀÌ½º ÀÚµ¿ ¹é¾÷ÀÌ ½ÇÆĞÇÏ¿´½À´Ï´Ù.");
+                        System.out.println("[ì•Œë¦¼] ë°ì´í„°ë² ì´ìŠ¤ ìë™ ë°±ì—…ì´ ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.");
                         e.printStackTrace();
                     } catch (Exception e) {
-                        System.err.println("[¿À·ù] µ¥ÀÌÅÍº£ÀÌ½º ÀÚµ¿ ¹é¾÷À» ½ÇÇà Áß ¾Ë ¼ö ¾ø´Â ¿À·ù°¡ ¹ß»ıÇß½À´Ï´Ù.");
+                        System.err.println("[ì˜¤ë¥˜] ë°ì´í„°ë² ì´ìŠ¤ ìë™ ë°±ì—…ì„ ì‹¤í–‰ ì¤‘ ì•Œ ìˆ˜ ì—†ëŠ” ì˜¤ë¥˜ê°€ ë°œìƒí–ˆìŠµë‹ˆë‹¤.");
                         e.printStackTrace();
                     }
                 }

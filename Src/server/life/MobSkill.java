@@ -1,24 +1,24 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
 /*
  Maple Team ProJect
- Á¦ÀÛ ¿ëµµ : ¼­¹ö¿î¿µ¿ë
- ÆÀ¿ø¸ñ·Ï
- * °­µ¿¿ø dongwon1852@nate.com 
- * ±è¼±ÀÏ fileupload@nate.com
- * ±è¼®Çö azxcs3@nate.com
- * ±èÁø¼º m0nday_s@nate.com
- * °øÁØÇù kkong1001@nate.com
- * ±è¹ÎÈ£ rubystory0603@nate.com
- * ÀÌÀç¿Õ ejwj5592@nate.com
- * ÃÖ¿ëÀç virgo_s_t@nate.com
- * ¼­¼º´ö abq1239@nate.com
+ ì œì‘ ìš©ë„ : ì„œë²„ìš´ì˜ìš©
+ íŒ€ì›ëª©ë¡
+ * ê°•ë™ì› dongwon1852@nate.com 
+ * ê¹€ì„ ì¼ fileupload@nate.com
+ * ê¹€ì„í˜„ azxcs3@nate.com
+ * ê¹€ì§„ì„± m0nday_s@nate.com
+ * ê³µì¤€í˜‘ kkong1001@nate.com
+ * ê¹€ë¯¼í˜¸ rubystory0603@nate.com
+ * ì´ì¬ì™• ejwj5592@nate.com
+ * ìµœìš©ì¬ virgo_s_t@nate.com
+ * ì„œì„±ë• abq1239@nate.com
  */
 package server.life;
 
@@ -267,12 +267,12 @@ public class MobSkill {
                 stats.put(MonsterStatus.MAGIC_IMMUNITY, Integer.valueOf(x));
                 reflection.add(x);
                 break;
-            case 184: //¹İ¹İ °­Á¦À§Ä¡ÀÌµ¿ - ÀÚÄñ
+            case 184: //ë°˜ë°˜ ê°•ì œìœ„ì¹˜ì´ë™ - ìì¿°
                 disease = DiseaseStats.TELEPORT;
                 this.setX(player.getPosition().x);
                 this.setY(player.getPosition().y);
                 break;
-            case 191: //¹İ¹İ Å¸ÀÓ¿öÇÁ - ÀÚÄñ
+            case 191: //ë°˜ë°˜ íƒ€ì„ì›Œí”„ - ìì¿°
                 Point posFrom = monster.getPosition();
                 Point mylt = new Point(lt.x + posFrom.x, lt.y + posFrom.y);
                 Point myrb = new Point(rb.x + posFrom.x, rb.y + posFrom.y);
@@ -280,7 +280,7 @@ public class MobSkill {
                 MapleMist clock = new MapleMist(box, monster, this, monster.getPosition());
                 clock.setClockType(Randomizer.rand(1, 2));
                 monster.getMap().spawnClockMist(clock);
-                monster.getMap().broadcastMessage(UIPacket.showInfo("½Ã°£ÀÇ Æ´»õ¿¡ '±Õ¿­'ÀÌ ¹ß»ıÇÏ¿´½À´Ï´Ù."));
+                monster.getMap().broadcastMessage(UIPacket.showInfo("ì‹œê°„ì˜ í‹ˆìƒˆì— 'ê· ì—´'ì´ ë°œìƒí•˜ì˜€ìŠµë‹ˆë‹¤."));
                 break;
             case 201:
                 for (Pair<Integer, Point> pa : monsterId) {

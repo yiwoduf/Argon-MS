@@ -32,7 +32,7 @@ function playerEntry(eim, player) {
 	player.changeTeam(type == 2 || map.getAndSwitchTeam() ? 0 : 1);
               player.changeMap(map, map.getPortal(type == 0 ? 0 : (type == 3 ? (player.getTeam() == 0 ? 3 : 1) : (player.getTeam() == 0 ? 2 : 3))));
 	eim.setProperty("" + player.getId(), "0");
-	//eim.broadcastPlayerMsg(-7, player.getName() + " ´ÔÀÌ ÀÔÀåÇÏ¼Ì½À´Ï´Ù.");
+	//eim.broadcastPlayerMsg(-7, player.getName() + " ë‹˜ì´ ì…ì¥í•˜ì…¨ìŠµë‹ˆë‹¤.");
 	player.getStat().recalcLocalStats(player);
 	player.getStat().heal(player);
 	

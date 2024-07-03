@@ -15,7 +15,7 @@ function action(mode, type, selection) {
     }
     
     if (status == 0) {
-            cm.sendYesNo("#fn³ª´®°íµñ Extrabold#±×¸¸ µÎ°í #bÄù½ºÆ®ÀÇ Àü´ç#k À¸·Î µ¹¾Æ°¡½Ã°Ú¾î¿ä..?")
+            cm.sendYesNo("#fnë‚˜ëˆ”ê³ ë”• Extrabold#ê·¸ë§Œ ë‘ê³  #bí€˜ìŠ¤íŠ¸ì˜ ì „ë‹¹#k ìœ¼ë¡œ ëŒì•„ê°€ì‹œê² ì–´ìš”..?")
     } else if (status == 1) {
 	cm.warp (100030301,0);
         cm.dispose();

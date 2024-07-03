@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -218,7 +218,7 @@ public class DueyHandler {
                 packet.writeLong(PacketProvider.getTime(time.getTime()));
                 System.out.println(PacketProvider.getTime(time.getTime()));
                 packet.write(1);
-                packet.writeAsciiString(rs.getString("recvname") + "´ÔÀÌ º¸³½ ÅÃ¹è°¡ µµÂø ÇÏ¿´½À´Ï´Ù.", 201);
+                packet.writeAsciiString(rs.getString("recvname") + "ë‹˜ì´ ë³´ë‚¸ íƒë°°ê°€ ë„ì°© í•˜ì˜€ìŠµë‹ˆë‹¤.", 201);
                 if (rs.getInt("itemid") > 0) {
                     packet.write(1);
                     packet.write(rs.getInt("inventorytype") == 1 ? 1 : 2);
@@ -405,7 +405,7 @@ public class DueyHandler {
                         if (rs.getInt("allstatp") != 0) {
                             packet.write(rs.getInt("allstatp"));
                         }
-                        packet.write(rs.getInt("fire")); //°¡À§
+                        packet.write(rs.getInt("fire")); //ê°€ìœ„
                         if (rs.getInt("fire") >= 0) {
                             packet.writeInt(Randomizer.nextInt());
                             packet.writeInt(0);
@@ -418,13 +418,13 @@ public class DueyHandler {
                         packet.writeShort(0);
                         packet.write(rs.getInt("state")); // State
                         packet.write(rs.getInt("enhance")); // Enchance
-                        packet.writeShort(rs.getInt("potential1")); //¼±µÎ
-                        packet.writeShort(rs.getInt("potential2")); //ÈÄ¹Ì
-                        packet.writeShort(rs.getInt("potential3")); //ÈÄ¹Ì
-                        packet.writeShort(rs.getInt("potential4")); //¿¡µğ¼Å³Î 1
-                        packet.writeShort(rs.getInt("potential5")); //¿¡µğ¼Å³Î 2
-                        packet.writeShort(rs.getInt("potential6")); //¾Öµğ¼Å³Î 3
-                        packet.writeShort(rs.getInt("potential7")); //¸ğ
+                        packet.writeShort(rs.getInt("potential1")); //ì„ ë‘
+                        packet.writeShort(rs.getInt("potential2")); //í›„ë¯¸
+                        packet.writeShort(rs.getInt("potential3")); //í›„ë¯¸
+                        packet.writeShort(rs.getInt("potential4")); //ì—ë””ì…”ë„ 1
+                        packet.writeShort(rs.getInt("potential5")); //ì—ë””ì…”ë„ 2
+                        packet.writeShort(rs.getInt("potential6")); //ì• ë””ì…”ë„ 3
+                        packet.writeShort(rs.getInt("potential7")); //ëª¨
                         packet.writeInt(-1);
                         packet.writeInt(-1);
                         packet.writeLong(PacketProvider.getTime(-2));

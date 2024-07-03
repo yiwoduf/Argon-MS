@@ -1,6 +1,6 @@
 /* 
                  Yang Online 1.2.169
-                       ¾ç´Ô - b_b_secret@naver.com
+                       ì–‘ë‹˜ - b_b_secret@naver.com
 */
 
 function start() {
@@ -21,54 +21,54 @@ function action(mode, type, selection) {
         else
             status--;
         if (status == 0) {
-            var chat = "#r#e»õ½Ï ¿Â¶óÀÎÀ» ½ÃÀÛÇÏ±âÀ§ÇØ Á÷¾÷±ºÀ» ¼±ÅÃÇØÁÖ¼¼¿ä.#n#k";
-            chat += "\r\n#L0##b¸ğÇè°¡Á÷¾÷#k";
-            chat += "\r\n#L1##b½Ã±×³ÊÁ÷¾÷#k";
-            chat += "\r\n#L2##b·¹Áö½ºÅÁ½º#k";
-            chat += "\r\n#L3##b¿µ¿õÁ÷¾÷±º#k";
-            chat += "\r\n#L4##b³ë¹ÙÁ÷¾÷±º#k";
+            var chat = "#r#eìƒˆì‹¹ ì˜¨ë¼ì¸ì„ ì‹œì‘í•˜ê¸°ìœ„í•´ ì§ì—…êµ°ì„ ì„ íƒí•´ì£¼ì„¸ìš”.#n#k";
+            chat += "\r\n#L0##bëª¨í—˜ê°€ì§ì—…#k";
+            chat += "\r\n#L1##bì‹œê·¸ë„ˆì§ì—…#k";
+            chat += "\r\n#L2##bë ˆì§€ìŠ¤íƒ•ìŠ¤#k";
+            chat += "\r\n#L3##bì˜ì›…ì§ì—…êµ°#k";
+            chat += "\r\n#L4##bë…¸ë°”ì§ì—…êµ°#k";
             cm.sendSimple(chat);
         } else if (status == 1) {
             if (selection == 0) {
-                var beginner = "  #r<¸ğÇè°¡Á÷¾÷>#k";
-                beginner += "\r\n#L0##bÀü»ç#k";
-                beginner += "\r\n#L1##b¸¶¹ı»ç#k";
-                beginner += "\r\n#L2##b±Ã¼ö#k";   
-                beginner += "\r\n#L3##bµµÀû#k";
-                beginner += "\r\n#L4##bÇØÀû#k";
+                var beginner = "  #r<ëª¨í—˜ê°€ì§ì—…>#k";
+                beginner += "\r\n#L0##bì „ì‚¬#k";
+                beginner += "\r\n#L1##bë§ˆë²•ì‚¬#k";
+                beginner += "\r\n#L2##bê¶ìˆ˜#k";   
+                beginner += "\r\n#L3##bë„ì #k";
+                beginner += "\r\n#L4##bí•´ì #k";
                 cm.sendSimple(beginner);
             } else if (selection == 1) {
-                var beginner = "  #r<½Ã±×³ÊÁ÷¾÷>#k";
-                beginner += "\r\n#L5##b¼Ò¿ï¸¶½ºÅÍ#k";
-                beginner += "\r\n#L6##bÇÃ·¹ÀÓÀ§ÀÚµå#k";
-                beginner += "\r\n#L7##bÀ©µåºê·¹ÀÌÄ¿#k";   
-                beginner += "\r\n#L8##b³ªÀÌÆ®¿öÄ¿#k";
-                beginner += "\r\n#L9##b½ºÆ®¶óÀÌÄ¿#k";
-                beginner += "\r\n#L10##b¹ÌÇÏÀÏ#k";
+                var beginner = "  #r<ì‹œê·¸ë„ˆì§ì—…>#k";
+                beginner += "\r\n#L5##bì†Œìš¸ë§ˆìŠ¤í„°#k";
+                beginner += "\r\n#L6##bí”Œë ˆì„ìœ„ìë“œ#k";
+                beginner += "\r\n#L7##bìœˆë“œë¸Œë ˆì´ì»¤#k";   
+                beginner += "\r\n#L8##bë‚˜ì´íŠ¸ì›Œì»¤#k";
+                beginner += "\r\n#L9##bìŠ¤íŠ¸ë¼ì´ì»¤#k";
+                beginner += "\r\n#L10##bë¯¸í•˜ì¼#k";
                 cm.sendSimple(beginner);
             } else if (selection == 2) {
-                var beginner = "  #r<·¹Áö½ºÅÁ½º>#k";
-                beginner += "\r\n#L11##bµ¥¸ó½½·¹ÀÌ¾î#k";
-                beginner += "\r\n#L12##b¹èÆ²¸ŞÀÌÁö#k";
-                beginner += "\r\n#L13##b¿ÍÀÏµåÇåÅÍ#k";   
-                beginner += "\r\n#L14##b¸ŞÄ«´Ğ#k";
+                var beginner = "  #r<ë ˆì§€ìŠ¤íƒ•ìŠ¤>#k";
+                beginner += "\r\n#L11##bë°ëª¬ìŠ¬ë ˆì´ì–´#k";
+                beginner += "\r\n#L12##bë°°í‹€ë©”ì´ì§€#k";
+                beginner += "\r\n#L13##bì™€ì¼ë“œí—Œí„°#k";   
+                beginner += "\r\n#L14##bë©”ì¹´ë‹‰#k";
                 cm.sendSimple(beginner);
             } else if (selection == 3) {
-                var beginner = "  #r<¿µ¿õÁ÷¾÷±º>#k";
-                beginner += "\r\n#L15##b¾Æ¶õ#k";
-                beginner += "\r\n#L16##b¿¡¹İ#k";
-                beginner += "\r\n#L17##b·ç¹Ì³Ê½º#k";   
-                beginner += "\r\n#L18##b¸Ş¸£¼¼µ¥½º#k";
-                beginner += "\r\n#L19##bÆÒÅÒ#k";
+                var beginner = "  #r<ì˜ì›…ì§ì—…êµ°>#k";
+                beginner += "\r\n#L15##bì•„ë€#k";
+                beginner += "\r\n#L16##bì—ë°˜#k";
+                beginner += "\r\n#L17##bë£¨ë¯¸ë„ˆìŠ¤#k";   
+                beginner += "\r\n#L18##bë©”ë¥´ì„¸ë°ìŠ¤#k";
+                beginner += "\r\n#L19##bíŒ¬í…€#k";
                 cm.sendSimple(beginner);
             } else if (selection == 4) {
-                var beginner = "  #r<³ë¹ÙÁ÷¾÷±º>#k";
-                beginner += "\r\n#L20##bÄ«ÀÌÁ®#k";
-                beginner += "\r\n#L21##b¿£Á©¸¯¹ö½ºÅÍ#k";
+                var beginner = "  #r<ë…¸ë°”ì§ì—…êµ°>#k";
+                beginner += "\r\n#L20##bì¹´ì´ì ¸#k";
+                beginner += "\r\n#L21##bì—”ì ¤ë¦­ë²„ìŠ¤í„°#k";
                 cm.sendSimple(beginner);
               }
         } else if (status == 2) {
-        /* ¸ğÇè°¡ Á¦ÀÛ - ¹«´Ï(dcin_s) */
+        /* ëª¨í—˜ê°€ ì œì‘ - ë¬´ë‹ˆ(dcin_s) */
             if (selection == 0) {
                 cm.gainExp(15);
                 cm.gainExp(34);
@@ -138,7 +138,7 @@ function action(mode, type, selection) {
                 cm.changeJob(500);
                 cm.warp(100000000, 0);
                 cm.dispose();
-        /* ½Ã±×³Ê½º Á¦ÀÛ - ¹«´Ï(dcin_s) */
+        /* ì‹œê·¸ë„ˆìŠ¤ ì œì‘ - ë¬´ë‹ˆ(dcin_s) */
             } else if (selection == 5) { 
                 cm.gainExp(15);
                 cm.gainExp(34);
@@ -227,7 +227,7 @@ function action(mode, type, selection) {
                 cm.gainItem(1002995,1);
                 cm.gainMeso(5000000);
                 cm.dispose();
-        /* ·¹Áö½ºÅÁ½º Á¦ÀÛ - ¹«´Ï(dcin_s) */
+        /* ë ˆì§€ìŠ¤íƒ•ìŠ¤ ì œì‘ - ë¬´ë‹ˆ(dcin_s) */
            } else if (selection == 11) {
                 cm.gainExp(15);
                 cm.gainExp(34);
@@ -288,7 +288,7 @@ function action(mode, type, selection) {
                 cm.gainItem(1002995,1);
                 cm.gainMeso(5000000);
                 cm.dispose();
-           /* ¿µ¿õ Á¦ÀÛ - ¹«´Ï(dcin_s) */
+           /* ì˜ì›… ì œì‘ - ë¬´ë‹ˆ(dcin_s) */
            } else if (selection == 15) { 
                 cm.gainExp(15);
                 cm.gainExp(34);
@@ -364,7 +364,7 @@ function action(mode, type, selection) {
                 cm.gainItem(1002995,1);
                 cm.gainMeso(5000000);
                 cm.dispose();
-           /* ³ë¹Ù Á¦ÀÛ - ¹«´Ï(dcin_s) */
+           /* ë…¸ë°” ì œì‘ - ë¬´ë‹ˆ(dcin_s) */
            } else if (selection == 20) {
                 cm.gainExp(15);
                 cm.gainExp(34);

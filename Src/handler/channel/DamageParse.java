@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  *
  */
@@ -75,7 +75,7 @@ public class DamageParse {
     public static void CatchPlayer(MapleCharacter player, MapleCharacter catched) {
 
         player.getMap().broadcastMessage(MainPacketCreator.showGatherComplete(player.getId(), true));
-        player.getMap().broadcastMessage(MainPacketCreator.serverNotice(6, "[¼ú·¡Àâ±â] ´Á´ë " + player.getName() + "´ÔÀÌ ¾ç " + catched.getName() + "´ÔÀ» ÀâÀ¸¼Ì½À´Ï´Ù."));
+        player.getMap().broadcastMessage(MainPacketCreator.serverNotice(6, "[ìˆ ë˜ì¡ê¸°] ëŠ‘ëŒ€ " + player.getName() + "ë‹˜ì´ ì–‘ " + catched.getName() + "ë‹˜ì„ ì¡ìœ¼ì…¨ìŠµë‹ˆë‹¤."));
         catched.getStat().setHp(0, catched);
         catched.updateSingleStat(PlayerStat.HP, 0);
         boolean alliveCatched = false;
@@ -96,7 +96,7 @@ public class DamageParse {
                     chr.changeMap(chr.getClient().getChannelServer().getMapFactory().getMap(109090101), chr.getClient().getChannelServer().getMapFactory().getMap(109090101).getPortalSP().get(0));
                 }
             }
-            player.getMap().broadcastMessage(MainPacketCreator.serverNotice(1, "¾çµéÀÌ ¸ğµÎ ÀâÇô¼­ ´Á´ë°¡ ½Â¸®ÇÏ¿´½À´Ï´Ù!\r\n¸ğµç ºĞµéÀº °ÔÀÓ º¸»ó¸ÊÀ¸·Î ÀÌµ¿ µË´Ï´Ù."));
+            player.getMap().broadcastMessage(MainPacketCreator.serverNotice(1, "ì–‘ë“¤ì´ ëª¨ë‘ ì¡í˜€ì„œ ëŠ‘ëŒ€ê°€ ìŠ¹ë¦¬í•˜ì˜€ìŠµë‹ˆë‹¤!\r\nëª¨ë“  ë¶„ë“¤ì€ ê²Œì„ ë³´ìƒë§µìœ¼ë¡œ ì´ë™ ë©ë‹ˆë‹¤."));
         }
     }
 
@@ -106,12 +106,12 @@ public class DamageParse {
             doHideAndSeek(player, attack, true);
             return;
         }
-        //int ÇÇºêÀÌÇÇ¸ÊÄÚµå = 100000203;
+        //int í”¼ë¸Œì´í”¼ë§µì½”ë“œ = 100000203;
         if (player.getMapId() == 100000203) {
             BattleHandler.doPVPattack(player, attack);
         }
 
-        if (player.isGM()) { // Ä¡¿ì¾¾ : ½ºÅ³ Á¤º¸ ¶ß°Ô²û Ã³¸®
+        if (player.isGM()) { // ì¹˜ìš°ì”¨ : ìŠ¤í‚¬ ì •ë³´ ëœ¨ê²Œë” ì²˜ë¦¬
             player.Message("[applyAttack] [skill name : " + SkillFactory.getSkillName(attack.skill) + "] [skill code : " + attack.skill + "] [skill level : " + attack.skillLevel + "] ");
         }
 
@@ -121,7 +121,7 @@ public class DamageParse {
             }
         }
         if (player.getBuffedValue(BuffStats.CTS_Roulette) != null) {
-            player.Message(4, "[¿ÀÅ©Åë ·Ñ·¿ È¿°ú : " + player.getBuffedValue(BuffStats.CTS_Roulette) + "]");
+            player.Message(4, "[ì˜¤í¬í†µ ë¡¤ë › íš¨ê³¼ : " + player.getBuffedValue(BuffStats.CTS_Roulette) + "]");
         }
         if (player.isEquippedSoulWeapon() && attack.skill == player.getEquippedSoulSkill()) {
             SkillStatEffect effects = SkillFactory.getSkill(player.getEquippedSoulSkill()).getEffect(player.getSkillLevel(player.getEquippedSoulSkill()));
@@ -133,12 +133,12 @@ public class DamageParse {
             player.Message(effects.getSourceId() + " / " + effects.getSoulMPCon() + "");
             player.checkSoulState(true, player.getEquippedSoulSkill());
         }
-        /*if (player.getBuffedValue(BuffStats.ct) != null) { //À©µå¿öÅ© Àº½ÅÇØÁ¦
+        /*if (player.getBuffedValue(BuffStats.ct) != null) { //ìœˆë“œì›Œí¬ ì€ì‹ í•´ì œ
             player.cancelEffectFromBuffStat(BuffStats.WIND_WALK, -1);
         }*/
 
-        if (GameConstants.isAran(player.getJob()) && attack.skill != 0) { // Ä¡¿ì¾¾ :: ¾Æ¶õ useComboSkill Ãß°¡
-            //player.Message("aran useComboSkill Check "); // È¤½Ã Àû¿ëÀÌ ¾ÈµÈ°Å ¾Æ´Ô? È®ÀÎÂ÷ Àû¿ë
+        if (GameConstants.isAran(player.getJob()) && attack.skill != 0) { // ì¹˜ìš°ì”¨ :: ì•„ë€ useComboSkill ì¶”ê°€
+            //player.Message("aran useComboSkill Check "); // í˜¹ì‹œ ì ìš©ì´ ì•ˆëœê±° ì•„ë‹˜? í™•ì¸ì°¨ ì ìš©
             player.useComboSkill(attack.skill);
         }
 
@@ -147,7 +147,7 @@ public class DamageParse {
                 player.combo++;
             }
             player.updateCombo(player.combo, System.currentTimeMillis());
-            // ¿¡¾î·Î ½ºÀ® ±¸ÇöºÎ
+            // ì—ì–´ë¡œ ìŠ¤ìœ™ êµ¬í˜„ë¶€
             /*if (GameConstants.isAeroSwingSkill(attack.skill)) {
                 player.send(MainPacketCreator.setSlowDown());
             }*/
@@ -355,17 +355,17 @@ public class DamageParse {
                         monster.applyStatus(player, monsterStatusEffect, false, effs.getDuration(), true);
                     }
                 }*/
- /* ÇÈÆÄÅ¶ */
+ /* í”½íŒŒí‚· */
                 if (player.getBuffedValue(BuffStats.CTS_PickPocket) != null) {
                     switch (attack.skill) {
                         case 0:
-                        case 4001334: //´õºí ½ºÅÇ
-                        case 4201004: //½ºÆ¿
-                        case 4201005: //»õºñÁö ºí·Î¿ì
-                        case 4211002: //¹«½ºÆç ÇÏÀÓ
-                        case 4211011: //¿§Áö Ä«´Ï¹ß
-                        case 4221016: //¾Ï»ì
-                        case 4221007: //ºÎ¸Ş¶û ½ºÅÇ
+                        case 4001334: //ë”ë¸” ìŠ¤íƒ­
+                        case 4201004: //ìŠ¤í‹¸
+                        case 4201005: //ìƒˆë¹„ì§€ ë¸”ë¡œìš°
+                        case 4211002: //ë¬´ìŠ¤í  í•˜ì„
+                        case 4211011: //ì—£ì§€ ì¹´ë‹ˆë°œ
+                        case 4221016: //ì•”ì‚´
+                        case 4221007: //ë¶€ë©”ë‘ ìŠ¤íƒ­
                         case 4221010:
                             handlePickPocket(player, monster, oned);
                             break;
@@ -377,15 +377,15 @@ public class DamageParse {
                     if (attack.skill == 4201004) { //Steal
                         monster.handleSteal(player);
                     }
-                    if (GameConstants.isDemonSlayer(player.getJob())) { //Æ÷½º Èí¼ö
+                    if (GameConstants.isDemonSlayer(player.getJob())) { //í¬ìŠ¤ í¡ìˆ˜
                         player.handleForceGain(monster.getObjectId(), attack.skill);
                     }
-                    if (player.getSkillLevel(30010111) > 0) { //µ¥¾² Ä¿½º
+                    if (player.getSkillLevel(30010111) > 0) { //ë°ì“° ì»¤ìŠ¤
                         SkillStatEffect effs = SkillFactory.getSkill(30010111).getEffect(1);
                         if (effs.makeChanceResult()) {
-                            if (!monster.getStats().isBoss() && player.getMapId() != 900000000 && player.getMapId() != 109040004) { //º¸½º°¡ ¾Æ´Ï¾î¾ßÇÔ.
+                            if (!monster.getStats().isBoss() && player.getMapId() != 900000000 && player.getMapId() != 109040004) { //ë³´ìŠ¤ê°€ ì•„ë‹ˆì–´ì•¼í•¨.
                                 totDamageToOneMonster = 999999999;
-                                player.addHP((int) (player.getStat().getCurrentMaxHp() * (effs.getX() / 100.0D))); //Ã¼·Â È¸º¹
+                                player.addHP((int) (player.getStat().getCurrentMaxHp() * (effs.getX() / 100.0D))); //ì²´ë ¥ íšŒë³µ
                             }
                         }
                     }
@@ -433,34 +433,34 @@ public class DamageParse {
                         boolean modeChange = false;
                         if (player.quiver) {
                             if (player.quivermode == 1) {
-                                if (player.quivercount[0] > 1) {//ÈíÇ÷
+                                if (player.quivercount[0] > 1) {//í¡í˜ˆ
                                     if (Randomizer.nextInt(100) < 50) {
                                         player.quivercount[0] -= 1;
                                         player.refreshMaxHp();
                                     }
-                                } else if (player.quivercount[0] == 1) {//ÈíÇ÷³¡
+                                } else if (player.quivercount[0] == 1) {//í¡í˜ˆë
                                     player.quivercount[0] += (9 + player.getSkillLevel(3121016));
                                     player.quivermode = 2;
                                     modeChange = true;
                                 }
                             } else if (player.quivermode == 2) {
-                                if (player.quivercount[1] > 1) {//µ¶
+                                if (player.quivercount[1] > 1) {//ë…
                                     if (Randomizer.nextInt(20) < 100) {
                                         player.quivercount[1] -= 1;
                                         monster.applyStatus(player, new MonsterStatusEffect(Collections.singletonMap(MonsterStatus.POISON, (int) Randomizer.rand(100, 500)), SkillFactory.getSkill(3101009), player.getSkillLevel(attack.skill), null, false), (long) 10 * 1000);
                                     }
-                                } else if (player.quivercount[1] == 1) {//µ¶³¡
+                                } else if (player.quivercount[1] == 1) {//ë…ë
                                     player.quivercount[1] += (9 + player.getSkillLevel(3121016));
                                     player.quivermode = 3;
                                     modeChange = true;
                                 }
                             } else if (player.quivermode == 3) {
-                                if (player.quivercount[2] > 1) {//¸¶¹ı È­»ì
+                                if (player.quivercount[2] > 1) {//ë§ˆë²• í™”ì‚´
                                     if (player.getBuffedSkillEffect(BuffStats.CTS_QuiverCatridge).makeChanceResult()) {
                                         player.quivercount[2] -= 1;
                                         SkillFactory.getSkill(3100010).getEffect(1).applyAtom(player, 10);
                                     }
-                                } else if (player.quivercount[2] == 1) {//¸¶¹ı È­»ì³¡
+                                } else if (player.quivercount[2] == 1) {//ë§ˆë²• í™”ì‚´ë
                                     player.quivercount[2] += (9 + (player.getSkillLevel(3121016) * 3));
                                     player.quivermode = 1;
                                     modeChange = true;
@@ -491,12 +491,12 @@ public class DamageParse {
                             }
                         }
                     }
-                    if (player.getSkillLevel(4330007) > 0) { //¹ÙÀÌÅ» ½ºÆ¿
+                    if (player.getSkillLevel(4330007) > 0) { //ë°”ì´íƒˆ ìŠ¤í‹¸
                         SkillStatEffect effects = SkillFactory.getSkill(4330007).getEffect(player.getSkillLevel(4330007));
                         if (effects.makeChanceResult()) {
                             int fhp = (int) (totDamageToOneMonster / effects.getX());
                             int shp = (int) (player.getStat().getCurrentMaxHp() / 100.0D) * 20;
-                            if (fhp > shp) { //ÀÚ½ÅÀÇ HPÀÇ 15%ÀÌ»óÀº Èí¼ö ºÒ°¡
+                            if (fhp > shp) { //ìì‹ ì˜ HPì˜ 15%ì´ìƒì€ í¡ìˆ˜ ë¶ˆê°€
                                 fhp = shp;
                             }
                             player.addHP(fhp);
@@ -524,7 +524,7 @@ public class DamageParse {
                                                     player.addMP(pot.MP);
                                                     break;
                                                 case 10221:
-                                                    //½Ã°£À» Àß¸ô¶ó¼­ 5ÃÊ¶ó »ı°¢ÇÏ°í ±¸Çö
+                                                    //ì‹œê°„ì„ ì˜ëª°ë¼ì„œ 5ì´ˆë¼ ìƒê°í•˜ê³  êµ¬í˜„
                                                     monster.applyStatus(player, new MonsterStatusEffect(Collections.singletonMap(MonsterStatus.POISON, (int) pot.level), SkillFactory.getSkill(90001003), player.getSkillLevel(attack.skill), null, false), (long) 5 * 1000);
                                                     break;
                                                 case 10226:
@@ -550,7 +550,7 @@ public class DamageParse {
                         }
                     }
 
-                    if (player.getBuffedValue(BuffStats.CTS_SpiritLink) != null && totDamageToOneMonster <= 999999 && totDamageToOneMonster > 0) { //¹ìÇÇ¸¯ ÅÍÄ¡
+                    if (player.getBuffedValue(BuffStats.CTS_SpiritLink) != null && totDamageToOneMonster <= 999999 && totDamageToOneMonster > 0) { //ë±€í”¼ë¦­ í„°ì¹˜
                         SkillStatEffect effs = SkillFactory.getSkill(31121002).getEffect(player.getSkillLevel(31121002));
                         if (player.getParty() == null) {
                             int recover = (int) (totDamageToOneMonster * (effs.getX() / 100.0D));
@@ -569,27 +569,27 @@ public class DamageParse {
                             }
                         }
                     }
-                    /* ¿£Á©¸¯¹ö½ºÅÍ ½ºÅ³ ºñÈ°¼º */
+                    /* ì—”ì ¤ë¦­ë²„ìŠ¤í„° ìŠ¤í‚¬ ë¹„í™œì„± */
                     if (GameConstants.isAngelicBuster(player.getJob())) {
                         switch (attack.skill) {
-                            case 65001100: //¹öºí ½ºÅ¸
-                            case 65101100: //½ºÆÃ ÀÍ½ºÇÃ·ÎÀü
-                            case 65111101: //Æú¸µ ½ºÅ¸
-                            case 65121100: //ÇÁ¶óÀÌ¸Ö ·Î¾î
-                            case 65121101: //Æ®¸®´ÏÆ¼
+                            case 65001100: //ë²„ë¸” ìŠ¤íƒ€
+                            case 65101100: //ìŠ¤íŒ… ìµìŠ¤í”Œë¡œì „
+                            case 65111101: //í´ë§ ìŠ¤íƒ€
+                            case 65121100: //í”„ë¼ì´ë©€ ë¡œì–´
+                            case 65121101: //íŠ¸ë¦¬ë‹ˆí‹°
                                 player.getClient().send(AngelicBusterSkill.lockSkill(attack.skill));
                                 player.getClient().send(MainPacketCreator.resetActions());
                                 break;
                         }
                     }
 
-                    /* ¼Ò¿ï ¸®Â÷Áö */
+                    /* ì†Œìš¸ ë¦¬ì°¨ì§€ */
                     if (GameConstants.isAngelicBuster(player.getJob())) {
                         for (AttackPair a : attack.allDamage) {
                             if (a.attack.get(0).getLeft() > 0) {
                                 int prop = SkillFactory.getSkill(attack.skill).getEffect(player.getSkillLevel(GameConstants.getLinkedAttackSkill(attack.skill))).getOnActive();
                                 switch (attack.skill) {
-                                    case 65111007: //¼Ò¿ï ½ÃÄ¿ (°ø°İ)
+                                    case 65111007: //ì†Œìš¸ ì‹œì»¤ (ê³µê²©)
                                         if (Randomizer.rand(0, 100) <= 30) {
                                             player.getClient().send(AngelicBusterSkill.unlockSkill());
                                             player.getClient().send(AngelicBusterSkill.showRechargeEffect());
@@ -610,21 +610,21 @@ public class DamageParse {
                         }
                     }
 
-                    if (player.getSkillLevel(30010112) > 0) { //µ¥¸ó½ºÇ»¸® º¸½º¿¡¼­ Æ÷½º Èí¼ö.
+                    if (player.getSkillLevel(30010112) > 0) { //ë°ëª¬ìŠ¤í“¨ë¦¬ ë³´ìŠ¤ì—ì„œ í¬ìŠ¤ í¡ìˆ˜.
                         if (monster.getStats().isBoss()) {
                             stats.addForce(SkillFactory.getSkill(30010112).getEffect(1).getX());
                         }
                     }
 
                     if (attack.skill != 24120002 && attack.skill != 24100003) {
-                        if (player.getSkillLevel(24120002) > 0) { //´À¿Í¸£ Ä«¸£Æ®
+                        if (player.getSkillLevel(24120002) > 0) { //ëŠì™€ë¥´ ì¹´ë¥´íŠ¸
                             if (SkillFactory.getSkill(24120002).getEffect(player.getSkillLevel(24120002)).makeChanceResult() && Randomizer.isSuccess(20)) {
                                 player.addCardStack(1);
                                 int cardid = player.addCardStackRunningId();
                                 player.getMap().broadcastMessage(player, MainPacketCreator.absorbingCardStack(player.getId(), cardid, 24120002, false, 1), true);
 
                             }
-                        } else if (player.getSkillLevel(24100003) > 0) { //ºí¶û Ä«¸£Æ®
+                        } else if (player.getSkillLevel(24100003) > 0) { //ë¸”ë‘ ì¹´ë¥´íŠ¸
                             if (SkillFactory.getSkill(24100003).getEffect(player.getSkillLevel(24100003)).makeChanceResult() && Randomizer.isSuccess(20)) {
                                 player.addCardStack(1);
                                 int cardid = player.addCardStackRunningId();
@@ -634,7 +634,7 @@ public class DamageParse {
                     }
                 }
 
-                /*if (totDamageToOneMonster > 0) { //Æ®¶óÀÌÇÃ¸µ À«
+                /*if (totDamageToOneMonster > 0) { //íŠ¸ë¼ì´í”Œë§ ìœ”
                         if (GameConstants.isWindBreaker(player.getJob())) {
                             int skillid = 0;
                             if (player.getSkillLevel(SkillFactory.getSkill(13120003)) > 0) {
@@ -654,7 +654,7 @@ public class DamageParse {
                             }
                         }
                     }*/
-                if (attack.skill == 1321012) {  //´ÙÅ© ÀÓÆäÀÏ
+                if (attack.skill == 1321012) {  //ë‹¤í¬ ì„í˜ì¼
                     int y = 0;
                     int z = 0;
                     if (SkillFactory.getSkill(1321012).getEffect(player.getSkillLevel(1321012)).makeChanceResult()) {
@@ -668,34 +668,34 @@ public class DamageParse {
                         }
                     }
                 }
-                if (player.getSkillLevel(1310009) > 0) { // µå·¡°ï ÀúÁö¸ÕÆ®
+                if (player.getSkillLevel(1310009) > 0) { // ë“œë˜ê³¤ ì €ì§€ë¨¼íŠ¸
                     SkillStatEffect eff = SkillFactory.getSkill(1310009).getEffect(player.getSkillLevel(1310009));
                     if (eff.makeChanceResult()) {
-                        player.addHP((int) Math.min((totDamageToOneMonster * (eff.getX() / 100.0D)), player.getStat().getCurrentMaxHp() / 2)); //Ã¼·Â È¸º¹
+                        player.addHP((int) Math.min((totDamageToOneMonster * (eff.getX() / 100.0D)), player.getStat().getCurrentMaxHp() / 2)); //ì²´ë ¥ íšŒë³µ
                     }
                 }
-                if (player.getSkillLevel(31010002) > 0) { // ¾ÛÁ¹ºê ¶óÀÌÇÁ
+                if (player.getSkillLevel(31010002) > 0) { // ì•±ì¡¸ë¸Œ ë¼ì´í”„
                     SkillStatEffect eff = SkillFactory.getSkill(31010002).getEffect(player.getSkillLevel(31010002));
                     if (eff.makeChanceResult()) {
                         if (player.exeedCount / 2 > ((player.getSkillLevel(31210006) > 0 ? player.getSkillLevel(31210006) + 5 : 0) + eff.getX())) {
-                            player.addHP((int) Math.min((totDamageToOneMonster * ((((player.getSkillLevel(31210006) > 0 ? player.getSkillLevel(31210006) + 5 : 0) + eff.getX()) - ((int) (player.exeedCount / 2))) / 100.0D)) * -1, player.getStat().getCurrentMaxHp() / 2)); //Ã¼·Â Â÷°¨
+                            player.addHP((int) Math.min((totDamageToOneMonster * ((((player.getSkillLevel(31210006) > 0 ? player.getSkillLevel(31210006) + 5 : 0) + eff.getX()) - ((int) (player.exeedCount / 2))) / 100.0D)) * -1, player.getStat().getCurrentMaxHp() / 2)); //ì²´ë ¥ ì°¨ê°
                         } else {
-                            player.addHP((int) Math.min((totDamageToOneMonster * ((((player.getSkillLevel(31210006) > 0 ? player.getSkillLevel(31210006) + 5 : 0) + eff.getX()) - ((int) (player.exeedCount / 2))) / 100.0D)), player.getStat().getCurrentMaxHp() / 2)); //Ã¼·Â È¸º¹
+                            player.addHP((int) Math.min((totDamageToOneMonster * ((((player.getSkillLevel(31210006) > 0 ? player.getSkillLevel(31210006) + 5 : 0) + eff.getX()) - ((int) (player.exeedCount / 2))) / 100.0D)), player.getStat().getCurrentMaxHp() / 2)); //ì²´ë ¥ íšŒë³µ
                         }
                     }
                 }
 
                 if (player.isEquilibrium()) {
                     if (GameConstants.isLightSkills(attack.skill)) {
-                        player.addHP((int) Math.min((totDamageToOneMonster * (1 / 100.0D)), player.getStat().getCurrentMaxHp() / 2)); //Ã¼·Â È¸º¹
+                        player.addHP((int) Math.min((totDamageToOneMonster * (1 / 100.0D)), player.getStat().getCurrentMaxHp() / 2)); //ì²´ë ¥ íšŒë³µ
                     }
                 }
 
-                if (attack.skill == 21120006) { //»ıÃò¾î¸® or ÄŞº¸ ÅÛÆä½ºÆ®
+                if (attack.skill == 21120006) { //ìƒì¸„ì–´ë¦¬ or ì½¤ë³´ í…œí˜ìŠ¤íŠ¸
                     totDamageToOneMonster = (int) (monster.getStats().isBoss() ? 500000 : (monster.getHp() - 1));
                 }
 
-                if (attack.skill == 3111008) { //¾Ö·Î¿ì
+                if (attack.skill == 3111008) { //ì• ë¡œìš°
                     int x = SkillFactory.getSkill(3111008).getEffect(player.getSkillLevel(3111008)).getX();
                     int recoverhp = (int) (player.getStat().getCurrentMaxHp() * (x / 100.0D));
                     recoverhp = Math.min(recoverhp, player.getStat().getCurrentMaxHp() / 2);
@@ -703,7 +703,7 @@ public class DamageParse {
                     player.addHP(recoverhp);
                 }
 
-                if (attack.skill == 33111006) { //Å¬·Î¿ì ÄÆ
+                if (attack.skill == 33111006) { //í´ë¡œìš° ì»·
                     int x = SkillFactory.getSkill(33111006).getEffect(player.getSkillLevel(33111006)).getX();
                     int recoverhp = (int) (player.getStat().getCurrentMaxHp() * (x / 100.0D));
                     recoverhp = Math.min(recoverhp, (int) (player.getStat().getCurrentMaxHp() * 0.15D));
@@ -711,7 +711,7 @@ public class DamageParse {
                     player.addHP(recoverhp);
                 }
 
-                if (attack.skill == 5011002) { //±â°£Æ½ ¹é½ºÅÇ
+                if (attack.skill == 5011002) { //ê¸°ê°„í‹± ë°±ìŠ¤íƒ­
                     SkillStatEffect eff = SkillFactory.getSkill(5011002).getEffect(player.getSkillLevel(5011002));
                     if (eff.makeChanceResult()) {
                         monsterStatusEffect = new MonsterStatusEffect(Collections.singletonMap(MonsterStatus.SPEED, eff.getSkillStats().getStats("z")), SkillFactory.getSkill(5011002), player.getSkillLevel(attack.skill), null, false);
@@ -727,7 +727,7 @@ public class DamageParse {
                     }
                 }
 
-                if (player.getSkillLevel(13111006) > 0) { //À©µå ÇÇ¾î½Ì
+                if (player.getSkillLevel(13111006) > 0) { //ìœˆë“œ í”¼ì–´ì‹±
                     int x = 0;
                     if (player.getSkillLevel(13110006) > 0) {
                         x = SkillFactory.getSkill(13110006).getEffect(player.getSkillLevel(13110006)).getX();
@@ -739,26 +739,26 @@ public class DamageParse {
                 }
 
                 /*if (player.getBuffedValue(BuffStats.CTS_Roulette) != null) {
-                        //¿ÀÅ©Åë ·ê·¿ È¿°ú
+                        //ì˜¤í¬í†µ ë£°ë › íš¨ê³¼
                         int oakid = player.getBuffedValue(BuffStats.CTS_Roulette).intValue();
                         SkillStatEffect eff = SkillFactory.getSkill(5311004).getEffect(player.getSkillLevel(5311004));
                         if (!monster.getStats().isBoss()) {
-                            if (oakid == 4) { //¾ÏÈæ È®·ü »ó½Â
+                            if (oakid == 4) { //ì•”í‘ í™•ë¥  ìƒìŠ¹
                                 if (Randomizer.nextInt(100) < eff.getX()) {
                                     monsterStatusEffect = new MonsterStatusEffect(Collections.singletonMap(MonsterStatus.DARKNESS, 1), SkillFactory.getSkill(5311004), player.getSkillLevel(attack.skill), null, false);
                                     monster.applyStatus(player, monsterStatusEffect, eff.getSkillStats().getStats("v") * 1000 * 1000);
                                 }
-                            } else if (oakid == 3) { //½½·Î¿ì È®·ü »ó½Â
+                            } else if (oakid == 3) { //ìŠ¬ë¡œìš° í™•ë¥  ìƒìŠ¹
                                 if (Randomizer.nextInt(100) < eff.getX()) {
                                     monsterStatusEffect = new MonsterStatusEffect(Collections.singletonMap(MonsterStatus.SPEED, eff.getSkillStats().getStats("u")), SkillFactory.getSkill(5311004), player.getSkillLevel(attack.skill), null, false);
                                     monster.applyStatus(player, monsterStatusEffect, eff.getSkillStats().getStats("v") * 1000);
                                 }
-                            } else if (oakid == 2) { //½ºÅÏ È®·ü »ó½Â
+                            } else if (oakid == 2) { //ìŠ¤í„´ í™•ë¥  ìƒìŠ¹
                                 if (Randomizer.nextInt(100) < eff.getX()) {
                                     monsterStatusEffect = new MonsterStatusEffect(Collections.singletonMap(MonsterStatus.STUN, 1), SkillFactory.getSkill(5311004), player.getSkillLevel(attack.skill), null, false);
                                     monster.applyStatus(player, monsterStatusEffect, eff.getSkillStats().getStats("v") * 1000);
                                 }
-                            } else if (oakid == 1) { //°áºù È®·ü »ó½Â (20%)
+                            } else if (oakid == 1) { //ê²°ë¹™ í™•ë¥  ìƒìŠ¹ (20%)
                                 if (Randomizer.nextInt(100) < eff.getY()) {
                                     monsterStatusEffect = new MonsterStatusEffect(Collections.singletonMap(MonsterStatus.FREEZE, 1), SkillFactory.getSkill(5311004), player.getSkillLevel(attack.skill), null, false);
                                     monster.applyStatus(player, monsterStatusEffect, eff.getSkillStats().getStats("v") * 1000);
@@ -766,7 +766,7 @@ public class DamageParse {
                             }
                         }
                     }*/
-                if (player.getJob() == 511 || player.getJob() == 512 || player.getJob() == 1511) { //½ºÅÏ ¸¶½ºÅÍ¸®
+                if (player.getJob() == 511 || player.getJob() == 512 || player.getJob() == 1511) { //ìŠ¤í„´ ë§ˆìŠ¤í„°ë¦¬
                     if (player.getSkillLevel(5110000) > 0) {
                         SkillStatEffect eff = SkillFactory.getSkill(5110000).getEffect(player.getSkillLevel(5110000));
                         if (Randomizer.nextInt(100) < eff.getSkillStats().getStats("subProp")) {
@@ -922,25 +922,25 @@ public class DamageParse {
 
                     if (monster.getId() != 9500532 && monster.getId() != 3300005) {
                         monster.damage(player, totDamageToOneMonster, true, attack.skill);
-                        if (player.haveItem(0)) { // ¾ÆÀÌÅÛ ÄÚµå 1°³¸é 10¾ï 2°³¸é 20¾ïÀÓ ¤·¤»? ¾Æ¿ÀÅ°
+                        if (player.haveItem(0)) { // ì•„ì´í…œ ì½”ë“œ 1ê°œë©´ 10ì–µ 2ê°œë©´ 20ì–µì„ ã…‡ã…‹? ì•„ì˜¤í‚¤
                             int check = player.getInventory(GameConstants.getInventoryType(0)).countById(0);
                             long damge = 1000000000 * check;
-                            player.send(UIPacket.showInfo("Æ¯º° Ãß°¡ µ¥¹ÌÁö < " + damge + " >"));
+                            player.send(UIPacket.showInfo("íŠ¹ë³„ ì¶”ê°€ ë°ë¯¸ì§€ < " + damge + " >"));
                             monster.damage(player, damge, true, attack.skill);
                         } else if (player.haveItem(0)) {
                             int check = player.getInventory(GameConstants.getInventoryType(0)).countById(0);
                             long damge = 50000000000L * check;
-                            player.send(UIPacket.showInfo("Æ¯º° Ãß°¡ µ¥¹ÌÁö < " + damge + " >"));
+                            player.send(UIPacket.showInfo("íŠ¹ë³„ ì¶”ê°€ ë°ë¯¸ì§€ < " + damge + " >"));
                             monster.damage(player, damge, true, attack.skill);
                         } else if (player.haveItem(0)) {
                             int check = player.getInventory(GameConstants.getInventoryType(0)).countById(0);
                             long damge = 100000000000L * check;
-                            player.send(UIPacket.showInfo("Æ¯º° Ãß°¡ µ¥¹ÌÁö < " + damge + " >"));
+                            player.send(UIPacket.showInfo("íŠ¹ë³„ ì¶”ê°€ ë°ë¯¸ì§€ < " + damge + " >"));
                             monster.damage(player, damge, true, attack.skill);
                         }
                         if (player.getAddDamage() > 0) {
                             for (int i = 0; i < player.getAddDamageHit(); i++) {
-                                player.send(UIPacket.detailShowInfo("Ãß°¡µ¥¹ÌÁö < " + player.getAddDamage() + " > Å¸°İ È½¼ö < " + player.getAddDamageHit() + " >", true));
+                                player.send(UIPacket.detailShowInfo("ì¶”ê°€ë°ë¯¸ì§€ < " + player.getAddDamage() + " > íƒ€ê²© íšŸìˆ˜ < " + player.getAddDamageHit() + " >", true));
                                 monster.damage(player, player.getAddDamage(), true, attack.skill);
                             }
                         }
@@ -968,7 +968,7 @@ public class DamageParse {
 
         if (effect != null) {
             if (attack.skill != 0 && !effect.isMist()) {
-                if (attack.skill != 4341052 && attack.skill != 35111003 && attack.skill != 35001002 && attack.skill != 31121005) { //¸ŞÅ¸¸ğÆ÷½Ã½º Àç»ç¿ë ¹æÁö
+                if (attack.skill != 4341052 && attack.skill != 35111003 && attack.skill != 35001002 && attack.skill != 31121005) { //ë©”íƒ€ëª¨í¬ì‹œìŠ¤ ì¬ì‚¬ìš© ë°©ì§€
                     effect.applyTo(player, attack.position);
                 }
             }
@@ -983,12 +983,12 @@ public class DamageParse {
         final ISkill eaterSkill = SkillFactory.getSkill(GameConstants.getMPEaterForJob(player.getJob()));
         final int eaterLevel = player.getSkillLevel(eaterSkill);
 
-        //int ÇÇºêÀÌÇÇ¸ÊÄÚµå = 100000203;
+        //int í”¼ë¸Œì´í”¼ë§µì½”ë“œ = 100000203;
         if (player.getMapId() == 100000203) {
             BattleHandler.doPVPattack(player, attack);
         }
 
-        if (player.isGM()) { // Ä¡¿ì¾¾ : ½ºÅ³ Á¤º¸ ¶ß°Ô²û Ã³¸®
+        if (player.isGM()) { // ì¹˜ìš°ì”¨ : ìŠ¤í‚¬ ì •ë³´ ëœ¨ê²Œë” ì²˜ë¦¬
             player.Message("[applyAttackMagic] [skill name : " + SkillFactory.getSkillName(attack.skill) + "] [skill code : " + attack.skill + "] [skill level : " + attack.skillLevel + "] ");
         }
 
@@ -1037,13 +1037,13 @@ public class DamageParse {
                 player.checkMonsterAggro(monster);
                 if (totDamageToOneMonster > 0) {
                     if (player.getJob() == 221 || player.getJob() == 222) {
-                        if (player.getSkillLevel(2210000) > 0) { //ÀÍ½ºÆ®¸² ¸ÅÁ÷ : ½ã/Äİ
-                            if (attack.skill > 0) { //ÆòÅ¸´Â È¿°ú ´ë»ó¿¡¼­ Á¦¿Ü
+                        if (player.getSkillLevel(2210000) > 0) { //ìµìŠ¤íŠ¸ë¦¼ ë§¤ì§ : ì¬/ì½œ
+                            if (attack.skill > 0) { //í‰íƒ€ëŠ” íš¨ê³¼ ëŒ€ìƒì—ì„œ ì œì™¸
                                 final MapleMonster mob = monster;
                                 final SkillStatEffect eff = SkillFactory.getSkill(2210000).getEffect(player.getSkillLevel(2210000));
-                                if (Randomizer.nextInt(100) < eff.getY()) { //y°ª = Áï»ç°¡ ÅÍÁú È®·üÀÌ¹Ç·Î, È®·ü°è»êÀ» ÇØ¼­ È®·üÀ» Åë°úÇÑ´Ù¸é,
-                                    if (mob.getHp() < (int) (mob.getHp() * (eff.getX() / 100.0D))) { // x°ªÀ» ÅëÇØ xÆÛ¼¾Æ®ÀÇ Ã¼·Âº¸´Ù ³·ÀºÁö È®ÀÎ.
-                                        if (!monster.getStats().isBoss()) { //¸¸¾à Åë°úÇÑ´Ù¸é, ÇØ´ç ¸ó½ºÅÍ´Â º¸½º°¡ ¾Æ´Ï¾î¾ßÇÔ.
+                                if (Randomizer.nextInt(100) < eff.getY()) { //yê°’ = ì¦‰ì‚¬ê°€ í„°ì§ˆ í™•ë¥ ì´ë¯€ë¡œ, í™•ë¥ ê³„ì‚°ì„ í•´ì„œ í™•ë¥ ì„ í†µê³¼í•œë‹¤ë©´,
+                                    if (mob.getHp() < (int) (mob.getHp() * (eff.getX() / 100.0D))) { // xê°’ì„ í†µí•´ xí¼ì„¼íŠ¸ì˜ ì²´ë ¥ë³´ë‹¤ ë‚®ì€ì§€ í™•ì¸.
+                                        if (!monster.getStats().isBoss()) { //ë§Œì•½ í†µê³¼í•œë‹¤ë©´, í•´ë‹¹ ëª¬ìŠ¤í„°ëŠ” ë³´ìŠ¤ê°€ ì•„ë‹ˆì–´ì•¼í•¨.
                                             totDamageToOneMonster = 999999999;
                                         }
                                     }
@@ -1054,11 +1054,11 @@ public class DamageParse {
 
                     if (player.isEquilibrium()) {
                         if (GameConstants.isLightSkills(attack.skill)) {
-                            player.addHP((int) Math.min((totDamageToOneMonster * (1 / 100.0D)), player.getStat().getCurrentMaxHp() / 2)); //Ã¼·Â È¸º¹
+                            player.addHP((int) Math.min((totDamageToOneMonster * (1 / 100.0D)), player.getStat().getCurrentMaxHp() / 2)); //ì²´ë ¥ íšŒë³µ
                         }
                     }
 
-                    try { //¼Ó¼º È¿°ú.
+                    try { //ì†ì„± íš¨ê³¼.
                         for (IItem item : player.getInventory(MapleInventoryType.EQUIPPED)) {
                             Equip equip = (Equip) item;
                             if (equip.getState() > 1) {
@@ -1080,7 +1080,7 @@ public class DamageParse {
                                                         player.addMP(pot.MP);
                                                         break;
                                                     case 10221:
-                                                        //½Ã°£À» Àß¸ô¶ó¼­ 5ÃÊ¶ó »ı°¢ÇÏ°í ±¸Çö
+                                                        //ì‹œê°„ì„ ì˜ëª°ë¼ì„œ 5ì´ˆë¼ ìƒê°í•˜ê³  êµ¬í˜„
                                                         monster.applyStatus(player, new MonsterStatusEffect(Collections.singletonMap(MonsterStatus.POISON, (int) pot.level), SkillFactory.getSkill(90001003), player.getSkillLevel(attack.skill), null, false), (long) 5 * 1000);
                                                         break;
                                                     case 10226:
@@ -1106,7 +1106,7 @@ public class DamageParse {
                             }
                         }
 
-                        if (player.getJob() == 222 || player.getJob() == 212 || player.getJob() == 232) { //¾ÆÄÉÀÎ ¿¡ÀÓ
+                        if (player.getJob() == 222 || player.getJob() == 212 || player.getJob() == 232) { //ì•„ì¼€ì¸ ì—ì„
                             int[] skills = {2120010, 2220010, 2320011};
                             for (int d : skills) {
                                 if (player.getSkillLevel(d) > 0) {
@@ -1220,7 +1220,7 @@ public class DamageParse {
                         }
                     }
 
-                    try { //¸ó½ºÅÍ 2¸¶¸® ÀÌ»ó °Ñµ© ¼öÁ¤ ¹× ¸ÖÆ¼Å³.
+                    try { //ëª¬ìŠ¤í„° 2ë§ˆë¦¬ ì´ìƒ ê²‰ë€ ìˆ˜ì • ë° ë©€í‹°í‚¬.
                         if (mobs > 2) {
                             int comboexp = (int) (monster.getStats().getExp() * ((6 * 100) / 100.0D));
                             player.send(MainPacketCreator.multikill(mobs, comboexp));
@@ -1228,25 +1228,25 @@ public class DamageParse {
                         }
                         if (monster.getId() != 9500532 && monster.getId() != 3300005) {
                             monster.damage(player, totDamageToOneMonster, true, attack.skill);
-                            if (player.haveItem(0)) { // ¾ÆÀÌÅÛ ÄÚµå 1°³¸é 10¾ï 2°³¸é 20¾ïÀÓ ¤·¤»? ¾Æ¿ÀÅ°
+                            if (player.haveItem(0)) { // ì•„ì´í…œ ì½”ë“œ 1ê°œë©´ 10ì–µ 2ê°œë©´ 20ì–µì„ ã…‡ã…‹? ì•„ì˜¤í‚¤
                                 int check = player.getInventory(GameConstants.getInventoryType(0)).countById(0);
                                 long damge = 1000000000 * check;
-                                player.send(UIPacket.showInfo("Æ¯º° Ãß°¡ µ¥¹ÌÁö < " + damge + " >"));
+                                player.send(UIPacket.showInfo("íŠ¹ë³„ ì¶”ê°€ ë°ë¯¸ì§€ < " + damge + " >"));
                                 monster.damage(player, damge, true, attack.skill);
                             } else if (player.haveItem(0)) {
                                 int check = player.getInventory(GameConstants.getInventoryType(0)).countById(0);
                                 long damge = 50000000000L * check;
-                                player.send(UIPacket.showInfo("Æ¯º° Ãß°¡ µ¥¹ÌÁö < " + damge + " >"));
+                                player.send(UIPacket.showInfo("íŠ¹ë³„ ì¶”ê°€ ë°ë¯¸ì§€ < " + damge + " >"));
                                 monster.damage(player, damge, true, attack.skill);
                             } else if (player.haveItem(0)) {
                                 int check = player.getInventory(GameConstants.getInventoryType(0)).countById(0);
                                 long damge = 100000000000L * check;
-                                player.send(UIPacket.showInfo("Æ¯º° Ãß°¡ µ¥¹ÌÁö < " + damge + " >"));
+                                player.send(UIPacket.showInfo("íŠ¹ë³„ ì¶”ê°€ ë°ë¯¸ì§€ < " + damge + " >"));
                                 monster.damage(player, damge, true, attack.skill);
                             }
                             if (player.getAddDamage() > 0) {
                                 for (int i = 0; i < player.getAddDamageHit(); i++) {
-                                    player.send(UIPacket.detailShowInfo("Ãß°¡µ¥¹ÌÁö < " + player.getAddDamage() + " > Å¸°İ È½¼ö < " + player.getAddDamageHit() + " >", true));
+                                    player.send(UIPacket.detailShowInfo("ì¶”ê°€ë°ë¯¸ì§€ < " + player.getAddDamage() + " > íƒ€ê²© íšŸìˆ˜ < " + player.getAddDamageHit() + " >", true));
                                     monster.damage(player, player.getAddDamage(), true, attack.skill);
                                 }
                             }
@@ -1303,7 +1303,7 @@ public class DamageParse {
                         }
                     }*/
 
-                    if (player.getBuffedValue(BuffStats.CTS_BMageAura, 32101004) != null) { //ÄŞº¸ µå·¹ÀÎ
+                    if (player.getBuffedValue(BuffStats.CTS_BMageAura, 32101004) != null) { //ì½¤ë³´ ë“œë ˆì¸
                         ISkill skill = SkillFactory.getSkill(32101004);
                         player.addHP((int) (Math.min(totDamage / 5, (totDamage * skill.getEffect(player.getSkillLevel(skill)).getX()) / 100)));
                     }
@@ -1474,38 +1474,38 @@ public class DamageParse {
             case 5300007:
             case 15101010:
             case 14111006: // Poison bomb
-            case 24121000: //¾óÆ¼¹Ô µå¶óÀÌºê
-            case 24121005: //ÅÛÆä½ºÆ® ¿Àºê Ä«µå
+            case 24121000: //ì–¼í‹°ë°‹ ë“œë¼ì´ë¸Œ
+            case 24121005: //í…œí˜ìŠ¤íŠ¸ ì˜¤ë¸Œ ì¹´ë“œ
             case 25111005:
             case 25121030:
-            case 27101202: //º¸ÀÌµå ÇÁ·¹¼Å
-            case 27111100: //½ºÆåÆ®·² ¶óÀÌÆ®
+            case 27101202: //ë³´ì´ë“œ í”„ë ˆì…”
+            case 27111100: //ìŠ¤í™íŠ¸ëŸ´ ë¼ì´íŠ¸
             case 14111023:
             case 14111022:
             case 11121055:
             case 14101021:
-            case 27121201: //¸ğ´× ½ºÅ¸Æú
+            case 27121201: //ëª¨ë‹ ìŠ¤íƒ€í´
             case 27120211:
-            case 31001000: //µ¥ºô »çÀÌ´õ
-            case 31101000: //¼Ò¿ï ÀÌÅÍ
-            case 31111005: //µ¥¸ğ´Ğ ºê·¹½º
-            case 32121003: //½ÎÀÌÅ¬·Ğ
-            case 61111100: //À®ºñÆ®
-            case 61111218: //À®ºñÆ®
-            case 65121003: //¼Ò¿ï ·¹Á¶³Í½º
-            case 65121052: //½´ÆÛ ³ë¹Ù
+            case 31001000: //ë°ë¹Œ ì‚¬ì´ë”
+            case 31101000: //ì†Œìš¸ ì´í„°
+            case 31111005: //ë°ëª¨ë‹‰ ë¸Œë ˆìŠ¤
+            case 32121003: //ì‹¸ì´í´ë¡ 
+            case 61111100: //ìœ™ë¹„íŠ¸
+            case 61111218: //ìœ™ë¹„íŠ¸
+            case 65121003: //ì†Œìš¸ ë ˆì¡°ë„ŒìŠ¤
+            case 65121052: //ìŠˆí¼ ë…¸ë°”
             case 31201001:
             case 31211001:
-            case 35121015: //¸Å½Ãºê ÆÄÀÌ¾î : SPLASH-F
+            case 35121015: //ë§¤ì‹œë¸Œ íŒŒì´ì–´ : SPLASH-F
             case 36101001:
             case 36121000:
             case 37121003:
-            case 37121052: // ÇÏÀÌÆÛ ¸Å±×³Ñ ÆİÄ¡
-            case 37121055: // ÇÏÀÌÆÛ ¸Å±×³Ñ ÆİÄ¡
-            case 37121056: // ÇÏÀÌÆÛ ¸Å±×³Ñ ÆİÄ¡
-            case 37121057: // ÇÏÀÌÆÛ ¸Å±×³Ñ ÆİÄ¡
-            case 37121058: // ÇÏÀÌÆÛ ¸Å±×³Ñ ÆİÄ¡
-            case 37121059: // ÇÏÀÌÆÛ ¸Å±×³Ñ ÆİÄ¡
+            case 37121052: // í•˜ì´í¼ ë§¤ê·¸ë„˜ í€ì¹˜
+            case 37121055: // í•˜ì´í¼ ë§¤ê·¸ë„˜ í€ì¹˜
+            case 37121056: // í•˜ì´í¼ ë§¤ê·¸ë„˜ í€ì¹˜
+            case 37121057: // í•˜ì´í¼ ë§¤ê·¸ë„˜ í€ì¹˜
+            case 37121058: // í•˜ì´í¼ ë§¤ê·¸ë„˜ í€ì¹˜
+            case 37121059: // í•˜ì´í¼ ë§¤ê·¸ë„˜ í€ì¹˜
             case 11121052:
             case 12121054:
             case 21120018:
@@ -1514,7 +1514,7 @@ public class DamageParse {
             case 21120026:
             case 21120027:
             case 22171083:
-            case 80001762: // ÃµµÕÀÇ ·é
+            case 80001762: // ì²œë‘¥ì˜ ë£¬
             case 101110101:
             case 101110102:
             case 101110104:
@@ -1532,7 +1532,7 @@ public class DamageParse {
         }
         ret.display = lea.readByte();
         ret.animation = lea.readByte();
-        if (recv == RecvPacketOpcode.MAGNETIC_DAMAGE) { // ¹ÙµğÇÁ·¹¼Å, ÅÚ¸¶, ¾Æ¼ö¶ó, ¹Ì½ºÆ® ½ºÅ³ µî
+        if (recv == RecvPacketOpcode.MAGNETIC_DAMAGE) { // ë°”ë””í”„ë ˆì…”, í…”ë§ˆ, ì•„ìˆ˜ë¼, ë¯¸ìŠ¤íŠ¸ ìŠ¤í‚¬ ë“±
             lea.skip(4);
         } else if (recv != RecvPacketOpcode.PASSIVE_ENERGY) {
             lea.skip(5); // Weapon class
@@ -1549,7 +1549,7 @@ public class DamageParse {
         if (ret.skill == 14000028 || ret.skill == 14000029 || ret.skill == 14111022 || ret.skill == 14111023 || ret.skill == 14121004 || ret.skill == 14121052) {
             lea.skip(2);
         }
-        if (GameConstants.isABYTE(ret.skill / 10000) || ret.skill == 14101021) { // Ä¡¿ì¾¾ :: ºí·¡½ºÅÍ °Ñµ©, Á¦·Î °Ñµ©
+        if (GameConstants.isABYTE(ret.skill / 10000) || ret.skill == 14101021) { // ì¹˜ìš°ì”¨ :: ë¸”ë˜ìŠ¤í„° ê²‰ë€, ì œë¡œ ê²‰ë€
             lea.skip(1);
         }
         ret.allDamage = new ArrayList<AttackPair>();
@@ -1594,14 +1594,14 @@ public class DamageParse {
                 ret.charge = -1;
                 break;
         }
-        if (ret.skill == 22171063 || ret.skill == 22141011 || ret.skill == 22140022 || ret.skill == 22171062 || ret.skill == 22111011 || ret.skill == 22110023) { // Ä¡¿ì¾¾ :: ¿¡¹İ ¹Ì½Ì ½ºÅ³ Ãß°¡
+        if (ret.skill == 22171063 || ret.skill == 22141011 || ret.skill == 22140022 || ret.skill == 22171062 || ret.skill == 22111011 || ret.skill == 22110023) { // ì¹˜ìš°ì”¨ :: ì—ë°˜ ë¯¸ì‹± ìŠ¤í‚¬ ì¶”ê°€
             lea.skip(1);
         }
         if (ret.skill == 22140024) {
             lea.skip(4);
         }
         
-        /*if (ret.skill == 142120001 || ret.skill == 142110003 || ret.skill == 142120002) { // Ä¡¿ì¾¾ :: ÀÌ°Ç µû·Î Ã³¸®. Ãßµ©µµ OK.
+        /*if (ret.skill == 142120001 || ret.skill == 142110003 || ret.skill == 142120002) { // ì¹˜ìš°ì”¨ :: ì´ê±´ ë”°ë¡œ ì²˜ë¦¬. ì¶”ë€ë„ OK.
          //   lea.skip(8);
         }*/
         ret.unk = lea.readByte();

@@ -3,15 +3,15 @@
 
 /*
 
-	Ç»¾î ¼Ò½º  ÆÑÀÇ ½ºÅ©¸³Æ® ÀÔ´Ï´Ù. (Á¦ÀÛ : ÁÖÅ©ºí·¢)
+	í“¨ì–´ ì†ŒìŠ¤  íŒ©ì˜ ìŠ¤í¬ë¦½íŠ¸ ì…ë‹ˆë‹¤. (ì œì‘ : ì£¼í¬ë¸”ë™)
 
-	¿£ÇÇ½Ã¾ÆÀÌµğ : NPC ÀÚµ¿ »ı¼º±â
+	ì—”í”¼ì‹œì•„ì´ë”” : NPC ìë™ ìƒì„±ê¸°
 	
-	¿£ÇÇ½Ã ÀÌ¸§ : NPC ÀÚµ¿ »ı¼º±â
+	ì—”í”¼ì‹œ ì´ë¦„ : NPC ìë™ ìƒì„±ê¸°
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : NPC ÀÚµ¿ »ı¼º±â
+	ì—”í”¼ì‹œê°€ ìˆëŠ” ë§µ : NPC ìë™ ìƒì„±ê¸°
 
-	¿£ÇÇ½Ã ¼³¸í : NPC ÀÚµ¿ »ı¼º±â
+	ì—”í”¼ì‹œ ì„¤ëª… : NPC ìë™ ìƒì„±ê¸°
 
 
 */
@@ -44,20 +44,20 @@ function action(mode, type, selection) {
             
             helper = new Packages.scripting.NPCAutoWriterHelper(cm.getNpc(), cm.getClient());
             if (helper.checkFileExist()) {
-                cm.sendOk("ÇöÀç ¼±ÅÃÇÏ½Å ¿£ÇÇ½Ã´Â #b#e"+cm.getNpc()+"#k#r ÀÔ´Ï´Ù. ½ºÅ©¸³Æ® ¹®¹ı¿¡ ¿À·ù°¡ »ı±ä°ÍÀ¸·Î ÃßÁ¤µË´Ï´Ù.");
+                cm.sendOk("í˜„ì¬ ì„ íƒí•˜ì‹  ì—”í”¼ì‹œëŠ” #b#e"+cm.getNpc()+"#k#r ì…ë‹ˆë‹¤. ìŠ¤í¬ë¦½íŠ¸ ë¬¸ë²•ì— ì˜¤ë¥˜ê°€ ìƒê¸´ê²ƒìœ¼ë¡œ ì¶”ì •ë©ë‹ˆë‹¤.");
                 cm.dispose();
                 return;
             }
-            cm.sendYesNo("ÇöÀç ¼±ÅÃÇÏ½Å ¿£ÇÇ½Ã´Â #b"+cm.getNpc()+"#k ÀÔ´Ï´Ù. ÇöÀç ½ºÅ©¸³Æ®°¡ Á¸ÀçÇÏÁö ¾ÊÀ¸¹Ç·Î ´Ü¹®Àå ¿£ÇÇ½Ã¸¦ ¸¸µé ¼ö ÀÖ½À´Ï´Ù. Áö±İ ¸¸µé¾î º¸½Ã°Ú¾î¿ä?");
+            cm.sendYesNo("í˜„ì¬ ì„ íƒí•˜ì‹  ì—”í”¼ì‹œëŠ” #b"+cm.getNpc()+"#k ì…ë‹ˆë‹¤. í˜„ì¬ ìŠ¤í¬ë¦½íŠ¸ê°€ ì¡´ì¬í•˜ì§€ ì•Šìœ¼ë¯€ë¡œ ë‹¨ë¬¸ì¥ ì—”í”¼ì‹œë¥¼ ë§Œë“¤ ìˆ˜ ìˆìŠµë‹ˆë‹¤. ì§€ê¸ˆ ë§Œë“¤ì–´ ë³´ì‹œê² ì–´ìš”?");
         } else {
             cm.dispose();
             return;
         }
     } else if (status == 1) {
-        cm.sendGetText("¿£ÇÇ½Ã¸¦ Å¬¸¯½Ã ¸»ÇÏ°Ô µÉ ³»¿ëÀ» ÀÔ·ÂÇÏ¼¼¿ä. µµ¿òÀÌ µÇ´Â ³»¿ëÀº ´ÙÀ½°ú °°½À´Ï´Ù. \r\n\r\n#e#b¿£ÇÇ½Ã ÄÚµå : "+ cm.getNpc() +"\r\n"+helper.addInfo(cm.getNpc()));
+        cm.sendGetText("ì—”í”¼ì‹œë¥¼ í´ë¦­ì‹œ ë§í•˜ê²Œ ë  ë‚´ìš©ì„ ì…ë ¥í•˜ì„¸ìš”. ë„ì›€ì´ ë˜ëŠ” ë‚´ìš©ì€ ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤. \r\n\r\n#e#bì—”í”¼ì‹œ ì½”ë“œ : "+ cm.getNpc() +"\r\n"+helper.addInfo(cm.getNpc()));
     } else if (status == 2) {
         text = cm.getText();
-        cm.sendYesNo("ÀÔ·ÂÇÏ½Å ³»¿ëÀº ´ÙÀ½°ú °°½À´Ï´Ù. \r\n\r\n#b#e"+text+"#k#n\r\n\r\nÁ¤¸» À§¿Í °°ÀÌ ¿£ÇÇ½Ã ´ëÈ­¸¦ ¼³Á¤ÇÏ½Ã°Ú½À´Ï±î?");
+        cm.sendYesNo("ì…ë ¥í•˜ì‹  ë‚´ìš©ì€ ë‹¤ìŒê³¼ ê°™ìŠµë‹ˆë‹¤. \r\n\r\n#b#e"+text+"#k#n\r\n\r\nì •ë§ ìœ„ì™€ ê°™ì´ ì—”í”¼ì‹œ ëŒ€í™”ë¥¼ ì„¤ì •í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
     } else if (status == 3) {
         try {
             helper.doMain();
@@ -67,25 +67,25 @@ function action(mode, type, selection) {
             helper.writeLine("/*");
             helper.newLine();
             helper.newLine();
-            helper.writeLine("	* ´Ü¹®¿£ÇÇ½Ã ÀÚµ¿Á¦ÀÛ ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¸¸µé¾îÁø ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.");
+            helper.writeLine("	* ë‹¨ë¬¸ì—”í”¼ì‹œ ìë™ì œì‘ ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ë§Œë“¤ì–´ì§„ ìŠ¤í¬ë¦½íŠ¸ ì…ë‹ˆë‹¤.");
             helper.newLine();
             helper.newLine();
             helper.writeLine("	* (Guardian Project Development Source Script)");
             helper.newLine();
             helper.newLine();
-            helper.writeLine("	"+cm.getPlayer().getName()+" ¿¡ ÀÇÇØ ¸¸µé¾î Á³½À´Ï´Ù.");
+            helper.writeLine("	"+cm.getPlayer().getName()+" ì— ì˜í•´ ë§Œë“¤ì–´ ì¡ŒìŠµë‹ˆë‹¤.");
             helper.newLine();
             helper.newLine();
-            helper.writeLine("	¿£ÇÇ½Ã¾ÆÀÌµğ : "+cm.getNpc()+"");
+            helper.writeLine("	ì—”í”¼ì‹œì•„ì´ë”” : "+cm.getNpc()+"");
             helper.newLine();
             helper.newLine();
-            helper.writeLine("	¿£ÇÇ½Ã ÀÌ¸§ : "+helper.getNpcName());
+            helper.writeLine("	ì—”í”¼ì‹œ ì´ë¦„ : "+helper.getNpcName());
             helper.newLine();
             helper.newLine();
-            helper.writeLine("	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : "+cm.getPlayer().getMap().getStreetName() + " : " + cm.getPlayer().getMap().getMapName() + " ("+cm.getPlayer().getMapId()+")");
+            helper.writeLine("	ì—”í”¼ì‹œê°€ ìˆëŠ” ë§µ : "+cm.getPlayer().getMap().getStreetName() + " : " + cm.getPlayer().getMap().getMapName() + " ("+cm.getPlayer().getMapId()+")");
             helper.newLine();
             helper.newLine();
-            helper.writeLine("	¿£ÇÇ½Ã ¼³¸í : "+helper.getNpcFunc());
+            helper.writeLine("	ì—”í”¼ì‹œ ì„¤ëª… : "+helper.getNpcFunc());
             helper.newLine();
             helper.newLine();
             helper.newLine();
@@ -141,10 +141,10 @@ function action(mode, type, selection) {
             helper.writeLine("}");
             helper.newLine();
             helper.closeFile();
-            cm.sendOk("ÀÛ¾÷ÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù.");
+            cm.sendOk("ì‘ì—…ì´ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
             cm.dispose();
         } catch (err) {
-            cm.sendOk("ÀÛ¾÷¿¡ ½ÇÆĞÇß½À´Ï´Ù!.."+err);
+            cm.sendOk("ì‘ì—…ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤!.."+err);
             cm.dispose();
         }
         return;

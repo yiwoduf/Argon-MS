@@ -1,5 +1,5 @@
 /*
-Á¦ÀÛ : ÆþÆþ(pongpong___@naver.com)
+ì œìž‘ : íí(pongpong___@naver.com)
 */
 
 var status = -1;
@@ -24,7 +24,7 @@ function action(mode, type, selection) {
 
     if (status == 0) {
         	cm.TimeMoveMap(931000610, 1000000, 120);
-		cm.sendOk("³Í ¼­¹ö±ÔÄ¢¿¡ À§¹ÝµÇ´Â ºñ¸Å³Ê ÀûÀÎ Çàµ¿À» Çß±º. ÀÌ°÷¿¡¼­ \r\n#b2ºÐ#kµ¿¾È ¹Ý¼ºÇÏ°íÀÖ¾î! ±×¸®°í ¸í½ÉÇØ\r\n#r°­Á¦Á¾·á¸¦ ÇÏ°Å³ª ³ª¸¦ ´Ù½Ã Å¬¸¯ÇÒ°æ¿ì Ã³À½ºÎÅÍ ´Ù½Ã #b2ºÐ#kÀ» ±â´Ù·Á¾ßÇÏ´Ï ÈÄÈ¸¸»°í ±×³É±â´Ù·Á#k\r\n±×·¯°Ô ¿Ö ±×·±ÁþÀ» ÇÏ°í±×·¯´ÂÁö ¿ø.. ¹Ý¼ºÀÌ³ªÇØ!!#k");
+		cm.sendOk("ë„Œ ì„œë²„ê·œì¹™ì— ìœ„ë°˜ë˜ëŠ” ë¹„ë§¤ë„ˆ ì ì¸ í–‰ë™ì„ í–ˆêµ°. ì´ê³³ì—ì„œ \r\n#b2ë¶„#kë™ì•ˆ ë°˜ì„±í•˜ê³ ìžˆì–´! ê·¸ë¦¬ê³  ëª…ì‹¬í•´\r\n#rê°•ì œì¢…ë£Œë¥¼ í•˜ê±°ë‚˜ ë‚˜ë¥¼ ë‹¤ì‹œ í´ë¦­í• ê²½ìš° ì²˜ìŒë¶€í„° ë‹¤ì‹œ #b2ë¶„#kì„ ê¸°ë‹¤ë ¤ì•¼í•˜ë‹ˆ í›„íšŒë§ê³  ê·¸ëƒ¥ê¸°ë‹¤ë ¤#k\r\nê·¸ëŸ¬ê²Œ ì™œ ê·¸ëŸ°ì§“ì„ í•˜ê³ ê·¸ëŸ¬ëŠ”ì§€ ì›.. ë°˜ì„±ì´ë‚˜í•´!!#k");
 		cm.dispose();
 	}
 		

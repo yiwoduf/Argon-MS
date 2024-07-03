@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -108,10 +108,10 @@ public class ReactorActionManager extends AbstractPlayerInteraction {
     }
 
     public void dropItems(boolean herb, boolean success) {
-        //¾àÃÊ»Ñ¸® : 4022023
-        //¿ø¼®ÆÄÆí : 4011010
-        //¸Ô±úºñ ±Ö¾ç : 2440000
-        //¸Ô±úºñ Áª±º : 2440001
+        //ì•½ì´ˆë¿Œë¦¬ : 4022023
+        //ì›ì„íŒŒí¸ : 4011010
+        //ë¨¹ê¹¨ë¹„ ê·¤ì–‘ : 2440000
+        //ë¨¹ê¹¨ë¹„ ì ¬êµ° : 2440001
         if (success) {
             dropItems();
         }
@@ -282,10 +282,10 @@ public class ReactorActionManager extends AbstractPlayerInteraction {
 
         gainExpProfession(1, exp);
         if (getPlayer().getProfession().getFirstProfessionExp() == GameConstants.getProfessionExpNeededForLevel(getPlayer().getProfession().getFirstProfessionLevel())) {
-            getPlayer().Message(6, MapleProfessionType.getNameByProfession(getPlayer().getProfession().getFirstProfession()) + "ÀÇ ¼÷·Ãµµ°¡ ÇöÀç·¹º§ÀÇ ÃÖ´ëÄ¡°¡ µÇ¾ú½À´Ï´Ù. ·¹º§¾÷ ÇØÁÖ¼¼¿ä.");
+            getPlayer().Message(6, MapleProfessionType.getNameByProfession(getPlayer().getProfession().getFirstProfession()) + "ì˜ ìˆ™ë ¨ë„ê°€ í˜„ì¬ë ˆë²¨ì˜ ìµœëŒ€ì¹˜ê°€ ë˜ì—ˆìŠµë‹ˆë‹¤. ë ˆë²¨ì—… í•´ì£¼ì„¸ìš”.");
             getPlayer().send(MainPacketCreator.playSound("profession/levelup"));
         }
-        getPlayer().Message(6, MapleProfessionType.getNameByProfession(getPlayer().getProfession().getFirstProfession()) + "ÀÇ ¼÷·Ãµµ°¡ Áõ°¡ÇÏ¿´½À´Ï´Ù. (+" + exp + ")");
+        getPlayer().Message(6, MapleProfessionType.getNameByProfession(getPlayer().getProfession().getFirstProfession()) + "ì˜ ìˆ™ë ¨ë„ê°€ ì¦ê°€í•˜ì˜€ìŠµë‹ˆë‹¤. (+" + exp + ")");
 
         dropItems(rid / 100000 == 1, success || reactor.getReactorId() % 100 == 11);
         if (rid / 100000 == 1) { //Herbalism
@@ -303,13 +303,13 @@ public class ReactorActionManager extends AbstractPlayerInteraction {
 
         try {
             if (!haveItem(4031308)) {
-                getPlayer().dropMessage(6, "¼ºÀåÀÇ ºĞ¹«±â°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+                getPlayer().dropMessage(6, "ì„±ì¥ì˜ ë¶„ë¬´ê¸°ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
                 return;
             }
 
             if (reactor.getState() == 1) {
                 reactor.setState((byte) 2);
-                getPlayer().getGuild().guildMessage(MainPacketCreator.serverNotice(1, "[±æµåºĞÀç °øÁö]\r\n3ºĞ ÈÄ ¼öÈ®À» ½ÃÀÛÇÕ´Ï´Ù.\r\n" + getClient().getChannel() + "Ã¤³Î ±æµåºĞÀç ¸ÊÀ¸·Î ¿ÍÁÖ¼¼¿ä."));
+                getPlayer().getGuild().guildMessage(MainPacketCreator.serverNotice(1, "[ê¸¸ë“œë¶„ì¬ ê³µì§€]\r\n3ë¶„ í›„ ìˆ˜í™•ì„ ì‹œì‘í•©ë‹ˆë‹¤.\r\n" + getClient().getChannel() + "ì±„ë„ ê¸¸ë“œë¶„ì¬ ë§µìœ¼ë¡œ ì™€ì£¼ì„¸ìš”."));
                 MapTimer.getInstance().schedule(new Runnable() {
 
                     @Override
@@ -336,15 +336,15 @@ public class ReactorActionManager extends AbstractPlayerInteraction {
                 }, 180000);
 
             } else if (reactor.getState() == 2) {
-                getPlayer().dropMessage(6, "¼öÈ®´ë±â ½Ã°£ÀÔ´Ï´Ù.");
+                getPlayer().dropMessage(6, "ìˆ˜í™•ëŒ€ê¸° ì‹œê°„ì…ë‹ˆë‹¤.");
                 return;
             }
 
             if (reactor.getGuildid() != getPlayer().getGuildId()) {
-                // getPlayer().getClient().getSession().writeAndFlush(MaplePacketCreator.getNPCTalk(reactor.getReactorId(), (byte) 0, "Àú´Â #b" + reactor.getName() + "±æµå#kÀÇ ³ª¹«ÀÔ´Ï´Ù.\r\n¾ÈÅ¸±õ°Ôµµ ´ç½ÅÀº ³ª¿¡°Ô ¹°À» ÁÙ ¼ö ¾ø¾î¿ä,", "00 00", (byte) 0));
-                getPlayer().dropMessage(6, "Àú´Â " + reactor.getName() + "±æµåÀÇ ³ª¹«ÀÔ´Ï´Ù.¾ÈÅ¸±õ°Ôµµ ´ç½ÅÀº ³ª¿¡°Ô ¹°À» ÁÙ ¼ö ¾ø¾î¿ä,");
+                // getPlayer().getClient().getSession().writeAndFlush(MaplePacketCreator.getNPCTalk(reactor.getReactorId(), (byte) 0, "ì €ëŠ” #b" + reactor.getName() + "ê¸¸ë“œ#kì˜ ë‚˜ë¬´ì…ë‹ˆë‹¤.\r\nì•ˆíƒ€ê¹ê²Œë„ ë‹¹ì‹ ì€ ë‚˜ì—ê²Œ ë¬¼ì„ ì¤„ ìˆ˜ ì—†ì–´ìš”,", "00 00", (byte) 0));
+                getPlayer().dropMessage(6, "ì €ëŠ” " + reactor.getName() + "ê¸¸ë“œì˜ ë‚˜ë¬´ì…ë‹ˆë‹¤.ì•ˆíƒ€ê¹ê²Œë„ ë‹¹ì‹ ì€ ë‚˜ì—ê²Œ ë¬¼ì„ ì¤„ ìˆ˜ ì—†ì–´ìš”,");
             } else {
-                getPlayer().gainItem(4031308, (short) - 1, false, -1, "±æµå È­ºĞÀ¸·Î ¾òÀº ¾ÆÀÌÅÛ");
+                getPlayer().gainItem(4031308, (short) - 1, false, -1, "ê¸¸ë“œ í™”ë¶„ìœ¼ë¡œ ì–»ì€ ì•„ì´í…œ");
                 if (PotSystem.gainPotExp(getPlayer(), Randomizer.rand(1, 5), reactor)) {
                     if (reactor.getReactorId() != 90102 && reactor.getReactorId() != 90202 && reactor.getReactorId() != 90302) {
                         getMap().broadcastMessage(getPlayer(), MainPacketCreator.showSpecialEffect(getPlayer().getId(), 0), false);

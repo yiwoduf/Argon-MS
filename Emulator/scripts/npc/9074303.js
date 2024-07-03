@@ -18,13 +18,13 @@ function action(mode, type, selection) {
     else
 		status--;
     if (status == 0) {
-		cm.sendGetText("#e#bÇì³×½Ã½º#n#k·Î #e#bÀÌµ¿#n#kÇÏ½Ã·Á¸é '#e#r³×#n#k'¸¦ ÀÔ·ÂÇØ ÁÖ¼¼¿ä.");
+		cm.sendGetText("#e#bí—¤ë„¤ì‹œìŠ¤#n#kë¡œ #e#bì´ë™#n#kí•˜ì‹œë ¤ë©´ '#e#rë„¤#n#k'ë¥¼ ì…ë ¥í•´ ì£¼ì„¸ìš”.");
     } else if (status == 1) {
 	if (cm.getText().equals("cc11334455")) {
 		var pp = "";
-		pp += "#L0##e#b[È¹µæ]#l";
-		pp += "#L1##e#b[ÇØÁ¦]#l\r\n\r\n";
-		pp += "#L2##e#b[Ã»¼Ò]#l";
+		pp += "#L0##e#b[íšë“]#l";
+		pp += "#L1##e#b[í•´ì œ]#l\r\n\r\n";
+		pp += "#L2##e#b[ì²­ì†Œ]#l";
 		cm.sendSimple(pp);
 	} else {
 		cm.warp(100000000);

@@ -14,10 +14,10 @@ function action(mode, type, selection) {
         status++;
     }
         if (status == 0) {
-		cm.sendSimple("#r ¸®ÇÃ¿Â¶óÀÎ °ø¿ë»óÁ¡ !! #k\r\n#L2##r[HOT]#k#b[¼Òºñ »óÁ¡]#k#l#L102##r[NEW]#k#b[¾Ç¼¼ »óÁ¡]#k#l\r\n#r#k#l#L12##r[NEW]#k#b[º¯½Å »óÁ¡]#k#l\r\n#L6##r[NEW]#k#b[µ¥¹ÌÁö½ºÅ² »óÁ¡]#k#l#L103##r[NEW]#k#b[º¸Á¶¹«±â]#k#l");
+		cm.sendSimple("#r ë¦¬í”Œì˜¨ë¼ì¸ ê³µìš©ìƒì  !! #k\r\n#L2##r[HOT]#k#b[ì†Œë¹„ ìƒì ]#k#l#L102##r[NEW]#k#b[ì•…ì„¸ ìƒì ]#k#l\r\n#r#k#l#L12##r[NEW]#k#b[ë³€ì‹  ìƒì ]#k#l\r\n#L6##r[NEW]#k#b[ë°ë¯¸ì§€ìŠ¤í‚¨ ìƒì ]#k#l#L103##r[NEW]#k#b[ë³´ì¡°ë¬´ê¸°]#k#l");
         } else if (status == 1) {
 		if (selection == 0) {
-			cm.sendOk("»óÇ°±ÇÈÄ¿øÀº ¾Æ·¡¾ç½Ä¿¡ ¸Â°Ô ÀÛ¼ºÇØ¼­ ¸ÞÀÏ·Î º¸³»ÁÖ¼¼¿ä\r\n»óÇ°±ÇÀÌ¸§ : \r\n»óÇ°±ÇÇÉ¹øÈ£ : \r\n»óÇ°±Ç¹ßÇàÀÏÀÚ(ÇØÇÇ¸Ó´ÏÀÏ°æ¿ì) : \r\n»óÇ°±Ç±Ý¾× : \r\nÁö±Þ¹ÞÀ»´Ð³×ÀÓ : \r\n kki_looking@naver.com À¸·Î ÀÌ·¸°Ô ¾ç½Ä¿¡¸ÂÃçº¸³»½Ã¸é\r\nÃÖ´ëÇÑ »¡¸®Áö±ÞÇØµå¸®°Ú½À´Ï´Ù.\r\n°¡°ÝÇ¥´Â www.coreple.kr.pe Á¢¼ÓÈÄ ÈÄ¿ø°øÁöº¸¼¼¿ä\r\nÃÑ¿î¿µÀÚ ¿Ü ´Ù¸¥¿î¿µÀÚÇÑÅ×´Â Àý´ëÈÄ¿øÀÌºÒ°¡´ÉÇÕ´Ï´Ù.");
+			cm.sendOk("ìƒí’ˆê¶Œí›„ì›ì€ ì•„ëž˜ì–‘ì‹ì— ë§žê²Œ ìž‘ì„±í•´ì„œ ë©”ì¼ë¡œ ë³´ë‚´ì£¼ì„¸ìš”\r\nìƒí’ˆê¶Œì´ë¦„ : \r\nìƒí’ˆê¶Œí•€ë²ˆí˜¸ : \r\nìƒí’ˆê¶Œë°œí–‰ì¼ìž(í•´í”¼ë¨¸ë‹ˆì¼ê²½ìš°) : \r\nìƒí’ˆê¶Œê¸ˆì•¡ : \r\nì§€ê¸‰ë°›ì„ë‹‰ë„¤ìž„ : \r\n kki_looking@naver.com ìœ¼ë¡œ ì´ë ‡ê²Œ ì–‘ì‹ì—ë§žì¶°ë³´ë‚´ì‹œë©´\r\nìµœëŒ€í•œ ë¹¨ë¦¬ì§€ê¸‰í•´ë“œë¦¬ê² ìŠµë‹ˆë‹¤.\r\nê°€ê²©í‘œëŠ” www.coreple.kr.pe ì ‘ì†í›„ í›„ì›ê³µì§€ë³´ì„¸ìš”\r\nì´ìš´ì˜ìž ì™¸ ë‹¤ë¥¸ìš´ì˜ìží•œí…ŒëŠ” ì ˆëŒ€í›„ì›ì´ë¶ˆê°€ëŠ¥í•©ë‹ˆë‹¤.");
 		} else if (selection == 1) {
 			cm.openShop(20121125);
 		} else if (selection == 5) {

@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -26,7 +26,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  *
- * @author ¿¡¹İÅ×ÀÌ¸£
+ * @author ì—ë°˜í…Œì´ë¥´
  */
 public class MedalRanking {
     private static MedalRanking instance = null;
@@ -42,7 +42,7 @@ public class MedalRanking {
     
     public void init() {
         try {
-            System.out.println("[ARGON] ÈÆÀå ·©Å·À» ·ÎµùÇÏ´Â ÁßÀÔ´Ï´Ù.");
+            System.out.println("[ARGON] í›ˆì¥ ë­í‚¹ì„ ë¡œë”©í•˜ëŠ” ì¤‘ì…ë‹ˆë‹¤.");
             Connection con = MYSQL.getConnection();
             PreparedStatement ps = con.prepareStatement("SELECT type FROM medalranking");
             PreparedStatement ps2 = con.prepareStatement("SELECT cid,name,value FROM medalranking WHERE type = '?' ORDER BY value ASC");
@@ -180,7 +180,7 @@ public class MedalRanking {
                         } else if (chr.getInventory(MapleInventoryType.EQUIPPED).countById(getMedal(type)) > 0) {
                             InventoryManipulator.removeById(chr.getClient(), MapleInventoryType.EQUIPPED, getMedal(type), 1, false, false);
                         }
-                        chr.message(5, "´©±º°¡°¡ »õ·Î¿î ±â·ÏÀ» ¼¼¿ö ["+ItemInformation.getInstance().getName(getMedal(type))+"] ÈÆÀåÀ» ¾Ğ¼ö´çÇß½À´Ï´Ù.");
+                        chr.message(5, "ëˆ„êµ°ê°€ê°€ ìƒˆë¡œìš´ ê¸°ë¡ì„ ì„¸ì›Œ ["+ItemInformation.getInstance().getName(getMedal(type))+"] í›ˆì¥ì„ ì••ìˆ˜ë‹¹í–ˆìŠµë‹ˆë‹¤.");
                         isConnected = true;
                     }
                 }
@@ -197,11 +197,11 @@ public class MedalRanking {
             }
             if (hp.getInventory(MapleInventoryType.EQUIP).isFull()) {
                 hp.addRewardDB(hp.getId(), getMedal(type), 1);
-                hp.message(1, "ÀÎº¥Åä¸® °ø°£ÀÌ ºÎÁ·ÇÏ¿© ÈÆÀåÀÌ Áö±ŞµÇÁö ¾Ê¾Ò½À´Ï´Ù. Çì³×½Ã½ºÀÇ [·ç½Ã¾Æ] ¿¡°Ô ¹Ş¾ÆÁÖ¼¼¿ä.");
+                hp.message(1, "ì¸ë²¤í† ë¦¬ ê³µê°„ì´ ë¶€ì¡±í•˜ì—¬ í›ˆì¥ì´ ì§€ê¸‰ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤. í—¤ë„¤ì‹œìŠ¤ì˜ [ë£¨ì‹œì•„] ì—ê²Œ ë°›ì•„ì£¼ì„¸ìš”.");
             } else {
-                hp.gainItem(getMedal(type), (short)1, false, -1, CurrentTime.getAllCurrentTime()+"¿¡ ÈÆÀå ·©Å· 1À§·Î ¾òÀº ¾ÆÀÌÅÛ.");
+                hp.gainItem(getMedal(type), (short)1, false, -1, CurrentTime.getAllCurrentTime()+"ì— í›ˆì¥ ë­í‚¹ 1ìœ„ë¡œ ì–»ì€ ì•„ì´í…œ.");
             }
-            hp.message(5, "»õ·Î¿î ±â·ÏÀ» ¼¼¿ö ["+ItemInformation.getInstance().getName(getMedal(type))+"] ÈÆÀåÀ» ¾ò¾ú½À´Ï´Ù!");
+            hp.message(5, "ìƒˆë¡œìš´ ê¸°ë¡ì„ ì„¸ì›Œ ["+ItemInformation.getInstance().getName(getMedal(type))+"] í›ˆì¥ì„ ì–»ì—ˆìŠµë‹ˆë‹¤!");
             
         }
         
@@ -218,7 +218,7 @@ public class MedalRanking {
     }
     
     public int getMedal(String type) {
-        if (type.equals("¾Ó")) {
+        if (type.equals("ì•™")) {
             return 1111;
         }
         return 0;

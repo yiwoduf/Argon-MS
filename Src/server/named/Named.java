@@ -33,7 +33,7 @@ public class Named {
     private static BufferedReader br;
     public static int nextTime = -1;
     public static String nextDate = "-";
-    public static String namedTime = "-ºĞ --ÃÊ";
+    public static String namedTime = "-ë¶„ --ì´ˆ";
 
     public static void main(String args[]) throws IOException, InterruptedException {
         try {
@@ -81,7 +81,7 @@ public class Named {
             countdown_seconds = (countdown_seconds >= (60 * 5)) ? 0 : countdown_seconds;
             int countdown_ii = (int) Math.floor(countdown_seconds / 60);
             int countdown_ss = (int) countdown_seconds % 60;
-            String countdown_clock = countdown_ii + "ºĞ " + countdown_ss + "ÃÊ";
+            String countdown_clock = countdown_ii + "ë¶„ " + countdown_ss + "ì´ˆ";
             if (!namedTime.equals(countdown_clock)) {
                 namedTime = countdown_clock;
             } else {
@@ -92,13 +92,13 @@ public class Named {
                     String result = result();
                     String date = result.split("\"date\":\"")[1].split("\",")[0];
                     date = date.replaceAll("2016-", "");
-                    date = date.split("-")[0] + "¿ù" + date.split("-")[1] + "ÀÏ";
+                    date = date.split("-")[0] + "ì›”" + date.split("-")[1] + "ì¼";
                     String times = result.split("\"times\":\"")[1].split("\",")[0];
                     String start_point = result.split("\"start_point\":\"")[1].split("\",")[0];
                     String line_count = result.split("\"line_count\":\"")[1].split("\",")[0];
                     String odd_even = result.split("\"odd_even\":\"")[1].split("\"")[0];
-                    WorldBroadcasting.broadcastMessage(MainPacketCreator.OnAddPopupSay(9000019, 3000, "#r" + times + "#kÈ¸Â÷ ³×ÀÓµå È¦,Â¦ °á°ú´Â\r\n[#b" + getScoreString(start_point + " " + line_count + " " + odd_even) + "#k] ÀÔ´Ï´Ù.", ""));
-                    WorldBroadcasting.broadcastMessage(MainPacketCreator.getGMText(30, "[¸ŞÀÌÇÃ¿Â¶óÀÎ »ç´Ù¸®¾Ë¸²] " + times + "È¸Â÷ ³×ÀÓµå È¦,Â¦ °á°ú´Â [" + getScoreString(start_point + " " + line_count + " " + odd_even) + "] ÀÔ´Ï´Ù."));
+                    WorldBroadcasting.broadcastMessage(MainPacketCreator.OnAddPopupSay(9000019, 3000, "#r" + times + "#kíšŒì°¨ ë„¤ì„ë“œ í™€,ì§ ê²°ê³¼ëŠ”\r\n[#b" + getScoreString(start_point + " " + line_count + " " + odd_even) + "#k] ì…ë‹ˆë‹¤.", ""));
+                    WorldBroadcasting.broadcastMessage(MainPacketCreator.getGMText(30, "[ë©”ì´í”Œì˜¨ë¼ì¸ ì‚¬ë‹¤ë¦¬ì•Œë¦¼] " + times + "íšŒì°¨ ë„¤ì„ë“œ í™€,ì§ ê²°ê³¼ëŠ” [" + getScoreString(start_point + " " + line_count + " " + odd_even) + "] ì…ë‹ˆë‹¤."));
                     install_named(getScore(start_point + " " + line_count + " " + odd_even), date + "-" + times);
                     nextTime = Integer.parseInt(times) + 1;
                     nextDate = date;
@@ -110,13 +110,13 @@ public class Named {
     }
 
     public static int getScore(String data) {
-        if (data.equals("LEFT 4 ODD")) {//È¦ ÁÂ4
+        if (data.equals("LEFT 4 ODD")) {//í™€ ì¢Œ4
             return 1;
-        } else if (data.equals("RIGHT 3 ODD")) {// È¦ ¿ì3
+        } else if (data.equals("RIGHT 3 ODD")) {// í™€ ìš°3
             return 2;
-        } else if (data.equals("LEFT 3 EVEN")) {// Â¦ ÁÂ3
+        } else if (data.equals("LEFT 3 EVEN")) {// ì§ ì¢Œ3
             return 3;
-        } else if (data.equals("RIGHT 4 EVEN")) {// Â¦ ¿ì4
+        } else if (data.equals("RIGHT 4 EVEN")) {// ì§ ìš°4
             return 4;
         } else {
             return -1;
@@ -124,16 +124,16 @@ public class Named {
     }
 
     public static String getScoreString(String data) {
-        if (data.equals("LEFT 4 ODD")) {//È¦ ÁÂ4
-            return "ÁÂ4È¦";
-        } else if (data.equals("RIGHT 3 ODD")) {// È¦ ¿ì3
-            return "¿ì3È¦";
-        } else if (data.equals("LEFT 3 EVEN")) {// Â¦ ÁÂ3
-            return "ÁÂ3Â¦";
-        } else if (data.equals("RIGHT 4 EVEN")) {// Â¦ ¿ì4
-            return "¿ì4Â¦";
+        if (data.equals("LEFT 4 ODD")) {//í™€ ì¢Œ4
+            return "ì¢Œ4í™€";
+        } else if (data.equals("RIGHT 3 ODD")) {// í™€ ìš°3
+            return "ìš°3í™€";
+        } else if (data.equals("LEFT 3 EVEN")) {// ì§ ì¢Œ3
+            return "ì¢Œ3ì§";
+        } else if (data.equals("RIGHT 4 EVEN")) {// ì§ ìš°4
+            return "ìš°4ì§";
         } else {
-            return "¾Ë¼ö¾øÀ½";
+            return "ì•Œìˆ˜ì—†ìŒ";
         }
     }
 
@@ -156,7 +156,7 @@ public class Named {
         String result = result();
         String date = result.split("\"date\":\"")[1].split("\",")[0];
         date = date.replaceAll("2016-", "");
-        date = date.split("-")[0] + "¿ù" + date.split("-")[1] + "ÀÏ";
+        date = date.split("-")[0] + "ì›”" + date.split("-")[1] + "ì¼";
         String times = result.split("\"times\":\"")[1].split("\",")[0];
         if (len == 0) {
             return date;
@@ -313,7 +313,7 @@ public class Named {
             con.close();
             //        MYSQL.closeObject(con);
             if (check) {
-                chr.dropMessage(5, "°¡À§¹ÙÀ§º¸ ¿î¿µÀÚ : ¹èÆÃ º¸»óÀ» È¸¼ö ÇØÁÖ½Ã±æ ¹Ù¶ø´Ï´Ù.");
+                chr.dropMessage(5, "ê°€ìœ„ë°”ìœ„ë³´ ìš´ì˜ì : ë°°íŒ… ë³´ìƒì„ íšŒìˆ˜ í•´ì£¼ì‹œê¸¸ ë°”ëë‹ˆë‹¤.");
             }
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -337,9 +337,9 @@ public class Named {
                     if (getScore(rs1.getInt("score"), rs.getInt("score"))) {
                         text += "#L" + rs1.getInt("id") + "# #e" + rs1.getString("date") + "#n";
                         if (rs1.getInt("meso") > 0) {
-                            text += " ¸Ş¼Ò : " + rs1.getInt("meso");
+                            text += " ë©”ì†Œ : " + rs1.getInt("meso");
                         } else {
-                            text += "¾ÆÀÌÅÛ : #z" + rs1.getInt("itemid") + "# " + rs1.getInt("quantity") + "°³";
+                            text += "ì•„ì´í…œ : #z" + rs1.getInt("itemid") + "# " + rs1.getInt("quantity") + "ê°œ";
                         }
                         text += "\r\n";
                     }
@@ -358,20 +358,20 @@ public class Named {
     }
 
     /*
-        È¦ 0
-        Â¦ 1
-        ÁÂÃâ 2
-        ¿ìÃâ 3
-        3ÁÙ 4
-        4ÁÙ 5
-        ÁÂ3 6
-        ¿ì3 7
-        ÁÂ4 8
-        ¿ì4 9
-        È¦ ÁÂ4 1
-        È¦ ¿ì3 2
-        Â¦ ÁÂ3 3
-        Â¦ ¿ì4 4
+        í™€ 0
+        ì§ 1
+        ì¢Œì¶œ 2
+        ìš°ì¶œ 3
+        3ì¤„ 4
+        4ì¤„ 5
+        ì¢Œ3 6
+        ìš°3 7
+        ì¢Œ4 8
+        ìš°4 9
+        í™€ ì¢Œ4 1
+        í™€ ìš°3 2
+        ì§ ì¢Œ3 3
+        ì§ ìš°4 4
      */
     public static boolean getScore(int score, int score2) {
         if (score == 0) {

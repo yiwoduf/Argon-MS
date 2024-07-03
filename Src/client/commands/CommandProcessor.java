@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹èÁöÈÆ raccoonfox69@gmail.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°°ì§€í›ˆ raccoonfox69@gmail.com
  * ==================================
  * 
  */
@@ -142,7 +142,7 @@ public class CommandProcessor {
     public void dropHelp(MapleCharacter chr, int page) {
         List<DefinitionCommandPair> allCommands = new ArrayList<DefinitionCommandPair>(commands.values());
         int startEntry = (page - 1) * 20;
-        chr.dropMessage(6, "¸í·É µµ¿ò¸»: --------" + page + "---------");
+        chr.dropMessage(6, "ëª…ë ¹ ë„ì›€ë§: --------" + page + "---------");
         for (int i = startEntry; i < startEntry + 20 && i < allCommands.size(); i++) {
             CommandDefinition commandDefinition = allCommands.get(i).getDefinition();
             if (chr.hasGmLevel((byte) commandDefinition.getRequiredLevel())) {
@@ -181,7 +181,7 @@ public class CommandProcessor {
                                     try 
                                     {
                                         FileWriter file = new FileWriter(new File("property/log/GM_CommadLog.txt"), true);
-                                        file.write("¸í·É¾î»ç¿ëÀÚ : " + gmlog.get(i).getLeft() + " ¸í·É¾î : " + gmlog.get(i).getRight() + " »ç¿ëÇÑ½Ã°£ : "+CurrentTime.getAllCurrentTime()+"\r\n");
+                                        file.write("ëª…ë ¹ì–´ì‚¬ìš©ì : " + gmlog.get(i).getLeft() + " ëª…ë ¹ì–´ : " + gmlog.get(i).getRight() + " ì‚¬ìš©í•œì‹œê°„ : "+CurrentTime.getAllCurrentTime()+"\r\n");
                                         file.close();
                                     } catch (IOException e) 
                                     {
@@ -194,7 +194,7 @@ public class CommandProcessor {
                     }
                     return true;
                 } else {
-                    c.getPlayer().dropMessage(6, "¸í·É¾î " + splitted[0] + " Àº(´Â) Á¸ÀçÇÏÁö ¾Ê°Å³ª ½ÇÇà±ÇÇÑÀÌ ¾ø½À´Ï´Ù.");
+                    c.getPlayer().dropMessage(6, "ëª…ë ¹ì–´ " + splitted[0] + " ì€(ëŠ”) ì¡´ì¬í•˜ì§€ ì•Šê±°ë‚˜ ì‹¤í–‰ê¶Œí•œì´ ì—†ìŠµë‹ˆë‹¤.");
                     return true;
                 }
             }

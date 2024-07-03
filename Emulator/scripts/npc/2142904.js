@@ -6,9 +6,9 @@ var Fscissor = "#fUI/UIWindow.img/RpsGame/Fscissor#";
 var rock = "#fUI/UIWindow.img/RpsGame/rock#"; 
 var paper = "#fUI/UIWindow.img/RpsGame/paper#"; 
 var scissor = "#fUI/UIWindow.img/RpsGame/scissor#"; 
-var win = "¡¡¡¡¡¡#fUI/UIWindow.img/RpsGame/win#"; 
-var lose = "¡¡¡¡¡¡#fUI/UIWindow.img/RpsGame/lose#"; 
-var draw = "¡¡¡¡¡¡#fUI/UIWindow.img/RpsGame/draw#"; 
+var win = "ã€€ã€€ã€€#fUI/UIWindow.img/RpsGame/win#"; 
+var lose = "ã€€ã€€ã€€#fUI/UIWindow.img/RpsGame/lose#"; 
+var draw = "ã€€ã€€ã€€#fUI/UIWindow.img/RpsGame/draw#"; 
 var money = 0;
 var gamestatus = false;
 var isdraw = false;
@@ -29,9 +29,9 @@ function action(mode,type,selection){
 
         if(status == 0){
           if(cm.getMeso() >= 3000000)
-	    cm.sendSimple("°¡À§¹ÙÀ§º¸¸¦ ÇÏ±â À§ÇØ¼± #r3,000,000¿ø#kÀÌ ÇÊ¿äÇÏ¸ç, #bÀÌ±æ °æ¿ì#k¿¡´Â #r2¹è#k·Î °¡Áö°í °£´Ù. #bÁú °æ¿ì#k¿¡´Â #r3,000,000¿ø#kÀ» ÀÒ´Â´Ù ±×·¡µµ ÇÏ½Ã°ÚÀ¸¸é ¾Æ·¡¿¡¼­ #d°¡À§, ¹ÙÀ§, º¸ Áß#k¿¡ ÇÑ °³¸¦ °ñ¶óÁÖ¼¼¿ä\r\n\r\n#L1#"+rock+"#l#L2#"+scissor+"#l#L3#"+paper+"#l");
+	    cm.sendSimple("ê°€ìœ„ë°”ìœ„ë³´ë¥¼ í•˜ê¸° ìœ„í•´ì„  #r3,000,000ì›#kì´ í•„ìš”í•˜ë©°, #bì´ê¸¸ ê²½ìš°#kì—ëŠ” #r2ë°°#kë¡œ ê°€ì§€ê³  ê°„ë‹¤. #bì§ˆ ê²½ìš°#kì—ëŠ” #r3,000,000ì›#kì„ ìƒëŠ”ë‹¤ ê·¸ë˜ë„ í•˜ì‹œê² ìœ¼ë©´ ì•„ë˜ì—ì„œ #dê°€ìœ„, ë°”ìœ„, ë³´ ì¤‘#kì— í•œ ê°œë¥¼ ê³¨ë¼ì£¼ì„¸ìš”\r\n\r\n#L1#"+rock+"#l#L2#"+scissor+"#l#L3#"+paper+"#l");
           else{
-	    cm.sendOk("#r3,000,000¿ø#kÀÌ ÇÊ¿äÇÏ¸ç, ¾øÀ¸½Ç °æ¿ì °ÔÀÓ¿¡ Âü°¡ÇÏÁö ¸ø ÇÕ´Ï´Ù.");
+	    cm.sendOk("#r3,000,000ì›#kì´ í•„ìš”í•˜ë©°, ì—†ìœ¼ì‹¤ ê²½ìš° ê²Œì„ì— ì°¸ê°€í•˜ì§€ ëª» í•©ë‹ˆë‹¤.");
 	    cm.dispose();
 	}
              } else if (status == 1){
@@ -52,7 +52,7 @@ function action(mode,type,selection){
 	    else
 		cchoice = "Fscissor";
 
-	//°¡À§¹ÙÀ§º¸ ½ÃÀÛ
+	//ê°€ìœ„ë°”ìœ„ë³´ ì‹œì‘
           if(choice == "rock"){
 		choice = "#fUI/UIWindow.img/RpsGame/rock#"; 
           if(cchoice == "Fscissor"){
@@ -107,15 +107,15 @@ function action(mode,type,selection){
           cm.gainMeso(-3000000);
             if(gamestatus == true){
 		if(isdraw == true){
-		cm.sendOk("     #b¿î¿µÀÚ#k"+(cchoice)+"VS"+(choice)+"#r#h #\r\n"+draw);
+		cm.sendOk("     #bìš´ì˜ì#k"+(cchoice)+"VS"+(choice)+"#r#h #\r\n"+draw);
 		cm.dispose();
             } else {
-		cm.sendOk("     #b¿î¿µÀÚ#k"+cchoice+"VS"+choice+"#r#h #\r\n"+win);
+		cm.sendOk("     #bìš´ì˜ì#k"+cchoice+"VS"+choice+"#r#h #\r\n"+win);
 		cm.gainMeso(money);
 		cm.dispose();
             }
           } else if (gamestatus == false){
-		cm.sendOk("     #b¿î¿µÀÚ#k"+cchoice+"VS"+choice+"#r#h #\r\n"+lose);
+		cm.sendOk("     #bìš´ì˜ì#k"+cchoice+"VS"+choice+"#r#h #\r\n"+lose);
 		cm.dispose();
 		}
 	}

@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -22,7 +22,7 @@ import tools.RandomStream.Randomizer;
 
 /**
  *
- * @author 4Â÷¿ø
+ * @author 4ì°¨ì›
  */
 public class ItempotHandler {
     public static void putItempot(ReadingMaple rm, MapleClient c) {
@@ -30,19 +30,19 @@ public class ItempotHandler {
         int slot = rm.readInt();
         int targetslot = rm.readInt();
         
-        if (targetslot == 0) { // ¾ÆÀÌÅÛÆÌ »ç¿ëÈÄ ¸Ş¼¼Áö
-            c.getPlayer().dropMessage(1, "[Y] Å°¸¦ ´©¸£½Å ÈÄ¿¡ Å°¿ï ¾ÆÀÌÅÛÆÌÀ» ¾Æ¹« ½½·Ô¿¡ ÀÌµ¿½ÃÄÑÁÖ¼¼¿ä.");
+        if (targetslot == 0) { // ì•„ì´í…œíŒŸ ì‚¬ìš©í›„ ë©”ì„¸ì§€
+            c.getPlayer().dropMessage(1, "[Y] í‚¤ë¥¼ ëˆ„ë¥´ì‹  í›„ì— í‚¤ìš¸ ì•„ì´í…œíŒŸì„ ì•„ë¬´ ìŠ¬ë¡¯ì— ì´ë™ì‹œì¼œì£¼ì„¸ìš”.");
             MapleItempotMain.getInstance().getImp(c.getPlayer().getId(), slot);
-            c.send(MainPacketCreator.resetActions()); // ÇÃ·¹ÀÌ¾î¸¦ ¿òÁ÷ÀÏ¼ö ÀÖ°ÔÇÔ
+            c.send(MainPacketCreator.resetActions()); // í”Œë ˆì´ì–´ë¥¼ ì›€ì§ì¼ìˆ˜ ìˆê²Œí•¨
             return;
         }
         
-        ItemInformation ii = ItemInformation.getInstance(); // ¾ÆÀÌÅÛÁ¤º¸¸¦ ºÒ·¯¿È
-        MapleItempot imp = new MapleItempot(ii.getImpLifeid(itemid), targetslot, c.getPlayer().getId()); // Äõ¸®Á¤º¸¸¦ ºÒ·¯¿È
-        MapleItempotMain.getInstance().putImp(c.getPlayer().getId(), imp); // ¾ÆÀÌÅÛÆÌÀ» ¼­¹ö¿¡ Ãß°¡ÇÔ
-        c.send(MainPacketCreator.showItempotAction(imp, true)); // ¾ÆÀÌÅÛÆÌ ÆĞÅ¶À» º¸³¿
-        InventoryManipulator.removeFromSlot(c, MapleInventoryType.USE, (byte) slot, (short) 1, false); // ¾ÆÀÌÅÛÆÌÀ» ÀÎº¥Åä¸®¿¡¼­ »èÁ¦
-        c.send(MainPacketCreator.resetActions()); // ÇÃ·¹ÀÌ¾î¸¦ ¿òÁ÷ÀÏ¼ö ÀÖ°ÔÇÔ
+        ItemInformation ii = ItemInformation.getInstance(); // ì•„ì´í…œì •ë³´ë¥¼ ë¶ˆëŸ¬ì˜´
+        MapleItempot imp = new MapleItempot(ii.getImpLifeid(itemid), targetslot, c.getPlayer().getId()); // ì¿¼ë¦¬ì •ë³´ë¥¼ ë¶ˆëŸ¬ì˜´
+        MapleItempotMain.getInstance().putImp(c.getPlayer().getId(), imp); // ì•„ì´í…œíŒŸì„ ì„œë²„ì— ì¶”ê°€í•¨
+        c.send(MainPacketCreator.showItempotAction(imp, true)); // ì•„ì´í…œíŒŸ íŒ¨í‚·ì„ ë³´ëƒ„
+        InventoryManipulator.removeFromSlot(c, MapleInventoryType.USE, (byte) slot, (short) 1, false); // ì•„ì´í…œíŒŸì„ ì¸ë²¤í† ë¦¬ì—ì„œ ì‚­ì œ
+        c.send(MainPacketCreator.resetActions()); // í”Œë ˆì´ì–´ë¥¼ ì›€ì§ì¼ìˆ˜ ìˆê²Œí•¨
     }
     
     public static void removeItempot(ReadingMaple rm, MapleClient c) {
@@ -65,7 +65,7 @@ public class ItempotHandler {
                 increaseFullness *= 2+Randomizer.nextInt(1);
                 imp.gainFullness(increaseFullness);
                 imp.gainCloseness(1+Randomizer.nextInt(imp.getIncClose()));
-                MainPacketCreator.serverNotice(6, "¾ÆÀÌÅÛ ÆÌÀÌ ÁÁÀº ¾ÆÀÌÅÛÀ» ¸Ô¾î Æ÷¸¸°¨ÀÌ Å©°Ô Áõ°¡ÇÏ°í Ä£¹Ğµµ°¡ Áõ°¡ÇÕ´Ï´Ù.");
+                MainPacketCreator.serverNotice(6, "ì•„ì´í…œ íŒŸì´ ì¢‹ì€ ì•„ì´í…œì„ ë¨¹ì–´ í¬ë§Œê°ì´ í¬ê²Œ ì¦ê°€í•˜ê³  ì¹œë°€ë„ê°€ ì¦ê°€í•©ë‹ˆë‹¤.");
             }
             if (imp.getStatus() == 2) {
                 imp.setStatus(1);

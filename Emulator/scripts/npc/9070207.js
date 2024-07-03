@@ -1,7 +1,7 @@
 /*
 
-¹Ù·ĞÆÑ Àü¿ë ½ºÅ©¸³Æ®ÀÔ´Ï´Ù
-À¯Ãâ&¹èÆ÷´Â ¶¨!!
+ë°”ë¡ íŒ© ì „ìš© ìŠ¤í¬ë¦½íŠ¸ì…ë‹ˆë‹¤
+ìœ ì¶œ&ë°°í¬ëŠ” ë•!!
 
 */
 importPackage(Packages.launch.world);
@@ -25,26 +25,26 @@ function action(mode, type, selection) {
          status++;
          }
          if (status == 0) {
-	      cm.sendGetText("#fn³ª´®°íµñ Extrabold##fs14##eÄ³½Ã¾ÆÀÌÅÛ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä(Á¤È®ÇÑ ÀÌ¸§À» ÀÔ·Â ¾ÈÇÒ½Ã °Ë»ö ³»¿ëÀÌ ³Ê¹« ¸¹¾Æ ÆÃ±æ¼öµµ ÀÖ½À´Ï´Ù.)#k\r\n\r\nÃß°¡¿É¼Ç : #g¿Ã½ºÅİ+0 °ø/¸¶+0#k");
+	      cm.sendGetText("#fnë‚˜ëˆ”ê³ ë”• Extrabold##fs14##eìºì‹œì•„ì´í…œ ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”(ì •í™•í•œ ì´ë¦„ì„ ì…ë ¥ ì•ˆí• ì‹œ ê²€ìƒ‰ ë‚´ìš©ì´ ë„ˆë¬´ ë§ì•„ íŒ…ê¸¸ìˆ˜ë„ ìˆìŠµë‹ˆë‹¤.)#k\r\n\r\nì¶”ê°€ì˜µì…˜ : #gì˜¬ìŠ¤í…Ÿ+0 ê³µ/ë§ˆ+0#k");
          } else if (status == 1) {
               var itemid = cm.getText();
 	      cm.SearchItem(itemid);
          } else if (status == 2) {
           for (i=0; i<NotAllowed.length; i++) {
           if (selection == NotAllowed[i]) {
-              cm.sendOk("ÀÌ ¾ÆÀÌÅÛÀº ÈÄ¿ø Àü¿ë Ä³½ÃÅÛ ÀÔ´Ï´Ù.");
+              cm.sendOk("ì´ ì•„ì´í…œì€ í›„ì› ì „ìš© ìºì‹œí…œ ì…ë‹ˆë‹¤.");
               cm.dispose();
               return;
          }
          }
-	  if (cm.getPlayer().haveItem(4001126, 0, true, true)) { // ÀÌÇÏ¼ÒÁö½Ã ¾ÆÀÌÅÛ±¸¸Å ºÒ°¡ 
+	  if (cm.getPlayer().haveItem(4001126, 0, true, true)) { // ì´í•˜ì†Œì§€ì‹œ ì•„ì´í…œêµ¬ë§¤ ë¶ˆê°€ 
 
-	      cm.sendOk("#i"+selection+"# #fs14##e#b#t"+selection+"##n#k#fs12#À»(¸¦) È¹µæÇÏ¼Ì½À´Ï´Ù.");
-              cm.gainSponserItem(selection,'',0,0,0); // ¿Ã½ºÅİ,°ø°İ·Â
-	      cm.gainItem(4001126, -0); // »è°¨ °¹¼ö		
+	      cm.sendOk("#i"+selection+"# #fs14##e#b#t"+selection+"##n#k#fs12#ì„(ë¥¼) íšë“í•˜ì…¨ìŠµë‹ˆë‹¤.");
+              cm.gainSponserItem(selection,'',0,0,0); // ì˜¬ìŠ¤í…Ÿ,ê³µê²©ë ¥
+	      cm.gainItem(4001126, -0); // ì‚­ê° ê°¯ìˆ˜		
               cm.dispose();
 	 } else {
-	      cm.sendOk("#i4001126# #z4001126# 150°³ ¹Ì¸¸ÀÌ¹Ç·Î ¾ÆÀÌÅÛ ±¸¸Å°¡ ºÒ°¡´É ÇÕ´Ï´Ù.");
+	      cm.sendOk("#i4001126# #z4001126# 150ê°œ ë¯¸ë§Œì´ë¯€ë¡œ ì•„ì´í…œ êµ¬ë§¤ê°€ ë¶ˆê°€ëŠ¥ í•©ë‹ˆë‹¤.");
               cm.dispose();
 	}
     }

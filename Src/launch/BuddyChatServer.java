@@ -1,8 +1,8 @@
 /*
- * Å×½ºÇÇ¾Æ Project
+ * í…ŒìŠ¤í”¼ì•„ Project
  * ==================================
- * ÆÒ´õ spirit_m@nate.com
- * ¹éÈ£ softwarewithcreative@nate.com
+ * íŒ¬ë” spirit_m@nate.com
+ * ë°±í˜¸ softwarewithcreative@nate.com
  * ==================================
  * 
  */
@@ -33,7 +33,7 @@ public class BuddyChatServer {
 
     public final void run_startup_configurations() {
         try {
-            /* ¼ÒÄÏ ¼³Á¤ ½ÃÀÛ */
+            /* ì†Œì¼“ ì„¤ì • ì‹œì‘ */
             ByteBuffer.setUseDirectBuffers(false);
             ByteBuffer.setAllocator(new SimpleByteBufferAllocator());
 
@@ -44,10 +44,10 @@ public class BuddyChatServer {
             cfg.getFilterChain().addLast("codec", new ProtocolCodecFilter(new ChatCodeFactory()));
             InetSocketadd = new InetSocketAddress(PORT);
             acceptor.bind(InetSocketadd, new ChatServerHandler(), cfg);
-            /* ¼ÒÄÏ ¼³Á¤ Á¾·á */
+            /* ì†Œì¼“ ì„¤ì • ì¢…ë£Œ */
             Start.println("[ARGON] Friend Chat Server " + PORT + " Port successfully opened.", 36);
         } catch (IOException e) {
-            Start.println("[¿À·ù] Ä£±¸Ã¤ÆÃ¼­¹ö°¡ " + PORT + " Æ÷Æ®¸¦ °³¹æÇÏ´Âµ¥ ½ÇÆĞÇß½À´Ï´Ù.", 36);
+            Start.println("[ì˜¤ë¥˜] ì¹œêµ¬ì±„íŒ…ì„œë²„ê°€ " + PORT + " í¬íŠ¸ë¥¼ ê°œë°©í•˜ëŠ”ë° ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.", 36);
             e.printStackTrace();
         }
     }

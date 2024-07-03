@@ -3,17 +3,17 @@
 
 /*
 
-	Ç»¾î ¿Â¶óÀÎ ¼Ò½º ÆÑÀÇ ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+	í“¨ì–´ ì˜¨ë¼ì¸ ì†ŒìŠ¤ íŒ©ì˜ ìŠ¤í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤.
 
-        Á¦ÀÛ : ÁÖÅ©ºí·¢
+        ì œìž‘ : ì£¼í¬ë¸”ëž™
 
-	¿£ÇÇ½Ã¾ÆÀÌµð : 9071004
+	ì—”í”¼ì‹œì•„ì´ë”” : 9071004
 	
-	¿£ÇÇ½Ã ÀÌ¸§ : °ÔÀÌÆ®
+	ì—”í”¼ì‹œ ì´ë¦„ : ê²Œì´íŠ¸
 
-	¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : ¸ó½ºÅÍÆÄÅ©
+	ì—”í”¼ì‹œê°€ ìžˆëŠ” ë§µ : ëª¬ìŠ¤í„°íŒŒí¬
 
-	¿£ÇÇ½Ã ¼³¸í : in01 Æ÷Å» °ÔÀÌÆ®
+	ì—”í”¼ì‹œ ì„¤ëª… : in01 í¬íƒˆ ê²Œì´íŠ¸
 
 
 */
@@ -36,14 +36,14 @@ function action(mode, type, selection) {
     }
     
     if (status == 0) {
-        var text = "¾î´À °÷À¸·Î ÀÔÀåÇÏ½Ã°Ú½À´Ï±î?\r\n#r(·¹º§ 115ÀÌ»ó 160¹Ì¸¸ À¯Àú ÀÌ¿ë °¡´É)\r\n#b" +
-		"#L1#ÀÌ³¢³ª¹« ½£(Lv.115~124)#l\r\n" +
-		"#L2#ÇÏ´Ã ½£ ¼ö·ÃÀå(Lv.120~129)#l\r\n" +
-		"#L3#ÇØÀû´ÜÀÇ ºñ¹Ð ±âÁö(Lv.125~134)#l\r\n" +
-		"#L4#ÀÌ°èÀÇ ÀüÀå(Lv.135~144)#l\r\n" +
-		"#L5#¿Üµý ½£ À§Çè Áö¿ª(Lv.140~149)#l\r\n" +
-		"#L6#±ÝÁöµÈ ½Ã°£(Lv.145~154)#l\r\n" +
-		"#L7#¼û°ÜÁø À¯Àû(Lv.150~159)#l#k";
+        var text = "ì–´ëŠ ê³³ìœ¼ë¡œ ìž…ìž¥í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\r\n#r(ë ˆë²¨ 115ì´ìƒ 160ë¯¸ë§Œ ìœ ì € ì´ìš© ê°€ëŠ¥)\r\n#b" +
+		"#L1#ì´ë¼ë‚˜ë¬´ ìˆ²(Lv.115~124)#l\r\n" +
+		"#L2#í•˜ëŠ˜ ìˆ² ìˆ˜ë ¨ìž¥(Lv.120~129)#l\r\n" +
+		"#L3#í•´ì ë‹¨ì˜ ë¹„ë°€ ê¸°ì§€(Lv.125~134)#l\r\n" +
+		"#L4#ì´ê³„ì˜ ì „ìž¥(Lv.135~144)#l\r\n" +
+		"#L5#ì™¸ë”´ ìˆ² ìœ„í—˜ ì§€ì—­(Lv.140~149)#l\r\n" +
+		"#L6#ê¸ˆì§€ëœ ì‹œê°„(Lv.145~154)#l\r\n" +
+		"#L7#ìˆ¨ê²¨ì§„ ìœ ì (Lv.150~159)#l#k";
         cm.sendSimple(text);
     } else if (status == 1) {
         var map = 100000000;
@@ -75,12 +75,12 @@ function action(mode, type, selection) {
         var party = cm.getPlayer().getParty();
         if (party == null) {
             if (!checkLevel(cm.getPlayer().getLevel(), 115, 159)) {
-                cm.sendOk("ÆÄÆ¼¿ø Áß ·¹º§ÀÌ ¸ÂÁö ¾Ê´Â ÆÄÆ¼¿øÀÌ ÀÖ½À´Ï´Ù.\r\n#r115·¹º§ ÀÌ»ó 160·¹º§ ¹Ì¸¸#kÀÇ ÆÄÆ¼¿ø¸¸ ÀÔÀåÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+                cm.sendOk("íŒŒí‹°ì› ì¤‘ ë ˆë²¨ì´ ë§žì§€ ì•ŠëŠ” íŒŒí‹°ì›ì´ ìžˆìŠµë‹ˆë‹¤.\r\n#r115ë ˆë²¨ ì´ìƒ 160ë ˆë²¨ ë¯¸ë§Œ#kì˜ íŒŒí‹°ì›ë§Œ ìž…ìž¥í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.");
                 cm.dispose();
                 return;
             }
             if (!cm.haveItem(4001516, 1)) {
-                cm.sendOk("ÆÄÆ¼¿ø Áß ÀÔÀå±ÇÀ» ¼ÒÁöÇÏÁö ¾ÊÀº ÆÄÆ¼¿øÀÌ ÀÖ½À´Ï´Ù.\r\n#r#i4001516# #t4001516##kÀÌ ÀÖ¾î¾ß ÀÔÀåÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+                cm.sendOk("íŒŒí‹°ì› ì¤‘ ìž…ìž¥ê¶Œì„ ì†Œì§€í•˜ì§€ ì•Šì€ íŒŒí‹°ì›ì´ ìžˆìŠµë‹ˆë‹¤.\r\n#r#i4001516# #t4001516##kì´ ìžˆì–´ì•¼ ìž…ìž¥í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.");
                 cm.dispose();
                 return;
             }
@@ -99,12 +99,12 @@ function action(mode, type, selection) {
             cm.dispose();
         } else {
             if (!cm.isLeader()) {
-                cm.sendOk("ÆÄÆ¼ÀåÀÌ ÀÔÀå½ÅÃ»À» ÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+                cm.sendOk("íŒŒí‹°ìž¥ì´ ìž…ìž¥ì‹ ì²­ì„ í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.");
                 cm.dispose();
                 return;
             }
             if (!cm.allMembersHere()) {
-                cm.sendOk("ÆÄÆ¼¿øÀÌ Àü¿ø ÀÌ°÷¿¡ ¸ð¿©ÀÖ¾î¾ß ÇÕ´Ï´Ù.");
+                cm.sendOk("íŒŒí‹°ì›ì´ ì „ì› ì´ê³³ì— ëª¨ì—¬ìžˆì–´ì•¼ í•©ë‹ˆë‹¤.");
                 cm.dispose();
                 return;
             }
@@ -123,12 +123,12 @@ function action(mode, type, selection) {
                 }
             }
             if (!ticketPass) {
-                cm.sendOk("ÆÄÆ¼¿ø Áß ÀÔÀå±ÇÀ» ¼ÒÁöÇÏÁö ¾ÊÀº ÆÄÆ¼¿øÀÌ ÀÖ½À´Ï´Ù.\r\n#r#i4001516# #t4001516##kÀÌ ÀÖ¾î¾ß ÀÔÀåÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+                cm.sendOk("íŒŒí‹°ì› ì¤‘ ìž…ìž¥ê¶Œì„ ì†Œì§€í•˜ì§€ ì•Šì€ íŒŒí‹°ì›ì´ ìžˆìŠµë‹ˆë‹¤.\r\n#r#i4001516# #t4001516##kì´ ìžˆì–´ì•¼ ìž…ìž¥í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.");
                 cm.dispose();
                 return;
             }
             if (!levelPass) {
-                cm.sendOk("ÆÄÆ¼¿ø Áß ·¹º§ÀÌ ¸ÂÁö ¾Ê´Â ÆÄÆ¼¿øÀÌ ÀÖ½À´Ï´Ù.\r\n#r135·¹º§ ÀÌ»ó 165·¹º§ ¹Ì¸¸#kÀÇ ÆÄÆ¼¿ø¸¸ ÀÔÀåÇÒ ¼ö ÀÖ½À´Ï´Ù.");
+                cm.sendOk("íŒŒí‹°ì› ì¤‘ ë ˆë²¨ì´ ë§žì§€ ì•ŠëŠ” íŒŒí‹°ì›ì´ ìžˆìŠµë‹ˆë‹¤.\r\n#r135ë ˆë²¨ ì´ìƒ 165ë ˆë²¨ ë¯¸ë§Œ#kì˜ íŒŒí‹°ì›ë§Œ ìž…ìž¥í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.");
                 cm.dispose();
                 return;
             }

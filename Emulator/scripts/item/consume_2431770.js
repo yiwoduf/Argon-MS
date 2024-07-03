@@ -2,9 +2,9 @@
 
      [ PlatinumMS ]
 
-     �� ��ũ��Ʈ�� PlatinumMS ���� ������ ��ũ��Ʈ �Դϴ�.
+     이 스크립트는 PlatinumMS 에서 제작한 스크립트 입니다.
 
-     ��ũ��Ʈ �뵵 : 70���� ������
+     스크립트 용도 : 70레벨 장비상자
 
 */
 
@@ -41,7 +41,7 @@ function action(mode, type, selection) {
 	            cm.gainItem(1012318, 1);
 
 	    cm.gainItem(2431770, -1);
-                    cm.sendOk("#e#r�ѽ� ��Ÿ��#k#n �̿÷� ��Ʈ�� �����˽��ϴ�. ��ſ� �ѽ� ��Ÿ�� �Ǽ���!");
+                    cm.sendOk("#e#r팩스 스타일#k#n 이올렛 세트를 얻으셧습니다. 즐거운 팩스 스타일 되세요!");
                     cm.dispose();
                     return;
 

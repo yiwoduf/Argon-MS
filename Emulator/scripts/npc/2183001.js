@@ -4,11 +4,11 @@
 	MapleStory 1.2.246 Varon Team Script Maker	Scripted By Varon Team :: MelonK
 
 
-	SCRIPT MAKER : Ű�׽ý�
+	SCRIPT MAKER : 키네시스
 
 	NPC ID : 2183001
 
-	NPC NAME : �޵��
+	NPC NAME : 메디사
 
 */
 

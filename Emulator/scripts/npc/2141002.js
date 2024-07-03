@@ -3,19 +3,19 @@
 
 /*
  
- * ´Ü¹®¿£ÇÇ½Ã ÀÚµ¿Á¦ÀÛ ½ºÅ©¸³Æ®¸¦ ÅëÇØ ¸¸µé¾îÁø ½ºÅ©¸³Æ® ÀÔ´Ï´Ù.
+ * ë‹¨ë¬¸ì—”í”¼ì‹œ ìžë™ì œìž‘ ìŠ¤í¬ë¦½íŠ¸ë¥¼ í†µí•´ ë§Œë“¤ì–´ì§„ ìŠ¤í¬ë¦½íŠ¸ ìž…ë‹ˆë‹¤.
  
  * (Aeos Development Source Script
  
- 5·Î·Î ¿¡ ÀÇÇØ ¸¸µé¾î Á³½À´Ï´Ù.
+ 5ë¡œë¡œ ì— ì˜í•´ ë§Œë“¤ì–´ ì¡ŒìŠµë‹ˆë‹¤.
  
- ¿£ÇÇ½Ã¾ÆÀÌµð : 2141002
+ ì—”í”¼ì‹œì•„ì´ë”” : 2141002
  
- ¿£ÇÇ½Ã ÀÌ¸§ : ÀØÇôÁø ½ÅÀü°ü¸®ÀÎ
+ ì—”í”¼ì‹œ ì´ë¦„ : ìžŠí˜€ì§„ ì‹ ì „ê´€ë¦¬ì¸
  
- ¿£ÇÇ½Ã°¡ ÀÖ´Â ¸Ê : ½ÅµéÀÇ È²È¥
+ ì—”í”¼ì‹œê°€ ìžˆëŠ” ë§µ : ì‹ ë“¤ì˜ í™©í˜¼
  
- ¿£ÇÇ½Ã ¼³¸í : MISSINGNO
+ ì—”í”¼ì‹œ ì„¤ëª… : MISSINGNO
  
  
  */
@@ -38,7 +38,7 @@ function action(mode, type, selection) {
     }
 
     if (status == 0) {
-        cm.sendYesNo("¿øÁ¤´ë¸¦ ¸¶Ä¡°í ¹ÛÀ¸·Î ³ª°¡½Ã°Ú½À´Ï±î?");
+        cm.sendYesNo("ì›ì •ëŒ€ë¥¼ ë§ˆì¹˜ê³  ë°–ìœ¼ë¡œ ë‚˜ê°€ì‹œê² ìŠµë‹ˆê¹Œ?");
     } else if (status == 1) {
         if (cm.getPlayer().getParty().getLeader().getId() != cm.getPlayer().getId()) {
             if (cm.getPlayer().getMapId() == 270050100) {
@@ -49,14 +49,14 @@ function action(mode, type, selection) {
         } else {
             if (cm.getPlayer().getMapId() == 270050100) {
                 cm.removeNpc(cm.getMapId(), 2141000);
-                cm.mapMessage(5, "¿øÁ¤´ëÀåÀÌ µµÀüÀ» Æ÷±âÇÏ°Å³ª ¿Ï·áÇÏ°í ÅðÀåÀ» ¼±¾ðÇÏ¿©. ¸ðµç ÆÄÆ¼¿øÀÌ Á¦´Ü¿¡¼­ ÅðÀå ÇÏ¿´½À´Ï´Ù.");
+                cm.mapMessage(5, "ì›ì •ëŒ€ìž¥ì´ ë„ì „ì„ í¬ê¸°í•˜ê±°ë‚˜ ì™„ë£Œí•˜ê³  í‡´ìž¥ì„ ì„ ì–¸í•˜ì—¬. ëª¨ë“  íŒŒí‹°ì›ì´ ì œë‹¨ì—ì„œ í‡´ìž¥ í•˜ì˜€ìŠµë‹ˆë‹¤.");
                 cm.allPartyWarp(270050300, true);
                 cm.resetMap(270050200);
                 cm.resetMap(270050100);
                 cm.resetMap(270050000);
             } else {
                 cm.removeNpc(cm.getMapId(), 2141000);
-                cm.mapMessage(5, "¿øÁ¤´ëÀåÀÌ µµÀüÀ» Æ÷±âÇÏ°Å³ª ¿Ï·áÇÏ°í ÅðÀåÀ» ¼±¾ðÇÏ¿©. ¸ðµç ÆÄÆ¼¿øÀÌ Á¦´Ü¿¡¼­ ÅðÀå ÇÏ¿´½À´Ï´Ù.");
+                cm.mapMessage(5, "ì›ì •ëŒ€ìž¥ì´ ë„ì „ì„ í¬ê¸°í•˜ê±°ë‚˜ ì™„ë£Œí•˜ê³  í‡´ìž¥ì„ ì„ ì–¸í•˜ì—¬. ëª¨ë“  íŒŒí‹°ì›ì´ ì œë‹¨ì—ì„œ í‡´ìž¥ í•˜ì˜€ìŠµë‹ˆë‹¤.");
                 cm.allPartyWarp(270051300, true);
                 cm.resetMap(270051200);
                 cm.resetMap(270051100);
