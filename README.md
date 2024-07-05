@@ -1,15 +1,26 @@
-# Argon MS - Maplestory Clone Project
+# Argon MS - Maplestory Server & Client Clone Project
 
-Welcome to Argon MS, a clone project of the popular game Maplestory, translating in to English (GMS standard)
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-**Please note that all rights related to the original game Maplestory belong to Nexon. This project is a clone and is not affiliated with Nexon.**
+Welcome to Argon MS, a clone project of the popular game Maplestory, Server & Game development + translating in to English (GMS standard)
+
+**\*Please note that all rights related to the original game Maplestory belong to Nexon. This project is a clone and is not affiliated with Nexon.**
 
 ![alt text](./images/hello.PNG "Hello")
 ![alt text](./images/Demo.PNG "Hello")
 
-KMST v1029
+Client Version used for the development: **KMST v1029** (KMS Tespia Client)
 
-## 🛠️- Tools
+## 🛠️ - Built with
+
+[![Java][Java]][Java-url] [![MySQL][MySQL]][MySQL-url] [![MariaDB][MariaDB]][MariaDB-url] [![Javascript][Javascript]][Javascript-url] [![OllyDBG][OllyDBG]][OllyDBG-url] [![XML][XML]][XML-url]
+
+### 🛠️- Used Tools
 
 - **Java JDK 8**: ☕ The core language used for development.
 - **MariaDB**: 🗃️ Used for the server database.
@@ -19,7 +30,7 @@ KMST v1029
 - **OllyDBG**: 🔍 Client Reverse Engineering.
 - **Bash**: 🖥️ Used for scripting and automation.
 - **WIZET**: Game image data files.
-- **HaRepacker**: [Link to HaRepacker](https://github.com/lastbattle/Harepacker-resurrected)
+- **[HaRepacker](https://github.com/lastbattle/Harepacker-resurrected)**: Wizet Editing and Modifying
 - **XML**: 📦 Used for storing data in a format that can be easily shared.
 
 ![alt text](./images/MySQLClient.PNG "Hello")
@@ -30,67 +41,83 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-- Java JDK 8
-- MariaDB
-- MySQL Client
+[![Java JDK 8][Java JDK 8]][Java JDK 8-url] [![MariaDB][MariaDB]][MariaDB-url] [![MySQL Client][MySQL Client]][MySQL Client-url]
 
-### Clone
+### Setup
+
+**You should have a database environment setup on your machine**
 
 1. Clone the repo
+
    ```sh
    git clone https://github.com/yiwoduf/Argon-MS.git
    ```
 
-![alt text](./images/ServerLauncher.PNG "Hello")
+2. Build the project using JDK 8
+3. Load Saved SQL Table `./propety/Sql/argon_beta_test_server 20180506 1239.sql`
+4. Modify Server Config file
 
-### Server Configuration
+```
+   ./property/Setting/ServerSetting.properties
+```
+
+### Server Configuration Guide
 
 ```js
-#   [맵설정]
-시작맵 = 350140100
-마을맵 = 100000000
+#   [MAP SETTING]
+시작맵 = 350140100 // Start Map
+마을맵 = 100000000 // Main Village Map
 
 #   [배율설정]
-경험치배율 = 10
-메소배율 = 1
-드롭배율 = 1
-캐시배율 = 1
-보스캐시배율 = 4
+경험치배율 = 10 // EXP gain rate
+메소배율 = 1 // Meso gain rate
+드롭배율 = 1 // Drop rate
+캐시배율 = 1 // Cash rate
+보스캐시배율 = 4 // Boss Cash rate
 
 #   [개수설정]
-최대드랍아이템개수 = 4
-최대보스드랍아이템개수 = 4
-서버개수 = 5
-캐릭터슬롯 = 4
-아이피당계정수 = 3
+최대드랍아이템개수 = 4 // Max Drop Items
+최대보스드랍아이템개수 = 4 // Max Boss Drop Items
+서버개수 = 5 // Server (Channel) Count
+캐릭터슬롯 = 4 // Char slot (initial)
+아이피당계정수 = 3 // Max # of Accounts per IP
 
 #   [서버상태설정]
 Flag = 2
-아이피 = 127.0.0.1
+아이피 = 127.0.0.1 // Your IP
 이벤트 = 1
-로그인포트 = 8484
-채널포트 = 8585
-캐시샵포트 = 8700
-친구서버포트 = 9900
+로그인포트 = 8484 // Login Port
+채널포트 = 8585 // Channel Port
+캐시샵포트 = 8700 // Cash Shop Port
+친구서버포트 = 9900 // Friend Server Port
 
 #   [기타설정]
-서버점검 = false
-패킷출력 = true
-최대드랍사용 = true
-최대보스드랍사용 = true
-붐업경험치이벤트 = false
+서버점검 = false // Server Maintenance
+패킷출력 = true // Print out Packets
+최대드랍사용 = true // Use Max Drop
+최대보스드랍사용 = true // Use Max Boss Drop
+붐업경험치이벤트 = false // 'Boom-Up' EXP Event
 
 #   [DB]
-Arc.dbHost = localhost
-Arc.dbPort = 3306
-Arc.dbUser = root
+Arc.dbHost = localhost // Database IP
+Arc.dbPort = 3306 // Database Port
+Arc.dbUser = root // Database Login
 Arc.dbPassword =
 
 #    [클라이언트 버전]
-클라이언트버전 = 1029
-마이너버전 = 1
+클라이언트버전 = 1029 // Client Version
+마이너버전 = 1 // Minor Version
 
 ```
+
+## Using The Launcher
+
+```
+Server should be opened right away.
+*Make sure to give it about 5 minutes for char DB connection*
+```
+
+![alt text](./images/ServerLauncher.PNG "Hello")
 
 ### Most Recent Development Log:
 
@@ -193,3 +220,40 @@ Argon Online Development Log _ @yiwoduf
 ```
 
 Project Link: https://github.com/yiwoduf/Argon-MS
+
+## Contributor
+
+[Peter Lee](https://github.com/yiwoduf), Minwoo Song, Aurora
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/yiwoduf/Argon-MS.svg?style=for-the-badge
+[contributors-url]: https://github.com/yiwoduf/Argon-MS/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/yiwoduf/Argon-MS.svg?style=for-the-badge
+[forks-url]: https://github.com/yiwoduf/Argon-MS/network/members
+[stars-shield]: https://img.shields.io/github/stars/yiwoduf/Argon-MS.svg?style=for-the-badge
+[stars-url]: https://github.com/yiwoduf/Argon-MS/stargazers
+[issues-shield]: https://img.shields.io/github/issues/yiwoduf/Argon-MS.svg?style=for-the-badge
+[issues-url]: https://github.com/yiwoduf/Argon-MS/issues
+[license-shield]: https://img.shields.io/github/license/yiwoduf/Argon-MS.svg?style=for-the-badge
+[license-url]: https://github.com/yiwoduf/Argon-MS/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/yiwoduf/
+[Java]: https://img.shields.io/badge/Java-FF0000?style=for-the-badge&logo=java&logoColor=white
+[Java-url]: https://www.java.com
+[MySQL]: https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white
+[MySQL-url]: https://www.mysql.com
+[MariaDB]: https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white
+[MariaDB-url]: https://mariadb.org
+[Javascript]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+[Javascript-url]: https://www.javascript.com
+[OllyDBG]: https://img.shields.io/badge/OllyDbg-6851A2?style=for-the-badge&logo=ollydbg&logoColor=white
+[OllyDBG-url]: http://www.ollydbg.de
+[XML]: https://img.shields.io/badge/XML-1572B6?style=for-the-badge&logo=xml&logoColor=white
+[XML-url]: https://www.w3.org/XML/
+[Java JDK 8]: https://img.shields.io/badge/Java_JDK_8-FF0000?style=for-the-badge&logo=oracle&logoColor=white
+[Java JDK 8-url]: https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html
+[MariaDB]: https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white
+[MariaDB-url]: https://mariadb.org
+[MySQL Client]: https://img.shields.io/badge/MySQL_Client-4479A1?style=for-the-badge&logo=mysql&logoColor=white
+[MySQL Client-url]: https://dev.mysql.com/downloads/workbench/
