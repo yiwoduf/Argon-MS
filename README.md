@@ -114,7 +114,8 @@ Arc.dbPassword =
 
 ```
 Server should be opened right away.
-*Make sure to give it about 5 minutes for char DB connection*
+
+*Make sure to give it about 5 minutes for char DB connection
 ```
 
 ![alt text](./images/ServerLauncher.PNG "Hello")
