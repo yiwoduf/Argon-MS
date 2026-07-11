@@ -54,7 +54,7 @@ These instructions will get you a copy of the project up and running on your loc
    ```
 
 2. Build the project using JDK 8
-3. Load Saved SQL Table `./propety/Sql/argon_beta_test_server 20180506 1239.sql`
+3. Prepare your own database schema/dump (a SQL dump is not shipped with this repo)
 4. Modify Server Config file
 
 ```
